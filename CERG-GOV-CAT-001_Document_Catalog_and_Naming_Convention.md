@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.21 |
-| **Status** | Published |
-| **Classification** | Public |
+| **Version** | 1.0 |
+| **Status** | Approved (V1) |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Document Control) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly - or upon any artifact add/retire |
@@ -126,7 +126,7 @@ New domains are added only by amendment to this catalog.
 
 ## 4. Authority and Status Lifecycle
 
-| **Status** | Published | **In Catalog?** |
+| **Status** | **Meaning** | **In Catalog?** |
 |---|---|---|
 | `Planned` | Artifact has an ID and an owner but no draft yet. | Yes - Section 7. |
 | `Draft` | Work in progress. Not authoritative. | Yes - Section 5, flagged. |
@@ -150,12 +150,14 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 ### 5.1 Policy
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Cybersecurity Policy | CISO | Approved |
 
 ### 5.2 Framework, Operating Model, and Cross-Cutting Instruments
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG Operating Model | CISO / Pillar Owners | Approved |
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Cyber Governance Manager | Approved (this doc) |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Cyber Governance Manager | Approved |
@@ -167,7 +169,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 ### 5.3 Standards
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT / Cloud / SaaS Security Standard | Cyber Governance - IT/Cloud | Approved |
 | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Grid Control Systems Security Standard | Cyber Governance - OT | Approved |
 | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI Handling Standard | Cyber Governance - CUI/CMMC | Approved |
@@ -179,7 +182,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 ### 5.4 Procedures
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability Management Procedure | Cyber Risk | Approved |
 | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk Register and Exception Process | Cyber Governance - Risk Register | Approved |
 | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture Review and Project Intake Procedure | Cyber Engineering | Approved |
@@ -191,7 +195,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 ### 5.5 Plans / Operational Packages
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident Response Plan (owned by standing IR team; CERG provides liaison) | Standing IR team / CERG liaison | Approved |
 | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
 | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
@@ -199,7 +204,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 ### 5.6 Templates
 
-| **ID** | **Title** | **Owner** | **Status** | Published |---|---|---|---|
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
 | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk Register Templates and Reporting | Cyber Governance - Risk Register | Approved |
 
 Other templates are embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent. V2 may promote heavy-use templates to standalone `TMPL` artifacts.
