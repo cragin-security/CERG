@@ -5,10 +5,10 @@
 
 ---
 
-| **Version**        | 1.21      |
+| **Version**        | 1.21 |
 | ------------------ | --------- |
 | **Status**         | Published |
-| **Classification** | Public    |
+| **Classification** | Public |
 
 ---
 
