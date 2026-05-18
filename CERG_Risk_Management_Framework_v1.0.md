@@ -342,7 +342,7 @@ The FAIR Threat Community is the actor or natural force that initiates a loss ev
 | **Compensating Controls** | Controls in place that reduce exposure while the primary risk remains open. |
 | **Target Remediation Date** | Committed date for risk closure or next status review. |
 | **Approval** | Authority approving the treatment decision; date; reference to the canonical authority table at §9.7. |
-| **Status** | Open / In Remediation / Compensating Control Applied / Closed / Accepted. |
+| **Status** | Published |
 | **Regulatory Implication** | Whether the risk has regulatory reporting, deviation, or mitigation plan implications (NERC-CIP, CMMC, SOX). |
 
 ### 9.5 Likelihood, Impact, and Severity Bands
@@ -512,10 +512,10 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.0 |
-| **Status** | Approved |
+| **Version** | 1.21 |
+| **Status** | Published |
 | **Effective Date** | 2026-05-01 |
-| **Classification** | Internal / Restricted |
+| **Classification** | Public |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
 | **Approved By** | Chief Information Security Officer |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
