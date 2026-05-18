@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-001 |
-| **Version** | 1.0 |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager ([SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Liaison) |
 | **Parent Documents** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | **Supporting Documents** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-AC-002](CERG-PRC-AC-002_Access_Management_Runbook.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
