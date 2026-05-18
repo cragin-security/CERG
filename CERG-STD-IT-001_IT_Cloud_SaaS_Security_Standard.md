@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-IT-001 |
-| **Version** | 1.0 DRAFT |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager (Enterprise IT/Cloud) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
@@ -309,7 +309,7 @@ No control in this standard may be waived without a documented exception. Except
 
 ### Revision History
 
-| **Version** | **Date** | **Author** | **Change Summary** |
+| **Version** | 1.21 | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - owned data center, leased, IaaS, PaaS, SaaS |
 
