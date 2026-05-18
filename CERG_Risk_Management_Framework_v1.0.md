@@ -395,4 +395,136 @@ This table is the single source of truth for who may accept residual risk. Every
 | Severity | Acceptance Authority | Notification | Required Documentation | Maximum Acceptance Duration |
 |---|---|---|---|---|
 | **Critical** | CISO with Executive Sponsor concurrence | CEO notified; Board notification at next quarterly cycle (or sooner if systemic) | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
-| **High** | CISO | Executive Sponsor notified | Risk assessment, compensating controls, business justification, target remediation date | 
+| **High** | CISO | Executive Sponsor notified | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
+| **Medium** | Cyber Risk Manager (Risk pillar lead) | CISO informed at monthly Risk Posture Review | Risk assessment, compensating controls, target remediation date | 12 months |
+| **Low** | Cyber Governance Manager | Tracked in monthly Risk Register report | Brief justification; tracked in risk register | 12 months |
+| **Informational** | Cyber Governance (Risk Register Owner) | Tracked in quarterly trending report | Tracked in risk register | Reviewed annually |
+
+> **Renewals**
+>
+> No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. An acceptance renewed more than twice without movement on the treatment plan escalates one tier above the original approver.
+
+> **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a role name disagrees with that roster, the roster wins.
+
+### 9.8 Risk Appetite and Tolerance
+
+CERG's risk appetite is expressed in two complementary ways: a qualitative posture statement that informs every treatment decision, and a quantitative loss-exposure tolerance that anchors acceptance decisions at the Critical and High bands. The CISO maintains both; the Board reviews appetite annually.
+
+**Qualitative posture.** CERG operates under a "Yes, And…" orientation: the default response to a business request is "yes, and here are the conditions that make this safe." Reflexive refusal is not an acceptable risk management strategy. At the same time, three categories receive a deliberately low appetite:
+
+| Category | Appetite |
+|---|---|
+| Loss of life, physical safety, or grid reliability | **None.** Any credible scenario triggers immediate Critical treatment regardless of LEF or LM scoring. |
+| Material loss of CUI or DFARS-regulated data | **Very Low.** Treatment defaults to Remediate; Accept requires CISO + Executive Sponsor + 90-day re-review. |
+| Material misstatement of SOX-relevant financial data caused by ITGC failure | **Very Low.** Treatment defaults to Remediate; Accept requires CISO + Executive Sponsor + Audit Committee notification. |
+| Operational disruption to enterprise IT services | Medium. Treatment chosen on a cost / business value basis. |
+| Loss of low-sensitivity, broadly available data | Higher. Acceptance is appropriate where treatment cost exceeds loss magnitude. |
+
+**Quantitative tolerance (placeholder calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. CERG operates against the following exposure bands while Finance/Treasury finalizes calibrated values. The CISO updates these in coordination with the CFO at the next CERG/Finance joint review.
+
+| Posture Indicator | Value | Action |
+|---|---|---|
+| Total open ALE (Critical + High) | <$5M (placeholder) | Within appetite; continue normal monitoring |
+| Total open ALE (Critical + High) | $5M - $15M (placeholder) | Within tolerance; CISO briefs Cyber Oversight Group monthly |
+| Total open ALE (Critical + High) | >$15M (placeholder) | Above tolerance; CISO briefs Board at the next cycle; mandatory treatment plan within 60 days |
+| Single-risk ALE | >$2M (placeholder) | Mandatory CISO review at acceptance; auto-escalates to High at minimum |
+
+> **Calibration is the work.** Numbers above are starting placeholders; they are not approved appetites until Finance signs the calibration. The pattern - qualitative posture per category plus quantitative ALE bands - is the part that does not change.
+
+### 9.9 Worked Example: Risk Register Entry
+
+The example below shows a single register entry written in the canonical format. Fields not relevant to the scenario are marked n/a; everything else is filled in as it would appear in the live register.
+
+```
+Risk ID:                 CERG-RISK-2026-0142
+Source:                  Pre-production assessment - substation modernization project
+Affected System(s):      Substation Gateway "EAST-SS-04" (BES Cyber System, Medium Impact);
+                         vendor remote-access path through the EACMS jump server.
+Risk Statement:          Organized cybercriminal threat communities using ransomware
+                         delivered via a compromised vendor remote-access path against the
+                         EAST-SS-04 BES Cyber System could result in productivity loss,
+                         response costs, replacement costs, and NERC reliability fines of
+                         $1.2M - $3.5M - $8.0M, at an estimated frequency of
+                         0.05 - 0.12 - 0.25 events per year.
+Threat Community:        Organized cybercriminal (primary); third-party / supply chain (secondary)
+Threat Action / Vector:  Ransomware via compromised vendor remote-access path
+Loss Types:              Productivity, response, replacement, fines and judgments
+Likelihood (LEF):        Score 3 (Medium) - 0.12 events / year most-likely
+Impact (LM):             Score 4 (Major) - $3.5M most-likely
+Overall Severity:        Score 12 - HIGH
+Risk Owner:              VP, Transmission Operations
+Treatment Decision:      Mitigate (vendor MFA hardening + session brokering + read-only
+                         engineering connection until vendor remediation completes)
+Compensating Controls:   PAM session recording on EACMS; deny-by-default on inbound
+                         vendor address space outside maintenance windows; passive OT
+                         detection on E/W traffic from EACMS
+Target Remediation Date: 2026-09-30
+Approval:                CISO per §9.7 (HIGH severity); acceptance recorded 2026-05-15
+Status:                  In Remediation
+Regulatory Implication:  NERC-CIP CIP-005 R2, CIP-013 supply chain; CIP deviation not
+                         required because compensating controls maintain ESP integrity.
+```
+
+---
+
+## 10. IT/OT Risk Management Considerations
+
+### 10.1 Why OT Requires a Different Lens
+
+IT and OT environments share the same fundamental risk equation - threats, vulnerabilities, and consequences - but OT environments introduce constraints that require deliberate adaptation of standard risk management practices. Availability is not a configuration preference in a power grid or a manufacturing line; it is a safety and reliability imperative that can carry regulatory, legal, and physical-world consequences.
+
+CERG's RMF is designed from the ground up to respect this reality. OT-specific adaptations are documented below.
+
+| RMF Phase | Standard IT Approach | OT Adaptation |
+|---|---|---|
+| **Categorize** | CIA-based impact ratings per FIPS 199 | Add Safety and Reliability as explicit impact dimensions. BES Cyber Systems classified per CIP-002 High/Medium/Low impact in addition to FIPS 199 ratings. |
+| **Select** | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Moderate/High baseline | Apply OT Safety Overlay: IEC 62443 practices; [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) supplemental controls; vendor-specific hardening where CIS benchmarks don't apply. |
+| **Implement** | Patch and configure to baseline | OT patch windows are defined by operational schedules (planned outages, maintenance windows). Compensating controls bridge the gap. No emergency patching without operations and safety sign-off. |
+| **Assess** | Authenticated vulnerability scans; penetration testing | OT scans use passive/OT-safe methods to avoid disrupting process operations. Active scanning requires operations coordination and maintenance window scheduling. |
+| **Authorize** | ATO/IATO per residual risk | OT authorization explicitly documents operational availability risk alongside cybersecurity risk. NERC-CIP deviation process runs in parallel for BES systems. |
+| **Monitor** | Continuous automated monitoring | OT monitoring uses passive network visibility tools (e.g., Dragos, Claroty, Nozomi). Change management is stricter; unauthorized changes carry safety implications. |
+
+> **The OT Risk Principle**
+>
+> An unpatched vulnerability in a BES Cyber System is a real risk. An unplanned outage of a BES Cyber System is also a real risk - one that carries NERC reliability implications, potential regulatory fines, and public safety consequences. CERG's risk management process treats both risks seriously and documents the tradeoff explicitly. The CISO owns the cybersecurity risk. Operations leadership owns the reliability risk. Both sign the authorization.
+
+---
+
+## 11. Regulatory Alignment Quick Reference
+
+The CERG-RMF satisfies the risk management requirements of all applicable frameworks. The table below maps each framework's risk-specific requirements to the CERG-RMF phase and CERG pillar that addresses them.
+
+| Framework | Risk Management Requirement | CERG-RMF Phase | Pillar |
+|---|---|---|---|
+| **NIST RMF** | Steps 1-6: Categorize, Select, Implement, Assess, Authorize, Monitor | All phases | All pillars |
+| **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | GOVERN: Risk strategy, risk appetite, accountability structures | Phase 5 (Authorize) | Governance |
+| **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | IDENTIFY: Asset management, risk assessment, improvement | Phases 1, 4, 6 | Risk + Governance |
+| **[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | RA-2, RA-3, RA-5, CA-2, CA-5, CA-7 (Categorization, Risk Assessment, Vuln Monitoring, Control Assessments, POA&M, Continuous Monitoring) | All phases | Risk + Governance |
+| **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3** | 03.11 Risk Assessment family; 03.12 Security Assessment family; all documentation requirements | Phases 1, 4, 5, 6 | Risk + Governance |
+| **NERC-CIP** | CIP-002: BES Cyber System categorization; CIP-007 R2: Patch management cadence; CIP-010 R3: Vulnerability assessments; deviation and mitigation plan process | Phases 1, 4, 6 | Governance + Risk |
+| **CMMC Level 2** | RA.L2-3.11.1, RA.L2-3.11.2; CA.L2-3.12.1; all 110 practices documented in SSP and POA&M | Phases 1, 4, 5, 6 | Risk + Governance |
+| **SOX ITGC** | Change management controls; access controls; IT availability controls; ITGC control assessment and evidence | Phases 4, 5, 6 | Governance + Engineering |
+
+---
+
+## 12. Document Control and Review
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-RMF-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Effective Date** | 2026-05-01 |
+| **Classification** | Internal / Restricted |
+| **Document Owner** | Cyber Governance (CERG Pillar) |
+| **Approved By** | Chief Information Security Officer |
+| **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
+| **Next Scheduled Review** | 2027-05-01 |
+| **Parent Document** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - CERG Cybersecurity Policy |
+| **Related Documents** | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) · [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
+
+### Revision History
+
+| Version | Date | Author | Change Description |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the CERG-RMF cycle, the FAIR-aligned risk statement format, the 5x5 likelihood/impact model, the canonical risk acceptance authority table, and the risk appetite and tolerance posture. Retires the parallel SLA table in favor of the single source of truth in CERG-PRC-VM-001. Adopts canonical ID CERG-GOV-RMF-001 per CERG-GOV-CAT-001 §5.2. |
