@@ -309,7 +309,7 @@ No control in this standard may be waived without a documented exception. Except
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - owned data center, leased, IaaS, PaaS, SaaS |
 
