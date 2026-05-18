@@ -329,7 +329,7 @@ The following access types shall be treated as privileged and subject to the con
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - identity, authentication, authorization, lifecycle |
 
