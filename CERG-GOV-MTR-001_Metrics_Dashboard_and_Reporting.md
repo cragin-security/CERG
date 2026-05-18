@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.0 |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG_Risk_Management_Framework_v1.0.md) |
