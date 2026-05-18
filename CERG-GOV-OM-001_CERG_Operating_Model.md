@@ -458,7 +458,7 @@ The backlog is reviewed monthly. Items that age beyond planned dates without jus
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
 
