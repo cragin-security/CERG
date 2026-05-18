@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) |
-| **Parent Standard** | CERG-STD-CUI-001 - CUI Handling Standard |
-| **Supporting Documents** | CERG-POL-001 · CERG-GOV-CB-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 · CERG-PRC-AR-001 · CERG-PRC-RM-001 · CERG-PRC-TPRM-001 · CERG-PRC-AV-001 |
+| **Parent Standard** | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) - CUI Handling Standard |
+| **Supporting Documents** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) |
 | **Review Cycle** | Annual / Continuous - POA&M monthly, SSP on material change |
 | **Frameworks** | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) (selected) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) mappings · [CMMC L2](https://dodcio.defense.gov/CMMC/) |
 | **Regulations** | DFARS 252.204-7012 · DFARS 252.204-7019/7020/7021 · [CMMC L2](https://dodcio.defense.gov/CMMC/) |
@@ -71,7 +71,7 @@ The CUI boundary is the set of systems, people, processes, and physical spaces t
 1. **Start from contracts.** DFARS-flowed contracts identify CUI obligations and (often) the categories.
 2. **Add data discovery.** Use DLP, data discovery tools, and labelled storage signals to locate CUI in environments that may have it.
 3. **Add process discovery.** Interview business units that interact with contracts; identify where CUI enters the environment.
-4. **Validate via Architecture Review records.** `CERG-PRC-AR-001` should have intaken any system handling CUI; any CUI-handling system not in the AR record is a finding.
+4. **Validate via Architecture Review records.** [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) should have intaken any system handling CUI; any CUI-handling system not in the AR record is a finding.
 5. **Reconcile against the CUI Category Register** (Section 9).
 
 ### 3.2 Categories of CUI Currently In Scope
@@ -88,7 +88,7 @@ The CUI boundary comprises:
   - <named CUI applications> with their associated identity, logging, and backup systems
 Excludes:
   - General corporate IT
-  - OT environments (separately governed by CERG-STD-OT-001 / CERG-PLN-CIP-001)
+  - OT environments (separately governed by [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) / [CERG-PLN-CIP-001](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md))
   - SOX-relevant systems that do not also handle CUI
 ```
 
@@ -124,7 +124,7 @@ SYSTEM SECURITY PLAN - <CUI System / Enclave Name>     SSP-CUI-NNN
 4. SECURITY REQUIREMENT IMPLEMENTATION
    For each 800-171r3 practice (3.1.1 … 3.14.x):
      - Practice statement
-     - Implementation status (Implemented / Partially / Inherited / Planned / N/A) per CERG-GOV-CB-001 Section 4
+     - Implementation status (Implemented / Partially / Inherited / Planned / N/A) per [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 4
      - Implementation description (specific, system-specific text)
      - Inheritance source (if inherited; references Section 14)
      - Evidence pointer (system / artifact / location)
@@ -137,7 +137,7 @@ SYSTEM SECURITY PLAN - <CUI System / Enclave Name>     SSP-CUI-NNN
    Detection coverage; vulnerability scanning; recertification; control test cadence
 
 7. INCIDENT RESPONSE
-   Reference to CERG-PLN-IR-001 with CUI-specific notes (DC3 reporting, 72-hour notification)
+   Reference to [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) with CUI-specific notes (DC3 reporting, 72-hour notification)
 
 8. APPROVALS
    ISSO, System Owner, CISO
@@ -152,7 +152,7 @@ Appendices:
 
 > **The SSP Is Specific, Not Aspirational**
 >
-> "Multi-factor authentication is implemented" is not implementation language. "Phishing-resistant MFA via Entra ID enforced by Conditional Access policy 'CUI-Enclave-Privileged-MFA' for all privileged role holders, with break-glass exception per `CERG-PRC-AC-002` §7" is. C3PAO assessors read implementation language for specificity; vague text invites probing questions and findings.
+> "Multi-factor authentication is implemented" is not implementation language. "Phishing-resistant MFA via Entra ID enforced by Conditional Access policy 'CUI-Enclave-Privileged-MFA' for all privileged role holders, with break-glass exception per [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §7" is. C3PAO assessors read implementation language for specificity; vague text invites probing questions and findings.
 
 ---
 
@@ -167,7 +167,7 @@ The Plan of Action and Milestones tracks Partially Implemented and Planned items
 | Weakness | Specific, not vague |
 | Affected Systems | Reference SSP boundary |
 | Source | Self-assessed · Internal audit · C3PAO · Pen test · Vuln scan |
-| Severity | Per `CERG-PRC-RM-001` scoring |
+| Severity | Per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) scoring |
 | Owner | Named role |
 | Resources Required | People / budget / vendor |
 | Original Identification Date | - |
@@ -204,7 +204,7 @@ The worksheet is reproduced from the public DoD methodology; CERG does not inven
 
 ## 7. CUI Boundary Diagram Template
 
-The diagram is produced in the architecture tool used by `CERG-PRC-AR-001`. The required elements:
+The diagram is produced in the architecture tool used by [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). The required elements:
 
 - The **trust boundary** of the CUI environment, clearly drawn.
 - All **CUI-processing systems** inside the boundary.
@@ -221,7 +221,7 @@ A diagram is required at SSP submission and refreshed on any material change.
 
 The data flow map shows how CUI moves from contract intake → processing → archival, including:
 
-- Each **transit hop** annotated with protocol and `CERG-STD-CR-001` encryption details.
+- Each **transit hop** annotated with protocol and [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) encryption details.
 - Each **transformation** (where CUI is combined, derived, or labeled).
 - Each **storage location** with classification label, retention, and access pattern.
 - Each **export** (to a customer, a subcontractor, or a contracting officer) with delivery method.
@@ -254,9 +254,9 @@ The matrix is the row-per-practice spine. It is the principal artifact a C3PAO u
 |---|---|
 | Practice ID | e.g., 3.13.11 |
 | Practice Statement | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) language |
-| Implementation Status | Per `CERG-GOV-CB-001` Section 4 |
-| CERG Control(s) | From `CERG-GOV-CB-001` |
-| Subordinate Standard / Procedure | E.g., `CERG-STD-CR-001` §9 |
+| Implementation Status | Per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 4 |
+| CERG Control(s) | From [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) |
+| Subordinate Standard / Procedure | E.g., [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) §9 |
 | System(s) Implementing | Per SSP |
 | Evidence Artifact | Specific document / report / configuration export |
 | Evidence Location | URI / system / binder reference |
@@ -276,14 +276,14 @@ A pre-assessment self-check, repeated quarterly and aggressively in the 90 days 
 | **Area** | **Check** | **Pass** |
 |---|---|---|
 | Scope | CUI boundary documented and currently accurate | Y / N |
-| Scope | All CUI-handling systems intaken via `CERG-PRC-AR-001` | Y / N |
+| Scope | All CUI-handling systems intaken via [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Y / N |
 | SSP | SSP current; specific implementation language; appendices complete | Y / N |
 | Evidence | Evidence Matrix has artifact for every practice | Y / N |
 | Evidence | Every evidence artifact dates within the assessor's expected window | Y / N |
 | POA&M | All Partially Implemented items have current POA&M | Y / N |
-| Inheritance | Every Inherited practice has Inheritance Evidence Package per `CERG-GOV-CB-001` Section 5 | Y / N |
-| Crypto | FIPS profile per `CERG-STD-CR-001` Section 9 satisfied | Y / N |
-| Logging | Mandatory log sources onboarded per `CERG-STD-LM-001` | Y / N |
+| Inheritance | Every Inherited practice has Inheritance Evidence Package per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5 | Y / N |
+| Crypto | FIPS profile per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 9 satisfied | Y / N |
+| Logging | Mandatory log sources onboarded per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Y / N |
 | Detection | Day-one detection set in CUI environment | Y / N |
 | Access | Phishing-resistant MFA on CUI access paths | Y / N |
 | Backup | Recovery plan exists; recent restoration test for CUI tier | Y / N |
@@ -336,7 +336,7 @@ The register is maintained jointly by Governance, CUI and TPRM; the TPRM record 
 
 ## 14. FedRAMP Equivalency Evidence Checklist
 
-For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equivalency package required by `CERG-PRC-TPRM-001` Section 14. Repeated here as a CUI-program reference.
+For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equivalency package required by [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 14. Repeated here as a CUI-program reference.
 
 | **Element** | **Required** |
 |---|---|
@@ -345,7 +345,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | Customer-side configuration commitments (CUI label, region, key control) | ✓ |
 | Sub-service organization carve-outs reconciled | ✓ |
 | Re-papering trigger documented | ✓ |
-| Inheritance Evidence Package per `CERG-GOV-CB-001` Section 5 on file | ✓ |
+| Inheritance Evidence Package per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5 on file | ✓ |
 
 ---
 
@@ -354,37 +354,4 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | **Activity** | **Cadence** |
 |---|---|
 | POA&M update | Monthly |
-| 800-171 Practice Evidence Matrix refresh | Continuous; full review quarterly |
-| SSP review | Annual + on material change |
-| SPRS score recalculation and submission | Annual + on material change |
-| Subcontractor register review | Quarterly |
-| [CMMC](https://dodcio.defense.gov/CMMC/) Readiness Checklist | Quarterly + intensified 90 days pre-assessment |
-| C3PAO assessment (third-party) | Per [CMMC](https://dodcio.defense.gov/CMMC/) certification cycle |
-| Internal CUI walkthrough | Quarterly (sampling) |
-| CUI handler training | Annual + role change |
-
----
-
-## 16. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Package** |
-|---|---|
-| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | All sections; Section 10 is the principal evidence artifact |
-| [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) (selected enhancements) | Where contract requires |
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (Moderate baseline mapping) | Sections 4, 14 |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) | All sections; Section 11 is the readiness check |
-| DFARS 252.204-7012 | Sections 4, 13 (flow-down) |
-| DFARS 252.204-7019 / 7020 / 7021 | Section 6 (SPRS) |
-
----
-
-## 17. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) · CISO endorsement |
-| **Next Review** | Annual / on regulatory change |
-| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
-
+| 800-17

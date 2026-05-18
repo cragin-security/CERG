@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Risk Manager (Vendor Risk) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-CR-001 · CERG-PRC-RM-001 · CERG-PRC-AR-001 · CERG-PLN-IR-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On major TPRM platform change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SR) · NIST 800-161r1 · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GV.SC) · ISO 27036 · CSA STAR · NTIA SBOM minimum elements |
 | **Regulations** | NERC-CIP CIP-013 · DFARS / [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · FedRAMP equivalency |
@@ -67,7 +67,7 @@ This procedure defines how CERG engages with the broader enterprise vendor progr
 | **Legal / Privacy** | Contract negotiation, regulatory flow-down, privacy notices. | CERG provides cyber clauses (Section 8); Legal owns negotiation. |
 | **CERG - Risk (TPRM)** | This procedure. Vendor cyber assessments, SCCT, evidence-by-tier, continuous monitoring. | - |
 | **CERG - Governance** | Cyber audit interface; regulator-facing artifacts ([CMMC](https://dodcio.defense.gov/CMMC/) SSP, CIP-013 plan). | - |
-| **Business / Asset Owners** | Vendor relationship; business-side acceptance of vendor-related risk. | Sign off on residual cyber risk per `CERG-PRC-RM-001`. |
+| **Business / Asset Owners** | Vendor relationship; business-side acceptance of vendor-related risk. | Sign off on residual cyber risk per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 ---
 
@@ -108,7 +108,7 @@ CERG adjusts the vendor tier *up* only when one or more cyber-specific concerns 
 
 > **Adjustments Are Documented, Not Negotiated**
 >
-> Every cyber-driven tier adjustment is recorded in the TPRM tool with the trigger, evidence, and reviewer. If a Business Owner disagrees, the resolution path is `CERG-PRC-RM-001` Section 8, never an off-record handshake.
+> Every cyber-driven tier adjustment is recorded in the TPRM tool with the trigger, evidence, and reviewer. If a Business Owner disagrees, the resolution path is [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 8, never an off-record handshake.
 
 ---
 
@@ -133,7 +133,7 @@ Evidence requirements grow with tier. The table below names the cyber evidence r
 | Breach / incident notification commitment (timing, scope) | - | required | required | required | required |
 | Insurance: cyber liability, E&O, where contract-appropriate | - | optional | required | required | required |
 | OT vendor: NERC-CIP CIP-013 plan participation | - | - | - | required (OT) | required (OT / BES) |
-| Inheritance Evidence Package (per `CERG-GOV-CB-001` Section 5) for inherited controls | - | - | - | required | required |
+| Inheritance Evidence Package (per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5) for inherited controls | - | - | - | required | required |
 | Country-of-access disclosure and country-risk rating | - | - | required | required | required |
 
 ### 5.1 Evidence Currency
@@ -153,11 +153,11 @@ Requirements differ by what the vendor *is*. The table below summarizes the most
 
 | **Vendor Type** | **Distinctive Requirements** |
 |---|---|
-| **SaaS provider** | Approved Provider Catalog (Section 7); shared responsibility matrix (Section 9); CSPM/SSPM coverage on the consumer side; tenant configuration baseline per `CERG-STD-CFG-001`. |
-| **IaaS / PaaS provider** | Landing zone baseline; CMK or BYOK per `CERG-STD-CR-001`; provider attestation including service-in-scope reconciliation; sub-service organization carve-outs. |
+| **SaaS provider** | Approved Provider Catalog (Section 7); shared responsibility matrix (Section 9); CSPM/SSPM coverage on the consumer side; tenant configuration baseline per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). |
+| **IaaS / PaaS provider** | Landing zone baseline; CMK or BYOK per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md); provider attestation including service-in-scope reconciliation; sub-service organization carve-outs. |
 | **OT vendor** | CIP-013 plan participation; SBOM; firmware integrity verification; 24-hour incident notification commitment; engineering-controlled remote access; on-site presence vetting. |
 | **CUI subcontractor** | DFARS / 252.204-7012 flow-down; [CMMC L2](https://dodcio.defense.gov/CMMC/) status; incident notification cooperation (DC3); CUI handling commitment with same controls as us. |
-| **Managed Service Provider (MSP)** | Privileged access via PAM (`CERG-STD-AC-001`); session recording; named-individual accounts; geographic-access controls; tenant separation evidence. |
+| **Managed Service Provider (MSP)** | Privileged access via PAM ([`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md)); session recording; named-individual accounts; geographic-access controls; tenant separation evidence. |
 | **Software supplier (commercial / open source)** | SBOM (NTIA minimum elements); CVE / advisory subscription; software integrity (signed releases); patch / EOL commitments. |
 | **Hardware supplier (esp. OT)** | HBOM where in BES scope; chain-of-custody; firmware integrity; tamper-evidence; secure delivery. |
 
@@ -194,7 +194,7 @@ CERG provides Legal with a clause library; Legal owns negotiation. Clauses below
 | Right to audit | T2+ | Documented audit rights, including evidence on request, with reasonable notice; alternatives include current SOC 2/ISO/FedRAMP report. |
 | Subprocessor consent | SaaS T2+ | Customer-facing list of sub-processors; notification on change. |
 | Data location | All processing Restricted/CUI/BCSI | Defined regions; no data movement to non-approved regions without consent. |
-| Encryption | All processing Restricted/CUI | TLS in transit; FIPS-validated where required; CMK / BYOK rights documented per `CERG-STD-CR-001`. |
+| Encryption | All processing Restricted/CUI | TLS in transit; FIPS-validated where required; CMK / BYOK rights documented per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). |
 | Return / destruction of data | All processing customer data | On termination; documented method and timeline; certification. |
 | Vulnerability and patch | Software / hardware suppliers | Vendor commits to remediation SLAs aligned to severity; advisory publication. |
 | SBOM | Software suppliers (T1/T2) | SBOM at NTIA minimum elements at delivery and at material update. |
@@ -236,7 +236,7 @@ International access to in-scope systems and data is **denied by default**. Wher
 
 - A **Country Risk Register** classifies each country into tiers: Permitted · Restricted · Conditional · Prohibited.
 - Permitted countries are those with established trust relationships, low geopolitical risk, and acceptable law-enforcement / data-protection regimes; access is allowed without exception (logged, monitored).
-- Restricted countries require an exception per `CERG-PRC-RM-001`, with named controls (managed-device-only, session recording, enhanced detection routing).
+- Restricted countries require an exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), with named controls (managed-device-only, session recording, enhanced detection routing).
 - Conditional countries require additional senior-CISO approval, time-boxed access windows, and per-session approval.
 - Prohibited countries do not get access; business need is resolved by alternative means (US-based delivery, alternate vendor).
 - The Country Risk Register is reviewed at least quarterly; geopolitical events can trigger reclassification at any time.
@@ -257,20 +257,20 @@ International access to in-scope systems and data is **denied by default**. Wher
 - Required for T1/T2 software vendors and Tier 1 commercial software products.
 - Minimum elements: NTIA minimum elements (supplier name, component name, version, dependency relationship, author, timestamp, unique identifier).
 - SBOM submitted at delivery and at every material update.
-- SBOMs scanned for known vulnerabilities; findings flow to `CERG-PRC-VM-001`.
+- SBOMs scanned for known vulnerabilities; findings flow to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
 - SBOMs reviewed at architecture review for embedded secrets, suspect packages, and license risk.
 
 ### 11.2 Software Integrity
 
 - Releases signed by the vendor; signatures verified before deployment.
-- Container images signed (cosign / sigstore); admission gate per `CERG-STD-CFG-001` Section 7.
-- Firmware (OT) verified per `CERG-STD-OT-001`; firmware updates follow CIP-010 process per `CERG-PLN-CIP-001`.
+- Container images signed (cosign / sigstore); admission gate per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) Section 7.
+- Firmware (OT) verified per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); firmware updates follow CIP-010 process per [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md).
 
 ---
 
 ## 12. CIP-013 Supply Chain Plan
 
-For BES Cyber Systems, CERG maintains a CIP-013 Supply Chain Risk Management Plan as a CERG-PLN-CIP-001 component, satisfying CIP-013-2 R1. The plan includes:
+For BES Cyber Systems, CERG maintains a CIP-013 Supply Chain Risk Management Plan as a [CERG-PLN-CIP-001](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) component, satisfying CIP-013-2 R1. The plan includes:
 
 - Identification of supply chain risks across procurement and installation.
 - Vendor security controls expectations (incident notification, coordination of access controls, software integrity, vendor remote access management, disclosure of known vulnerabilities).
@@ -287,8 +287,8 @@ For BES Cyber Systems, CERG maintains a CIP-013 Supply Chain Risk Management Pla
 | DFARS 252.204-7012 flow-down to subcontractors handling CUI | DFARS |
 | [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 third-party assessment status verification | DoD / [CMMC](https://dodcio.defense.gov/CMMC/) |
 | Incident notification cooperation, including DC3 reporting | DFARS |
-| Same encryption / handling requirements as the prime | `CERG-STD-CUI-001` + `CERG-STD-CR-001` |
-| CUI Subcontractor Register maintained | `CERG-PLN-CUI-001` |
+| Same encryption / handling requirements as the prime | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) + [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| CUI Subcontractor Register maintained | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) |
 
 ---
 
@@ -361,35 +361,4 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 | External attack surface monitoring | Continuous | Continuous | Sample | - | - |
 | Sub-processor change review | On change | On change | On change | - | - |
 | Country-of-access reconciliation | Quarterly | Quarterly | Annual | - | - |
-| Risk register reconciliation | Quarterly | Quarterly | Semi-annual | Annual | - |
-
-Material events (breach, ownership change, regulator action, material change in service) trigger out-of-cycle review and an SCCT activation evaluation.
-
----
-
-## 17. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Procedure** |
-|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SR family | All sections |
-| NIST 800-161r1 | All sections; especially 11–15 |
-| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GV.SC) | Sections 2–6, 15 |
-| ISO 27036 | Sections 5, 8, 9 |
-| DFARS 252.204-7012 / [CMMC L2](https://dodcio.defense.gov/CMMC/) | Sections 13, 14 |
-| NERC-CIP CIP-013 | Section 12 |
-| FedRAMP / FedRAMP equivalency | Section 14 |
-| NTIA SBOM minimum elements | Section 11 |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Cross-cutting; vendor SOC 1 reuse where applicable |
-
----
-
-## 18. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Risk Manager (Vendor Risk) · CISO endorsement |
-| **Next Review** | Annual / TPRM platform change |
-| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. |
-
+| Risk register reconciliation | Quarterly | Qua

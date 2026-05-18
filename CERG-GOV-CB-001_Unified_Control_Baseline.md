@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Control Baseline) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version) |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 |
 | **Regulations** | NERC-CIP v7 (and CIP-015 draft) · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-The Unified Control Baseline turns the principles in CERG-POL-001, the requirements in subordinate standards, and the philosophy in the CERG Risk Management Framework into an implementation-ready control set. It is the document a control owner, an internal auditor, a [CMMC](https://dodcio.defense.gov/CMMC/) C3PAO, a NERC-CIP auditor, or a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) auditor opens first.
+The Unified Control Baseline turns the principles in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md), the requirements in subordinate standards, and the philosophy in the [CERG Risk Management Framework](CERG_Risk_Management_Framework_v1.0.md) into an implementation-ready control set. It is the document a control owner, an internal auditor, a [CMMC](https://dodcio.defense.gov/CMMC/) C3PAO, a NERC-CIP auditor, or a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) auditor opens first.
 
 It applies to every in-scope asset and every CERG-owned control. Where a subordinate standard imposes a more specific requirement, the standard controls and is referenced from the relevant entry here.
 
@@ -100,7 +100,7 @@ Every control entry in the baseline carries one of the following statuses. The s
 | `Partially Implemented` | Control is in place for some scope or is operating at reduced effectiveness. | Evidence of what is in place plus a POA&M entry. |
 | `Inherited` | Implementation is provided by another party - cloud provider, SaaS provider, parent enterprise control, IAM team. | Inheritance Evidence Package (Section 5). |
 | `Planned` | Control is in the roadmap with an owner and target date. | POA&M entry with date and owner. |
-| `Risk Accepted` | Deviation is approved and tracked via CERG-PRC-RM-001 Section 7. | Risk register entry, exception ID, approver. |
+| `Risk Accepted` | Deviation is approved and tracked via [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 7. | Risk register entry, exception ID, approver. |
 | `Not Applicable` | Control does not apply to this scope. | Documented N/A rationale (system type, no in-scope data, etc.). |
 
 > **What's Not on the List**
@@ -203,15 +203,4 @@ Overlays add to the organizational baseline. They never silently relax it.
 | **High-Impact** | Systems whose loss would materially impact the business or safety | Tighter remediation SLAs, CIS L2 baseline, expanded monitoring, MFA for all non-human identities. | STD-CFG-001 + STD-LM-001 |
 | **CUI** | Any system that stores/processes/transmits CUI | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) controls; SSP + POA&M + SPRS; FIPS-validated cryptography; DFARS flow-down; [CMMC L2](https://dodcio.defense.gov/CMMC/) assessment readiness. | STD-CUI-001 + PLN-CUI-001 |
 | **BES** | Medium/High Impact BES Cyber Systems | NERC-CIP v7 controls including CIP-007, CIP-010, CIP-013; ESP/EAP topology; 90-day searchable / 12-month total log retention; annual recovery exercise; CIP-015 INSM where applicable. | STD-OT-001 + PLN-CIP-001 |
-| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | PLN-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-001 |
-| **OT Safety** | OT systems whose disruption can cause safety impact | Stricter change/maintenance windows, no active scanning, mandatory engineering review for any policy/standard parameter relaxation. | STD-OT-001 |
-
-> **Multiple Overlays at Once**
->
-> A given system may sit under more than one overlay (a BES system that also processes CUI, a financial system in a CUI enclave). When overlays overlap, the most stringent parameter wins for each individual control. Overlays do not "average."
-
----
-
-## 8. Control-to-Evidence Mapping
-
-Every control has name
+| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financi

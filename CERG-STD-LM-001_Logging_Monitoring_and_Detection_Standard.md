@@ -13,9 +13,9 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Risk Manager (Detection Engineering) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-CR-001 |
-| **Supporting Procedures** | CERG-PRC-VM-001 · CERG-PRC-AV-001 · CERG-PRC-RM-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| **Supporting Procedures** | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / On SIEM platform change / On MITRE ATT&CK matrix update |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (DETECT) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AU, SI) · [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) · MITRE ATT&CK Enterprise / Cloud / ICS · MITRE D3FEND |
 | **Regulations** | NERC-CIP CIP-007 R4 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.3.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Operations) · CIP-015 (forward-looking) |
@@ -50,7 +50,7 @@ This standard consolidates those requirements. It defines the log sources every 
 
 > **Detection Coverage Is a Product, Not a Project**
 >
-> Onboarding a SIEM is a project. Detection coverage is the ongoing measurement of whether the detections that should be firing actually do, for the threats that matter to *this* environment. CERG instruments coverage as a metric (`DT-001` in `CERG-GOV-MTR-001`) and treats anything below the target as an incident-readiness gap.
+> Onboarding a SIEM is a project. Detection coverage is the ongoing measurement of whether the detections that should be firing actually do, for the threats that matter to *this* environment. CERG instruments coverage as a metric (`DT-001` in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md)) and treats anything below the target as an incident-readiness gap.
 
 ---
 
@@ -67,7 +67,7 @@ This standard consolidates those requirements. It defines the log sources every 
 
 ## 3. Mandatory Log Sources
 
-The list below is the minimum every CERG-managed environment must onboard. Anything not listed may still be required by a subordinate standard; nothing in this list may be waived without an approved exception per `CERG-PRC-RM-001`.
+The list below is the minimum every CERG-managed environment must onboard. Anything not listed may still be required by a subordinate standard; nothing in this list may be waived without an approved exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ### 3.1 Identity, Endpoint, and Application
 
@@ -89,7 +89,7 @@ The list below is the minimum every CERG-managed environment must onboard. Anyth
 | Cloud control plane (CloudTrail / Activity Log / Audit Logs) | All admin events org-wide; tenant-isolation, IAM, networking, KMS, logging-config changes. |
 | Cloud workload | OS audit, container runtime, function invocation logs (where in scope). |
 | CSPM / SSPM | Misconfiguration findings, drift, posture changes. |
-| Tier 1 SaaS admin/auth logs | Per `CERG-STD-IT-001` Section 9; minimally: admin actions, auth events, data export, sharing events. |
+| Tier 1 SaaS admin/auth logs | Per [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) Section 9; minimally: admin actions, auth events, data export, sharing events. |
 | KMS / HSM | Key administrative events, policy changes, usage events for keys protecting Restricted/CUI. |
 | Secrets manager | Retrieval, write, policy change events. |
 
@@ -132,14 +132,14 @@ The list below is the minimum every CERG-managed environment must onboard. Anyth
 ### 4.1 Routing
 
 - IT/cloud/SaaS logs route to the enterprise SIEM via supported native connectors or log shippers.
-- OT logs route via the **one-way** transfer pattern specified in `CERG-STD-OT-001` and Section 9 below. No bidirectional pulls from OT.
-- CUI logs route to a SIEM tenancy / index that aligns with the CUI boundary and supports FIPS-validated transport (`CERG-STD-CR-001`).
+- OT logs route via the **one-way** transfer pattern specified in [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and Section 9 below. No bidirectional pulls from OT.
+- CUI logs route to a SIEM tenancy / index that aligns with the CUI boundary and supports FIPS-validated transport ([`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md)).
 
 ### 4.2 Protection
 
 - Logs are written to immutable / WORM storage for the retention period.
 - Administrative actions on logs (delete, retention change, export) are themselves logged and reviewed.
-- Log access follows least privilege per `CERG-STD-AC-001`; privileged log access uses PAM.
+- Log access follows least privilege per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); privileged log access uses PAM.
 
 ### 4.3 Retention
 
@@ -168,7 +168,7 @@ Onboarding follows a fixed checklist. The output is a SIEM Onboarding Record per
 | Retention configured | Hot and cold retention per Section 4.3. |
 | Access controlled | RBAC for analysts; PAM for admins. |
 | Day-One detections enabled | Per Section 6 for the environment type. |
-| Detection coverage report generated | Per `CERG-GOV-MTR-001` metric DT-001. |
+| Detection coverage report generated | Per [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) metric DT-001. |
 | Operations handoff | Triage runbook (Section 8) in place; on-call rotation aware. |
 
 ### 5.2 Source Health Monitoring
@@ -221,7 +221,8 @@ CUI overlay (see Section 10) adds CUI-specific detections (export, share, label 
 
 ### 6.4 Coverage Reporting
 
-- Coverage is computed as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, and operating. Reported as DT-001 in `CERG-GOV-MTR-001`.
+- Coverage is computed as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, and operating. Reported as DT-001 in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+- **CERG coverage target: 70% of in-scope ATT&CK sub-matrix techniques with at least one operating detection.** Below 70% is reported red on the CISO dashboard and treated as an incident-readiness gap until closed.
 - The detection inventory is exported monthly and reviewed quarterly against the in-scope sub-matrix.
 
 ---
@@ -254,9 +255,9 @@ Each production detection has:
 
 ### 7.2 Validation
 
-- Detections are validated quarterly via the purple-team procedure in `CERG-PRC-AV-001` Section X.
+- Detections are validated quarterly via the purple-team procedure in [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) §6.
 - Validation result feeds metric DT-002.
-- Failed validations open a risk register entry per `CERG-PRC-RM-001` until restored.
+- Failed validations open a risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) until restored.
 
 ---
 
@@ -264,7 +265,7 @@ Each production detection has:
 
 ### 8.1 Triage Queue Model
 
-- **P1, Critical:** business impact suspected; SOC engages immediately and pages IR per `CERG-PLN-IR-001`.
+- **P1, Critical:** business impact suspected; SOC engages immediately and pages IR per [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md).
 - **P2, High:** likely true positive worth examining within hours.
 - **P3, Medium:** worth examining within the shift.
 - **P4, Low:** examined for trends; bulk-tuned where appropriate.
@@ -296,10 +297,10 @@ OT monitoring adds to the IT pattern; it does not replace it.
 
 - **Passive monitoring is the default.** Span / tap / mirror-fed sensors capture protocol-aware traffic for asset inventory, anomaly, and detection.
 - **Engineering-supervised authenticated checks** allowed in defined windows for endpoint health, configuration capture.
-- **One-way transfer to SIEM.** Data diodes or filtered one-way pipelines per `CERG-STD-OT-001`.
+- **One-way transfer to SIEM.** Data diodes or filtered one-way pipelines per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md).
 - **OT-specific detection set** per Section 6.2.
 - **OT alerts route through a queue that the SOC and OT operations both see** to avoid loss of fidelity in handoff.
-- **No active scanning** of live OT surfaces without an approved scope and time window per `CERG-PRC-AV-001`.
+- **No active scanning** of live OT surfaces without an approved scope and time window per [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md).
 - **CIP-015 (forward-looking).** As CIP-015 finalizes, the BES INSM detection set in Section 6.2 is the foundation; additional CIP-015 detections are added when the standard is approved.
 
 ---
@@ -336,34 +337,4 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 ## 12. Privileged Session Monitoring
 
 - Every privileged session traverses PAM and is recorded (command metadata at minimum; full session for high-blast-radius roles).
-- Session anomalies (long-running, off-hours, off-jurisdiction) raise alerts.
-- Quarterly sampling review by Risk; high-risk roles reviewed more frequently.
-- Break-glass session reviewed within 24 hours of completion.
-
----
-
-## 13. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Section** | **Where in This Standard** |
-|---|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AU / SI | AU-2, AU-6, AU-9, AU-11, SI-4 | All sections |
-| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) DETECT | DE.CM, DE.AE | All sections |
-| [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) | All | Sections 3–4 |
-| MITRE ATT&CK Enterprise / Cloud / ICS | All | Sections 6, 7 |
-| NERC-CIP CIP-007 R4 | Security Event Monitoring | Sections 3.4, 4.3, 9 |
-| NERC-CIP CIP-015 (draft) | INSM | Section 9 |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 | 3.3.x | Section 10 |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Operations / Monitoring | Sections 3, 4 |
-
----
-
-## 14. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-STD-LM-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Risk Manager (Detection Engineering) · CISO endorsement |
-| **Next Review** | Annual / SIEM platform change / ATT&CK matrix update |
-| **Change Log** | 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
-
+- Session anomalies (long-running, off-hours, off-jurisdiction) raise 

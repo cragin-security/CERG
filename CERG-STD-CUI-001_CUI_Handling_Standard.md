@@ -13,7 +13,7 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
 | **Regulations** | [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · DFARS 252.204-7012, -7019, -7020, -7021 · 32 CFR Part 2002 · FAR 52.204-21 (FCI) |
@@ -64,7 +64,7 @@ CUI obligations are contractual. Failure to meet them is not solely a security f
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to **CERG-POL-001**. It implements specific requirements; it does not limit any principle established in that policy. Where the Cloud / SaaS Standard (CERG-STD-IT-001) and this standard both apply, both shall be satisfied, and the more stringent requirement controls. Exceptions follow the process defined in CERG-POL-001 Section 7, with additional obligations defined in Section 11 of this standard.
+This standard is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where the Cloud / SaaS Standard ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)) and this standard both apply, both shall be satisfied, and the more stringent requirement controls. Exceptions follow the process defined in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7, with additional obligations defined in Section 11 of this standard.
 
 ---
 
@@ -137,7 +137,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 |---|---|---|---|
 | Periodically assess risk to CUI confidentiality, integrity, and availability. Document threat sources, vulnerabilities, likelihood, and impact. Output feeds the risk register and POA&M. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.1 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.1 |
 | Scan CUI environment systems for vulnerabilities at least monthly, and upon advisory of new significant vulnerabilities. Authenticated scans are required where technically feasible. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.2 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.2 |
-| Remediate vulnerabilities in the CUI environment per the SLAs defined in **CERG-PRC-VM-001**. Where remediation cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
+| Remediate vulnerabilities in the CUI environment per the SLAs defined in **[CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)**. Where remediation cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
 
 ---
 
@@ -285,7 +285,7 @@ See Section 4.2 above.
 
 ### 7.2 Incident Response Coordination
 
-This standard does not replace the master Incident Response Plan (**CERG-PLN-IR-001**). CUI-specific procedures supplement that plan with: DC3 reporting playbook, evidence preservation procedure, subcontractor-flow notification template, and customer / contracting officer notification template.
+This standard does not replace the master Incident Response Plan (**[CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md)**). CUI-specific procedures supplement that plan with: DC3 reporting playbook, evidence preservation procedure, subcontractor-flow notification template, and customer / contracting officer notification template.
 
 ---
 
@@ -335,7 +335,7 @@ This standard does not replace the master Incident Response Plan (**CERG-PLN-IR-
 
 ## 11. Exceptions, POA&M, and SSP Maintenance
 
-CUI control deficiencies do not follow the ordinary exception process. Open deficiencies are tracked in the POA&M and reflected in the SPRS score. The exception process in CERG-POL-001 Section 7 applies in addition for organizational risk acceptance.
+CUI control deficiencies do not follow the ordinary exception process. Open deficiencies are tracked in the POA&M and reflected in the SPRS score. The exception process in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7 applies in addition for organizational risk acceptance.
 
 | **Deficiency / Exception Type** | **Mechanism** | **Approval / Tracking** | **Review** |
 |---|---|---|---|
@@ -371,21 +371,8 @@ Governance owns this document. The Cyber Governance Manager ([CMMC](https://dodc
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy - this standard is subordinate |
-| IT (Hosted/Cloud/SaaS) Security Standard | CERG-STD-IT-001 | Peer standard - applies in addition to this where CUI is hosted on cloud/SaaS |
-| Grid and Control System Standard | CERG-STD-OT-001 | Peer standard - governs OT estates |
-| Access Management Standard | CERG-STD-AC-001 | Peer standard - identity/access requirements applied inside CUI boundary |
-| Vulnerability Management Procedure | CERG-PRC-VM-001 | Operating procedure for CUI environment scanning and remediation |
-| Incident Response Plan | CERG-PLN-IR-001 | Master IR plan; CUI-specific reporting workflow supplements |
-| Risk Register and Exception Process | CERG-PRC-RM-001 | Risk and POA&M tracking |
-| CERG Operating Model | CERG-GOV-OM-001 | Pillar structure and engagement patterns |
-
----
-
-> **SURGE, Cyber Engineering, Risk & Governance**
->
-> _CUI is a contractual obligation. Treat it that way._
-
----
-
-_CERG-STD-CUI-001 · Version 1.0 DRAFT · CONFIDENTIAL · Internal Use Only_
+| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - applies in addition to this where CUI is hosted on cloud/SaaS |
+| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates |
+| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Peer standard - identity/access requirements applied inside CUI boundary |
+| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulne

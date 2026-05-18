@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Engineering Manager |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 · CERG-PRC-RM-001 · CERG-PRC-TPRM-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On platform or process change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (PL, SA, SC) · NIST 800-160 · NIST SSDF · CSA STAR |
 | **Regulations** | [CMMC L2](https://dodcio.defense.gov/CMMC/) · NERC-CIP CIP-005/CIP-010 · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Change) |
@@ -60,9 +60,9 @@ This procedure defines how a project enters CERG attention, how Engineering revi
 | **Project Sponsor / Business Owner** | Submits intake. Owns the project's residual risk. Approves go-live decisions for their scope. |
 | **Project / Technical Lead** | Produces the architecture artifacts and answers reviewer questions. Drives remediation between reviews. |
 | **CERG - Engineering (Reviewer)** | Conducts the review. Maintains review record. Determines findings. Recommends handoff disposition. |
-| **CERG - Risk (Threat Modeler / Vendor Assessor)** | Performs threat modeling. Performs vendor risk per `CERG-PRC-TPRM-001` if third parties are involved. Adds findings to the risk register. |
+| **CERG - Risk (Threat Modeler / Vendor Assessor)** | Performs threat modeling. Performs vendor risk per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) if third parties are involved. Adds findings to the risk register. |
 | **CERG - Governance (Compliance Liaison)** | Maps the project into the regulatory scope (CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) and triggers the relevant overlay reviewers. |
-| **Engineering Manager** | Approves Standard findings. Approves Medium risk acceptances per `CERG-PRC-RM-001` §8. |
+| **Engineering Manager** | Approves Standard findings. Approves Medium risk acceptances per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8. |
 | **CISO** | Approves High / Critical risk acceptances at go-live. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
 
@@ -73,7 +73,7 @@ This procedure defines how a project enters CERG attention, how Engineering revi
 CERG engagement with a project follows five phases. Not every project hits every phase, Section 4 names the carve-outs.
 
 1. **Intake**, register the project; classify scope; determine review depth.
-2. **Architecture Review and Threat Model**, design-stage review; threats and controls aligned to `CERG-GOV-CB-001`.
+2. **Architecture Review and Threat Model**, design-stage review; threats and controls aligned to [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md).
 3. **Build-Time Engagement**, secure SDLC checks, IaC review, baseline conformance.
 4. **Pre-Production Security Review**, readiness against the review findings, baselines, monitoring, and recovery.
 5. **Production Handoff and Go-Live**, handoff package complete, risk acceptances approved, asset added to inventory and recurring controls.
@@ -90,7 +90,7 @@ CERG Architecture Review is mandatory for projects that meet any of the followin
 
 - Introduces a new IaaS / PaaS / cloud account, subscription, or project.
 - Introduces a new SaaS service (any tier) handling business data.
-- Touches OT / BES Cyber Systems or the IT/OT boundary (per `CERG-STD-OT-001`).
+- Touches OT / BES Cyber Systems or the IT/OT boundary (per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)).
 - Handles CUI (storage, processing, transmission) or changes the CUI boundary.
 - Handles [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant financial data or process flows.
 - Introduces or changes a third-party network connection.
@@ -119,7 +119,7 @@ Citizen-development platforms (Power Platform, low-code app builders, business-m
 | External sharing | Disabled by default; named exception path |
 | Lifecycle | App lifecycle policy: ownership required, dormant apps culled, transfer-on-departure |
 | Telemetry | Audit log forwarded to SIEM; admin actions monitored |
-| Detection set | Day-one detections per `CERG-STD-LM-001` |
+| Detection set | Day-one detections per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
 Apps built on the platform are governed by these guardrails. Where an app needs to step outside the guardrails (e.g., a new connector, an unusual data classification), it triggers Mandatory Review per Section 4.1.
 
@@ -130,7 +130,7 @@ Apps built on the platform are governed by these guardrails. Where an app needs 
 ### 4.4 What Does Not Need CERG Review
 
 - Pure UX or visual changes to an existing system that don't touch authentication, data classification, scope, or interfaces.
-- Routine patching covered by `CERG-PRC-VM-001`.
+- Routine patching covered by [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
 - Routine configuration changes within the DISH-conformant pattern that don't change trust boundaries.
 
 ---
@@ -188,7 +188,7 @@ G. ASKS
 The Intake reviewer (CERG Engineering) determines:
 
 - Review path: **Mandatory** (Phase 2 full), **Lightweight** (self-service checklist), or **Out of Scope**.
-- Overlay reviewers required: CUI, BES, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), OT, each named by `CERG-GOV-CB-001`.
+- Overlay reviewers required: CUI, BES, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), OT, each named by [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md).
 - Threat modeling required: Y/N (default Y for Mandatory; conditional for Lightweight).
 - TPRM engagement required: Y/N (default Y if any vendor is new or tier > business default).
 - Estimated Phase 2–5 effort and target dates.
@@ -201,7 +201,7 @@ A Scope Determination is recorded against the project and visible to the team wi
 
 ### 6.1 Architecture Review Checklist
 
-The reviewer works through the checklist below; findings are recorded with severity and routed per `CERG-PRC-RM-001`.
+The reviewer works through the checklist below; findings are recorded with severity and routed per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 | **Area** | **Review Item** | **Standard Reference** |
 |---|---|---|
@@ -257,7 +257,7 @@ THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
 Build-time engagement is the period between design approval and pre-production. CERG's posture is light-touch on routine builds and present on novel builds. The artifacts produced during build are:
 
 - **IaC review** for new modules and patterns.
-- **Pipeline gates**: DISH baseline conformance, container image signing per `CERG-STD-CR-001`, SBOM produced, vulnerability scan gate.
+- **Pipeline gates**: DISH baseline conformance, container image signing per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), SBOM produced, vulnerability scan gate.
 - **Secrets check**: no secrets in repo; secrets manager wired in.
 - **Conditional re-review** if material design changes happen between Phase 2 and Phase 4.
 
@@ -271,12 +271,12 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 
 | **Check** | **Pass Criteria** | **Evidence** |
 |---|---|---|
-| DISH baseline applied | Pass against the asset's tier in `CERG-STD-CFG-001` | DISH scan output |
+| DISH baseline applied | Pass against the asset's tier in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | DISH scan output |
 | Vulnerability posture | No open Critical; High open ≤ exception count from Phase 2 | VM tool report |
 | Identity wired | SSO + MFA enforced; PAM model in place; service accounts via approved pattern | IdP / PAM policy export |
 | Logging | Mandatory sources onboarded; SIEM ingest verified; retention configured | SIEM source inventory |
 | Detection | Day-one detection set enabled in the environment | Detection coverage report |
-| Cryptography | TLS configuration matches `CERG-STD-CR-001`; CMK where required; secrets pattern in use | Configuration evidence |
+| Cryptography | TLS configuration matches [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md); CMK where required; secrets pattern in use | Configuration evidence |
 | Resilience | Backups configured per tier; first restoration test scheduled | Backup config; resilience register entry |
 | Vendor / TPRM | Vendor records current; evidence-by-tier complete; SCCT in workflow | TPRM tool entries |
 | Regulatory overlay artifacts | CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) artifacts populated per relevant package | Per overlay |
@@ -288,7 +288,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 ### 8.2 Outcome
 
 - **Ready**: go-live disposition in Phase 5.
-- **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approved exceptions per `CERG-PRC-RM-001` §7.
+- **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approved exceptions per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.
 - **Not Ready**: go-live blocked until specific items close.
 
 ---
@@ -313,7 +313,7 @@ PRODUCTION HANDOFF PACKAGE - <System Name>     AR-YYYY-NNNN - PHP-001
    Phase 4 Pre-Production record (link)
 
 3. CONTROL POSTURE AT GO-LIVE
-   Control-by-control state per CERG-GOV-CB-001 (Implemented / Partial / Inherited / Planned / Risk Accepted / N/A)
+   Control-by-control state per [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) (Implemented / Partial / Inherited / Planned / Risk Accepted / N/A)
    Inheritance Evidence Packages on file (cloud / SaaS providers)
 
 4. EVIDENCE POINTERS
@@ -350,7 +350,7 @@ A separate packet is produced only if go-live ships with one or more risk accept
 GO-LIVE RISK ACCEPTANCE PACKET - <System Name>     AR-YYYY-NNNN - GLR-001
 
 Each accepted risk:
-   - Risk Statement (per CERG-TMPL-RM-001)
+   - Risk Statement (per [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md))
    - Linked control(s)
    - Compensating controls in place at go-live
    - Residual score and band
@@ -393,7 +393,7 @@ Where a diagram is implicit (e.g., a pure SaaS service has no on-prem network), 
 
 ## 11. Templates
 
-The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in `CERG-GOV-CAT-001` Section 7 as a V1.x roadmap item.
+The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Section 7 as a V1.x roadmap item.
 
 ---
 
@@ -401,34 +401,4 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 
 | **Metric** | **Definition** | **Reported** |
 |---|---|---|
-| CM-002 (per `CERG-GOV-MTR-001`) | % of in-scope projects with completed AR before go-live | Monthly |
-| AR Lead Time | Median calendar days from Intake submission to Phase 2 record | Monthly |
-| AR Finding Closure | % of Phase 2 findings closed before Pre-Production | Monthly |
-| Citizen-Dev Platforms with Guardrails | % of approved citizen-dev platforms with documented guardrails | Quarterly |
-| Risk Acceptances at Go-Live (volume) | Count by band, trended | Monthly |
-
----
-
-## 13. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Procedure** |
-|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) PL / SA / SC | All phases |
-| NIST 800-160 (Systems Security Engineering) | Phases 2–5 |
-| NIST SSDF | Phase 3 |
-| NERC-CIP CIP-005 / CIP-010 | Phase 2 OT scope, Phase 4 baseline |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) | CUI scope determination in Phase 1; FIPS check in Phase 2/4 |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) scope in Phase 1; change-management interface in Phase 5 |
-
----
-
-## 14. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Engineering Manager · CISO endorsement |
-| **Next Review** | Annual / on platform or process change |
-| **Change Log** | 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
-
+| CM

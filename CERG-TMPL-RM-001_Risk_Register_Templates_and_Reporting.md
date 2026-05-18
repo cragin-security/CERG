@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Risk Register) |
-| **Parent Procedure** | CERG-PRC-RM-001 - Risk Register and Exception Process |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-GOV-MTR-001 |
+| **Parent Procedure** | [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
 | **Review Cycle** | Annual / On register tooling change |
 | **Frameworks** | [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · ISO 31000 |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose and Scope
 
-`CERG-PRC-RM-001` defines how risks and exceptions move through the program. This document is the executable package that makes that procedure operable: the register schema, the exception template, scoring examples, and the reporting views the CISO actually consumes. It is referenced from PRC-RM-001 and from CERG-GOV-CB-001 (control-to-evidence mapping).
+[`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) defines how risks and exceptions move through the program. This document is the executable package that makes that procedure operable: the register schema, the exception template, scoring examples, and the reporting views the CISO actually consumes. It is referenced from PRC-RM-001 and from [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) (control-to-evidence mapping).
 
 > **Why Bind Risk Statements to Controls**
 >
@@ -62,7 +62,7 @@ The Risk Statement is derived from a control. The derivation pattern is:
 | Risk Accepted | "While the exception is in force…" |
 | Inherited | "If the provider's control or our inheritance prerequisites fail…" |
 
-If a risk does not map to a control in `CERG-GOV-CB-001`, one of three things happens: (1) the control is added to the baseline as a CERG-X control, (2) the risk is reframed against an existing control, or (3) the risk is rejected as out of scope.
+If a risk does not map to a control in [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md), one of three things happens: (1) the control is added to the baseline as a CERG-X control, (2) the risk is reframed against an existing control, or (3) the risk is rejected as out of scope.
 
 ---
 
@@ -75,7 +75,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Risk ID | `R-YYYY-NNNN` | Yes | Sequential per calendar year. |
 | Risk Statement | Free text - Section 2 form | Yes | One sentence. |
 | Source | Enum: VM · Pen Test · Vendor · Architecture Review · Audit · Threat Intel · Self-Identified · Incident | Yes | What surfaced the risk. |
-| Linked Control(s) | List of CERG-GOV-CB-001 IDs | Yes | At least one. |
+| Linked Control(s) | List of [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) IDs | Yes | At least one. |
 | Affected Asset(s) | Asset inventory ID(s) | Yes | From the authoritative asset inventory. |
 | Operating Unit | Enum (OU list) | Yes | Drives CISO slice-and-dice. |
 | Regulatory Scope | Multi-select: CUI · BES · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · None | Yes | Drives overlay scoring. |
@@ -179,7 +179,7 @@ Affected Asset(s)      :   (inventory ID + name)
 Operating Unit         :
 Regulatory Scope       :   CUI / BES / SOX / None
 
-Control Being Deviated :   (CERG-GOV-CB-001 control ID + family)
+Control Being Deviated :   ([CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) control ID + family)
 Subordinate Standard   :   (CERG-STD-* reference)
 Standard Language      :   (quoted parameter that is being relaxed)
 Proposed Deviation     :   (precise; not "we won't do X" but "we will do Y in place of X")
@@ -303,18 +303,4 @@ Additional guardrails baked into the views:
 | Exception expiration sweep | Monthly | Risk Register Owner |
 | OU Scorecard publication | Monthly | Cyber Governance - Reporting |
 | Top 10 Risks publication | Monthly | Risk Register Owner + CISO |
-| Regulatory Posture publication | Quarterly | Governance Domain Owners |
-| Risk register data quality audit | Quarterly | Risk Register Owner |
-
----
-
-## 9. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager |
-| **Next Review** | Annual / on tooling change |
-| **Change Log** | 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
-
+| Regulatory Posture publication | Quarterly | Governance Domain O

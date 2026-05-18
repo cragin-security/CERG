@@ -5,13 +5,14 @@
 
 | **Document ID**    | CERG-POL-001                                             |
 | ------------------ | -------------------------------------------------------- |
-| **Version**        | 1.0 DRAFT                                                |
-| **Status**         | For Review                                               |
+| **Version**        | 1.0                                                      |
+| **Status**         | Active                                                   |
+| **Effective Date** | 2026-05-01                                               |
 | **Classification** | Internal - Confidential                                  |
 | **Owner**          | Chief Information Security Officer                       |
 | **Review Cycle**   | Annual / Upon Significant Change                         |
-| **Frameworks**     | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
-| **Regulations**    | NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC                     |
+| **Frameworks**     | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · NIST RMF |
+| **Regulations**    | NERC-CIP · CMMC Level 2 · SOX ITGC                       |
 
 ---
 
@@ -89,10 +90,15 @@ The following terms are used throughout this policy and all subordinate document
 |**BES Cyber System**|A grouping of BES Cyber Assets that perform one or more reliability tasks for a functional entity, as defined by NERC-CIP CIP-002.|
 |**CERG / SURGE**|The Cyber Engineering, Risk, and Governance operating model. The three-pillar security function responsible for building secure systems, managing exposure, and governing the security program.|
 |**CUI**|Controlled Unclassified Information. Information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls (32 CFR Part 2002).|
+|**DISH**|**D**efensive **I**nfrastructure **S**ystem **H**ardening. The CERG-published set of secure configuration baselines applied to in-scope assets per asset class. Authoritative baselines are maintained in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md).|
 |**Environment**|The hosting and operational context of an asset: owned data center, leased data center, cloud infrastructure (IaaS/PaaS), SaaS platform, or contractor-managed facility.|
+|**Executive Sponsor**|The named business or operational executive accountable for the systems, processes, or programs within a defined scope. The Executive Sponsor concurs on Critical-severity risk acceptance decisions per [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7, sits on the Cyber Oversight Group when a system in their scope is on the agenda, and is named per system in the categorization register.|
 |**OT / ICS**|Operational Technology / Industrial Control Systems. Hardware and software that monitors and controls physical devices, processes, and events in industrial environments, including SCADA systems, energy management systems, and substation automation.|
-|**Risk Acceptance**|A documented management decision to acknowledge a risk and take no further action to reduce it, subject to approval thresholds defined in subordinate standards.|
+|**POA&M**|**P**lan of **A**ction and **M**ilestones. A documented record of open findings, their compensating controls, named owners, and target remediation dates. POA&Ms are mandatory under DFARS / CMMC for CUI scope and are produced as part of every System Security Plan; CERG also uses POA&M as the standard format for tracking open security findings outside CUI scope.|
+|**PPR**|**P**riority **P**atch **R**equest. CERG's emergency-response remediation tier, invoked for vulnerabilities listed in the CISA KEV catalog or confirmed under active exploitation. SLA values and trigger criteria live in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.|
+|**Risk Acceptance**|A documented management decision to acknowledge a risk and take no further action to reduce it. Approval authority and acceptance duration are defined in the canonical Risk Acceptance Authority table in [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7.|
 |**Risk Treatment**|The process of selecting and implementing controls to modify risk. Includes risk reduction (implement controls), risk transfer (insurance, contract), risk avoidance (cease activity), and risk acceptance.|
+|**SSP**|**S**ystem **S**ecurity **P**lan. The authoritative document for a system in regulated scope (most commonly CUI / CMMC) that records system boundary, categorization, control implementation status, and responsible parties. POA&M entries are tracked as an attachment to the SSP.|
 |**System Trust Level**|The classification of confidence placed in a system or connection based on its ownership, management, and verification status. Ranges from fully trusted (organization-owned, managed, and monitored) to untrusted (unmanaged third-party or external networks).|
 |**Vulnerability**|A weakness in an information system, system security procedure, internal control, or implementation that could be exploited or triggered by a threat source.|
 
@@ -123,7 +129,7 @@ You cannot protect what you do not know you own. An incomplete inventory is not 
 
 **References**
 
-`NIST CSF IDENTIFY` · `NIST 800-53 CM-8` · `NIST 800-171 3.4.1` · `NIST RMF Step 1` · `NERC-CIP CIP-002` · `CMMC CM.2.061` · `Req 2.1, 12.5`
+`NIST CSF IDENTIFY` · `NIST 800-53 CM-8` · `NIST 800-171 03.04.01` · `NIST RMF Step 1` · `NERC-CIP CIP-002` · `CMMC CM.L2-3.4.1`
 
 ---
 
@@ -143,7 +149,7 @@ Credential-based attacks are the leading initial access vector. Excessive privil
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 AC-2, AC-6, IA-2, IA-5` · `NIST 800-171 3.1.1–3.1.3, 3.5.1–3.5.3` · `NIST RMF Step 3` · `NERC-CIP CIP-004 R4, CIP-005 R2, CIP-007 R5` · `CMMC AC.1.001, AC.2.006, IA.1.076, IA.3.083` · `Req 7, Req 8` · `SOX ITGC access controls`
+`NIST CSF PROTECT` · `NIST 800-53 AC-2, AC-6, IA-2, IA-5` · `NIST 800-171 03.01.01–03.01.03, 03.05.01–03.05.03` · `NIST RMF Step 3` · `NERC-CIP CIP-004 R4, CIP-005 R2, CIP-007 R5` · `CMMC AC.L1-3.1.1, AC.L2-3.1.5, IA.L1-3.5.1, IA.L2-3.5.3` · `SOX ITGC access controls`
 
 ---
 
@@ -162,7 +168,7 @@ Default and unrestricted configurations are the attack surface that was never ne
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 CM-6, CM-7` · `NIST 800-171 3.4.6, 3.4.7` · `NIST RMF Step 3` · `NERC-CIP CIP-007 R1, CIP-010 R1` · `CMMC CM.2.061, CM.2.064` · `Req 2`
+`NIST CSF PROTECT` · `NIST 800-53 CM-6, CM-7` · `NIST 800-171 03.04.06, 03.04.07` · `NIST RMF Step 3` · `NERC-CIP CIP-007 R1, CIP-010 R1` · `CMMC CM.L2-3.4.6, CM.L2-3.4.7`
 
 ---
 
@@ -181,7 +187,7 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 SC-7, SC-8, SC-28` · `NIST 800-171 3.13.1, 3.13.8, 3.13.10` · `NIST RMF Step 3` · `NERC-CIP CIP-005 (ESP/EAP), CIP-011` · `CMMC SC.1.175, SC.3.177` · `Req 1, Req 3, Req 4`
+`NIST CSF PROTECT` · `NIST 800-53 SC-7, SC-8, SC-28` · `NIST 800-171 03.13.01, 03.13.08, 03.13.10` · `NIST RMF Step 3` · `NERC-CIP CIP-005 (ESP/EAP), CIP-011` · `CMMC SC.L1-3.13.1, SC.L2-3.13.16`
 
 ---
 
@@ -190,9 +196,9 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 **Mandate**
 
 - The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.
-- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within timelines defined in subordinate standards.
+- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.
 - OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements and operational windows, with NERC-CIP deviation processes invoked as required.
-- Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment. High and Critical severity findings require documented management authorization before go-live.
+- Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7. High and Critical severity findings require documented authorization at the level named in that table before go-live.
 - The organization shall conduct periodic adversarial testing, penetration testing and red team operations, to validate that controls function under active attack conditions, not only under passive assessment.
 
 **Rationale**
@@ -201,7 +207,7 @@ The majority of successful breaches exploit known vulnerabilities for which patc
 
 **References**
 
-`NIST CSF IDENTIFY, DETECT` · `NIST 800-53 SI-2, RA-5, CA-8` · `NIST 800-171 3.11.2` · `NIST RMF Steps 4, 6` · `NERC-CIP CIP-007-6 R2, CIP-010 R3` · `CMMC RM.2.141, SI.2.214, CA.2.157` · `Req 6.3, 11.3, 11.4`
+`NIST CSF IDENTIFY, DETECT` · `NIST 800-53 SI-2, RA-5, CA-8` · `NIST 800-171 03.11.02` · `NIST RMF Steps 4, 6` · `NERC-CIP CIP-007-6 R2, CIP-010 R3` · `CMMC RA.L2-3.11.2, SI.L1-3.14.1, CA.L2-3.12.1`
 
 ---
 
@@ -221,7 +227,7 @@ Controls that cannot be observed cannot be verified. Privileged and remote acces
 
 **References**
 
-`NIST CSF PROTECT, DETECT` · `NIST 800-53 AU-2, AU-9, AU-11, AU-12, AC-17, SI-4` · `NIST 800-171 3.3.1, 3.14.6` · `NIST RMF Steps 3, 6` · `NERC-CIP CIP-005 R2, CIP-007 R4` · `CMMC AU.2.041, AU.2.042, SI.2.216` · `Req 8.2, Req 10` · `SOX ITGC access logging`
+`NIST CSF PROTECT, DETECT` · `NIST 800-53 AU-2, AU-9, AU-11, AU-12, AC-17, SI-4` · `NIST 800-171 03.03.01, 03.14.06` · `NIST RMF Steps 3, 6` · `NERC-CIP CIP-005 R2, CIP-007 R4` · `CMMC AU.L2-3.3.1, AU.L2-3.3.2, SI.L2-3.14.6` · `SOX ITGC access logging`
 
 ---
 
@@ -240,7 +246,7 @@ A hardened system that drifts back to an insecure state provides the same exposu
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 CM-3, CM-5` · `NIST 800-171 3.4.3` · `NIST RMF Step 3` · `NERC-CIP CIP-010 R1` · `CMMC CM.2.062` · `Req 6.5` · `SOX ITGC change management`
+`NIST CSF PROTECT` · `NIST 800-53 CM-3, CM-5` · `NIST 800-171 03.04.03` · `NIST RMF Step 3` · `NERC-CIP CIP-010 R1` · `CMMC CM.L2-3.4.3` · `SOX ITGC change management`
 
 ---
 
@@ -259,7 +265,7 @@ The organization's security posture extends only as far as its weakest trusted t
 
 **References**
 
-`NIST CSF GOVERN` · `NIST 800-53 SA-9, SR-3` · `NIST 800-171 3.1.20` · `NIST RMF Step 2` · `NERC-CIP CIP-013` · `CMMC SR.3.169` · `Req 12.8, 12.9` · `SOX ITGC third-party SOC 2`
+`NIST CSF GOVERN` · `NIST 800-53 SA-9, SR-3` · `NIST 800-171 03.01.20` · `NIST RMF Step 2` · `NERC-CIP CIP-013` · `CMMC SR.L2 family` · `SOX ITGC third-party SOC 2`
 
 ---
 
@@ -268,8 +274,8 @@ The organization's security posture extends only as far as its weakest trusted t
 **Mandate**
 
 - All identified risks to organizational assets and operations shall be documented in the organizational risk register with, at minimum: risk description, affected assets, risk owner, severity, treatment decision, compensating controls, and target closure date.
-- Risk treatment decisions, including risk acceptance, require documented approval from the authorized approval authority as defined in subordinate standards. High and Critical risks require CISO or executive sponsor sign-off.
-- The risk register shall be reviewed by leadership on a quarterly basis at minimum. Overdue or deteriorating risk items shall be escalated to the CISO.
+- Risk treatment decisions, including risk acceptance, require documented approval from the authority named in the canonical Risk Acceptance Authority table in [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7.
+- The risk register shall be reviewed in two cadences per [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2: weekly for High and Critical items, monthly in full. Overdue or deteriorating risk items shall be escalated to the CISO and the Cyber Oversight Group.
 - Risk management is an organizational function, not a security team function. Business unit owners bear accountability for the risks associated with their systems and processes. Cyber Governance facilitates and tracks; it does not absorb accountability on behalf of the business.
 
 **Rationale**
@@ -278,7 +284,7 @@ Risks that are not formally documented are effectively accepted without acknowle
 
 **References**
 
-`NIST CSF GOVERN` · `NIST 800-53 RA-3, PM-9` · `NIST 800-171 3.11.1` · `NIST RMF Steps 4–5` · `NERC-CIP CIP-003` · `CMMC RM.2.141, RM.3.144` · `Req 12.3` · `SOX ERM interface`
+`NIST CSF GOVERN` · `NIST 800-53 RA-3, PM-9` · `NIST 800-171 03.11.01` · `NIST RMF Steps 4–5` · `NERC-CIP CIP-003` · `CMMC RA.L2-3.11.1` · `SOX ERM interface`
 
 ---
 
@@ -298,7 +304,7 @@ An organization that has not practiced its incident response plan has a document
 
 **References**
 
-`NIST CSF RESPOND, RECOVER` · `NIST 800-53 IR-2, IR-4, IR-8, CP-2, CP-9` · `NIST 800-171 3.6.1–3.6.3` · `NIST RMF Step 6` · `NERC-CIP CIP-008, CIP-009` · `CMMC IR.2.092, IR.2.093, RE.2.137` · `Req 12.10`
+`NIST CSF RESPOND, RECOVER` · `NIST 800-53 IR-2, IR-4, IR-8, CP-2, CP-9` · `NIST 800-171 03.06.01–03.06.03` · `NIST RMF Step 6` · `NERC-CIP CIP-008, CIP-009` · `CMMC IR.L2-3.6.1, IR.L2-3.6.2`
 
 ---
 
@@ -308,7 +314,7 @@ The following table defines accountability for this policy and the principles it
 
 |Role|Responsibility|
 |---|---|
-|**Chief Information Security Officer (CISO)**|Policy owner. Responsible for the cybersecurity program. Approves policy, standards, and High/Critical risk acceptances. Reports compliance posture and material risks to executive leadership and the board.|
+|**Chief Information Security Officer (CISO)**|Policy owner. Responsible for the cybersecurity program. Approves policy, standards, and risk acceptances per the canonical authority table in [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7. Reports compliance posture and material risks to the Cyber Oversight Group, executive leadership, and the board.|
 |**Cyber Engineering (CERG Pillar)**|Implements security controls through project delivery. Produces asset documentation and configuration baselines. Ensures systems are designed to conform to this policy and subordinate standards prior to production deployment.|
 |**Cyber Risk (CERG Pillar)**|Maintains continuous visibility into organizational exposure. Operates the vulnerability management, penetration testing, threat intelligence, and vendor risk programs. Identifies and communicates risk to Engineering, Governance, and leadership.|
 |**Cyber Governance (CERG Pillar)**|Develops and maintains the policy and standards library. Tracks compliance posture across all applicable frameworks. Maintains the risk register and evidence library. Coordinates regulatory examinations and audits. Operates the compliance calendar.|
@@ -326,7 +332,7 @@ This policy is designed to satisfy the foundational policy and governance requir
 |---|---|---|
 |**[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)**|All 6 functions: GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER|All 10 principles|
 |**[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5**|PL, PM, RA, CA, AC, IA, SC, CM, SI, AU, IR, CP, PE, PS, SA, SR|All 10 principles|
-|**[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 2**|All 14 domains (CUI environments)|Principles 1–7, 9–10|
+|**[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3**|All 17 families (CUI environments)|Principles 1–7, 9–10|
 |**NIST RMF**|Steps 1–6 (Categorize through Monitor)|All 10 principles|
 |**NERC-CIP**|CIP-002 through CIP-014 (BES Cyber Systems)|Principles 1–7, 9–10|
 |**[CMMC](https://dodcio.defense.gov/CMMC/) Level 2**|All 110 practices across 14 domains|Principles 1–7, 9–10|
@@ -347,7 +353,7 @@ Exceptions to this policy are recognized as operationally necessary in specific,
 - Any personnel may initiate an exception request through Cyber Governance using the organization's approved exception request process.
 - Exception requests shall document: the principle or requirement subject to exception, the business or operational justification, the affected systems, the proposed compensating controls, the risk owner, and the proposed exception duration.
 - Cyber Risk shall assess the risk associated with each exception and provide a written finding to support the approval decision.
-- Approval authority is defined by risk severity in subordinate standards. High and Critical risk exceptions require CISO approval at minimum. Exceptions affecting BES Cyber Systems, CUI environments, or [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
+- Approval authority follows the canonical Risk Acceptance Authority table in [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7. Exceptions affecting BES Cyber Systems, CUI environments, or SOX-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
 - Approved exceptions shall be entered into the risk register and tracked to expiration or remediation. Exceptions shall not be renewed without a new approval cycle.
 
 ### 7.2 Regulatory Deviations
@@ -382,38 +388,4 @@ Non-compliance findings identified by external regulators or auditors shall be e
 
 This policy shall be reviewed annually by Cyber Governance and updated as needed to reflect changes in the threat environment, organizational structure, or applicable regulatory requirements.
 
-This policy shall also be reviewed and updated upon: material changes to applicable regulations, significant organizational changes affecting scope, a significant security incident that reveals a gap in foundational principles, or direction from the CISO or executive leadership.
-
-Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure operational practicability before submission for CISO approval. Approved revisions shall be version-controlled and distributed to all personnel with compliance obligations under this policy.
-
-### 9.1 Document History
-
-|Version|Date|Summary|Author / Approver|
-|---|---|---|---|
-|1.0|TBD|Initial release|CISO|
-
----
-
-## 10. Related Documents
-
-The authoritative inventory, IDs, owners, status, deferred / planned artifacts, is maintained in `CERG-GOV-CAT-001` Document Catalog and Naming Convention. The summary below reflects the V1 library.
-
-### 10.1 Cross-Cutting Instruments
-
-| Document                                       | ID                       | Owner                 |
-| ---------------------------------------------- | ------------------------ | --------------------- |
-| Document Catalog and Naming Convention         | CERG-GOV-CAT-001         | Cyber Governance      |
-| Unified Control Baseline                       | CERG-GOV-CB-001          | Cyber Governance      |
-| Metrics, Dashboard, and CISO/Board Reporting   | CERG-GOV-MTR-001         | Cyber Governance      |
-| CERG Operating Model                           | CERG-GOV-OM-001          | CISO                  |
-| Risk Management Framework                      | CERG_RMF_v1.0            | Cyber Governance      |
-| Compliance Matrix                              | CERG Compliance Matrix   | Cyber Governance      |
-| Risk Taxonomy                                  | CERG Risk Taxonomy       | Cyber Risk            |
-
-### 10.2 Standards
-
-| Document                                                  | ID                | Owner                 |
-| --------------------------------------------------------- | ----------------- | --------------------- |
-| IT (Hosted, Cloud, and SaaS) Security Standard            | CERG-STD-IT-001   | Cyber Governance      |
-| Grid Control Systems Security Standard                    | CERG-STD-OT-001   | Cyber Governance      |
-| 
+This policy shall also be reviewed and updated upon: material changes to applicable regulations, significant organizational changes affecting scope, a significant security incident that reveals a gap in foundational principles, or direction from the CISO or 

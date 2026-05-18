@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Engineering Manager (Platforms) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-RES-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 | **Review Cycle** | Annual / On NIST FIPS publication change · On crypto algorithm deprecation |
 | **Frameworks** | NIST FIPS 140-3 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SC family) · [NIST 800-57](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) · [NIST 800-131A](https://csrc.nist.gov/pubs/sp/800/131/a/r2/final) · NIST 800-175B |
 | **Regulations** | NERC-CIP (BCSI) · [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.13.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · FedRAMP |
@@ -110,7 +110,7 @@ CERG controls cryptography at four use cases. Each names the required algorithm 
 - **Volume / disk encryption:** AES-256 via OS or storage platform; keys in HSM or cloud KMS; rotation per Section 8.
 - **Database TDE / column-level encryption:** AES-256; CMK for Restricted/CUI/[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) in-scope; rotation per Section 8.
 - **Object storage:** server-side encryption with CMK for Restricted/CUI; client-side encryption optional where adversary model includes provider compromise.
-- **Backups:** AES-256; key separate from production credentials (see `CERG-STD-RES-001` Section 4).
+- **Backups:** AES-256; key separate from production credentials (see [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 4).
 
 ### 3.2 Data in Transit
 
@@ -121,14 +121,14 @@ CERG controls cryptography at four use cases. Each names the required algorithm 
 
 ### 3.3 Authentication
 
-- **Human authentication credentials:** see `CERG-STD-AC-001` (phishing-resistant MFA, password storage requirements).
+- **Human authentication credentials:** see [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) (phishing-resistant MFA, password storage requirements).
 - **Machine identities:** certificates, signed JWTs, or workload identity (cloud-native), see Section 7.
 
 ### 3.4 Signing and Integrity
 
 - **Code signing:** RSA-PSS 3072+ or ECDSA P-256+; keys in HSM; access logged.
-- **Container image signing:** cosign / sigstore; signature verification enforced at admission per `CERG-STD-CFG-001` Section 7.
-- **Log integrity:** WORM storage and / or signing per `CERG-STD-LM-001`.
+- **Container image signing:** cosign / sigstore; signature verification enforced at admission per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) Section 7.
+- **Log integrity:** WORM storage and / or signing per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 - **Document signing:** PKCS#7 / CAdES with RSA-PSS or ECDSA per use case.
 
 ---
@@ -215,7 +215,7 @@ The CMK decision is about who controls the master key, the customer (us) or the 
 
 - Internal-classification data in standard cloud/SaaS.
 - Non-production environments.
-- Workloads where the provider's default key management has been assessed and accepted via the `CERG-PRC-TPRM-001` Inheritance Evidence Package and risk-register entry.
+- Workloads where the provider's default key management has been assessed and accepted via the [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Inheritance Evidence Package and risk-register entry.
 
 ### 6.3 CMK Operational Requirements
 
@@ -226,7 +226,7 @@ The CMK decision is about who controls the master key, the customer (us) or the 
 
 > **What Inheritance Looks Like When CMK Is Not Required**
 >
-> "We use the provider's default key management" is only acceptable when the Inheritance Evidence Package in `CERG-GOV-CB-001` Section 5 is on file. Provider attestation, shared responsibility line item, customer-side configuration prerequisites, and re-papering trigger, all six elements, or CMK is required.
+> "We use the provider's default key management" is only acceptable when the Inheritance Evidence Package in [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5 is on file. Provider attestation, shared responsibility line item, customer-side configuration prerequisites, and re-papering trigger, all six elements, or CMK is required.
 
 ---
 
@@ -243,7 +243,7 @@ Plaintext secrets in source code, configuration files, environment variables on 
 | API token issued by an internal service | Issued by an IdP-integrated token service where possible; otherwise secrets manager. |
 | Service account credential | Workload identity (preferred); otherwise short-lived issued credential. |
 | Personal access token (PAT) for human use | Created via IdP, time-bounded, scope-bounded, logged. |
-| Break-glass credential | Vaulted per `CERG-STD-AC-001`. |
+| Break-glass credential | Vaulted per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). |
 
 ### 7.2 Distribution and Use
 
@@ -288,14 +288,14 @@ Rotation is also triggered by, not on a schedule alone:
 - Suspected key / secret / credential compromise.
 - Workforce changes affecting individuals with key access.
 - HSM / KMS administrative anomaly.
-- Vendor incident notification (per SCCT per `CERG-PRC-TPRM-001`).
+- Vendor incident notification (per SCCT per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md)).
 - Algorithm deprecation or policy update.
 
 ---
 
 ## 9. FIPS / FedRAMP / CUI Cryptography Checklist
 
-The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. It is used at architecture review (`CERG-PRC-AR-001`) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness (`CERG-PLN-CUI-001`).
+The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. It is used at architecture review ([`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness ([`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)).
 
 | **Check** | **Required** | **Evidence** |
 |---|---|---|
@@ -305,7 +305,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | Keys are HSM-resident or HSM-backed | ✓ | KMS/HSM configuration |
 | TLS termination uses FIPS-validated module | ✓ | Load balancer / gateway configuration |
 | Cloud provider's FIPS endpoints used where required | ✓ | Endpoint configuration evidence |
-| FedRAMP equivalency for CUI cloud / SaaS handled per `CERG-PRC-TPRM-001` Inheritance Evidence Package | ✓ | TPRM record |
+| FedRAMP equivalency for CUI cloud / SaaS handled per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Inheritance Evidence Package | ✓ | TPRM record |
 | CMK in use for CUI data at rest | ✓ (per Section 6) | KMS key inventory |
 | CUI data in transit uses FIPS-validated TLS | ✓ | Configuration evidence |
 | Secrets manager backing CUI workloads is FIPS-validated | ✓ | Vendor attestation |
@@ -317,7 +317,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | **Role** | **Cryptography Responsibility** |
 |---|---|
 | **Cyber Engineering - Platforms** | Owns this standard. Maintains the cryptographic inventory (algorithms in use, keys, certificates). Operates the KMS/HSM and secrets management platforms. Drives migrations off deprecated algorithms. |
-| **Cyber Engineering - Identity** | Implements credential-side controls per `CERG-STD-AC-001`; integrates IdP/PAM token issuance with this standard. |
+| **Cyber Engineering - Identity** | Implements credential-side controls per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); integrates IdP/PAM token issuance with this standard. |
 | **Cyber Risk** | Detects use of prohibited algorithms via DISH and other tooling; tracks deprecation risk in the risk register. |
 | **Cyber Governance** | Maintains exceptions register for transitional algorithms; tracks audit-facing evidence; cross-references with control library. |
 | **Asset Owners** | Choose CMK vs. provider-managed key per Section 6 with Engineering guidance; budget for HSM/KMS cost where applicable. |
@@ -329,26 +329,4 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 
 | **Regulation / Framework** | **Section** | **Where in This Standard** |
 |---|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SC family | SC-8, SC-12, SC-13, SC-17, SC-28 | All sections |
-| [NIST 800-57](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) | All | Sections 5, 8 |
-| [NIST 800-131A](https://csrc.nist.gov/pubs/sp/800/131/a/r2/final) | All | Sections 2, 8 |
-| NIST 800-175B | All | Sections 3, 5 |
-| FIPS 140-3 | All | Section 9 |
-| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | 3.13.x | Section 9 |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) | 3.13.x | Section 9 |
-| FedRAMP Moderate | SC family | Section 9 |
-| NERC-CIP CIP-011 | BCSI Protection | Sections 3, 5 |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Operations / Change | Sections 5, 7 |
-
----
-
-## 12. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-STD-CR-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Engineering Manager (Platforms) · CISO endorsement |
-| **Next Review** | Annual / on FIPS publication change / on algorithm deprecation |
-| **Change Log** | 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
-
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SC family | SC-8, SC-12, SC-13, SC-17, SC-28 | All s

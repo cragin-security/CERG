@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | CISO (Incident Commander Authority) · Cyber Governance (Plan Maintenance) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
 | **Regulations** | NERC-CIP CIP-008 · [CMMC](https://dodcio.defense.gov/CMMC/) IR.L2 · DFARS 252.204-7012 · SEC 8-K Item 1.05 (where applicable) · State breach laws · GDPR (where applicable) |
@@ -42,7 +42,7 @@
 
 ## 1. Purpose and Scope
 
-This plan operationalizes the incident response principle established in **CERG-POL-001 Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
+This plan operationalizes the incident response principle established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
 
 The plan is intentionally cross-environment. A single incident may span enterprise IT, cloud, SaaS, OT, and CUI environments simultaneously. The plan provides one structure of authority, classification, and notification, with environment-specific overlays that reflect the operational and regulatory reality of each domain.
 
@@ -70,7 +70,7 @@ This plan applies to:
 
 ### 1.3 Relationship to Parent Policy and Standards
 
-This plan is subordinate to **CERG-POL-001** and implements the response and recovery obligations of the peer standards. Where a peer standard imposes additional or more stringent notification, evidence, or recovery requirements, the more stringent requirement controls.
+This plan is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)** and implements the response and recovery obligations of the peer standards. Where a peer standard imposes additional or more stringent notification, evidence, or recovery requirements, the more stringent requirement controls.
 
 ---
 
@@ -268,7 +268,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 
 ### 7.1 Enterprise IT / Cloud / SaaS
 
-Containment leverages cloud-native isolation (quarantine IAM, account suspension, security-group changes), conditional-access lockdowns, and SaaS admin-controlled session revocation. Forensic acquisition depends on provider-exposed artifacts; pre-staged acquisition procedures are maintained per **CERG-STD-IT-001 §7**.
+Containment leverages cloud-native isolation (quarantine IAM, account suspension, security-group changes), conditional-access lockdowns, and SaaS admin-controlled session revocation. Forensic acquisition depends on provider-exposed artifacts; pre-staged acquisition procedures are maintained per **[CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) §7**.
 
 ### 7.2 OT / BES Cyber Systems
 
@@ -280,7 +280,7 @@ OT incidents engage the operations liaison as a peer decision-maker on containme
 
 ### 7.3 CUI Environments
 
-CUI incidents trigger DFARS 252.204-7012 reporting via DC3 / DIBNet within 72 hours of discovery (Section 6.2). Evidence preservation requirements (90-day retention of images and malware) apply per **CERG-STD-CUI-001 §7**. The Governance Lead coordinates with the contracting officer when required by contract.
+CUI incidents trigger DFARS 252.204-7012 reporting via DC3 / DIBNet within 72 hours of discovery (Section 6.2). Evidence preservation requirements (90-day retention of images and malware) apply per **[CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) §7**. The Governance Lead coordinates with the contracting officer when required by contract.
 
 ### 7.4 [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-Relevant Systems
 
@@ -426,21 +426,7 @@ Cyber Governance owns the plan as a document. The CISO owns the operational capa
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy - Principle 10 |
-| Grid and Control System Standard | CERG-STD-OT-001 | OT IR overlay, CIP-008 obligations |
-| IT (Hosted/Cloud/SaaS) Security Standard | CERG-STD-IT-001 | Cloud / SaaS IR overlay |
-| CUI Handling Standard | CERG-STD-CUI-001 | DFARS reporting workflow |
-| Access Management Standard | CERG-STD-AC-001 | Identity-driven containment |
-| Vulnerability Management Procedure | CERG-PRC-VM-001 | Vulnerability-driven incident handoff |
-| Risk Register and Exception Process | CERG-PRC-RM-001 | Post-incident corrective action tracking |
-| CERG Operating Model | CERG-GOV-OM-001 | Pillar structure |
-
----
-
-> **SURGE, Cyber Engineering, Risk & Governance**
->
-> _Prepared response is the only kind that holds together at 2 a.m._
-
----
-
-_CERG-PLN-IR-001 · Version 1.0 DRAFT · CONFIDENTIAL · Internal Use Only_
+| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - Principle 10 |
+| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT IR overlay, CIP-008 obligations |
+| IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud / SaaS IR overlay |
+| CUI Handling Standard | [CERG-STD-C

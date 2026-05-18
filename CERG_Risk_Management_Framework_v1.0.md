@@ -2,7 +2,7 @@
 ## CERG Risk Management Framework
 **Document ID:** CERG-RMF-001 · **Version:** 1.0 · **Classification:** Internal / Restricted
 
-> *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).*
+> *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across CMMC, NERC-CIP, and SOX.*
 
 ---
 
@@ -30,7 +30,7 @@ The CERG Risk Management Framework (CERG-RMF) defines how SURGE, the Cyber Engin
 This framework is purpose-built to:
 
 - Align with NIST RMF Steps 1–6 (Categorize, Select, Implement, Assess, Authorize, Monitor) while making each step operationally practical within CERG's three-pillar model.
-- Satisfy the risk management requirements of [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (Adaptive tier), [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5, [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 2, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2, NERC-CIP, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC simultaneously.
+- Satisfy the risk management requirements of [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (Adaptive tier), [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5, [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2, NERC-CIP, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC simultaneously.
 - Apply equally to IT and OT environments, accounting for the operational availability constraints and extended patch windows common in industrial and grid-connected systems.
 - Scale from a 5-person team to a 500-person organization without requiring structural changes.
 
@@ -81,7 +81,7 @@ Categorization establishes the impact level of each system and data type, the fo
 ### 3.2 What Gets Categorized
 
 - All information systems and technology assets (IT and OT) that store, process, or transmit organizational data or perform operational functions.
-- Data types by confidentiality, integrity, and availability (CIA) impact: Low, Moderate, or High, per FIPS 199 / [NIST 800-60](https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final).
+- Data types by confidentiality, integrity, and availability (CIA) impact: Low, Medium, or High, per FIPS 199 / [NIST 800-60](https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final).
 - Operational Technology systems are categorized with additional consideration for Safety, Reliability, and Continuity impacts, recognizing that an OT system failure may carry consequences beyond information loss.
 
 > **OT Categorization Note**
@@ -126,9 +126,9 @@ CERG uses a layered baseline model. Every system inherits the Organizational Bas
 
 | Baseline Layer | Applies To | Primary Source |
 |---|---|---|
-| **Organizational Baseline** | All systems | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5 Moderate; [NIST CSF](https://www.nist.gov/cyberframework) Subcategories |
+| **Organizational Baseline** | All systems | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5 Moderate baseline; [NIST CSF](https://www.nist.gov/cyberframework) Subcategories |
 | **High Impact Overlay** | Systems with any High CIA impact rating | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) High baseline additions |
-| **CUI Overlay** | Systems handling Controlled Unclassified Information | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 2 (110 practices) |
+| **CUI Overlay** | Systems handling Controlled Unclassified Information | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3 |
 | **BES Overlay** | BES Cyber Systems, EACMs, PACSs | NERC-CIP CIP-002 through CIP-014 |
 | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC Overlay** | Systems supporting financial reporting | COSO/ITGC: Change management, access, availability |
 | **OT Safety Overlay** | ICS/SCADA with safety implications | IEC 62443 + [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) supplemental controls |
@@ -145,7 +145,7 @@ Not every control applies equally to every system. CERG's tailoring process allo
 |---|---|---|
 | **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Manager approval |
 | **Control Enhancement** | Additional control implementation above baseline, based on threat intelligence or risk assessment findings | Engineering + Governance alignment |
-| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Risk assessment + CISO approval for High/Critical; VP for Moderate |
+| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.4](#94-risk-acceptance-authority) |
 
 ---
 
@@ -203,19 +203,13 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 ### 6.3 Finding Severity and SLAs
 
-All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in Section 9.
+All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.4](#94-risk-acceptance-authority).
 
-| Severity | CVSS Range | IT Remediation SLA | OT Remediation SLA | Escalation |
-|---|---|---|---|---|
-| **Critical** | 9.0–10.0 | 72 hours (emergency patch or isolation) | 30 days (or documented compensating control) | Immediate CISO notification; Risk Manager daily tracking |
-| **High** | 7.0–8.9 | 15 days | 90 days (or documented compensating control) | Risk Manager weekly; CISO if past SLA |
-| **Moderate** | 4.0–6.9 | 45 days | 180 days (or documented compensating control) | Risk Manager monthly tracking |
-| **Low** | 0.1–3.9 | 90 days | Next maintenance window | Tracked in finding register; reviewed quarterly |
-| **Informational** | 0.0 | No SLA - accepted or tracked for trending | No SLA - noted in OT risk register | Annual review |
+The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
-> **NERC-CIP and Patch SLAs**
+> **One Source of Truth**
 >
-> NERC-CIP CIP-007 R2 defines its own patch management timelines: 35 days for High impact BES systems, 35 days for Medium impact. Where NERC-CIP SLAs are more stringent than CERG defaults, the more stringent requirement governs. Where CERG defaults are more stringent (e.g., 72-hour Critical patch response for IT systems), the CERG standard governs for non-BES assets.
+> Earlier drafts of this document carried a parallel SLA table. That table has been retired so that there is exactly one place in the library where a remediation SLA can be changed. If you find a stale SLA citation in another document, the corrective action is to update the citing document to point at PRC-VM-001 — not to restate the values.
 
 ---
 
@@ -274,12 +268,13 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 | KRI | Target | Owner | Escalation Trigger |
 |---|---|---|---|
-| Mean Time to Remediate - Critical | ≤72 hours | Risk | >72 hours without documented compensating control |
-| Mean Time to Remediate - High | ≤15 days | Risk | >15 days without approved exception |
+| Mean Time to Remediate - PPR (0-day) | ≤48 hours (Internet-facing) / ≤72 hours (internal) per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any PPR finding past SLA |
+| Mean Time to Remediate - Critical | ≤3 days per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any Critical past SLA without documented compensating control |
+| Mean Time to Remediate - High | ≤15 days per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any High past SLA without approved exception |
 | Scan Coverage - IT | ≥98% of known assets | Risk | <95% coverage |
 | Scan Coverage - OT | ≥90% of known assets (passive methods) | Risk | <85% coverage |
 | Open Critical/High Findings | 0 Critical past SLA; <10 High past SLA | Risk + Governance | Any Critical past SLA; >10 High past SLA |
-| Risk Register Items Past Target Date | 0 items >30 days past target | Governance | >3 items past target date triggers CISO briefing |
+| Risk Register Items Past Target Date | 0 items past target date | Governance | Any item >30 days past target; CISO briefing required if more than 3 items are past target at the monthly Risk Posture Review |
 | Policy Review Compliance | 100% of policies reviewed within defined cycle | Governance | Any policy >12 months since last review |
 | SSP / Authorization Currency | 100% of in-scope systems with current ATO/IATO | Governance | Any in-scope system without current authorization |
 | Vendor Risk Assessments Current | ≥95% of Critical vendors with current assessment | Risk | <90% triggers escalation |
@@ -293,103 +288,111 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 The CERG Risk Register is the authoritative record of all identified, assessed, and tracked cybersecurity risks. It is owned by Governance, populated by Risk, and informed by Engineering. It is not a spreadsheet that lives on a network share, it is a living operational tool that drives accountability and informs every authorization decision.
 
-### 9.2 Risk Register Data Elements
+### 9.2 Risk Statement Format (FAIR-Aligned)
+
+Every risk entered into the register is written in a single, consistent statement format derived from the FAIR (Factor Analysis of Information Risk) model. FAIR decomposes risk into a Loss Event Frequency (LEF) and a Loss Magnitude (LM); the CERG statement format makes both halves explicit so that every register entry can be reasoned about, compared, and rolled up the same way.
+
+**Canonical risk statement:**
+
+> *"[Threat community] using [threat action / vector] against [affected asset / scope] could result in [primary and secondary loss types] of [loss magnitude range], at an estimated frequency of [LEF range]."*
+
+**Components:**
+
+| Component | What It Captures | Examples |
+|---|---|---|
+| **Threat community** | Who or what is initiating the loss event (FAIR Threat Community). See §9.3. | Organized cybercriminal, nation-state, malicious insider, negligent insider, third-party supply chain |
+| **Threat action / vector** | How the loss event is initiated | Ransomware, credential stuffing, phishing, exploitation of unpatched CVE, lateral movement from compromised vendor |
+| **Affected asset / scope** | What is harmed and the scope of harm | The CUI enclave, a specific BES Cyber System, the SOX-relevant ERP, the corporate identity store |
+| **Loss types** | One or more of FAIR's six primary loss forms | Productivity, response, replacement, fines and judgments, competitive advantage, reputation |
+| **Loss magnitude range** | Expected loss as a calibrated range (PERT min / most likely / max) | $250K - $1.5M - $4M |
+| **LEF range** | Expected frequency the loss event occurs in a year (PERT min / most likely / max) | 0.05 - 0.15 - 0.4 (i.e., once every 2 to 20 years) |
+
+Risk statements that cannot be written in this form are not yet risks; they are observations or findings. Findings remain in the vulnerability or assessment register until they can be expressed in a complete loss-event scenario, at which point they are promoted to the Risk Register.
+
+### 9.3 Threat Community Reference
+
+The FAIR Threat Community is the actor or natural force that initiates a loss event. The taxonomy below is the CERG default. Subordinate documents — particularly [`CERG Risk Taxonomy`](CERG%20Risk%20Taxonomy.md) — extend it with sector-specific actors (e.g., ICS-targeted APTs for OT).
+
+| Community | Examples | Primary Loss Forms |
+|---|---|---|
+| **Nation-state / APT** | State-aligned threat actors with strategic objectives (intellectual property, infrastructure pre-positioning) | Replacement, competitive advantage, response, reputation |
+| **Organized cybercriminal** | Financially motivated groups (ransomware, BEC, fraud) | Response, replacement, productivity, fines and judgments |
+| **Hacktivist** | Ideologically motivated; disruption and disclosure | Reputation, productivity, response |
+| **Malicious insider** | Authorized user acting against the organization | Replacement, competitive advantage, fines and judgments |
+| **Negligent insider** | Authorized user causing loss through error or policy violation | Productivity, response, fines and judgments |
+| **Third-party / supply chain** | Trusted vendor or service compromised, propagating to the organization | Response, productivity, fines and judgments |
+| **Non-malicious (environmental)** | Natural events, infrastructure failures, accidental conditions | Productivity, replacement, response |
+
+### 9.4 Risk Register Data Elements
 
 | Field | Description |
 |---|---|
 | **Risk ID** | Unique identifier (format: CERG-RISK-YYYY-NNN) |
 | **Source** | How the risk was identified: vulnerability scan, pen test, threat intel, vendor assessment, audit, self-identification, or incident. |
-| **Affected System(s)** | System(s) or asset(s) associated with the risk, with regulatory designation (BES/CUI/[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) noted. |
-| **Risk Description** | Plain-language description of the risk: what could happen, to what, with what consequence. |
-| **Threat Actor / Vector** | Applicable threat actor categories and attack vectors from threat intelligence. |
-| **Likelihood** | Rated Low / Moderate / High / Critical based on threat context and exploitability. |
-| **Impact (CIA)** | Rated per CIA impact dimension: Confidentiality / Integrity / Availability, each Low/Moderate/High. |
-| **Overall Severity** | Composite severity rating: Critical / High / Moderate / Low / Informational. |
+| **Affected System(s)** | System(s) or asset(s) associated with the risk, with regulatory designation (BES/CUI/SOX) noted. |
+| **Risk Statement** | The canonical FAIR-aligned statement per §9.2. |
+| **Threat Community** | Selected from §9.3 (one primary; additional secondaries permitted). |
+| **Threat Action / Vector** | How the loss event is initiated. |
+| **Loss Types** | One or more of: productivity, response, replacement, fines and judgments, competitive advantage, reputation. |
+| **Likelihood (LEF)** | Rated using the band table in §9.5; supported by a PERT range where calibration data exists. |
+| **Impact (LM)** | Rated using the band table in §9.5; supported by a PERT range where calibration data exists. |
+| **Overall Severity** | Composite severity rating per §9.5: Critical / High / Medium / Low / Informational. |
 | **Risk Owner** | Accountable leader (business unit or IT/OT operations) responsible for risk treatment decision. |
-| **Treatment Decision** | Remediate / Mitigate / Transfer / Accept - with documented rationale. |
+| **Treatment Decision** | Remediate / Mitigate / Transfer / Accept - with documented rationale per §9.6. |
 | **Compensating Controls** | Controls in place that reduce exposure while the primary risk remains open. |
 | **Target Remediation Date** | Committed date for risk closure or next status review. |
-| **CISO Approval Date** | Date of CISO (or delegated authority) risk acceptance approval, for High and Critical items. |
+| **Approval** | Authority approving the treatment decision; date; reference to the canonical authority table at §9.7. |
 | **Status** | Open / In Remediation / Compensating Control Applied / Closed / Accepted. |
-| **Regulatory Implication** | Whether the risk has regulatory reporting, deviation, or mitigation plan implications (NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)). |
+| **Regulatory Implication** | Whether the risk has regulatory reporting, deviation, or mitigation plan implications (NERC-CIP, CMMC, SOX). |
 
-### 9.3 Risk Treatment Options
+### 9.5 Likelihood, Impact, and Severity Bands
+
+CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and mapped to a severity band. The bands below are the canonical CERG model. Every CERG document that scores risk must produce the same severity rating as this table.
+
+**Likelihood (LEF) bands.** Calibrated as expected loss events per year. Tune the numeric ranges against your loss-event history; the band labels are fixed.
+
+| Score | Label | Annualized Frequency |
+|---|---|---|
+| 5 | Very High | >10 events / year |
+| 4 | High | 1 - 10 events / year |
+| 3 | Medium | 1 event / 1 - 10 years |
+| 2 | Low | 1 event / 10 - 100 years |
+| 1 | Very Low | <1 event / 100 years |
+
+**Impact (LM) bands.** Calibrated against organizational loss-magnitude reference points. Placeholder dollar bands are provided as starting calibration; the Risk pillar lead refreshes annually with Finance.
+
+| Score | Label | Loss Magnitude (Placeholder) |
+|---|---|---|
+| 5 | Catastrophic | >$10M single-event loss; material to financial statements; sustained reputation damage |
+| 4 | Major | $1M - $10M single-event loss; regulatory enforcement action; significant reputation damage |
+| 3 | Medium | $100K - $1M single-event loss; reportable to leadership; limited reputation impact |
+| 2 | Minor | $10K - $100K single-event loss; absorbed within normal operating costs |
+| 1 | Negligible | <$10K single-event loss; no leadership notification required |
+
+**Composite severity.** Likelihood score x Impact score = Severity score; mapped to band.
+
+| Severity Score | Severity Band |
+|---|---|
+| 20 - 25 | **Critical** |
+| 12 - 19 | **High** |
+| 6 - 11 | **Medium** |
+| 2 - 5 | **Low** |
+| 1 | **Informational** |
+
+### 9.6 Risk Treatment Options
 
 | Treatment | Definition | When Appropriate | CERG Process |
 |---|---|---|---|
 | **Remediate** | Eliminate the risk by removing the vulnerability, threat source, or exposure. | When technically feasible within a reasonable timeframe and at proportionate cost. | Engineering leads technical remediation. Risk verifies closure via rescan or retest. Governance closes the risk register item. |
 | **Mitigate** | Reduce the likelihood or impact of the risk to an acceptable level through compensating controls. | When full remediation is not immediately feasible (common in OT); when residual risk after mitigation falls within risk appetite. | Engineering implements compensating controls. Risk validates control effectiveness. Governance documents and tracks to eventual remediation. |
 | **Transfer** | Shift the financial impact of the risk through insurance or contractual liability provisions. | For risks where cyber insurance coverage is appropriate and available. | Governance coordinates with Legal/Finance for contract and insurance language. Risk quantifies the risk for insurance submission. |
-| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within risk appetite. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined by severity. Risk provides a written risk finding. Governance records the acceptance in the risk register with CISO signature for High/Critical. |
+| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within risk appetite. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined by severity (§9.7). Risk provides a written risk finding. Governance records the acceptance in the risk register. |
 
-### 9.4 Risk Acceptance Authority
+### 9.7 Risk Acceptance Authority (Canonical)
 
-| Risk Severity | Acceptance Authority | Required Documentation |
-|---|---|---|
-| **Critical** | CISO + CEO notification | Risk assessment, compensating controls, business justification, target remediation date, board notification if systemic |
-| **High** | CISO | Risk assessment, compensating controls, business justification, target remediation date |
-| **Moderate** | Risk Manager (Cyber Risk pillar lead) | Risk assessment, compensating controls, target remediation date |
-| **Low / Informational** | Governance Manager | Brief justification; tracked in risk register |
+This table is the single source of truth for who may accept residual risk. Every other CERG document that references acceptance authority points at this section.
 
----
-
-## 10. IT/OT Risk Management Considerations
-
-### 10.1 Why OT Requires a Different Lens
-
-IT and OT environments share the same fundamental risk equation, threats, vulnerabilities, and consequences, but OT environments introduce constraints that require deliberate adaptation of standard risk management practices. Availability is not a configuration preference in a power grid or a manufacturing line; it is a safety and reliability imperative that can carry regulatory, legal, and physical-world consequences.
-
-CERG's RMF is designed from the ground up to respect this reality. OT-specific adaptations are documented below:
-
-| RMF Phase | Standard IT Approach | OT Adaptation |
-|---|---|---|
-| **Categorize** | CIA-based impact ratings per FIPS 199 | Add Safety and Reliability as explicit impact dimensions. BES Cyber Systems classified per CIP-002 High/Medium/Low impact in addition to FIPS 199 ratings. |
-| **Select** | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Moderate/High baseline | Apply OT Safety Overlay: IEC 62443 practices; [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) supplemental controls; vendor-specific hardening where CIS benchmarks don't apply. |
-| **Implement** | Patch and configure to baseline | OT patch windows are defined by operational schedules (planned outages, maintenance windows). Compensating controls bridge the gap. No emergency patching without operations and safety sign-off. |
-| **Assess** | Authenticated vulnerability scans; penetration testing | OT scans use passive/OT-safe methods to avoid disrupting process operations. Active scanning requires operations coordination and maintenance window scheduling. |
-| **Authorize** | ATO/IATO per residual risk | OT authorization explicitly documents operational availability risk alongside cybersecurity risk. NERC-CIP deviation process runs in parallel for BES systems. |
-| **Monitor** | Continuous automated monitoring | OT monitoring uses passive network visibility tools (e.g., Dragos, Claroty, Nozomi). Change management is stricter - unauthorized changes carry safety implications. |
-
-> **The OT Risk Principle**
->
-> An unpatched vulnerability in a BES Cyber System is a real risk. An unplanned outage of a BES Cyber System is also a real risk, one that carries NERC reliability implications, potential regulatory fines, and public safety consequences. CERG's risk management process treats both risks seriously and documents the tradeoff explicitly. The CISO owns the cybersecurity risk. Operations leadership owns the reliability risk. Both sign the authorization.
-
----
-
-## 11. Regulatory Alignment Quick Reference
-
-The CERG-RMF satisfies the risk management requirements of all applicable frameworks. The table below maps each framework's risk-specific requirements to the CERG-RMF phase and CERG pillar that addresses them.
-
-| Framework | Risk Management Requirement | CERG-RMF Phase | Pillar |
-|---|---|---|---|
-| **NIST RMF** | Steps 1–6: Categorize, Select, Implement, Assess, Authorize, Monitor | All phases | All pillars |
-| **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | GOVERN: Risk strategy, risk appetite, accountability structures | Phase 5 (Authorize) | Governance |
-| **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | IDENTIFY: Asset management, risk assessment, improvement | Phases 1, 4, 6 | Risk + Governance |
-| **[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | RA-2, RA-3, RA-5, CA-2, CA-5, CA-7 (Categorization, Risk Assessment, Vuln Monitoring, Control Assessments, POA&M, Continuous Monitoring) | All phases | Risk + Governance |
-| **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** | 3.11: Risk Assessment; 3.12: Security Assessment; all documentation requirements | Phases 1, 4, 5, 6 | Risk + Governance |
-| **NERC-CIP** | CIP-002: BES Cyber System categorization; CIP-007 R2: Patch management SLAs; CIP-010 R3: Vulnerability assessments; deviation and mitigation plan process | Phases 1, 4, 6 | Governance + Risk |
-| **[CMMC](https://dodcio.defense.gov/CMMC/) Level 2** | RM.2.141 (vulnerability scanning); CA.2.157 (assessment); all 110 practices documented in SSP and POA&M | Phases 1, 4, 5, 6 | Risk + Governance |
-| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** | Change management controls; access controls; IT availability controls; ITGC control assessment and evidence | Phases 4, 5, 6 | Governance + Engineering |
-
----
-
-## 12. Document Control and Review
-
-| Field | Value |
-|---|---|
-| **Document ID** | CERG-RMF-001 |
-| **Version** | 1.0 |
-| **Status** | Active |
-| **Classification** | Internal / Restricted |
-| **Document Owner** | Cyber Governance (CERG Pillar) |
-| **Approved By** | Chief Information Security Officer |
-| **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
-| **Next Scheduled Review** | 12 months from date of issue |
-| **Parent Document** | CERG-POL-001 - CERG Cybersecurity Policy |
-| **Related Documents** | CERG Framework (Operating Model) · CERG Risk Taxonomy · CERG Compliance Matrix · System Security Plans (per system) · Plan of Action and Milestones (per system) |
-
-### Revision History
-
-| Version | Date | Author | Change Description |
-|---|---|---|---|
-| 1.0 | 2026 | Cyber Govern
+| Severity | Acceptance Authority | Notification | Required Documentation | Maximum Acceptance Duration |
+|---|---|---|---|---|
+| **Critical** | CISO with Executive Sponsor concurrence | CEO notified; Board notification at next quarterly cycle (or sooner if systemic) | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
+| **High** | CISO | Executive Sponsor notified | Risk assessment, compensating controls, business justification, target remediation date | 

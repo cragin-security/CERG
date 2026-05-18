@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager ([SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Liaison) |
-| **Parent Documents** | CERG-POL-001 · CERG-GOV-CB-001 · CERG-GOV-OM-001 |
-| **Supporting Documents** | CERG-STD-IT-001 · CERG-STD-AC-001 · CERG-STD-LM-001 · CERG-STD-CFG-001 · CERG-STD-RES-001 · CERG-STD-CR-001 · CERG-PRC-AR-001 · CERG-PRC-AC-002 · CERG-PRC-VM-001 · CERG-PRC-RM-001 |
+| **Parent Documents** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
+| **Supporting Documents** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-AC-002](CERG-PRC-AC-002_Access_Management_Runbook.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / Per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) year |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) mappings · COBIT 2019 (selected) · COSO (selected) |
 | **Regulations** | Sarbanes-Oxley Act of 2002 |
@@ -81,7 +81,7 @@ The Register is the scope filter, the list of systems whose controls feed extern
 | SOC 1 Available? | Y/N (if hosted) |
 | In-Scope Domains | Multi-select of Section 2 domains |
 | SOD-Sensitive Roles | Named roles (e.g., AP clerk vs. AP approver) |
-| Recovery Tier | Per `CERG-STD-RES-001` Section 3 |
+| Recovery Tier | Per [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 3 |
 | Last Walkthrough | Date |
 | Outstanding Deficiencies | IDs |
 | Status | In-Scope · Out-of-Scope (with rationale) · Transitional |
@@ -92,24 +92,24 @@ The register is owned jointly by CERG Governance ([SOX](https://www.govinfo.gov/
 
 ## 4. ITGC Control Library
 
-Each control names the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) domain it supports, the CERG control it reuses from `CERG-GOV-CB-001`, the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-specific evidence the auditor expects, and the test approach.
+Each control names the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) domain it supports, the CERG control it reuses from [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md), the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-specific evidence the auditor expects, and the test approach.
 
 ### 4.1 Access ITGCs
 
 | **ITGC** | **Control Statement** | **Reused CERG Control** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Evidence** | **Test Approach** |
 |---|---|---|---|---|
-| AX-01 Provisioning | Access to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems is granted only on documented approval by the system owner. | AC-2 (`CERG-PRC-AC-002` §4) | Sample of provisioning tickets with approvals | Sample of N from period |
-| AX-02 Termination | Access is removed within defined SLA on user departure. | AC-2 (`CERG-PRC-AC-002` §3.3) | Sample of terminations with access-removal evidence | Sample of N from period |
-| AX-03 Recertification | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant access is recertified quarterly. | AC-2 (`CERG-PRC-AC-002` §5) | Quarterly recert campaign results | Full population review of cycle |
-| AX-04 Segregation of Duties | SOD enforced on financially-sensitive roles. | AC-5 (`CERG-GOV-CB-001` §6.1) | SOD matrix; conflict-resolution log | Quarterly SOD report |
-| AX-05 Privileged Access | Privileged access to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems via PAM with session recording. | AC-6 (`CERG-PRC-AC-002` §6) | PAM session log sample; privileged role review | Sample of N |
-| AX-06 Authentication | MFA enforced on [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant system access. | IA-2 (`CERG-PRC-AC-002` §11) | IdP policy export; exception register | Configuration review |
+| AX-01 Provisioning | Access to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems is granted only on documented approval by the system owner. | AC-2 ([`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §4) | Sample of provisioning tickets with approvals | Sample of N from period |
+| AX-02 Termination | Access is removed within defined SLA on user departure. | AC-2 ([`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §3.3) | Sample of terminations with access-removal evidence | Sample of N from period |
+| AX-03 Recertification | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant access is recertified quarterly. | AC-2 ([`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §5) | Quarterly recert campaign results | Full population review of cycle |
+| AX-04 Segregation of Duties | SOD enforced on financially-sensitive roles. | AC-5 ([`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) §6.1) | SOD matrix; conflict-resolution log | Quarterly SOD report |
+| AX-05 Privileged Access | Privileged access to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems via PAM with session recording. | AC-6 ([`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §6) | PAM session log sample; privileged role review | Sample of N |
+| AX-06 Authentication | MFA enforced on [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant system access. | IA-2 ([`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) §11) | IdP policy export; exception register | Configuration review |
 
 ### 4.2 Change ITGCs
 
 | **ITGC** | **Control Statement** | **Reused CERG Control** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Evidence** | **Test Approach** |
 |---|---|---|---|---|
-| CH-01 Change Authorization | Production changes are authorized before deployment. | CM-3 (`CERG-PRC-AR-001` §3) | Change records with named approver | Sample of N |
+| CH-01 Change Authorization | Production changes are authorized before deployment. | CM-3 ([`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) §3) | Change records with named approver | Sample of N |
 | CH-02 Segregation of Duties - Change | Developer ≠ deployer for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems. | CM-3 + AC-5 | CI/CD pipeline review; manual deployment SoD evidence | Configuration review + sample |
 | CH-03 Emergency Change | Emergency changes documented within defined window. | CM-3 | Emergency change records with retrospective approval | Sample of N |
 | CH-04 Testing | Changes are tested before production deployment. | CM-3 | Test evidence per change record | Sample of N |
@@ -118,7 +118,7 @@ Each control names the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204
 
 | **ITGC** | **Control Statement** | **Reused CERG Control** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Evidence** | **Test Approach** |
 |---|---|---|---|---|
-| OP-01 Scheduled Job Monitoring | Scheduled financial jobs are monitored; failures are investigated and remediated. | SI-4 (`CERG-STD-LM-001`) | Job monitoring dashboards; failure tickets | Sample of failures + period review |
+| OP-01 Scheduled Job Monitoring | Scheduled financial jobs are monitored; failures are investigated and remediated. | SI-4 ([`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md)) | Job monitoring dashboards; failure tickets | Sample of failures + period review |
 | OP-02 System Monitoring | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems are monitored for availability and security events. | AU-2 / SI-4 | SIEM source inventory; uptime dashboards | Coverage review |
 | OP-03 Incident Tracking | Incidents affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems are tracked to closure. | IR family | Incident records with cyber annotation | Sample of N |
 
@@ -126,9 +126,9 @@ Each control names the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204
 
 | **ITGC** | **Control Statement** | **Reused CERG Control** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Evidence** | **Test Approach** |
 |---|---|---|---|---|
-| BK-01 Backup Execution | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems are backed up per defined schedule. | CP-9 (`CERG-STD-RES-001`) | Backup tool report; failure tickets | Period review |
-| BK-02 Backup Restoration | Restorability is demonstrated at the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) cadence. | CP-10 (`CERG-STD-RES-001`) | Restoration test evidence (Section 5.3 of RES-001) | Inspection of test artifact |
-| BK-03 Backup Protection | Backups are protected (immutability / separation). | CP-9 (`CERG-STD-RES-001` §4) | Backup configuration evidence | Configuration review |
+| BK-01 Backup Execution | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems are backed up per defined schedule. | CP-9 ([`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md)) | Backup tool report; failure tickets | Period review |
+| BK-02 Backup Restoration | Restorability is demonstrated at the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) cadence. | CP-10 ([`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md)) | Restoration test evidence (Section 5.3 of RES-001) | Inspection of test artifact |
+| BK-03 Backup Protection | Backups are protected (immutability / separation). | CP-9 ([`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) §4) | Backup configuration evidence | Configuration review |
 
 ### 4.5 Interfaces ITGCs
 
@@ -215,32 +215,4 @@ Specifically, the most-reused artifacts:
 | **Role** | **Responsibility** |
 |---|---|
 | CERG - Governance ([SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Liaison) | Owns this package. Coordinates with Internal Audit, Finance, and external auditors. Maintains library and register. |
-| CERG - Engineering / Risk / Identity | Operate the underlying controls; provide evidence on request without duplicating tests. |
-| Internal Audit | Tests controls; reports to Audit Committee. CERG supports, does not substitute. |
-| Finance / Controllership | Owns [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program; CERG aligns to its scoping and calendar. |
-| External Auditor | Tests controls per their workplan. |
-| System Owners | Provide system facts during walkthroughs; remediate findings on their systems. |
-
----
-
-## 10. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Package** |
-|---|---|
-| Sarbanes-Oxley Act §404 | Sections 2–7 |
-| COSO Internal Control - Integrated Framework | Cross-cutting |
-| COBIT 2019 (selected) | Section 4 |
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (mappings) | Section 4 reused control IDs |
-
----
-
-## 11. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PLN-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager ([SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Liaison) · CISO endorsement · Coordinated with Internal Audit and Finance |
-| **Next Review** | Annual / per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) year |
-| **Change Log** | 1.0 - Initial publication. ITGC scoping, control library, system register, evidence reuse mapping, deficiency workflow, auditor interface. |
-
+| CERG - Engineering / Risk / Identity | Operate the underlying controls; provide evidence on reque

@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Risk Register) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · NIST RMF · ISO 31000 |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-This procedure operationalizes the risk management principle established in **CERG-POL-001 Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
+This procedure operationalizes the risk management principle established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
 
 The risk register is the single, authoritative record of organizational cybersecurity risk. The exception process is the single, authoritative record of intentional deviations from established controls. The two are coupled: every approved exception is itself a risk-register entry.
 
@@ -50,7 +50,7 @@ The risk register is the single, authoritative record of organizational cybersec
 This procedure applies to:
 
 - All cybersecurity risks affecting in-scope assets, data, or operations
-- All deviations from controls established in CERG-POL-001 and its subordinate standards and procedures
+- All deviations from controls established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) and its subordinate standards and procedures
 - All risk-related decisions requiring documentation: acceptance, transfer, avoidance, and reduction
 - All organizational personnel, every CERG team member, every asset owner, every business sponsor of a system or process that holds cybersecurity risk
 
@@ -233,7 +233,7 @@ Risk register access is role-based. Business owners see their scope by default; 
 
 ### 7.1 What Requires an Exception
 
-An exception is required whenever a system, person, or process intentionally deviates from a control established in CERG-POL-001 or its subordinate standards. Examples include:
+An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) or its subordinate standards. Examples include:
 
 - A system that cannot meet a hardening baseline due to a vendor or operational constraint
 - A user role that requires standing privileged access despite the JIT requirement
@@ -264,8 +264,8 @@ An exception is required whenever a system, person, or process intentionally dev
 
 For exceptions affecting regulated assets:
 
-- **NERC-CIP (BES Cyber Systems):** A CIP deviation and mitigation plan is initiated in addition to this exception. Governance coordinates per CERG-STD-OT-001 §11.
-- **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per CERG-STD-CUI-001 §11.
+- **NERC-CIP (BES Cyber Systems):** A CIP deviation and mitigation plan is initiated in addition to this exception. Governance coordinates per [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11.
+- **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) §11.
 - **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems:** Internal Audit and CFO designee are notified for ITGC control gaps. Compensating ITGC controls are documented for audit.
 - **Customer / contractual:** Where the affected control supports a customer contractual commitment, Account Management and Legal are notified for customer-notification decisions.
 
@@ -347,8 +347,8 @@ The risk register is the integration point for several other programs. Risk-regi
 
 | **Program** | **Integration** |
 |---|---|
-| Vulnerability Management (CERG-PRC-VM-001) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
-| Incident Response (CERG-PLN-IR-001) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
+| Vulnerability Management ([CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
+| Incident Response ([CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md)) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
 | Vendor / Third-Party Risk | Vendor assessment findings open risks; vendor reassessment cadence reviews them. |
 | Compliance - NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) | Open compliance gaps map to risk entries; POA&M and CIP deviations link to register entries. |
 | Architecture / Engineering Review | Pre-production review findings open risks where acceptance is sought to deploy. |
@@ -397,21 +397,6 @@ Governance owns this procedure. The Cyber Governance Manager (Risk Register) is 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy - Principle 9 |
-| Grid and Control System Standard | CERG-STD-OT-001 | OT risk and CIP deviation overlay |
-| IT (Hosted/Cloud/SaaS) Security Standard | CERG-STD-IT-001 | IT / Cloud / SaaS risks |
-| CUI Handling Standard | CERG-STD-CUI-001 | CUI POA&M integration |
-| Access Management Standard | CERG-STD-AC-001 | Identity-related risks and exceptions |
-| Vulnerability Management Procedure | CERG-PRC-VM-001 | Vulnerability-derived risks |
-| Incident Response Plan | CERG-PLN-IR-001 | Post-incident corrective actions |
-| CERG Operating Model | CERG-GOV-OM-001 | Pillar structure |
-
----
-
-> **SURGE, Cyber Engineering, Risk & Governance**
->
-> _Document the risks. Own the risks. Review the risks. Repeat._
-
----
-
-_CERG-PRC-RM-001 · Version 1.0 DRAFT · CONFIDENTIAL · Internal Use Only_
+| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - Principle 9 |
+| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
+| I

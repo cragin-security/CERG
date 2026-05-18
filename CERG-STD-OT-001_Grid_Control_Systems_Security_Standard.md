@@ -13,7 +13,7 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (OT/NERC-CIP) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / CIP Standard Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · NIST RMF |
 | **Regulations** | NERC-CIP v6/v7 · IEC 62443 |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in CERG-POL-001 for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets, regardless of whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
+This standard implements the foundational principles established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets, regardless of whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
 
 These requirements are organized around the NIST Cybersecurity Framework 2.0 functions, Govern, Identify, Protect, Detect, Respond, and Recover, and are cross-mapped to NERC-CIP standards, NIST SP 800-82 (Guide to OT Security), [NIST SP 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), and IEC 62443 where applicable. Where BES and non-BES requirements differ materially, both are stated explicitly.
 
@@ -64,7 +64,7 @@ The NERC-CIP CIP-002 asset categorization process determines which assets carry 
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to CERG-POL-001. It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in CERG-POL-001 Section 7. BES Cyber System exceptions require CISO approval.
+This standard is subordinate to [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md). It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7. BES Cyber System exceptions require CISO approval.
 
 ---
 
@@ -334,12 +334,11 @@ Governance owns this document. The Cyber Governance Manager (OT/NERC-CIP) is res
 
 ### Related Documents
 
-References below use the canonical IDs in `CERG-GOV-CAT-001` Document Catalog. Where the catalog notes an artifact is embedded in a parent operational package for V1, the parent is the authoritative location.
+References below use the canonical IDs in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog. Where the catalog notes an artifact is embedded in a parent operational package for V1, the parent is the authoritative location.
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy - this standard is subordinate |
-| Document Catalog and Naming Convention | CERG-GOV-CAT-001 | Authoritative inventory of all CERG artifacts referenced here |
-| Unified Control Baseline | CERG-GOV-CB-001 | Control spine, overlay matrix, evidence mapping (BES overlay) |
-| NERC-CIP Operational Package | CERG-PLN-CIP-001 | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Vulnerability Management Procedure (formerly `CERG-PROC-VM-002`), BES Cyber System Access Management Procedure (formerly `CERG-PROC-AC-002` overlay on AC runbook), CIP Deviation and Mitigation Plan Template (formerly `CERG-TMPL-CIP-001`), and IT/OT Convergence Security Architecture Guideline (formerly `CERG-GL-OT-001`) |
-| Incident Response Plan (CERG interface) | CERG-PLN-IR-001 | OT incident response playbook interface; includes CIP-008 reporting |
+| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| Document Catalog and Naming Convention | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of all CERG artifacts referenced here |
+| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlay matrix, evidence mapping (BES overlay) |
+| NERC-CIP Operational Package | [CERG-PLN-CIP-001](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Vulnerability Management Procedu

@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Engineering Manager (Identity) - or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
-| **Parent Standard** | CERG-STD-AC-001 - Access Management Standard |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-CR-001 · CERG-STD-LM-001 · CERG-PRC-RM-001 · CERG-PRC-AR-001 · CERG-PRC-TPRM-001 |
+| **Parent Standard** | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AC, IA, AU) · [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
 | **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Access) |
@@ -43,7 +43,7 @@
 
 ## 1. Purpose and Scope
 
-The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision CERG-STD-AC-001 requires.
+The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) requires.
 
 The runbook covers every identity in the environment: human (employee, contractor), machine (system, service, agent), and vendor / third-party.
 
@@ -64,7 +64,7 @@ The runbook covers every identity in the environment: human (employee, contracto
 | Detection / monitoring | CERG (always). | CERG (always). |
 | Audit interface | CERG. | Shared. |
 
-Where IAM is outside CERG, every requirement below is either implemented by the IAM team, or a formal documented divergence is recorded in the risk register per `CERG-PRC-RM-001`.
+Where IAM is outside CERG, every requirement below is either implemented by the IAM team, or a formal documented divergence is recorded in the risk register per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ---
 
@@ -194,7 +194,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 | Just-in-time (JIT) elevation | User requests; approval where required; time-bound. |
 | Session brokered | RDP / SSH / web session through PAM; session recorded; commands logged. |
 | Session ended | Credentials rotated if vaulted-and-checked-out pattern. |
-| Logs and recordings retained per `CERG-STD-LM-001` |
+| Logs and recordings retained per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
 ### 6.3 PAM Operating Disciplines
 
@@ -209,7 +209,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 
 ### 7.1 Definition
 
-Break-glass accounts are the credentials of last resort, used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per `CERG-STD-LM-001` Section 11.
+Break-glass accounts are the credentials of last resort, used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11.
 
 ### 7.2 Operating Rules
 
@@ -240,10 +240,10 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 | Request via service-account intake | Owner team + Engineering - Identity |
 | Named human owner required | Owner team |
 | Scope and entitlements minimized | Engineering - Identity |
-| Stored in PAM / secrets manager per `CERG-STD-CR-001` | Engineering - Identity |
+| Stored in PAM / secrets manager per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Engineering - Identity |
 | Detection on anomalous use | Risk - Detection |
 | Recertification semi-annual | Engineering - Identity |
-| Rotation per `CERG-STD-CR-001` Section 8 | Engineering - Identity / Workload owner |
+| Rotation per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8 | Engineering - Identity / Workload owner |
 | Decommission on system retirement | Engineering - Identity |
 
 ### 8.3 Service Account Disciplines
@@ -257,7 +257,7 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 
 ## 9. Secrets, API Keys, and Tokens
 
-This section operationalizes `CERG-STD-CR-001` Section 7. See that standard for storage and rotation requirements.
+This section operationalizes [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 7. See that standard for storage and rotation requirements.
 
 | **Action** | **Path** |
 |---|---|
@@ -280,7 +280,7 @@ This section operationalizes `CERG-STD-CR-001` Section 7. See that standard for 
 | Access scope defined - minimum required entitlements, time-bounded | Engineering - Identity |
 | MFA enrolled - phishing-resistant required for privileged | Engineering - Identity |
 | Sessions brokered through PAM where privileged | Engineering - Identity |
-| Country-of-access validated against Country Risk Register (`CERG-PRC-TPRM-001` Section 10) | CERG - TPRM |
+| Country-of-access validated against Country Risk Register ([`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 10) | CERG - TPRM |
 | Time-boxed: explicit expiration; renewal requires re-justification | Engineering - Identity |
 
 ### 10.2 Monitoring
@@ -311,11 +311,11 @@ MFA exceptions are time-bounded and tracked.
 
 | **Exception Case** | **Treatment** |
 |---|---|
-| Legacy system unable to support phishing-resistant MFA | Time-boxed transitional exception with compensating controls (network segmentation, monitoring) per `CERG-PRC-RM-001` §7. |
-| Operational technology operator console | Engineering review required; compensating controls per `CERG-STD-OT-001`. |
+| Legacy system unable to support phishing-resistant MFA | Time-boxed transitional exception with compensating controls (network segmentation, monitoring) per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7. |
+| Operational technology operator console | Engineering review required; compensating controls per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). |
 | Vendor unable to use phishing-resistant factor | Renegotiate; if unavoidable, time-bound exception with detection routing. |
 
-Phishing-resistant MFA coverage is reported as `ID-001` in `CERG-GOV-MTR-001`.
+Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
 
@@ -324,35 +324,9 @@ Phishing-resistant MFA coverage is reported as `ID-001` in `CERG-GOV-MTR-001`.
 | **Role** | **Responsibility** |
 |---|---|
 | Engineering - Identity | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
-| Risk - Detection | Identity detection use cases per `CERG-STD-LM-001` Section 11. |
+| Risk - Detection | Identity detection use cases per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11. |
 | Governance - Compliance | Recertification evidence, SoD evidence, regulator interface. |
 | Managers / Sponsors | Approval and recertification decisions. |
 | System / Role Owners | Approve sensitive and privileged access; participate in recert. |
 | HR | JML triggers; data quality in HRIS. |
-| Procurement / TPRM | Vendor records that feed Section 10. |
-
----
-
-## 13. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Runbook** |
-|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC / IA | All sections |
-| [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) | Section 11 |
-| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) PROTECT | All sections |
-| NERC-CIP CIP-004 R4/R5, CIP-005 R2 | Sections 3, 5, 6, 10 |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.1, 3.5) | All sections |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Access) | Sections 3, 4, 5, 6 |
-
----
-
-## 14. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PRC-AC-002 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Engineering Manager (Identity) · CISO endorsement |
-| **Next Review** | Annual / IAM tooling change |
-| **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
-
+| Pr

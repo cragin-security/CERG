@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Reporting) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-TMPL-RM-001 · CERG-PRC-VM-001 · CERG-PRC-RM-001 · CERG-GOV-OM-001 · CERG_Risk_Management_Framework_v1.0 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG_Risk_Management_Framework_v1.0.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | All - board reporting |
@@ -39,7 +39,7 @@
 
 ## 1. Purpose and Scope
 
-CERG-POL-001 commits the CISO to reporting compliance posture and material risk to executive leadership and the board. The Operating Model defines maturity indicators; the RMF defines KRIs and escalation triggers; the VM and Risk procedures define standing metrics. This document closes the gap between those conceptual metrics and the operational reporting the CISO actually publishes.
+[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) commits the CISO to reporting compliance posture and material risk to executive leadership and the board. The Operating Model defines maturity indicators; the RMF defines KRIs and escalation triggers; the VM and Risk procedures define standing metrics. This document closes the gap between those conceptual metrics and the operational reporting the CISO actually publishes.
 
 It applies to every CERG-produced metric and every CERG-produced report consumed by the Cyber Oversight Group (CISO's reporting line, operating unit leadership, executives, or board depending on org structure), executive leadership, and the board.
 
@@ -80,13 +80,13 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
-| VM-001 | DISH Critical Open Past SLA | Count of DISH-flagged Critical findings past SLA per `CERG-PRC-VM-001` | VM tool | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
+| VM-001 | DISH Critical Open Past SLA | Count of DISH-flagged Critical findings past SLA per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | VM tool | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
 | VM-002 | DISH High Open Past SLA | Same for High | VM tool | Daily | ≤ 10 / 11–50 / > 50 | CISO Dashboard |
 | VM-003 | Critical Closure Velocity | Critical findings closed this month / Critical findings opened this month | VM tool | Monthly | ≥ 1.0 / 0.8–1.0 / < 0.8 | CISO Dashboard |
 | VM-004 | Critical Asset Coverage | Authenticated-scan coverage of Critical/High asset class | VM tool + Asset Inventory | Monthly | ≥ 98% / 90–98% / < 90% | CISO Dashboard, COG Brief |
-| DT-001 | Day-One Detection Coverage | % of in-scope environments with full Day-One Set from `CERG-STD-LM-001` | SIEM | Monthly | ≥ 95% / 80–95% / < 80% | CISO Dashboard |
+| DT-001 | Day-One Detection Coverage | % of in-scope environments with full Day-One Set from [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | SIEM | Monthly | ≥ 95% / 80–95% / < 80% | CISO Dashboard |
 | DT-002 | Purple Test Pass Rate | % of validated detections firing as expected | Purple results | Quarterly | ≥ 90% / 75–90% / < 75% | COG Brief |
-| DT-003 | Mandatory Log Source Onboarding | % of mandatory sources from `CERG-STD-LM-001` onboarded | SIEM source inventory | Monthly | ≥ 98% / 90–98% / < 90% | CISO Dashboard |
+| DT-003 | Mandatory Log Source Onboarding | % of mandatory sources from [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) onboarded | SIEM source inventory | Monthly | ≥ 98% / 90–98% / < 90% | CISO Dashboard |
 
 ### 3.3 Engineering / Configuration Metrics (Owner: Cyber Engineering)
 
@@ -151,7 +151,7 @@ The data source map tells the reporting team where each metric's underlying data
 
 ## 5. CISO Risk and Posture Dashboard
 
-The CISO dashboard is the single page that opens every monthly review. It is laid out around the five standing views defined in `CERG-TMPL-RM-001` Section 7, plus the regulatory posture strip.
+The CISO dashboard is the single page that opens every monthly review. It is laid out around the five standing views defined in [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) Section 7, plus the regulatory posture strip.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -209,7 +209,7 @@ QUARTERLY CYBER OVERSIGHT GROUP BRIEF - Q<n> <YYYY>
    · Top 10 Risks with one-line status per risk
 
 3. STATE OF THE PROGRAM
-   · Maturity indicators against CERG-GOV-OM-001 targets
+   · Maturity indicators against [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) targets
    · CERG capability deltas this quarter (people, tooling, scope expansion)
 
 4. REGULATORY POSTURE
@@ -287,20 +287,4 @@ The guardrails baked into the metric definitions and reporting views above:
 | CISO Dashboard | Monthly | Cyber Governance - Reporting | CISO |
 | Monthly CERG Leadership Report | Monthly | Cyber Governance - Reporting | CERG Leadership |
 | Quarterly COG Brief | Quarterly | CISO + Cyber Governance - Reporting | Cyber Oversight Group (per org structure) |
-| Board read-out slice | Quarterly | CISO | Board (subset of COG Brief) |
-| Regulatory Posture | Quarterly | Governance domain owners | CISO · Audit · COG |
-| Metrics dictionary review | Annual | Cyber Governance Manager | CERG |
-| Threshold (G/A/R) calibration | Annual or on material program change | Cyber Governance Manager | CISO sign-off |
-
----
-
-## 10. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager · CISO endorsement |
-| **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. |
-
+| Board read-out slice | Quarterly | CI

@@ -13,8 +13,8 @@
 | **Status** | For Review |
 | **Classification** | Internal - Confidential |
 | **Owner** | Cyber Risk Manager (Offensive Security) |
-| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
-| **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-LM-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-PRC-VM-001 · CERG-PRC-RM-001 · CERG-PRC-AR-001 · CERG-PRC-TPRM-001 · CERG-PLN-IR-001 |
+| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On material program change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
 | **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) (indirect via control testing) |
@@ -75,7 +75,7 @@ CERG produces an annual Adversarial Validation Plan that schedules the engagemen
 Scoping inputs:
 
 - Highest-residual-score risks in the register.
-- Recently introduced systems and architectures (`CERG-PRC-AR-001` Phase 5 records).
+- Recently introduced systems and architectures ([`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) Phase 5 records).
 - Regulatory cadence requirements (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)).
 - ATT&CK coverage gaps identified by detection engineering.
 - Threat intelligence pointing at adversary activity relevant to the organization.
@@ -201,7 +201,7 @@ Purple work is the collaboration between offensive and detection engineering. It
 3. **Observe**, did the expected detection fire? With expected priority? In expected time?
 4. **Classify**, Pass · Pass-with-Latency · Pass-with-Tuning-Needed · Fail (no detection) · Fail-Suppressed (existed but suppressed).
 5. **Action**, Pass: no change. Pass-with-Tuning: tune. Fail / Fail-Suppressed: open detection backlog item + risk register entry until restored.
-6. **Reflect**, feed result into detection inventory; update DT-002 metric in `CERG-GOV-MTR-001`.
+6. **Reflect**, feed result into detection inventory; update DT-002 metric in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ### 6.3 Purple-Team Outcome to Baseline
 
@@ -237,7 +237,7 @@ Application tests use OWASP WSTG (web), MASTG (mobile), and API Security Top 10 
 | Authorization | IDOR, function-level access, multi-tenant isolation, RBAC enforcement. |
 | Input handling | Injection (SQL, command, template), deserialization, file upload, SSRF. |
 | Output / data exposure | Information disclosure, sensitive data in responses, error verbosity. |
-| Configuration | Headers (HSTS, CSP, etc.), TLS conformance to `CERG-STD-CR-001`, exposed admin endpoints. |
+| Configuration | Headers (HSTS, CSP, etc.), TLS conformance to [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), exposed admin endpoints. |
 | Business logic | Workflow bypass, race conditions, abuse of intended functionality. |
 | API | OWASP API Top 10: object-level, function-level, mass assignment, rate limiting, etc. |
 | Mobile | OWASP MASTG: storage, transport, platform interaction, code quality, resilience. |
@@ -281,7 +281,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to `CERG-PRC-VM-001` severity bands so they can co-route into vulnerability management:
+Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -295,12 +295,12 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 
 | **Source of Finding** | **Routes To** |
 |---|---|
-| Specific software / asset vulnerability | `CERG-PRC-VM-001` finding + risk register entry per `CERG-PRC-RM-001` if Critical/High |
-| Control / design weakness | Risk register entry directly per `CERG-PRC-RM-001` |
+| Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
+| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
-| Vendor / supply chain weakness | TPRM record per `CERG-PRC-TPRM-001` |
-| OT-specific weakness | OT VM procedure within `CERG-PLN-CIP-001` + risk register |
+| Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| OT-specific weakness | OT VM procedure within [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) + risk register |
 
 ### 10.3 Retest and Closure
 
@@ -343,33 +343,4 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | Engineering - Platforms | Remediates identified misconfigurations and control gaps. |
 | Engineering - Identity | Remediates identity-related findings; tunes identity detections. |
 | Governance - Compliance | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
-| CISO | Approves Red-Team Charters and high-impact / cloud / OT engagements. |
-| Incident Response | Receives crossover events where test crosses the threshold into real incident. |
-| System / Business Owners | Authorize testing within their scope; participate in retest. |
-
----
-
-## 13. Regulatory and Framework Alignment Summary
-
-| **Regulation / Framework** | **Where in This Procedure** |
-|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CA-8 | All sections |
-| NIST 800-115 | All sections |
-| PTES | Sections 3–4 |
-| MITRE ATT&CK | Sections 6, 7 |
-| OWASP WSTG / MASTG / API Top 10 | Section 8 |
-| NERC-CIP CIP-007 R3.2 (vulnerability assessment) | Sections 9, 10 |
-| [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) | Sections 3, 8 |
-
----
-
-## 14. Document Control
-
-| | |
-|---|---|
-| **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Risk Manager (Offensive Security) · CISO endorsement |
-| **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. |
-
+| CISO | Approves Red-Team Charters and high-impact / cloud / OT engagements.
