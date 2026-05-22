@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (OT/NERC-CIP) |
+| **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / CIP Standard Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · NIST RMF |
@@ -330,7 +330,7 @@ This standard must be reviewed annually and upon any of the following triggering
 - Changes to [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) or IEC 62443 that materially affect the requirements herein
 - Direction from the CISO or regulatory examination findings
 
-Governance owns this document. The Cyber Governance Manager (OT/NERC-CIP) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (OT/NERC-CIP) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
 
 ### Related Documents
 
