@@ -405,7 +405,7 @@ Every contribution must pass these gates before commit:
 
 | **Gate** | **Command / Check** | **Pass Condition** |
 |---|---|---|
-| No em dashes | `grep -n "—" <files>` | No output |
+| No em dash characters | Search files for the prohibited em dash character | No output |
 | Render check | `python3 tools/cerg-render.py --check` | Passes |
 | Catalog registration | Inspect `CERG-GOV-CAT-001` | New artifact listed or planned entry updated |
 | Role discipline | Compare against `CERG-GOV-OM-001` and `CERG-GOV-RAC-001` | No invented roles |
