@@ -396,8 +396,8 @@ This table is the single source of truth for who may accept residual risk. Every
 |---|---|---|---|---|
 | **Critical** | CISO with Executive Sponsor concurrence | CEO notified; Board notification at next quarterly cycle (or sooner if systemic) | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
 | **High** | CISO | Executive Sponsor notified | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
-| **Medium** | Cyber Risk Manager (Risk pillar lead) | CISO informed at monthly Risk Posture Review | Risk assessment, compensating controls, target remediation date | 12 months |
-| **Low** | Cyber Governance Manager | Tracked in monthly Risk Register report | Brief justification; tracked in risk register | 12 months |
+| **Medium** | Risk Pillar Leader (Risk pillar lead) | CISO informed at monthly Risk Posture Review | Risk assessment, compensating controls, target remediation date | 12 months |
+| **Low** | Governance Pillar Leader | Tracked in monthly Risk Register report | Brief justification; tracked in risk register | 12 months |
 | **Informational** | Cyber Governance (Risk Register Owner) | Tracked in quarterly trending report | Tracked in risk register | Reviewed annually |
 
 > **Renewals**
