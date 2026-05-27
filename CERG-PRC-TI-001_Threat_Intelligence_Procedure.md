@@ -2,21 +2,21 @@
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## THREAT INTELLIGENCE PROCEDURE
-### Sources · Intake · Relevance · Dissemination · Action Tracking
+### Sources · Intake · Relevance · Dissemination · Action Tracking · Program Reprioritization · External Collaboration
 
 ---
 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TI-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) |
 | **Review Cycle** | Annual / On material change to threat landscape or intelligence sources |
-| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA-3, RA-5, SI-5, PM-16) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.RA, DE.CM) · [MITRE ATT&CK](https://attack.mitre.org/) · [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/) |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA-3, RA-5, SI-5, PM-16) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.RA, DE.CM, ID.IM, GOVERN) · [MITRE ATT&CK](https://attack.mitre.org/) · [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/) |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC where threat intelligence affects scoped systems |
 | **Environments** | All CERG-managed environments and risk decisions informed by threat intelligence |
 
@@ -32,10 +32,12 @@
 6. [Products and Dissemination](#6-products-and-dissemination)
 7. [Action Tracking](#7-action-tracking)
 8. [Integration With CERG Processes](#8-integration-with-cerg-processes)
-9. [Metrics](#9-metrics)
-10. [Roles and Responsibilities](#10-roles-and-responsibilities)
-11. [Regulatory and Framework Alignment Summary](#11-regulatory-and-framework-alignment-summary)
-12. [Document Control](#12-document-control)
+9. [Intelligence-Driven Program Reprioritization](#9-intelligence-driven-program-reprioritization)
+10. [External Collaboration and Information Sharing](#10-external-collaboration-and-information-sharing)
+11. [Metrics](#11-metrics)
+12. [Roles and Responsibilities](#12-roles-and-responsibilities)
+13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
+14. [Document Control](#14-document-control)
 
 ---
 
@@ -188,7 +190,141 @@ Threat intelligence feeds the program through defined channels.
 
 ---
 
-## 9. Metrics
+## 9. Intelligence-Driven Program Reprioritization
+
+Threat intelligence that is collected, triaged, and disseminated but never changes the program is a reporting exercise, not an Adaptive capability. The CERG Framework (FRM-001 Section 6.2) states that "Threat intelligence actively shapes Engineering design decisions and Governance policy priorities." An Adaptive assessor expects to see evidence that intelligence has actually changed the program, not just informed it.
+
+This section defines the quarterly cadence and decision framework by which intelligence drives program-level reprioritization.
+
+### 9.1 Quarterly Threat Landscape Assessment
+
+Once per quarter, aligned with the CERG leadership review cadence (GOV-CAL-001 Section 5), the Risk Pillar Leader presents a Threat Landscape Assessment to the CISO and pillar leaders. The assessment is a structured briefing, not a raw intelligence dump.
+
+The assessment covers:
+
+- **Top 3 threat actors** targeting the organization's sector, with observed TTPs and campaign context
+- **TTP changes** observed in the last quarter that differ from the prior assessment
+- **Changes in targeting patterns:** are new sectors, technologies, or organization types being targeted?
+- **Vulnerabilities actively exploited in the wild** (CISA KEV or vendor-confirmed exploitation), with mapping to CERG assets
+- **Intelligence gaps identified:** what should CERG know about the threat landscape that it does not currently know?
+- **External incident impact assessment:** any major breach at a peer or in-sector organization, with implications for CERG
+
+### 9.2 Reprioritization Decision Framework
+
+The assessment MUST produce at least one of the following reprioritization decisions, each recorded with rationale in the improvement register (IMPREG-001):
+
+| Decision | Trigger Condition | Example |
+|---|---|---|
+| **No program change** | Current posture is adequate for the assessed threat landscape. | Must state specifically why : not "we are fine" but "our current network segmentation (STD-NET-001 Section 5) blocks the lateral movement technique observed in the campaign." |
+| **Control baseline adjustment** | A new TTP or exploitation pattern is not addressed by the current control baseline. | "Ransomware groups are now exploiting RMM tools for initial access. Proposed: add a CB-001 control requiring RMM tool inventory and approved-tool policy." |
+| **Project intake priority shift** | A class of project or technology now carries elevated risk. | "API-first architectures are being targeted. Proposed: elevate API gateway projects to mandatory architecture review." |
+| **Detection rule update** | Observed TTPs are not covered by current detection rules. | "The campaign uses a specific LOLBin chain not in our detection set. Proposed: add detection rules for the observed chain." |
+| **Tooling or capability gap** | The threat landscape requires a capability CERG does not currently have. | "Adversaries are abusing OAuth token attacks at scale. Proposed: evaluate OAuth threat detection tooling." |
+| **Staffing or training recommendation** | A sustained threat pattern requires specialized expertise. | "ICS-targeting activity has increased 300% year-over-year. Proposed: add an OT Threat Analyst position." |
+| **External sharing action** | Intelligence is relevant to an ISAC, peer group, or regulator. | "Observed novel ICS technique. Proposed: share sanitized TTP with E-ISAC." |
+
+> **The "No Change" Decision Requires Proof**
+>
+> "No program change" is a valid output of the quarterly assessment, but it must be a deliberate conclusion with specific rationale, not a default. An assessor reviewing two years of quarterly assessments where every single one concluded "no change needed" will correctly conclude either that the intelligence program is not producing actionable intelligence or that the program is not listening to it. Both conclusions are Adaptive-fatal.
+
+### 9.3 Decision Record
+
+Each reprioritization decision is recorded in the improvement register (IMPREG-001) with:
+
+- Source: "Intelligence-Driven Reprioritization, QN YYYY"
+- The intelligence trigger (specific threat actor, TTP, campaign, or vulnerability)
+- The decision and accountable role
+- A verification checkpoint (reviewed at the next quarterly assessment)
+
+### 9.4 Verification
+
+At each quarterly assessment, the prior quarter's reprioritization decisions are verified:
+
+- Was the control adjusted? Is the new or modified control in CB-001?
+- Was the detection rule deployed? Is it producing alerts?
+- Was the capability gap funded? Is the tool procured or the hire in progress?
+- Incomplete actions are escalated to the CISO.
+
+Verification outcomes (Effective, Partially Effective, Ineffective) are recorded in IMPREG-001 per the improvement lifecycle.
+
+### 9.5 Integration with Lessons Learned
+
+The quarterly Threat Landscape Assessment is an intake source for the Lessons Learned procedure (PRC-LL-001). Intelligence-driven patterns that persist across multiple quarters are analyzed alongside incident, audit, and adversarial validation patterns at the quarterly Lessons Aggregation Review.
+
+---
+
+## 10. External Collaboration and Information Sharing
+
+Adaptive maturity expects bidirectional information sharing : not just consuming threat intelligence, but contributing back, participating in communities, and learning from peers' incidents. This section defines the external collaboration requirements for CERG.
+
+### 10.1 ISAC / ISAO Membership
+
+CERG must maintain membership in at least one sector-appropriate Information Sharing and Analysis Center (ISAC) or Information Sharing and Analysis Organization (ISAO). For organizations with IT and OT footprints, dual membership in the sector IT ISAC and E-ISAC (electricity) or equivalent OT ISAC is recommended.
+
+| Requirement | Detail |
+|---|---|
+| Minimum participation | Attend quarterly member calls and respond to Requests for Information (RFIs) within the ISAC's published SLA |
+| Designated liaison | Threat Intelligence Analyst or Risk Pillar Leader |
+| Escalation | Material intelligence received through ISAC channels follows the same triage and prioritization as Section 4-5 |
+
+### 10.2 Peer Benchmarking
+
+At least annually, the Threat Intelligence Analyst collects and analyzes peer benchmarking data where available.
+
+Sources include:
+- ISAC member threat reports and statistics
+- Industry surveys (DBIR, SANS, sector-specific reports)
+- Regulatory aggregate data where published
+- Trusted peer exchanges
+
+The benchmarking analysis compares CERG's posture against peer norms:
+- Vulnerability closure rates compared to sector peers
+- Incident frequency and type compared to sector peers
+- Control coverage compared to recommended sector baselines
+
+Significant deviations from peer norms trigger a program review. Example: if peer organizations close Critical vulnerabilities in a mean of 30 days and CERG's mean is 90 days, the gap must be explained and either accepted with rationale or converted to an improvement action.
+
+### 10.3 External Incident Learning
+
+When a major breach at a peer or in-sector organization is publicly reported, CERG conducts a structured External Incident Review within 14 calendar days. The review is led by the Threat Intelligence Analyst with participation from the affected pillar.
+
+The review answers four questions:
+
+1. **Could this happen here?** Does the affected technology, configuration, vendor, or process exist in CERG's environment?
+2. **Are the relevant controls present and effective?** Map the attack chain to CERG's control baseline (CB-001). Are all relevant controls Implemented? Have their effectiveness metrics (CEF-001) been measured?
+3. **What would our detection and response look like?** If the same attack chain were executed against CERG, would it be detected? Would the response be effective?
+4. **What changes, if any, are warranted?** The output is either:
+   - "No change needed" with specific rationale (e.g., "the affected technology is not deployed; the attack vector is blocked by STD-NET-001 Section 5")
+   - An improvement register entry (IMPREG-001) for each warranted change
+
+### 10.4 Community Contribution
+
+At least annually, CERG contributes back to the ISAC or security community. Minimum contribution: sanitized lessons learned, threat observations, or control effectiveness data. This is both an Adaptive indicator in NIST CSF assessments and a professional obligation.
+
+Acceptable contributions include:
+- Sanitized incident lessons (what happened, what worked, what did not : without attribution or sensitive detail)
+- Novel threat observations or TTPs
+- Control effectiveness insights ("we found that control X was consistently ineffective in Y scenario")
+- Tool or technique evaluations
+
+### 10.5 Information Sharing Boundaries
+
+Not everything can be shared. Before any external contribution, the following classification rules apply:
+
+| Classification | Sharing Rule |
+|---|---|
+| Sanitized, non-attributable observations | Share freely with ISAC / peer groups |
+| Specific vulnerabilities before remediation | Do not share externally until remediated |
+| Customer, patient, or citizen data | Never share; regulated |
+| Attorney-client privileged material | Never share without legal review |
+| Competitive or business-strategy information | Never share |
+| Incident details during active incident | Share only with official response partners (ISAC, CISA, law enforcement as appropriate) |
+
+When in doubt, the CISO and legal counsel review before sharing.
+
+---
+
+## 11. Metrics
 
 Threat intelligence metrics measure relevance and action, not raw feed volume.
 
@@ -205,7 +341,7 @@ Threat intelligence metrics measure relevance and action, not raw feed volume.
 
 ---
 
-## 10. Roles and Responsibilities
+## 12. Roles and Responsibilities
 
 Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
@@ -225,7 +361,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
-## 11. Regulatory and Framework Alignment Summary
+## 13. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Reference** | **Where in This Procedure** |
 |---|---|---|
@@ -239,21 +375,21 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
-## 12. Document Control
+## 14. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-PRC-TI-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
-| **Effective Date** | 2026-05-22 |
+| **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | Governance Pillar Leader (pending); CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to threat landscape or intelligence sources |
-| **Next Scheduled Review** | 2027-05-22 |
-| **Frameworks** | NIST 800-53r5 (RA-3, RA-5, SI-5, PM-16); NIST CSF 2.0 (ID.RA, DE.CM); MITRE ATT&CK; MITRE ATT&CK for ICS |
+| **Next Scheduled Review** | 2027-05-26 |
+| **Frameworks** | NIST 800-53r5 (RA-3, RA-5, SI-5, PM-16); NIST CSF 2.0 (ID.RA, DE.CM, ID.IM, GOVERN); MITRE ATT&CK; MITRE ATT&CK for ICS |
 | **Regulations** | CMMC L2 / 800-171r3; NERC-CIP; SOX ITGC where applicable |
 | **Environments** | All CERG-managed environments and risk decisions informed by threat intelligence |
 
@@ -262,6 +398,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 Draft | 2026-05-22 | Cyber Risk | Initial release. Establishes source management, intake fields, triage outcomes, relevance-based prioritization, tailored intelligence products, action tracking, integration with CERG processes, metrics, and canonical role responsibilities for threat intelligence. |
+| 1.1 Draft | 2026-05-26 | Cyber Risk | Added Section 9 (Intelligence-Driven Program Reprioritization): quarterly threat landscape assessment, reprioritization decision framework, decision record, verification, and integration with lessons learned. Added Section 10 (External Collaboration and Information Sharing): ISAC/ISAO membership requirements, peer benchmarking, external incident learning, community contribution, and information sharing boundaries. Renumbered subsequent sections. Updated supporting documents to include PRC-LL-001, IMPREG-001, and GOV-CAL-001. Addresses NIST CSF Adaptive gaps in intelligence-driven program change and bidirectional information sharing. |
 
 ### Review Triggers
 
@@ -284,4 +421,7 @@ Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiat
 | Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Consumes supplier and vendor intelligence |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Tracks residual risk from intelligence-driven findings |
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Receives detection leads from intelligence |
+| Lessons Learned and Program Improvement Procedure | [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Intelligence assessments feed the quarterly aggregation |
+| Program Improvement Register | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Records intelligence-driven program changes |
+| Annual Security and Governance Calendar | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Aligns quarterly assessment cadence |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `TI` domain |
