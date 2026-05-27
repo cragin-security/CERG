@@ -13,8 +13,8 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG_Risk_Management_Framework_v1.0.md) |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | All - board reporting |
@@ -39,7 +39,7 @@
 
 ## 1. Purpose and Scope
 
-[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) commits the CISO to reporting compliance posture and material risk to executive leadership and the board. The Operating Model defines maturity indicators; the RMF defines KRIs and escalation triggers; the VM and Risk procedures define standing metrics. This document closes the gap between those conceptual metrics and the operational reporting the CISO actually publishes.
+[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) commits the CISO to reporting compliance posture and material risk to executive leadership and the board. The Operating Model defines maturity indicators; the RMF defines KRIs and escalation triggers; the VM and Risk procedures define standing metrics. This document closes the gap between those conceptual metrics and the operational reporting the CISO actually publishes.
 
 It applies to every CERG-produced metric and every CERG-produced report consumed by the Cyber Oversight Group (CISO's reporting line, operating unit leadership, executives, or board depending on org structure), executive leadership, and the board.
 

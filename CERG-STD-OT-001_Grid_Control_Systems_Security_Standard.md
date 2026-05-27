@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / CIP Standard Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · NIST RMF |
 | **Regulations** | NERC-CIP v6/v7 · IEC 62443 |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets, regardless of whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
+This standard implements the foundational principles established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets, regardless of whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
 
 These requirements are organized around the NIST Cybersecurity Framework 2.0 functions, Govern, Identify, Protect, Detect, Respond, and Recover, and are cross-mapped to NERC-CIP standards, NIST SP 800-82 (Guide to OT Security), [NIST SP 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), and IEC 62443 where applicable. Where BES and non-BES requirements differ materially, both are stated explicitly.
 
@@ -64,7 +64,7 @@ The NERC-CIP CIP-002 asset categorization process determines which assets carry 
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md). It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7. BES Cyber System exceptions require CISO approval.
+This standard is subordinate to [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md). It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7. BES Cyber System exceptions require CISO approval.
 
 ---
 
@@ -338,7 +338,7 @@ References below use the canonical IDs in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of all CERG artifacts referenced here |
 | Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlay matrix, evidence mapping (BES overlay) |
 | NERC-CIP Operational Package | [CERG-PLN-CIP-001](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Vulnerability Management Procedu

@@ -13,7 +13,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) |
 | **Review Cycle** | Annual / On control baseline, standard, procedure, or evidence model change |
 | **Frameworks** | NIST 800-53r5 · NIST 800-171r3 · NIST CSF 2.0 GOVERN · ISO/IEC 27001 |
@@ -180,7 +180,7 @@ Maintenance steps:
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Approved By** | CISO (pending) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on control baseline, standard, procedure, or evidence model change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0 GOVERN; ISO/IEC 27001 |

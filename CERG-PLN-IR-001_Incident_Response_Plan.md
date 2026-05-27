@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | CISO (Incident Commander Authority) · Cyber Governance (Plan Maintenance) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
@@ -42,7 +42,7 @@
 
 ## 1. Purpose and Scope
 
-This plan operationalizes the incident response principle established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
+This plan operationalizes the incident response principle established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
 
 The plan is intentionally cross-environment. A single incident may span enterprise IT, cloud, SaaS, OT, and CUI environments simultaneously. The plan provides one structure of authority, classification, and notification, with environment-specific overlays that reflect the operational and regulatory reality of each domain.
 
@@ -70,7 +70,7 @@ This plan applies to:
 
 ### 1.3 Relationship to Parent Policy and Standards
 
-This plan is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)** and implements the response and recovery obligations of the peer standards. Where a peer standard imposes additional or more stringent notification, evidence, or recovery requirements, the more stringent requirement controls.
+This plan is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** and implements the response and recovery obligations of the peer standards. Where a peer standard imposes additional or more stringent notification, evidence, or recovery requirements, the more stringent requirement controls.
 
 ---
 
@@ -426,7 +426,7 @@ Cyber Governance owns the plan as a document. The CISO owns the operational capa
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - Principle 10 |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 10 |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT IR overlay, CIP-008 obligations |
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud / SaaS IR overlay |
 | CUI Handling Standard | [CERG-STD-C

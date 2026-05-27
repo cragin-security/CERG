@@ -13,7 +13,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / On material change to architecture review or threat modeling methods |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA, SA, PL, SC) · [NIST 800-160](https://csrc.nist.gov/pubs/sp/800/160/v1/final) · [NIST SSDF](https://csrc.nist.gov/pubs/sp/800/218/final) · [MITRE ATT&CK](https://attack.mitre.org/) · [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
@@ -271,7 +271,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | Governance Pillar Leader (pending); CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to architecture review or threat modeling methods |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 (RA, SA, PL, SC); NIST 800-160; NIST SSDF; MITRE ATT&CK; MITRE ATT&CK for ICS; OWASP ASVS |
@@ -298,7 +298,7 @@ Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiat
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Establishes the pillar handoff and canonical roles |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Threat modeling is Phase 2 input and output |
 | Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control requirements considered during modeling |

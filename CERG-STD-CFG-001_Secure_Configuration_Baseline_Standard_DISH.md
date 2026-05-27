@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon CIS Benchmark version change or new platform class |
 | **Frameworks** | CIS Benchmarks v8+ · CIS Controls v8 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM family) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) (OT) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · IEC 62443-3-3 / 4-2 |
@@ -42,9 +42,9 @@
 
 ## 1. Purpose and Scope
 
-[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) requires approved baselines per asset class. The Operating Model names baselines, IaC, and policy-as-code as core Engineering activities. The IT, OT, and CUI standards each independently call for baselines. Until this standard, those requirements existed without a unified implementation set, which made hardening impossible to delegate or assess.
+[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) requires approved baselines per asset class. The Operating Model names baselines, IaC, and policy-as-code as core Engineering activities. The IT, OT, and CUI standards each independently call for baselines. Until this standard, those requirements existed without a unified implementation set, which made hardening impossible to delegate or assess.
 
-This standard establishes the **DISH** profile - **D**efensive **I**nfrastructure **S**ystem **H**ardening - applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply. The acronym is used throughout the CERG document library to refer to the baselines, scan profiles, and drift-detection signals derived from this standard; it is defined here and in [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) §3.
+This standard establishes the **DISH** profile - **D**efensive **I**nfrastructure **S**ystem **H**ardening - applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply. The acronym is used throughout the CERG document library to refer to the baselines, scan profiles, and drift-detection signals derived from this standard; it is defined here and in [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) §3.
 
 > **Hardening Is Not Optional**
 >

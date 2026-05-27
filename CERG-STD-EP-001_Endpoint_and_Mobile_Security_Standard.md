@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Endpoint) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual / On material change to the endpoint or mobility estate |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM, SI, AC families) · [NIST 800-124](https://csrc.nist.gov/pubs/sp/800/124/r2/final) (mobile device security) · [CIS Controls v8](https://www.cisecurity.org/controls) (Controls 1, 4, 10) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
@@ -200,7 +200,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Endpoint) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the endpoint or mobility estate |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST 800-53r5 (CM, SI, AC); NIST 800-124; CIS Controls v8 (1, 4, 10); NIST CSF 2.0 (PROTECT) |
@@ -227,7 +227,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Endpoint) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Endpoint configuration baselines |
 | Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Conditional access consuming device posture; just-in-time elevation |
 | Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Endpoints as inventoried assets |

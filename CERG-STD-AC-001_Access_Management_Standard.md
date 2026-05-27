@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Identity & Access) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-63](https://pages.nist.gov/800-63-3/)-3 (B/C) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · HIPAA (where applicable) |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)** for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
+This standard implements the foundational principles established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
 
 Access management is the connective tissue between every other security control. A perfectly hardened system is no more secure than the worst credential authorized to log into it. A perfectly classified data store is no more protected than the weakest authorization rule that permits read access. This standard treats identity as the primary enforcement layer it has become.
 
@@ -61,7 +61,7 @@ This standard establishes the requirements. Specific implementation details, IdP
 
 ### 1.3 Relationship to Parent Policy and Peer Standards
 
-This standard is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)** and operates alongside the IT ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)), OT ([CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)), and CUI ([CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md)) standards. Where any peer standard imposes more stringent access requirements for a specific environment or data class (e.g., NERC-CIP CIP-004 for BES Cyber Systems, 800-171 3.5 for CUI), the more stringent requirement controls.
+This standard is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** and operates alongside the IT ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)), OT ([CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)), and CUI ([CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md)) standards. Where any peer standard imposes more stringent access requirements for a specific environment or data class (e.g., NERC-CIP CIP-004 for BES Cyber Systems, 800-171 3.5 for CUI), the more stringent requirement controls.
 
 ---
 
@@ -347,7 +347,7 @@ Governance owns this document. The Governance Pillar Leader (Identity & Access) 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - BES Cyber System access provisions apply in addition |
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - cloud/SaaS-specific provisions apply in addition |
 | CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handli

@@ -14,7 +14,7 @@
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |
 | **Parent Document** | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
-| **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) · [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) |
+| **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST 800-53r5 CA · ISO/IEC 27001 Clause 9 · SOX ITGC |
 | **Regulations** | SOX ITGC; CMMC; NERC-CIP; ISO; audit and customer assurance |

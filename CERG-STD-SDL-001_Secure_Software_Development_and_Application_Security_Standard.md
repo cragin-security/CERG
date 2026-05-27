@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On NIST SSDF revision · On material toolchain change |
 | **Frameworks** | [NIST SSDF 800-218](https://csrc.nist.gov/pubs/sp/800/218/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SA, SI, CM families) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · OWASP SAMM · [NIST 800-161r1](https://csrc.nist.gov/pubs/sp/800/161/r1/final) (software supply chain) · [SLSA](https://slsa.dev/) |
@@ -43,7 +43,7 @@
 
 ## 1. Purpose and Scope
 
-The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
+The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
 
 This standard establishes the requirements for secure software development across the CERG-managed estate: how software moves through a secure development lifecycle, the security gates it passes, the code review and automated testing it is subject to, how secrets and dependencies are handled, and how the build pipeline that produces it is itself secured.
 
@@ -210,7 +210,7 @@ Infrastructure-as-code is software and is governed by this standard. Specificall
 
 A security finding in CERG-managed software, whether found by SAST, DAST, SCA, code review, adversarial validation, or post-release disclosure, is a vulnerability.
 
-1. **Pre-production findings are engineering inputs.** A finding caught before go-live is remediated before go-live, or the go-live is risk-accepted per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). This is the pre-production versus post-production distinction from [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §4.3.
+1. **Pre-production findings are engineering inputs.** A finding caught before go-live is remediated before go-live, or the go-live is risk-accepted per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). This is the pre-production versus post-production distinction from [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §4.3.
 2. **Post-production findings follow the VM procedure.** A finding in released, operating software is a managed vulnerability and is remediated against the SLAs in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
 3. **No silent aging.** A software finding is closed or risk-accepted. It is never simply moved down a backlog until it is forgotten. This is Principle 4.
 
@@ -258,7 +258,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on NIST SSDF revision or material toolchain change |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST SSDF 800-218; NIST 800-53r5 (SA, SI, CM); OWASP ASVS / SAMM; NIST 800-161r1; SLSA |
@@ -285,8 +285,8 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | Engineering pillar mission and the pre/post-production risk distinction |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Engineering pillar mission and the pre/post-production risk distinction |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governs the engagement; this standard governs the code |
 | Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Post-production software vulnerability SLAs |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Gate-bypass exceptions |

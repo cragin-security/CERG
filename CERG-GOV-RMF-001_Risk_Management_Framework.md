@@ -209,7 +209,7 @@ The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](CERG-PRC-VM
 
 > **One Source of Truth**
 >
-> Earlier drafts of this document carried a parallel SLA table. That table has been retired so that there is exactly one place in the library where a remediation SLA can be changed. If you find a stale SLA citation in another document, the corrective action is to update the citing document to point at PRC-VM-001 — not to restate the values.
+> Earlier drafts of this document carried a parallel SLA table. That table has been retired so that there is exactly one place in the library where a remediation SLA can be changed. If you find a stale SLA citation in another document, the corrective action is to update the citing document to point at PRC-VM-001 ,  not to restate the values.
 
 ---
 
@@ -311,7 +311,7 @@ Risk statements that cannot be written in this form are not yet risks; they are 
 
 ### 9.3 Threat Community Reference
 
-The FAIR Threat Community is the actor or natural force that initiates a loss event. The taxonomy below is the CERG default. Subordinate documents — particularly [`CERG Risk Taxonomy`](CERG%20Risk%20Taxonomy.md) — extend it with sector-specific actors (e.g., ICS-targeted APTs for OT).
+The FAIR Threat Community is the actor or natural force that initiates a loss event. The taxonomy below is the CERG default. Subordinate documents ,  particularly [`CERG Risk Taxonomy`](CERG-GOV-TAX-001_Risk_Taxonomy.md) ,  extend it with sector-specific actors (e.g., ICS-targeted APTs for OT).
 
 | Community | Examples | Primary Loss Forms |
 |---|---|---|
@@ -520,8 +520,8 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 | **Approved By** | Chief Information Security Officer |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Next Scheduled Review** | 2027-05-01 |
-| **Parent Document** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - CERG Cybersecurity Policy |
-| **Related Documents** | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) · [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
+| **Parent Document** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
+| **Related Documents** | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
 
 ### Revision History
 

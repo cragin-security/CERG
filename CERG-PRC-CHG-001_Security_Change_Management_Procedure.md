@@ -13,7 +13,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) · [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) |
 | **Review Cycle** | Annual / On material change to enterprise change management or SOX scope |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM, SA, CA) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN, PROTECT) · ISO/IEC 27001 A.8.32 · CIS Controls v8 |
@@ -265,7 +265,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Approved By** | Governance Pillar Leader (pending); CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to enterprise change management or SOX scope |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 (CM, SA, CA); NIST CSF 2.0 (GOVERN, PROTECT); ISO/IEC 27001 A.8.32; CIS Controls v8 |
@@ -292,7 +292,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader is responsib
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Material changes enter architecture review |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and exceptions from changes |
 | SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX change-control evidence linkage |

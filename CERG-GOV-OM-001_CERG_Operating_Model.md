@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Organizational Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · NIST RMF · ISO 27001 |
 | **Audience** | All CERG personnel; business sponsors; IT and OT leadership; executive leadership |
@@ -40,7 +40,7 @@
 
 This document describes the operating model for the Cyber Engineering, Risk, and Governance (CERG) function. It defines the three pillars, the authority and reporting structure, the engagement models through which CERG delivers value to the business, the staffing patterns that support those engagements, and the cadence by which CERG operates as one team rather than three silos.
 
-This is not a policy. [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) is the policy. This document is the operating description that every CERG team member, business sponsor, and adjacent function partner can use to understand how the function works and how to engage it.
+This is not a policy. [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) is the policy. This document is the operating description that every CERG team member, business sponsor, and adjacent function partner can use to understand how the function works and how to engage it.
 
 ### 1.1 Scope
 
@@ -118,7 +118,7 @@ CERG operates as one team. The pillars provide structure for skill development, 
 
 **Core activities.**
 
-- Policy, standards, and procedures library, including [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) and all subordinate documents
+- Policy, standards, and procedures library, including [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and all subordinate documents
 - Compliance program management: NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC, and customer-contractual frameworks
 - Risk register operation per **[CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md)**
 - Evidence library curation; production of audit and assessment evidence
@@ -153,9 +153,9 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 
 | **Decision** | **Authority** |
 |---|---|
-| Policy approval ([CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) and subordinate standards) | CISO |
+| Policy approval ([CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and subordinate standards) | CISO |
 | Standards / procedure approval | Pillar leader; CISO for material changes |
-| Risk acceptance - all severities | Per the canonical Risk Acceptance Authority table in [`CERG_Risk_Management_Framework_v1.0`](CERG_Risk_Management_Framework_v1.0.md) §9.7 |
+| Risk acceptance - all severities | Per the canonical Risk Acceptance Authority table in [`CERG_Risk_Management_Framework_v1.0`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 |
 | Exception approval | Per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8, which routes to RMF §9.7 for approval authority |
 | Incident classification & containment | Incident Commander (CISO or designee), per the standing IR team (see §3.4) |
 | External notification (regulator, public) | IC + CISO + Legal |
@@ -176,7 +176,7 @@ The **Cyber Oversight Group (COG)** is the standing internal forum that reviews 
 2. **Cross-functional treatment alignment.** Risks whose treatment crosses business boundaries - e.g., a risk that requires Operations to change a maintenance practice, or Finance to fund a remediation - are surfaced for cross-functional decision or escalation.
 3. **Pre-board review.** The COG serves as the dress rehearsal for board-cycle reporting; material risk decisions surface here first so the board reporting is informed by cross-functional perspective.
 
-The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
+The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
 
 ---
 
@@ -248,7 +248,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
-| **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7. |
+| **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
 | **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
 | **Engineering Pillar Leader** | Engineering | "Engineering Pillar Leader," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
 | **Cloud Security Engineer** | Engineering | "Cloud Security Engineer" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
@@ -336,8 +336,8 @@ CERG operates as one team because it talks like one team. The standing cadence b
 | **Forum** | **Cadence** | **Participants** | **Purpose** |
 |---|---|---|---|
 | CERG Leadership Sync | Weekly | CISO + pillar leaders | Cross-pillar priorities, blockers, escalations. |
-| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2 weekly cadence for High and Critical items. |
-| Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2 monthly full cadence. |
+| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 weekly cadence for High and Critical items. |
+| Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 monthly full cadence. |
 | Pre-production Review Board | Twice weekly | Engineering + Risk + Governance | Pre-production go/no-go for in-scope projects. |
 | Vulnerability Triage | Daily / standing | Risk team + Engineering rep | PPR / Critical / Internet-exposed findings per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. |
 | Threat Intelligence Brief | Weekly | Risk + Engineering + Governance | Relevant intel, posture implications. |
@@ -375,7 +375,7 @@ CERG operates inside a broader organizational ecosystem. The following interface
 
 ## 9. RACI Patterns
 
-The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample; each standard and procedure cited in [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) §10 has its own. Role names follow the canonical roster in §6.1.
+The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample; each standard and procedure cited in [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) §10 has its own. Role names follow the canonical roster in §6.1.
 
 ### 9.1 New Cloud Workload Goes Live
 
@@ -480,14 +480,14 @@ The authoritative inventory is [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Ca
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - defines the CERG operating model at the principle level |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - defines the CERG operating model at the principle level |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of every CERG artifact |
 | Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlays, evidence mapping |
 | Metrics, Dashboard, and CISO/Board Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | KRIs, KPIs, CISO dashboard |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Lifecycle, FAIR risk statement, canonical approval table, KRI definitions |
-| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Cross-regulator control intent alignment |
-| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk language and categorization |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | Narrative framework document |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Lifecycle, FAIR risk statement, canonical approval table, KRI definitions |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Cross-regulator control intent alignment |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk language and categorization |
+| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework document |
 | Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT pillar adaptations |
 | IT (Hosted/Cloud/SaaS) Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT, cloud, and SaaS pillar adaptations |
 | CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI scope, SSP/POA&M, CMMC L2 |

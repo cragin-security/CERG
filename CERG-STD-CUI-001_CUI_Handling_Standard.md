@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
 | **Regulations** | [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · DFARS 252.204-7012, -7019, -7020, -7021 · 32 CFR Part 2002 · FAR 52.204-21 (FCI) |
@@ -64,7 +64,7 @@ CUI obligations are contractual. Failure to meet them is not solely a security f
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where the Cloud / SaaS Standard ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)) and this standard both apply, both shall be satisfied, and the more stringent requirement controls. Exceptions follow the process defined in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7, with additional obligations defined in Section 11 of this standard.
+This standard is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where the Cloud / SaaS Standard ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)) and this standard both apply, both shall be satisfied, and the more stringent requirement controls. Exceptions follow the process defined in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7, with additional obligations defined in Section 11 of this standard.
 
 ---
 
@@ -335,7 +335,7 @@ This standard does not replace the master Incident Response Plan (**[CERG-PLN-IR
 
 ## 11. Exceptions, POA&M, and SSP Maintenance
 
-CUI control deficiencies do not follow the ordinary exception process. Open deficiencies are tracked in the POA&M and reflected in the SPRS score. The exception process in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7 applies in addition for organizational risk acceptance.
+CUI control deficiencies do not follow the ordinary exception process. Open deficiencies are tracked in the POA&M and reflected in the SPRS score. The exception process in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 applies in addition for organizational risk acceptance.
 
 | **Deficiency / Exception Type** | **Mechanism** | **Approval / Tracking** | **Review** |
 |---|---|---|---|
@@ -371,7 +371,7 @@ Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodc
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - applies in addition to this where CUI is hosted on cloud/SaaS |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates |
 | Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Peer standard - identity/access requirements applied inside CUI boundary |

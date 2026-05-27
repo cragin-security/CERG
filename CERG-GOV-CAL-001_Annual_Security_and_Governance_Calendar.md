@@ -13,7 +13,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
 | **Review Cycle** | Annual / On major program, regulatory, or reporting cadence change |
 | **Frameworks** | NIST CSF 2.0 GOVERN · NIST 800-53r5 PM, CA · ISO/IEC 27001 Clauses 9 and 10 |
@@ -224,7 +224,7 @@ Calendar maintenance includes:
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO (pending) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on major program, regulatory, or reporting cadence change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GOVERN; NIST 800-53r5 PM, CA; ISO/IEC 27001 Clauses 9 and 10 |

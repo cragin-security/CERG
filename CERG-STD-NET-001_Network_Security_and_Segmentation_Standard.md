@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to network architecture |
 | **Frameworks** | [NIST 800-207](https://csrc.nist.gov/pubs/sp/800/207/final) (Zero Trust Architecture) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SC, AC families) · [CIS Controls v8](https://www.cisecurity.org/controls) (Controls 12, 13) · [IEC 62443](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards) (zones and conduits) |
@@ -189,7 +189,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to network architecture |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST 800-207; NIST 800-53r5 (SC, AC); CIS Controls v8 (12, 13); IEC 62443 |
@@ -216,7 +216,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud landing-zone network baseline |
 | Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Electronic security perimeter; OT network constraints |
 | Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Identity for zero-trust decisions; privileged access broker |

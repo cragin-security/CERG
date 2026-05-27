@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to data handling obligations |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (MP, SC-28, AC families) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.AM, PR.DS) · ISO/IEC 27001 A.5.12, A.5.13 · [CIS Controls v8](https://www.cisecurity.org/controls) (Control 3) |
@@ -204,7 +204,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to data handling obligations |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST 800-53r5 (MP, SC-28, AC); NIST CSF 2.0 (ID.AM, PR.DS); ISO/IEC 27001 A.5; CIS Controls v8 (3) |
@@ -231,7 +231,7 @@ Cyber Governance owns this document. The Governance Pillar Leader (Policy & Stan
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI is Restricted data with additional regulated handling |
 | Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Assets carry the classification this standard defines; data assets and disposal |
 | Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Need-to-know access for Confidential and Restricted data |

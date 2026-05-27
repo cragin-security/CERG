@@ -13,8 +13,8 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
 | **Review Cycle** | Annual / On any change to the V1 library |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | Cross-cutting |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-[`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §6 sets the target: the CERG model is designed to produce NIST CSF Adaptive-tier behavior. That is the aspiration. This document supplies the missing instrument: a way for an adopter to measure where the program actually sits today, and what stands between today and Adaptive.
+[`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6 sets the target: the CERG model is designed to produce NIST CSF Adaptive-tier behavior. That is the aspiration. This document supplies the missing instrument: a way for an adopter to measure where the program actually sits today, and what stands between today and Adaptive.
 
 It is a self-assessment. An organization scores itself against 24 domains, each tied to real CERG artifacts and observable evidence. The output is a tier per domain, a tier per pillar, an overall tier, and a ranked list of the gaps worth closing first.
 
@@ -66,7 +66,7 @@ The assessment is run by the Governance Pillar Leader, scored with the pillar le
 
 > **This Maps to the Same Tiers the Framework Uses**
 >
-> The four tiers here are exactly the four tiers in [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §6.1. This is deliberate. The framework says where CERG aims; this assessment says where you are on the same ruler. The gap between them is your roadmap.
+> The four tiers here are exactly the four tiers in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6.1. This is deliberate. The framework says where CERG aims; this assessment says where you are on the same ruler. The gap between them is your roadmap.
 
 ---
 
@@ -100,14 +100,14 @@ Score each domain 1 to 4 against the tier scale. The evidence column names what 
 
 | **#** | **Domain** | **Governing Artifact(s)** | **Repeatable-Tier Evidence** | **Score** |
 |---|---|---|---|---|
-| G1 | Policy and accountability | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Signed policy; named CISO; named Executive Sponsor; review date current. | |
+| G1 | Policy and accountability | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Signed policy; named CISO; named Executive Sponsor; review date current. | |
 | G2 | Document control and catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Catalog matches the live library; every artifact has an ID, owner, and status. | |
 | G3 | Operating model and roles | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical roles assigned to named people; decision rights understood. | |
 | G4 | Control baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control set adopted; each control has a named evidence owner. | |
-| G5 | Risk management framework | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk scored and treated per the RMF; approval authority table applied. | |
+| G5 | Risk management framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk scored and treated per the RMF; approval authority table applied. | |
 | G6 | Risk register operation | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Live register; Monthly Risk Register Review held; exceptions tracked. | |
 | G7 | Metrics and CISO reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | CISO dashboard published on cadence; metrics defined with bands. | |
-| G8 | Compliance and audit posture | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md), applicable `CERG-PLN` packages | Compliance matrix maintained; per-regulator package adopted for each regulator in scope. | |
+| G8 | Compliance and audit posture | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md), applicable `CERG-PLN` packages | Compliance matrix maintained; per-regulator package adopted for each regulator in scope. | |
 
 ---
 
@@ -134,9 +134,9 @@ Score each domain 1 to 4 against the tier scale. The evidence column names what 
 | R2 | Adversarial validation | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Pen test, red team, or purple team exercises run and findings tracked. | |
 | R3 | Third-party and supply chain risk | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendors tiered and assessed; supply chain risks in the register. | |
 | R4 | Logging, monitoring, and detection | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources defined; retention enforced; detection coverage mapped. | |
-| R5 | Risk taxonomy and exposure posture | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risks categorized to the taxonomy; exposure posture reported. | |
-| R6 | Threat intelligence | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §6.2 | Intelligence collected and distributed to Engineering, Detection, and Governance. | |
-| R7 | Pre-production versus post-production risk discipline | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §4.3 | Pre-production findings handled as engineering inputs; post-production findings as managed risks. | |
+| R5 | Risk taxonomy and exposure posture | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risks categorized to the taxonomy; exposure posture reported. | |
+| R6 | Threat intelligence | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6.2 | Intelligence collected and distributed to Engineering, Detection, and Governance. | |
+| R7 | Pre-production versus post-production risk discipline | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §4.3 | Pre-production findings handled as engineering inputs; post-production findings as managed risks. | |
 
 > **R6 Threat Intelligence Has No Dedicated Procedure Yet**
 >
@@ -246,7 +246,7 @@ A scorecard that is filed and forgotten is vanity. The assessment is only finish
 1. **Every Partial domain becomes a risk register entry.** A domain scored Partial is an accepted gap until it is closed. It goes in the register per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), with an owner and a target tier.
 2. **The top five gaps get named owners and dates.** The lowest five in-scope domains are the program's improvement backlog for the period. Each gets a pillar leader as owner and a target date.
 3. **The next assessment measures the close.** A gap is closed when the domain re-scores at its target tier with evidence. The radar overlay shows it.
-4. **Adaptive is a destination, not a checkbox.** A domain reaches Adaptive only when a metric or review loop is demonstrably driving its improvement. Closing gaps to Repeatable is the bulk of the work; reaching Adaptive is the last and hardest step, and it is what [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §6 describes.
+4. **Adaptive is a destination, not a checkbox.** A domain reaches Adaptive only when a metric or review loop is demonstrably driving its improvement. Closing gaps to Repeatable is the bulk of the work; reaching Adaptive is the last and hardest step, and it is what [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6 describes.
 
 > **The Assessment Is Not the Goal**
 >
@@ -265,7 +265,7 @@ A scorecard that is filed and forgotten is vanity. The assessment is only finish
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Chief Information Security Officer (pending) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the V1 library |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); NIST 800-55; ISO/IEC 27004 |
@@ -282,7 +282,7 @@ A scorecard that is filed and forgotten is vanity. The assessment is only finish
 
 - Any artifact added to or retired from the V1 library, which changes the domain set
 - A standalone threat intelligence procedure is added to the catalog (updates domain R6)
-- Material change to the tier definitions in [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) §6
+- Material change to the tier definitions in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6
 - Adopter feedback indicating a domain is missing or mis-scoped
 - Direction from the CISO
 
@@ -292,9 +292,9 @@ Governance owns this document. The Governance Pillar Leader (Document Control) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory; the domain set tracks the catalog |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | Defines the four tiers and the Adaptive target this assessment measures against |
+| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Defines the four tiers and the Adaptive target this assessment measures against |
 | Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Schedules the baseline and day-90 assessments |
 | Organization Adaptation Profile | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Supplies the tokens used in the scorecard layout |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical roles that own domain scores |

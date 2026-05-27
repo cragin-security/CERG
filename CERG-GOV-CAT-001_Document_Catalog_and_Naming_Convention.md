@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly - or upon any artifact add/retire |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
@@ -36,7 +36,7 @@
 
 ## 1. Purpose and Scope
 
-[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) establishes a hierarchy of policy, standards, procedures, and guidelines. As the library grows, that hierarchy is only useful if there is a single, authoritative inventory of which artifacts exist, which are planned, which are authoritative, and which are exports of an authoritative artifact for a specific audience. This document is that inventory.
+[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) establishes a hierarchy of policy, standards, procedures, and guidelines. As the library grows, that hierarchy is only useful if there is a single, authoritative inventory of which artifacts exist, which are planned, which are authoritative, and which are exports of an authoritative artifact for a specific audience. This document is that inventory.
 
 It applies to every CERG-owned artifact, policy, standard, procedure, plan, guideline, template, and operational package, regardless of medium (Markdown source, exported Word/PDF, intranet page, or third-party portal entry).
 
@@ -155,7 +155,7 @@ New domains are added only by amendment to this catalog.
 | `Approved` | Signed off and authoritative. | Yes - Section 5. |
 | `Retired` | Replaced or no longer in force. Retained for audit. | Yes - appendix to Section 5. |
 
-Approval authority follows [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7:
+Approval authority follows [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7:
 
 - Policy (`POL`), CISO approves; Executive leadership endorses.
 - Standard (`STD`), Governance Pillar Leader approves; CISO endorses.
@@ -173,7 +173,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Cybersecurity Policy | CISO | Approved |
+| [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
 
 ### 5.2 Framework, Operating Model, and Cross-Cutting Instruments
 
@@ -183,10 +183,10 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
-| [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
-| [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk Management Framework | Governance Pillar Leader | Approved |
-| [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
-| [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
+| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
+| [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
+| [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
+| [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Draft |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Draft |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Draft |
@@ -324,7 +324,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
 | **Next Scheduled Review** | 2026-08-21 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
@@ -358,7 +358,7 @@ Governance owns this document. The Governance Pillar Leader (Document Control) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines the roles cited as artifact owners |
 | Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Master RACI for ownership of every artifact in this catalog |
 | Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Adoption sequencing; instructs adopters to keep this catalog current | 

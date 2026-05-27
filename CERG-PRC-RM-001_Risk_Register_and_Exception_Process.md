@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Risk Register) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · NIST RMF · ISO 31000 |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-This procedure operationalizes the risk management principle established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
+This procedure operationalizes the risk management principle established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
 
 The risk register is the single, authoritative record of organizational cybersecurity risk. The exception process is the single, authoritative record of intentional deviations from established controls. The two are coupled: every approved exception is itself a risk-register entry.
 
@@ -50,7 +50,7 @@ The risk register is the single, authoritative record of organizational cybersec
 This procedure applies to:
 
 - All cybersecurity risks affecting in-scope assets, data, or operations
-- All deviations from controls established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) and its subordinate standards and procedures
+- All deviations from controls established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and its subordinate standards and procedures
 - All risk-related decisions requiring documentation: acceptance, transfer, avoidance, and reduction
 - All organizational personnel, every CERG team member, every asset owner, every business sponsor of a system or process that holds cybersecurity risk
 
@@ -233,7 +233,7 @@ Risk register access is role-based. Business owners see their scope by default; 
 
 ### 7.1 What Requires an Exception
 
-An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) or its subordinate standards. Examples include:
+An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) or its subordinate standards. Examples include:
 
 - A system that cannot meet a hardening baseline due to a vendor or operational constraint
 - A user role that requires standing privileged access despite the JIT requirement
@@ -397,6 +397,6 @@ Governance owns this procedure. The Governance Pillar Leader (Risk Register) is 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - Principle 9 |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 9 |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
 | I

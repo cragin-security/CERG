@@ -13,7 +13,7 @@
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Enterprise IT/Cloud) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
 | **Regulations** | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC L2](https://dodcio.defense.gov/CMMC/) (where applicable) ·  · HIPAA (where applicable) |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)** for information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
+This standard implements the foundational principles established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** for information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
 
 The intent is durable: as the organization continues to shift workloads between owned, hybrid, and fully cloud-native models, the security obligations do not change, only the implementation specifics do. This standard makes those implementation differences explicit while keeping the underlying control intent constant.
 
@@ -70,7 +70,7 @@ Cloud and SaaS providers operate under a shared responsibility model. The provid
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to **[CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7.
+This standard is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7.
 
 ---
 
@@ -146,8 +146,8 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 |---|---|---|---|
 | Scan all IaaS workloads (VMs, containers, serverless functions) for OS, library, and runtime vulnerabilities on a defined cadence. Container images shall be scanned in the build pipeline and before promotion to production. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) RA-5 · CIS Top 18 |
 | Detect drift from approved configuration baselines for cloud control-plane resources (e.g., security groups, IAM policies, storage bucket ACLs, encryption settings) within 24 hours. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-2(7), CM-6(1) |
-| Vulnerability remediation SLAs: Critical (CVSS 9.0+) - 7 days; High (7.0–8.9) - 30 days; Medium (4.0–6.9) - 90 days. Internet-exposed Critical vulnerabilities require remediation within 72 hours. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2 · CISA KEV |
-| Where a vulnerability cannot be remediated within SLA, document compensating controls and obtain risk acceptance per [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7. | All Cloud | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2(6) |
+| Vulnerability remediation SLAs follow CERG-PRC-VM-001: Critical (CVSS 9.0+) - 3 days; High (7.0-8.9) - 15 days; Medium (4.0-6.9) - 30 days. Internet-exposed Critical vulnerabilities require remediation within 48 hours per PPR SLA. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2 · CISA KEV |
+| Where a vulnerability cannot be remediated within SLA, document compensating controls and obtain risk acceptance per [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7. | All Cloud | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2(6) |
 
 ---
 
@@ -329,7 +329,7 @@ Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - this standard is subordinate |
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates and IT/OT boundary |
 | CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Peer standard - applies in addition where CUI is present |
 | Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Pe

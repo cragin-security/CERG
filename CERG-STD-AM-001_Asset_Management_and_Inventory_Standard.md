@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to the asset estate or inventory tooling |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.AM) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM-8, PM-5) · [CIS Controls v8](https://www.cisecurity.org/controls) (Controls 1 and 2) · ISO/IEC 27001 A.5.9 |
@@ -236,7 +236,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the asset estate or inventory tooling |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST CSF 2.0 (ID.AM); NIST 800-53r5 (CM-8, PM-5, MP-6); CIS Controls v8 (1, 2); ISO/IEC 27001 A.5 |
@@ -263,7 +263,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baselines applied at the Provisioned lifecycle state |
 | IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud and SaaS asset controls |
 | Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT-safe discovery; BES Cyber System identification |

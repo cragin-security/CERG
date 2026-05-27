@@ -13,7 +13,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) |
 | **Review Cycle** | Annual / On material change to catalog, naming, role, or rendering conventions |
 | **Frameworks** | NIST CSF 2.0 GOVERN · ISO/IEC 27001 A.5 · NIST 800-53r5 PM |
@@ -311,7 +311,7 @@ Copy this skeleton for new substantive artifacts.
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | [Canonical role] |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [Document links] |
 | **Review Cycle** | Annual / [trigger] |
 | **Frameworks** | [Frameworks] |
@@ -373,7 +373,7 @@ Copy this skeleton for new substantive artifacts.
 | **Classification** | Public |
 | **Owner** | [Canonical role] |
 | **Approved By** | CISO (pending) |
-| **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on [trigger] |
 | **Next Scheduled Review** | [YYYY-MM-DD] |
 | **Frameworks** | [Frameworks] |
@@ -428,7 +428,7 @@ A document is not complete until the catalog is amended where required.
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO (pending) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to catalog, naming, role, or rendering conventions |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GOVERN; ISO/IEC 27001 A.5; NIST 800-53r5 PM |

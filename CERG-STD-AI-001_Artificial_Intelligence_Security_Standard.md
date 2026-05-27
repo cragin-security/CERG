@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to AI use or AI regulation |
 | **Frameworks** | [NIST AI RMF 100-1](https://www.nist.gov/itl/ai-risk-management-framework) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) · ISO/IEC 42001 |
@@ -146,7 +146,7 @@ Shadow AI is the use of AI services that the program has not assessed or approve
 
 1. **Shadow AI is shadow IT.** Unsanctioned AI use is treated as unsanctioned technology under [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md). It is discovered, assessed, and then either sanctioned or stopped.
 2. **Discovery looks for it.** The program actively looks for unsanctioned AI use, through network and SaaS discovery and through expense and procurement signals. AI use that is invisible cannot be governed.
-3. **The response is a path to sanctioned use, not only a block.** When shadow AI is found, the program assesses whether the underlying need can be met by a sanctioned tool and provides one. A pure block with no sanctioned alternative drives the use further underground. This is the "yes, and..." model of [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) applied to AI: enable the need, on safe ground.
+3. **The response is a path to sanctioned use, not only a block.** When shadow AI is found, the program assesses whether the underlying need can be met by a sanctioned tool and provides one. A pure block with no sanctioned alternative drives the use further underground. This is the "yes, and..." model of [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) applied to AI: enable the need, on safe ground.
 4. **Repeated or high-risk shadow AI is a risk register entry.** A pattern of shadow AI, or a single instance involving Confidential or Restricted data, is recorded and tracked per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 > **Banning AI Does Not Work. Governing It Does.**
@@ -197,7 +197,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Approved By** | Governance Pillar Leader; CISO endorses |
-| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to AI use or AI regulation |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST AI RMF 100-1; NIST 800-53r5; OWASP Top 10 for LLM Applications; ISO/IEC 42001 |
@@ -224,7 +224,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Classification scheme that governs AI input |
 | Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Built and embedded AI systems are governed software |
 | IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Shadow AI treated as shadow IT |
