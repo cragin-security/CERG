@@ -41,7 +41,7 @@ The CERG Framework (FRM-001 §9.2) states that the left-right knowledge model pr
 
 This document closes that gap. It establishes a formal succession planning framework: an annual talent review cadence, a succession heat map for every critical CERG role, readiness ratings for identified successors (Ready Now, Ready in 1-2 Years, Ready in 3-5 Years, No Identified Successor), development plans for closing successor readiness gaps, an emergency succession protocol defining who steps in on 24 hours' notice, and cross-pillar succession requirements that ensure no pillar leader's only potential successor comes from the same pillar.
 
-It applies to every critical CERG role: the CISO, pillar leaders, domain leads, and any role whose sudden vacancy would create a material operational risk. It does not apply to contractor or consultant roles, which are addressed by the knowledge retention requirements in CERG-GOV-CON-001 (Planned, V1.x).
+It applies to every critical CERG role: the CISO, pillar leaders, domain leads, and any role whose sudden vacancy would create a material operational risk. It does not apply to contractor or consultant roles, which are addressed by the knowledge retention requirements in CERG-GOV-CON-001.
 
 > **This Document Is Confidential**
 >

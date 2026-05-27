@@ -13,7 +13,7 @@
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) (Planned, V1.x) · [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Planned, V1.x) |
+| **Supporting Documents** | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) · [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) |
 | **Review Cycle** | Annual / On any change to grade definitions, role roster, or material shift in cybersecurity competency frameworks |
 | **Frameworks** | [NIST NICE Workforce Framework](https://www.nist.gov/itl/applied-cybersecurity/nice) (SP 800-181r1) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [ISO/IEC 27001](https://www.iso.org/standard/27001) A.7.2 · [DCWF](https://public.cyber.mil/wid/dcwf/) (DoD 8140.03) |
 | **Regulations** | Cross-cutting |
@@ -401,7 +401,7 @@ For each team member, the manager and the team member review the competency matr
 - **Growth areas** (competencies where the person is not yet demonstrating at-grade behavior, or needs development to reach the next grade)
 - **Development actions**: specific experiences, training, mentoring, or stretch assignments that will close the gaps
 
-This review should happen at least semi-annually, aligned to the performance management cadence in CERG-GOV-PERF-001 (Planned, V1.x).
+This review should happen at least semi-annually, aligned to the performance management cadence in CERG-GOV-PERF-001.
 
 ### 8.3 Promotion
 
@@ -414,7 +414,7 @@ A promotion case addresses every competency domain. The standard is not "checks 
 
 > **Calibration Prevents Drift**
 >
-> Two managers evaluating the same engineer against the same matrix should reach similar conclusions. If they do not, the model is not specific enough or the managers are not applying it consistently. The promotion calibration process defined in CERG-GOV-PERF-001 (Planned, V1.x) exists to catch and correct this drift. A promotion that one manager supports and another would block is not a close call to be resolved by advocacy; it is a signal that the competency evidence needs to be examined together.
+> Two managers evaluating the same engineer against the same matrix should reach similar conclusions. If they do not, the model is not specific enough or the managers are not applying it consistently. The promotion calibration process defined in CERG-GOV-PERF-001 exists to catch and correct this drift. A promotion that one manager supports and another would block is not a close call to be resolved by advocacy; it is a signal that the competency evidence needs to be examined together.
 
 ---
 
@@ -441,7 +441,7 @@ The competency domains in this model are compatible with:
 - **ISC2 CISSP / CCSP / CSSLP**: These certifications validate breadth across multiple competency domains and are appropriate development targets for Advisor-level practitioners.
 - **ISACA CISA / CRISC / CISM / CGEIT**: These certifications validate Governance-family competencies and are appropriate for Governance practitioners and managers.
 
-The Training, Development, and Certification Framework (CERG-GOV-TRN-001, Planned, V1.x) provides the full role-to-certification mapping and training curriculum.
+The Training, Development, and Certification Framework (CERG-GOV-TRN-001) provides the full role-to-certification mapping and training curriculum.
 
 ---
 
@@ -485,8 +485,8 @@ The Training, Development, and Certification Framework (CERG-GOV-TRN-001, Planne
 | Job Architecture and Grade Framework | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions and progression dimensions |
 | CERG Job Descriptions | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | KSA requirements per role |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
-| Performance Management Framework | CERG-GOV-PERF-001 (Planned, V1.x) | Promotion calibration and development planning process |
-| Training and Certification Framework | CERG-GOV-TRN-001 (Planned, V1.x) | Role-to-certification mapping |
+| Performance Management Framework | [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Promotion calibration and development planning process |
+| Training and Certification Framework | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Role-to-certification mapping |
 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
