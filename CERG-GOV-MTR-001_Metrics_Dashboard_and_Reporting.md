@@ -9,12 +9,12 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.21 |
+| **Version** | 1.3 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | All - board reporting |
@@ -33,7 +33,8 @@
 7. [Monthly CERG Leadership Report Template](#7-monthly-cerg-leadership-report-template)
 8. [Anti-Shallow-Metrics Guardrails](#8-anti-shallow-metrics-guardrails)
 9. [Cadence and Ownership](#9-cadence-and-ownership)
-10. [Document Control](#10-document-control)
+10. [Threshold Calibration](#10-threshold-calibration)
+11. [Document Control](#11-document-control)
 
 ---
 
@@ -125,7 +126,25 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | GV-003 | NERC-CIP Evidence Library Currency | % of CIP requirements with current evidence ≤ cycle | OT GRC | Monthly | ≥ 98% / 90–98% / < 90% | Reg Posture |
 | GV-004 | CIP Deviations Open | Count of approved deviations + average days open | OT GRC | Monthly | n/a | Reg Posture |
 | GV-005 | SOX ITGC Control Pass Rate | % of in-scope SOX ITGC tests passed in cycle | SOX program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
-| GV-006 | Policy/Standard Currency | % of CERG-managed artifacts within review cycle | Document Catalog | Monthly | ≥ 95% / 85–95% / < 85% | CISO Dashboard |
+| GV-006 | Policy/Standard Currency | % of CERG-managed artifacts within review cycle | Document Catalog | Monthly | >= 95% / 85-95% / < 85% | CISO Dashboard |
+
+### 3.7 Predictive and Leading Indicators (Owner: Governance Pillar Leader, with Risk and Engineering inputs)
+
+The metrics above are lagging indicators : they tell you what already happened. An Adaptive program also tracks predictive indicators that warn of trouble before it materializes. The following leading indicators complement the lagging dictionary. When any leading indicator breaches its defined threshold, it triggers a review at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
+
+| **ID** | **Name** | **Formula** | **Why Predictive** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|---|
+| PL-001 | Mean Time to Exploit vs. Patch Velocity | (Avg days from CVE publication to known exploit) / (Avg days from CVE publication to patch deployment) | When ratio > 1.0, attackers are faster than patching. Trend direction predicts incident probability. | VM tool + threat intelligence | Monthly | <= 0.5 / 0.5-1.0 / > 1.0 | CISO Dashboard, COG Brief |
+| PL-002 | Attack Surface Change Rate | (New externally-facing assets + decommissioned assets + changed services this month) / total externally-facing assets | Rapid surface expansion without corresponding review capacity predicts exposure gaps. | Asset inventory + CMDB | Monthly | <= 5% / 5-15% / > 15% | CISO Dashboard |
+| PL-003 | Near-Miss Rate (Trailing Quarter) | Count of events that met detection thresholds but were contained before impact, per quarter | Rising near-miss rate can predict an incident when controls fatigue or coverage gaps align. A flat or falling rate after mitigations confirms effectiveness. | Near-miss log (PRC-LL-001) | Quarterly | n/a: informational; trend is the signal | COG Brief |
+| PL-004 | Threat-Intelligence-Tilted Risk Score | Sum of (risk score x TI confidence x sector targeting relevance) for top 20 risks | Incorporates whether threat actors are actively targeting the sector with TTPs relevant to each risk. Higher tilt = stronger alignment between risk register and threat landscape. | Risk register + TI assessment | Quarterly | n/a: informational; rising tilt demands attention | COG Brief |
+| PL-005 | Control Coverage vs. Threat Coverage | % of top 10 MITRE ATT&CK techniques for the sector that map to an operational CERG control | A falling percentage means threat evolution is outpacing control evolution : a predictive gap signal. | TRC-001 + ATT&CK mapping | Quarterly | >= 80% / 60-80% / < 60% | COG Brief |
+| PL-006 | Unpatched Vulns with Known Exploit | Count of open vulns where CISA KEV or vendor confirms active exploitation, regardless of CVSS score | More predictive than raw vuln count : these are the vulns attackers are actually using in the wild. | VM tool + CISA KEV | Daily | 0 / 1-5 / > 5 | CISO Dashboard |
+| PL-007 | Privileged Account Anomaly Rate | % of privileged sessions flagged as anomalous by UEBA or behavioral rules | Rising anomaly rate without corresponding investigation capacity predicts credential misuse incidents. | PAM / UEBA tool | Weekly | <= 2% / 2-5% / > 5% | CISO Dashboard |
+
+> **Leading Indicators Are Early Warning, Not Precision Instruments**
+>
+> A leading indicator does not need to be precise to be useful. It needs to change direction before the lagging indicator it predicts, and it needs to produce a signal the program can act on. PL-003 (near-miss rate) rising over three consecutive quarters is a signal even if the exact incident probability is unknown. The program that waits for precision misses the window to act.
 
 ---
 
@@ -275,17 +294,83 @@ The guardrails baked into the metric definitions and reporting views above:
 8. **Bands published with the metric.** Green/Amber/Red bands are part of the definition; moving them requires a change request, not an editorial decision.
 
 > **A Metric That Can't Show "Worse" Should Not Be Reported**
->
 > If a metric is structured such that good operating units always look good and bad ones can hide, it's vanity. CERG either reframes the metric to expose the gap or removes it from the dashboard.
 
 ---
-## 10. Document Control
+
+## 9. Cadence and Ownership
+
+| **Metric Group** | **Owner** | **Cadence** | **Audience** |
+|---|---|---|---|
+| RM-001 through RM-006 (Risk) | Risk Register Owner | Risk posture review: weekly for High/Critical; monthly for full register | CISO, Risk Pillar Leader |
+| VM-001 through VM-004 (Vulnerability) | Vulnerability Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
+| DT-001 through DT-003 (Detection) | Detection Engineer | Monthly | Risk Pillar Leader, CISO |
+| CM-001 through CM-005 (Engineering) | Engineering Pillar Leader | Daily for CM-001, CM-004; monthly for others; quarterly for CM-003, CM-005 | CISO, Engineering Pillar Leader |
+| ID-001 through ID-004 (Identity) | Identity Engineer | Daily for ID-001; weekly for ID-003; monthly for ID-002, ID-004 | CISO, Identity Engineer |
+| TP-001 through TP-004 (Third-Party) | Vendor Risk Analyst | Monthly; quarterly for TP-004 | Risk Pillar Leader, CISO |
+| GV-001 through GV-006 (Governance) | Governance Pillar Leader | Monthly; quarterly for GV-005 | CISO, Governance Pillar Leader |
+| PL-001 through PL-007 (Predictive) | Governance Pillar Leader, with Risk and Engineering inputs | Monthly for PL-001, PL-002, PL-006; weekly for PL-007; quarterly for PL-003, PL-004, PL-005 | CISO, COG Brief |
+
+The Governance Pillar Leader owns the metrics program overall and is accountable for dashboard accuracy, timely publication, and threshold governance.
+
+---
+
+## 10. Threshold Calibration
+
+The metric thresholds in Section 3 are not permanent. An Adaptive program adjusts its own measurement yardstick as the program matures, the threat landscape shifts, and risk appetite changes. Thresholds that were appropriate for an Informed program may be too loose for a Repeatable program and too tight for a newly adopted one.
+
+### 10.1 Calibration Cadence
+
+Thresholds are reviewed:
+
+- **Annually**, aligned with the risk appetite review (GOV-RMF-001)
+- **When triggered** by any of the conditions in Section 10.2
+
+### 10.2 Calibration Triggers
+
+| Trigger | Condition | Action |
+|---|---|---|
+| **Green drift** | A metric has been green for 6+ consecutive months | Tighten the threshold to drive improvement. Exception: the metric has reached its theoretical maximum (e.g., 100% MFA coverage). |
+| **Red stall** | A metric has been red for 3+ consecutive months and no improvement actions are in progress | Either escalate to the CISO with a remediation demand, or recalibrate if the threshold was set unrealistically. A metric that is permanently red without program response is noise, not measurement. |
+| **Risk appetite change** | Risk appetite tightens or loosens in a domain (per RMF-001) | Corresponding metric thresholds tighten or loosen proportionally. |
+| **Maturity improvement** | The maturity scorecard (MAT-001) shows domain improvement (e.g., Partial to Repeatable) | Relevant metric thresholds are reviewed for tightening. A domain that has matured should be held to a higher standard. |
+| **External benchmark** | Peer benchmarking data (PRC-TI-001 Section 10.2) shows a significant gap | Threshold is reviewed against the peer norm. |
+
+### 10.3 Calibration Rules
+
+1. **Tighten, do not loosen without cause.** The default direction is tighter. A threshold is only loosened when: the metric was set unrealistically and cannot be met after documented good-faith effort, or risk appetite explicitly relaxes in the domain.
+2. **One change at a time.** When multiple calibration triggers fire simultaneously, change one threshold per domain per quarter. Changing multiple thresholds simultaneously makes it impossible to determine which change drove which outcome.
+3. **Communicate before enforcing.** When a threshold changes, the affected metric owners and the CISO are notified before the new threshold takes effect. The next reporting period shows both the old and new threshold for transition.
+
+### 10.4 Threshold Change Log
+
+The Governance Pillar Leader maintains a threshold change log. Every change records:
+
+| Field | Example |
+|---|---|
+| Metric ID | VM-001 |
+| Date changed | 2026-09-01 |
+| Old threshold (Red) | > 5 |
+| New threshold (Red) | > 2 |
+| Trigger | Green drift : metric was green for 8 consecutive months |
+| Rationale | The program has consistently met the original threshold; tightening drives further improvement |
+| Approver | Governance Pillar Leader |
+
+The change log is reviewed at the annual metrics program review and is available to auditors as evidence of program evolution.
+
+### 10.5 Integration
+
+Threshold changes are recorded as improvement register entries (IMPREG-001, type: Metric or threshold change) when they represent a deliberate program improvement, not just a routine calibration. A threshold tightened due to green drift is a program improvement; a threshold corrected because it was set incorrectly from the start is a bug fix. Both are documented; only the former is an improvement.
+
+---
+
+## 11. Document Control
 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager · CISO endorsement |
+| **Version** | 1.3 |
+| **Approved By** | Governance Pillar Leader · CISO endorsement |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. |
 
