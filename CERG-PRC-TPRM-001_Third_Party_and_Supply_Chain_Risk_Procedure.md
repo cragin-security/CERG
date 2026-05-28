@@ -237,7 +237,7 @@ International access to in-scope systems and data is **denied by default**. Wher
 - A **Country Risk Register** classifies each country into tiers: Permitted · Restricted · Conditional · Prohibited.
 - Permitted countries are those with established trust relationships, low geopolitical risk, and acceptable law-enforcement / data-protection regimes; access is allowed without exception (logged, monitored).
 - Restricted countries require an exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), with named controls (managed-device-only, session recording, enhanced detection routing).
-- Conditional countries require additional senior-CISO approval, time-boxed access windows, and per-session approval.
+- Conditional countries require additional senior exec / CISO approval, time-boxed access windows, and possible per-session approval.
 - Prohibited countries do not get access; business need is resolved by alternative means (US-based delivery, alternate vendor).
 - The Country Risk Register is reviewed at least quarterly; geopolitical events can trigger reclassification at any time.
 - All international access is logged to SIEM with country-of-access metadata; the SOC routing pack includes country-tier as a fast-triage field.
