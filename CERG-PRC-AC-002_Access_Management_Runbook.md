@@ -1,4 +1,3 @@
-
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## ACCESS MANAGEMENT RUNBOOK
@@ -36,8 +35,8 @@
 10. [Vendor Access](#10-vendor-access)
 11. [MFA Enrollment and Exception](#11-mfa-enrollment-and-exception)
 12. [Roles and Responsibilities](#12-roles-and-responsibilities)
-13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
+15. [Document Control](#15-document-control)
 
 ---
 
@@ -318,7 +317,22 @@ MFA exceptions are time-bounded and tracked.
 Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
-## 13. Regulatory and Framework Alignment Summary
+
+## 12. Roles and Responsibilities
+
+| **Role** | **Responsibility** |
+|---|---|
+| **Identity Engineer** | Owns this runbook. Designs, implements, and maintains the identity infrastructure including IGA, IdP, PAM, and secrets management. Ensures JML workflows execute within SLAs. Manages MFA enrollment, service account lifecycle, and vendor access provisioning. |
+| **Manager / Approver** | Reviews and approves access requests for direct reports. Validates business need and role alignment. Participates in recertification campaigns; certifies, modifies, or removes entitlements with accountability. Initiates mover and leaver notifications to HR/IGA. |
+| **System Owner** | Approves access to sensitive systems under their ownership. Defines role requirements and entitlement baselines for their systems. Participates in recertification for system-specific access. Ensures service accounts under their systems have named human owners. |
+| **PAM Administrator** | Operates the PAM platform. Onboards privileged credentials, brokers sessions, manages session recording and retention. Executes credential rotation on checkout and post-use. Maintains break-glass credentials and coordinates quarterly hygiene checks. |
+| **Vendor Risk Analyst** | Owns the vendor access lifecycle from a risk perspective. Creates and maintains vendor records in TPRM. Validates country-of-access against the Country Risk Register. Ensures vendor access is time-bounded, scoped to minimum required, and terminated on project closeout. |
+| **User** | Uses only approved authentication factors. Reports MFA token loss immediately. Does not share credentials or service accounts. Completes required security awareness training before first access. Complies with access request and recertification requirements. |
+| **SOC / Detection Engineer** | Monitors identity events for anomalies per [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). Detects and escalates break-glass misuse, service account interactive logon, credential reuse, and geographic anomalies. Tunes detection rules in coordination with the Identity Engineer. |
+| **CISO** | Endorses this runbook. Resolves disputes escalated beyond the Identity Engineer and Cyber Engineering Pillar Leader. Approves risk acceptances for MFA exceptions and compensating controls beyond standard tolerance. Signs off on annual recertification program results. |
+
+---
+## 14. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Runbook** |
 |---|---|
@@ -331,7 +345,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 
 ---
 
-## 14. Document Control
+## 15. Document Control
 
 | | |
 |---|---|
@@ -340,4 +354,3 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 | **Approved By** | Cyber Engineering Pillar Leader (Identity) · CISO endorsement |
 | **Next Review** | Annual / IAM tooling change |
 | **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
-
