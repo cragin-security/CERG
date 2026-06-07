@@ -73,6 +73,63 @@ This is not a SOC procedure, forensics manual, or replacement Incident Response 
 
 CERG may author and maintain this playbook set, but scenario execution during an active incident is under the Incident Commander.
 
+### 2.5 Integration with the Incident Response Plan
+
+This playbook set operates under [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) (the IR Plan), which is owned by the standing Incident Response team. The following defines how the two documents connect operationally.
+
+#### Activation Flow
+
+| **IR Plan Stage** | **CERG Playbook Activation** | **CERG Action** |
+|---|---|---|
+| Incident declared | Incident Commander notifies CERG on-call per Section 18.1 | CERG acknowledges and stands by |
+| Severity determined (P1-P4) | Playbook selected per Section 3.5 | CERG activates at the level defined in Section 3.6 |
+| Triage | Playbook Triage phase | CERG supplies asset context, data classification, control evidence, logging posture |
+| Containment | Playbook Containment phase | CERG supports with Engineering and Risk expertise |
+| Eradication | Playbook Eradication phase | CERG identifies control gaps and remediation paths |
+| Recovery | Playbook Recovery phase | CERG validates control posture before restoration |
+| Post-incident | Section 17 (Post-Incident CERG Actions) | CERG records residual risk, updates controls, updates evidence library |
+| Incident closed | CERG stands down | CERG returns to normal operations |
+
+#### Information Flow
+
+- The Incident Commander provides CERG with: incident declaration, severity, affected scope, and status updates
+- CERG provides the Incident Commander with: asset inventory, data classification, control evidence, risk history, vendor context, and recovery dependencies
+- CERG actions taken during the incident are documented in the IR record by the Evidence Librarian
+
+---
+
+### 2.6 Playbook Testing and Exercise Program
+
+Playbooks are tested to validate that they work as intended and that CERG personnel can execute them under pressure.
+
+#### Testing Cadence
+
+| **Activity** | **Frequency** | **Scope** |
+|---|---|---|
+| Tabletop exercise | Annually per playbook | Walk through each playbook with CERG roles; at least 2 playbooks exercised per year |
+| Functional exercise | Annually (at least one) | Simulated incident with CERG activation; test communication, evidence, and handoff procedures |
+| Full-scale exercise | Every 2 years or per regulatory requirement | Organization-wide exercise including IR team, CERG, and executive leadership |
+
+#### Exercise Design
+
+- Exercises are designed by the Governance Pillar Leader in coordination with the Incident Commander
+- Each exercise has defined objectives, success criteria, and an after-action review
+- Exercises test the playbook, not the individuals; the goal is to find gaps, not to evaluate performance
+
+#### Success Criteria
+
+| **Criterion** | **Measure** |
+|---|---|
+| Activation time | CERG on-call acknowledged within SLA per Section 18.1 |
+| Playbook selection | Correct playbook selected per Section 3.5 |
+| Evidence delivery | Requested evidence delivered to Incident Commander within expected timeframe |
+| Communication | Notifications and updates sent per templates in Section 19.1 |
+| Post-incident actions | Post-incident actions initiated per Section 17 |
+
+#### Exercise Findings
+
+Exercise findings feed into [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) as lesson artifacts. Playbooks are updated based on exercise findings within 30 days of the after-action review.
+
 ---
 
 ## 3. Common Playbook Structure

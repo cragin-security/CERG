@@ -455,6 +455,38 @@ Every engagement produces a Final Report — the authoritative record of what wa
 
 ---
 
+### 10.4 Inter-Rater Reliability for Finding Ratings
+
+Different testers may rate the same finding differently. The following process ensures severity ratings are consistent and defensible.
+
+#### Peer Review for High-Severity Findings
+
+All Critical and High findings receive a peer review by a second qualified tester before the finding is finalized. The peer reviewer validates:
+- The severity rating against the definitions in Section 10.1
+- That the evidence supports the severity determination
+- That the finding is not a duplicate of a known issue
+
+If the peer reviewer disagrees with the severity, the Adversarial Testing Lead facilitates resolution. The final severity is the consensus rating, or the higher of the two if consensus cannot be reached.
+
+#### Calibration Sessions
+
+Quarterly calibration sessions are conducted using a sample of anonymized findings from recent engagements. All testers independently rate each finding. Results are compared and discussed. The purpose is to:
+- Align severity interpretation across testers
+- Identify systematic over-rating or under-rating patterns
+- Refine severity definitions where ambiguity is found
+
+The Adversarial Testing Lead facilitates calibration and documents outcomes. Calibration results inform tester development and, where appropriate, updates to this procedure's severity definitions.
+
+#### Dispute Resolution
+
+| **Dispute** | **Resolution** |
+|---|---|
+| Tester and peer reviewer disagree on severity | Adversarial Testing Lead facilitates; default to higher severity if unresolved |
+| Tester and system owner disagree on severity | Risk Pillar Leader reviews; severity determined by risk to the organization, not by remediation difficulty |
+| Tester and CISO disagree on Critical classification | CISO makes final determination; rationale documented |
+
+---
+
 ## 11. Systemic Analysis and Program Feedback Loop
 
 An Adaptive program does not stop at fixing individual pen-test findings. It asks: why did four of six DMZ servers share the same misconfiguration? What standard or procedure failed to prevent this? How do we change the program so the next engagement does not repeat the same class of finding?

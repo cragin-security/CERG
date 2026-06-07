@@ -420,6 +420,31 @@ The Threat Intelligence Analyst ensures that intelligence received under a TLP d
 
 ---
 
+### 7.5 Consumer Feedback Loop
+
+Intelligence products are assessed by the consumers who use them. This feedback loop drives continuous improvement in intelligence production.
+
+#### Feedback Mechanism
+
+| **Mechanism** | **Description** |
+|---|---|
+| Product rating | Recipients of intelligence products are invited to rate each product on usefulness (1–5) and accuracy (1–5) |
+| Structured feedback | Quarterly, the Threat Intelligence Analyst solicits feedback from the top 5 consumers of intelligence products (e.g., Vulnerability Management Lead, Vendor Risk Analyst, Detection Engineer, CISO) |
+| Ad-hoc feedback | Any consumer may provide feedback at any time through the intelligence intake channel |
+
+#### Feedback Review Process
+
+The Threat Intelligence Analyst reviews all feedback quarterly:
+- Products rated < 3 on usefulness are analyzed: was the wrong audience targeted? Was the analysis insufficient? Was the timing poor?
+- Products rated < 3 on accuracy are re-examined; if confirmed inaccurate, a correction is issued and the source reliability rating is adjusted
+- Patterns in feedback inform source selection, product format changes, and dissemination list adjustments
+
+#### Program Improvements from Feedback
+
+Feedback that identifies a systematic gap in intelligence production (e.g., "we consistently lack context on vulnerabilities affecting our tech stack" or "the weekly digest is too long to read") is routed to the improvement register per [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
+
+---
+
 ## 11. Metrics
 
 Threat intelligence metrics measure relevance and action, not raw feed volume.

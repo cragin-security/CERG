@@ -176,7 +176,40 @@ Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matri
 | 15–20 | **Critical** | Treat urgently; CISO + executive sponsor approval for any acceptance. |
 | 21–25 | **Critical** | Immediate treatment required; executive / board awareness. |
 
-### 4.3 Scoring Discipline
+### 4.3 Quantitative Calibration Guide
+
+The qualitative labels in the 5×5 matrix are calibrated against quantitative anchors to promote scoring consistency.
+
+#### Likelihood Calibration (Annualized Probability)
+
+| **Score** | **Label** | **Annual Probability** | **Expected Frequency** |
+|---|---|---|---|
+| 1 | Rare | < 5% | Less than once every 20 years |
+| 2 | Unlikely | 5–20% | Once every 5–20 years |
+| 3 | Possible | 20–50% | Once every 2–5 years |
+| 4 | Likely | 50–90% | Once every 1–2 years |
+| 5 | Almost Certain | > 90% | More than once per year |
+
+#### Impact Calibration (Financial Equivalent)
+
+| **Score** | **Label** | **Financial Impact** | **Non-Financial Equivalent** |
+|---|---|---|---|
+| 1 | Negligible | < $50K | No regulatory, customer, or operational impact beyond routine response |
+| 2 | Minor | $50K–$250K | Limited operational disruption; no regulatory or customer-visible impact |
+| 3 | Moderate | $250K–$1M | Material remediation effort or modest customer impact; localized regulatory finding |
+| 4 | Major | $1M–$10M | Significant regulatory exposure (CIP, CUI, breach notification), material customer impact, Tier 1 system disruption |
+| 5 | Critical | > $10M or regulatory enforcement | Material business/financial impact; broad customer harm; safety or reliability consequence; SEC-disclosable |
+
+#### Using Calibration in Scoring Discussions
+
+The calibration table is a coordination tool, not a precise calculator. When two analysts reach different scores:
+1. Each states their rationale in terms of likelihood (what is the annual probability?) and impact (what is the estimated financial or operational consequence?).
+2. The Governance Lead facilitates the discussion toward the better-supported score.
+3. If disagreement persists, the higher score is used and the rationale for both scores is recorded.
+
+The goal is not perfect precision — it is consistent conversation that produces comparable risk rankings across the register.
+
+### 4.4 Scoring Discipline
 
 > **The 5×5 Trap**
 >

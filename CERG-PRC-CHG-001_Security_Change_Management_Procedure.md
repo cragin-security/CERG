@@ -213,6 +213,37 @@ Security reviews are time-bound to prevent the review process from becoming a bo
 
 ---
 
+### 5.4 Integration with Enterprise Change Management
+
+CERG does not replace the enterprise change management process. This section defines how the two processes interface.
+
+#### Interface Workflow
+
+| **Step** | **Action** | **System** | **Owner** |
+|---|---|---|---|
+| 1 | Change request is created in the enterprise change management system (e.g., ServiceNow, Jira) | Enterprise CM | Requester |
+| 2 | If the change is security-relevant per Section 3, the change ticket is flagged for CERG review | Enterprise CM → CERG | Enterprise CM workflow automation or Engineering Pillar Leader |
+| 3 | CERG reviews the change per Section 5 and records the security review outcome | CERG review tracker | Designated CERG reviewer |
+| 4 | CERG review outcome is communicated back to the enterprise change ticket (Approved / Approved with Conditions / Requires AR / Requires RA / Rejected) | CERG → Enterprise CM | CERG reviewer |
+| 5 | Enterprise change proceeds or is blocked based on CERG outcome | Enterprise CM | Change Manager |
+
+#### Handoff Responsibility
+
+- The Engineering Pillar Leader is responsible for ensuring CERG review outcomes are communicated back to the enterprise change management system.
+- The Change Manager in the enterprise CM process is responsible for enforcing CERG outcomes: a change rejected by CERG must not proceed through the enterprise change process unless the rejection is overturned or the change is modified and re-reviewed.
+
+#### Conflict Resolution
+
+If the enterprise change management process and CERG disagree on a change's security disposition:
+
+| **Scenario** | **Resolution** |
+|---|---|
+| Enterprise CM approves a change CERG rejected | CERG rejection stands; change does not proceed until CERG concern is resolved. Escalate to CISO if bypass is attempted. |
+| CERG review delays enterprise CM SLA | Engineering Pillar Leader notifies Change Manager of delay with rationale and estimated completion. |
+| Ambiguity over whether a change is security-relevant | Engineering Pillar Leader determines; if disputed, CISO decides. |
+
+---
+
 ## 6. Emergency Changes
 
 Emergency changes are allowed, but they are not a loophole.

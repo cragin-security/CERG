@@ -83,6 +83,30 @@ A project below these thresholds may still receive a lightweight threat model at
 
 ---
 
+### 3.5 Legacy and Brownfield Systems
+
+The triggers in Section 3.1 focus on new systems and material changes. For existing (brownfield) systems that have never been threat-modeled, the following prioritization framework applies.
+
+#### Prioritization for Retroactive Threat Modeling
+
+| **Priority** | **Criteria** | **Target Completion** |
+|---|---|---|
+| Priority 1 | Systems handling CUI, BCSI, or SOX-relevant data; BES Cyber Systems; systems with Critical or High open risk register entries; internet-facing Tier 1 systems | Within 6 months |
+| Priority 2 | Internal Tier 1 or Tier 2 systems with Medium risk entries; systems supporting customer-facing services | Within 12 months |
+| Priority 3 | Tier 2 or Tier 3 systems with Low risk entries; internal-only non-production systems | Within 24 months |
+| Out of Scope | Tier 4+ systems; systems scheduled for decommissioning within 12 months; pure SaaS services where the vendor provides an equivalent threat model | — |
+
+#### Lightweight Threat Model for Legacy Systems
+
+For legacy systems where full threat modeling is infeasible (e.g., undocumented architecture, no original design artifacts), a lightweight approach is acceptable:
+
+- **Scope**: Document known boundaries, data flows, and integrations rather than attempting to reconstruct the entire architecture.
+- **Focus**: Concentrate on trust boundaries, external interfaces, and data classification paths rather than internal component detail.
+- **Output**: A reduced threat model covering abuse cases for the top 5 risks identified from the risk register, vulnerability backlog, and incident history.
+- **Acceptance**: The lightweight model is accepted as "sufficient for current risk posture" with a note that a full model will be produced at the next material change or system redesign.
+
+---
+
 ## 4. Inputs
 
 The Threat Intelligence Analyst and the project team provide inputs before the session. Missing inputs do not automatically stop the model, but missing critical inputs are recorded as assumptions.
@@ -213,6 +237,28 @@ STRIDE is the default threat classification framework for all CERG threat models
 | Elevation of Privilege | Privilege Escalation | T1068, T1078 |
 
 For OT systems, add **L**ateral Movement as a seventh category (STRIDE-LM).
+
+### 5.6.1 AI-Specific Abuse Case Categories
+
+When threat modeling systems that incorporate AI or ML capabilities, the following abuse case categories supplement the standard STRIDE framework. Detailed controls are defined in CERG-STD-AI-001.
+
+| **Category** | **Description** | **Example Abuse Case** |
+|---|---|---|
+| Prompt Injection | Attacker crafts input that overrides system instructions or safety constraints | User injects "ignore previous instructions" to bypass content filtering |
+| Model Poisoning | Attacker contaminates training data to influence model behavior | Attacker submits poisoned data to a model that learns from user feedback |
+| Data Leakage | Model reveals training data, sensitive prompts, or system configuration | Attacker uses prompt engineering to extract PII from model responses |
+| Excessive Agency | Model performs actions beyond its authorized scope due to plugin or tool access | Model autonomously executes a DELETE operation on a production database |
+| Supply Chain for AI Models | Compromised pre-trained model, dataset, or dependency introduces backdoor or vulnerability | Attacker publishes a malicious model on a public hub that includes a backdoor trigger |
+| Adversarial Input | Input designed to cause misclassification or unexpected behavior | Slightly perturbed image that causes a classifier to misidentify a stop sign |
+| Model Inversion / Extraction | Attacker queries the model to reconstruct training data or replicate the model | Attacker makes thousands of API calls to extract model weights or training distribution |
+
+#### AI Threat Model Checklist
+
+When an AI component is in scope, the threat model additionally:
+- Identifies the model's data sources (training, fine-tuning, RAG, user input) and their trust levels
+- Maps the model's agency boundary: what can the model do without human approval?
+- Assesses the model supply chain: pre-trained weights, fine-tuning datasets, model-serving infrastructure
+- References [CERG-STD-AI-001] for detailed control requirements for each abuse case category
 
 ### 5.7 Facilitation Guide
 

@@ -490,6 +490,40 @@ The Vendor Risk Analyst monitors for multiple vendors relying on the same sub-pr
 
 ---
 
+### 16.9 Business Continuity and Disaster Recovery (BCDR) for Vendors
+
+Critical and high-tier vendors must demonstrate BCDR capability proportional to the criticality of the service they provide.
+
+#### BCDR Requirements by Tier
+
+| **Tier** | **BCDR Requirement** | **Evidence** |
+|---|---|---|
+| T1 (Critical) | Documented BCDR plan; RTO ≤ 4 hours; RPO ≤ 1 hour; annual functional BCDR test | BCDR plan summary; test results |
+| T2 (High) | Documented BCDR plan; RTO ≤ 24 hours; RPO ≤ 4 hours; annual tabletop or functional test | BCDR plan summary; test results |
+| T3 (Moderate) | BCDR plan or equivalent; RTO/RPO appropriate to service | BCDR plan acknowledgment |
+| T4 (Low) | BCDR capability acknowledged in contract | Contractual commitment |
+| T5 (Business Default) | None required beyond standard terms | — |
+
+#### RTO/RPO Expectations
+
+RTO (Recovery Time Objective) and RPO (Recovery Point Objective) expectations are set based on the organization's dependency on the vendor:
+
+- If the organization's own Tier 1 service depends on the vendor, the vendor's RTO must be ≤ the organization's RTO for that service.
+- If the vendor processes regulated data (CUI, SOX), RPO must be ≤ 1 hour.
+- RTO/RPO commitments are documented in the contract and reviewed at each vendor re-assessment.
+
+#### BCDR Assessment
+
+During vendor assessment, the Vendor Risk Analyst evaluates:
+- Does the vendor have a documented BCDR plan?
+- Has the plan been tested? When? What was the outcome?
+- Are RTO/RPO commitments compatible with the organization's requirements?
+- Does the vendor's BCDR plan account for dependencies on its own critical sub-processors?
+
+Assessment results are recorded in the TPRM tool and reviewed at each re-assessment cycle.
+
+---
+
 ## 19. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
