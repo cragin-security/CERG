@@ -84,6 +84,42 @@ Each scenario uses the same structure so teams can move quickly.
 
 ---
 
+### 3.5 Playbook Selection Guide
+
+When an incident is reported, use the following decision tree to select the appropriate playbook. For multi-vector incidents, activate the highest-severity playbook first, then supplement with relevant sections from other playbooks as the incident scope clarifies.
+
+| **Question** | **If Yes** | **If No** |
+|---|---|---|
+| Is there evidence of ransomware (encrypted files, ransom note, TOR link)? | → Playbook 1 (Ransomware) | Continue |
+| Is there evidence of compromised business email (unusual rules, forwarding, executive impersonation)? | → Playbook 2 (BEC) | Continue |
+| Is there confirmed or suspected data exfiltration or breach of regulated data? | → Playbook 3 (Data Breach) | Continue |
+| Is the primary indicator a phishing email campaign (multiple users targeted, no confirmed compromise yet)? | → Playbook 4 (Phishing) | Continue |
+| Is the service degradation or outage consistent with a denial-of-service attack? | → Playbook 5 (DDoS) | Continue |
+| Is the threat actor believed to be an internal employee or contractor? | → Playbook 6 (Insider Threat) | Continue |
+| Is there evidence of cloud account or tenant compromise (unusual control-plane activity, new resources)? | → Playbook 7 (Cloud Account) | Continue |
+
+If none of the above match, or if the incident type is unclear, activate the playbook that most closely matches the observed indicators and consult the Incident Commander for direction. The Incident Commander may override playbook selection at any time.
+
+### 3.6 Incident Severity Classification
+
+All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations.
+
+| **Severity** | **Label** | **Criteria** | **CERG Activation** |
+|---|---|---|---|
+| **P1** | Critical | Active data breach of Restricted/CUI data; ransomware in production with confirmed encryption of critical systems; BES Cyber System compromise; confirmed compromise of a Crown Jewel asset; incident with safety or operational reliability impact | Full CERG activation; all pillar leaders engaged; CISO notified immediately |
+| **P2** | High | Confirmed compromise of a privileged account; CUI exposure without confirmed exfiltration; malware on systems handling regulated data; material vendor breach with downstream impact; DDoS affecting customer-facing services | CERG Engineering + Risk pillars activated; Governance engaged for regulatory scoping; CISO notified within 1 hour |
+| **P3** | Medium | Confirmed compromise of a standard user account; phishing campaign with credential submission but no confirmed account access; malware on non-regulated endpoint; policy violation with security implications | CERG supporting role; relevant pillar(s) engaged as needed; CISO notified in standing briefing |
+| **P4** | Low | Isolated security event with no confirmed compromise; failed attack attempt; routine alert requiring investigation but no incident declaration | CERG monitoring only; no activation required unless escalated by the Incident Commander |
+
+#### Escalation Thresholds
+
+- Any P1 or P2 incident: CISO is notified immediately. The Governance Pillar Leader determines regulatory notification obligations.
+- Any incident involving PII, CUI, or BCSI: The relevant compliance manager (CMMC / NERC-CIP) is engaged within the first hour.
+- Any incident with potential customer impact: Account Management and Legal are engaged per the Incident Response Plan.
+- Any incident lasting > 24 hours: Severity is re-evaluated; a P2 that persists > 24 hours may be elevated to P1 at the Incident Commander's discretion.
+
+---
+
 ## 4. Playbook 1: Ransomware
 
 ### 4.1 Triage
@@ -273,6 +309,33 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
+### 12.1 CERG On-Call and Activation
+
+CERG maintains an on-call rotation for incident support. The rotation schedule is maintained in the incident response tooling and is not duplicated here to avoid staleness. The following defines the activation procedure and escalation contacts.
+
+#### Activation Procedure
+
+1. **Declaration**: The Incident Commander (or delegate) declares an incident and determines severity per Section 3.6.
+2. **CERG Notification**: The Incident Commander or SOC notifies the CERG on-call contact through the designated channel (secure messaging, phone).
+3. **Pillar Activation**:
+   - P1/P2: Engineering Pillar Leader and Risk Pillar Leader are activated immediately. Governance Pillar Leader is activated for regulatory scoping.
+   - P3: Relevant pillar leader(s) activated as needed.
+   - P4: CERG monitors; no activation unless escalated.
+4. **Acknowledgment**: Activated CERG roles acknowledge within 30 minutes (P1), 1 hour (P2), or 4 hours (P3).
+5. **Stand-down**: The Incident Commander declares stand-down; CERG returns to normal operations and begins post-incident actions per Section 11.
+
+#### Escalation Contacts
+
+| **Role** | **Escalation Contact** | **When to Escalate** |
+|---|---|---|
+| On-call CERG responder | Engineering Pillar Leader or Risk Pillar Leader | Unable to resolve within capability; incident severity escalates |
+| Engineering Pillar Leader | CISO | P1 incident; regulatory notification required; Executive decision needed |
+| Risk Pillar Leader | CISO | P1 incident; risk acceptance required during active response |
+| Governance Pillar Leader | CISO | Regulatory notification or evidence preservation dispute |
+| CISO | Executive Sponsor / Board | Material business impact; SEC disclosure consideration; safety consequence |
+
+---
+
 ## 13. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Reference** | **Where in This Playbook Set** |
@@ -283,6 +346,123 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | CMMC L2 / NIST 800-171r3 | Incident response and CUI handling implications | Sections 6, 11, 12 |
 | NERC-CIP | Incident and BES Cyber System implications | Sections 6, 11, 12 |
 | SOX ITGC | Evidence, access, and change implications for financial systems | Sections 5, 11, 12 |
+
+---
+
+### 13.1 Communication Templates
+
+The following templates support incident communications. Templates are populated during the Communications phase of each playbook. All templates are marked with the incident's classification level.
+
+#### Initial Incident Notification (Internal)
+
+```
+INCIDENT NOTIFICATION — IR-YYYY-NNNN
+Classification: [per incident classification]
+Date/Time: [declaration timestamp]
+Severity: [P1/P2/P3/P4]
+
+Incident Commander: [name]
+CERG Lead: [name]
+
+Incident Type: [Ransomware / BEC / Data Breach / etc.]
+Affected Systems: [list]
+Affected Data: [classifications, if known]
+Current Status: [Triage / Containment / Eradication / Recovery]
+Next Update Expected: [time]
+
+Actions Requested:
+- [Any specific actions needed from recipients]
+- [Do not take independent action without Incident Commander approval]
+
+Contact: [Incident Commander contact]
+```
+
+#### Status Update Template
+
+```
+INCIDENT STATUS UPDATE — IR-YYYY-NNNN
+Update #: [N]
+Date/Time: [timestamp]
+Classification: [per incident classification]
+
+Status Change Since Last Update:
+- [What changed]
+- [New findings]
+- [Containment actions completed]
+- [Recovery progress]
+
+Current Assessment:
+- [Current state of the incident]
+- [Remaining actions]
+
+Estimated Time to Resolution: [estimate]
+Next Update Expected: [time]
+```
+
+#### Regulatory Breach Notification Template
+
+```
+REGULATORY NOTIFICATION — IR-YYYY-NNNN
+Classification: CONFIDENTIAL — REGULATORY
+Date/Time: [timestamp]
+
+To: [Regulatory body / contact]
+From: [Organization representative]
+
+Incident Type: [description]
+Date of Discovery: [date]
+Affected Data Subjects: [count and jurisdictions]
+Data Types Affected: [PII / CUI / BCSI / etc.]
+Description of Incident: [factual, concise]
+Measures Taken: [containment, investigation, remediation]
+Measures Planned: [next steps]
+Contact for Follow-up: [name, role, contact]
+
+Attachments: [list]
+```
+
+#### Customer / Partner Communication Template
+
+```
+INCIDENT NOTICE — IR-YYYY-NNNN
+Classification: [as approved by Legal and Incident Commander]
+Date: [date]
+
+To: [Customer / Partner contact]
+
+[Organization] is writing to inform you of a security incident that may affect [the service / data / system] we provide to you.
+
+What Happened: [factual description, approved by Legal]
+What Data Was Affected: [if applicable, approved by Legal]
+What We Have Done: [containment and remediation actions]
+What We Are Doing: [ongoing actions]
+What You Should Do: [any recommended customer actions]
+
+We will provide additional information as it becomes available. If you have questions, please contact [name / role / contact].
+
+[Signature block]
+```
+
+#### Post-Incident Summary Template
+
+```
+POST-INCIDENT SUMMARY — IR-YYYY-NNNN
+Classification: [per incident classification]
+Date Closed: [date]
+
+Incident Overview: [type, severity, timeline]
+Root Cause: [determined or suspected]
+Affected Systems and Data: [list]
+Containment and Eradication Actions: [summary]
+Recovery Actions: [summary]
+Evidence Preserved: [list of evidence artifacts]
+Residual Risk: [risk register entries created]
+Lessons Learned: [key findings for program improvement per CERG-PRC-LL-001]
+Action Items: [owner, action, due date]
+
+Prepared by: [CERG Governance]
+Reviewed by: [Incident Commander, CISO]
+```
 
 ---
 
