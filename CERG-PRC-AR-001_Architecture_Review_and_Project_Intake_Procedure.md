@@ -1,4 +1,3 @@
-
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## ARCHITECTURE REVIEW AND PROJECT INTAKE PROCEDURE
@@ -36,8 +35,8 @@
 10. [Required Diagrams](#10-required-diagrams)
 11. [Templates](#11-templates)
 12. [Metrics](#12-metrics)
-13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
+15. [Document Control](#15-document-control)
 
 ---
 
@@ -396,7 +395,29 @@ Where a diagram is implicit (e.g., a pure SaaS service has no on-prem network), 
 The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Section 7 as a V1.x roadmap item.
 
 ---
-## 13. Regulatory and Framework Alignment Summary
+
+## 12. Metrics
+
+| **KPI** | **Formula** | **Data Source** | **Refresh** | **Green** | **Amber** | **Red** |
+|---|---|---|---|---|---|---|
+| **Average Time — Phase 1 (Intake)** | Mean business days from intake submission to Scope Determination recorded | Intake tracker | Monthly | ≤ 3 days | 4–5 days | > 5 days |
+| **Average Time — Phase 2 (Arch Review)** | Mean business days from Phase 2 start to review record disposition | Review tracker | Monthly | ≤ 7 days | 8–10 days | > 10 days |
+| **Average Time — Phase 3 (Build-Time)** | Mean business days per build-time review cycle | Pipeline / review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
+| **Average Time — Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
+| **Average Time — Phase 5 (Handoff)** | Mean business days from Pre-Prod Ready to handoff package signed | Review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
+| **Review Backlog Count** | Number of open reviews past their target disposition date | Review tracker | Weekly | ≤ 2 | 3–5 | > 5 |
+| **Finding Severity Distribution** | Count of findings by severity (Critical / High / Medium / Low / Info) recorded across all active reviews | Risk register | Monthly | Baseline to be established in first year of operation | | |
+| **Threat Model Coverage Rate** | % of Mandatory Review projects with completed threat model attached to the review record | Review tracker + TM repo | Quarterly | ≥ 95% | 85–94% | < 85% |
+| **Handoff Package Completion Rate** | % of projects in Phase 5 with all handoff package sections complete at go-live | Review tracker | Quarterly | ≥ 100% | 90–99% | < 90% |
+| **Risk Acceptance Aging** | Mean and maximum age (days) of open risk acceptances raised through the review process | Risk register | Monthly | Mean ≤ 90 days, Max ≤ 180 days | Mean 91–180 days, Max 181–270 days | Mean > 180 days, Max > 270 days |
+| **Review SLA Compliance Rate** | % of reviews meeting the SLA for their review path (Mandatory / Lightweight) | Review tracker | Monthly | ≥ 90% | 80–89% | < 80% |
+
+> **Baseline Establishment**
+>
+> Where a metric is marked "Baseline to be established in first year of operation," the CERG Risk Pillar collects 12 months of data and proposes Green/Amber/Red thresholds at the next annual review. Prior to baseline, the metric is reported without RAG coloring.
+
+---
+## 14. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
@@ -409,7 +430,7 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 
 ---
 
-## 14. Document Control
+## 15. Document Control
 
 | | |
 |---|---|
@@ -418,4 +439,3 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 | **Approved By** | Cyber Engineering Pillar Leader · CISO endorsement |
 | **Next Review** | Annual / on platform or process change |
 | **Change Log** | 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
-
