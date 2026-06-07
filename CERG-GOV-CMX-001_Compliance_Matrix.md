@@ -11,6 +11,34 @@
 
 ---
 
+## Table of Contents
+
+1. [Know what you own: maintain an authoritative asset inventory](#1-know-what-you-own-maintain-an-authoritative-asset-inventory)
+2. [Identify and remediate known vulnerabilities on a defined schedule](#2-identify-and-remediate-known-vulnerabilities-on-a-defined-schedule)
+3. [Control who can access what: enforce least privilege](#3-control-who-can-access-what-enforce-least-privilege)
+4. [Authenticate users and systems: verify identity before granting access](#4-authenticate-users-and-systems-verify-identity-before-granting-access)
+5. [Harden systems: remove what isn't needed, lock down what is](#5-harden-systems-remove-what-isnt-needed-lock-down-what-is)
+6. [Protect data in transit and at rest: encryption as a baseline control](#6-protect-data-in-transit-and-at-rest-encryption-as-a-baseline-control)
+7. [Segment networks: limit lateral movement and blast radius](#7-segment-networks-limit-lateral-movement-and-blast-radius)
+8. [Manage vendor and third-party risk: extend controls beyond the perimeter](#8-manage-vendor-and-third-party-risk-extend-controls-beyond-the-perimeter)
+9. [Control and log privileged/remote access: know who did what, when](#9-control-and-log-privilegedremote-access-know-who-did-what-when)
+10. [Conduct adversarial testing: find what scanners miss](#10-conduct-adversarial-testing-find-what-scanners-miss)
+11. [Train and background-check personnel with access to sensitive systems](#11-train-and-background-check-personnel-with-access-to-sensitive-systems)
+12. [Write and maintain policies: define what good looks like](#12-write-and-maintain-policies-define-what-good-looks-like)
+13. [Manage configuration changes: track drift, prevent unauthorized changes](#13-manage-configuration-changes-track-drift-prevent-unauthorized-changes)
+14. [Collect, protect, and retain audit evidence: prove controls are working](#14-collect-protect-and-retain-audit-evidence-prove-controls-are-working)
+15. [Assess your own security posture: periodic internal evaluation](#15-assess-your-own-security-posture-periodic-internal-evaluation)
+16. [Manage risk formally: document, accept, or treat identified risks](#16-manage-risk-formally-document-accept-or-treat-identified-risks)
+17. [Protect physical access to critical systems: cyber starts at the door](#17-protect-physical-access-to-critical-systems-cyber-starts-at-the-door)
+18. [Monitor threats continuously: detect what vulnerability scans miss](#18-monitor-threats-continuously-detect-what-vulnerability-scans-miss)
+19. [Plan and practice incident response: know what to do before it happens](#19-plan-and-practice-incident-response-know-what-to-do-before-it-happens)
+20. [Manage recovery: restore operations and capture lessons learned](#20-manage-recovery-restore-operations-and-capture-lessons-learned)
+21. [Manage accounts throughout their lifecycle: provisioning through termination](#21-manage-accounts-throughout-their-lifecycle-provisioning-through-termination)
+22. [Define and enforce a compliance calendar: no surprises at audit time](#22-define-and-enforce-a-compliance-calendar-no-surprises-at-audit-time)
+23. [Quick Reference: Pillar Summary](#quick-reference-pillar-summary)
+24. [Key Consolidation Opportunities](#key-consolidation-opportunities)
+25. [Document Control](#document-control)
+
 ## 1. Know what you own: maintain an authoritative asset inventory
 
 **Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
@@ -351,3 +379,44 @@ These control areas produce evidence satisfying four or more frameworks simultan
 6. **Policy and standards**, CIP-003 + [CMMC](https://dodcio.defense.gov/CMMC/) (all 14 domains) + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC
 
 ---
+
+
+---
+
+## 25. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-CMX-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
+| **Owner** | Governance Pillar Leader |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on framework version change |
+| **Next Scheduled Review** | 2027-05-01 |
+| **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; NIST RMF |
+| **Regulations** | NERC-CIP; CMMC L2; SOX ITGC |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Compliance matrix mapping security intents to NIST, CMMC, NERC-CIP, and SOX frameworks. |
+| 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and pillar alignments. |
+
+### Review Triggers
+
+- Framework version change (NIST 800-53, NIST 800-171, CMMC, NERC-CIP)
+- New regulatory requirement
+- Material change to organizational scope
+- Direction from the CISO
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlays, evidence mapping |
+| CERG Framework | [CERG-GOV-FRM-001](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
+| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
