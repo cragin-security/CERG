@@ -1,4 +1,3 @@
-
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## THIRD-PARTY AND SUPPLY CHAIN RISK PROCEDURE
@@ -40,8 +39,8 @@
 14. [FedRAMP Equivalency Evidence](#14-fedramp-equivalency-evidence)
 15. [Supply Chain Compromise Team (SCCT)](#15-supply-chain-compromise-team-scct)
 16. [Continuous Monitoring and Re-Assessment](#16-continuous-monitoring-and-re-assessment)
-17. [Regulatory and Framework Alignment Summary](#17-regulatory-and-framework-alignment-summary)
-18. [Document Control](#18-document-control)
+18. [Regulatory and Framework Alignment Summary](#18-regulatory-and-framework-alignment-summary)
+19. [Document Control](#19-document-control)
 
 ---
 
@@ -351,7 +350,75 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 > Naming the team in advance, with a roster, a trigger, and a 4-hour clock, converts vendor compromise from a panicked phone-tree exercise into a procedure. The first SolarWinds-class event tests every assumption about your TPRM program; SCCT is how that test doesn't surprise you.
 
 ---
-## 17. Regulatory and Framework Alignment Summary
+
+## 16. Continuous Monitoring and Re-Assessment
+
+### 16.1 Automated Monitoring Signals
+
+CERG continuously monitors the vendor landscape using automated signals. The following sources are integrated into the TPRM monitoring pipeline:
+
+| **Signal Type** | **Source** | **Frequency** | **Action on Alert** |
+|---|---|---|---|
+| Security ratings service | Third-party security ratings provider | Continuous | Alert Vendor Risk Analyst for any score drop > 50 points or below tier threshold |
+| Dark web monitoring | Threat intelligence platform | Continuous | Alert if organization credentials, source code, or PII attributed to a vendor appear on dark web sources |
+| Certificate transparency logs | CT log monitors | Daily | Alert on anomalous certificate issuance for vendor domains |
+| Vendor breach notifications | Direct notification, media monitoring, ISAC feeds | Continuous | Trigger SCCT activation per Section 15 if the breach affects services consumed by the organization |
+| Sanctions and adverse media | Sanctions list providers, news monitoring | Weekly | Alert Vendor Risk Analyst; trigger Country Risk Register review if jurisdiction-related |
+| Financial health indicators | Business credit monitoring | Quarterly | Alert for vendors with deteriorating financial posture (downgrade, bankruptcy filing, going concern opinion) |
+
+### 16.2 Periodic Re-Assessment Triggers
+
+Vendors are re-assessed on the following cadence based on tier:
+
+| **Tier** | **Re-Assessment Cadence** | **Trigger Events (override cadence)** |
+|---|---|---|
+| T1 (Critical) | Annual | Vendor breach, material change in service, M&A activity, regulatory action against vendor |
+| T2 (High) | Annual | Vendor breach, material change in service, M&A activity |
+| T3 (Moderate) | 24 months | Vendor breach affecting the service consumed |
+| T4 (Low) | Renewal-driven | Re-assess at contract renewal; trigger if service scope expands |
+| T5 (Business Default) | Renewal-driven | Re-assess if usage crosses into T4 territory |
+
+### 16.3 Vendor Performance Metrics
+
+The Vendor Risk Analyst tracks the following metrics for each T1 and T2 vendor:
+
+| **Metric** | **Description** | **Review Cadence** |
+|---|---|---|
+| Evidence currency | % of required evidence artifacts that are current (within validity period) | Quarterly |
+| Assessment completion timeliness | Whether re-assessments complete within the scheduled window | Quarterly |
+| Finding remediation velocity | Mean time from finding issuance to closure, by severity | Quarterly |
+| SCCT activation frequency | Number of SCCT activations involving the vendor | Quarterly |
+| Contractual compliance | Adherence to security obligations, RTO/RPO commitments, and notification SLAs | Annual |
+
+### 16.4 Escalation Paths for Deteriorating Vendor Posture
+
+| **Condition** | **Escalation** | **Action** |
+|---|---|---|
+| Security rating drops below tier threshold | Vendor Risk Analyst | Immediate review; request remediation plan from vendor within 10 business days |
+| Vendor breach with potential organizational impact | SCCT Lead per Section 15 | Activate SCCT; assess containment and exposure |
+| Critical finding open > 90 days without remediation plan | Vendor Risk Analyst → Governance Pillar Leader | Escalate to vendor executive; consider contract remedies |
+| Vendor refuses to provide required evidence | Vendor Risk Analyst → Engineering Pillar Leader → CISO | Risk acceptance required; if unacceptable, initiate vendor transition planning |
+| Financial distress indicators | Vendor Risk Analyst → Governance Pillar Leader | Develop contingency plan; identify alternative vendors |
+
+### 16.5 Integration with Approved Provider Catalog
+
+Continuous monitoring results directly affect the Approved Provider Catalog (APC) status values:
+
+- **Green (Approved)**: All monitoring signals within acceptable thresholds; evidence current.
+- **Amber (Conditional)**: One or more signals outside Green threshold; remediation plan accepted. Automatic review at 90 days.
+- **Red (Restricted)**: Critical finding or breach unresolved; new engagements restricted until status returns to Amber or Green.
+- **Black (Prohibited)**: Vendor determined to pose unacceptable risk; existing services transitioned off per the offboarding procedure.
+
+### 16.6 Integration with Threat Intelligence
+
+Vendor monitoring is integrated with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) for threat intelligence specific to vendors:
+
+- The Threat Intelligence Analyst produces a **Vendor Risk Note** (per PRC-TI-001 §6.5) when threat intelligence reveals TTPs, CVEs, or campaign activity relevant to a vendor in the APC.
+- Vendor-specific IOCs from threat intelligence are deployed to detection tooling per PRC-TI-001 §4.6.
+- Quarterly threat briefings to the Vendor Risk Analyst summarize the threat landscape affecting the vendor portfolio.
+
+---
+## 18. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
@@ -367,7 +434,7 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 
 ---
 
-## 18. Document Control
+## 19. Document Control
 
 | | |
 |---|---|
@@ -376,4 +443,3 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 | **Approved By** | Cyber Risk Pillar Leader (Vendor Risk) · CISO endorsement |
 | **Next Review** | Annual / TPRM platform change |
 | **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. |
-
