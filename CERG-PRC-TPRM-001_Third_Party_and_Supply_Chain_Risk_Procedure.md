@@ -418,7 +418,79 @@ Vendor monitoring is integrated with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_In
 - Quarterly threat briefings to the Vendor Risk Analyst summarize the threat landscape affecting the vendor portfolio.
 
 ---
-## 18. Regulatory and Framework Alignment Summary
+
+---
+
+## 17. Metrics
+
+| **KPI** | **Formula** | **Source** | **Refresh** | **Green** | **Amber** | **Red** |
+|---|---|---|---|---|---|---|
+| Vendors assessed on time | % of vendors with assessment completed within scheduled window | TPRM tool | Quarterly | ≥ 95% | 85–94% | < 85% |
+| Average assessment time | Mean calendar days from assessment start to completion | TPRM tool | Quarterly | ≤ 30 days | 31–45 days | > 45 days |
+| Vendors by tier | Count of active vendors per tier (T1–T5) | TPRM tool | Monthly | — | — | — |
+| Active exceptions | Count of open vendor-related risk exceptions | Risk register | Monthly | 0 | 1–5 | > 5 |
+| Vendor risk trend | % of vendors with improving / stable / declining risk posture | TPRM tool | Quarterly | ≥ 80% stable or improving | 60–79% | < 60% |
+| Evidence currency | % of T1/T2 vendors with all required evidence current | TPRM tool | Monthly | ≥ 95% | 85–94% | < 85% |
+| SCCT activation frequency | Count of SCCT activations | SCCT log | Quarterly | 0 | 1 | ≥ 2 |
+| Fourth-party concentration | Count of sub-processors supporting ≥ 3 T1/T2 vendors | TPRM tool | Quarterly | 0 | 1 | ≥ 2 |
+
+---
+
+### 16.7 Vendor Offboarding
+
+When a vendor relationship ends, a structured offboarding process ensures access is revoked, data is retrieved or destroyed, and residual obligations are met.
+
+#### Offboarding Triggers
+
+| **Trigger** | **Description** |
+|---|---|
+| Contract expiration | Normal end of contract term; vendor not renewed |
+| Termination for cause | Vendor breach of contract, security incident, or performance failure |
+| Vendor bankruptcy / dissolution | Vendor ceases operations |
+| Strategic replacement | Organization transitions to an alternative vendor |
+
+#### Offboarding Checklist
+
+| **Step** | **Action** | **Owner** | **Timing** |
+|---|---|---|---|
+| 1 | Notify vendor; confirm effective date | Business Sponsor | Immediately |
+| 2 | Disable all vendor user accounts | Identity Engineer | Effective date or within 24 hours |
+| 3 | Revoke vendor API keys, OAuth grants, service principals | Identity Engineer / Cloud Security Engineer | Effective date |
+| 4 | Rotate shared secrets vendor had access to | Cryptography Engineer | Within 5 business days |
+| 5 | Deauthorize SSO / federation | Identity Engineer | Effective date |
+| 6 | Remove vendor from Approved Provider Catalog (status = Offboarded) | Vendor Risk Analyst | Within 5 business days |
+| 7 | Confirm data retrieval or destruction per contract | Business Sponsor + Legal | Per contract |
+| 8 | Update TPRM record | Vendor Risk Analyst | Within 10 business days |
+
+#### Post-Termination
+
+Surviving contractual clauses (confidentiality, data handling, audit rights) remain in effect. Evidence is retained per [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md). Offboarding completion is signed off by the Vendor Risk Analyst and Business Sponsor.
+
+### 16.8 Fourth-Party Risk Management
+
+Fourth-party risk arises when a critical vendor relies on subcontractors (sub-processors) the organization does not have a direct relationship with.
+
+#### Disclosure Requirements
+
+- T1 and T2 vendors must disclose all critical sub-processors
+- Vendors must notify the organization of sub-processor changes at least 30 days before the change
+- The organization reserves the right to object; the vendor must provide an alternative or allow contract termination without penalty
+
+#### Evidence for Critical Sub-Processors
+
+| **Evidence** | **When Required** |
+|---|---|
+| SOC 2 Type II report | Sub-processors hosting or processing the organization's data |
+| ISO 27001 certification | Acceptable alternative for international sub-processors |
+| Inheritance evidence | Vendor's own assessment, if methodology is reviewed and approved |
+
+#### Concentration Risk
+
+The Vendor Risk Analyst monitors for multiple vendors relying on the same sub-processor. If a single sub-processor supports ≥ 3 T1/T2 vendors, a formal concentration risk assessment is conducted.
+
+---
+
+## 19. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
@@ -434,7 +506,7 @@ Vendor monitoring is integrated with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_In
 
 ---
 
-## 19. Document Control
+## 20. Document Control
 
 | | |
 |---|---|
