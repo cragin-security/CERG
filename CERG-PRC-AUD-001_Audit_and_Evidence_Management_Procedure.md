@@ -122,6 +122,54 @@ Evidence is acceptable only if it is complete enough to support the control clai
 
 A screenshot without date, scope, and source is weak evidence. A spreadsheet with no source and no owner is weak evidence. A ticket with approval, scope, timestamp, and closure is usually stronger than a polished narrative.
 
+### 4.3 Evidence Retention
+
+Evidence is retained according to the following schedule. Retention periods are driven by the most stringent applicable regulatory requirement for that evidence type.
+
+| **Evidence Type** | **Minimum Retention** | **Regulatory Driver** | **Disposition After Retention** |
+|---|---|---|---|
+| SOX ITGC evidence (access reviews, change approvals, control tests) | 7 years | SOX (SEC 17 CFR 210.2-06) | Secure deletion; certificate of destruction |
+| CMMC / NIST 800-171 assessment evidence | 3 years | CMMC (32 CFR 170); DFARS 252.204-7012 | Secure deletion |
+| NERC-CIP compliance evidence | 3–5 years (audit cycle + 1) | NERC-CIP (CIP-003 R2); NERC Rules of Procedure | Secure deletion |
+| General control evidence (non-regulated) | 3 years | ISO 27001, organizational policy | Secure deletion |
+| Incident response evidence | 7 years or duration of legal hold | Litigation hold; breach notification statutes | Secure deletion after legal hold release |
+| Risk register history | Permanently (append-only) | NIST RMF; organizational policy | Not disposed; append-only audit trail |
+
+#### Disposal Process
+
+1. **Trigger**: Evidence retention period expired, system decommissioned, or legal hold released.
+2. **Authorization**: Evidence Librarian confirms no active audit, investigation, or legal hold referencing the evidence. Governance Pillar Leader authorizes disposal.
+3. **Disposal Method**: Evidence is securely deleted using methods appropriate to the storage medium (cryptographic erasure for cloud storage, secure overwrite for on-premises, physical destruction for removable media). A certificate of destruction is produced and retained.
+4. **Logging**: Disposal is recorded in the evidence library audit log including: evidence ID, disposal date, authorizing party, method, and certificate of destruction reference.
+
+> **Legal Hold Supersedes Retention Schedule**
+>
+> When a legal hold is in effect, evidence subject to the hold is preserved regardless of the retention schedule. The Evidence Librarian coordinates with Legal to identify and preserve evidence subject to hold, and disposal is suspended until Legal releases the hold in writing.
+
+### 4.4 Evidence Integrity and Chain of Custody
+
+Evidence must be protected from tampering, loss, or unauthorized modification throughout its lifecycle. The integrity of evidence is foundational to audit credibility and, in some cases, legal defensibility.
+
+#### Integrity Controls
+
+| **Control** | **Requirement** | **Implementation** |
+|---|---|---|
+| Checksums / hashes | Every evidence artifact is hashed (SHA-256 minimum) at ingestion | Evidence library computes and stores hash at upload; hash is verified on retrieval |
+| Write-once / append-only storage | Evidence, once ingested, cannot be modified | Evidence library implements immutable storage or legal-hold policies on the underlying storage platform |
+| Tamper detection | Any modification or hash mismatch generates an alert | Evidence library compares stored hash against current hash on access; mismatches trigger Evidence Librarian and Governance investigation |
+| Access logging | Every access to evidence (read, copy, export) is logged | Evidence library records: who, what, when, source IP, and purpose |
+| Retention of original format | Evidence is retained in its original format; exports or transforms are stored alongside, not replacing, the original | Evidence library preserves original file; derived views (PDF exports, screenshots) are linked as supplementary |
+
+#### Chain of Custody
+
+| **Event** | **Documentation Required** |
+|---|---|
+| Ingestion | Evidence ID, source system, date ingested, hash, ingested by, control(s) supported |
+| Access / retrieval | Evidence ID, accessed by, date, purpose (audit response, control test, investigation) |
+| Transfer (to auditor, assessor, legal) | Evidence ID(s), recipient, date transferred, transfer method, hash verification at transfer |
+| Return / re-ingestion | Evidence ID(s), returned by, date, hash verified against original |
+| Disposal | Evidence ID, date, method, authorized by, certificate reference |
+
 ---
 
 ## 5. Evidence Collection Cadence
@@ -158,7 +206,53 @@ Each test plan records:
 - result;
 - exceptions and corrective actions.
 
-### 6.2 Testing Outcomes
+### 6.2 Sampling Methodology
+
+Sampling is used when testing the full population is infeasible due to volume or cost. The objective is to draw conclusions about the population with a defined confidence level.
+
+#### When Sampling Is Appropriate
+
+| **Condition** | **Use Sampling** | **Use Full Population** |
+|---|---|---|
+| Population size < 50 items | No — test all | Yes |
+| Population size 50–250 items | Yes, with minimum sample per table below | Optional |
+| Population size > 250 items | Yes | Only if automated or required by regulation |
+| Control is automated and fully logged | No — test all programmatically | Yes |
+| SOX ITGC key control | Consult SOX ITGC Lead | Often full population |
+| CMMC assessment sample | Per CMMC Assessment Guide sampling guidance | Per assessor direction |
+
+#### Minimum Sample Sizes
+
+| **Population Size** | **Minimum Sample (95% confidence, 5% margin)** | **Recommended Sample** |
+|---|---|---|
+| 50–100 | 45 | 50 |
+| 101–250 | 70 | 80 |
+| 251–500 | 80 | 100 |
+| 501–1,000 | 90 | 120 |
+| 1,001–5,000 | 95 | 150 |
+| > 5,000 | 100 | 200 |
+
+#### Selection Methods
+
+| **Method** | **When to Use** | **Description** |
+|---|---|---|
+| Random | Default for most control tests | Items selected using a random number generator or equivalent; every item has equal probability of selection |
+| Stratified | When sub-populations have different risk profiles | Population divided into strata (e.g., by environment, by asset tier); random samples drawn from each stratum proportionally |
+| Judgmental | When specific items carry disproportionate risk | Tester selects items based on risk criteria (e.g., highest-value transactions, privileged accounts, changes touching regulated scope); rationale must be documented |
+| Haphazard | Not recommended | Avoid; lacks statistical basis and is difficult to defend to an auditor |
+
+#### Documentation Requirements
+
+Every sampling decision records:
+
+- Population definition and size
+- Sampling method and rationale
+- Sample size and how it was determined
+- Selection method (including seed or tool used for random selection)
+- Confidence level target
+- Limitations or caveats
+
+### 6.3 Testing Outcomes
 
 | **Outcome** | **Meaning** |
 |---|---|
@@ -217,6 +311,58 @@ Audit findings, control-test deficiencies, rejected evidence, and repeated evide
 | Accepted residual risk | Risk Register Owner tracks through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 A corrective action records owner, due date, remediation plan, verification method, and closure evidence. Closure requires evidence that the condition was corrected, not merely a statement that it was.
+
+---
+
+### 8.1 Plan of Action and Milestones (POA&M)
+
+A Plan of Action and Milestones (POA&M) is the formal artifact for tracking and resolving control deficiencies, particularly those affecting CMMC assessment posture. POA&M requirements derive from NIST 800-171 and CMMC assessment guidance.
+
+#### When a POA&M Is Required
+
+A POA&M entry is required for:
+
+- Any CMMC assessment finding (regardless of score impact)
+- Any control rated "Deficient" in a control test affecting a CUI environment
+- Any control gap identified during a formal CMMC assessment, self-assessment, or pre-assessment
+- Any finding from a regulator, customer, or internal audit that maps to a CMMC practice
+- Significant findings (Critical or High) in non-CMMC environments, at the CISO's direction
+
+#### POA&M Required Fields
+
+| **Field** | **Description** |
+|---|---|
+| POA&M ID | Unique identifier (POAM-YYYY-NNNN) |
+| Weakness Description | Clear description of the control deficiency or finding |
+| Affected CMMC Practice(s) | Reference to specific CMMC practices (e.g., AC.L2-3.1.1) |
+| Severity | Finding severity (Critical / High / Medium / Low) |
+| Remediation Plan | Specific actions to close the deficiency, with milestones |
+| Milestones | Discrete, measurable steps with target dates |
+| Responsible Party | Named individual accountable for each milestone |
+| Resources Required | Funding, staffing, tooling, or external support needed |
+| Scheduled Completion Date | Target date for full remediation |
+| Actual Completion Date | Date the deficiency was resolved |
+| Status | Open / In Progress / Completed / Deferred |
+| Disposition | How the finding was resolved (remediated, risk-accepted, control changed) |
+| Evidence of Closure | Reference to evidence demonstrating the deficiency is resolved |
+| Last Updated | Date of most recent status update |
+
+#### POA&M Tracking and Status Updates
+
+- POA&M entries are reviewed monthly by the CMMC / Federal Compliance Manager
+- Status updates are recorded in the POA&M at each milestone or at minimum quarterly
+- Overdue milestones are escalated to the Governance Pillar Leader
+- The CISO reviews the full POA&M at the quarterly CISO-level risk review
+
+#### POA&M Closure Criteria
+
+A POA&M entry may be closed when:
+
+1. The deficiency has been remediated and closure evidence is on file, OR
+2. The deficiency has been formally risk-accepted through [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) with CISO approval, OR
+3. The affected system has been decommissioned and the deficiency is no longer applicable
+
+Closure requires sign-off by the CMMC / Federal Compliance Manager and the Governance Pillar Leader. Closure evidence is retained in the evidence library per Section 4.3.
 
 ---
 
