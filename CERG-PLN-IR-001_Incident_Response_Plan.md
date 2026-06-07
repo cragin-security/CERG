@@ -16,7 +16,7 @@
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |
-| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
 | **Regulations** | NERC-CIP CIP-008 · [CMMC](https://dodcio.defense.gov/CMMC/) IR.L2 · DFARS 252.204-7012 · SEC 8-K Item 1.05 (where applicable) · State breach laws · GDPR (where applicable) |
 | **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT |
 

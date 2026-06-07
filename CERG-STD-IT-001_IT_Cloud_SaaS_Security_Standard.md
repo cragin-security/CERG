@@ -15,7 +15,7 @@
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
-| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
 | **Regulations** | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC L2](https://dodcio.defense.gov/CMMC/) (where applicable) · HIPAA (where applicable) |
 | **Environments** | Owned Data Center · Leased / Colocation · IaaS · PaaS · SaaS · Hybrid |
 
@@ -274,7 +274,7 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 
 ## 10. Regulatory and Framework Alignment Summary
 
-| **Requirement Area** | **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | **[NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final)** | **CSA CCM v4** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** |
+| **Requirement Area** | **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | **[NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final)** | **CSA CCM v4** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** |
 |---|---|---|---|---|---|
 | Approved Provider / Vendor Mgmt | GV.SC | SA-9, SR-3 | 3.1.20 | STA-01 to STA-09 | Vendor mgmt |
 | Data Classification & Residency | GV.OC | RA-2, SA-9(5) | 3.1.3, 3.8.x | DSP-01 to DSP-19 | - |

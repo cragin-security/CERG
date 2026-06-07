@@ -15,7 +15,7 @@
 | **Owner** | CMMC / Federal Compliance Manager |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
-| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
 | **Regulations** | [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · DFARS 252.204-7012, -7019, -7020, -7021 · 32 CFR Part 2002 · FAR 52.204-21 (FCI) |
 | **Environments** | Any system that processes, stores, or transmits CUI or FCI - owned, hybrid, cloud, contractor |
 
