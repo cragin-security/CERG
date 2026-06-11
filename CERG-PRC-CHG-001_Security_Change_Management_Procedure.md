@@ -119,15 +119,15 @@ The following workflow defines the step-by-step process from change submission t
 
 | **Step** | **Action** | **Owner** | **Decision Point** |
 |---|---|---|---|
-| 1 | Change submitted through the enterprise change management system | Requester | — |
+| 1 | Change submitted through the enterprise change management system | Requester | - |
 | 2 | Security relevance determination: is the change security-relevant per Section 3? | Engineering Pillar Leader or delegate | If No: no CERG review required. If Yes: proceed to Step 3 |
-| 3 | Categorization: classify the change per Section 4 (Standard / Normal / Material / Emergency / Control Bypass) | Engineering Pillar Leader or delegate | — |
+| 3 | Categorization: classify the change per Section 4 (Standard / Normal / Material / Emergency / Control Bypass) | Engineering Pillar Leader or delegate | - |
 | 4 | Route to appropriate reviewer based on change type and affected scope | Engineering Pillar Leader | Cloud, Identity, OT, AppSec, or Endpoint Engineer as appropriate |
-| 5 | Security review: evaluate against minimum review questions (Section 5.1) | Designated reviewer | — |
+| 5 | Security review: evaluate against minimum review questions (Section 5.1) | Designated reviewer | - |
 | 6 | Decision: determine review outcome | Designated reviewer | **Approved** → proceed to Step 8. **Approved with Conditions** → proceed to Step 7. **Requires Architecture Review** → enter PRC-AR-001. **Requires Risk Acceptance** → enter PRC-RM-001. **Rejected** → return to requester with rationale |
 | 7 | Conditions met: requester satisfies conditions; reviewer verifies | Requester + Reviewer | Conditions verified → proceed to Step 8 |
-| 8 | Evidence recorded: change record captures review decision, approver, date, conditions (if any), and linked risk/architecture actions | Reviewer | — |
-| 9 | Implementation: change is executed per the enterprise change management process | Implementer | — |
+| 8 | Evidence recorded: change record captures review decision, approver, date, conditions (if any), and linked risk/architecture actions | Reviewer | - |
+| 9 | Implementation: change is executed per the enterprise change management process | Implementer | - |
 | 10 | Closure: post-implementation validation confirms the change achieved its objective without unintended security impact | Reviewer or delegate | Closed |
 
 #### Decision Points Summary
