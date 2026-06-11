@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-LM-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader (Detection Engineering) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -37,8 +37,8 @@
 10. [CUI Monitoring Overlay](#10-cui-monitoring-overlay)
 11. [Identity Detection Use Case Pack](#11-identity-detection-use-case-pack)
 12. [Privileged Session Monitoring](#12-privileged-session-monitoring)
-13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+12. [Regulatory and Framework Alignment Summary](#12-regulatory-and-framework-alignment-summary)
+13. [Document Control](#13-document-control)
 
 ---
 
@@ -333,7 +333,7 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 | Impossible travel / geo anomalies | Two successful auths from geographically inconsistent locations. |
 
 ---
-## 13. Regulatory and Framework Alignment Summary
+## 12. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Section** | **Where in This Standard** |
 |---|---|---|
@@ -348,7 +348,7 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 
 ---
 
-## 14. Document Control
+## 13. Document Control
 
 | | |
 |---|---|
