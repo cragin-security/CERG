@@ -87,7 +87,7 @@ Tolerance thresholds may vary by business unit where the business unit operates 
 
 #### Board and Leadership Engagement
 
-The board or an authorized board committee reviews and affirms the organization's risk appetite annually. Material changes to risk appetite — including adjustments to quantitative thresholds or tolerance by business unit — are submitted to the CISO for recommendation and board approval. The CISO owns the annual appetite affirmation cycle and reports the organization's actual risk posture against appetite at each quarterly CISO-level review.
+The board or an authorized board committee reviews and affirms the organization's risk appetite annually. Material changes to risk appetite - including adjustments to quantitative thresholds or tolerance by business unit - are submitted to the CISO for recommendation and board approval. The CISO owns the annual appetite affirmation cycle and reports the organization's actual risk posture against appetite at each quarterly CISO-level review.
 
 ---
 
@@ -207,7 +207,7 @@ The calibration table is a coordination tool, not a precise calculator. When two
 2. The Governance Lead facilitates the discussion toward the better-supported score.
 3. If disagreement persists, the higher score is used and the rationale for both scores is recorded.
 
-The goal is not perfect precision — it is consistent conversation that produces comparable risk rankings across the register.
+The goal is not perfect precision - it is consistent conversation that produces comparable risk rankings across the register.
 
 ### 4.4 Scoring Discipline
 
@@ -358,7 +358,7 @@ For exceptions affecting regulated assets:
 The following template shall be used for all exception requests. Completed forms are submitted through the centralized risk intake and referenced in the risk register.
 
 ```
-EXCEPTION REQUEST FORM — EXC-YYYY-NNNN
+EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
 
 1. REQUESTOR
    Name:
