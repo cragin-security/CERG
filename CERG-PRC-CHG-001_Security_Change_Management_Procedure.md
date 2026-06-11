@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-CHG-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -113,7 +113,7 @@ When classification is ambiguous, the Engineering Pillar Leader determines mater
 | Emergency change | Must be implemented before normal review to restore service, contain risk, or meet urgent operational need. | Emergency approval plus post-implementation security review. |
 | Control bypass or exception | Temporarily or permanently weakens an approved control. | Risk acceptance or exception under [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
-### 4.5 Security Review Workflow
+### 4.1 Security Review Workflow
 
 The following workflow defines the step-by-step process from change submission through security review to closure.
 
@@ -150,7 +150,7 @@ Change Submitted
                     └── Rejected ──► Return to requester
 ```
 
-### 4.6 Sampling Methodology for Standard Changes
+### 4.2 Sampling Methodology for Standard Changes
 
 Standard security-preserving changes do not require individual CERG review, but a sample is reviewed each month to verify that the "standard" classification is accurate and that security posture is not degrading through accumulated small changes.
 
@@ -381,7 +381,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 |---|---|
 | **Document ID** | CERG-PRC-CHG-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
