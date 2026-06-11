@@ -286,7 +286,7 @@ The Engineering Pillar Leader determines whether a build is routine or novel bas
 | DISH baseline conformance | Non-conformance on Critical or High severity settings | Low severity or informational deviations (flagged) |
 | Vulnerability scan | Critical or High vulnerabilities in application dependencies | Medium or Low vulnerabilities (tracked in backlog) |
 | Secrets scanning | Any confirmed secret detected | False positive (documented and suppressed) |
-| Image signing | Unsigned image in a pipeline that requires signing | — |
+| Image signing | Unsigned image in a pipeline that requires signing | - |
 
 ### 7.4 Escalation for Build-Time Findings
 
@@ -441,7 +441,7 @@ An appeal may be filed for:
 |---|---|---|
 | 1 | Project team submits written appeal to the CERG Pre-Production Reviewer, stating the specific finding or disposition being appealed, the rationale, and any supporting evidence | Within 5 business days of the original decision |
 | 2 | CERG Pre-Production Reviewer re-evaluates with the project team; may consult additional subject matter experts | Within 5 business days |
-| 3 | If resolved: decision is updated and recorded. If not resolved: escalates to Risk Pillar Leader. | — |
+| 3 | If resolved: decision is updated and recorded. If not resolved: escalates to Risk Pillar Leader. | - |
 | 4 | Risk Pillar Leader reviews the appeal and the CERG position; makes a determination or escalates to CISO | Within 5 business days |
 | 5 | CISO makes final determination. CISO's decision is binding and is recorded in the review record. | Within 10 business days of escalation |
 
@@ -488,11 +488,11 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 
 | **KPI** | **Formula** | **Data Source** | **Refresh** | **Green** | **Amber** | **Red** |
 |---|---|---|---|---|---|---|
-| **Average Time — Phase 1 (Intake)** | Mean business days from intake submission to Scope Determination recorded | Intake tracker | Monthly | ≤ 3 days | 4–5 days | > 5 days |
-| **Average Time — Phase 2 (Arch Review)** | Mean business days from Phase 2 start to review record disposition | Review tracker | Monthly | ≤ 7 days | 8–10 days | > 10 days |
-| **Average Time — Phase 3 (Build-Time)** | Mean business days per build-time review cycle | Pipeline / review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
-| **Average Time — Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
-| **Average Time — Phase 5 (Handoff)** | Mean business days from Pre-Prod Ready to handoff package signed | Review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
+| **Average Time - Phase 1 (Intake)** | Mean business days from intake submission to Scope Determination recorded | Intake tracker | Monthly | ≤ 3 days | 4–5 days | > 5 days |
+| **Average Time - Phase 2 (Arch Review)** | Mean business days from Phase 2 start to review record disposition | Review tracker | Monthly | ≤ 7 days | 8–10 days | > 10 days |
+| **Average Time - Phase 3 (Build-Time)** | Mean business days per build-time review cycle | Pipeline / review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
+| **Average Time - Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
+| **Average Time - Phase 5 (Handoff)** | Mean business days from Pre-Prod Ready to handoff package signed | Review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
 | **Review Backlog Count** | Number of open reviews past their target disposition date | Review tracker | Weekly | ≤ 2 | 3–5 | > 5 |
 | **Finding Severity Distribution** | Count of findings by severity (Critical / High / Medium / Low / Info) recorded across all active reviews | Risk register | Monthly | Baseline to be established in first year of operation | | |
 | **Threat Model Coverage Rate** | % of Mandatory Review projects with completed threat model attached to the review record | Review tracker + TM repo | Quarterly | ≥ 95% | 85–94% | < 85% |
