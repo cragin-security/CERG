@@ -105,6 +105,9 @@ Performance feedback should never be a surprise at review time. A manager who wa
 
 ## 4. Evaluation Dimensions
 
+
+> **Per-Role Evaluation Criteria**: Each role's evaluation criteria are now embedded in its per-role JD document under `roles/`. The dimensions below define the evaluation framework; the per-role documents define the role-specific expectations at each grade. See [JD-001](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for the complete per-role index.
+
 ### 4.1 SME Track Dimensions
 
 SME performance is evaluated along six dimensions. The first five align to the grade-level definitions in JA-001 §4 and §6. The sixth (Outcomes) grounds the evaluation in what the person actually delivered.
@@ -198,6 +201,9 @@ The session proceeds role by role, not person by person. For each role (e.g., Cl
 ---
 
 ## 7. Promotion Process
+
+
+> **Level Progression Gates**: The job-family-specific level progression gates (L1→L2, L2→L3, L3→L4) are defined in [JF-001 §8](roles/CERG-GOV-JF-001_Job_Families_Overview.md). Promotion cases should demonstrate satisfaction of the relevant gate conditions in addition to the grade criteria defined in JA-001.
 
 ### 7.1 Initiation
 
