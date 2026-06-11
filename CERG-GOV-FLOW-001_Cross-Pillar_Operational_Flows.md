@@ -237,6 +237,18 @@ Convert governance-originated control intent into implementable technical change
 ### Primary Record
 **Control Change Record**
 
+### Required Inputs
+- Control ID
+- Source reason (policy change, standard change, audit finding, etc.)
+- Affected environments
+- Affected asset classes
+- Implementation deadline
+- Required evidence
+- Reporting metric target
+- Exception path
+- Preventive / detective / corrective classification
+
+
 ### Workflow
 1. Governance creates the **Control Change Record**.
 2. Governance defines **control intent and conformance scope**.
@@ -303,6 +315,21 @@ Ensure that new systems and major changes enter production with known scope, req
 ### Primary Record
 **Project Intake Record**
 
+
+### Required Inputs
+- Project name
+- Business owner
+- Technical owner
+- Intended go-live date
+- Asset class
+- Data classification
+- Regulatory scope
+- Hosting environment
+- External dependencies
+- Privilege model
+- Logging plan
+- Backup / recovery plan
+
 ### Workflow
 1. Engineering opens **Project Intake Record**.
 2. Engineering performs initial security scoping.
@@ -332,6 +359,14 @@ Risk participation is required when one or more of the following are true:
 - Every identified issue must be classified as **pre-production remediation** or **post-production managed risk**, not both.
 - Any issue deferred beyond go-live must create a **Risk Record** and, where nonconformance exists, an **Exception Record candidate**.
 - No go-live proceeds without named business and technical owners.
+
+
+### Closure Criteria
+- Security disposition issued (approved, approved-with-remediation, approved-with-risk, or blocked)
+- All pre-go-live remediation completed and validated
+- Post-go-live risk records created for deferred issues
+- Named business and technical owners confirmed
+- Production Handoff Security Summary delivered
 
 ### Evidence Required
 - Architecture Review Record
@@ -369,6 +404,23 @@ Ensure every in-scope asset has ownership, classification, regulatory designatio
 ### Primary Record
 **Asset Record**
 
+
+### Required Inputs
+- Asset ID
+- Asset type
+- Asset owner
+- Business owner
+- Technical owner
+- Environment
+- Data classification
+- Regulatory scope
+- Criticality
+- Support team
+- Logging source expected
+- Scanning required
+- Backup required
+- Access review required
+
 ### Workflow
 1. Engineering creates or updates **Asset Record**.
 2. Engineering confirms owner and classification.
@@ -384,6 +436,17 @@ Ensure every in-scope asset has ownership, classification, regulatory designatio
 - Logging source established if required
 - Backup assignment established if required
 - Access review population assigned if required
+
+
+### Closure Criteria
+- Asset owner assigned and confirmed
+- Classification complete
+- Regulatory flag set if applicable
+- Scan coverage established if required
+- Logging source established if required
+- Backup assignment established if required
+- Access review population assigned if required
+- Any coverage gap resolved as finding or risk record
 
 ### Evidence Required
 - Asset Record
@@ -422,6 +485,19 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 ### Primary Record
 **Finding Record**
 
+
+### Required Inputs
+- Finding ID
+- Finding source (vulnerability, adversarial, threat intel, third-party, incident, audit, architecture review)
+- Severity (Critical, High, Medium, Low)
+- Exploitability assessment
+- Affected assets
+- Business owner
+- Technical owner
+- Regulatory scope
+- Recommended treatment class
+- Due date
+
 ### Workflow
 1. Risk creates **Finding Record** and triages.
 2. Risk identifies exposure path and treatment options.
@@ -445,6 +521,14 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 - Engineering may not close a finding unilaterally; Risk must validate.
 - Any control not met as written or on time routes to exception review.
 - Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
+
+
+### Closure Criteria
+- Treatment executed (remediation, compensating control, exception, or risk acceptance)
+- Risk validation confirms closure or establishes residual monitoring
+- Exception or risk-acceptance record created if used
+- Evidence linked to finding record
+- Reporting updated
 
 ### Evidence Required
 - Triage result
@@ -484,6 +568,18 @@ Ensure that security-significant changes receive consistent cross-pillar handlin
 ### Primary Record
 **Change Record**
 
+
+### Required Inputs
+- Change ID
+- Change type (normal, major, emergency)
+- Affected assets
+- Implementation window
+- Rollback plan
+- Security impact analysis
+- Data classification
+- Regulatory scope
+- Testing plan
+
 ### Workflow
 1. Engineering classifies the change and opens **Change Record**.
 2. Engineering completes **Security Impact Analysis**.
@@ -507,6 +603,15 @@ Ensure that security-significant changes receive consistent cross-pillar handlin
 - Emergency security deviations require linked risk or exception review.
 - Change closure requires control continuity verification, not only service success.
 - Missing rollback strategy blocks major-change approval.
+
+
+### Closure Criteria
+- Change executed successfully
+- Control continuity checks passed
+- Security Impact Analysis completed and reviewed
+- Risk or exception record created if emergency bypass used
+- Evidence linked to change record
+- Governance verification complete
 
 ### Evidence Required
 - Security Impact Analysis
@@ -539,6 +644,19 @@ Handle incidents consistently across environments while forcing lessons learned 
 ### Primary Record
 **Incident Record**
 
+
+### Required Inputs
+- Incident ID
+- Severity
+- Detected time
+- Affected assets
+- Suspected scope
+- Business owner
+- Incident commander
+- Regulatory scope
+- Legal / notification requirements
+- Containment strategy
+
 ### Workflow
 1. Risk validates and classifies incident.
 2. CISO assigns or confirms Incident Commander.
@@ -561,6 +679,16 @@ Handle incidents consistently across environments while forcing lessons learned 
 - Incident closure requires a lessons-learned decision, not only technical recovery.
 - If an incident exposes previously accepted risk, the acceptance rationale must be reviewed.
 - Recurring incident pattern in the same control family creates a Control Change Record.
+
+
+### Closure Criteria
+- Containment, eradication, and recovery completed
+- Incident timeline and investigation summary produced
+- Root cause class and control failure class determined
+- Lessons-learned decision recorded (standards, procedure, or metrics update — or no-change-with-rationale)
+- Corrective actions assigned with owner and due date
+- Notification and evidence package delivered
+- Previously accepted risk reviewed if incident exposed it
 
 ### Evidence Required
 - Incident timeline
@@ -596,6 +724,18 @@ Convert operational data into management action, improvement backlog, standards 
 ### Primary Record
 **Reporting Metric Record**
 
+
+### Required Inputs
+- Metric name
+- Metric definition
+- Source system
+- Reporting period
+- Threshold (green / amber / red)
+- Actual value
+- Evidence link
+- Accountable role
+- Interpretation note
+
 ### Workflow
 1. Governance collects metrics per canonical dictionary.
 2. Risk supplies exposure and residual-risk metrics.
@@ -627,6 +767,15 @@ Convert operational data into management action, improvement backlog, standards 
 - Repeated outlier in same control family creates a Control Change Record or Improvement Record.
 
 ---
+
+
+### Closure Criteria
+- Metrics collected from all three pillars per canonical dictionary
+- Thresholds and trends evaluated
+- Action type assigned for every outlier (engineering action, risk escalation, standards review, exception review, or no-action-with-rationale)
+- Material outliers reviewed by CISO
+- Monthly or quarterly report published
+- Repeated outliers in same control family escalated to Control Change Record or Improvement Record
 
 ## 15. LLM Execution Directives
 
