@@ -4,11 +4,15 @@
 > **How to read this document:** Each control area is mapped to the specific risk it prevents and how it differs from similar-looking controls. Where controls address overlapping threat categories, the nuance column explains the distinct failure mode each one guards against.
 
 ---
-
-| **Version**        | 1.21 |
-| ------------------ | --------- |
-| **Status**         | Published |
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-TAX-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
 | **Classification** | Public |
+| **Owner** | Risk Pillar Leader |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on framework or organizational change |
 
 ---
 
