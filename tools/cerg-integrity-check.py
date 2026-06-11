@@ -19,7 +19,7 @@ def find_md_files():
     """Find all .md files in the CERG repository."""
     files = []
     for root, dirs, filenames in os.walk(BASE):
-        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('machine-readable', 'roles', 'flows')]
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('machine-readable', 'flows')]
         for f in filenames:
             if f.endswith('.md') and not f.startswith('.') and not os.path.basename(f) in ('README.md',):
                 files.append(os.path.join(root, f))

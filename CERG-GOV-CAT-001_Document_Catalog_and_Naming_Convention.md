@@ -213,7 +213,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Published |
 | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Draft |
 | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance Management and Promotion Framework | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Onboarding and Integration Program | Governance Pillar Leader (Policy & Standards) | Approved |
@@ -298,59 +298,40 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 
 ### 5.7 Job Descriptions (Per-Role)
 
-Per-role job description documents, extracted from the monolithic JD-001, live under `roles/`. Each document follows the Enhanced Role Description Template with NICE mapping, KPI placeholders, and competency anchors.
-
-#### JF-SECENG — Security Engineering
-
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-GOV-JD-SECENG-001`](roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Cloud Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-002`](roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md) | Identity Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-003`](roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md) | OT Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-004`](roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md) | Application Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-005`](roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Endpoint Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-006`](roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md) | Cryptography Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-007`](roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md) | Engineering Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-SECENG-008`](roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md) | Pre-production Reviewer | Governance Pillar Leader (Policy & Standards) | Draft |
-
-#### JF-RISKOPS — Risk Operations
-
-| **ID** | **Title** | **Owner** | **Status** |
-|---|---|---|---|
-| [`CERG-GOV-JD-RISKOPS-001`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md) | Vulnerability Management Lead | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-002`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md) | Adversarial Testing Lead | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-003`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md) | Threat Intelligence Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-004`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md) | Detection Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-005`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md) | OT Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-006`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md) | Identity Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-007`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md) | Vendor Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-RISKOPS-008`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md) | Risk Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
-
-#### JF-GOVCOMP — Governance & Compliance
-
-| **ID** | **Title** | **Owner** | **Status** |
-|---|---|---|---|
-| [`CERG-GOV-JD-GOVCOMP-001`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md) | NERC-CIP Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-002`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md) | CMMC / Federal Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-003`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md) | SOX ITGC Lead | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-004`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md) | Policy & Standards Manager | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-005`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md) | Risk Register Owner | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-006`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md) | Evidence Librarian | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-GOVCOMP-007`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md) | Governance Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
-
-#### JF-EXEC — Executive Leadership
-
-| **ID** | **Title** | **Owner** | **Status** |
-|---|---|---|---|
-| [`CERG-GOV-JD-EXEC-001`](roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md) | Chief Information Security Officer (CISO) | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-EXEC-002`](roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md) | Executive Sponsor | Governance Pillar Leader (Policy & Standards) | Draft |
-
-#### JF-ADJUNCT — Incident Response
-
-| **ID** | **Title** | **Owner** | **Status** |
-|---|---|---|---|
-| [`CERG-GOV-JD-ADJUNCT-001`](roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md) | Incident Commander | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-ADJUNCT-002`](roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md) | Lead Investigator | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-001` | Cloud Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-002` | Identity Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-003` | OT Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-004` | Application Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-005` | Endpoint Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-006` | Cryptography Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-007` | Engineering Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-008` | Pre-production Reviewer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-001` | Vulnerability Management Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-002` | Adversarial Testing Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-003` | Threat Intelligence Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-004` | Detection Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-005` | OT Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-006` | Identity Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-007` | Vendor Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-008` | Risk Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-001` | NERC-CIP Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-002` | CMMC / Federal Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-003` | SOX ITGC Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-004` | Policy & Standards Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-005` | Risk Register Owner | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-006` | Evidence Librarian | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-007` | Governance Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-EXEC-001` | Chief Information Security Officer (CISO) | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-EXEC-002` | Executive Sponsor | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-ADJUNCT-001` | Incident Commander | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-ADJUNCT-002` | Lead Investigator | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-SECENG-000` | Security Engineering Family Index | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-RISKOPS-000` | Risk Operations Family Index | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-GOVCOMP-000` | Governance & Compliance Family Index | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-EXEC-000` | Executive Leadership Family Index | Governance Pillar Leader (Policy & Standards) | Draft |
+| `CERG-GOV-JD-ADJUNCT-000` | Incident Response Family Index | Governance Pillar Leader (Policy & Standards) | Draft |
 
 ### 5.8 Machine-Readable Artifacts
 

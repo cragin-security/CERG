@@ -5,7 +5,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
 | **Regulations** | Cross-cutting |
@@ -32,7 +32,7 @@
 
 This document establishes the formal Job Family structure for CERG's workforce architecture. It groups the 27 canonical CERG roles into five job families, defines career progression tiers within each family, and maps those tiers to CERG's existing grade framework (S1-S4 / M1-M4).
 
-This document does NOT rename, add, or remove canonical roles. The authoritative role roster remains [OM-001 §6.1](CERG-GOV-OM-001_CERG_Operating_Model.md). Job families are a VIEW into the role architecture — a career-development and hiring lens — not a replacement for the operating model's pillar structure.
+This document does NOT rename, add, or remove canonical roles. The authoritative role roster remains [OM-001 §6.1](../CERG-GOV-OM-001_CERG_Operating_Model.md). Job families are a VIEW into the role architecture — a career-development and hiring lens — not a replacement for the operating model's pillar structure.
 
 ---
 
@@ -84,7 +84,7 @@ A Job Family is a grouping of similar roles that share a core competency profile
                           └───────────────────────┘
 ```
 
-Left-right arrows (◄──►) indicate encouraged cross-family movement. Vertical arrows indicate progression toward executive leadership. CERG's existing "Left-Right Knowledge Model" ([FRM-001 §9.2](CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](CERG-GOV-OM-001_CERG_Operating_Model.md)) are the operational mechanisms that make this lattice real.
+Left-right arrows (◄──►) indicate encouraged cross-family movement. Vertical arrows indicate progression toward executive leadership. CERG's existing "Left-Right Knowledge Model" ([FRM-001 §9.2](../CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../CERG-GOV-OM-001_CERG_Operating_Model.md)) are the operational mechanisms that make this lattice real.
 
 ---
 
@@ -112,7 +112,7 @@ See Section 9 for per-family level definition tables.
 
 The Job Family levels (L1-L4) are a VIEW into the grade framework, not a replacement for it. Think of them as:
 
-- **CERG Grades (S1-S4, M1-M4)** = the internal calibration standard used by HR, compensation, and promotion panels. These are precise, defined in [JA-001](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md), and carry compensation bands.
+- **CERG Grades (S1-S4, M1-M4)** = the internal calibration standard used by HR, compensation, and promotion panels. These are precise, defined in [JA-001](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md), and carry compensation bands.
 - **Job Family Levels (L1-L4)** = the external-facing and career-development language. These appear in job postings, career conversations, and succession plans.
 
 The mapping is:
@@ -131,7 +131,7 @@ An "L3 Security Engineer" could be an S3 Advisor (SME track) or an M1 Manager (M
 
 ## 8. Level Progression Gates
 
-Progression from one level to the next requires demonstration of capabilities. The gates below define what a promotion case must show. These supplement (not replace) the JA-001 grade definitions and [CMP-001](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) behavioral anchors.
+Progression from one level to the next requires demonstration of capabilities. The gates below define what a promotion case must show. These supplement (not replace) the JA-001 grade definitions and [CMP-001](../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) behavioral anchors.
 
 ### 8.1 L1 → L2 Gate (All Families)
 
@@ -143,7 +143,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 ### 8.2 L2 → L3 Gate (All Families)
 
 - Has led at least one cross-pillar initiative or authored/revised a standard or procedure
-- Has formally mentored at least one L1 or L2 team member (documented in [PERF-001](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md))
+- Has formally mentored at least one L1 or L2 team member (documented in [PERF-001](../CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md))
 - Has represented the pillar in at least two cross-functional forums or engagements
 - Manager confirms self-direction against objectives
 
@@ -197,7 +197,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 
 | Tier | Grade | Title | Scope | Key Differentiator |
 |------|-------|-------|-------|-------------------|
-| **L1: CISO** | Executive | Chief Information Security Officer | Full cybersecurity program | See [JD-001 §3.1](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for full description |
+| **L1: CISO** | Executive | Chief Information Security Officer | Full cybersecurity program | See [JD-001 §3.1](../CERG-GOV-JD-001_CERG_Job_Descriptions.md) for full description |
 
 ### 9.5 JF-ADJUNCT — Incident Response Levels
 
@@ -220,7 +220,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | Pending |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
@@ -246,8 +246,8 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
-| Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role descriptions and RACI assignments |
-| Job Architecture | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
+| Cybersecurity Policy | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
+| Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](../CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role descriptions and RACI assignments |
+| Job Architecture | [`CERG-GOV-JA-001`](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
 | NICE Crosswalk | [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE mapping for each role |
