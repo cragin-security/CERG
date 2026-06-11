@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
 | **Parent Standard** | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) - CUI Handling Standard |
@@ -39,8 +39,8 @@
 13. [CUI Subcontractor Register](#13-cui-subcontractor-register)
 14. [FedRAMP Equivalency Evidence Checklist](#14-fedramp-equivalency-evidence-checklist)
 15. [Operating Cadence](#15-operating-cadence)
-16. [Regulatory and Framework Alignment Summary](#16-regulatory-and-framework-alignment-summary)
-17. [Document Control](#17-document-control)
+15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
+16. [Document Control](#16-document-control)
 
 ---
 
@@ -348,7 +348,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | Inheritance Evidence Package per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5 on file | ✓ |
 
 ---
-## 16. Regulatory and Framework Alignment Summary
+## 15. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
@@ -361,7 +361,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 
 ---
 
-## 17. Document Control
+## 16. Document Control
 
 | | |
 |---|---|
