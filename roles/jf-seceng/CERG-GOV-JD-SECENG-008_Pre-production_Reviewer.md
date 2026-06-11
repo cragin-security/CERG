@@ -5,7 +5,7 @@
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
 | **Regulations** | Cross-cutting |
@@ -39,7 +39,7 @@ The Pre-production Reviewer is a rotated Engineering role, not a permanent posit
 |--------|---------------------------|
 | Level Range | L1 through L4 |
 | CERG Grade Range | S1-S4 |
-| Terminal Grade | S4 — see [JA-001 §7](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) for details |
+| Terminal Grade | S4 — see [JA-001 §7](../../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) for details |
 | Track | SME |
 
 ## 4. Key Responsibilities
@@ -129,24 +129,24 @@ Placeholder — see JD-001 original content.
 
 ### 11.2 Cross-Family Movement
 
-*[Placeholder — see the Family-to-Family Career Lattice in [JF-001 §4](../CERG-GOV-JF-001_Job_Families_Overview.md).]*
+*[Placeholder — see the Family-to-Family Career Lattice in [JF-001 §4](../../CERG-GOV-JF-001_Job_Families_Overview.md).]*
 
 ### 11.3 Management Track Option
 
-*[Placeholder — at L3+, a Management track option may be available per [JA-001 §8](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md).]*
+*[Placeholder — at L3+, a Management track option may be available per [JA-001 §8](../../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md).]*
 
 ## 12. Related CERG Documents
 
 | Document | ID | Relevance |
 |----------|-----|-----------|
-| Operating Model | [`CERG-GOV-OM-001`](../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role name; pillar structure |
-| RACI Instrument | [`CERG-GOV-RAC-001`](../CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | This role's accountability assignments |
-| Job Architecture | [`CERG-GOV-JA-001`](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions; progression criteria |
-| Competency Model | [`CERG-GOV-CMP-001`](../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Full behavioral anchors |
-| Performance Framework | [`CERG-GOV-PERF-001`](../CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance review cadence and calibration |
-| Training Framework | [`CERG-GOV-TRN-001`](../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Certification matrix |
-| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
+| Operating Model | [`CERG-GOV-OM-001`](../../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role name; pillar structure |
+| RACI Instrument | [`CERG-GOV-RAC-001`](../../CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | This role's accountability assignments |
+| Job Architecture | [`CERG-GOV-JA-001`](../../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions; progression criteria |
+| Competency Model | [`CERG-GOV-CMP-001`](../../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Full behavioral anchors |
+| Performance Framework | [`CERG-GOV-PERF-001`](../../CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance review cadence and calibration |
+| Training Framework | [`CERG-GOV-TRN-001`](../../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Certification matrix |
+| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
 
 ---
 
@@ -161,7 +161,7 @@ Placeholder — see JD-001 original content.
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | Pending |
-| **Parent Policy** | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
@@ -187,6 +187,6 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
+| Cybersecurity Policy | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
