@@ -11,11 +11,18 @@
 
 ---
 
-| **Version**        | 1.21 |
-| ------------------ | --------- |
-| **Status**         | Published |
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-FRM-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
 | **Classification** | Public |
-
+| **Owner** | CISO |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on material change to framework |
+| **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
+| **Regulations** | NERC-CIP; CMMC L2; SOX ITGC |
+| **Environments** | All in-scope environments |
 ---
 
 ## Table of Contents
