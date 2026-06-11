@@ -317,7 +317,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | Policy & Standards Manager | Document library curation; review cycles. |
 | Risk Register Owner | Operates [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register. |
 | Evidence Librarian | Maintains the cross-framework evidence library. |
-| IR Plan Steward | Maintains [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md); coordinates exercises and notification clocks. |
+| Governance Pillar Leader (exercising IR Plan Steward duties) | Maintains [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md); coordinates exercises and notification clocks. |
 
 ### 6.5 Shared and Rotational Roles
 
