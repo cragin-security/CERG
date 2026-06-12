@@ -325,7 +325,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability Management Procedure | Cyber Risk | Approved |
+| [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Exposure Management Procedure | Cyber Risk | Approved |
 | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk Register and Exception Process | Cyber Governance - Risk Register | Approved |
 | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture Review and Project Intake Procedure | Cyber Engineering | Approved |
 | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |

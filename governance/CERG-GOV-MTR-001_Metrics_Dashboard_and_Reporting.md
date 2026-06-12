@@ -112,17 +112,34 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | RM-005 | Exception Aging | % of open exceptions older than 12 months | Exception register | Monthly | ≤ 5% / 6–15% / > 15% | CISO Dashboard, COG Brief |
 | RM-006 | OU Risk Concentration Index | Std deviation of OU residual-score weighted sums | Risk register | Monthly | ≤ baseline / ±10% / > baseline+10% | CISO Dashboard |
 
-### 3.2 Vulnerability / Detection Metrics (Owner: Cyber Risk)
+### 3.2 Exposure Management Metrics (Owner: Cyber Risk)
+
+These metrics measure exposure reduction, not scanner activity. They track the pipeline from observation to verified closure.
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
-| VM-001 | DISH Critical Open Past SLA | Count of DISH-flagged Critical findings past SLA per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | VM tool | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
-| VM-002 | DISH High Open Past SLA | Same for High | VM tool | Daily | ≤ 10 / 11–50 / > 50 | CISO Dashboard |
-| VM-003 | Critical Closure Velocity | Critical findings closed this month / Critical findings opened this month | VM tool | Monthly | ≥ 1.0 / 0.8–1.0 / < 0.8 | CISO Dashboard |
-| VM-004 | Critical Asset Coverage | Authenticated-scan coverage of Critical/High asset class | VM tool + Asset Inventory | Monthly | ≥ 98% / 90–98% / < 90% | CISO Dashboard, COG Brief |
-| DT-001 | Day-One Detection Coverage | % of in-scope environments with full Day-One Set from [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | SIEM | Monthly | ≥ 95% / 80–95% / < 80% | CISO Dashboard |
-| DT-002 | Purple Test Pass Rate | % of validated detections firing as expected | Purple results | Quarterly | ≥ 90% / 75–90% / < 75% | COG Brief |
-| DT-003 | Mandatory Log Source Onboarding | % of mandatory sources from [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) onboarded | SIEM source inventory | Monthly | ≥ 98% / 90–98% / < 90% | CISO Dashboard |
+| EM-001 | Confirmed Reachable Critical Exposure | Count of exposures in "Confirmed Exposure" or "Material Risk" state with Internet-facing reachability | Exposure pipeline | Daily | 0 / 1–3 / > 3 | CISO Dashboard |
+| EM-002 | Observations Awaiting Triage | Count of observations in "Observed" state past their validation SLA | Exposure pipeline | Daily | ≤ 5% / 6–15% / > 15% | CISO Dashboard |
+| EM-003 | Critical Observations Downgraded | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after context validation | Exposure pipeline | Monthly | n/a — informational | CISO Dashboard |
+| EM-004 | KEV with Reachable Path | Count of KEV-matched observations in "Exposure Confirmed" or "Material Risk" state | Exposure pipeline + KEV catalog | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
+| EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Exposure pipeline + KEV catalog | Weekly | n/a — watchlist | CISO Dashboard |
+| EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | Exposure pipeline + Asset tiering | Daily | 0 / 1–2 / > 2 | CISO Dashboard |
+| EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | Exposure pipeline | Weekly | ≤ 5 / 6–15 / > 15 | CISO Dashboard |
+| EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | Exposure pipeline | Weekly | 0 / 1–3 / > 3 | CISO Dashboard, COG Brief |
+| EM-009 | Observation-to-Decision Time | Median days from observation intake to classification | Exposure pipeline | Monthly | ≤ 3d / 4–7d / > 7d | COG Brief |
+| EM-010 | Decision-to-Treatment Time | Median days from classification to treatment selection | Exposure pipeline | Monthly | ≤ 2d / 3–5d / > 5d | COG Brief |
+
+### 3.2a Patch Hygiene Metrics (Owner: Cyber Engineering: Platforms)
+
+Patch hygiene is a maintenance function distinct from exposure reduction. These track platform currency, not risk.
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
+| PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Exposure pipeline | Monthly | n/a — trend | COG Brief |
+| PH-003 | End-of-Support Count | Assets running software past vendor end-of-support date | Asset inventory | Monthly | 0 / 1–10 / > 10 | COG Brief |
+
+### 3.2b Detection Metrics (Owner: Cyber Risk)
 
 ### 3.3 Engineering / Configuration Metrics (Owner: Cyber Engineering)
 
