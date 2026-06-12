@@ -2,7 +2,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-JD-001 |
 | **Version** | 2.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -117,7 +117,7 @@ The 27 canonical CERG roles are organized into five Job Families. See [JF-001](r
 |---|---|
 | **Document ID** | CERG-GOV-JD-001 |
 | **Version** | 2.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

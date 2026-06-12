@@ -2,7 +2,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Internal |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -1056,7 +1056,7 @@ Implement:
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Internal |
 | **Owner** | Governance Pillar Leader |
