@@ -1,8 +1,8 @@
-# CERG Atomic Requirements Register (PILOT)
-# Extracted from 8 spine documents | 85 requirements
-# SCHEMA: requirement_id, source_document_id, source_section, requirement_text,
-#   normative_verb, obligation_level, owner_role, evidence_required,
-#   linked_controls, validation_method, content_type
+# cerg-requirements.yaml
+# DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
+# Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
+# Regenerate on any change to source documents
+# See METADATA.yaml for full governance information
 
 - requirement_id: CERG-REQ-CERG-POL-001-4-001
   source_document_id: CERG-POL-001

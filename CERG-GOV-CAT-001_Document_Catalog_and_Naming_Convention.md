@@ -181,6 +181,28 @@ Approval authority follows [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) 
 
 ---
 
+
+### 4.1 Review Cadence Tiers
+
+Not all documents require the same review frequency. Documents are assigned to one of three review tiers based on their criticality and change rate:
+
+| Tier | Review Cadence | Applies To | Review Depth |
+|------|---------------|-----------|-------------|
+| **Tier 1 — Critical** | Quarterly | POL-001, OM-001, RAC-001, RMF-001, CB-001, FLOW-001, CAT-001 | Full content review; verify all cross-references; confirm regulatory alignment |
+| **Tier 2 — Active** | Semi-Annual | All Standards (STD-*), all Procedures (PRC-*), JA-001, CMP-001, TRN-001, MTR-001, CMX-001, TAX-001 | Content review; verify key cross-references; update metrics and framework references |
+| **Tier 3 — Stable** | Annual | All Plans (PLN-*), all Templates (TMPL-*), remaining Governance documents (GOV-*), all per-role JD documents, family index documents | Light review; confirm currency; update owner if role changed; verify links |
+
+### 4.2 Ownership Delegation
+
+The Owner field in each document's metadata assigns accountability for review initiation and content accuracy. To prevent ownership concentration, the following delegation rules apply:
+
+- **Per-role JD documents** (CERG-GOV-JD-*): Owned by the Pillar Leader of the role's pillar, not by Governance Pillar Leader. Example: Cloud Security Engineer (SECENG-001) is owned by Engineering Pillar Leader.
+- **Family index documents** (CERG-GOV-JD-*-000): Owned by the Pillar Leader of the family's primary pillar.
+- **Machine-readable artifacts** (machine-readable/*.yaml): Governed collectively by METADATA.yaml. The Governance Pillar Leader (Document Control) owns the METADATA.yaml. Individual YAML files are regenerated from source — the source document owner is accountable for the content.
+- **Single-owner rule:** No individual may be listed as Owner of more than 15 Tier 1 or Tier 2 documents. If a role would exceed this threshold, delegate ownership to the relevant Pillar Leader or domain expert.
+
+Review initiation is the Owner's responsibility. If a scheduled review is missed by more than 30 days, the Document Control function creates a Finding Record and escalates to the Governance Pillar Leader.
+
 ## 5. Authoritative Catalog (V1)
 
 The V1 library is the set below. Every artifact listed has either an approved or for-review source in the CERG content repository.

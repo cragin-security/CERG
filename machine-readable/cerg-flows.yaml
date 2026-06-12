@@ -1,5 +1,8 @@
-# CERG Cross-Pillar Operational Flows — Machine-Readable Specification
-# Extracted from FLOW-001 | 7 flows
+# cerg-flows.yaml
+# DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
+# Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
+# Regenerate on any change to source documents
+# See METADATA.yaml for full governance information
 
 flows:
   F-01:

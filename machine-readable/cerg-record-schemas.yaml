@@ -1,5 +1,8 @@
-# CERG Record Template Schemas — Machine-Readable
-# Extracted from FLOW-001 §16 | 5 record types
+# cerg-record-schemas.yaml
+# DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
+# Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
+# Regenerate on any change to source documents
+# See METADATA.yaml for full governance information
 
 finding_record:
   description: Captures a discovered exposure requiring treatment.

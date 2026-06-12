@@ -1,4 +1,5 @@
 
+| 1.22 | 2026-06-11 | Governance Pillar Leader | Workforce architecture and cross-pillar flows amendment. Added §10.4 referencing Job Families Overview (JF-001), NICE Crosswalk (JF-002), Cross-Pillar Operational Flows (FLOW-001), per-role job descriptions, and machine-readable specifications. No changes to the 10 foundational principles. |
 ### Foundational Security Principles: All Systems · All Environments · All Trust Levels
 
 ---
@@ -446,6 +447,19 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 | SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | Cyber Governance |
 | Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Cyber Governance |
 
+### 10.4 Workforce Architecture and Operational Flows
+
+The following documents extend this policy into workforce management and cross-pillar operations. They are additive — they do not amend or supersede the principles in §4.
+
+| Document | ID | Owner |
+| --- | --- | --- |
+| Job Families Overview | [`CERG-GOV-JF-001`](roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Governance Pillar Leader (Policy & Standards) |
+| NICE Workforce Framework Crosswalk | [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | Governance Pillar Leader (Policy & Standards) |
+| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Governance Pillar Leader |
+| Per-Role Job Descriptions (27 documents) | See [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for index | Pillar Leaders (delegated per family) |
+| Machine-Readable Specifications | See [`machine-readable/METADATA.yaml`](machine-readable/METADATA.yaml) | Governance Pillar Leader (Document Control) |
+
+
 ---
 
 ## 11. Document Control
@@ -453,7 +467,7 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-POL-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |

@@ -1,0 +1,207 @@
+# CERG Machine-Readable Artifact Governance
+# This file governs all YAML artifacts in this directory.
+# Every artifact listed below is a DERIVED artifact.
+# Authoritative source: CERG markdown corpus.
+# DO NOT manually edit derived artifacts — regenerate from source.
+
+machine_readable_artifacts:
+- artifact: cerg-ai-system-intake.yaml
+  description: CERG-ACT-017 (AI System Intake)
+  source_document: CERG-ACT-017 (AI System Intake)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 478
+- artifact: cerg-content-tags.yaml
+  description: All CERG markdown documents
+  source_document: All CERG markdown documents
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 57554
+- artifact: cerg-control-evidence-map.yaml
+  description: CERG-GOV-CB-001 (Unified Control Baseline)
+  source_document: CERG-GOV-CB-001 (Unified Control Baseline)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 733
+- artifact: cerg-control-test-plan.yaml
+  description: CERG-ACT-012 (Control Efficacy Test Plan)
+  source_document: CERG-ACT-012 (Control Efficacy Test Plan)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 415
+- artifact: cerg-crown-jewel-schema.yaml
+  description: CERG-ACT-010 (Crown Jewel Governance)
+  source_document: CERG-ACT-010 (Crown Jewel Governance)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 1205
+- artifact: cerg-decision-log.yaml
+  description: CERG-ACT-019 (Decision Log Schema)
+  source_document: CERG-ACT-019 (Decision Log Schema)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 382
+- artifact: cerg-evidence-schema.yaml
+  description: CERG-ACT-008 (Evidence Supply Chain)
+  source_document: CERG-ACT-008 (Evidence Supply Chain)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 866
+- artifact: cerg-flows.yaml
+  description: CERG-GOV-FLOW-001 (Cross-Pillar Operational Flows)
+  source_document: CERG-GOV-FLOW-001 (Cross-Pillar Operational Flows)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 10761
+- artifact: cerg-ir-interface.yaml
+  description: CERG-PLN-IR-001 (Incident Response Plan)
+  source_document: CERG-PLN-IR-001 (Incident Response Plan)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 842
+- artifact: cerg-manifest.yaml
+  description: CERG-GOV-CAT-001 (Document Catalog)
+  source_document: CERG-GOV-CAT-001 (Document Catalog)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 52859
+- artifact: cerg-metrics-model.yaml
+  description: CERG-GOV-MTR-001 (Metrics and Reporting)
+  source_document: CERG-GOV-MTR-001 (Metrics and Reporting)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 981
+- artifact: cerg-publication-manifest.yaml
+  description: CERG-GOV-CAT-001 (Document Catalog)
+  source_document: CERG-GOV-CAT-001 (Document Catalog)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 20943
+- artifact: cerg-record-schemas.yaml
+  description: CERG-GOV-FLOW-001 §16 (Minimum Record Templates)
+  source_document: CERG-GOV-FLOW-001 §16 (Minimum Record Templates)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 3606
+- artifact: cerg-requirements.yaml
+  description: CERG-POL-001, CERG-STD-AC-001, CERG-STD-IT-001, CERG-STD-LM-001, CERG-STD-RES-001, CERG-STD-CR-001, CERG-GOV-CB-001, CERG-GOV-RMF-001
+  source_document: CERG-POL-001, CERG-STD-AC-001, CERG-STD-IT-001, CERG-STD-LM-001, CERG-STD-RES-001, CERG-STD-CR-001, CERG-GOV-CB-001, CERG-GOV-RMF-001
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 47769
+- artifact: cerg-runtime-model.yaml
+  description: CERG-ACT-006 (Runtime Object Model)
+  source_document: CERG-ACT-006 (Runtime Object Model)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 4353
+- artifact: cerg-segmentation-schema.yaml
+  description: CERG-ACT-016 (Segmentation Verification)
+  source_document: CERG-ACT-016 (Segmentation Verification)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 426
+- artifact: cerg-tier-0-identity-profile.yaml
+  description: CERG-ACT-015 (Tier 0 Identity Profile)
+  source_document: CERG-ACT-015 (Tier 0 Identity Profile)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 720
+- artifact: cerg-vendor-kill-switch.yaml
+  description: CERG-ACT-014 (Vendor Kill Switch)
+  source_document: CERG-ACT-014 (Vendor Kill Switch)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 860
+- artifact: cerg-vulnerability-priority-model.yaml
+  description: CERG-PRC-VM-001 (Vulnerability Management)
+  source_document: CERG-PRC-VM-001 (Vulnerability Management)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 805
+- artifact: cerg-workforce-capacity-model.yaml
+  description: CERG-ACT-018 (Workforce Capacity Model)
+  source_document: CERG-ACT-018 (Workforce Capacity Model)
+  status: Draft
+  owner: Governance Pillar Leader (Document Control)
+  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
+    change; manual edits are overwritten.
+  regeneration_trigger: Change to source document(s) listed above
+  generated_date: '2026-06-11'
+  size_bytes: 515

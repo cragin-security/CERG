@@ -1,6 +1,8 @@
-# CERG Canonical Manifest
-# Generated from CAT-001 §5 | 71 artifacts
-# Version: 1.0 | Date: 2026-06-11
+# cerg-manifest.yaml
+# DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
+# Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
+# Regenerate on any change to source documents
+# See METADATA.yaml for full governance information
 
 - document_id: CERG-GOV-OM-001
   title: CERG Operating Model
