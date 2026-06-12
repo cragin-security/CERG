@@ -125,9 +125,9 @@ These terms appear throughout the flows. Consistent usage prevents confusion dur
 | Regulated / OT / Crown Jewel (e.g., BES Cyber System change, CUI environment modification, SOX-relevant system) | All three pillars | Regulatory, safety, or material-financial impact requires full cross-pillar engagement. |
 | High residual risk (e.g., accepted Critical risk, exception past SLA with no compensating control) | Risk-led package + Business acceptance | Risk owns the finding and treatment recommendation; Business accepts the residual risk per RMF-001. |
 | Policy deviation only, low residual risk (e.g., password length exception, SSO bypass with documented compensating control) | Governance-owned exception | Governance owns the exception workflow, confirms compensating controls, and tracks expiration. |
-8. **Every major event must produce a standards/process/metrics feedback decision.** CERG's RMF, incident plan, maturity model, and metrics apparatus all imply that mature operation requires monitoring and response to feed continuous improvement.
+9. **Every major event must produce a standards/process/metrics feedback decision.** CERG's RMF, incident plan, maturity model, and metrics apparatus all imply that mature operation requires monitoring and response to feed continuous improvement.
 
-9. **If a required actor does not respond within SLA, the primary owner may proceed with documented rationale.** When Governance, Engineering, or Risk fails to act within the flow-defined SLA, the primary owner documents the default decision, proceeds with the next workflow step, and creates a Finding Record noting the missed SLA. No flow may stall indefinitely waiting for a single actor.
+10. **If a required actor does not respond within SLA, the primary owner may proceed with documented rationale.** When Governance, Engineering, or Risk fails to act within the flow-defined SLA, the primary owner documents the default decision, proceeds with the next workflow step, and creates a Finding Record noting the missed SLA. No flow may stall indefinitely waiting for a single actor.
 ---
 
 ## 3. Canonical Roles
