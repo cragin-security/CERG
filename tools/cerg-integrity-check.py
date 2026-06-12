@@ -37,7 +37,7 @@ def parse_metadata(filepath):
     content = ''.join(lines)
     
     for line in lines[:30]:
-        m_id = re.match(r'\|\s*\*\*Document ID\*\*\s*\|\s*(CERG-[A-Z]+-[A-Z]+-\d+)\s*\|', line)
+        m_id = re.match(r'\|\s*\*\*Document ID\*\*\s*\|\s*(CERG-[A-Z]+-[A-Z]+(?:-[A-Z]+)?-\d+)\s*\|', line)
         m_ver = re.match(r'\|\s*\*\*Version\*\*\s*\|\s*(.+?)\s*\|', line)
         m_status = re.match(r'\|\s*\*\*Status\*\*\s*\|\s*(.+?)\s*\|', line)
         m_class = re.match(r'\|\s*\*\*Classification\*\*\s*\|\s*(.+?)\s*\|', line)

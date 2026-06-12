@@ -127,11 +127,11 @@ Placeholder — see JD-001 original content.
 
 ### 11.1 Within-Family Progression
 
-Progression within the Incident Response & Investigation family follows the standard four-tier structure. See [JF-001 §8](../../CERG-GOV-JF-001_Job_Families_Overview.md) for standard progression gates.
+Progression within the Incident Response & Investigation family follows the standard four-tier structure. See [JF-001 §8](../CERG-GOV-JF-001_Job_Families_Overview.md) for standard progression gates.
 
 ### 11.2 Cross-Family Movement
 
-*[Placeholder — see the Family-to-Family Career Lattice in [JF-001 §4](../../CERG-GOV-JF-001_Job_Families_Overview.md).]*
+*[Placeholder — see the Family-to-Family Career Lattice in [JF-001 §4](../CERG-GOV-JF-001_Job_Families_Overview.md).]*
 
 ### 11.3 Management Track Option
 
@@ -147,8 +147,8 @@ Progression within the Incident Response & Investigation family follows the stan
 | Competency Model | [`CERG-GOV-CMP-001`](../../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Full behavioral anchors |
 | Performance Framework | [`CERG-GOV-PERF-001`](../../CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance review cadence and calibration |
 | Training Framework | [`CERG-GOV-TRN-001`](../../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Certification matrix |
-| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
+| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
 
 ---
 
@@ -190,5 +190,5 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
+| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |

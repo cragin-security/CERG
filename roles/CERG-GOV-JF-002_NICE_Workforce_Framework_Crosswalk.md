@@ -201,6 +201,6 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Families Overview | [`CERG-GOV-JF-001`](roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Job family structure and level definitions |
+| Job Families Overview | [`CERG-GOV-JF-001`](CERG-GOV-JF-001_Job_Families_Overview.md) | Job family structure and level definitions |
 | CERG Operating Model | [`CERG-GOV-OM-001`](../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
 | Competency Model | [`CERG-GOV-CMP-001`](../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency-to-NICE crosswalk |

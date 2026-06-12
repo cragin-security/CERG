@@ -250,4 +250,4 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 | CERG Operating Model | [`CERG-GOV-OM-001`](../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
 | Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](../CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role descriptions and RACI assignments |
 | Job Architecture | [`CERG-GOV-JA-001`](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE mapping for each role |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE mapping for each role |

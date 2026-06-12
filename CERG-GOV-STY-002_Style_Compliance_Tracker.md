@@ -2,6 +2,21 @@
 
 **Purpose:** Track known STY-001 and governance compliance gaps across the CERG corpus.  
 **Owner:** Governance Pillar Leader (Document Control)  
+
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-STY-002 |
+| **Version** | 1.0 |
+| **Status** | Active |
+| **Classification** | Internal |
+| **Owner** | Governance Pillar Leader (Document Control) |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Quarterly |
+| **Frameworks** | NIST CSF 2.0 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed documentation |
+
+---
 **Generated:** 2026-06-11  
 **Status:** Active — items are resolved by amending the affected document on its next scheduled review
 
@@ -52,7 +67,7 @@ For reference when remediating the missing sections above:
 
 | Field | Value |
 |---|---|
-| **Document ID** | CERG-XXX-XXX-XXX |
+| **Document ID** | <CERG-TYPE-DOMAIN-NNN> |
 | **Version** | X.X |
 | **Status** | [Draft / Approved / Retired] |
 | **Effective Date** | YYYY-MM-DD |
@@ -83,7 +98,7 @@ For reference when remediating the missing sections above:
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| [Document Name] | [`CERG-XXX-XXX-XXX`](filename.md) | [Relationship] |
+| [Document Name] | [`<CERG-TYPE-DOMAIN-NNN>`](filename.md) | [Relationship] |
 ```
 
 ---

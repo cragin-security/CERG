@@ -36,7 +36,7 @@ Risk Operations (JF-RISKOPS) — Maintain continuous visibility into organizatio
 | **Career Track** | SME / Dual-track |
 | **Number of Roles** | 7 |
 
-This family groups roles that share a core competency profile and career progression path. Members of this family progress through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. See [JF-001](../../CERG-GOV-JF-001_Job_Families_Overview.md) for the complete level definitions and progression gates.
+This family groups roles that share a core competency profile and career progression path. Members of this family progress through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. See [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) for the complete level definitions and progression gates.
 
 ---
 
@@ -60,9 +60,9 @@ Progression within the Risk Operations family follows the standard four-tier str
 
 - **L1 (Associate)** → **L2 (Practitioner)** → **L3 (Senior)** → **L4 (Principal)**
 
-See [JF-001 §8](../../CERG-GOV-JF-001_Job_Families_Overview.md) for the standard progression gates (L1→L2, L2→L3, L3→L4). See [JF-001 §9](../../CERG-GOV-JF-001_Job_Families_Overview.md) for family-specific level definitions.
+See [JF-001 §8](../CERG-GOV-JF-001_Job_Families_Overview.md) for the standard progression gates (L1→L2, L2→L3, L3→L4). See [JF-001 §9](../CERG-GOV-JF-001_Job_Families_Overview.md) for family-specific level definitions.
 
-Cross-family movement is encouraged per the [Family-to-Family Career Lattice](../../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize this movement.
+Cross-family movement is encouraged per the [Family-to-Family Career Lattice](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize this movement.
 
 ---
 
@@ -76,8 +76,8 @@ Certifications relevant to the Risk Operations family are detailed in [TRN-001](
 
 | Document | ID | Relevance |
 |----------|-----|-----------|
-| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure, levels, progression gates |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping for each role |
+| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure, levels, progression gates |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping for each role |
 | Operating Model | [`CERG-GOV-OM-001`](../../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
 | Job Architecture | [`CERG-GOV-JA-001`](../../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
 | Competency Model | [`CERG-GOV-CMP-001`](../../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Behavioral anchors |
@@ -123,5 +123,5 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Families Overview | [`CERG-GOV-JF-001`](../../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
-| NICE Crosswalk | [`CERG-GOV-JF-002`](../../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |
+| Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
+| NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |

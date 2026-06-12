@@ -928,7 +928,7 @@ Flows that specify "Evidence Required" should note the minimum tier. Where E3 is
 
 ---
 
-## 16. LLM Execution Directives
+## 17. LLM Execution Directives
 
 
 These instructions tell an LLM how to execute the flows without ambiguity:
@@ -946,7 +946,7 @@ These instructions tell an LLM how to execute the flows without ambiguity:
 
 ---
 
-## 17. Minimum Record Templates
+## 18. Minimum Record Templates
 
 ### 16.1 Finding Record
 
@@ -1028,7 +1028,7 @@ Required fields:
 
 ---
 
-## 18. Recommended Implementation Sequence
+## 19. Recommended Implementation Sequence
 
 ### Phase 1
 Implement:
@@ -1050,7 +1050,7 @@ Implement:
 
 ---
 
-## 19. Document Control
+## 20. Document Control
 
 | Field | Value |
 |---|---|
