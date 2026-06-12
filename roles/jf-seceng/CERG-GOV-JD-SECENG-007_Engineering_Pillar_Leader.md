@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OG-WRL-001 / SP-ARC-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Engineering Pillar Leader primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1342 | Oversee policy standards and implementation strategy development | Core work activity for this NICE Work Role |
+| Task | T1476 | Promote awareness of cybersecurity policy and strategy among management | Core work activity for this NICE Work Role |
+| Task | T1906 | Establish a cybersecurity risk management program | Core work activity for this NICE Work Role |
+| Task | T1056 | Acquire resources to support cybersecurity program goals and objectives | Core work activity for this NICE Work Role |
+| Task | T1036 | Integrate leadership priorities | Core work activity for this NICE Work Role |
+| Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
+| Knowledge | K0818 | Knowledge of new and emerging cybersecurity risks | Foundational knowledge for this role |
+| Knowledge | K0820 | Knowledge of supply chain risks | Foundational knowledge for this role |
+| Knowledge | K1079 | Knowledge of web application security risks | Foundational knowledge for this role |
+| Knowledge | K1209 | Knowledge of risk mitigation principles and practices | Foundational knowledge for this role |
+| Skill | S0406 | Skill in developing policy plans | Core capability for this role |
+| Skill | S0686 | Skill in performing risk assessments | Core capability for this role |
+| Skill | S0707 | Skill in developing comprehensive cyber operations assessment programs | Core capability for this role |
+| Skill | S0708 | Skill in executing comprehensive cyber operations assessment programs | Core capability for this role |
+| Skill | S0821 | Skill in collaborating with internal and external stakeholders | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OG-WRL-001 → OG-WRL-007) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

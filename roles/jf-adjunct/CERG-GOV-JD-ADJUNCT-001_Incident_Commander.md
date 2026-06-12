@@ -70,13 +70,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (PR-CIR-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-003 — Incident Commander primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T0510 | Coordinate incident response functions | Core work activity for this NICE Work Role |
+| Task | T1250 | Perform cyber defense incident triage | Core work activity for this NICE Work Role |
+| Task | T1109 | Resolve cyber defense incidents | Core work activity for this NICE Work Role |
+| Task | T1251 | Recommend incident remediation strategies | Core work activity for this NICE Work Role |
+| Task | T1252 | Determine the scope, urgency, and impact of cyber defense incidents | Core work activity for this NICE Work Role |
+| Knowledge | K0724 | Knowledge of incident response principles and practices | Foundational knowledge for this role |
+| Knowledge | K0725 | Knowledge of incident response tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0701 | Knowledge of data backup and recovery policies and procedures | Foundational knowledge for this role |
+| Knowledge | K0709 | Knowledge of business continuity and disaster recovery (BCDR) policies and procedures | Foundational knowledge for this role |
+| Knowledge | K0718 | Knowledge of network communications principles and practices | Foundational knowledge for this role |
+| Skill | S0805 | Skill in designing incident responses | Core capability for this role |
+| Skill | S0806 | Skill in performing incident responses | Core capability for this role |
+| Skill | S0077 | Skill in securing network communications | Core capability for this role |
+| Skill | S0483 | Skill in identifying software communications vulnerabilities | Core capability for this role |
+| Skill | S0080 | Skill in performing damage assessments | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (PR-CIR-001 → PD-WRL-003) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

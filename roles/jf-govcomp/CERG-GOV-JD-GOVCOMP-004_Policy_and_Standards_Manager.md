@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OV-PSP-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-002 — Policy & Standards Manager primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1397 | Determine if research and design processes and procedures are in compliance with cybersecurity requirements | Core work activity for this NICE Work Role |
+| Task | T1464 | Determine if cybersecurity workforce management policies and procedures comply with legal and organizational requirem... | Core work activity for this NICE Work Role |
+| Task | T0226 | Serve on agency and interagency policy boards | Core work activity for this NICE Work Role |
+| Task | T1107 | Evaluate functional requirements | Core work activity for this NICE Work Role |
+| Task | T1158 | Develop cybersecurity implementation policies and guidelines | Core work activity for this NICE Work Role |
+| Knowledge | K0677 | Knowledge of cybersecurity policies and procedures | Foundational knowledge for this role |
+| Knowledge | K0679 | Knowledge of privacy policies and procedures | Foundational knowledge for this role |
+| Knowledge | K1137 | Knowledge of cybersecurity requirements | Foundational knowledge for this role |
+| Knowledge | K1183 | Knowledge of organizational cybersecurity policies and procedures | Foundational knowledge for this role |
+| Knowledge | K1186 | Knowledge of organizational human resource (HR) policies and procedures | Foundational knowledge for this role |
+| Skill | S0406 | Skill in developing policy plans | Core capability for this role |
+| Skill | S0687 | Skill in performing administrative planning activities | Core capability for this role |
+| Skill | S0497 | Skill in developing client organization profiles | Core capability for this role |
+| Skill | S0515 | Skill in identifying partner capabilities | Core capability for this role |
+| Skill | S0519 | Skill in detecting exploitation activities | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OV-PSP-001 → OG-WRL-002) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

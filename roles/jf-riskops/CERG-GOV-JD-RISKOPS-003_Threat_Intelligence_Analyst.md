@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (AN-TWA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-006 — Threat Intelligence Analyst primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T0845 | Identify cyber threat tactics and methodologies | Core work activity for this NICE Work Role |
+| Task | T1798 | Provide intelligence analysis and support | Core work activity for this NICE Work Role |
+| Task | T0685 | Evaluate threat decision-making processes | Core work activity for this NICE Work Role |
+| Task | T0698 | Facilitate continuously updated intelligence, surveillance, and visualization input to common operational picture man... | Core work activity for this NICE Work Role |
+| Task | T0718 | Identify intelligence gaps and shortfalls | Core work activity for this NICE Work Role |
+| Knowledge | K1009 | Knowledge of threat intelligence principles and practices | Foundational knowledge for this role |
+| Knowledge | K0789 | Knowledge of adversarial tactics tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0857 | Knowledge of malware analysis tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0480 | Knowledge of malware | Foundational knowledge for this role |
+| Knowledge | K0655 | Knowledge of intelligence fusion | Foundational knowledge for this role |
+| Skill | S0446 | Skill in mimicking threat actors | Core capability for this role |
+| Skill | S0516 | Skill in performing threat emulation tactics | Core capability for this role |
+| Skill | S0535 | Skill in performing threat factor analysis | Core capability for this role |
+| Skill | S0436 | Skill in creating target intelligence products | Core capability for this role |
+| Skill | S0517 | Skill in anticipating threats | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (AN-TWA-001 → PD-WRL-006) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

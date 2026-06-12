@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (PR-CDA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-001 — Identity Risk Analyst primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1266 | Recommend risk mitigation strategies | Core work activity for this NICE Work Role |
+| Task | T1603 | Recommend threat and vulnerability risk mitigation strategies | Core work activity for this NICE Work Role |
+| Task | T1176 | Determine if cybersecurity-enabled products reduce identified risk to acceptable levels | Core work activity for this NICE Work Role |
+| Task | T1177 | Determine if security control technologies reduce identified risk to acceptable levels | Core work activity for this NICE Work Role |
+| Task | T1548 | Determine adequacy of access controls | Core work activity for this NICE Work Role |
+| Knowledge | K0742 | Knowledge of identity and access management (IAM) principles and practices | Foundational knowledge for this role |
+| Knowledge | K0747 | Knowledge of Risk Adaptive (Adaptable) Access Controls (RAdAC) | Foundational knowledge for this role |
+| Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
+| Knowledge | K0685 | Knowledge of access control principles and practices | Foundational knowledge for this role |
+| Knowledge | K0716 | Knowledge of host access control (HAC) systems and software | Foundational knowledge for this role |
+| Skill | S0156 | Skill in performing packet-level analysis | Core capability for this role |
+| Skill | S0483 | Skill in identifying software communications vulnerabilities | Core capability for this role |
+| Skill | S0490 | Skill in recreating network topologies | Core capability for this role |
+| Skill | S0509 | Skill in evaluating security products | Core capability for this role |
+| Skill | S0543 | Skill in scanning for vulnerabilities | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (PR-CDA-001 → PD-WRL-001) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OV-SCA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — NERC-CIP Compliance Manager primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1328 | Verify implementation of software, network, and system cybersecurity postures | Core work activity for this NICE Work Role |
+| Task | T1339 | Develop cybersecurity compliance processes for external services | Core work activity for this NICE Work Role |
+| Task | T1340 | Develop cybersecurity audit processes for external services | Core work activity for this NICE Work Role |
+| Task | T1361 | Determine the impact of new system and interface implementations on organization's cybersecurity posture | Core work activity for this NICE Work Role |
+| Task | T1362 | Document impact of new system and interface implementations on organization's cybersecurity posture | Core work activity for this NICE Work Role |
+| Knowledge | K0680 | Knowledge of cybersecurity principles and practices | Foundational knowledge for this role |
+| Knowledge | K0681 | Knowledge of privacy principles and practices | Foundational knowledge for this role |
+| Knowledge | K0685 | Knowledge of access control principles and practices | Foundational knowledge for this role |
+| Knowledge | K0687 | Knowledge of business operations standards and best practices | Foundational knowledge for this role |
+| Knowledge | K0689 | Knowledge of network infrastructure principles and practices | Foundational knowledge for this role |
+| Skill | S0136 | Skill in network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), an... | Core capability for this role |
+| Skill | S0465 | Skill in identifying critical infrastructure systems | Core capability for this role |
+| Skill | S0642 | Skill in identifying evidence of past intrusions | Core capability for this role |
+| Skill | S0015 | Skill in conducting test events | Core capability for this role |
+| Skill | S0097 | Skill in applying security controls | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OV-SCA-001 → OG-WRL-012) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

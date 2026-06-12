@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (PR-CDA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-001 — Detection Engineer primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1387 | Validate intrusion detection system alerts | Core work activity for this NICE Work Role |
+| Task | T1112 | Validate network alerts | Core work activity for this NICE Work Role |
+| Task | T1290 | Communicate daily network event and activity reports | Core work activity for this NICE Work Role |
+| Task | T1299 | Determine causes of network alerts | Core work activity for this NICE Work Role |
+| Task | T1349 | Communicate cybersecurity attacks and intrusions alerts | Core work activity for this NICE Work Role |
+| Knowledge | K0723 | Knowledge of vulnerability data sources | Foundational knowledge for this role |
+| Knowledge | K0732 | Knowledge of intrusion detection tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0860 | Knowledge of malware signature principles and practices | Foundational knowledge for this role |
+| Knowledge | K0950 | Knowledge of Intrusion Detection System (IDS) tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0951 | Knowledge of Intrusion Prevention System (IPS) tools and techniques | Foundational knowledge for this role |
+| Skill | S0859 | Skill in performing event correlation | Core capability for this role |
+| Skill | S0566 | Skill in developing signatures | Core capability for this role |
+| Skill | S0567 | Skill in deploying signatures | Core capability for this role |
+| Skill | S0627 | Skill in reading signatures | Core capability for this role |
+| Skill | S0712 | Skill in evaluating data source quality | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (PR-CDA-001 → PD-WRL-001) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

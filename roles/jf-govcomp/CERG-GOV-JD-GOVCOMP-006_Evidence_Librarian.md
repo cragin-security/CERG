@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OV-SCA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — Evidence Librarian primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1038 | Integrate organization objectives in intelligence collection | Core work activity for this NICE Work Role |
+| Task | T1294 | Advise on Risk Management Framework process activities and documentation | Core work activity for this NICE Work Role |
+| Task | T1327 | Update security documentation to reflect current application and system security design features | Core work activity for this NICE Work Role |
+| Task | T0309 | Assess the effectiveness of security controls | Core work activity for this NICE Work Role |
+| Task | T0495 | Manage Accreditation Packages (e.g., ISO/IEC 15026-2) | Core work activity for this NICE Work Role |
+| Knowledge | K0800 | Knowledge of evidence admissibility laws and regulations | Foundational knowledge for this role |
+| Knowledge | K0476 | Knowledge of language processing tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0653 | Knowledge of cybersecurity practices in the acquisition process | Foundational knowledge for this role |
+| Knowledge | K0655 | Knowledge of intelligence fusion | Foundational knowledge for this role |
+| Knowledge | K0658 | Knowledge of cognitive biases | Foundational knowledge for this role |
+| Skill | S0391 | Skill in creating technical documentation | Core capability for this role |
+| Skill | S0642 | Skill in identifying evidence of past intrusions | Core capability for this role |
+| Skill | S0711 | Skill in interpreting metadata | Core capability for this role |
+| Skill | S0775 | Skill in developing intelligence collection plans | Core capability for this role |
+| Skill | S0777 | Skill in developing collection strategies | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OV-SCA-001 → OG-WRL-012) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

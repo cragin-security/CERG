@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OM-ANA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [IO-WRL-006 — Identity Engineer primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1548 | Determine adequacy of access controls | Core work activity for this NICE Work Role |
+| Task | T0309 | Assess the effectiveness of security controls | Core work activity for this NICE Work Role |
+| Task | T1020 | Determine the operational and safety impacts of cybersecurity lapses | Core work activity for this NICE Work Role |
+| Task | T1023 | Identify critical technology procurement requirements | Core work activity for this NICE Work Role |
+| Task | T1075 | Implement application cybersecurity policies | Core work activity for this NICE Work Role |
+| Knowledge | K0686 | Knowledge of authentication and authorization tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0742 | Knowledge of identity and access management (IAM) principles and practices | Foundational knowledge for this role |
+| Knowledge | K0685 | Knowledge of access control principles and practices | Foundational knowledge for this role |
+| Knowledge | K0880 | Knowledge of access control models and frameworks | Foundational knowledge for this role |
+| Knowledge | K0930 | Knowledge of credential management systems and software | Foundational knowledge for this role |
+| Skill | S0484 | Skill in developing user credential management systems | Core capability for this role |
+| Skill | S0485 | Skill in implementing user credential management systems | Core capability for this role |
+| Skill | S0141 | Skill in assessing security systems designs | Core capability for this role |
+| Skill | S0479 | Skill in evaluating supplier trustworthiness | Core capability for this role |
+| Skill | S0480 | Skill in evaluating product trustworthiness | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OM-ANA-001 → IO-WRL-006) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

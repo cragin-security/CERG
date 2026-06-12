@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OV-SCA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — Vendor Risk Analyst primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1054 | Scope analysis reports to various audiences that accounts for data sharing classification restrictions | Core work activity for this NICE Work Role |
+| Task | T0309 | Assess the effectiveness of security controls | Core work activity for this NICE Work Role |
+| Task | T0495 | Manage Accreditation Packages (e.g., ISO/IEC 15026-2) | Core work activity for this NICE Work Role |
+| Task | T1012 | Expand network access | Core work activity for this NICE Work Role |
+| Task | T1013 | Conduct technical exploitation of a target | Core work activity for this NICE Work Role |
+| Knowledge | K0692 | Knowledge of vulnerability assessment tools and techniques | Foundational knowledge for this role |
+| Knowledge | K0720 | Knowledge of Security Assessment and Authorization (SA&A) processes | Foundational knowledge for this role |
+| Knowledge | K0803 | Knowledge of supply chain risk management principles and practices | Foundational knowledge for this role |
+| Knowledge | K0820 | Knowledge of supply chain risks | Foundational knowledge for this role |
+| Knowledge | K0838 | Knowledge of supply chain risk management policies and procedures | Foundational knowledge for this role |
+| Skill | S0686 | Skill in performing risk assessments | Core capability for this role |
+| Skill | S0393 | Skill in developing assessments | Core capability for this role |
+| Skill | S0394 | Skill in developing security assessments | Core capability for this role |
+| Skill | S0673 | Skill in translating operational requirements into security controls | Core capability for this role |
+| Skill | S0015 | Skill in conducting test events | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OV-SCA-001 → OG-WRL-012) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (SP-ARC-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-001 — Cloud Security Engineer primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1010 | Communicate enterprise information technology architecture | Core work activity for this NICE Work Role |
+| Task | T1027 | Integrate organizational goals and objectives into security architecture | Core work activity for this NICE Work Role |
+| Task | T1077 | Assess the organization's cybersecurity architecture | Core work activity for this NICE Work Role |
+| Task | T1100 | Configure network hubs, routers, and switches | Core work activity for this NICE Work Role |
+| Task | T1101 | Optimize network hubs, routers, and switches | Core work activity for this NICE Work Role |
+| Knowledge | K0689 | Knowledge of network infrastructure principles and practices | Foundational knowledge for this role |
+| Knowledge | K0742 | Knowledge of identity and access management (IAM) principles and practices | Foundational knowledge for this role |
+| Knowledge | K0915 | Knowledge of network architecture principles and practices | Foundational knowledge for this role |
+| Knowledge | K0055 | Knowledge of microprocessors | Foundational knowledge for this role |
+| Knowledge | K0674 | Knowledge of computer networking protocols | Foundational knowledge for this role |
+| Skill | S0418 | Skill in applying secure network architectures | Core capability for this role |
+| Skill | S0657 | Skill in implementing Public Key Infrastructure (PKI) encryption | Core capability for this role |
+| Skill | S0383 | Skill in analyzing an organization's enterprise information technology architecture | Core capability for this role |
+| Skill | S0428 | Skill in designing architectures | Core capability for this role |
+| Skill | S0465 | Skill in identifying critical infrastructure systems | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (SP-ARC-001 → DD-WRL-001) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

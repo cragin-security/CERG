@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (AN-TWA-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-006 — OT Risk Analyst primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1020 | Determine the operational and safety impacts of cybersecurity lapses | Core work activity for this NICE Work Role |
+| Task | T0685 | Evaluate threat decision-making processes | Core work activity for this NICE Work Role |
+| Task | T0845 | Identify cyber threat tactics and methodologies | Core work activity for this NICE Work Role |
+| Task | T1772 | Identify indications and warnings of target communication changes or processing failures | Core work activity for this NICE Work Role |
+| Task | T1799 | Notify appropriate personnel of imminent hostile intentions or activities | Core work activity for this NICE Work Role |
+| Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
+| Knowledge | K0674 | Knowledge of computer networking protocols | Foundational knowledge for this role |
+| Knowledge | K0684 | Knowledge of cybersecurity threat characteristics | Foundational knowledge for this role |
+| Knowledge | K0786 | Knowledge of physical computer components | Foundational knowledge for this role |
+| Knowledge | K0788 | Knowledge of adversarial tactics principles and practices | Foundational knowledge for this role |
+| Skill | S0430 | Skill in collaborating with others | Core capability for this role |
+| Skill | S0433 | Skill in creating analytics | Core capability for this role |
+| Skill | S0516 | Skill in performing threat emulation tactics | Core capability for this role |
+| Skill | S0709 | Skill in developing analytics | Core capability for this role |
+| Skill | S0111 | Skill in interfacing with customers | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (AN-TWA-001 → PD-WRL-006) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

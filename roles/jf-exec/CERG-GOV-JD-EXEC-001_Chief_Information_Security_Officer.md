@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (OG-WRL-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Chief Information Security Officer (CISO) primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1476 | Promote awareness of cybersecurity policy and strategy among management | Core work activity for this NICE Work Role |
+| Task | T1056 | Acquire resources to support cybersecurity program goals and objectives | Core work activity for this NICE Work Role |
+| Task | T1088 | Communicate the value of cybersecurity to organizational stakeholders | Core work activity for this NICE Work Role |
+| Task | T1226 | Align cybersecurity priorities with organizational security strategy | Core work activity for this NICE Work Role |
+| Task | T1227 | Manage cybersecurity budget, staffing, and contracting | Core work activity for this NICE Work Role |
+| Knowledge | K0644 | Knowledge of cybersecurity operation policies and procedures | Foundational knowledge for this role |
+| Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
+| Knowledge | K0676 | Knowledge of cybersecurity laws and regulations | Foundational knowledge for this role |
+| Knowledge | K0677 | Knowledge of cybersecurity policies and procedures | Foundational knowledge for this role |
+| Knowledge | K0680 | Knowledge of cybersecurity principles and practices | Foundational knowledge for this role |
+| Skill | S0406 | Skill in developing policy plans | Core capability for this role |
+| Skill | S0821 | Skill in collaborating with internal and external stakeholders | Core capability for this role |
+| Skill | S0111 | Skill in interfacing with customers | Core capability for this role |
+| Skill | S0414 | Skill in evaluating laws | Core capability for this role |
+| Skill | S0415 | Skill in evaluating regulations | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (OG-WRL-001 → OG-WRL-007) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 

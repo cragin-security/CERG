@@ -68,13 +68,27 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-*Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/. When populated, filter by the primary NICE Work Role (SP-DEV-001) and extract the 5-10 most relevant Task, Knowledge, and Skill statements.*
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-005 — Application Security Engineer primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
-| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Task | T1202 | Determine software development security implications within centralized and decentralized environments across the ent... | Core work activity for this NICE Work Role |
+| Task | T1203 | Implement software development cybersecurity methodologies within centralized and decentralized environments across t... | Core work activity for this NICE Work Role |
+| Task | T1624 | Conduct vulnerability analysis of software patches and updates | Core work activity for this NICE Work Role |
+| Task | T0311 | Consult with customers about software system design and maintenance | Core work activity for this NICE Work Role |
+| Task | T1052 | Integrate black-box security testing tools into quality assurance processes | Core work activity for this NICE Work Role |
+| Knowledge | K0722 | Knowledge of software development principles and practices | Foundational knowledge for this role |
+| Knowledge | K0764 | Knowledge of software development models and frameworks | Foundational knowledge for this role |
+| Knowledge | K0846 | Knowledge of secure software deployment principles and practices | Foundational knowledge for this role |
+| Knowledge | K0847 | Knowledge of secure software deployment tools and techniques | Foundational knowledge for this role |
+| Knowledge | K1079 | Knowledge of web application security risks | Foundational knowledge for this role |
+| Skill | S0616 | Skill in applying black-box software testing | Core capability for this role |
+| Skill | S0175 | Skill in performing root cause analysis | Core capability for this role |
+| Skill | S0465 | Skill in identifying critical infrastructure systems | Core capability for this role |
+| Skill | S0466 | Skill in identifying systems designed without security considerations | Core capability for this role |
+| Skill | S0543 | Skill in scanning for vulnerabilities | Core capability for this role |
+
+> **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (SP-DEV-001 → DD-WRL-005) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
 ## 7. Typical Qualifications
 
