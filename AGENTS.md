@@ -260,6 +260,7 @@ Populates §9 (Competency Anchors from CMP‑001), §10 (Success Profiles), and 
 For briefings where CERG content must fit in a small context window (e.g., instructing a separate LLM about the framework):
 
 - **Full index (~5 KB, ~1,300 tokens):** `machine-readable/cerg-llm-index.json` — complete document map
-- **Condensed reference (planned):** A ~5,000‑token summary of core principles, pillar model, document taxonomy, key rules, and risk framework. (File: `machine-readable/cerg-condensed.md` — does not exist yet, generate on demand.)
+- **Regeneration script:** `tools/regenerate-llm-index.py` — regenerates the JSON index from the latest `llms-full.txt`. Run from repo root after any document is added or removed.
+- **Condensed reference (optional):** A ~5,000‑token summary of core principles, pillar model, document taxonomy, key rules, and risk framework. Generate on demand.
 
 The full concatenated corpus is at `https://cerg.nexus/llms-full.txt` (2.9 MB, ~800K tokens) — too large for most context windows.
