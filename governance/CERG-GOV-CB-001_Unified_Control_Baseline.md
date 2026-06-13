@@ -271,6 +271,7 @@ Overlays add to the organizational baseline. They never silently relax it.
 | **BES** | Medium/High Impact BES Cyber Systems | NERC-CIP v7 controls including CIP-007, CIP-010, CIP-013; ESP/EAP topology; 90-day searchable / 12-month total log retention; annual recovery exercise; CIP-015 INSM where applicable. | STD-OT-001 + PLN-CIP-001 |
 | **SOX ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | STD-IT-001 + PLN-SOX-001 |
 | **OT Safety** | OT systems whose disruption can cause safety impact | Stricter change/maintenance windows, no active scanning, mandatory engineering review for any policy/standard parameter relaxation. | STD-OT-001 |
+| **Crown-Jewel** | Tier 0 / Tier 1 crown-jewel assets (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) | Verified minimum control profile: tested recovery with backup outside the blast radius, phishing-resistant identity, enumerated segmentation, ATT&CK-mapped day-one detection, and adversarial validation at enhanced frequency. Verified, not assumed. | CJ-001 §3.3 |
 
 > **Multiple Overlays at Once**
 >
