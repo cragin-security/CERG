@@ -465,6 +465,7 @@ Risk participation is required when one or more of the following are true:
 - Every identified issue must be classified as **pre-production remediation** or **post-production managed risk**, not both.
 - Any issue deferred beyond go-live must create a **Risk Record** and, where nonconformance exists, an **Exception Record candidate**.
 - No go-live proceeds without named business and technical owners.
+- If the project touches or creates a Tier 0/Tier 1 crown jewel (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)), the crown-jewel minimum control profile (CJ-001 §3.3) is a pre-go-live requirement, and the relevant loss scenarios become threat-model design targets per [`CERG-PRC-TM-001`](../procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md).
 
 
 ### Closure Criteria
@@ -554,6 +555,7 @@ Assets are classified by lifecycle to determine registration depth. Ephemeral an
 - Logging source established if required
 - Backup assignment established if required
 - Access review population assigned if required
+- For crown-jewel assets (Tier 0/Tier 1 per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)), the CJ-001 §3.3 minimum control profile is present and verified, not merely scanned
 
 
 ### Closure Criteria
@@ -565,6 +567,7 @@ Assets are classified by lifecycle to determine registration depth. Ephemeral an
 - Backup assignment established if required
 - Access review population assigned if required
 - Any coverage gap resolved as finding or risk record
+- Crown-jewel minimum control profile verified for Tier 0/Tier 1 assets (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md))
 
 ### Evidence Required
 - Asset Record
