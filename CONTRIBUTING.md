@@ -39,13 +39,6 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 - **No em dashes** in prose (STY-001 §9.2). Use hyphens or restructure.
 - **No bare placeholders** in Approved documents. Use "preliminary default requiring organizational calibration" with a stated basis, per RMF-001 §12.
 
-## Review process
-
-1. PR opened against `main`.
-2. CI runs `cerg-validate.py` and `pytest tests/test_cerg_validate.py` — both must pass.
-3. Review checks: document conventions, cross-reference accuracy, catalog registration, no new validation errors.
-4. Merge and push.
-
 ## Code of conduct
 
 Be respectful, assume good faith, and keep discussions focused on making the framework better. Disagreements about approach are healthy; personal criticism is not.
