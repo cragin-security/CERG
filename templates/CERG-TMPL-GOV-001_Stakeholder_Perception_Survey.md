@@ -91,6 +91,8 @@ Each question uses a 5-point Likert scale: Strongly Agree (5), Agree (4), Neutra
 |---|---|---|
 | 8 | What should security START doing that it does not do today? | Unmet needs |
 | 9 | What should security STOP doing that creates friction or adds no value? | Friction and waste |
+
+> The friction signal from this annual survey is paired with the continuous CERG service-responsiveness metrics (SR-001 through SR-005) defined in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) and the published commitments in [`CERG-GOV-SLC-001`](../governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), so friction is caught monthly (quantitative), not only once a year (qualitative).
 | 10 | What should security CONTINUE doing that works well? | Strengths to preserve |
 | 11 | Any other feedback you want the CISO to hear. | Unprompted signal |
 
