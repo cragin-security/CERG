@@ -1,14 +1,8 @@
-# CERG · Cybersecurity Operating Model Starter Kit
+# CERG (surge) · Cybersecurity Operating Model
 
 **A spine, not shelfware.**
 
 CERG gives you the structure, artifacts, workflows, and evidence model to run a cybersecurity program. It does not become a program until you assign owners, run the cadence, make decisions, and produce evidence from real work.
-
-> **CERG is not "a security program in a box."**
->
-> A program-in-a-box is how mediocre CISOs buy shelfware. CERG explicitly rejects shelfware adoption. Forking the repo, renaming the company, and approving everything does not produce a program. It produces a pile of Markdown with someone else's name on it.
->
-> Adoption is complete when work is running on cadence — not when files are edited. If you are looking for something to drop in and walk away from, this is the wrong repo.
 
 Cybersecurity teams have struggled with the same structural problem for twenty years: fragmented tools, siloed teams, and a culture of "no" that slows the business without meaningfully reducing risk. CERG is a deliberate answer to that problem — an operating model where Engineering builds security in early, Risk understands actual exposure, and Governance makes the rules clear enough that work moves faster.
 
