@@ -46,13 +46,13 @@ machine_readable_artifacts:
   generated_date: '2026-06-11'
   size_bytes: 415
 - artifact: cerg-crown-jewel-schema.yaml
-  description: CERG-ACT-010 (Crown Jewel Governance)
-  source_document: CERG-ACT-010 (Crown Jewel Governance)
-  status: Draft
+  description: Crown Jewel Register and loss-scenario criticality tiers and fields
+  source_document: CERG-GOV-CJ-001 (Crown Jewel Register and Loss Scenario Library)
+  status: Approved
   owner: Governance Pillar Leader (Document Control)
   governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
     change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
+  regeneration_trigger: Change to CERG-GOV-CJ-001 (authoritative source; this schema is the derived form)
   generated_date: '2026-06-11'
   size_bytes: 1205
 - artifact: cerg-decision-log.yaml
