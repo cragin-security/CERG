@@ -209,6 +209,18 @@ Knowledge "in the system" means knowledge that survives when the person who hold
 | KM-002 | Role Backup Currency | % of canonical roles (OM-001 Section 6.1) with a documented secondary or backup who has performed the role in an exercise or real event within 18 months | Cross-training log | Annual | >= 90% / 75-90% / < 75% | COG Brief |
 | KM-003 | Cross-Training Hours per Team Member | Mean cross-pillar knowledge activity hours per CERG team member per quarter. Target: >= 4 hours per quarter (OM-001 Section 10.4). | Cross-training log | Quarterly | >= 4.0 / 2.0-4.0 / < 2.0 | CISO Dashboard |
 
+### 3.9 CERG Service Responsiveness Metrics (Owner: CISO / Pillar Leaders)
+
+These metrics hold CERG accountable to its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)). They are reported alongside, and with equal weight to, the discipline metrics that measure the business. Targets reference the SLC-001 commitment values, which are preliminary defaults until organizationally calibrated.
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| SR-001 | Architecture Review Turnaround | Median business days from complete AR intake to disposition, by project tier | AR log / intake system | Monthly | <= SLC target / 1-2x target / > 2x target | CISO Dashboard, COG Brief |
+| SR-002 | Advisory Response Time | Median business days from advisory request to substantive written response | Intake system | Monthly | <= 3d / 4-7d / > 7d | CISO Dashboard |
+| SR-003 | Intake Disposition Time | Median business days from project / SaaS intake to security disposition | Intake system | Monthly | <= SLC target / 1-2x target / > 2x target | CISO Dashboard, COG Brief |
+| SR-004 | SLC Commitment Adherence | % of CERG requests answered within the published SLC-001 commitment | Intake system | Monthly | >= 90% / 75-90% / < 75% | CISO Dashboard, COG Brief, Board |
+| SR-005 | Time-to-Coverage | Median days from asset go-live to vulnerability / CSPM coverage | Exposure pipeline + asset inventory | Monthly | <= 5d / 6-15d / > 15d | COG Brief |
+
 ---
 
 ## 4. KRI / KPI Data Source Map
