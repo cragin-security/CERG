@@ -559,8 +559,9 @@ An accepted risk is automatically re-opened for re-assessment when any of the fo
 | Regulatory change materially alters compliance impact | Re-score within 30 days of regulatory effective date | Regulatory non-compliance may make the risk unacceptable under any treatment |
 | Related incident occurs involving the accepted vulnerability or affected asset | Immediate re-score as part of F-06 post-incident review | An incident proves the risk was underestimated |
 | Acceptance renewed more than twice without treatment progress | Escalate one approval tier above original approver (per §9.7); create Finding Record | Repeated renewal without treatment signals acceptance complacency |
+| Scenario pressure-test (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) reveals an unbroken kill-chain on an asset in the scenario blast radius | Open Finding Record (F-04); re-score every register risk touching the affected crown jewel | A top-down test proved a chain the bottom-up register did not surface |
 
-The Risk Register Owner is responsible for monitoring these triggers. Threat Intelligence (TI-001) supplies the exploit observation feed. The Evidence Librarian monitors KEV catalog changes. Governance Pillar Leader maintains the regulatory change watch.
+The Risk Register Owner is responsible for monitoring these triggers. Threat Intelligence (TI-001) supplies the exploit observation feed. The Evidence Librarian monitors KEV catalog changes. Governance Pillar Leader maintains the regulatory change watch. The Risk Pillar Leader supplies the scenario pressure-test feed per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md).
 
 ---
 
