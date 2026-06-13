@@ -188,6 +188,8 @@ CERG is consumed by the rest of the organization through four engagement models.
 
 Used for new systems, major changes, and significant integrations.
 
+CERG commits to architecture-review intake and disposition turnaround by project tier per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md); early engagement only works if engaging CERG is fast.
+
 | **Phase** | **CERG Activity** | **Lead Pillar** |
 |---|---|---|
 | Concept | Lightweight architectural consult; data classification and environment-tier discussion. | Engineering |
@@ -200,6 +202,8 @@ Used for new systems, major changes, and significant integrations.
 ### 5.2 Continuous Service (Risk-Led)
 
 Used for ongoing exposure management across the entire estate.
+
+CERG commits to a time-to-coverage target for bringing a new asset under vulnerability and CSPM coverage after go-live, per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md).
 
 - Vulnerability management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
 - CSPM / SSPM operates continuously across approved cloud and SaaS.
@@ -218,7 +222,7 @@ Used when a business unit, IT team, or OT team has a question, decision, or expl
 - Vendor selection advisory
 - Policy interpretation advisory
 
-Advisory engagements are intentionally low-friction. They are tracked at the activity level but not treated as a queued service.
+Advisory engagements are intentionally low-friction, but low-friction does not mean unmeasured. They are tracked at the activity level, and CERG commits to a published response time for advisory requests per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), so that "engage us early" is backed by a reciprocal commitment to respond quickly.
 
 ### 5.4 Program Oversight (Governance-Led)
 
