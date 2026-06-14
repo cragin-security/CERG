@@ -554,7 +554,7 @@ The trend analysis feeds into:
 | **Engineering Pillar Leader** | Receives and acts on design, architecture, and configuration systemic findings. Participates in scoping. |
 | **Governance Pillar Leader** | Receives standard and procedure gap systemic findings. Coordinates catalog amendments resulting from systemic improvements. |
 | **Detection Engineer** | Receives detection gap findings. Updates detection rules and reports on coverage improvement. |
-| **Vulnerability Management Lead** | Receives specific vulnerability findings. Tracks remediation to closure per PRC-VM-001. |
+| **Exposure Management Lead** | Receives specific vulnerability findings. Tracks remediation to closure per PRC-VM-001. |
 | **Risk Register Owner** | Records material findings as risk register entries. Links risk entries to improvement entries when systemic. |
 | **OT Safety Officer** | Named for each OT engagement. Holds binding stop authority. Reviews OT scope and safety constraints. |
 

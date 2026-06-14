@@ -65,7 +65,7 @@ The competencies are calibrated to three role families aligned to the CERG pilla
 | Role Family | Pillar | Roles |
 |---|---|---|
 | **Engineering** | Cyber Engineering | Cloud Security Engineer, Identity Engineer, OT Security Engineer, Application Security Engineer, Endpoint Engineer, Cryptography Engineer |
-| **Risk** | Cyber Risk | Threat Intelligence Analyst, Vendor Risk Analyst, OT Risk Analyst, Identity Risk Analyst, Detection Engineer, Vulnerability Management Lead (SME track), Adversarial Testing Lead (SME track) |
+| **Risk** | Cyber Risk | Threat Intelligence Analyst, Vendor Risk Analyst, OT Risk Analyst, Identity Risk Analyst, Detection Engineer, Exposure Management Lead (SME track), Adversarial Testing Lead (SME track) |
 | **Governance** | Cyber Governance | NERC-CIP Compliance Manager (SME track), CMMC/Federal Compliance Manager (SME track), SOX ITGC Lead (SME track), Policy & Standards Manager (SME track), Risk Register Owner (SME track), Evidence Librarian |
 
 Management-track roles (Pillar Leaders, Managers, Senior Managers) use the SME competencies for their home family plus the management addendum in Section 7.

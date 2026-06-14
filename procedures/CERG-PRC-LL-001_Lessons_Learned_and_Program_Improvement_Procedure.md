@@ -290,7 +290,7 @@ An improvement marked "Ineffective" or "Partially effective" is re-opened in the
 | **Adversarial Testing Lead** | Produces the post-engagement systemic analysis per PRC-AV-001. Ensures pen test findings are analyzed for root cause patterns, not just remediated individually. |
 | **Incident Commander (IR team)** | Produces post-incident lesson artifacts per PRC-IR-002. Governance Pillar Leader coordinates if the standing IR team does not produce them. |
 | **Threat Intelligence Analyst** | Produces lesson artifacts for external intelligence shifts. Presents threat landscape changes at quarterly aggregation. |
-| **Vulnerability Management Lead** | Produces lesson artifacts when VM metrics signal a systemic weakness. |
+| **Exposure Management Lead** | Produces lesson artifacts when VM metrics signal a systemic weakness. |
 | **Evidence Librarian** | Archives all lesson artifacts, aggregation summaries, and verification records. Ensures auditability of the lessons-learned pipeline. |
 | **Policy & Standards Manager** | Receives standard revision actions from the improvement pipeline. Manages the amendment process per the catalog (CAT-001). |
 

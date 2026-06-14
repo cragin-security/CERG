@@ -168,7 +168,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Identity Engineer** | Consumes the posture signal for conditional access; owns just-in-time elevation of local administrative rights. |
 | **Detection Engineer** | Owns endpoint detection content; consumes EDR telemetry. |
 | **OT Security Engineer** | Owns transient cyber asset control where devices connect to OT. |
-| **Vulnerability Management Lead** | Tracks endpoint patch state and endpoint vulnerability findings against SLAs. |
+| **Exposure Management Lead** | Tracks endpoint patch state and endpoint vulnerability findings against SLAs. |
 | **Vendor Risk Analyst** | Coordinates transient contractor-device access with [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
 | **Governance Pillar Leader** | Tracks endpoint-management coverage metrics and BYOD exceptions; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |

@@ -11,7 +11,7 @@
 | **Version** | 2.0 |
 | **Status** | Approved |
 | **Classification** | Public |
-| **Owner** | Vulnerability Management Lead |
+| **Owner** | Exposure Management Lead |
 | **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
@@ -114,7 +114,7 @@ Each of these has different operational and audit implications. Collapsing them 
 
 | Role | Exposure Management Responsibility |
 |------|-----------------------------------|
-| **Vulnerability Management Lead** | Owns this procedure. Operates observation collection, triage, classification, and tracking. Publishes exposure posture. Drives treatment cadence. Owns SLAs. |
+| **Exposure Management Lead** | Owns this procedure. Operates observation collection, triage, classification, and tracking. Publishes exposure posture. Drives treatment cadence. Owns SLAs. |
 | **Engineering Pillar Leader** | Implements treatments on assets it owns or supports. Defines secure configuration baselines. Provides architectural guidance for compensating controls. |
 | **System / Asset Owners** | Accountable for treatment of exposures on assets they own. Approve maintenance windows, accept residual risk. |
 | **IT / OT Operations Teams** | Execute treatment actions. Coordinate maintenance windows. Validate restoration. |
@@ -392,7 +392,7 @@ These metrics measure exposure reduction, not scanner activity.
 | Report | Audience | Cadence |
 |--------|----------|---------|
 | Exposure posture — Confirmed Exposure + Material Risk, SLA status, KEV exposure | CISO + executive leadership | Monthly |
-| Observation triage backlog — observations awaiting validation, by age | Vulnerability Management Lead | Weekly |
+| Observation triage backlog — observations awaiting validation, by age | Exposure Management Lead | Weekly |
 | Asset-owner treatment queue | Asset owners / Engineering managers | Weekly |
 | OT exposure posture | OT operations + CISO | Monthly |
 | CUI environment posture (POA&M support) | Governance | Monthly |

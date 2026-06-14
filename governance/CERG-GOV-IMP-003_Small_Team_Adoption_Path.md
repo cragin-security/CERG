@@ -157,7 +157,7 @@ A 5-person team covers all 27 canonical roles by consolidating them. The map bel
 | Person | Canonical Roles Consolidated | Primary Family |
 |--------|------------------------------|----------------|
 | **Person 1 — CISO / Governance Lead** | CISO, Governance Pillar Leader, Policy & Standards Manager, Risk Register Owner, Evidence Librarian | JF-EXEC / JF-GOVCOMP |
-| **Person 2 — Risk Lead** | Risk Pillar Leader, Vulnerability Management Lead, Threat Intelligence Analyst, Detection Engineer, Vendor Risk Analyst | JF-RISKOPS |
+| **Person 2 — Risk Lead** | Risk Pillar Leader, Exposure Management Lead, Threat Intelligence Analyst, Detection Engineer, Vendor Risk Analyst | JF-RISKOPS |
 | **Person 3 — Engineering Lead** | Engineering Pillar Leader, Cloud Security Engineer, Identity Engineer, Endpoint Engineer | JF-SECENG |
 | **Person 4 — Security Engineer** | Application Security Engineer, Cryptography Engineer, OT Security Engineer (if applicable), Pre-production Reviewer | JF-SECENG |
 | **Person 5 — Compliance / IR Liaison** | NERC-CIP Compliance Manager, CMMC/Federal Compliance Manager, SOX ITGC Lead, IR liaison (Incident Commander and Lead Investigator remain with standing IR team) | JF-GOVCOMP / JF-ADJUNCT |

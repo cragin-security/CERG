@@ -130,7 +130,7 @@ ROLE_KEYWORDS = {
         'acceptance', 'approval', 'gate', 'quality', 'assurance'
     ],
     # JF-RISKOPS
-    'Vulnerability Management Lead': [
+    'Exposure Management Lead': [
         'vulnerability', 'cve', 'cwe', 'scanning', 'remediation',
         'patch', 'exposure', 'prioritization', 'risk scoring',
         'cvss', 'epss', 'vulnerability management', 'triage',
@@ -294,8 +294,8 @@ ROLE_FILES = [
     ('Pre-production Reviewer', 'OV-SCA-001',
      f'{BASE}/roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md'),
     # JF-RISKOPS
-    ('Vulnerability Management Lead', 'PR-VAM-001',
-     f'{BASE}/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md'),
+    ('Exposure Management Lead', 'PR-VAM-001',
+     f'{BASE}/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md'),
     ('Adversarial Testing Lead', 'PR-VAM-001',
      f'{BASE}/roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md'),
     ('Threat Intelligence Analyst', 'AN-TWA-001',

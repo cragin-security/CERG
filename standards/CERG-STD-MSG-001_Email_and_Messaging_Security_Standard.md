@@ -161,7 +161,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Identity Engineer** | Owns multi-factor authentication on email and messaging accounts and the disabling of legacy authentication. |
 | **Detection Engineer** | Owns email and messaging detection content; consumes the telemetry and the reported-phish indicators. |
 | **Governance Pillar Leader** | Owns the position on phishing simulation and the no-blame reporting culture; tracks email-security metrics; cross-references this standard with the control baseline. |
-| **Vulnerability Management Lead** | Tracks vulnerabilities in email and messaging infrastructure. |
+| **Exposure Management Lead** | Tracks vulnerabilities in email and messaging infrastructure. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 
 ---

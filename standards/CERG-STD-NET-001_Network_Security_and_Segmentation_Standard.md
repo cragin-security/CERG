@@ -157,7 +157,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Identity Engineer** | Owns the identity and device-posture inputs to zero-trust access decisions and the privileged access broker for remote administrative access. |
 | **Endpoint Engineer** | Provides the device posture signal used in remote access and zero-trust decisions. |
 | **Detection Engineer** | Owns network-based detection content; consumes boundary and east-west logs. |
-| **Vulnerability Management Lead** | Tracks network-device vulnerabilities and exposed-service findings. |
+| **Exposure Management Lead** | Tracks network-device vulnerabilities and exposed-service findings. |
 | **Vendor Risk Analyst** | Coordinates time-bound vendor remote access with [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
 | **Governance Pillar Leader** | Tracks boundary-rule review completion and exceptions; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |

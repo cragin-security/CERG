@@ -750,8 +750,8 @@
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Vulnerability Management Lead
-  approval_authority: Vulnerability Management Lead
+  owner_role: Exposure Management Lead
+  approval_authority: Exposure Management Lead
   parent_artifact: CERG-POL-001
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_hash: f28b18170580c8b9ca78f780744d88a66373acef3fbaaa6f7f98c2562e12bf45

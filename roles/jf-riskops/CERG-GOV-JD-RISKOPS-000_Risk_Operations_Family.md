@@ -44,7 +44,7 @@ This family groups roles that share a core competency profile and career progres
 
 | Role | Document | Description |
 |------|----------|-------------|
-| **Vulnerability Management Lead** | [`CERG-GOV-JD-RISKOPS-001`](CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md) | Owns the vulnerability management program: scanning, triage, SLA-driven remediation tracking. |
+| **Exposure Management Lead** | [`CERG-GOV-JD-RISKOPS-001`](CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md) | Owns the vulnerability management program: scanning, triage, SLA-driven remediation tracking. |
 | **Adversarial Testing Lead** | [`CERG-GOV-JD-RISKOPS-002`](CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md) | Owns adversarial testing: pen testing, red team operations, purple team exercises, and control validation. |
 | **Threat Intelligence Analyst** | [`CERG-GOV-JD-RISKOPS-003`](CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md) | Owns threat intelligence collection, analysis, production, and dissemination. |
 | **Detection Engineer** | [`CERG-GOV-JD-RISKOPS-004`](CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md) | Owns detection engineering: SIEM rules, detection pipelines, ATT&CK coverage, signal-to-noise optimization. |

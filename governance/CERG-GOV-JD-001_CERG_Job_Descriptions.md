@@ -75,7 +75,7 @@ The 27 canonical CERG roles are organized into five Job Families. See [JF-001](.
 | # | Role | Document |
 |---|------|----------|
 | 9 | Risk Pillar Leader | [`CERG-GOV-JD-RISKOPS-008`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md) |
-| 10 | Vulnerability Management Lead | [`CERG-GOV-JD-RISKOPS-001`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md) |
+| 10 | Exposure Management Lead | [`CERG-GOV-JD-RISKOPS-001`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md) |
 | 11 | Adversarial Testing Lead | [`CERG-GOV-JD-RISKOPS-002`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md) |
 | 12 | Threat Intelligence Analyst | [`CERG-GOV-JD-RISKOPS-003`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md) |
 | 13 | Detection Engineer | [`CERG-GOV-JD-RISKOPS-004`](../roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md) |

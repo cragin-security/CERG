@@ -18,7 +18,7 @@ per_role_inputs:
   - log_sources
   - detection_rules
   - alert_volume
-- role: Vulnerability Management Lead
+- role: Exposure Management Lead
   workload_drivers:
   - assets_scanned
   - findings_volume

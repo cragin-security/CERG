@@ -92,7 +92,7 @@ The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`]
 |---|---|---|
 | Executive | Chief Information Security Officer (CISO); Executive Sponsor | OV (Oversee and Govern) |
 | Engineering | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; OT Security Engineer; Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Pre-production Reviewer | SP (Securely Provision), OM (Operate and Maintain) |
-| Risk | Risk Pillar Leader; Vulnerability Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; OT Risk Analyst; Identity Risk Analyst; Detection Engineer | PR (Protect and Defend), AN (Analyze) |
+| Risk | Risk Pillar Leader; Exposure Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; OT Risk Analyst; Identity Risk Analyst; Detection Engineer | PR (Protect and Defend), AN (Analyze) |
 | Governance | Governance Pillar Leader; NERC-CIP Compliance Manager; CMMC / Federal Compliance Manager; SOX ITGC Lead; Policy & Standards Manager; Risk Register Owner; Evidence Librarian | OV (Oversee and Govern) |
 | Adjacent (IR team) | Incident Commander; Lead Investigator | PR (Protect and Defend), IN (Investigate) |
 
@@ -177,7 +177,7 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 
 | **Process** | **ENG** | **RISK** | **GOV** | **OWNER** | **CISO** |
 |---|---|---|---|---|---|
-| Vulnerability scanning and SLA tracking | C | **R/A** Vulnerability Management Lead | I | I | I |
+| Vulnerability scanning and SLA tracking | C | **R/A** Exposure Management Lead | I | I | I |
 | Vulnerability remediation | **R** | C | I | **A** | I |
 | Adversarial validation (pen test, red team) | C | **R/A** Adversarial Testing Lead | I | I | I |
 | Threat intelligence collection and dissemination | C | **R/A** Threat Intelligence Analyst | C | I | I |
@@ -248,7 +248,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 **Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
 
-**Vulnerability Management Lead.** Operates the Vulnerability Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
+**Exposure Management Lead.** Operates the Vulnerability Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
 
 **Adversarial Testing Lead.** Operates the Adversarial Validation Procedure: penetration testing, red team, and purple team exercises, and the tracking of their findings.
 
@@ -292,7 +292,7 @@ The canonical role roster is fixed at 27 roles. A small team does not delete rol
 
 ### 8.1 The Rule
 
-Every one of the 27 roles is held by someone. On a large team that is close to one role per person. On a small team one person holds many roles. The RACI in Sections 5 and 6 does not change when the team shrinks; only the map from role to person changes. A process with the Vulnerability Management Lead as R/A still has an R/A when that role is held by the same person who is also the Risk Pillar Leader. The work is still owned.
+Every one of the 27 roles is held by someone. On a large team that is close to one role per person. On a small team one person holds many roles. The RACI in Sections 5 and 6 does not change when the team shrinks; only the map from role to person changes. A process with the Exposure Management Lead as R/A still has an R/A when that role is held by the same person who is also the Risk Pillar Leader. The work is still owned.
 
 ### 8.2 Reference Consolidation: Five-Person Team
 
@@ -300,7 +300,7 @@ Every one of the 27 roles is held by someone. On a large team that is close to o
 |---|---|
 | 1 | Chief Information Security Officer (CISO) |
 | 2 | Governance Pillar Leader; Policy & Standards Manager; Risk Register Owner; Evidence Librarian; and the applicable Compliance Manager roles for regulators in scope |
-| 3 | Risk Pillar Leader; Vulnerability Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; Detection Engineer |
+| 3 | Risk Pillar Leader; Exposure Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; Detection Engineer |
 | 4 | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; Pre-production Reviewer |
 | 5 | Application Security Engineer; Endpoint Engineer; Cryptography Engineer; OT Security Engineer where OT is in scope |
 

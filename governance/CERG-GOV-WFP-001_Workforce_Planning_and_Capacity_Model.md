@@ -128,7 +128,7 @@ The ceiling brackets ⌈...⌉ indicate rounding up to the nearest whole person.
 
 The scaling map in CERG-GOV-RAC-001 §8 shows how 27 canonical roles consolidate onto as few as 5 people. This model respects that consolidation. When the formula produces less than 1.0 FTE for a role, the role is consolidated onto an adjacent role rather than fractionalized:
 
-- If the model says 0.4 Detection Engineers and 0.6 Threat Intelligence Analysts, both roles consolidate onto one person who splits their time, or the Detection Engineering work is absorbed by the Vulnerability Management Lead
+- If the model says 0.4 Detection Engineers and 0.6 Threat Intelligence Analysts, both roles consolidate onto one person who splits their time, or the Detection Engineering work is absorbed by the Exposure Management Lead
 - Pillar Leader roles consolidate downward: in a 5-person CERG, the CISO directly manages all pillars, and the senior-most practitioner in each pillar operates as a player-coach at S3-S4
 
 The model reports both the unconsolidated headcount (what the formula says) and the consolidated headcount (how roles combine for organizations below a certain scale).
@@ -243,7 +243,7 @@ Where CI_CD_Maturity = 0 (quarterly/manual), 1 (monthly), 2 (continuous).
 
 ## 6. Risk Pillar: Capacity Model
 
-### 6.1 Vulnerability Management Lead / Analyst
+### 6.1 Exposure Management Lead / Analyst
 
 **Primary driver:** Assets under management and scan frequency.
 
@@ -391,7 +391,7 @@ The table below applies the capacity model to four illustrative organization pro
 | Endpoint Engineer | 0* | 0.5 | 1 | 2 |
 | Cryptography Engineer | 0* | 0 | 1 | 1.5 |
 | **Risk Pillar Leader** | 0* | 1 (M4) | 1 (M4) | 1 (M4) |
-| Vulnerability Management Lead | 0.5* | 1 | 2 | 3 |
+| Exposure Management Lead | 0.5* | 1 | 2 | 3 |
 | Adversarial Testing Lead | 0* | 0.5 | 1 | 2 |
 | Threat Intelligence Analyst | 0* | 0.5 | 1 | 2 |
 | Vendor Risk Analyst | 0* | 0.5 | 1.5 | 3 |

@@ -61,7 +61,7 @@ The two layers are complementary and must reconcile. Neither replaces the other.
 |---|---|---|
 | **Starting point** | An observation: scan, test, audit, intel, review | A crown jewel and a named loss scenario |
 | **Question asked** | "Is this finding reachable, and how bad is it?" | "What would end us, and is the chain broken?" |
-| **Primary owner** | Vulnerability Management Lead / Risk Register Owner | Risk Pillar Leader (scenarios) / Governance (register) |
+| **Primary owner** | Exposure Management Lead / Risk Register Owner | Risk Pillar Leader (scenarios) / Governance (register) |
 | **Authoritative home** | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), RMF-001 Section 9 | This document |
 | **Failure it catches** | Individual exploitable exposures | Cross-asset, cross-control kill chains |
 | **Cadence** | Continuous | Scheduled pressure-test (Section 5) |

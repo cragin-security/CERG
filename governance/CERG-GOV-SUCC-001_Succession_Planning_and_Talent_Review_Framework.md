@@ -123,7 +123,7 @@ Not every canonical CERG role is critical for succession planning. A role is cri
 | Tier | Roles |
 |---|---|
 | **Tier 1: Immediate organizational risk** | CISO; Engineering Pillar Leader; Risk Pillar Leader; Governance Pillar Leader |
-| **Tier 2: Material function risk** | Cloud Security Engineer (senior/lead); OT Security Engineer (if OT environment); Vulnerability Management Lead; Detection Engineer (senior/lead); NERC-CIP Compliance Manager (if CIP-regulated); CMMC Compliance Manager (if CMMC-scoped); SOX ITGC Lead (if SOX-scoped); Risk Register Owner; Policy & Standards Manager |
+| **Tier 2: Material function risk** | Cloud Security Engineer (senior/lead); OT Security Engineer (if OT environment); Exposure Management Lead; Detection Engineer (senior/lead); NERC-CIP Compliance Manager (if CIP-regulated); CMMC Compliance Manager (if CMMC-scoped); SOX ITGC Lead (if SOX-scoped); Risk Register Owner; Policy & Standards Manager |
 | **Tier 3: Important domain risk** | Identity Engineer (senior/lead); Application Security Engineer (senior/lead); Adversarial Testing Lead; Threat Intelligence Analyst (senior/lead); Vendor Risk Analyst (senior/lead); Evidence Librarian; Cryptography Engineer |
 
 The CISO and pillar leaders may add or remove roles from the critical list at each annual talent review based on current organizational context.
@@ -187,7 +187,7 @@ The emergency successor must:
 |---|---|
 | **CISO** | Designated by the board or CEO in consultation with the CISO. Typically a pillar leader or a Deputy CISO if the organization has one. The Executive Sponsor may serve as interim CISO for a limited period per organizational succession policy. |
 | **Engineering Pillar Leader** | The senior-most Cloud Security Engineer or OT Security Engineer at S4 or S3, with documented delegation from the CISO. |
-| **Risk Pillar Leader** | The Vulnerability Management Lead or senior-most Detection Engineer at S3-S4, with documented delegation from the CISO. |
+| **Risk Pillar Leader** | The Exposure Management Lead or senior-most Detection Engineer at S3-S4, with documented delegation from the CISO. |
 | **Governance Pillar Leader** | The NERC-CIP Compliance Manager or Policy & Standards Manager at S3-S4, with documented delegation from the CISO. |
 
 ### 5.4 Emergency Succession Documentation

@@ -121,7 +121,7 @@ The Threat Intelligence Analyst and the project team provide inputs before the s
 | Identity and access model | Identity Engineer | Any system with user, service, or privileged access |
 | External dependencies and vendors | Vendor Risk Analyst | Any third-party integration |
 | Deployment model and network paths | Cloud Security Engineer, OT Security Engineer, Endpoint Engineer as applicable | Cloud, OT, endpoint, and networked systems |
-| Known vulnerabilities and prior findings | Vulnerability Management Lead, Adversarial Testing Lead | Existing systems and material changes |
+| Known vulnerabilities and prior findings | Exposure Management Lead, Adversarial Testing Lead | Existing systems and material changes |
 | Relevant threat intelligence | Threat Intelligence Analyst, OT Risk Analyst where OT is in scope | Every model |
 | Applicable control requirements | Governance Pillar Leader, compliance manager as applicable | Regulated or audited systems |
 

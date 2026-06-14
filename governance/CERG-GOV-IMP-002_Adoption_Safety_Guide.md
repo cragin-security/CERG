@@ -350,7 +350,7 @@ These role pairs can be performed by the same person with manageable conflict ri
 | Role A | Role B | Why It Is Usually Safe |
 |--------|--------|------------------------|
 | Policy & Standards Manager | Evidence Librarian | Policy work and evidence management are complementary, not conflicting |
-| Vulnerability Management Lead | Threat Intelligence Analyst | Both are assessment functions; neither approves its own findings |
+| Exposure Management Lead | Threat Intelligence Analyst | Both are assessment functions; neither approves its own findings |
 | Cloud Security Engineer | Identity Engineer | Different technical domains; cloud and identity controls are separable |
 | Endpoint Engineer | Cryptography Engineer | Different technical domains; endpoint and crypto controls are separable |
 | NERC-CIP Compliance Manager | CMMC/Federal Compliance Manager | Both are compliance assessment roles; different frameworks, same skillset |

@@ -154,7 +154,7 @@ By day 30 the program has a signed policy, a populated risk register, a maturity
 |---|---|---|
 | 8 | Adopt the standards that match your environment (Section 7.2). | Governance Pillar Leader |
 | 9 | Adopt the Architecture Review and Project Intake Procedure [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Engineering Pillar Leader |
-| 10 | Stand up vulnerability management against [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) SLAs. | Vulnerability Management Lead |
+| 10 | Stand up vulnerability management against [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) SLAs. | Exposure Management Lead |
 | 11 | Adopt the Access Management Standard [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) and its runbook [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md). | Identity Engineer |
 | 12 | Route the first real project through architecture review. | Engineering Pillar Leader |
 
@@ -198,7 +198,7 @@ These are starting points, not mandates. Adjust to the skills you actually have.
 |---|---|
 | 1 | CISO; Executive Sponsor liaison |
 | 2 | Governance Pillar Leader; Policy & Standards Manager; Risk Register Owner; Evidence Librarian |
-| 3 | Risk Pillar Leader; Vulnerability Management Lead; Threat Intelligence Analyst |
+| 3 | Risk Pillar Leader; Exposure Management Lead; Threat Intelligence Analyst |
 | 4 | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; Pre-production Reviewer |
 | 5 | Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Detection Engineer |
 

@@ -395,7 +395,7 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 | `CERG-GOV-JD-SECENG-006` | Cryptography Engineer | Engineering Pillar Leader | Approved |
 | `CERG-GOV-JD-SECENG-007` | Engineering Pillar Leader | Engineering Pillar Leader | Approved |
 | `CERG-GOV-JD-SECENG-008` | Pre-production Reviewer | Engineering Pillar Leader | Approved |
-| `CERG-GOV-JD-RISKOPS-001` | Vulnerability Management Lead | Risk Pillar Leader | Approved |
+| `CERG-GOV-JD-RISKOPS-001` | Exposure Management Lead | Risk Pillar Leader | Approved |
 | `CERG-GOV-JD-RISKOPS-002` | Adversarial Testing Lead | Risk Pillar Leader | Approved |
 | `CERG-GOV-JD-RISKOPS-003` | Threat Intelligence Analyst | Risk Pillar Leader | Approved |
 | `CERG-GOV-JD-RISKOPS-004` | Detection Engineer | Risk Pillar Leader | Approved |

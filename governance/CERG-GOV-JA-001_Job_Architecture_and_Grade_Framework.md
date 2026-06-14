@@ -278,7 +278,7 @@ Roles are not locked into a single grade. A "Threat Intelligence Analyst" can be
 | Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
 |---|---|---|---|---|---|---|
 | Risk Pillar Leader | JF-RISKOPS | Management | M4 (Director) | M4 | Exec Cyber Leader / Vuln Assessment Analyst (OG-WRL-001 / PR-VAM-001) | Full pillar accountability. Reports to CISO. |
-| Vulnerability Management Lead | JF-RISKOPS | Management | M1-M3 | M3 | Vulnerability Assessment Analyst (PR-VAM-001) | Leads VM operations. In a small team, may be an SME at S3-S4. |
+| Exposure Management Lead | JF-RISKOPS | Management | M1-M3 | M3 | Vulnerability Assessment Analyst (PR-VAM-001) | Leads VM operations. In a small team, may be an SME at S3-S4. |
 | Adversarial Testing Lead | JF-RISKOPS | Management | M1-M3 | M3 | Vulnerability Assessment Analyst (PR-VAM-001) | Leads pen test, red team, purple team. In a small team, may be an SME at S3-S4. |
 | Threat Intelligence Analyst | JF-RISKOPS | SME | S1-S4 | S4 | Threat/Warning Analyst (AN-TWA-001) | May specialize in geopolitical, criminal, or ICS threat actors. |
 | Vendor Risk Analyst | JF-RISKOPS | SME | S1-S4 | S4 | Security Control Assessor (OV-SCA-001) | May specialize in SaaS, critical suppliers, or supply chain. |

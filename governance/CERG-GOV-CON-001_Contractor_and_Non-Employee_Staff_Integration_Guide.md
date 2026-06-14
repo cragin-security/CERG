@@ -90,7 +90,7 @@ Every contractor engagement carries three risks that this document is designed t
 | **Application Security Engineer** | Yes | Application security testing, SDLC integration, and tool deployment are common contractor engagements. |
 | **Endpoint Engineer** | Yes | EDR deployment and migration are common contractor use cases. |
 | **Cryptography Engineer** | Conditional | Yes for specific cryptographic migration or PKI deployment projects. No for ongoing key management operations due to the sensitivity of key material access. |
-| **Vulnerability Management Lead** | Conditional | Yes for initial VM program build-out or backlog clearance. No for ongoing VM operations in a regulated environment, where the person managing vulnerability data should be an employee. |
+| **Exposure Management Lead** | Conditional | Yes for initial VM program build-out or backlog clearance. No for ongoing VM operations in a regulated environment, where the person managing vulnerability data should be an employee. |
 | **Adversarial Testing Lead** | Yes | Penetration testing and red team operations are commonly contractor-delivered. A contractor Adversarial Testing Lead must be supervised by the Risk Pillar Leader; their findings become organizational risk register entries owned by employees. |
 | **Threat Intelligence Analyst** | Yes | Threat intelligence production can be contractor-delivered, especially for sector-specific threat expertise. |
 | **Vendor Risk Analyst** | Yes | Vendor assessment surge capacity (clearing a backlog, supporting a major procurement cycle) is a common contractor use case. |

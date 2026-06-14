@@ -378,7 +378,7 @@ The guardrails baked into the metric definitions and reporting views above:
 | **Metric Group** | **Owner** | **Cadence** | **Audience** |
 |---|---|---|---|
 | RM-001 through RM-006 (Risk) | Risk Register Owner | Risk posture review: weekly for High/Critical; monthly for full register | CISO, Risk Pillar Leader |
-| VM-001 through VM-004 (Vulnerability) | Vulnerability Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
+| VM-001 through VM-004 (Vulnerability) | Exposure Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
 | DT-001 through DT-003 (Detection) | Detection Engineer | Monthly | Risk Pillar Leader, CISO |
 | CM-001 through CM-005 (Engineering) | Engineering Pillar Leader | Daily for CM-001, CM-004; monthly for others; quarterly for CM-003, CM-005 | CISO, Engineering Pillar Leader |
 | ID-001 through ID-004 (Identity) | Identity Engineer | Daily for ID-001; weekly for ID-003; monthly for ID-002, ID-004 | CISO, Identity Engineer |

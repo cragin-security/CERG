@@ -68,7 +68,7 @@ Each CERG canonical role is mapped to 1–3 NICE Work Roles. The mapping follows
 
 | CERG Canonical Role | Primary NICE Work Role | Primary NICE Code | Secondary NICE Work Role(s) | NICE Category |
 |---------------------|----------------------|-------------------|-----------------------------|--------------|
-| **Vulnerability Management Lead** | Vulnerability Assessment Analyst | PR-VAM-001 | Cyber Defense Analyst (PR-CDA-001), Security Control Assessor (OV-SCA-001) | PR |
+| **Exposure Management Lead** | Vulnerability Assessment Analyst | PR-VAM-001 | Cyber Defense Analyst (PR-CDA-001), Security Control Assessor (OV-SCA-001) | PR |
 | **Adversarial Testing Lead** | Vulnerability Assessment Analyst | PR-VAM-001 | (limited CO overlap) | PR |
 | **Threat Intelligence Analyst** | Threat/Warning Analyst | AN-TWA-001 | All-Source Analyst (AN-ASA-001), Cyber Intelligence Planner (CO-CIP-001) | AN |
 | **Detection Engineer** | Cyber Defense Analyst | PR-CDA-001 | Systems Security Analyst (OM-ANA-001), Threat/Warning Analyst (AN-TWA-001) | PR |
@@ -126,7 +126,7 @@ This table provides the complete mapping of all 27 canonical CERG roles plus the
 | Cryptography Engineer | JF-SECENG | Engineering | Security Architect | SP | Systems Security Analyst | SP-ARC-001 |
 | Pre-production Reviewer | JF-SECENG | Engineering | Security Control Assessor | OV | Systems Security Analyst | OV-SCA-001 |
 | Risk Pillar Leader | JF-RISKOPS | Risk | Executive Cyber Leader / Vulnerability Assessment Analyst | OV / PR | — | OG-WRL-001 / PR-VAM-001 |
-| Vulnerability Management Lead | JF-RISKOPS | Risk | Vulnerability Assessment Analyst | PR | Cyber Defense Analyst | PR-VAM-001 |
+| Exposure Management Lead | JF-RISKOPS | Risk | Vulnerability Assessment Analyst | PR | Cyber Defense Analyst | PR-VAM-001 |
 | Adversarial Testing Lead | JF-RISKOPS | Risk | Vulnerability Assessment Analyst | PR | (limited CO overlap) | PR-VAM-001 |
 | Threat Intelligence Analyst | JF-RISKOPS | Risk | Threat/Warning Analyst | AN | All-Source Analyst | AN-TWA-001 |
 | Detection Engineer | JF-RISKOPS | Risk | Cyber Defense Analyst | PR | Systems Security Analyst | PR-CDA-001 |

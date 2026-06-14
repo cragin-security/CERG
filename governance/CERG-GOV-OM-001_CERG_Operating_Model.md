@@ -299,7 +299,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
 | **Pre-production Reviewer** | Engineering (rotated) | - | Owns the pre-production checklist; signs off on go-live readiness. |
 | **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
-| **Vulnerability Management Lead** | Risk | "Vulnerability Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
+| **Exposure Management Lead** | Risk | "Exposure Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
 | **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
 | **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
 | **Vendor Risk Analyst** | Risk | "Vendor Risk Analyst," "Vendor Risk Analyst" | Operates [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); SCCT participation. |
@@ -338,7 +338,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Role** | **Focus** |
 |---|---|
 | Risk Pillar Leader | Pillar accountability; exposure posture reporting. |
-| Vulnerability Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns the SLAs and posture metrics. |
+| Exposure Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns the SLAs and posture metrics. |
 | Detection Engineer | CSPM / SSPM operations and detection rules. |
 | Threat Intelligence Analyst | Source curation, internal advisories, detection translation. |
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |

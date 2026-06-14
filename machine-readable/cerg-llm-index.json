@@ -1912,10 +1912,10 @@
     {
       "id": "CERG-GOV-JD-RISKOPS-001",
       "prefix": "JD",
-      "title": "Vulnerability Management Lead",
+      "title": "Exposure Management Lead",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
       "lines": [
         37733,
         37941
@@ -1923,7 +1923,7 @@
       "lines_count": 209,
       "chars": 19997,
       "tokens": 5713,
-      "summary": "Job Description: Vulnerability Management Lead \u2014 responsibilities, KSAs, NICE competencies."
+      "summary": "Job Description: Exposure Management Lead \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "README-machine-readable",

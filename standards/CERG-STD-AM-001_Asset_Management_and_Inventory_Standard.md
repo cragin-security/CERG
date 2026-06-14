@@ -205,7 +205,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Endpoint Engineer** | Owns inventory accuracy for endpoint hardware and software. |
 | **Identity Engineer** | Owns the identity asset class inventory, in coordination with [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). |
 | **Asset Owners** | Named per asset. Accountable for their asset's posture, classification, lifecycle decisions, and end-of-life planning. |
-| **Vulnerability Management Lead** | Consumes the inventory as the scan population; reports inventory gaps found during scanning. |
+| **Exposure Management Lead** | Consumes the inventory as the scan population; reports inventory gaps found during scanning. |
 | **Governance Pillar Leader** | Tracks inventory-completeness metrics; cross-references this standard with the control baseline; tracks orphaned and end-of-life assets in the risk register. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 

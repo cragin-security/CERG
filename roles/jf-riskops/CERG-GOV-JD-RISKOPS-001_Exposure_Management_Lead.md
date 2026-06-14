@@ -13,17 +13,17 @@
 
 ---
 
-# Vulnerability Management Lead
+# Exposure Management Lead
 
 **Job Family:** JF-RISKOPS — Risk Operations
 **Job Level Range:** L1-L4 (CERG Grade S1-S4/M3)
-**CERG Canonical Role:** Vulnerability Management Lead (OM-001 §6.1)
+**CERG Canonical Role:** Exposure Management Lead (OM-001 §6.1)
 
 ---
 
 ## 1. Role Summary
 
-The Vulnerability Management Lead operates the Vulnerability Management Procedure. They own the vulnerability scanning program, the finding prioritization and triage process, the remediation SLAs, and the vulnerability posture metrics that feed the CISO dashboard. They ensure that every vulnerability in the environment is known, prioritized, tracked to remediation, and reported.
+The Exposure Management Lead operates the Vulnerability Management Procedure. They own the vulnerability scanning program, the finding prioritization and triage process, the remediation SLAs, and the vulnerability posture metrics that feed the CISO dashboard. They ensure that every vulnerability in the environment is known, prioritized, tracked to remediation, and reported.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -68,7 +68,7 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ## 6. NICE TKS Statement References
 
-The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-007 — Vulnerability Management Lead primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-007 — Exposure Management Lead primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -127,7 +127,7 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 
 ## 10. Success Profile
 
-A Vulnerability Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: scanning coverage is complete across all in-scope assets; vulnerability age is trending down, not up; remediation SLAs are met for each severity tier; the vulnerability register is the authoritative source of truth for exposure decisions. The lead ensures that every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
+A Exposure Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: scanning coverage is complete across all in-scope assets; vulnerability age is trending down, not up; remediation SLAs are met for each severity tier; the vulnerability register is the authoritative source of truth for exposure decisions. The lead ensures that every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
 
 ## 11. Career Path
 

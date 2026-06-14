@@ -227,7 +227,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Pre-production Reviewer** | Owns the verification-phase pre-production review and signs go-live readiness for Tier 1 and Tier 2 software. |
 | **Cloud Security Engineer** | Owns pipeline and build security where the pipeline runs on cloud infrastructure; owns IaC misconfiguration scanning. |
 | **Cryptography Engineer** | Owns the secrets management platform that software retrieves credentials from; supports rotation of exposed secrets. |
-| **Vulnerability Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
+| **Exposure Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
 | **Governance Pillar Leader** | Maintains the exceptions register for gate bypasses; tracks audit-facing evidence; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 

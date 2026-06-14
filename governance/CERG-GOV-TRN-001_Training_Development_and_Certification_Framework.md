@@ -136,7 +136,7 @@ It applies to every CERG team member. Certifications are role-dependent; the tra
 
 ### 3.3 Risk Pillar: Certification Matrix
 
-#### Vulnerability Management Lead
+#### Exposure Management Lead
 
 | Grade | Required | Recommended | Aspirational |
 |---|---|---|---|

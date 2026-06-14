@@ -217,7 +217,7 @@ The Threat Intelligence Analyst produces only products with a clear audience and
 | Flash advisory | Engineering, Risk, Governance, CISO as needed | Time-sensitive item requiring immediate awareness or action. |
 | Weekly intelligence digest | Risk and Engineering owners | Relevant trends, exploited vulnerabilities, sector activity, and follow-up reminders. |
 | Threat-model input brief | Threat modeling participants | Actor, technique, and abuse-case context for design review. |
-| Vulnerability context note | Vulnerability Management Lead | Exploitation status, weaponization, and prioritization context. |
+| Vulnerability context note | Exposure Management Lead | Exploitation status, weaponization, and prioritization context. |
 | Vendor risk note | Vendor Risk Analyst | Supplier compromise, product vulnerability, or service-risk context. |
 | Executive threat brief | CISO and Executive Sponsor | Material changes to threat exposure and decisions needed. |
 
@@ -235,7 +235,7 @@ Actionable intelligence is tracked to disposition. The Threat Intelligence Analy
 
 | **Action Type** | **Receiving Owner** | **Tracking Path** |
 |---|---|---|
-| Patch or mitigate vulnerability | Vulnerability Management Lead | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
+| Patch or mitigate vulnerability | Exposure Management Lead | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
 | Change design or control requirement | Engineering Pillar Leader or relevant Engineering role | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) or relevant standard. |
 | Add threat-model abuse case | Threat Intelligence Analyst | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md). |
 | Reassess supplier | Vendor Risk Analyst | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
@@ -429,7 +429,7 @@ Intelligence products are assessed by the consumers who use them. This feedback 
 | **Mechanism** | **Description** |
 |---|---|
 | Product rating | Recipients of intelligence products are invited to rate each product on usefulness (1–5) and accuracy (1–5) |
-| Structured feedback | Quarterly, the Threat Intelligence Analyst solicits feedback from the top 5 consumers of intelligence products (e.g., Vulnerability Management Lead, Vendor Risk Analyst, Detection Engineer, CISO) |
+| Structured feedback | Quarterly, the Threat Intelligence Analyst solicits feedback from the top 5 consumers of intelligence products (e.g., Exposure Management Lead, Vendor Risk Analyst, Detection Engineer, CISO) |
 | Ad-hoc feedback | Any consumer may provide feedback at any time through the intelligence intake channel |
 
 #### Feedback Review Process
@@ -470,7 +470,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 |---|---|
 | **Risk Pillar Leader** | Accountable for this procedure and for intelligence quality, prioritization, and escalation. |
 | **Threat Intelligence Analyst** | Operates the procedure; maintains sources; triages intelligence; produces intelligence products; tracks intelligence-to-action handoffs. |
-| **Vulnerability Management Lead** | Consumes intelligence for vulnerability prioritization and remediation decisions. |
+| **Exposure Management Lead** | Consumes intelligence for vulnerability prioritization and remediation decisions. |
 | **Adversarial Testing Lead** | Uses intelligence to shape adversarial validation scope and scenarios. |
 | **Vendor Risk Analyst** | Consumes supplier and vendor intelligence; performs reassessment where needed. |
 | **OT Risk Analyst** | Supplies and consumes OT and ICS threat intelligence. |
