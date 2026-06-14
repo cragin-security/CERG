@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -279,7 +279,7 @@ In a small team, one person may hold several capabilities. In a large team, each
 
 ### 6.1 Canonical Role Roster
 
-This roster is the single source of truth for role names used throughout the CERG document library. When a standard, procedure, plan, or template refers to "the Risk Manager" or "the IR Plan Steward," it means the canonical name listed below. Documents that use a synonym (column 3) are calling the same role; the corrective action is to update the citing document to the canonical name on its next revision, not to invent a new role.
+This roster is the single source of truth for role names used throughout the CERG document library. When a standard, procedure, plan, or template refers to "the Risk Manager," it means the canonical name listed below. Documents that use a synonym (column 3) are calling the same role; the corrective action is to update the citing document to the canonical name on its next revision, not to invent a new role.
 
 Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leader - Cloud vs. Engineering Pillar Leader - OT) are scaled out from the canonical name with a parenthetical domain qualifier.
 
@@ -357,14 +357,14 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | Policy & Standards Manager | Document library curation; review cycles. |
 | Risk Register Owner | Operates [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register. |
 | Evidence Librarian | Maintains the cross-framework evidence library. |
-| Governance Pillar Leader (exercising IR Plan Steward duties) | Maintains [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md); coordinates exercises and notification clocks. |
+| Governance Pillar Leader (IR liaison) | Supports the standing IR team with evidence, reporting, regulatory context, and lessons-learned intake. The standing IR team, not CERG Governance, maintains [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md), runs IR exercises, and owns notification clocks. |
 
 ### 6.5 Shared and Rotational Roles
 
 Several roles intentionally sit between pillars and rotate:
 
 - **Architecture Review Office Hours.** Engineering + Risk on rotation.
-- **Incident Response on-call.** Risk-led with Engineering and Governance rotational coverage.
+- **Incident Response support rotation.** CERG provides Engineering, Risk, and Governance support when activated by the standing IR team; the Incident Commander owns incident decisions and IR on-call operations.
 - **Audit liaison.** Governance-led with Engineering and Risk SMEs.
 
 ---
@@ -549,6 +549,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.23 | 2026-06-14 | Governance Pillar Leader | Removed residual IR Plan Steward language and clarified that CERG provides IR support while the standing IR team owns the IR plan, exercises, notification clocks, and incident command. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
 | 1.22 | 2026-05-26 | Cyber Governance | Added Section 10.4 Knowledge Transfer and Cross-Training: cross-training log schema, documentation completeness metrics (KM-001, KM-002), cross-training expectations (KM-003, minimum 4 hours/quarter), and maturity assessment integration for domain X5 Adaptive scoring. |
 
