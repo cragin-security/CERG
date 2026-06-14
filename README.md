@@ -104,7 +104,7 @@ The full corpus is cataloged in [CAT-001](governance/CERG-GOV-CAT-001_Document_C
 - **Operational packages (7 docs)** — Business Continuity, NERC-CIP, CUI/CMMC, SOX ITGC, ISO 27001, Privacy, IR Plan
 - **Templates (10 docs)** — Risk Register, Exception Form, Risk Acceptance Memo, Intake Form, Evidence Worksheet, SSP, POA&M, Vendor Questionnaire, Board Deck, Stakeholder Survey
 - **Workforce architecture (35 docs)** — 5 job families, 27 per-role descriptions, NICE crosswalk, Job Families Overview — all derived from 11 core capabilities (see [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.0)
-- **Machine-readable artifacts (14 YAML)** — Manifests, requirements, flows, record schemas, runtime model
+- **Machine-readable artifacts (21 YAML + 1 JSON)** — LLM index, manifests, requirements, flows, record schemas, runtime model, and companion schemas
 - **Examples** — Sample organization profiles (small team, SaaS, regulated utility, MSP-heavy)
 
 ---
