@@ -13,7 +13,7 @@
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](../governance/CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) · [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) · [`CERG-PLN-SOX-001`](../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
+| **Supporting Documents** | [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) · [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](../governance/CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) · [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) · [`CERG-PLN-SOX-001`](../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
 | **Review Cycle** | Annual / After major audit, assessor, or regulator feedback |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA, PM, AU) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5, A.8 · CIS Controls v8 |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC · privacy and contractual audit obligations where applicable |
@@ -43,6 +43,8 @@
 The README assigns audit response and control evidence to Cyber Governance. The Unified Control Baseline names evidence for controls. The compliance matrix maps intent to frameworks. The operational packages for CUI, NERC-CIP, and SOX depend on durable evidence. What was missing was the operating procedure that tells the organization how evidence is collected, stored, tested, produced to auditors, and tracked when it fails. This procedure provides that machinery.
 
 This procedure governs CERG's evidence library, control-testing cadence, audit intake, evidence production, auditor response, and finding tracking. It applies to every control framework CERG supports and to every audit, assessor request, regulator request, customer security review, and internal control test that depends on CERG evidence.
+
+`CERG-GOV-AUD-001` governs evidence quality, freshness, and sampling expectations. This procedure governs the operational workflow for collecting, storing, testing, producing, and correcting evidence. Where this procedure needs to judge whether evidence is acceptable, `CERG-GOV-AUD-001` governs.
 
 > **Evidence Is Produced by Running the Program**
 >
@@ -178,8 +180,8 @@ Evidence cadence follows the control's operating cadence. Evidence is not all co
 
 | **Cadence** | **Examples** | **Owner** |
 |---|---|---|
-| Continuous or event-driven | Change approvals, vulnerability findings, risk entries, security exceptions, incidents handed off to IR. | Process owner. |
-| Monthly | Vulnerability posture, risk register review, key metrics, backup-job review where applicable. | Relevant pillar owner. |
+| Continuous or event-driven | Change approvals, exposure findings, risk entries, security exceptions, incidents handed off to IR. | Process owner. |
+| Monthly | Exposure posture, risk register review, key metrics, backup-job review where applicable. | Relevant pillar owner. |
 | Quarterly | Access reviews, control owner attestations, metric package, evidence completeness review. | Evidence Librarian with control owners. |
 | Semiannual | Disaster recovery or restore tests where applicable, privileged-access review if not quarterly. | Relevant Engineering owner. |
 | Annual | Policy and standard review, risk assessment, operational package refresh, major control test. | Governance Pillar Leader. |
@@ -208,49 +210,20 @@ Each test plan records:
 
 ### 6.2 Sampling Methodology
 
-Sampling is used when testing the full population is infeasible due to volume or cost. The objective is to draw conclusions about the population with a defined confidence level.
+Sampling for control testing follows the canonical sampling standard in [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) §5. This procedure does not maintain a separate sample-size table.
 
-#### When Sampling Is Appropriate
+The control test plan records:
 
-| **Condition** | **Use Sampling** | **Use Full Population** |
-|---|---|---|
-| Population size < 50 items | No - test all | Yes |
-| Population size 50–250 items | Yes, with minimum sample per table below | Optional |
-| Population size > 250 items | Yes | Only if automated or required by regulation |
-| Control is automated and fully logged | No - test all programmatically | Yes |
-| SOX ITGC key control | Consult SOX ITGC Lead | Often full population |
-| CMMC assessment sample | Per CMMC Assessment Guide sampling guidance | Per assessor direction |
+- population definition and size;
+- sampling method and rationale;
+- sample size and how it was determined;
+- selected items, including random seed or selection tool where random sampling is used;
+- test results per sampled item;
+- exceptions, substitutions, or untestable items;
+- regulatory, assessor, or auditor-specific sampling requirements that override the CERG default;
+- limitations or caveats.
 
-#### Minimum Sample Sizes
-
-| **Population Size** | **Minimum Sample (95% confidence, 5% margin)** | **Recommended Sample** |
-|---|---|---|
-| 50–100 | 45 | 50 |
-| 101–250 | 70 | 80 |
-| 251–500 | 80 | 100 |
-| 501–1,000 | 90 | 120 |
-| 1,001–5,000 | 95 | 150 |
-| > 5,000 | 100 | 200 |
-
-#### Selection Methods
-
-| **Method** | **When to Use** | **Description** |
-|---|---|---|
-| Random | Default for most control tests | Items selected using a random number generator or equivalent; every item has equal probability of selection |
-| Stratified | When sub-populations have different risk profiles | Population divided into strata (e.g., by environment, by asset tier); random samples drawn from each stratum proportionally |
-| Judgmental | When specific items carry disproportionate risk | Tester selects items based on risk criteria (e.g., highest-value transactions, privileged accounts, changes touching regulated scope); rationale must be documented |
-| Haphazard | Not recommended | Avoid; lacks statistical basis and is difficult to defend to an auditor |
-
-#### Documentation Requirements
-
-Every sampling decision records:
-
-- Population definition and size
-- Sampling method and rationale
-- Sample size and how it was determined
-- Selection method (including seed or tool used for random selection)
-- Confidence level target
-- Limitations or caveats
+If a regulator, assessor, auditor, or framework-specific operational package requires a different sampling method for an engagement, the engagement-specific requirement governs and the rationale is recorded in the test plan.
 
 ### 6.3 Testing Outcomes
 
