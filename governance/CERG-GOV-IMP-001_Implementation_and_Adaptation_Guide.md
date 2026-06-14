@@ -13,7 +13,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.1 |
+| **Version** | 1.11 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -230,13 +230,14 @@ Adopt every standard whose environment you operate. Skip none that apply.
 | IT / Cloud / SaaS Security | [`CERG-STD-IT-001`](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | You run any cloud or SaaS. Nearly everyone. |
 | Grid Control Systems Security | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | You operate operational technology or industrial control systems. |
 | CUI Handling | [`CERG-STD-CUI-001`](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | You handle Controlled Unclassified Information or pursue CMMC. |
-| Access Management | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Always. Every organization has identities. |
-| Secure Configuration Baseline | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Always. Every organization has systems to harden. |
-| Logging, Monitoring, and Detection | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Always. |
-| Cyber Resilience and Backup | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Always. |
-| Cryptography and Key Management | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Always. |
+| Access Management | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Required-Path for Standard and Regulated. Every organization has identities. |
+| Asset Management and Inventory | [`CERG-STD-AM-001`](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Required-Path for Standard and Regulated. Exposure management and evidence depend on owned assets. |
+| Secure Configuration Baseline | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Required-Path for Standard and Regulated. Every organization has systems to harden. |
+| Logging, Monitoring, and Detection | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Required-Path for Standard and Regulated. |
+| Cyber Resilience and Backup | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Required-Path for Standard and Regulated. |
+| Cryptography and Key Management | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Recommended for Standard; required where managed keys, certificates, encryption controls, CUI, OT, SOX, or other regulated scope applies. |
 
-If you defer a standard, record the decision and a target adoption date in the risk register. A deferred standard is an accepted risk, not a silent gap.
+If you defer an applicable standard, record the decision and a target adoption date in the risk register. A deferred applicable standard is an accepted risk, not a silent gap.
 
 ### 7.3 Choosing Operational Packages
 
@@ -247,7 +248,7 @@ Operational packages are adopted per regulator. Adopt only what applies to you.
 | NERC-CIP | [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | You are a registered entity under NERC-CIP. |
 | CUI / CMMC | [`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | You are pursuing CMMC certification. |
 | SOX ITGC | [`CERG-PLN-SOX-001`](../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | You are a public company subject to SOX. |
-| Incident Response Plan | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Always. Note this plan is owned by a standing IR team, not by CERG; see [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. |
+| Incident Response Plan | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Ensure a standing IR plan exists for every implementation. This plan is owned by the standing IR team, not by CERG; see [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. |
 
 ### 7.4 Keep the Catalog Honest
 
@@ -419,9 +420,9 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.1 |
+| **Version** | 1.11 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-27 |
+| **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
@@ -436,7 +437,8 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.1 Draft | 2026-05-27 | Cyber Governance | Added §10 Employer Brand and Talent Attraction: CERG employee value proposition, role-specific candidate messaging, structured interview guide aligned to CMP-001 competency domains, candidate evaluation rubric, and careers page guidance. Updated supporting documents to reference JA-001, CMP-001, and JD-001. |
+| 1.11 | 2026-06-14 | Governance Pillar Leader | Aligned core-standard guidance with the adoption decision tree and clarified that the IR plan is an adjacent-function requirement, not a CERG-owned package. |
+| 1.1 | 2026-05-27 | Cyber Governance | Added §10 Employer Brand and Talent Attraction: CERG employee value proposition, role-specific candidate messaging, structured interview guide aligned to CMP-001 competency domains, candidate evaluation rubric, and careers page guidance. Updated supporting documents to reference JA-001, CMP-001, and JD-001. |
 | 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Establishes the adoption model (fork, adapt, run), the Minimum Viable CERG spine, the 30/60/90-day rollout, the role-consolidation approach to scaling, document-adaptation guidance, the first-adoption sign-off workflow, and the adoption pitfalls register. |
 
 ### Review Triggers
