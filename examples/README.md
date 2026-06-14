@@ -9,6 +9,12 @@ for your [Organization Adaptation Profile](../governance/CERG-GOV-VAR-001_Organi
 |---------|--------|------|------|----------------|
 | [Regulated Utility](regulated-utility-profile/) | Electric utility | 14,000 employees | 60-person CERG | NERC-CIP, CMMC, SOX |
 
+## Operational stories
+
+| Story set | Purpose |
+|-----------|---------|
+| [Day in the Life](day-in-the-life/) | Narrative walkthroughs for common three-pillar cyber operations scenarios |
+
 More profiles coming: small-team SaaS, healthcare, manufacturing/OT, financial services, MSP-heavy nonprofit/municipality.
 
 ## Using a profile
