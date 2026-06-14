@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-STY-002 |
-| **Version** | 1.0 |
-| **Status** | Active |
+| **Version** | 1.01 |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -35,7 +35,7 @@ The following contradictions existed in the corpus at the time of the June 2026 
 
 ---
 **Generated:** 2026-06-11  
-**Status:** Active — items are resolved by amending the affected document on its next scheduled review
+**Status:** Approved tracker — items are resolved by amending the affected document on its next scheduled review
 
 ---
 
@@ -86,7 +86,7 @@ For reference when remediating the missing sections above:
 |---|---|
 | **Document ID** | <CERG-TYPE-DOMAIN-NNN> |
 | **Version** | X.X |
-| **Status** | [Draft / Approved / Retired] |
+| **Status** | [Draft / For Review / Approved / Retired] |
 | **Effective Date** | YYYY-MM-DD |
 | **Classification** | [Public / Internal / Restricted] |
 | **Owner** | [Role Name] |
@@ -141,7 +141,7 @@ The following contradictions existed in the corpus at the time of the June 2026 
 
 | Metric | Count |
 |--------|-------|
-| Total CERG documents | 72 markdown files |
+| Total CERG documents | 72 governed markdown files |
 | Documents with Document Control section | 67 (93%) |
 | Documents missing Document Control section | 5 (7%) — tracked above |
 | Documents using non-standard metadata format | 5 (7%) — tracked above |
