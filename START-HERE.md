@@ -28,9 +28,11 @@ If you are still unsure where to begin, use these four helpers before diving int
 
 ---
 
-## Path 1: CERG Lite (small team, ≤5 people, first security hire)
+## Path 1: CERG Lite (small security team, 2-8 people)
 
-**You have:** A small team. Maybe one person doing security. No existing framework.
+**You have:** A small team with at least two named participants in cyber risk decisions. No existing framework, or a framework that is not yet operational.
+
+If you are a one-person security function, use CERG as a planning reference and adopt the MVC documents only after you have an Executive Sponsor and an independent approver for High/Critical risk decisions.
 
 **Your goal:** Stand up a real program without drowning in documents.
 
@@ -49,6 +51,8 @@ If you are still unsure where to begin, use these four helpers before diving int
 
 ### Your MVC set
 
+Adopt these eight documents first:
+
 1. Cybersecurity Policy
 2. CERG Framework
 3. Operating Model (focus on §6, role consolidation)
@@ -57,7 +61,8 @@ If you are still unsure where to begin, use these four helpers before diving int
 6. Risk Register & Exception Process
 7. Risk Register Templates
 8. Exposure Management Procedure
-9. Record Catalog and Role-Based Implementation Checklists as adoption aids
+
+Use the Record Catalog, Adoption Safety Guide, Small Team Adoption Path, and Role-Based Implementation Checklists as adoption aids. They help you adopt the MVC; they are not additional MVC requirements.
 
 ### What you can defer
 
@@ -82,12 +87,12 @@ If you are still unsure where to begin, use these four helpers before diving int
 2. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4-5. Follow the MVC sequence plus core standards.
 3. **Map your current documents to CAT-001.** What do you already have that maps to a CERG artifact? What's missing?
 4. **Adopt the spine (8 MVC docs) first.** Adapt them to your organization — not the other way around.
-5. **Layer core standards next:** Access Management, Configuration Baseline (DISH), IT/Cloud/SaaS, Logging/Monitoring.
+5. **Layer core standards next:** Access Management, Asset Management, Configuration Baseline (DISH), IT/Cloud/SaaS where applicable, Logging/Monitoring, and Resilience/Backup.
 6. **Add Architecture Review and TPRM procedures.** These are the two procedures that prevent the most future pain.
 
 ### Your starting set
 
-MVC (all 8) + Access Standard, Config Baseline Standard, IT/Cloud/SaaS Standard, Logging/Monitoring Standard + Architecture Review Procedure, TPRM Procedure.
+MVC (all 8) + Access, Asset, Config Baseline, IT/Cloud/SaaS where applicable, Logging/Monitoring, and Resilience/Backup standards + Architecture Review Procedure, TPRM Procedure.
 
 ---
 
