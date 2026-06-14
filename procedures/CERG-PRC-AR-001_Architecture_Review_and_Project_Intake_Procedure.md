@@ -196,6 +196,19 @@ The Intake reviewer (CERG Engineering) determines:
 
 A Scope Determination is recorded against the project and visible to the team within five business days.
 
+### 5.3 Review Path and SLC Tier Crosswalk
+
+The review path determines how much review is required. The SLC tier determines the response clock published to the business in [`CERG-GOV-SLC-001`](../governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md). Intake records both values.
+
+| **AR Review Path** | **Default SLC Tier** | **Examples** | **Notes** |
+|---|---|---|---|
+| Mandatory | Tier 1 | OT / BES, CUI, Restricted-data SaaS, new cloud account, new internet-facing service, AI with sensitive data | Use Tier 2 only if the mandatory trigger is narrow, low-blast-radius, and non-regulated. |
+| Mandatory | Tier 2 | Standard internal application, material change to an existing non-regulated system, new vendor integration without Restricted data | Full review required, but lower urgency / complexity than Tier 1. |
+| Lightweight | Tier 3 | Reuse of approved pattern, pre-approved IaC module, added capacity to reviewed system | Checklist and evidence review; no full Phase 2 unless the reviewer escalates. |
+| Out of Scope | N/A | Pure UX change, routine patching, configuration change within approved baseline | Record disposition only; no SLC review clock beyond intake acknowledgement. |
+
+Where the review path and SLC tier appear to disagree, the Engineering Pillar Leader records the rationale. Regulated scope, new trust boundaries, and Restricted-data placement always bias upward.
+
 ---
 
 ## 6. Phase 2: Architecture Review and Threat Model
@@ -246,7 +259,7 @@ THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
 
 ### 6.3 Phase 2 SLA
 
-Phase 2 review (Architecture Review and Threat Model) is completed within 10 business days of Phase 1 Scope Determination. Extensions may be granted by the Engineering Pillar Leader for complex systems (e.g., multi-cloud, OT-integrated, or CUI-scope systems with novel architecture). The project team is notified of any extension with rationale within the original SLA window.
+Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assigned at intake: Tier 1 within 10 business days, Tier 2 within 7 business days, and Tier 3 within 5 business days where Phase 2 is required. Extensions may be granted by the Engineering Pillar Leader for complex systems (e.g., multi-cloud, OT-integrated, or CUI-scope systems with novel architecture). The project team is notified of any extension with rationale within the original SLA window.
 
 ### 6.4 Phase 2 Output
 
