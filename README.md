@@ -14,8 +14,8 @@ You do not adopt 70+ documents in week one. You adopt the spine first. Pick the 
 
 | Path | Audience | Starting set | First 30 days |
 |------|----------|-------------|---------------|
-| **CERG Lite** | Small team (≤5 people), first security hire | MVC only (8 docs) | Policy, Operating Model, RMF, Risk Register, VM Procedure |
-| **CERG Standard** | Existing security team (6-30 people) | MVC + core standards + AR/TPRM | Lite start + Access, Config, IT/Cloud standards, Architecture Review, TPRM |
+| **CERG Lite** | Small security team (2-8 people) or early security function | MVC only (8 docs) + adoption aids | Policy, Framework, Operating Model, RMF, Risk Register, VM Procedure, Record Catalog |
+| **CERG Standard** | Existing security team (6-30 people) | MVC + core standards + AR/TPRM | Lite start + Access, Asset, Config, IT/Cloud, Logging, Resilience standards; Architecture Review; TPRM |
 | **CERG Regulated** | NERC-CIP, CMMC, SOX, OT environments | Standard + overlays/packages | Standard start + relevant operational packages (CIP, CUI/CMMC, SOX) |
 
 ### Minimum Viable CERG (the spine)
@@ -87,7 +87,7 @@ Different roles need different entry points:
 | **Governance / Compliance Lead** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) → [RACI](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) → [RMF](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
 | **Risk Lead** | [Risk Management Framework](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | [Exposure Management Procedure](procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) → [Risk Register](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) → [Third-Party Risk](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Engineering Lead** | [Architecture Intake](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [IT/Cloud Standard](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) → [Access Standard](standards/CERG-STD-AC-001_Access_Management_Standard.md) → [Config Baseline](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-| **Small Org Adopter (≤5 people)** | [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | [Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) → [Role Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) → [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
+| **Small Org Adopter (2-8 people)** | [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | [Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) → [Role Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) → [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
 | **Auditor / Assessor** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) → [Control Baseline](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) → [Evidence Procedure](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
 
 ---
@@ -98,7 +98,7 @@ The full corpus is cataloged in [CAT-001](governance/CERG-GOV-CAT-001_Document_C
 
 - **Spine (8 docs)** — Policy, Framework, Operating Model, Catalog, RMF, Risk Register, Risk Templates, VM Procedure
 - **Governance instruments (32 docs)** — Control Baseline, Compliance Matrix, Risk Taxonomy, Metrics, Calendar, Style Guide, Traceability, Evidence Quality, Maturity Assessment, Crown Jewel Register and Scenario Library, CERG Service-Level Commitments, and workforce documents (Job Architecture, Descriptions, Competency Model, Performance, Workforce Planning, Succession, Training, Onboarding, Contractor Integration, Program Improvement)
-- **Adoption & scaling (3 docs)** — Implementation Guide, Adoption Safety Guide, Small Team Adoption Path
+- **Adoption & scaling (6 docs)** — Implementation Guide, Adoption Safety Guide, Small Team Adoption Path, Implementation Cards, Adoption Decision Tree and Dependency Matrix, Role-Based Implementation Checklists
 - **Standards (15 docs)** — Access, Configuration (DISH), Cryptography, CUI, IT/Cloud/SaaS, Logging/Monitoring, OT/Grid, Resilience/Backup, Asset Management, Data Governance, Network Segmentation, Endpoint/Mobile, Email/Messaging, AI Security, Secure Development
 - **Procedures (12 docs)** — Architecture Review, Access Runbook, Adversarial Validation, Risk Register, TPRM, Exposure Management, Change Management, Audit/Evidence, Threat Intelligence, Threat Modeling, Lessons Learned
 - **Operational packages (7 docs)** — Business Continuity, NERC-CIP, CUI/CMMC, SOX ITGC, ISO 27001, Privacy, IR Plan
