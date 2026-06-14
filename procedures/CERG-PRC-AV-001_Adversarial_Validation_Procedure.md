@@ -43,7 +43,7 @@
 
 ## 1. Purpose and Scope
 
-The Cybersecurity Policy requires periodic adversarial testing. The vulnerability procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model, scope, rules, safety, finding routing, evidence, for adversarial validation was implicit.
+The Cybersecurity Policy requires periodic adversarial testing. The exposure management procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model, scope, rules, safety, finding routing, evidence, for adversarial validation was implicit.
 
 This procedure makes it explicit. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
 

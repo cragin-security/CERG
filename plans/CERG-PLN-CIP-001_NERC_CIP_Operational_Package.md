@@ -142,7 +142,7 @@ CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`C
 
 ## 7. OT Exposure Management Procedure (`CERG-PRC-VM-001`)
 
-The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
+The enterprise exposure management procedure ([`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
 
 ### 7.1 Identification
 
