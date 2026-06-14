@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.0 |
+| **Version** | 2.01 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -118,7 +118,7 @@ Each of these has different operational and audit implications. Collapsing them 
 | **Engineering Pillar Leader** | Implements treatments on assets it owns or supports. Defines secure configuration baselines. Provides architectural guidance for compensating controls. |
 | **System / Asset Owners** | Accountable for treatment of exposures on assets they own. Approve maintenance windows, accept residual risk. |
 | **IT / OT Operations Teams** | Execute treatment actions. Coordinate maintenance windows. Validate restoration. |
-| **CISO** | Approves Critical risk acceptances. Reviews exposure posture on defined cadence. |
+| **CISO** | Approves High and Critical risk acceptances where required by the canonical RMF authority table. Reviews exposure posture on defined cadence. |
 
 ---
 
@@ -432,6 +432,7 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
+| 2.01 | 2026-06-14 | Governance Pillar Leader | Aligned CISO risk-acceptance role language to the canonical RMF authority table. |
 | 2.0 | 2026-06 | CERG Risk | Major revision: shift from exposure management to exposure management. Introduced 6-step state model (Observed→Verified), classification taxonomy (Non-issue/Hygiene Debt/Confirmed Flaw/Confirmed Exposure/Material Risk), separation of patch hygiene from exposure management, new exposure-focused metrics. |
 | 1.0 | 2026-05 | CERG Risk | Initial release |
 
@@ -463,4 +464,4 @@ Annual review or upon: material tooling change, regulatory SLA change, internal 
 
 ---
 
-_CERG-PRC-VM-001 · Version 2.0 · PUBLIC_
+_CERG-PRC-VM-001 · Version 2.01 · PUBLIC_
