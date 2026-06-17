@@ -502,7 +502,7 @@ The record supports regulatory compliance (NERC-CIP CIP-004 requires documented 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-27 | Cyber Governance | Initial release. Defines three-tier certification matrix (Required, Recommended, Aspirational) for all 18 CERG roles across all grades plus management track addendum. Provides training curriculum organized by CMP-001 competency domain at Foundational/Intermediate/Advanced levels. Establishes 5% cross-training standard, per-person professional development budget guidelines ($3K-$10K+), conference attendance criteria, and training administration framework. |
+| 1.0 Draft | 2026-05-27 | Cyber Governance | Initial release. Defines three-tier certification matrix (Required, Recommended, Aspirational) for canonical CERG roles across all grades plus management track addendum. Provides training curriculum organized by CMP-001 competency domain at Foundational/Intermediate/Advanced levels. Establishes 5% cross-training standard, per-person professional development budget guidelines ($3K-$10K+), conference attendance criteria, and training administration framework. |
 
 ### Review Triggers
 
