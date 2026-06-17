@@ -28,7 +28,7 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 **For new documents or structural changes**: open an issue first so the approach can be discussed before you invest in a full draft. Include the proposed Document ID, which pillar owns it, and which existing documents it cross-references.
 
-**For everything**: make sure `python3 tools/cerg-validate.py` passes with 0 errors before submitting. Warnings (43 pre-existing PLACEHOLDER_IN_APPROVED) are acceptable; errors are not.
+**For everything**: make sure `python3 tools/cerg-validate.py` passes with 0 errors before submitting. Warnings should be resolved before submitting unless they are intentionally documented and accepted by maintainers; errors are not acceptable.
 
 ## Document conventions (quick reference)
 
@@ -37,7 +37,7 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 - **Editing**: do NOT use the `patch` tool on CERG docs — the `---` separator and `**Version**`/`**Status**` table headers collide. Use line-targeted Python via `execute_code`, reading with `open(path).read()`.
 - **Links**: resolve relative to the source file's directory. Files in `governance/` linking to other `governance/` files use bare filenames. Files in `governance/` linking to `procedures/` use `../procedures/FILENAME.md`.
 - **No em dashes** in prose (STY-001 §9.2). Use hyphens or restructure.
-- **No bare placeholders** in Approved documents. Use "preliminary default requiring organizational calibration" with a stated basis, per RMF-001 §12.
+- **No bare unfilled values** in Approved documents. Use "preliminary default requiring organizational calibration" with a stated basis, per RMF-001 §12.
 
 ## Code of conduct
 
