@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 118 artifacts
+# Generated from document metadata | 121 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-AUD-001
@@ -1188,6 +1188,39 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: 'Engineering Pillar Leader (Application Security)'
+  release_date: 2026-06-17
+
+- document_id: CERG-TMPL-AI-001
+  source_path: templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-17
+
+- document_id: CERG-TMPL-AI-002
+  source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-17
+
+- document_id: CERG-TMPL-AI-003
+  source_path: templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Application Security Engineer
   release_date: 2026-06-17
 
 - document_id: CERG-TMPL-AR-001
