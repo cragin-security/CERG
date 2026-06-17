@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.36 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -372,6 +372,9 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Approved |
 | [`CERG-TMPL-TPRM-001`](../templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Approved |
 | [`CERG-TMPL-RM-003`](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Approved |
+| [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) | AI Intake and Sanctioning Template | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) | Sanctioned AI Tools Register Template | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) | AI System and Model Register Template | Application Security Engineer | Approved |
 | [`CERG-TMPL-AUD-001`](../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Approved |
 | [`CERG-TMPL-MTR-001`](../templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Approved |
 | [`CERG-TMPL-GOV-001`](../templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Approved |
@@ -496,7 +499,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.36 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -513,6 +516,9 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.38 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-003 as the AI system and model register template. |
+| 1.37 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-002 as the sanctioned AI tools register template. |
+| 1.36 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-001 as the standalone AI intake and sanctioning template. |
 | 1.35 | 2026-06-14 | Governance Pillar Leader | Removed duplicate Table of Contents entries after the machine-readable artifact update. |
 | 1.36 | 2026-06-17 | Governance Pillar Leader | Added CERG-TMPL-SAAS-001 (SaaS Evidence Collection Checklist) and CERG-TMPL-SBOM-001 (SBOM Evidence Collection Checklist) to Section 5.6. Updated TPRM procedure §11 with tiered SBOM requirements and internal CI/CD generation. Extended STD-AC-001 §11 with NHI/ITDR requirements. Extended STD-IT-001 §5.4-5.5 with tiered SaaS controls and tenant baselines. Added machine-readable/cerg-sbom-schema.yaml and tools/sbom-generate.sh. Fixed cerg-validate.py duplicate main(). |
 | 1.34 | 2026-06-14 | Governance Pillar Leader | Updated machine-readable artifact inventory language to reflect regenerated local manifests, canonical paths, and the full LLM index. |

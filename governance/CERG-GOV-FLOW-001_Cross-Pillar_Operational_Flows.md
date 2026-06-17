@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -405,6 +405,7 @@ Ensure that new systems and major changes enter production with known scope, req
 - Asset class
 - Data classification
 - Regulatory scope
+- AI use category, model/provider, and proposed agency boundary where AI is in scope
 - Hosting environment
 - External dependencies
 - Privilege model
@@ -420,6 +421,16 @@ Projects are triaged into one of three review tiers based on risk characteristic
 | **T1 — Full Review** | Internet-exposed, regulated-scope, sensitive data, OT/safety impact, new platform pattern, high-risk third-party, complex privileged path | Full Phase 2-4 per PRC-AR-001 | Full architecture review | Full threat model | Governance issues Conformance Scope Statement |
 | **T2 — Lightweight Review** | Internal service on reviewed platform, reuse of approved architecture pattern, capacity addition to reviewed system, non-sensitive data, no regulatory scope | Checklist review per PRC-AR-001 §4 | Checklist-based architecture review | Threat model review (confirm existing model covers change) | Governance confirms existing conformance applies |
 | **T3 — Automated-Only** | Pre-approved change pattern (e.g., config update within baseline, dependency bump within allowed range), citizen-development platform app, pipeline already enforces SAST/policy-as-code/CSPM gates | Automated gates only; no manual review | Automated SAST + policy-as-code pass = architecture review satisfied | N/A (platform-level threat model covers) | Automated CSPM posture check = conformance satisfied |
+
+### AI Routing Rules
+
+When AI is in scope, the Project Intake Record links to an AI intake record using [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) or an equivalent local record. Routing is based on the AI use case, data classification, and agency boundary:
+
+- **Consumed AI services** may follow T2 or a pre-approved architecture pattern when the use case, user population, and maximum data classification match the sanctioned AI tools register.
+- **Built AI, embedded AI, AI agents, model-serving platforms, RAG systems, or AI with consequential action capability** default to T1 unless Engineering documents why an approved pattern fully covers the use.
+- **AI processing Confidential, Restricted, CUI, BES Cyber System Information, SOX-relevant data, personal data at material scale, or safety-impacting data** requires Governance conformance review and Risk participation.
+- **AI-enabled vendor features** trigger third-party reassessment when the feature changes data use, training, retention, subprocessors, user population, or decision impact.
+- Approved consumed AI tools update the sanctioned AI tools register using [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md). Built or embedded AI systems update the AI system and model register using [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md).
 
 ### Workflow (by Tier)
 
@@ -454,6 +465,8 @@ Risk participation is required when one or more of the following are true:
 - High-risk third-party dependency present
 - Complex privileged path present
 - OT or safety impact present
+- AI system has autonomous or tool-using agency beyond draft/recommendation
+- AI use expands beyond the sanctioned tool's approved use case, user population, or maximum data classification
 
 ### Allowed Dispositions
 - Approved for go-live
@@ -480,6 +493,8 @@ Risk participation is required when one or more of the following are true:
 - Threat Model Record
 - Conformance Scope Statement
 - Production Handoff Security Summary
+- AI Intake and Sanctioning Record where AI is in scope
+- Sanctioned AI Tools Register entry or AI System and Model Register entry where AI is approved
 
 ### Escalation
 - Go-live requested while blocked → escalate to CISO
@@ -1187,9 +1202,9 @@ Implement:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-11 |
+| **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
@@ -1204,6 +1219,7 @@ Implement:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-17 | Governance Pillar Leader | Added AI routing rules to F-02, including AI intake, sanctioned-tool register, system/model register, and escalation criteria for sensitive data, regulated scope, consequential decisions, and autonomous agency. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Seven cross-pillar operational flows, five shared state models, five minimum record templates, LLM execution directives, and recommended implementation sequence. |
 
 ### Review Triggers
@@ -1228,5 +1244,9 @@ Governance owns this document. The Governance Pillar Leader is responsible for i
 | Metrics and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metric definitions and reporting cadence |
 | Annual Calendar | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Operating rhythm and cadence |
 | Architecture Review Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project intake and architecture review process |
+| Artificial Intelligence Security Standard | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Governs AI use categories, AI-specific threats, sanctioned tools, and shadow AI |
+| AI Intake and Sanctioning Template | [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) | Required AI intake record for F-02 where AI is in scope |
+| Sanctioned AI Tools Register Template | [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) | Register updated when consumed AI tools are approved |
+| AI System and Model Register Template | [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) | Register updated when built or embedded AI systems are approved |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception and risk acceptance workflow |
 | Incident Response Plan | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Standing IR procedures |

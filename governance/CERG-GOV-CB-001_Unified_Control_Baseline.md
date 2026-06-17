@@ -9,16 +9,16 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 1.21 |
+| **Version** | 2.0 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
-| **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version) |
-| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 |
+| **Supporting Standards** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-AI-001](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) |
+| **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version, AI governance framework change) |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 · NIST AI RMF 100-1 · ISO/IEC 42001 |
 | **Regulations** | NERC-CIP v7 (and CIP-015 draft) · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
-| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI, AI-enabled systems |
 
 ---
 
@@ -273,6 +273,7 @@ Overlays add to the organizational baseline. They never silently relax it.
 | **SOX ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | STD-IT-001 + PLN-SOX-001 |
 | **OT Safety** | OT systems whose disruption can cause safety impact | Stricter change/maintenance windows, no active scanning, mandatory engineering review for any policy/standard parameter relaxation. | STD-OT-001 |
 | **Crown-Jewel** | Tier 0 / Tier 1 crown-jewel assets (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) | Verified minimum control profile: tested recovery with backup outside the blast radius, phishing-resistant identity, enumerated segmentation, ATT&CK-mapped day-one detection, and adversarial validation at enhanced frequency. Verified, not assumed. | CJ-001 §3.3 |
+| **AI** | Consumed AI services, AI-enabled vendor features, embedded AI, built AI systems, AI agents, model-serving platforms, and retrieval-augmented systems | AI intake and sanctioning; maximum approved data classification; sanctioned-tools register; model/system inventory; model provenance; prompt/data egress controls; human oversight; AI-specific threat modeling; agency and least-privilege boundaries; vendor reassessment on AI feature changes. | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) + [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) / [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) / [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) |
 
 > **Multiple Overlays at Once**
 >
@@ -387,6 +388,7 @@ The §8 overlays carry additional crosswalks. Subordinate operational packages o
 | BES | NERC-CIP v7 (CIP-002 through CIP-014; CIP-015 INSM where applicable) | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
 | SOX ITGC | SOX §404 ITGC (Access, Change, Operations) | [`CERG-PLN-SOX-001`](../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
 | OT Safety | IEC 62443; NIST 800-82r3 | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
+| AI | NIST AI RMF 100-1; ISO/IEC 42001; privacy, CMMC, SOX, and sector obligations where AI processes regulated data or supports regulated decisions | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) + [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) / [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) / [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) |
 
 ---
 
@@ -478,7 +480,7 @@ This baseline follows semantic-ish versioning:
 
 | Version Bump | When | Examples |
 |---|---|---|
-| **Major** (`x.0`) | Whole-baseline restructure, framework retirement (e.g., 800-53r5 → r6 migration), introduction of a new overlay class | Future r6 migration; addition of an AI overlay |
+| **Major** (`x.0`) | Whole-baseline restructure, framework retirement (e.g., 800-53r5 → r6 migration), introduction of a new overlay class | Future r6 migration; addition of an overlay class such as AI |
 | **Minor** (`1.x`) | New control, new overlay parameter, change to evidence catalog (§9), new crosswalk entry (§10) | Adding a new ATT&CK-derived detection control to AU family |
 | **Patch** (`1.0.x`) | Clarifying language, typo fix, cross-reference correction, no semantic change | Hyperlink fix, role-name normalization |
 
@@ -495,25 +497,26 @@ When a control in §6 or an overlay in §8 changes, Governance issues a "ripple 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 1.21 |
+| **Version** | 2.0 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-01 |
+| **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
+| **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version, AI governance framework change) |
 | **Next Scheduled Review** | 2027-05-01 |
-| **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; CIS Controls v8; ISO/IEC 27001 A.5-A.8 |
+| **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; CIS Controls v8; ISO/IEC 27001 A.5-A.8; NIST AI RMF 100-1; ISO/IEC 42001 |
 | **Regulations** | NERC-CIP v7 (and CIP-015 draft); CMMC L2; SOX ITGC |
-| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI, AI-enabled systems |
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), control status decision tree (§7), overlay matrix (§8), control-to-evidence mapping (§9), regulatory crosswalks (§10), governance/change/versioning rules (§11), and document control (§12). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
+| 2.0 | 2026-06-17 | Cyber Governance | Added the AI overlay to the overlay matrix and regulator mapping, linking AI control evidence to STD-AI-001 and the AI intake, sanctioned-tools, and system/model register templates. |
 | 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and normalized section numbering to align with the current corpus structure. |
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), control status decision tree (§7), overlay matrix (§8), control-to-evidence mapping (§9), regulatory crosswalks (§10), governance/change/versioning rules (§11), and document control (§12). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
 
 ### Related Documents
 
@@ -533,3 +536,7 @@ When a control in §6 or an overlay in §8 changes, Governance issues a "ripple 
 | Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Underlying recovery posture cited by CP-* |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Underlying crypto posture cited by IA-5 |
 | Access Management Standard | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Underlying access posture cited by AC-* and IA-2 |
+| Artificial Intelligence Security Standard | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Source standard for the AI overlay |
+| AI Intake and Sanctioning Template | [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) | Intake evidence for proposed AI use under the AI overlay |
+| Sanctioned AI Tools Register Template | [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) | Register evidence for approved AI tools and maximum data classification |
+| AI System and Model Register Template | [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) | Inventory evidence for built and embedded AI systems, models, data sources, and agency boundaries |

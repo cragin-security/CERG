@@ -48,7 +48,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.35
+  version: 1.38
   status: Approved
   classification: Public
   publication_profile: public
@@ -57,7 +57,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: fb90d6192611e8ab194a7f031e8a116b9eeb42378c137af2677180cbaaab6340
+  source_hash: ade7b03b24ce4fd6ad6cfd00897cbfe57a8104077d420f4fdf07fc10d6eebbea
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -88,7 +88,7 @@
   title: Unified Control Baseline
   document_type: governance_instrument
   domain: CB
-  version: 1.21
+  version: 2.0
   status: Approved
   classification: Public
   publication_profile: public
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: eda7e1c99e738c1d6926874eab691b3215d8ce3788d4d9737ba3be9905ad0bc0
+  source_hash: 8cb5c0036d9e70372ab9a337960c3283090108d2eb219b921463985abb3cff0d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   llm_include: true
   llm_priority: medium
@@ -228,7 +228,7 @@
   title: Cross-Pillar Operational Flows
   document_type: governance_instrument
   domain: FLOW
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -237,7 +237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   source_file: CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
-  source_hash: a886248525a280c1bf3bf96355053c6fd4d6755f7b0a809b7b87181e80a3958f
+  source_hash: 97479d896a51f48aca255dda495297dacb172bb91381b215ac900f15e32d62fe
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   llm_include: true
   llm_priority: medium
@@ -368,7 +368,7 @@
   title: Adoption Decision Tree and Dependency Matrix
   document_type: governance_instrument
   domain: IMP
-  version: 1.01
+  version: 1.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -377,7 +377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   source_file: CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
-  source_hash: b80b76b32f741f6d3165906be151bc26abe53c41616412bdbbc2f6768c506bd3
+  source_hash: 06f1657d5cedb46be2cb860db324a2e169cd6d92dca695a2a8b03e12cbb7f445
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -1888,7 +1888,7 @@
   title: Artificial Intelligence Security Standard
   document_type: standard
   domain: AI
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1897,7 +1897,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
   source_file: CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
-  source_hash: 6b110ab9e70b8ac7dc18eba4a912bc6a64595a9a8b0f330c9ec2364e74c863c0
+  source_hash: c787f4574712867afda32a548bc2a4d718ac3e8479184d877199d393c218746f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2164,6 +2164,66 @@
   normative_weight: supporting
   pillar: engineering
   summary: Secure Software Development and Application Security Standard
+- document_id: CERG-TMPL-AI-001
+  title: AI Intake and Sanctioning Template
+  document_type: template
+  domain: AI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
+  source_path: templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
+  source_file: CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
+  source_hash: eab7d7a169fb60dc03afef87523acb7849945c9460011dabf92f17de5c893c6d
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: AI Intake and Sanctioning Template
+- document_id: CERG-TMPL-AI-002
+  title: Sanctioned AI Tools Register Template
+  document_type: template
+  domain: AI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
+  source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
+  source_file: CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
+  source_hash: a7996d743c1312684ea1c36ec5c93b3250c6a3d050ce09077f7638685165d005
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Sanctioned AI Tools Register Template
+- document_id: CERG-TMPL-AI-003
+  title: AI System and Model Register Template
+  document_type: template
+  domain: AI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Application Security Engineer
+  approval_authority: Application Security Engineer
+  parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
+  source_path: templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
+  source_file: CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
+  source_hash: 26c6486cf3cc65e82872e887b0d95774ca0fd8df8bf93e3d76310c3537630b6c
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: AI System and Model Register Template
 - document_id: CERG-TMPL-AR-001
   title: Architecture and Project Intake Form
   document_type: template
