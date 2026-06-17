@@ -32,11 +32,13 @@
 3. [Cyber Engineering](#3-cyber-engineering)
 4. [Cyber Risk](#4-cyber-risk)
 5. [Cyber Governance](#5-cyber-governance)
-6. [Targeting NIST CSF Adaptive Maturity](#6-targeting-nist-csf-adaptive-maturity)
+6. [Targeting NIST CSF Adaptive Maturity](#6-targeting-nist-csf-20-adaptive-maturity)
 7. [Regulatory Alignment](#7-regulatory-alignment)
 8. [IT/OT Considerations](#8-itot-considerations)
 9. [Team Structure and Talent Model](#9-team-structure-and-talent-model)
-10. [Getting Started, The Path to Adaptive](#10-getting-started--the-path-to-adaptive)
+10. [Getting Started, The Path to Adaptive](#10-getting-started-the-path-to-adaptive)
+11. [Compliance as Exhaust — Evidence Factories](#11-compliance-as-exhaust-evidence-factories)
+12. [Document Control](#12-document-control)
 
 ---
 
@@ -525,7 +527,24 @@ An organization operating at Adaptive maturity will demonstrate these observable
 
 ---
 
-## 11. Document Control
+## 11. Compliance as Exhaust — Evidence Factories
+
+Regulatory alignment is a byproduct of running the program well. Evidence is produced once, from operational work, then reused across frameworks. These "evidence factories" show the mapping:
+
+| Operational Work | Evidence Produced | Compliance Consumers |
+|-----------------|-------------------|---------------------|
+| Architecture review ([AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) | Design decision, data flow, control scope, pre-approved pattern match | NIST 800-53 (SA/PL), CMMC (SC), SOX ITGC, NERC-CIP CIP-005/010 |
+| Exposure management ([VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) | Finding state, exposure classification, treatment, verification | NIST 800-53 (RA/SI), CMMC (RA), NERC-CIP CIP-007, SOX ITGC |
+| SaaS onboarding ([TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md)) | Shared responsibility matrix, vendor evidence, contract clauses, SSPM posture | CMMC (SR), SOX ITGC, privacy regulations, NERC-CIP CIP-013 |
+| Access review ([AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md)) | Population reviewed, reviewer, exceptions, recertification status | SOX ITGC, CMMC (AC), NERC-CIP CIP-004 |
+| Change security routing ([FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-05) | Impact analysis, approval, test result, CAB record | SOX ITGC, NERC-CIP CIP-010, NIST 800-53 (CM) |
+| Risk acceptance ([RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7) | Risk assessment, compensating controls, business owner acceptance | NIST 800-53 (RA), CMMC (RM), NERC-CIP deviation process |
+| Incident response ([IR Plan](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) | Timeline, investigation, lessons learned, corrective actions | NIST 800-53 (IR), CMMC (IR), NERC-CIP CIP-008 |
+| Asset registration ([FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-03) | Owner confirmed, classification, coverage validated | NIST 800-53 (CM-8), CMMC (AM), NERC-CIP CIP-002 |
+
+This is where CERG can beat traditional GRC: compliance becomes exhaust from good operations, not a parallel workstream. Evidence packages are generated from operational records, not assembled from scratch before an audit. The [Compliance Calendar](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) maps each evidence factory to its production cadence.
+
+## 12. Document Control
 
 | Field | Value |
 |---|---|
@@ -563,28 +582,5 @@ An organization operating at Adaptive maturity will demonstrate these observable
 | Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine |
 | Implementation Cards | [CERG-GOV-IMP-004](CERG-GOV-IMP-004_Implementation_Cards.md) | Intent-to-implementation guidance |
 | Edge Register | [CERG-GOV-EDG-001](CERG-GOV-EDG-001_Edge_Register.md) | Organizational edge management |
-
----
-
-## 11. Compliance as Exhaust — Evidence Factories
-
-Regulatory alignment is a byproduct of running the program well. Evidence is produced once, from operational work, then reused across frameworks. These "evidence factories" show the mapping:
-
-| Operational Work | Evidence Produced | Compliance Consumers |
-|-----------------|-------------------|---------------------|
-| Architecture review ([AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) | Design decision, data flow, control scope, pre-approved pattern match | NIST 800-53 (SA/PL), CMMC (SC), SOX ITGC, NERC-CIP CIP-005/010 |
-| Exposure management ([VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) | Finding state, exposure classification, treatment, verification | NIST 800-53 (RA/SI), CMMC (RA), NERC-CIP CIP-007, SOX ITGC |
-| SaaS onboarding ([TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md)) | Shared responsibility matrix, vendor evidence, contract clauses, SSPM posture | CMMC (SR), SOX ITGC, privacy regulations, NERC-CIP CIP-013 |
-| Access review ([AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md)) | Population reviewed, reviewer, exceptions, recertification status | SOX ITGC, CMMC (AC), NERC-CIP CIP-004 |
-| Change security routing ([FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-05) | Impact analysis, approval, test result, CAB record | SOX ITGC, NERC-CIP CIP-010, NIST 800-53 (CM) |
-| Risk acceptance ([RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7) | Risk assessment, compensating controls, business owner acceptance | NIST 800-53 (RA), CMMC (RM), NERC-CIP deviation process |
-| Incident response ([IR Plan](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) | Timeline, investigation, lessons learned, corrective actions | NIST 800-53 (IR), CMMC (IR), NERC-CIP CIP-008 |
-| Asset registration ([FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-03) | Owner confirmed, classification, coverage validated | NIST 800-53 (CM-8), CMMC (AM), NERC-CIP CIP-002 |
-
-This is where CERG can beat traditional GRC: compliance becomes exhaust from good operations, not a parallel workstream. Evidence packages are generated from operational records, not assembled from scratch before an audit. The [Compliance Calendar](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) maps each evidence factory to its production cadence.
-
-## 12. Document Control
-> 
-> **Engineering. Risk. Governance.** _Fast. Powerful. Directional._
 
 ---
