@@ -353,7 +353,7 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 | | |
 |---|---|
 | **Document ID** | CERG-STD-LM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / SIEM platform change / ATT&CK matrix update |
 | **Change Log** | 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
