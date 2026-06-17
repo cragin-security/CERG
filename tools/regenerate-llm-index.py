@@ -28,6 +28,7 @@ PREFIXES = {
     "STD": {"type": "Standard", "pillar": "engineering"},
     "PRC": {"type": "Procedure", "pillar": "risk"},
     "PLN": {"type": "Plan / Package", "pillar": "governance"},
+    "GL": {"type": "Guideline", "pillar": "governance"},
     "TMPL": {"type": "Template", "pillar": "governance"},
     "JF": {"type": "Job Family", "pillar": "workforce"},
     "JD": {"type": "Job Description", "pillar": "workforce"},
@@ -116,6 +117,8 @@ def type_and_pillar(path: Path, doc_id: str) -> tuple[str, str, str]:
         return "procedure", "risk", prefix
     if prefix == "PLN":
         return "plan", "governance", prefix
+    if prefix == "GL":
+        return "guideline", "governance", prefix
     if prefix == "TMPL":
         return "template", "governance", prefix
     if rel.parts[0] == "roles":
