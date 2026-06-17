@@ -1,0 +1,110 @@
+# cerg-sbom-schema.yaml
+# SBOM record schema for vendor software supply chain tracking
+# Derived from NTIA minimum elements + CERG extensions
+# Generated: 2026-06-17 | Owner: Governance Pillar Leader (Document Control)
+# Regenerate on any change to source documents
+
+sbom_record:
+  description: Software Bill of Materials record for a vendor-delivered or internally-built component.
+  fields:
+  - name: sbom_id
+    type: string
+    required: true
+    description: Unique identifier for this SBOM record (e.g., CERG-SBOM-<vendor>-<product>-<version>)
+  - name: vendor_name
+    type: string
+    required: true
+  - name: product_name
+    type: string
+    required: true
+  - name: product_version
+    type: string
+    required: true
+  - name: sbom_format
+    type: enum
+    values:
+    - CycloneDX
+    - SPDX
+    - Syft
+    description: Format of the source SBOM document
+  - name: sbom_source
+    type: enum
+    values:
+    - vendor_provided
+    - internally_generated
+    - third_party_scan
+    description: How this SBOM was obtained
+  - name: component_count
+    type: integer
+    required: true
+  - name: has_known_vulnerabilities
+    type: boolean
+    required: true
+  - name: critical_vuln_count
+    type: integer
+    default: 0
+  - name: high_vuln_count
+    type: integer
+    default: 0
+  - name: license_risk_flag
+    type: boolean
+    default: false
+    description: True if license compatibility review required
+  - name: embedded_secrets_flag
+    type: boolean
+    default: false
+    description: True if SBOM scan detected embedded secrets
+  - name: supply_chain_tier
+    type: enum
+    values:
+    - direct_vendor
+    - transitive_dependency
+    description: Whether this is a direct vendor deliverable or a transitive dependency
+  - name: cve_scan_date
+    type: date
+    required: true
+    description: Date of last vulnerability scan against this SBOM
+  - name: next_scan_due
+    type: date
+    description: Next scheduled scan date (per PRC-VM-001 hygiene cadence)
+  - name: associated_vendor_tier
+    type: enum
+    values:
+    - T1
+    - T2
+    - T3
+    - T4
+    - T5
+    required: true
+    description: Vendor tier per CERG-PRC-TPRM-001 Section 3
+  - name: regulatory_scope
+    type: array
+    items:
+      type: string
+    description: Applicable regulatory scopes (CUI, BCSI, SOX, NERC-CIP, PCI, PHI)
+  - name: evidence_links
+    type: array
+    items:
+      type: string
+    description: Links to source SBOM file, scan results, VEX statements
+  - name: vex_status
+    type: enum
+    values:
+    - not_applicable
+    - vulnerable_no_vex
+    - vex_provided_affected
+    - vex_provided_not_affected
+    default: not_applicable
+    description: Vulnerability Exploitability eXchange status for findings
+  - name: approval_status
+    type: enum
+    values:
+    - pending_review
+    - approved
+    - approved_with_conditions
+    - rejected
+    default: pending_review
+  - name: approver
+    type: string
+  - name: approval_date
+    type: date
