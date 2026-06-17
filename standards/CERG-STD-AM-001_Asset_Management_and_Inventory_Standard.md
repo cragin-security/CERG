@@ -143,7 +143,7 @@ Every asset is assigned a criticality tier. Criticality reflects the business an
 
 ### 7.2 Data Classification
 
-Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Until that standard is published, assets carry the data classification used by [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) for CUI scope and a simple internal scheme elsewhere.
+Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Assets in CUI scope also carry the CUI handling attributes required by [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md).
 
 ### 7.3 What Classification Drives
 
