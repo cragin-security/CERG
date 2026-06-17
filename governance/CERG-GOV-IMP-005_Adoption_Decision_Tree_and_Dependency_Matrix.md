@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.02 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -239,16 +239,33 @@ Exit criteria:
 
 ### Gate 2: Operating
 
-The organization is producing recurring security work.
+The organization is producing recurring security work from the MVC spine.
 
 Exit criteria:
 
-- Vulnerability cycle running.
-- Risk exceptions and acceptances follow procedure.
-- Project intake or architecture review exists.
-- Asset inventory has owners.
-- Evidence index exists.
-- First metrics report produced.
+- At least two recurring risk register reviews completed, including recorded decisions, owners, and next actions.
+- Exposure or vulnerability management cycle running with SLA metrics produced for at least two cycles.
+- Risk exceptions and acceptances follow [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), with no informal high-risk approvals.
+- Project intake or architecture review path exists, and at least one disposition has been issued. If no real project occurred, a tabletop review with a documented disposition is acceptable.
+- Asset inventory has owners for the assets in the initial exposure scope.
+- Evidence index exists and links risk, exposure, ownership, exception, and decision records.
+- First metrics report produced and reviewed by the CISO or equivalent security owner.
+- Each pillar has produced at least one operating record. In small teams, this means the Engineering, Risk, and Governance accountabilities are evidenced even if one person holds multiple roles.
+
+### Gate 2 to Gate 3 Transition Test
+
+The organization should not start broad standard-layer adoption until Gate 2 is stable. Gate 3 adoption begins when the CISO or equivalent security owner records that all of the following are true:
+
+| **Condition** | **Minimum Evidence** |
+|---|---|
+| Risk cadence is real | Two completed risk register reviews, or three where monthly cadence is already established. |
+| Exposure cadence is measurable | Two exposure or vulnerability cycles with SLA performance, backlog trend, and exception handling visible. |
+| Intake path works | One architecture or project intake disposition, or a tabletop disposition if no qualifying project occurred. |
+| Evidence can be found | Evidence index links the MVC records needed to explain risk, exposure, ownership, decisions, and exceptions. |
+| Pillars are operating | Engineering, Risk, and Governance have each produced at least one record or decision in their accountability area. |
+| Adoption plan exists | Standard-layer adoption plan identifies which core standards, procedures, and overlays are next, with owners and target dates. |
+
+If any condition is missing, remain at Gate 2 and fix the operating loop before adopting additional documents. Gate 3 is triggered by evidence that the MVC runs, not by the calendar reaching day 60 or day 90.
 
 ### Gate 3: Governed
 
@@ -281,7 +298,7 @@ Exit criteria:
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.02 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader |
@@ -291,6 +308,7 @@ Exit criteria:
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.03 | 2026-06-17 | Governance Pillar Leader | Added measurable Gate 2 to Gate 3 transition criteria so MVC adoption must demonstrate operating cadence before broad standard-layer adoption. |
 | 1.02 | 2026-06-17 | Governance Pillar Leader | Added AI operational templates and registers to adoption selector, dependency matrix, and default labels. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned Lite path sizing and core-standard labels with README, START-HERE, IMP-001, and IMP-003. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Adds adoption decision tree, safe tailoring rules, dependency matrix, artifact labels, and adoption gates. |
