@@ -258,7 +258,7 @@ Roles are not locked into a single grade. A "Threat Intelligence Analyst" can be
 | Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
 |---|---|---|---|---|---|---|
 | Chief Information Security Officer (CISO) | JF-EXEC | Executive | Above grade structure | N/A | Executive Cyber Leader (OG-WRL-001) | Reports to CEO/board. Not mapped to the CERG grade framework. |
-| Executive Sponsor | JF-EXEC | Business | N/A | N/A | N/A — Business-side role | Business-side role. Not a CERG employee. |
+| Executive Sponsor | JF-EXEC | Business | N/A | N/A | Business-side role outside CERG grade model | Business-side role. Not a CERG employee. |
 
 ### 7.2 Engineering Pillar
 
