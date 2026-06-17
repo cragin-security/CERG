@@ -133,6 +133,8 @@ A Detection Engineer is successful when the organization detects malicious activ
 
 ### 11.1 Within-Family Progression
 
+Within JF-RISKOPS, progression follows the Risk Operations level ladder in [JF-001 §9.2](../CERG-GOV-JF-001_Job_Families_Overview.md#92-jf-riskops--risk-operations-levels): L1 Associate Analyst/S1, L2 Analyst/S2, L3 Senior or Lead Analyst/S3, and L4 Principal Analyst/S4. Promotion evidence should show increasing ownership of risk workflows, stronger analytical judgment, documented influence on remediation or risk acceptance decisions, cross-pillar collaboration with Engineering and Governance, and mentoring of less experienced analysts. The grade definitions and progression dimensions are maintained in [JA-001 §4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#4-sme-progression-grade-definitions).
+
 ---
 
 ### 11.2 Cross-Family Movement

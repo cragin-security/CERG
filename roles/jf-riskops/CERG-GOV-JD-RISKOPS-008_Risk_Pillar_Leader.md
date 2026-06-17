@@ -133,6 +133,8 @@ A Risk Pillar Leader is successful when the Risk pillar's output drives organiza
 
 ### 11.1 Within-Family Progression
 
+Within JF-RISKOPS, the Risk Pillar Leader is the M4/Director family leadership role. Typical feeder paths are S4 Principal Analyst or Sr. Advisor roles, M3 risk operations leadership roles, or equivalent external risk leadership. Growth within this role is measured by risk posture visibility, quality of risk prioritization, reduction of unmanaged exposure, maturity of risk operations, and the ability to give the CISO defensible risk decisions. Next-step movement is generally toward CISO or broader enterprise risk/security executive accountability, not a higher CERG grade.
+
 ---
 
 ### 11.2 Cross-Family Movement

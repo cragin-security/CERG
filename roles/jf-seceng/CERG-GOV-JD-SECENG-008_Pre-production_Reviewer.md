@@ -133,7 +133,9 @@ A Pre-production Reviewer is successful when security issues are identified and 
 
 ### 11.1 Within-Family Progression
 
----  ## 5. Risk Pillar Roles
+The Pre-production Reviewer is a rotated Engineering function rather than a permanent career destination. Progression occurs through the individual's home Engineering role under [JF-001 §9.1](../CERG-GOV-JF-001_Job_Families_Overview.md#91-jf-seceng--security-engineering-levels) and [JA-001 §7.2](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#72-engineering-pillar). Reviewer qualification is evidence of readiness for higher Engineering levels when the reviewer demonstrates consistent judgment, clear findings, reusable review patterns, and the ability to coach project teams before defects reach production.
+
+---
 
 ### 11.2 Cross-Family Movement
 

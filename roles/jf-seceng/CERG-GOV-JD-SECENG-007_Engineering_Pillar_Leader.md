@@ -133,6 +133,8 @@ An Engineering Pillar Leader is successful when the engineering organization is 
 
 ### 11.1 Within-Family Progression
 
+Within JF-SECENG, the Engineering Pillar Leader is the M4/Director family leadership role. Typical feeder paths are S4 Principal Engineer or Sr. Advisor roles, M3 Engineering Manager roles, or equivalent external security engineering leadership. Growth within this role is measured by Engineering pillar maturity, quality of reference architectures and standards, delivery through managers and senior engineers, cross-pillar trust, and contribution to CISO-level strategy. Next-step movement is generally toward CISO or broader technology/security executive accountability, not a higher CERG grade.
+
 ---
 
 ### 11.2 Cross-Family Movement

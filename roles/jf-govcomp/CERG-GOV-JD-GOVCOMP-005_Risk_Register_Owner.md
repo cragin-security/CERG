@@ -133,6 +133,8 @@ A Risk Register Owner is successful when the risk register is a decision-support
 
 ### 11.1 Within-Family Progression
 
+Within JF-GOVCOMP, this role can progress on either a senior SME path or a management path depending on organizational scale. The SME path follows L2/S2 through L4/S4 as the role gains deeper regulatory interpretation authority, audit representation capability, policy authorship, and cross-framework judgment. The management path generally runs from M1 to M3 when the role leads analysts, owns a compliance function, manages calendars and evidence operations, and contributes to budget and staffing decisions. See [JF-001 §9.3](../CERG-GOV-JF-001_Job_Families_Overview.md#93-jf-govcomp--governance--compliance-levels) and [JA-001 §7.4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#74-governance-pillar).
+
 ---
 
 ### 11.2 Cross-Family Movement

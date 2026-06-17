@@ -133,6 +133,8 @@ A Cryptography Engineer is successful when the organization's cryptographic post
 
 ### 11.1 Within-Family Progression
 
+Within JF-SECENG, progression follows the Security Engineering level ladder in [JF-001 §9.1](../CERG-GOV-JF-001_Job_Families_Overview.md#91-jf-seceng--security-engineering-levels): L1 Associate Engineer/S1, L2 Engineer/S2, L3 Senior or Staff Engineer/S3, and L4 Principal Engineer/S4. Promotion evidence should show increasing autonomy in secure design and implementation, ownership of engineering work streams, authorship or improvement of standards and reference architectures, cross-pillar influence, and mentoring of less experienced engineers. The grade definitions and progression dimensions are maintained in [JA-001 §4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#4-sme-progression-grade-definitions).
+
 ---
 
 ### 11.2 Cross-Family Movement

@@ -133,7 +133,9 @@ An Evidence Librarian is successful when evidence is treated as a managed asset 
 
 ### 11.1 Within-Family Progression
 
----  ## 7. Adjacent Roles (Incident Response)  The Incident Commander and Lead Investigator are canonical CERG roles listed in [`CERG-GOV-OM-001`](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, but they belong to the standing Incident Response team, not to CERG. Full job descriptions for these roles are maintained by the IR team.
+Within JF-GOVCOMP, Evidence Librarian progression normally follows L1 Associate/S1, L2 Specialist/S2, and L3 Senior Specialist/S3 per [JF-001 §9.3](../CERG-GOV-JF-001_Job_Families_Overview.md#93-jf-govcomp--governance--compliance-levels). The role-specific terminal grade is S3 in [JA-001 §7.4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#74-governance-pillar). Continued growth beyond S3 generally requires broadening into a Governance Advisor, Policy and Standards, Compliance Manager, or audit-facing role with wider regulatory judgment. Promotion evidence should show evidence quality improvement, reduction in audit rework, reliable evidence retrieval, and disciplined operation of the evidence lifecycle.
+
+---
 
 ### 11.2 Cross-Family Movement
 

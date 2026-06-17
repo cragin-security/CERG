@@ -130,6 +130,8 @@ A CISO is successful when the organization's cybersecurity risk is understood, a
 
 ### 11.1 Within-Family Progression
 
+The CISO is the terminal executive role in CERG's cybersecurity career architecture. Within-family progression is succession-based rather than grade-based: typical feeders include M4 pillar leaders, S4 senior advisors with executive readiness, or equivalent external cybersecurity executives. Growth within the role is measured by program maturity, board confidence, risk decision quality, budget and talent stewardship, and enterprise influence. Next-step movement is outside the CERG grade framework, such as enterprise risk executive, CIO/CTO/CRO path, or broader business executive accountability.
+
 ---
 
 ### 11.2 Cross-Family Movement

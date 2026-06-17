@@ -133,6 +133,8 @@ An Exposure Management Lead is successful when the organization knows its exposu
 
 ### 11.1 Within-Family Progression
 
+Within JF-RISKOPS, this lead role can progress on either a management path or a senior SME path depending on organizational scale. In larger teams, progression usually runs through M1 Manager to M3 Principal Manager as the role gains team leadership, KPI ownership, budget input, and cross-functional delivery scope. In smaller teams, the same title may operate as an S3-S4 expert lead, with progression shown through authoritative risk analysis, procedure ownership, measurable exposure reduction, and influence on CISO-level risk decisions. See [JF-001 §9.2](../CERG-GOV-JF-001_Job_Families_Overview.md#92-jf-riskops--risk-operations-levels) and [JA-001 §7.3](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#73-risk-pillar).
+
 ---
 
 ### 11.2 Cross-Family Movement

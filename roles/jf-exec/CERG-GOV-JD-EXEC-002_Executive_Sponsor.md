@@ -130,7 +130,9 @@ An Executive Sponsor is successful when cybersecurity is resourced and governed 
 
 ### 11.1 Within-Family Progression
 
----  ## 4. Engineering Pillar Roles
+The Executive Sponsor is a business-side accountability, not a CERG employee progression path. Selection is based on executive authority over the affected business risk, ability to commit resources, and accountability for accepted risk. The role may rotate among senior business leaders as business scope, regulatory exposure, or transformation priorities change. No CERG grade promotion is attached to this role.
+
+---
 
 ### 11.2 Cross-Family Movement
 

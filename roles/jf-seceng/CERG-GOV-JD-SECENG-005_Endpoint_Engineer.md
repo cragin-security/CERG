@@ -133,6 +133,8 @@ An Endpoint Engineer is successful when every managed device is a controlled, de
 
 ### 11.1 Within-Family Progression
 
+Within JF-SECENG, Endpoint Engineer progression normally follows L1 Associate Engineer/S1, L2 Engineer/S2, and L3 Senior Engineer/S3 per [JF-001 §9.1](../CERG-GOV-JF-001_Job_Families_Overview.md#91-jf-seceng--security-engineering-levels). The role-specific terminal grade is S3 in [JA-001 §7.2](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#72-engineering-pillar). Continued growth beyond S3 generally requires broadening into a cross-domain Engineering Advisor role, transitioning into Cloud Security Engineering or another adjacent engineering specialty, or moving to the Management track. Promotion evidence should show endpoint control ownership, measurable hardening outcomes, automation of endpoint operations, and effective partnership with Risk and Governance.
+
 ---
 
 ### 11.2 Cross-Family Movement

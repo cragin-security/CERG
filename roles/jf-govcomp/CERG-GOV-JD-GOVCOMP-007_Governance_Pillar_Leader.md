@@ -133,6 +133,8 @@ A Governance Pillar Leader is successful when the governance program enables rat
 
 ### 11.1 Within-Family Progression
 
+Within JF-GOVCOMP, the Governance Pillar Leader is the M4/Director family leadership role. Typical feeder paths are S4 Principal Governance or Compliance specialists, M3 compliance leaders, or equivalent external governance and regulatory leadership. Growth within this role is measured by audit readiness, quality of regulatory interpretation, policy system maturity, evidence reliability, and the ability to represent the organization to auditors, regulators, and the board. Next-step movement is generally toward CISO, enterprise risk leadership, or broader governance executive accountability, not a higher CERG grade.
+
 ---
 
 ### 11.2 Cross-Family Movement
