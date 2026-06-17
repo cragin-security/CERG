@@ -61,7 +61,7 @@ CERG separates two kinds of content.
 
 Adaptation is the act of replacing variable content with an organization's own values. CERG does this in two layers:
 
-1. **Tokens.** Explicit placeholders of the form `{{TOKEN_NAME}}`. Any new CERG content, and any organization-maintained content, uses tokens directly. The render tool substitutes them.
+1. **Tokens.** Explicit variable tokens of the form `{{TOKEN_NAME}}`. Any new CERG content, and any organization-maintained content, uses tokens directly. The render tool substitutes them.
 2. **The phrase map.** The V1 corpus was written before the token scheme existed, so it contains hard-coded variable phrases (for example, a specific headcount used as a scaling upper bound). The phrase map is a configurable list of those known phrases and the token each maps to. The render tool applies it so the existing corpus adapts without the source files being rewritten.
 
 The published corpus is left intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
