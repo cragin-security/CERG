@@ -324,7 +324,7 @@ A populated example is maintained in the resilience program library; the templat
 | | |
 |---|---|
 | **Document ID** | CERG-STD-RES-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / major platform change |
 | **Change Log** | 1.0 - Initial publication. Establishes recovery tiers, backup protection, restoration testing, regulated overlays, and BCP interface. |
