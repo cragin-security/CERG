@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -93,7 +93,7 @@ Regulatory obligation or OT/CUI/SOX scope exists?
 | Do privacy or data protection obligations apply? | Data governance standard, privacy operational package, security support records |
 | Do you build or operate customer-facing software? | Secure SDLC standard, threat modeling procedure, architecture intake, vulnerability disclosure considerations |
 | Do you operate OT but not NERC-CIP? | OT standard, network segmentation standard, incident/recovery plan, OT-safe evidence and testing |
-| Do you use AI tools, AI-enabled SaaS, or build AI features? | AI security standard, data governance standard, vendor risk assessment updates |
+| Do you use AI tools, AI-enabled SaaS, or build AI features? | AI security standard, data governance standard, vendor risk assessment updates, AI intake template, sanctioned AI tools register, AI system/model register where built or embedded AI exists |
 
 ---
 
@@ -166,7 +166,7 @@ These changes break the model:
 | CUI Standard | CUI Operational Package, SSP, POA&M, Access, Configuration, Logging | CUI compliance requires boundary, control, and remediation evidence. |
 | Logging and Detection Standard | Threat Intelligence, Adversarial Validation, Incident Response | Detection must be threat-informed, tested, and usable in response. |
 | Secure SDLC Standard | Architecture Review, Threat Modeling, Exposure Management | Application security requires design, build, test, and finding workflows. |
-| AI Security Standard | Data Governance, TPRM, Secure SDLC, Access | AI risk includes data, vendor features, product development, and privilege. |
+| AI Security Standard | Data Governance, TPRM, Secure SDLC, Access, AI Intake, Sanctioned AI Tools Register, AI System/Model Register where applicable | AI risk includes data, vendor features, product development, privilege, sanctioned-use decisions, and model inventory. |
 | Resilience and Backup Standard | BCDR Plan, Incident Response Plan, Asset Coverage | Recovery controls need scope, tests, and incident integration. |
 
 ### 4.4 Regulated package dependencies
@@ -205,6 +205,7 @@ CERG adopters should label adopted artifacts in their local catalog using these 
 | Access, Asset, Configuration, IT/Cloud where applicable, Logging, Resilience | Required-Path for Standard and Regulated |
 | Cryptography and Key Management | Recommended for Standard; Required-Path where managed keys, certificates, encryption controls, CUI, OT, SOX, or other regulated scope applies |
 | OT, CUI, SOX, ISO, Privacy packages | Conditional-Regulatory or Conditional-Environment |
+| AI standard and AI operational templates | Conditional-Environment when AI tools, AI-enabled SaaS, embedded AI, or built AI exists |
 | Workforce architecture documents | Recommended for Standard, Required-Path for large teams or formal hiring model |
 | Example profiles | Example |
 
@@ -280,7 +281,7 @@ Exit criteria:
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader |
@@ -290,6 +291,7 @@ Exit criteria:
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.02 | 2026-06-17 | Governance Pillar Leader | Added AI operational templates and registers to adoption selector, dependency matrix, and default labels. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned Lite path sizing and core-standard labels with README, START-HERE, IMP-001, and IMP-003. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Adds adoption decision tree, safe tailoring rules, dependency matrix, artifact labels, and adoption gates. |
 
@@ -309,3 +311,7 @@ Exit criteria:
 - [CERG-GOV-IMP-003](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) - Small Team Adoption Path
 - [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) - Organization Adaptation Profile
 - [CERG-GOV-CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) - Record Catalog
+- [CERG-STD-AI-001](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) - Artificial Intelligence Security Standard
+- [CERG-TMPL-AI-001](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) - AI Intake and Sanctioning Template
+- [CERG-TMPL-AI-002](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) - Sanctioned AI Tools Register Template
+- [CERG-TMPL-AI-003](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) - AI System and Model Register Template
