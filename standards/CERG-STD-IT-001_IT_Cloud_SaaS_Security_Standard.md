@@ -332,4 +332,5 @@ Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud
 | Cybersecurity Policy | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates and IT/OT boundary |
 | CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Peer standard - applies in addition where CUI is present |
-| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Pe
+| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Peer standard - identity and access requirements apply across IT, cloud, and SaaS environments |
+| Third-Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | SaaS onboarding, vendor evidence, and shared responsibility interface |
