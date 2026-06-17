@@ -467,7 +467,7 @@ The following documents extend this policy into workforce management and cross-p
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-POL-001 |
-| **Version** | 1.22 |
+| **Version** | 1.21 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
