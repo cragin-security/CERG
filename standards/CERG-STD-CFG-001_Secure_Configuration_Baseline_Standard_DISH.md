@@ -356,7 +356,7 @@ OT baselines lead with [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/f
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CFG-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / CIS Benchmark or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) revision |
 | **Change Log** | 1.0 - Initial publication. Establishes DISH profile, baseline catalog, and platform-specific baselines for IT, cloud, container, SaaS, and OT. |
