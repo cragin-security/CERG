@@ -151,6 +151,9 @@ CERG-GOV-FRM-001:
   - heading: 'Getting Started: The Path to Adaptive'
     tags:
     - governance
+  - heading: Compliance as Exhaust — Evidence Factories
+    tags:
+    - governance
   - heading: Document Control
     tags:
     - control
@@ -2277,20 +2280,23 @@ CERG-PLN-CIP-001:
     tags:
     - procedure
     - plan
-  - heading: BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)
+  - heading: BES Cyber System Access Management Overlay
     tags:
     - procedure
     - plan
   - heading: CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)
     tags:
     - template
-  - heading: IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)
+  - heading: IT/OT Convergence Security Architecture Guideline
     tags:
     - plan
   - heading: CIP-013 Supply Chain Risk Management Plan
     tags:
     - plan
   - heading: CIP-009 Recovery Plan Package
+    tags:
+    - plan
+  - heading: CIP-015 INSM, Forward-Looking Integration
     tags:
     - plan
   - heading: Operating Cadence and Reporting
