@@ -287,15 +287,46 @@ International access to in-scope systems and data is **denied by default**. Wher
 
 ## 11. SBOM and Software Integrity
 
-### 11.1 SBOM
+### 11.1 SBOM Collection — Tiered Requirements
 
-- Required for T1/T2 software vendors and Tier 1 commercial software products.
-- Minimum elements: NTIA minimum elements (supplier name, component name, version, dependency relationship, author, timestamp, unique identifier).
-- SBOM submitted at delivery and at every material update.
-- SBOMs scanned for known vulnerabilities; findings flow to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md).
-- SBOMs reviewed at architecture review for embedded secrets, suspect packages, and license risk.
+| **Requirement** | **T1 Vendor** | **T2 Vendor** | **T3 Vendor (Software)** | **T3 Vendor (Non-Software)** | **Internal Builds** |
+|---|---|---|---|---|---|
+| SBOM at delivery (NTIA minimum elements) | Required | Required | Required | N/A | Required (CI-generated) |
+| SBOM at material update | Required | Required | Required | N/A | Required (CI-generated) |
+| SBOM format | CycloneDX or SPDX | CycloneDX or SPDX | CycloneDX or SPDX | N/A | CycloneDX (preferred) |
+| SBOM scan for known vulnerabilities | Required (on receipt + quarterly) | Required (on receipt + semi-annual) | Required (on receipt) | N/A | Required (pipeline gate) |
+| VEX for findings | Required for Critical/High | Required for Critical/High | Recommended | N/A | Required for Critical/High |
+| License risk review | Required | Required | Recommended | N/A | Required (policy gate) |
+| Embedded secrets scan | Required | Required | Recommended | N/A | Required (pipeline gate) |
+| SBOM recorded in CERG registry (machine-readable/cerg-sbom-schema.yaml) | Required | Required | Required | N/A | Required |
+| Evidence link in TPRM tool | Required | Required | Required | N/A | Required |
 
-### 11.2 Software Integrity
+**Material update** = new minor/major version, security patch release, or dependency change affecting >10% of components.
+
+**SBOM delivery method:** Vendor provides via secure channel (TPRM portal, signed email, or API). Internal builds generate in CI/CD per Section 11.3.
+
+### 11.2 SBOM Processing Pipeline
+
+1. **Ingest:** SBOM received → validate format (CycloneDX/SPDX) → parse components
+2. **Scan:** Cross-reference components against NVD, GHSA, vendor advisories → findings → PRC-VM-001 pipeline
+3. **Enrich:** Map to `machine-readable/cerg-sbom-schema.yaml` fields → store in SBOM registry
+4. **VEX:** Request/validate VEX from vendor for Critical/High findings → record `vex_status`
+5. **Approve:** Governance reviews → `approval_status` set → evidence linked in TPRM tool
+6. **Monitor:** Quarterly re-scan for T1/T2; pipeline scan on every build for internal
+
+### 11.3 Internal SBOM Generation (CI/CD Integration)
+
+All internal production builds shall generate an SBOM as a pipeline artifact:
+
+- **Build-time:** Generate CycloneDX SBOM from lockfiles / dependency graph (Syft, Trivy, or language-native tool)
+- **Scan:** Immediate vulnerability scan against generated SBOM — fail build on Critical/High without VEX
+- **Sign:** Cosign/Sigstore sign the SBOM artifact
+- **Publish:** Push SBOM to artifact registry and CERG SBOM registry (machine-readable consumer)
+- **Gate:** Production promotion requires `approval_status = approved` for the build's SBOM
+
+Pipeline snippet reference: `tools/sbom-generate.sh` (see below).
+
+### 11.4 Software Integrity
 
 - Releases signed by the vendor; signatures verified before deployment.
 - Container images signed (cosign / sigstore); admission gate per [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) Section 7.
