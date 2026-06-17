@@ -233,7 +233,7 @@ These are baseline defaults, not statistical guarantees. Adjust based on control
 | **Random** | Preferred. Every item has equal selection probability. | Random seed or selection method. List of selected items. |
 | **Judgmental** | When specific high-risk items must be included. Supplement with random sampling of remaining population. | Rationale for judgmental selection. List of items and why each was selected. |
 | **Stratified** | When the population has distinct subgroups with different risk profiles. | Stratification criteria. Sample size per stratum. |
-| **Convenience** | Not acceptable for audit evidence. | N/A — do not use. |
+| **Convenience** | Not acceptable for audit evidence. | Not applicable; convenience sampling is prohibited. |
 
 ### Documentation Required for Every Sample
 
