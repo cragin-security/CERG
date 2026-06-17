@@ -105,7 +105,7 @@ Every control entry in the baseline carries one of the following statuses. The s
 
 > **What's Not on the List**
 >
-> "In Progress," "TBD," "Working On It," and "Vendor Says Yes" are not statuses. Every entry in the baseline maps to one of the six above. Honesty about Partially Implemented and Planned is worth far more than optimism about Implemented.
+> "In Progress," "Undetermined," "Working On It," and "Vendor Says Yes" are not statuses. Every entry in the baseline maps to one of the six above. Honesty about Partially Implemented and Planned is worth far more than optimism about Implemented.
 
 ---
 
