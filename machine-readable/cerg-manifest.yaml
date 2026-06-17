@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-14 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-06-17 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -17,7 +17,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   source_file: CERG-GOV-AUD-001_Evidence_Quality_Standard.md
-  source_hash: d0a79ac2a881535c4335558216e323187ba00673b31eb29819410f99dbb5d4c7
+  source_hash: 2896ecb39a5c9e33ad7e6d93856abd02d86127df604c2f57c0a80a13081169dc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   llm_include: true
   llm_priority: medium
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: eb10d0b72e76bef92c81fd1ee8f82226a980721a5654700eb6591c9b8957eae7
+  source_hash: 9ad0b8417ad21775a565afeed4860049f2a9b72fa44de020c08567b4493e63ac
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   llm_include: true
   llm_priority: medium
@@ -317,7 +317,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: f30fd4198d1e4f09c6d8da3114a6d387990c6509d89b5714064f041c6a18ec97
+  source_hash: e5f9e48abd82566e046cd5044ec04fef0b8c3793ab424bee76189257d1c350d0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-004_Implementation_Cards.md
   source_file: CERG-GOV-IMP-004_Implementation_Cards.md
-  source_hash: 610bd3e54cb18c5eb963c4fdc0983cc6d96c1c289dfb17610110a69a553149c2
+  source_hash: c0bfff8d5d479db238e3a7522e4e6832437ae4ada161103fb4dcffd10d561cfb
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-004_Implementation_Cards.md
   llm_include: true
   llm_priority: medium
@@ -437,7 +437,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   source_file: CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
-  source_hash: e1646532e0f6ed29d6a24a0f79c03e98ce3ad388c6468874b54f47fb7d048ba5
+  source_hash: 7c302aa978b85da8011d8637678145b184c818c20e38e64c3367678f6d49fd74
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   llm_include: true
   llm_priority: medium
@@ -457,7 +457,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md
   source_file: CERG-GOV-JD-001_CERG_Job_Descriptions.md
-  source_hash: becaff11496094902b5f80bb29a9b0c5380ba7130a6af2ea468c3688c626b339
+  source_hash: c71683747a1447c5f317755c2c754dce929a4a3c84ec9fb57fe4125f251dab9f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md
   llm_include: true
   llm_priority: medium
@@ -497,7 +497,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: 1a9c701582e96b4fd91216590a4d5ca1b37907907d095b37cf8fe374402b9885
+  source_hash: 6cc3e4e4144eecca69a2b0e950f7fb3b44ea5818404d9818565ea8216c3030b4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 018db0bd2039027c4e49304a91d7b024a94a0dfe7b463d3a1f81cf6356c634a6
+  source_hash: f6b4e340f872bee070d1eea73345e2dbe8f3ed2c0ef7e813bd5e72040b70964a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -757,7 +757,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
   source_file: CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
-  source_hash: 08e7f13f7e0ba6fb4f2a433d2bbe3389451f31567b9d4a2b4f55d21ca5803b66
+  source_hash: 91abe6bd40f18a0b937ed11794fd2f32f4ba564df88dbc918f47437f33d98d8e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
   llm_include: true
   llm_priority: medium
@@ -794,10 +794,10 @@
   publication_profile: public
   owner_role: Chief Information Security Officer
   approval_authority: Chief Information Security Officer
-  parent_artifact: 'N/A — this is the parent policy'
+  parent_artifact: 'Not applicable; this is the parent policy'
   source_path: governance/CERG-POL-001_Cybersecurity_Policy.md
   source_file: CERG-POL-001_Cybersecurity_Policy.md
-  source_hash: 7d3411e50594d6f1b5ae15f1772130112704905cafb52d97a74a5b693c10e707
+  source_hash: 389c76ce89eb23986c18a55d7fb2325a46f2f28dc2ddab32b2b26db68ed709ec
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-POL-001_Cybersecurity_Policy.md
   llm_include: true
   llm_priority: high
@@ -1054,10 +1054,10 @@
   publication_profile: external_interface
   owner_role: Standing IR Team / Incident Commander
   approval_authority: Standing IR Team / Incident Commander
-  parent_artifact: 'N/A — adjacent-function artifact; cross-referenced by CERG for integration'
+  parent_artifact: 'Not applicable; adjacent-function artifact cross-referenced by CERG for integration'
   source_path: procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
   source_file: CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
-  source_hash: 8c3e4a6f189ccee4d0214f1ed10502dac26aedf3e2a383e2db246d0e26b8f800
+  source_hash: 31ff220a6c280c0a9f14f630066315cff5c881646862d331f9d98994c45b18e0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
   llm_include: false
   llm_priority: medium
@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: 3a5ea7c15c5f9b4fab4e7e5d04689141eccbe27d04f2dfeead2f9a35a5bf5b71
+  source_hash: 2ea5235b19846f214e26c6c41815c34cc2d5fcda8a5f6961bb78a083f87df8f5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
   source_file: CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
-  source_hash: 075246c5a9fa6c6326a08cf84e9b3211e5b96c794b94ebee11c11029c801d328
+  source_hash: b2bc03120af8ea376dec8365f25366713a6b694382f248895e40cb13b54b79cc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
   llm_include: true
   llm_priority: low
@@ -1277,7 +1277,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
   source_file: CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
-  source_hash: 77a0f2973f98a2a3e0898cb4c6ce550382cbd361e85ecd38fd44332dfe9de5d6
+  source_hash: b7d0f3cfa31561e1eb6a4622a8ae9f2bd07cb32e13b1bf6e5b681cc80cb75b29
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
   llm_include: true
   llm_priority: low
@@ -1317,7 +1317,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
   source_file: CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
-  source_hash: e4fe5e7a72eded4b4308a336bd780cc02fca3fa4fd097e85c41ccb9021060d2f
+  source_hash: 25e335c1800b645c5ff4d01b63eb7fe54bdc9715085a0dbe3309dd9d8a64b438
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
   llm_include: true
   llm_priority: low
@@ -1337,7 +1337,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
   source_file: CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
-  source_hash: a13b726a9ba42b9caed9f3d1a46e77cd8c579c6e9b60f369bf14c312dd02c3b5
+  source_hash: 58fb02dceeecc28aa61ee644e06bf6730c6484d2c1bf40da58c30c6abb589832
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
   llm_include: true
   llm_priority: low
@@ -1377,7 +1377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
   source_file: CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
-  source_hash: 82b5604afe50122a425cc5053877b94f2450c1147eda063d358171514e2d8ffc
+  source_hash: 261d5f7d25a83eda6ecaf5ba1e6ac0060b851d2814347bd0621f378211e16d30
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
   llm_include: true
   llm_priority: low
@@ -1397,7 +1397,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
   source_file: CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
-  source_hash: b81206e06378608eafa46b10cd01d327750417d7e89c2e6aa24cffcbdc851e0a
+  source_hash: 3f3e3806dab82eed9569395e66fac2942e95e569570a201278f9bbdec5575e8d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
   llm_include: true
   llm_priority: low
@@ -1417,7 +1417,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
   source_file: CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
-  source_hash: 3966b2f9dcadd8369943dd120e23c4f4006199deeff197f201c8ac4f2dcc4896
+  source_hash: 17181259c2457b1b70e5e156254125309320c3a1eacb8b10c85cedab60d1ed38
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
   llm_include: true
   llm_priority: low
@@ -1437,7 +1437,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
   source_file: CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
-  source_hash: cfb06ed84cc44d59f7003244729ac5ef62e6bb5f2336b1a24a2c3470b7199753
+  source_hash: 994d16dd971662dcc7084ccac2ca656ea16c2ee70131d4954a39ca446bda5bc9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
   llm_include: true
   llm_priority: low
@@ -1457,7 +1457,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
   source_file: CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
-  source_hash: 5f2d396ffbb1d57e29c1603c08d18625622290d4289483c60c04c3af98dcd0ce
+  source_hash: d444231fce8990068d632295718dc3048a4f10cfdabe73d3e0b5b8503347173d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
   llm_include: true
   llm_priority: low
@@ -1477,7 +1477,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
   source_file: CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
-  source_hash: 6feb0ccc0211252b16f1896b2976db8a4fb74a320f0ec313848d02fa1365670e
+  source_hash: 6447763f0e677a32ec667e73d0c92509949d1324c442492af83604f3b7397356
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
   llm_include: true
   llm_priority: low
@@ -1497,7 +1497,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
   source_file: CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
-  source_hash: 7ac63faf069e5e0163ec7a878b224b20d028ae23d8cb17b4c9cd6175d6292131
+  source_hash: ea2696fb0286cd728b831a18ae12af038fe066ae15ed5c3baaa8ad2ce1e87f21
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
   llm_include: true
   llm_priority: low
@@ -1537,7 +1537,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   source_file: CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
-  source_hash: 42d73785e2c9e2e6f86d8a05331a9e77d2a1c7ad7a22b44b3f1a48e9de332e5a
+  source_hash: 293f26757301ccce5c99008346f8728b3d084e8f9ec4ad85a85c7db884c72c65
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   llm_include: true
   llm_priority: low
@@ -1557,7 +1557,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
   source_file: CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
-  source_hash: fe1d38f5e584c68658f606445bc17da71b2cbc5b7e00ce7cde8affd7eab9b6f8
+  source_hash: a0e8de121b52e8ef9bc15118ec96ec195fc4dc321f154b1aae3636e4dff9b347
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
   llm_include: true
   llm_priority: low
@@ -1577,7 +1577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
-  source_hash: 05d3ffde73a8969a88b962693eaca8b16e14c3ee151547afa382ed6dff391c71
+  source_hash: 377c59881bf994b0c1f6398a6d8ef352c038a1a47c8c21cdd30f9a6103d0d56f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1597,7 +1597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   source_file: CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
-  source_hash: 991a1233efdeccbfe36b885a7261b4aa945a284a3c1e8f05ca599b365ff9ca8b
+  source_hash: 9d131bc66e96fad660e6fd770edee5edbe3abd3882078aff3de60201fc98a39c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1617,7 +1617,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
-  source_hash: de6b48bc1462178636be0f05e5b7c32a741ca62e7f3b3aa27dd8c4d81401e7ad
+  source_hash: dabea2ac4ed339e6a3efd26b21c78642f778dae4d5d2df58b86381525d48ac7f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1637,7 +1637,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
-  source_hash: 6f428081ff3492eb93c3abe8308f64aedaae51c48bd0e5c433ccfdfb2ccda52b
+  source_hash: abe67ec1b0babb3d6de71c4fa7bd39887f55192de5c1f8ee336ec836886ebb25
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1657,7 +1657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
-  source_hash: d4639569a806b924a9cd6177a1d3f2f11574d4e59ff0b6fd8e87cc1bde6c799c
+  source_hash: d34663efc9721d5c448e83b79a01ad056749780c22e5799bf122fff3ef0e1917
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1677,7 +1677,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
   source_file: CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
-  source_hash: 5f3166e8ec63838d8cbf0aaed574bde24fbe55b75fab247b5e235d17d287d62b
+  source_hash: 5963291b454fe5dfe145935132231149ca7023c81e109f5f53cf42a01f39ed8c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
   llm_include: true
   llm_priority: low
@@ -1717,7 +1717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
-  source_hash: c846f3261cb10afd0f818da6e0873fb1eae1c7b3085c345784266514a1090cf4
+  source_hash: a8d8b6ba395f503db66f42a00ddfc5d9cdd979a5a4280e206fa22467b7b6eded
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1737,7 +1737,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   source_file: CERG-GOV-JD-SECENG-002_Identity_Engineer.md
-  source_hash: 4a45e442231c5b57a1399146b15244d066550156c0256b24976e7172f0a493d7
+  source_hash: 2bad399047955f701855b5886f16a13e27e0788598b18516f0fc368fe352aec3
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1757,7 +1757,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
-  source_hash: 1c4f64083e8df91947cc6cbc08c83aa5dfad8415d3378c00612e1afc6283baf4
+  source_hash: 6792c6b276c7929e871ec13bf291ec20f5138d52d9ddc1d41ed42510fca6d54c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1777,7 +1777,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
-  source_hash: 62dc970c6ec81e573fea16811324eceb9253e2f563f37925332999cabfd9df20
+  source_hash: d737130ee99960c8d50e9e89eba5870895b36babd0734cf73b916b2e2c2a4979
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1797,7 +1797,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   source_file: CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
-  source_hash: c821e07a9f27d306eb2b669d64617a6bb70010d2c432c08fd766b8e9434ed5c7
+  source_hash: f7ddde5fe09fe2da586e9eeaafdfba54469a6b50e9d4b7841a5ec32c508b90f7
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1817,7 +1817,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   source_file: CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
-  source_hash: 3c2e2ec7d07ff5b76744b65eb29ca9ac22d5131802341c9f0df6e89b50ecf955
+  source_hash: ab91f90889e43fcd5f557cdd50e46235997ed1dd162a07c21985b3bd968794b2
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1837,7 +1837,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   source_file: CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
-  source_hash: 2be01207190a574e9014f76aaa0af6d56d9ba7935e202033540a17ea37da5372
+  source_hash: 1f5caecef2e344bd4887eaa97c2154443c10327765c4e73460f9bef90bf7abc4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   llm_include: true
   llm_priority: low
@@ -1857,7 +1857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   source_file: CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
-  source_hash: e636e498cce2cf3eb826f2f084d56832f819380bba24ffe5d768f62f6dfa092e
+  source_hash: bca5b2114a5c9b3be6c9509811446f6c1b373a3c5b676012e25165138d48ca22
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   llm_include: true
   llm_priority: low
@@ -2177,7 +2177,7 @@
   parent_artifact: 'CERG-PRC-AR-001 — Architecture Review and Project Intake Procedure'
   source_path: templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
   source_file: CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
-  source_hash: b661d0eab2788f88a675f643da31ef2c82898646d06f919e609d3f80f16045a1
+  source_hash: 91631f571535086186b26cda933ca753da2a582c627fb8b69026d767c9262d5d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
   llm_include: true
   llm_priority: medium
@@ -2197,7 +2197,7 @@
   parent_artifact: 'CERG-PRC-AUD-001 — Audit and Evidence Management Procedure'
   source_path: templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
   source_file: CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
-  source_hash: c0db840b26dcd7d2baad5a7e437a06f96ed9aef200ec4554e8f4ae4e042a2abb
+  source_hash: 5e6b9eb0e3cd3015c98b8cdc7a9f57f2d02884190e554cfaf6c24e7f79f2026a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
   llm_include: true
   llm_priority: medium
@@ -2217,7 +2217,7 @@
   parent_artifact: 'CERG-PLN-CUI-001 — CUI / CMMC Operational Package'
   source_path: templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
   source_file: CERG-TMPL-CUI-001_System_Security_Plan_Template.md
-  source_hash: 66028cce486be3793e08a75a89693c37da043e428e670c0d3cc8f77d97d56b36
+  source_hash: b3f3d8218120ebab4b5960844cb442b7dd6ee2fcb0d44fd878b82407324b8e9f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
   llm_include: true
   llm_priority: medium
@@ -2277,7 +2277,7 @@
   parent_artifact: 'CERG-GOV-MTR-001 — Metrics Dashboard and Reporting'
   source_path: templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
   source_file: CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
-  source_hash: 2b20eee3306907d54eb24d2ac44faa2348185698a808c38b891fc3b215586904
+  source_hash: 0136c14f797fde6106efd4c45cfbc5b0c6c59c584f0f143e2dddb419966b1873
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
   llm_include: true
   llm_priority: medium
@@ -2317,7 +2317,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   source_file: CERG-TMPL-RM-002_Security_Exception_Request_Form.md
-  source_hash: 976ed4e0eb7e43f78ee97e99824296816008bd5f711f4906f380a292a4bb3bc8
+  source_hash: 63baf25a4ea75dafb988e66075b705d0df106c004b24a80de6d23400b3ff54af
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   llm_include: true
   llm_priority: medium
@@ -2337,7 +2337,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   source_file: CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
-  source_hash: e103409c6f8cd46045dd1a9e1463754ffc54004b892ca09db5eab98e39d7ac6f
+  source_hash: 91edffe48145ffd3d0bf06f25eb048d4d878ef44a2222ce393ff19504cb5b2cc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   llm_include: true
   llm_priority: medium
@@ -2357,7 +2357,7 @@
   parent_artifact: 'CERG-PRC-TPRM-001 — Third-Party and Supply Chain Risk Procedure'
   source_path: templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
   source_file: CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
-  source_hash: 81bd6590ad5b222b46a831a3e069e02a5960d1f7b2ee57e52d853971ac45c854
+  source_hash: ece19a9767b422526ad012be4bb8cc60968508838810e147771f57a090387460
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
   llm_include: true
   llm_priority: medium
