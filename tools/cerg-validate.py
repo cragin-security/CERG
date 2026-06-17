@@ -254,9 +254,50 @@ def quality_checks(root, catalog):
         
         rel = str(filepath.relative_to(root))
         try:
-            text = filepath.read_text(encoding="utf-8")
+            raw = filepath.read_bytes()
+            text = raw.decode("utf-8")
         except Exception:
             continue
+
+        # E0: basic Markdown structural sanity checks that link validation will not catch.
+        if raw and not raw.endswith(b"\n"):
+            errors.append(f"[MISSING_FINAL_NEWLINE] {rel}: file does not end with a newline")
+
+        numeric_headings = []
+        numeric_subsections = []
+        in_code_block = False
+        for line_no, line in enumerate(text.splitlines(), 1):
+            stripped = line.strip()
+            if stripped.startswith("```"):
+                in_code_block = not in_code_block
+                continue
+            if in_code_block:
+                continue
+
+            if line.startswith("|") and not line.rstrip().endswith("|"):
+                errors.append(f"[MALFORMED_TABLE_ROW] {rel}:{line_no}: table row starts with '|' but does not end with '|'")
+
+            heading = re.match(r"^## (\d+)\.\s+", line)
+            if heading:
+                numeric_headings.append((line_no, int(heading.group(1))))
+
+            subsection = re.match(r"^### (\d+)\.(\d+)\s+", line)
+            if subsection:
+                numeric_subsections.append((line_no, subsection.group(1), subsection.group(2)))
+
+        if len(numeric_headings) >= 2:
+            got = [number for _, number in numeric_headings]
+            expected = list(range(1, len(got) + 1))
+            if got != expected:
+                detail = ", ".join(f"line {line}: {number}" for line, number in numeric_headings)
+                errors.append(f"[SECTION_NUMBERING] {rel}: top-level numbered headings are {got}, expected {expected} ({detail})")
+
+        seen_subsections = set()
+        for line_no, parent, child in numeric_subsections:
+            key = (parent, child)
+            if key in seen_subsections:
+                errors.append(f"[DUPLICATE_SUBSECTION] {rel}:{line_no}: duplicate subsection heading ### {parent}.{child}")
+            seen_subsections.add(key)
         
         # Extract metadata
         doc_id = None
