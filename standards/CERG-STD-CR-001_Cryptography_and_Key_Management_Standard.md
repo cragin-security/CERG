@@ -328,7 +328,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on FIPS publication change / on algorithm deprecation |
 | **Change Log** | 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
