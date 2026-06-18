@@ -12,6 +12,7 @@ This directory contains machine-readable YAML specifications generated from the 
 | `cerg-manifest.yaml` | Production | Governed source artifact inventory (118 artifacts) with hashes, canonical paths, and LLM flags |
 | `cerg-publication-manifest.yaml` | Production | Publication eligibility per governed artifact |
 | `cerg-content-tags.yaml` | Production | Section-level content tags |
+| `cerg-document-tiers.yaml` | Stable | Agent-friendly adoption tiers, loading order, and deferral guidance |
 | `cerg-flows.yaml` | Production | 7 cross-pillar flow specifications |
 | `cerg-record-schemas.yaml` | Production | Core operational record schemas |
 | `cerg-runtime-model.yaml` | Stable | Core operational objects |
@@ -37,6 +38,7 @@ For each machine-readable artifact:
 | `cerg-manifest.yaml` | Canonical manifest of all 118 governed CERG source artifacts with metadata, hashes, canonical paths, and LLM consumption flags | Governed Markdown artifact metadata |
 | `cerg-publication-manifest.yaml` | Publication eligibility for each governed artifact — separates lifecycle approval from "safe to publish" | Document metadata |
 | `cerg-content-tags.yaml` | Content type tags for every section heading in the corpus | All CERG documents |
+| `cerg-document-tiers.yaml` | Adoption tiers, loading order, safe deferrals, and agent task mapping | README, START-HERE, IMP-005, MVC spine, adoption aids |
 | `cerg-requirements.yaml` | Atomic requirements extracted from 8 normative source documents (pilot; not the MVC spine) | POL-001, STD-AC/IT/LM/RES/CR, CB-001, RMF-001 |
 | `cerg-flows.yaml` | Cross-pillar operational flow specifications (7 flows) | FLOW-001 |
 | `cerg-record-schemas.yaml` | Record template schemas (5 record types) | FLOW-001 §16 |
@@ -61,4 +63,4 @@ Core indexes and manifests are generated from the repo-local CERG Markdown corpu
 
 ## For LLM Consumers
 
-Start with `cerg-llm-index.json` for the complete Markdown corpus map. Use `cerg-manifest.yaml` for governed source artifacts and canonical paths, then load `cerg-content-tags.yaml` to understand what each section contains. Use `cerg-requirements.yaml` for traceable obligations after populating adoption-specific fields. Use the individual schema files for structured field definitions.
+Start with `cerg-document-tiers.yaml` when choosing what to load for an adoption task, then use `cerg-llm-index.json` for the complete Markdown corpus map. Use `cerg-manifest.yaml` for governed source artifacts and canonical paths, then load `cerg-content-tags.yaml` to understand what each section contains. Use `cerg-requirements.yaml` for traceable obligations after populating adoption-specific fields. Use the individual schema files for structured field definitions.
