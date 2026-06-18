@@ -26,6 +26,14 @@ machine_readable_artifacts:
   regeneration_trigger: Change to Markdown corpus headings or document inventory
   generated_date: '2026-06-14'
   size_bytes: 57544
+- artifact: cerg-document-tiers.yaml
+  description: Agent-friendly adoption tiers, loading order, and deferral guidance
+  source_document: README, START-HERE, IMP-005, MVC spine, and adoption aids
+  status: Stable
+  owner: Governance Pillar Leader (Document Control)
+  regeneration_trigger: Change to adoption paths, MVC definition, or core document inventory
+  generated_date: '2026-06-18'
+  size_bytes: 6306
 - artifact: cerg-control-evidence-map.yaml
   description: Control-to-evidence traceability map
   source_document: CERG-GOV-CB-001 (Unified Control Baseline)
