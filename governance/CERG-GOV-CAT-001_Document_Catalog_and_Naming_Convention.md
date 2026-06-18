@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.40 |
+| **Version** | 1.41 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -18,6 +18,10 @@
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
+
+> **Catalog Sync Tool**
+>
+> The file `tools/cerg-catalog-sync.py` synchronises each document's metadata table `Status` field with the status recorded in this catalog's §5 authoritative listing. Run `python3 tools/cerg-catalog-sync.py --dry-run` to detect drift, `--write` to update CAT-001 from file frontmatter, or `--ci` (exit 1 on drift) for pre-commit validation. See the tool's header for full usage.
 
 ---
 
@@ -232,16 +236,99 @@ Operational records (risk register entries, exceptions, findings, etc.) use stan
 | Improvement Item | IMPG-YYYY-NNN | IMPG-2026-001 | Program improvement register |
 | Requirement (atomic) | CERG-REQ-DOC-NNN | CERG-REQ-AC-001 | machine-readable/ requirements YAML |
 
-### 4.4 Document Deprecation Policy
+### 4.4 Document Retirement Policy
 
-Documents in the CERG corpus follow these rules when they are retired or superseded:
+Documents in the CERG corpus that are no longer authoritative follow a defined retirement process. Retirement is distinct from deprecation: a deprecated document still guides behaviour until replaced; a retired document is formally withdrawn and must not be relied upon for operations, audits, or compliance assertions.
 
-- **IDs are never reused.** A retired Document ID is permanently reserved. No new document will ever receive that ID.
-- **Superseding documents identify their predecessor.** When a document is replaced, the new version or replacement document states which document it supersedes.
-- **The machine-readable manifest preserves history.** The manifest (cerg-manifest.yaml) retains entries for retired documents with status: Retired.
-- **Breaking changes are documented.** Any change to Document IDs, statuses, role names, or workflow structures that would break cross-references is recorded in the revision history of the affected document and noted in the changelog (ROADMAP).
-- **Retired documents remain in the repository.** They are not deleted. They are retained for audit trail and cross-reference integrity.
-- **Retired artifacts may still be referenced** by older versions of documents. The referencing document should note the retirement in its next review cycle.
+#### Retirement Criteria
+
+A document may be retired when any of the following conditions are met:
+
+| **Criterion** | **Description** | **Example** |
+|---|---|---|
+| **Superseded** | A new document replaces the artifact's function with broader scope, improved methodology, or updated framework alignment | A NERC-CIP operational package section superseded by a dedicated CIP standard |
+| **Regulatory scope removed** | The regulation or framework driving the document no longer applies to the organization's operations | CMMC scope contract expires; CUI-CMMC package sections no longer applicable |
+| **Framework retired** | The underlying framework or standard has been withdrawn by the issuing body and no replacement is adopted | NIST 800-53 Rev 5 entirely replaced by a future revision that CERG does not adopt |
+| **Merged into parent** | The document's content has been absorbed into a parent document and the standalone artifact is no longer needed | A standalone guideline merged into its parent standard |
+| **Decommissioned system scope** | The document governs a system, environment, or technology that has been decommissioned | OT-specific procedure for a decommissioned control system |
+| **Organisational restructuring** | The role, function, or pillar that owned the document no longer exists in the current operating model | A job description for a role eliminated in a reorganisation |
+
+#### 90-Day Notice Period
+
+When a document is identified for retirement:
+
+1. **Notice published.** The Governance Pillar Leader (Document Control) publishes a retirement notice in the CERG communications channel (e.g., pillar sync, mailing list, or document catalog changelog) at least **90 calendar days** before the intended retirement effective date.
+
+2. **Notice content.** The notice includes:
+   - Document ID and title being retired
+   - Retirement criteria met (from the table above)
+   - Effective date of retirement
+   - Superseding document (if any) — ID, title, location
+   - Migration guidance (see §4.4.3)
+   - Contact for questions or dispute
+
+3. **Review period.** Interested stakeholders (pillar leaders, document owners, adopters) have 30 days from the notice date to raise objections, request extension, or propose alternatives.
+
+4. **Exception window.** If a stakeholder demonstrates that the retirement would create a regulatory gap, audit finding, or operational disruption, the Governance Pillar Leader may extend the notice period by up to an additional 90 days.
+
+5. **CISO escalation.** Unresolved disputes about retirement are escalated to the CISO for final decision.
+
+#### Migration Guide
+
+Every retirement notice must include a migration guide. The guide addresses:
+
+| **Migration Element** | **Required Content** |
+|---|---|
+| Superseding document | Full Document ID, title, file path, version |
+| Mapping of retired sections to superseding sections | Table: Retired §X → Superseding §Y, or "No direct replacement — see compensating guidance" |
+| Critical cross-reference updates | List of known documents that reference the retired document's ID or sections; recommended replacement references |
+| Evidence transition | Instructions for moving or re-referencing evidence artifacts that point to the retired document |
+| Training / awareness impact | If the retired document was part of onboarding or role-based training, what replaces it |
+| Timeline | Recommended date by which all references should be updated; default is 90 days from retirement effective date |
+
+#### Evidence Retention After Retirement
+
+Retired documents are **not deleted**. They are retained in the repository for the following purposes and durations:
+
+| **Retention Purpose** | **Minimum Retention Period** | **Disposition** |
+|---|---|---|
+| Audit trail — regulatory evidence that referenced the retired document | Longest applicable regulatory retention period (e.g., SOX: 7 years; NERC-CIP: 5 years; CMMC: 3 years) | Secure deletion after retention period; certificate of destruction |
+| Cross-reference integrity — documents that still link to the retired document | Until all referencing documents have been updated in a subsequent review cycle | Evaluation at next review cycle of the referencing document |
+| Historical record — program evolution | Indefinite (retired documents remain in the Git repository for historical reference) | Never deleted from Git history; only removed from active catalog |
+| Litigation hold | Per legal hold duration | Preservation until legal hold is formally released in writing |
+
+#### Crosswalk Freeze
+
+When a document is retired:
+
+1. **Crosswalk status is frozen.** The retired document's entry in CAT-001 §5 is updated to `Retired` status but **not removed** from the catalog. The entry remains visible as a historical record.
+
+2. **Cross-references are not removed.** Cross-references from other documents to the retired document are preserved but flagged. The validator (`cerg-validate.py`) treats references to Retired documents as a **warning**, not an error, with a configurable grace period (default: 180 days from retirement effective date).
+
+3. **New references are prohibited.** After the retirement effective date, no new document may introduce a cross-reference to a Retired document. Existing cross-references are updated at the referencing document's next scheduled review.
+
+4. **Catalog freeze entry.** The retired document's catalog row includes:
+   - Status: `Retired`
+   - Retirement effective date
+   - Superseding document ID (if any)
+   - Link to retirement notice
+
+5. **Superseding documents identify their predecessor.** Any document that supersedes a retired artifact includes a note in its metadata or Document Control section: `Supersedes CERG-XXX-XXX-NNN (retired YYYY-MM-DD)`.
+
+#### Retirement Record in Revisions
+
+Each retirement event is recorded in the revision history of:
+- The retired document itself (final entry: "Document retired [date]")
+- CAT-001 (entry: "Retired [doc ID] — [reason]")
+- CERG-GOV-IMPREG-001 (Program Improvement Register), if applicable
+
+#### Reversal
+
+A retired document may be reactivated (returned to `Approved` status) only if:
+1. A stakeholder demonstrates a regulatory or operational need that the superseding document does not satisfy.
+2. The Governance Pillar Leader approves reactivation after a documented review.
+3. The document's content is reviewed and updated to current standards before reactivation.
+4. The `Retired` catalog entry is updated to `Approved` with a revision history note.
 
 ### 4.5 Ownership Delegation
 
@@ -500,7 +587,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.40 |
+| **Version** | 1.41 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -517,7 +604,8 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
+| 1.41 | 2026-06-18 | Governance Pillar Leader | Minor | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. | INIT-10.2, INIT-10.4 |
+| 1.40 | 2026-06-17 | Governance Pillar Leader | Minor | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
 | 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
 | 1.38 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-003 as the AI system and model register template. |
 | 1.37 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-002 as the sanctioned AI tools register template. |
