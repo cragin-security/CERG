@@ -77,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: afb4a39369498742a27f68817c8aa08d870397b16e2039aa5b79ddb1a40726df
+  source_hash: 6fcf52e523dd07ae70aed8d05194296d85b27ffb9dbf6fd84bf2fa191d425bf1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-002_Framework_System_Map.md
   source_file: CERG-GOV-FRM-002_Framework_System_Map.md
-  source_hash: 6613c8cdaf289dd880dbcdf3162382417fd6c9ee28241ab0a2433f4111a9d897
+  source_hash: 6572378b3f36575d3f19c65743477626523fe80753fe6e68775d091fa8345ae5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-002_Framework_System_Map.md
   llm_include: true
   llm_priority: medium
@@ -337,7 +337,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 4be4e8fa455bf9bde7383832e0ecbb56d2d6ab81b4a6caede996144f9782cfa8
+  source_hash: 0724ea9e156d754ccc30ed28c8eacfd5bd9af61f8aea101cc670e88ef7929b17
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium

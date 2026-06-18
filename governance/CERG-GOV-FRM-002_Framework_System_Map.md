@@ -174,7 +174,7 @@ Start with:
 9. Record Catalog
 10. Role-Based Implementation Checklists
 
-To see what this looks like in practice on a 2-8 person team, read the [CERG Lite day-in-the-life story](../examples/day-in-the-life/README.md#story-8-cerg-lite-maria-and-the-tuesday-scanner-report).
+To see what this looks like in practice on a 2-8 person team, read the [CERG Lite day-in-the-life story](../examples/day-in-the-life/story-8-cerg-lite-maria.md).
 
 ### 6.2 CERG Standard
 

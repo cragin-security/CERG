@@ -65,7 +65,7 @@ Adopt these eight documents first:
 
 Use the Record Catalog, Adoption Safety Guide, Small Team Adoption Path, and Role-Based Implementation Checklists as adoption aids. They help you adopt the MVC; they are not additional MVC requirements.
 
-**Read one story.** The [CERG Lite day-in-the-life walkthrough](examples/day-in-the-life/README.md#story-8-cerg-lite-maria-and-the-tuesday-scanner-report) shows what your first month of running the MVC actually looks like when two people own everything.
+**Read one story.** The [CERG Lite day-in-the-life walkthrough](examples/day-in-the-life/story-8-cerg-lite-maria.md) shows what your first month of running the MVC actually looks like when two people own everything.
 
 ### What you can defer
 

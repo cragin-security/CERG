@@ -528,7 +528,7 @@ The `examples/` directory contains narrative walkthroughs and adoption profiles.
 
 | Example | Purpose | Format |
 |---|---|---|
-| `examples/day-in-the-life/README.md` | Seven narrative walkthroughs of how the three pillars produce outcomes together (intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout) | Markdown stories with step tables and operational output lists |
+| `examples/day-in-the-life/README.md` | Eight narrative walkthroughs of how the three pillars produce outcomes together (intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout, and CERG Lite exposure triage) | Markdown stories with step tables and operational output lists |
 | `examples/regulated-utility-profile/` | A filled-in sample of [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for a regulated utility sector organization | Adapted profile |
 
 Examples are illustrative, not normative. They may be updated outside the V1 review cycle and may reference planned V1.x documents with explicit `(Planned)` markers.

@@ -12,7 +12,7 @@ It is Tuesday at 8:07 a.m. The vulnerability scanner has finished its weekly run
 
 ## CERG flow pattern
 
-Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk)
+Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk)
 
 Supporting procedures and standards:
 

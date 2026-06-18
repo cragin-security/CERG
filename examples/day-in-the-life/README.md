@@ -4,7 +4,7 @@ These examples show how CERG flows, roles, records, and evidence come together d
 
 **If you are a leader or SME new to CERG, read Story 2 or Story 3 first.** They show the program producing outcomes under pressure without requiring prior knowledge of every artifact.
 
-**If you are adopting CERG Lite (2-8 people), read [Story 8](#story-8-cerg-lite-maria-and-the-tuesday-scanner-report) first.** It is the only story written for a small team that owns everything.
+**If you are adopting CERG Lite (2-8 people), read [Story 8](story-8-cerg-lite-maria.md) first.** It is the only story written for a small team that owns everything.
 
 **If you are running CERG Standard or Regulated, any story applies directly.** Each one names the primary flow, supporting procedures and standards, the pillar that owns each step, and the records and evidence produced.
 
@@ -30,8 +30,9 @@ These stories are illustrative, not normative. They may reference documents or s
 | 5 | Privileged access review finds excessive access | F-04 + F-07 | Access reviews and recurring-finding program improvement |
 | 6 | Third-party security incident notification | F-06 + F-04 | Vendor incidents and handoff to IR |
 | 7 | Enterprise AI assistant rollout | F-02 | AI standard application and controlled pilot pattern |
+| 8 | [CERG Lite - Maria and the Tuesday scanner report](story-8-cerg-lite-maria.md) | F-04 | Small-team MVC operations and exposure triage |
 
-Stories 8, 9, and 10 (CERG Lite, F-01 Control Intent, and the new CISO's first 90 days) live in [Story 8](#story-8-cerg-lite-maria-and-the-tuesday-scanner-report), [Story 9](#story-9-f-01-control-intent-when-the-regulator-changes-the-rule), and [Story 10](#story-10-the-new-cisos-first-90-days).
+Stories 9 and 10 (F-01 Control Intent and the new CISO's first 90 days) are planned examples and are not yet published.
 
 ---
 
