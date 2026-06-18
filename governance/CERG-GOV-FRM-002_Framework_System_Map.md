@@ -24,6 +24,8 @@
 2. [The CERG Spine](#2-the-cerg-spine)
 3. [How the Library Fits Together](#3-how-the-library-fits-together)
 4. [How Work Moves Through CERG](#4-how-work-moves-through-cerg)
+   - 4.1 [How the three pillars interact during a single event](#41-how-the-three-pillars-interact-during-a-single-event)
+   - 4.2 [When the three pillars collapse onto fewer people](#42-when-the-three-pillars-collapse-onto-fewer-people)
 5. [Navigation by User Need](#5-navigation-by-user-need)
 6. [Navigation by Adoption Path](#6-navigation-by-adoption-path)
 7. [Navigation by Pillar](#7-navigation-by-pillar)
@@ -134,6 +136,32 @@ CERG work should not move by informal chat alone. It should move through one of 
 | F-05 Change and Release Security Routing | A change could alter security posture | Security change review record |
 | F-06 Incident to Recovery to Standards Feedback | An incident or exercise produces learning | Lessons learned record and improvement action |
 | F-07 Metrics, Oversight, and Improvement Routing | Metrics, maturity results, or oversight decisions require action | Program improvement record |
+
+### 4.1 How the three pillars interact during a single event
+
+The three pillars are not three teams that vote on everything. They are three accountability lines that each own a distinct question. During a single event, each pillar does one thing and only one thing.
+
+| Pillar | Owns this question | Does this during an event |
+|---|---|---|
+| **Cyber Engineering** | How do we build and operate this securely? | Builds the remediation, runs the change, captures implementation evidence |
+| **Cyber Risk** | What exposure remains and what treatment is required? | Triages the finding, sets severity, runs the SLA clock, files the risk record or exception |
+| **Cyber Governance** | What rule, evidence, decision, or report governs this? | Confirms the SLA, indexes the evidence, updates the dashboard, routes to the right authority |
+
+A worked example: a critical vulnerability hits an internet-facing application server on a Tuesday morning.
+
+1. **Risk** validates reachability, sets severity, opens the Finding Record, and starts the SLA clock.
+2. **Engineering** owns the remediation: patch, configuration change, WAF rule, or service isolation. Engineering captures implementation evidence.
+3. **Governance** confirms the SLA clock is correct, the evidence quality is acceptable, the dashboard reflects status, and any required escalation reaches the right authority. Governance does not run the patch.
+
+The handoffs are explicit. The records are explicit. The clock is explicit. No pillar holds the work hostage waiting for consensus.
+
+**For canonical worked examples, read the [Day in the Life stories](../examples/day-in-the-life/README.md).** They are the canonical reference for what each pillar does during a real event. Stories 2, 4, 5, 6, and 8 walk a single event from detection through closure and show the three-pillar handoff in motion. Stories 9 and 10 show how the pillars work together across time.
+
+### 4.2 When the three pillars collapse onto fewer people
+
+In small teams (CERG Lite, 2-8 people), the three pillars collapse onto fewer heads. The collapse is intentional, documented in the Decision Log per [IMP-002 §4](../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log), and follows the [role consolidation map in IMP-003 §4](../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map). The questions do not collapse, only the heads. Risk still triages. Engineering still builds. Governance still routes. One person may answer all three questions in a single hour, but the questions remain distinct.
+
+Story 8 ([CERG Lite](../examples/day-in-the-life/README.md#story-8-cerg-lite-maria-and-the-tuesday-scanner-report) - Maria and the Tuesday scanner report) is the canonical worked example of the collapse pattern.
 
 ---
 
