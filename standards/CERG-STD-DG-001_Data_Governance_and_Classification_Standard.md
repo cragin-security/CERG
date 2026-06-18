@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## DATA GOVERNANCE AND CLASSIFICATION STANDARD
 ### Classification Scheme · Labeling · Handling · Retention · Data Loss Prevention · Data Lifecycle
 

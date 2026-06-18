@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## NETWORK SECURITY AND SEGMENTATION STANDARD
 ### Zero-Trust Principles · Segmentation · Boundary Control · IT/OT Separation · Remote Access
 

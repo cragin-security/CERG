@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SECURE SOFTWARE DEVELOPMENT AND APPLICATION SECURITY STANDARD
 ### Secure SDLC · Code Review Gates · SAST/DAST/SCA · Secrets · Dependencies and SBOM · Pipeline Security
 

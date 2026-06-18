@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ASSET MANAGEMENT AND INVENTORY STANDARD
 ### Authoritative Inventory · Asset Classes · Ownership · Classification · Lifecycle · End-of-Life
 

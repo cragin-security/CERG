@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## EMAIL AND MESSAGING SECURITY STANDARD
 ### Email Authentication · Anti-Phishing · Inbound and Outbound Protection · Collaboration Tools
 

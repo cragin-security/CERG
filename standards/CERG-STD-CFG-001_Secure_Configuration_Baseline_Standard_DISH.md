@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SECURE CONFIGURATION BASELINE STANDARD: DISH
 ### Defensive Infrastructure System Hardening · IT and OT Hardening Profile
 

@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ENDPOINT AND MOBILE SECURITY STANDARD
 ### Endpoint Protection · EDR · Device Posture · Mobile Device Management · BYOD
 

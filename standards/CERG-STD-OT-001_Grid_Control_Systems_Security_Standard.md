@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## GRID & CONTROL SYSTEMS CYBERSECURITY STANDARD
 ### BES and Non-BES Operational Technology Environments
 

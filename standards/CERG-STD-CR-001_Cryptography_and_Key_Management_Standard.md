@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CRYPTOGRAPHY AND KEY MANAGEMENT STANDARD
 ### Approved Algorithms · TLS · Certificates · Keys · Secrets · API Tokens · CMK · FIPS
 

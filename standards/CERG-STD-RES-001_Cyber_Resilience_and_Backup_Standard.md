@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CYBER RESILIENCE AND BACKUP STANDARD
 ### Recovery Tiers · Backup Protection · Restoration Testing · Regulated Overlays · BCP Interface
 

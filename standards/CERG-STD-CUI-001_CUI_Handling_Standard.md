@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CUI HANDLING STANDARD
 ### [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · Federal Contract Information
 

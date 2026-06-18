@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## IT (HOSTED, CLOUD, AND SaaS) SECURITY STANDARD
 ### Owned Data Center · Leased Facility · IaaS · PaaS · SaaS
 

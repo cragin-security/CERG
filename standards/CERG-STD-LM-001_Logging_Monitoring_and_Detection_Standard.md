@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## LOGGING, MONITORING, AND DETECTION STANDARD
 ### Mandatory Log Sources · SIEM Onboarding · Day-One Detection Set · OT and CUI Overlays · Triage and Tuning
 

@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ACCESS MANAGEMENT STANDARD
 ### Identity · Authentication · Authorization · Lifecycle
 

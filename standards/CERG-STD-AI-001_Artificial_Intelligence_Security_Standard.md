@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ARTIFICIAL INTELLIGENCE SECURITY STANDARD
 ### AI Governance · Acceptable Use · Model and Data Risk · Prompt Injection · Shadow AI
 
