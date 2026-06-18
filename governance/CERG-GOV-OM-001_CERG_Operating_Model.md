@@ -466,11 +466,11 @@ CERG operates as one team because it talks like one team. The standing cadence b
 | Compliance Pulse | Bi-weekly | Governance + Engineering + Risk | Open compliance items, evidence gaps, regulator calendar. |
 | CERG All-Hands | Monthly | All CERG | Program updates, recognition, knowledge sharing. |
 | Cyber Oversight Group (COG) | Monthly | Per §4.4 | Cyber posture, cross-functional risk treatment alignment, pre-board review. |
-|| CISO Risk & Posture Review | Quarterly | CISO + leadership | Material risks, posture trends, regulatory cycle, budget. |
-|| Succession Readiness Review | Quarterly (concurrent with CISO Risk & Posture Review) | CISO + pillar leaders + HR business partner | Successor identification, readiness assessments per [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md), development plan progress, critical role risk. |
-|| Board Cyber Brief | Quarterly (per board protocol) | CISO → Audit / Risk / Tech Committee | Posture, material incidents, top risks, program initiatives. |
-|
-|> **Incident Response cadence**
+| CISO Risk & Posture Review | Quarterly | CISO + leadership | Material risks, posture trends, regulatory cycle, budget. |
+| Succession Readiness Review | Quarterly (concurrent with CISO Risk & Posture Review) | CISO + pillar leaders + HR business partner | Successor identification, readiness assessments per [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md), development plan progress, critical role risk. |
+| Board Cyber Brief | Quarterly (per board protocol) | CISO → Audit / Risk / Tech Committee | Posture, material incidents, top risks, program initiatives. |
+
+> **Incident Response cadence**
 
 ---
 
