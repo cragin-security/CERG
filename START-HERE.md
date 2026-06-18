@@ -26,6 +26,7 @@ If you are still unsure where to begin, use these four helpers before diving int
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
 - [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
 - [Day in the Life examples](examples/day-in-the-life/README.md) - seven narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, and access reviews. Read one before you read the standards.
+- [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead if you are taking on a CERG role for the first time.
 
 ---
 
