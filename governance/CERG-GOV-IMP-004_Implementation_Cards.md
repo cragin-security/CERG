@@ -1,12 +1,12 @@
 ## IMPLEMENTATION CARDS
-### For Every Compliance Intent · Minimum Viable to Full Implementation · Who Does What
+### For Every Security Intent · Minimum Viable to Full Implementation · Who Does What
 
 ---
 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-004 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -47,7 +47,9 @@
 
 ---
 
-> **How to use these cards:** Each card translates a compliance intent from [CMX-001](CERG-GOV-CMX-001_Compliance_Matrix.md) into actionable implementation guidance. Start with the minimum viable column; layer toward the good column as the program matures. Every card names the pillar responsible, the evidence to produce, the most common failure mode, and the exception path when the standard cannot be met.
+> **How to use these cards:** Each card translates a security intent from [CMX-001](CERG-GOV-CMX-001_Compliance_Matrix.md) into actionable implementation guidance. Start with the minimum viable column; layer toward the good column as the program matures. Every card names the pillar responsible, the evidence to produce, the most common failure mode, and the exception path when the standard cannot be met.
+>
+> **Maturity lens:** Treat each card as a staged adoption path, not a binary checklist. Minimum Viable usually corresponds to an Informed or early Repeatable practice in [MAT-001](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md). Good Implementation corresponds to Repeatable or Adaptive practice when evidence, metrics, and improvement feedback are operating. Do not rename CERG controls or intents locally just to fit another model; preserve CERG IDs and use the card to decide the next maturity move.
 
 ---
 
@@ -409,7 +411,8 @@
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
-| 1.0 | 2026-06 | CERG Governance | Initial release. 22 implementation cards mapping compliance intents to actionable implementation guidance. |
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Reframed cards as security-intent adoption paths and added the maturity lens for agents and adopters. |
+| 1.0 | 2026-06 | CERG Governance | Initial release. 22 implementation cards mapping security intents to actionable implementation guidance. |
 
 ### Review Triggers
 
@@ -433,4 +436,4 @@ Annual review or upon material change to the control baseline, compliance matrix
 
 ---
 
-_CERG-GOV-IMP-004 · Version 1.0 · PUBLIC_
+_CERG-GOV-IMP-004 · Version 1.1 · PUBLIC_

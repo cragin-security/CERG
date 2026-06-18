@@ -368,7 +368,7 @@
   title: Implementation Cards
   document_type: governance_instrument
   domain: IMP
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -377,7 +377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-004_Implementation_Cards.md
   source_file: CERG-GOV-IMP-004_Implementation_Cards.md
-  source_hash: f5b863e7020bdf4958196a9ae8e125810811594a817387e3bed2d5696ffec136
+  source_hash: 06929beec25b792044264be12437a03bbeedfc4e459452d7491dbf97a6d128f9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-004_Implementation_Cards.md
   llm_include: true
   llm_priority: medium
