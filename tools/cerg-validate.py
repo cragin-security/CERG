@@ -92,6 +92,48 @@ def parse_document_metadata(path: Path) -> DocumentFile:
             status = value
     return DocumentFile(path=path, doc_id=doc_id, status=status)
 
+def _metadata_versions(path: Path) -> list[tuple[str, int]]:
+    """Yield (version, line_no) for every Version row in every metadata table of the file.
+
+    A metadata table is a contiguous block of pipe-delimited rows starting with a row
+    that declares the Document ID. Each metadata block can contain at most one
+    Version row. This function does NOT consider Document Control section tables
+    as separate concerns; if the file declares CERG-XXX-YYY-ZZZ in two tables,
+    both Version rows are reported and the validator compares them.
+    """
+    text = path.read_text(encoding="utf-8")
+    blocks: list[tuple[str, int]] = []  # (doc_id_of_this_block, line_of_version)
+    current_doc_id: str | None = None
+    current_version: tuple[str, int] | None = None
+    in_metadata = False
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        stripped = line.strip()
+        # Detect start of a table: line begins with | and contains a Document ID row
+        doc_id_match = re.search(r"\|\s*\*\*Document ID\*\*\s*\|\s*([A-Z0-9-]+)\s*\|", line)
+        if doc_id_match:
+            current_doc_id = doc_id_match.group(1)
+            in_metadata = True
+            current_version = None
+            continue
+        # Detect end of table: blank line or non-pipe content
+        if in_metadata and not stripped.startswith("|"):
+            if current_version is not None:
+                blocks.append(current_version)
+            in_metadata = False
+            current_doc_id = None
+            current_version = None
+            continue
+        # Capture Version row
+        if in_metadata:
+            version_match = re.search(r"\|\s*\*\*Version\*\*\s*\|\s*([^|\s]+)\s*\|", line)
+            if version_match:
+                current_version = (version_match.group(1).strip(), line_no)
+    # End of file: flush
+    if in_metadata and current_version is not None:
+        blocks.append(current_version)
+    return blocks
+
+
 
 def section_between(text: str, start_pattern: str, end_pattern: str) -> str:
     start = re.search(start_pattern, text, flags=re.MULTILINE)
@@ -409,6 +451,27 @@ def validate_repository(root: Path) -> list[Finding]:
             findings.append(
                 Finding("CATALOG_FILE_MISSING", CATALOG_FILE, f"{entry.doc_id} catalog entry points to missing file")
             )
+
+    # Check that metadata tables within the same file agree on Version.
+    # CERG-GOV-CAT-001 has two metadata tables (front-matter and §8 Document Control).
+    # Other governance documents may follow the same pattern. If the front-matter
+    # version disagrees with the Document Control version, contributors may pick
+    # one or the other and ship a document where the two metadata blocks diverge.
+    for doc in docs:
+        if doc.doc_id is None:
+            continue
+        metadata_versions = list(_metadata_versions(doc.path))
+        if len(metadata_versions) >= 2:
+            unique_versions = {v for v, _ in metadata_versions}
+            if len(unique_versions) > 1:
+                version_list = ", ".join(f"'{v}'" for v, _ in metadata_versions)
+                findings.append(
+                    Finding(
+                        "METADATA_VERSION_MISMATCH",
+                        str(doc.path.relative_to(root)),
+                        f"{doc.doc_id} has multiple metadata tables with different Version values: {version_list}. Update all metadata tables to agree.",
+                    )
+                )
 
     return sorted(findings, key=lambda item: (item.path, item.code, item.message))
 

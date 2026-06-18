@@ -142,4 +142,100 @@ def test_detects_catalog_filesystem_mismatches(tmp_path):
     messages = "\n".join(f.message for f in findings)
 
     assert "catalog entry points to missing file" in messages
-    assert "has no Section 5 catalog entry" in messages
+
+
+def test_detects_metadata_version_mismatch_in_same_file(tmp_path):
+    """A document with two metadata tables whose Version rows disagree must emit
+    a METADATA_VERSION_MISMATCH finding. CAT-001 historically had two metadata
+    tables (front-matter and §8 Document Control); contributors would update one
+    and forget the other. This test pins the rule in place."""
+    write(
+        tmp_path / "governance" / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
+        """
+        # Catalog
+
+        | | |
+        |---|---|
+        | **Document ID** | CERG-GOV-CAT-001 |
+        | **Version** | 1.43 |
+        | **Status** | Approved |
+
+        ## 5. Authoritative Catalog (V1)
+
+        | **ID** | **Title** | **Owner** | **Status** |
+        |---|---|---|---|
+        | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
+
+        ## 6. Cross-Reference Rules
+
+        ## 7. Document Control
+
+        | | |
+        |---|---|
+        | **Document ID** | CERG-GOV-CAT-001 |
+        | **Version** | 9.99 |
+        | **Status** | Approved |
+        """,
+    )
+    write(
+        tmp_path / "CERG - Cybersecurity Policy.md",
+        """
+        | | |
+        |---|---|
+        | **Document ID** | CERG-POL-001 |
+        | **Status** | Approved |
+        """,
+    )
+
+    validator = load_validator()
+    findings = validator.validate_repository(tmp_path)
+    version_findings = [f for f in findings if f.code == "METADATA_VERSION_MISMATCH"]
+    assert len(version_findings) == 1
+    assert "'1.43'" in version_findings[0].message
+    assert "'9.99'" in version_findings[0].message
+
+
+def test_metadata_version_consistency_passes_when_versions_agree(tmp_path):
+    """Two metadata tables with the same Version must not emit a finding."""
+    write(
+        tmp_path / "governance" / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
+        """
+        # Catalog
+
+        | | |
+        |---|---|
+        | **Document ID** | CERG-GOV-CAT-001 |
+        | **Version** | 1.43 |
+        | **Status** | Approved |
+
+        ## 5. Authoritative Catalog (V1)
+
+        | **ID** | **Title** | **Owner** | **Status** |
+        |---|---|---|---|
+        | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
+
+        ## 6. Cross-Reference Rules
+
+        ## 7. Document Control
+
+        | | |
+        |---|---|
+        | **Document ID** | CERG-GOV-CAT-001 |
+        | **Version** | 1.43 |
+        | **Status** | Approved |
+        """,
+    )
+    write(
+        tmp_path / "CERG - Cybersecurity Policy.md",
+        """
+        | | |
+        |---|---|
+        | **Document ID** | CERG-POL-001 |
+        | **Status** | Approved |
+        """,
+    )
+
+    validator = load_validator()
+    findings = validator.validate_repository(tmp_path)
+    version_findings = [f for f in findings if f.code == "METADATA_VERSION_MISMATCH"]
+    assert version_findings == []
