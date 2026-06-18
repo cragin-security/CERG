@@ -77,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 6d65238611dae213e930a1085f552ac23e35d95f0700a40d5c79520f4de56407
+  source_hash: 0788e11950ff3d4937984f93cf5ebf2cf92fdfda75880734bc3e92e721cdd2cc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -617,7 +617,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 774462029379039cb3e8da2964aaee7b5d1991b70d0e4f69a5c78c2ebda685ce
+  source_hash: 0553f7d61297fcec33023c8c5cf5875985730d34e8c728f3e97642a65db64496
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  source_hash: 51b2d0626b7cc834dcbb65e2a178f97a9f311d0c2e1c75b5eced60118d79c406
+  source_hash: 27f33d24f413915d4fffa596c8800e12f7c6a9e45b164f07b860e9be8cfcca1d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   llm_include: true
   llm_priority: medium
@@ -857,7 +857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   source_file: CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
-  source_hash: 27fa6f97ed586a148dac55b53a6ae39b74cac5a418e0e25c58fcbbcb1fedbcdd
+  source_hash: 3d2fe3bc51cf0b8615b083c1b9ffc6a1cab84acc41fe60600ebbf5136ebb1f5b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -877,7 +877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  source_hash: 11529afe860c259e54cd893bf626943b0a18d2a82ada33e001aefd538adbf23c
+  source_hash: 39ede0b7e4a87675c8dbc9929cee19cc1cb72be045c16e1233d7d03beb2ebf62
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -1957,7 +1957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
   source_file: CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
-  source_hash: 98a1420d91ff58159fd8063a5573ea251dda391e2227a56e3fadec037ae7d021
+  source_hash: 169f819a15342c30ac2254a9df3f2834b0e2426f1d625a1df3f4182b929e0234
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
   llm_include: true
   llm_priority: medium
@@ -1977,7 +1977,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   source_file: CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
-  source_hash: 8f009c8c9cb3f966bb86125ea9089ca6747e065e7afcddd6d0c3be3040bf0851
+  source_hash: 7d80fb7f05a6d7569bbed9b9ccf4ded3e99f6858eedb081ede602bd4b6d896b0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2077,7 +2077,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
   source_file: CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
-  source_hash: d7d218a596667a900ae7d95824a839ef7bfeef2138578f97e65b19d6654a08bc
+  source_hash: d0de7253a675d038ee4d6101cf74d4422e5913a9520663c9eb38161a1daa4b3e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2157,7 +2157,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
   source_file: CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
-  source_hash: c3f5dade6642ca06d0c372895bcf58312fbb280458745513b6a9764a0f1f5ba6
+  source_hash: 0a3507d494035715614747150f3d407208c472468fc485b3cf047ed5892d2a7d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2377,7 +2377,7 @@
   parent_artifact: ''
   source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: c724a5e32382802d30ab52821080771c851ac95e8d05cc615925d56434ad9c59
+  source_hash: 4a07bb9e0626bb15957b6c9ea1af037779c7290ae69881500cd8d735a3f0f3eb
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high

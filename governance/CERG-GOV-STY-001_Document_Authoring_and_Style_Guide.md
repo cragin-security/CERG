@@ -501,7 +501,7 @@ Example:
 
 | **Version** | **Date** | **Author** | **Change Type** | **Summary** | **Linked Issue/PR** |
 |---|---|---|---|---|---|
-| 1.22 | 2026-06-18 | Governance Pillar Leader | Minor | Expanded CIP-015 §13 from placeholder to full INSM Implementation Annex | #INIT-9.1 |
+| 1.22 | 2026-06-18 | Governance Pillar Leader | Minor | Expanded CIP-015 §13 from preliminary section to full INSM Implementation Annex | #INIT-9.1 |
 | 1.21 | 2026-06-17 | Governance Pillar Leader | Patch | Updated supporting documents links | #42 |
 
 > **Consistent Revision History Is an Audit Artifact**

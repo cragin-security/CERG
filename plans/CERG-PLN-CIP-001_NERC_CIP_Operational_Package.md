@@ -510,5 +510,5 @@ When CIP-015 becomes applicable, Governance:
 | **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on CIP version or filing change |
-| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. 1.22 - Expanded CIP-015 §13 from placeholder to full INSM Implementation Annex with sensor placement, data collection, alerting rules, evidence package, gap analysis, and integration map. |
+| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. 1.22 - Expanded CIP-015 §13 from preliminary section to full INSM Implementation Annex with sensor placement, data collection, alerting rules, evidence package, gap analysis, and integration map. |
 

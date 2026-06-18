@@ -71,7 +71,7 @@ A vulnerability scanner reports a critical remote-code-execution exposure on an 
 
 ### CERG flow pattern
 
-Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk)
+Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk)
 
 Supporting procedures and standards:
 
@@ -176,7 +176,7 @@ A product team is moving a customer-facing API from a data center to a cloud pla
 
 ### CERG flow pattern
 
-Primary flows: [F-02 Project Intake, Architecture Review, and Threat Modeling](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#9-flow-f-02--project-intake-architecture-review-and-threat-modeling), [F-03 Asset Registration and Coverage Validation](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#10-flow-f-03--asset-registration-and-coverage-validation), and [F-05 Change and Release Security Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-05-change--release-security-routing)
+Primary flows: [F-02 Project Intake, Architecture Review, and Threat Modeling](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#9-flow-f-02--project-intake-architecture-review-and-threat-modeling), [F-03 Asset Registration and Coverage Validation](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#10-flow-f-03--asset-registration-and-coverage-validation), and [F-05 Change and Release Security Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#13-flow-f-05-change-and-release-security-routing)
 
 Supporting procedures and standards:
 
@@ -225,7 +225,7 @@ A quarterly privileged access review finds that several users retained administr
 
 ### CERG flow pattern
 
-Primary flows: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk) and [F-07 Metrics, Oversight, and Improvement Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-07-metrics-oversight-and-improvement-routing)
+Primary flows: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk) and [F-07 Metrics, Oversight, and Improvement Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-07-metrics-oversight-and-improvement-routing)
 
 Supporting procedures and standards:
 
@@ -272,7 +272,7 @@ A vendor notifies the organization that its file transfer platform was compromis
 
 ### CERG flow pattern
 
-Primary flows: [F-06 Incident to Recovery to Standards Feedback](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#13-flow-f-06-incident--recovery-to-standards-feedback) and [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk)
+Primary flows: [F-06 Incident to Recovery to Standards Feedback](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-06-incident-to-recovery-to-standards-feedback) and [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk)
 
 Supporting procedures and standards:
 

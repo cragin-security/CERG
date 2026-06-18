@@ -34,7 +34,6 @@
 8. [Rotation Cadence](#8-rotation-cadence)
 9. [FIPS / FedRAMP / CUI Cryptography Checklist](#9-fips--fedramp--cui-cryptography-checklist)
 10. [Roles and Responsibilities](#10-roles-and-responsibilities)
-11. [Regulatory and Framework Alignment Summary](#11-regulatory-and-framework-alignment-summary)
 11. [Document Control](#11-document-control)
 
 ---

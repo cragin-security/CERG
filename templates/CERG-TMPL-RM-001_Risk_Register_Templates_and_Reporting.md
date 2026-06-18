@@ -31,7 +31,6 @@
 5. [Exception Request Template](#5-exception-request-template)
 6. [Risk Scoring Guide](#6-risk-scoring-guide)
 7. [CISO Slice-and-Dice Reporting Views](#7-ciso-slice-and-dice-reporting-views)
-8. [Operational Cadence](#8-operational-cadence)
 8. [Document Control](#8-document-control)
 
 ---

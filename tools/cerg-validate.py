@@ -127,11 +127,11 @@ SECTION_NUM_REF_RE = re.compile(r"§(\d+(?:\.\d+)*)")
 def heading_to_anchor_id(heading_text: str) -> str:
     """Convert a markdown heading line to its auto-generated anchor ID.
 
-    GitHub/CommonMark: lowercase, strip non-alphanumeric (except hyphens),
-    replace spaces with hyphens, collapse consecutive hyphens.
+    GitHub-style anchors use visible link text, lowercase text, removed
+    punctuation, spaces as hyphens, and collapsed consecutive hyphens.
     """
-    anchor = heading_text.lower().strip()
-    anchor = re.sub(r"[^a-z0-9\s-]", " ", anchor)
+    anchor = strip_markdown_links(heading_text).lower().strip()
+    anchor = re.sub(r"[^a-z0-9\s-]", "", anchor)
     anchor = re.sub(r"\s+", "-", anchor)
     anchor = re.sub(r"-{2,}", "-", anchor)
     anchor = anchor.strip("-")

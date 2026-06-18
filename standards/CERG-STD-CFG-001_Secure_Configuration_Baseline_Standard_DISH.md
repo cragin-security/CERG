@@ -34,7 +34,6 @@
 8. [Network and Firewall Baselines](#8-network-and-firewall-baselines)
 9. [SaaS Tier 1 Baselines](#9-saas-tier-1-baselines)
 10. [OT Platform Baselines](#10-ot-platform-baselines)
-11. [Drift Detection and Exception Handling](#11-drift-detection-and-exception-handling)
 11. [Regulatory and Framework Alignment Summary](#11-regulatory-and-framework-alignment-summary)
 12. [Document Control](#12-document-control)
 

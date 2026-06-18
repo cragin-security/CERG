@@ -35,7 +35,6 @@
 9. [SOX Availability Evidence](#9-sox-availability-evidence)
 10. [Roles and BCP Interface](#10-roles-and-bcp-interface)
 11. [Recovery Plan Template](#11-recovery-plan-template)
-12. [Regulatory and Framework Alignment Summary](#12-regulatory-and-framework-alignment-summary)
 12. [Document Control](#12-document-control)
 
 ---

@@ -222,7 +222,7 @@ Not every control applies equally to every system. CERG's tailoring process allo
 |---|---|---|
 | **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Pillar Leader approval |
 | **Control Enhancement** | Additional control implementation above baseline, based on threat intelligence or risk assessment findings | Engineering + Governance alignment |
-| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.7](#97-risk-acceptance-authority) |
+| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical) |
 
 ---
 
@@ -280,7 +280,7 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 ### 6.3 Finding Severity and SLAs
 
-All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7](#97-risk-acceptance-authority).
+All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical).
 
 The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 

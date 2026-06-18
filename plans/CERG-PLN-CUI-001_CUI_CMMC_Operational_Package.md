@@ -39,7 +39,6 @@
 12. [C3PAO Assessment Logistics](#12-c3pao-assessment-logistics)
 13. [CUI Subcontractor Register](#13-cui-subcontractor-register)
 14. [FedRAMP Equivalency Evidence Checklist](#14-fedramp-equivalency-evidence-checklist)
-15. [Operating Cadence](#15-operating-cadence)
 15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
 16. [Document Control](#16-document-control)
 

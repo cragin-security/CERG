@@ -33,7 +33,7 @@
 4. [Authority and Status Lifecycle](#4-authority-and-status-lifecycle)
 5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
 6. [Cross-Reference Rules](#6-cross-reference-rules)
-7. [Artifact Roadmap (V1.x → V2)](#7-artifact-roadmap-v1x--v2)
+7. [Artifact Roadmap (V1.x → V2)](#7-artifact-roadmap-v1x-to-v2)
 8. [Document Control](#8-document-control)
 
 ## 1. Purpose and Scope

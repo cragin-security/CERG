@@ -36,7 +36,6 @@
 9. [OT Monitoring Overlay](#9-ot-monitoring-overlay)
 10. [CUI Monitoring Overlay](#10-cui-monitoring-overlay)
 11. [Identity Detection Use Case Pack](#11-identity-detection-use-case-pack)
-12. [Privileged Session Monitoring](#12-privileged-session-monitoring)
 12. [Regulatory and Framework Alignment Summary](#12-regulatory-and-framework-alignment-summary)
 13. [Document Control](#13-document-control)
 
