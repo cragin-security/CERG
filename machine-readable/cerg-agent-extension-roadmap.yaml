@@ -1,0 +1,121 @@
+schema_version: '1.0'
+name: CERG Agent Extension Roadmap
+purpose: Structured guidance for evaluating agent, schema, detection, evidence-collection, and automation extension ideas without expanding the core CERG scope by default.
+generated: '2026-06-18'
+status: Stable
+source_note: Derived from maintainer review of external agent and automation extension recommendations.
+
+core_position:
+  statement: CERG is a cybersecurity operating model, not a control catalog, detection engineering repository, MCP product, or evidence collector suite.
+  keep_core_small: true
+  first_adoption_rule: Do not add automation layers to first adoption unless an adopter explicitly requests that extension.
+  preferred_terms:
+    - security intent
+    - implementation card
+    - maturity domain
+    - evidence anchor
+    - adoption path
+  avoid_default_renames:
+    - control intention
+    - adoption principle
+  rationale: CERG already expresses capability outcomes through security intents, implementation cards, and maturity domains. Renaming the corpus would create churn without improving adoption.
+
+recommendation_review:
+  adoption_principles_rename:
+    disposition: adapt_not_adopt
+    decision: Do not rename CERG security intents to adoption principles.
+    useful_part: Treat each implementation card as a staged capability adoption path.
+    implemented_in:
+      - ../governance/CERG-GOV-IMP-004_Implementation_Cards.md
+    guardrail: Preserve CERG document IDs and existing terminology unless a maintainer approves a terminology migration.
+
+  schema_design:
+    disposition: partial_future_extension
+    decision: Do not add a separate schema/ directory for principle catalogs in core CERG now.
+    existing_equivalents:
+      - cerg-document-tiers.yaml
+      - cerg-llm-index.json
+      - cerg-manifest.yaml
+      - cerg-record-schemas.yaml
+      - cerg-requirements.yaml
+    useful_future_work: Add schemas only when a maintained generator or adopter integration requires them.
+
+  mitre_attack_graph:
+    disposition: defer
+    decision: Do not make ATT&CK graph mapping first-class in core CERG now.
+    rationale: ATT&CK mapping is useful for detection and adversarial validation extensions, but it is not required for operating-model adoption.
+    possible_extension_owner: Risk Pillar Leader / Detection Engineering extension maintainer
+    trigger_for_revisit: Multiple adopters request ATT&CK coverage reporting or adversarial validation automation.
+
+  detection_as_code:
+    disposition: defer_to_extension
+    decision: Do not add Sigma rules, SIEM queries, or detection-as-code packs to core CERG.
+    rationale: Detection content ages quickly and depends on platform, telemetry, and environment.
+    core_reference_docs:
+      - ../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+      - ../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+
+  mcp_server:
+    disposition: skip_for_core
+    decision: Do not add an MCP server to the core repository now.
+    rationale: Current machine-readable artifacts are sufficient for agent navigation. A server adds operational maintenance, security, and versioning burden.
+    trigger_for_revisit: Stable external consumer demand for live query tools instead of static manifests.
+
+  evidence_collectors:
+    disposition: defer_to_extension
+    decision: Do not add OSQuery, Elastic, Wazuh, or collector configs to core CERG.
+    rationale: Evidence requirements belong in CERG; collection mechanics are organization and platform specific.
+    core_reference_docs:
+      - ../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
+      - ../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+      - cerg-evidence-schema.yaml
+
+  implementation_cards:
+    disposition: already_core_improve_incrementally
+    decision: Keep improving IMP-004 rather than creating a new card system.
+    rationale: CERG already has implementation cards tied to the Compliance Matrix. They should remain lightweight and human-usable.
+    implemented_in:
+      - ../governance/CERG-GOV-IMP-004_Implementation_Cards.md
+
+  versioning_diff_api:
+    disposition: defer
+    decision: Keep static manifests and Git history as the source for versioning and diffs.
+    rationale: A diff API is useful for a product platform, not needed in the content repository yet.
+    existing_equivalents:
+      - cerg-manifest.yaml
+      - cerg-publication-manifest.yaml
+      - Git commit history
+
+  adversary_emulation_playbooks:
+    disposition: defer_to_extension
+    decision: Do not add adversary emulation playbooks to core CERG now.
+    rationale: Useful for mature Risk programs but too specialized for first-mile adoption.
+    core_reference_docs:
+      - ../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+      - ../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
+
+  continuous_monitoring:
+    disposition: defer_to_extension
+    decision: Keep monitoring requirements and metrics in core; keep collector/runtime integrations outside core.
+    core_reference_docs:
+      - ../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
+      - ../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+      - cerg-metrics-model.yaml
+
+extension_acceptance_test:
+  any_new_extension_must_answer:
+    - Which adoption path needs this?
+    - Is it Required-Core, Required-Path, Conditional, Recommended, or Example?
+    - What existing document could this merge into instead?
+    - What record, evidence object, or decision does it help produce?
+    - What adopter pain does it solve that static Markdown/YAML cannot solve?
+    - Who maintains it when platforms, ATT&CK versions, or APIs change?
+  default_decision: If these questions cannot be answered, do not add the extension.
+
+agent_directives:
+  when_given_a_large_transformation_plan:
+    - Compare the plan to README.md and CAT-001 before editing.
+    - Preserve CERG as an operating model unless the maintainer asks for an extension.
+    - Prefer small improvements to existing artifacts over new subsystems.
+    - Do not introduce platform-specific queries or services into core adoption paths.
+    - Record deferred extension ideas in this file or an issue, not as partial implementation.
