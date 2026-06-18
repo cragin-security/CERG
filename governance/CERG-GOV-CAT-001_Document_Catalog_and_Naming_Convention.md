@@ -596,9 +596,9 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.41 |
+| **Version** | 1.42 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-17 |
+| **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
@@ -613,6 +613,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.42 | 2026-06-18 | Governance Pillar Leader | Added §5.9 Examples subsection. Authorizes the `examples/` directory in the catalog and clarifies that examples are illustrative, not normative. Cross-reference rule 1 in §6 continues to govern which artifacts may be referenced from examples, with `(Planned, V1.x)` markers required for any forward references. |
 | 1.41 | 2026-06-18 | Governance Pillar Leader | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. |
 | 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
 | 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
