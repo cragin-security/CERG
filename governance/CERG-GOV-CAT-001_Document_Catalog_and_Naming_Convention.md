@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.41 |
+| **Version** | 1.43 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -368,6 +368,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMP-004`](CERG-GOV-IMP-004_Implementation_Cards.md) | Implementation Cards | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) | Adoption Decision Tree and Dependency Matrix | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-006`](CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) | Role-Based Implementation Checklists | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-007`](CERG-GOV-IMP-007_Role_Reader_Paths.md) | Role Reader Paths | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
@@ -596,9 +597,9 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.41 |
+| **Version** | 1.43 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-17 |
+| **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
@@ -613,6 +614,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.43 | 2026-06-18 | Governance Pillar Leader | Registered `CERG-GOV-IMP-007` (Role Reader Paths) in §5.2 as the sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead roles. |
 | 1.41 | 2026-06-18 | Governance Pillar Leader | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. |
 | 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
 | 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |

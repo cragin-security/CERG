@@ -68,7 +68,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.41
+  version: 1.43
   status: Approved
   classification: Public
   publication_profile: public
@@ -77,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: b103d8c828e30ba4edf4ef1f994edbb39a59dddc3a42bb9810de470afc60a796
+  source_hash: 8b50dc202d0268b0c18097103b97432c39f1170d711bdeb6557aefb842cfc995
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -424,6 +424,26 @@
   normative_weight: supporting
   pillar: governance
   summary: Role Based Implementation Checklists
+- document_id: CERG-GOV-IMP-007
+  title: Role Reader Paths
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
+  source_file: CERG-GOV-IMP-007_Role_Reader_Paths.md
+  source_hash: 24c058b6370295817d229a6b4dcbaddcc4bda38d862bc71862398e262c2d5219
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Role Reader Paths
 - document_id: CERG-GOV-IMPREG-001
   title: Program Improvement Register
   document_type: governance_instrument

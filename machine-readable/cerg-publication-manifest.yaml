@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 125 artifacts
+# Generated from document metadata | 126 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-AUD-001
@@ -231,6 +231,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-18
+
+- document_id: CERG-GOV-IMP-007
+  source_path: governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
   release_date: 2026-06-18
 
 - document_id: CERG-GOV-IMPREG-001
