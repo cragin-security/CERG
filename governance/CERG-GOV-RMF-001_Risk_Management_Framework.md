@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.31 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Cyber Governance (CERG Pillar) |
@@ -455,6 +455,8 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 | 2 - 5 | **Low** |
 | 1 | **Informational** |
 
+**Exposure-management precedence.** This 5x5 risk score determines register severity and acceptance authority. It does not replace exposure-treatment clocks. When a vulnerability, KEV item, PPR-tier exposure, or other finding is governed by [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), the PRC-VM classification and SLA are authoritative for remediation timing. Use the stricter outcome when risk score and exposure SLA point to different urgency.
+
 ### 9.6 Risk Treatment Options
 
 | Treatment | Definition | When Appropriate | CERG Process |
@@ -502,7 +504,7 @@ These are not the same thing. Collapsing them into one process creates confusion
 
 **Governance** owns the exception workflow: when a control cannot be met, Governance determines whether the gap is a procedural exception (low risk, documented and tracked) or a risk event (requires Risk assessment). **Risk** owns residual risk analysis: when a gap creates material exposure, Risk quantifies it, validates compensating controls, and recommends treatment. **Business** owns the consequence: business leaders accept risk on systems they own, because they own the operational impact.
 
-The [Exception Request Form](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) handles both types. The key distinction is the approval path: a policy exception approved by Governance stays in the exception register; a risk acceptance above Medium requires a business owner signature per §9.7.
+Use separate artifacts for the two paths. A policy or control exception uses the [Security Exception Request Form](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) and stays in the exception register with a linked risk entry when residual exposure exists. A residual-risk acceptance uses the [Risk Acceptance Request Form](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) and follows the authority table in §9.7. [`CERG-TMPL-RM-003`](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) may be used only as a lightweight supporting memo or attachment to `TMPL-RM-004`; it does not create a separate acceptance path.
 
 ### 9.8 Risk Appetite and Tolerance
 
@@ -791,17 +793,17 @@ Single-risk ALE = (Exposure Frequency × Loss Event Value). For this calibration
 | SOX ITGC control failure → material weakness | 0.15 (1 in 7 years) | $1.5M (audit + remediation + reporting delay costs) | $225K | Medium |
 | Cloud misconfiguration → data exposure | 0.3 (1 in 3 years) | $200K (within retention) | $60K | Low |
 
-**Step 3 — Calibrated risk appetite bands for the 5×5 matrix**
+**Step 3 — Example calibrated risk appetite bands for the 5×5 matrix**
 
-Mapping the ALE bands to the existing 5×5 scoring framework:
+Mapping the ALE bands to the existing 5×5 scoring framework for this example organization. These dollar bands are illustrative calibration output, not a replacement for the canonical severity bands in §9.5 or the acceptance authority in §9.7:
 
 | **5×5 Score** | **Label** | **Corresponds to ALE** | **Appetite Position** |
 |---|---|---|---|
-| 1 | Informational | < $50K | Accept — no formal tracking needed |
-| 2–5 | Low | $50K – $120K | Accept — track for trend |
-| 6–11 | Medium | $120K – $1.2M | Accept with documented rationale; requires Business Owner sign-off |
-| 12–19 | High | $1.2M – $6M | Accept only with CISO + Business Owner approval; exceptional |
-| 20–25 | Critical | > $6M | Do not accept without Board notification; requires Executive Sponsor concurrence |
+| 1 | Informational | < $50K | Track for trend; no formal acceptance required unless a regulator, contract, or business owner requires it |
+| 2–5 | Low | $50K – $120K | May be accepted under §9.7 with Business Owner + Risk Register Owner approval |
+| 6–11 | Medium | $120K – $1.2M | May be accepted under §9.7 with Business Owner + Pillar Leader or Governance Pillar Leader approval |
+| 12–19 | High | $1.2M – $6M | Exceptional; requires CISO + Business Owner approval under §9.7 |
+| 20–25 | Critical | > $6M | Avoid or remediate by default; acceptance requires CISO + Executive Sponsor approval and board notification under §9.7 |
 
 **Step 4 — Regulatory overlay adjustments**
 
@@ -820,7 +822,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework:
 > b) The single-risk ALE does not exceed $6M (0.50% of revenue), AND
 > c) The risk does not threaten NERC-CIP reliability obligations, SOX material weakness reporting, or safety-of-life systems.
 >
-> Risk that exceeds any of these thresholds must be treated, transferred, or avoided. Acceptance above these thresholds requires CISO + CFO approval and board notification.
+> Risk that exceeds any of these thresholds must be treated, transferred, or avoided by default. If leadership proposes acceptance anyway, the approval path in §9.7 still governs; CFO approval and board notification are additional financial-governance requirements for this calibrated example, not substitutes for Business Owner or Executive Sponsor acceptance.
 
 **Cascading changes triggered:**
 
@@ -847,7 +849,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.31 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -862,6 +864,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework:
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.33 | 2026-06-18 | Governance Pillar Leader | Clarified that RMF §9.5 and §9.7 remain canonical for scoring and acceptance authority, separated exception and risk-acceptance template routing, added PRC-VM exposure-SLA precedence, and constrained the calibration example so it cannot override Business Owner / Executive Sponsor acceptance. |
 | 1.32 | 2026-06-18 | Governance Pillar Leader | Added §12.6 Worked Calibration Example for mid-market utility ($1.2B revenue, NERC-CIP+SOX scope) with ALE bands as % of revenue, single-risk ALE as function of insurance retention and downtime cost, calibrated 5x5 band mapping, regulatory overlay adjustments, and cascading changes. |
 | 1.31 | 2026-06-14 | Governance Pillar Leader | Clarified canonical risk-acceptance authority, default acceptance durations, and the shortest-applicable-duration rule. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the CERG-RMF cycle, the FAIR-aligned risk statement format, the 5x5 likelihood/impact model, the canonical risk acceptance authority table, and the risk appetite and tolerance posture. Retires the parallel SLA table in favor of the single source of truth in CERG-PRC-VM-001. Adopts canonical ID CERG-GOV-RMF-001 per CERG-GOV-CAT-001 §5.2. |
