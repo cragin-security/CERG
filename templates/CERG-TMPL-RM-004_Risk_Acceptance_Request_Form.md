@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -76,7 +76,7 @@ This form records a formal **risk acceptance** decision under the authority fram
 | Residual Risk Rating | `[Low / Medium / High / Critical]` |
 | Residual Risk Score | `[Likelihood × Impact]` |
 | Acceptance Period | `[Start date to expiration date]` |
-| Acceptance Type | `[Time-bound / Permanent]` |
+| Acceptance Type | `[Time-bound / Standing]` |
 
 ### 3.2 Business Rationale
 
@@ -131,7 +131,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | **Governance Pillar Leader** | Confirms regulatory overlay completeness and documentation adequacy. | `[Name]` | `[Date]` | Concur / Returned |
 | **Business Owner** | Accepts the business consequence of the residual risk. | `[Name]` | `[Date]` | Accept / Decline |
 | **CISO** | Approves High and Critical acceptances per RMF-001 §9.7 authority. | `[Name]` | `[Date]` | Approve / Deny |
-| **Executive Sponsor** | Concurrence for Critical risk acceptance and/or board-notified items per RMF-001 §9.7. | `[Name]` | `[Date]` | Concur / Escalate to Board |
+| **Executive Sponsor** | Accepts the business consequence for Critical risk acceptance and/or board-notified items per RMF-001 §9.7. | `[Name]` | `[Date]` | Accept / Escalate to Board |
 
 **Approver Note:** Approvers may delegate within their authority but shall document the delegation. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration. Renewal more than twice without material progress toward remediation escalates one approval tier above the original approver.
 
@@ -142,7 +142,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -159,6 +159,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Aligned acceptance type and related-template wording with RMF-001 authority; clarified that TMPL-RM-003 is supporting only and that Executive Sponsor accepts Critical business consequence. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader | Initial release. Establishes Risk Acceptance Request Form as the distinct workflow for risk acceptances (Business Owner + per-RMF-001 authority), separate from Security Exception Requests (TMPL-RM-002). |
 
 ### Review Triggers
@@ -174,7 +175,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 |---|---|---|
 | Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Register and reporting schema |
 | Security Exception Request Form | [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Governance-tracked policy/standard exception workflow |
-| Risk Acceptance Memo Template | [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Lightweight acceptance memo for Low/Medium risks |
+| Risk Acceptance Memo Template | [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Optional supporting memo; does not replace this form or RMF-001 approval authority |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Governing risk acceptance lifecycle |
 | Risk Management Framework | [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority table (§9.7) |
 
@@ -186,4 +187,4 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 ---
 
-*CERG-TMPL-RM-004 · Version 1.0 · Public*
+*CERG-TMPL-RM-004 · Version 1.1 · Public*
