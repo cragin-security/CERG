@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and the detection tuning lifecycle. They turn threat intelligence, vulnerability data, and red team findings into detection content that finds adversaries before the adversary achieves their objective. They are the bridge between knowing what threats exist and being able to see them in the environment.
+The Vendor Risk Analyst operates the Third-Party and Supply Chain Risk Procedure. They assess the security posture of vendors, suppliers, and service providers before and during the relationship. They tier vendors by risk, conduct assessments, track findings, and ensure that the organization's supply chain does not become its weakest security link.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Author, test, and deploy detection rules across SIEM, EDR, NDR, and cloud detection platforms - Map detection coverage to MITRE ATT&CK and maintain the coverage matrix - Tune detection rules to reduce false positives while maintaining true-positive sensitivity - Translate threat intelligence into detection content: new rules, updated logic, expanded data sources - Incorporate adversarial testing findings: write detections for the TTPs the red team successfully executed - Govern the detection lifecycle: new rule authoring, testing, deployment, performance monitoring, tuning, and retirement - Hand off confirmed detections to the Incident Response team per the defined procedure - Maintain and improve the logging and monitoring coverage required to support detection content - Contribute to the Logging, Monitoring, and Detection Standard
+- Tier vendors by risk based on data access, system integration, and business criticality - Conduct vendor security assessments: questionnaires, evidence review, and where warranted, remote or on-site assessment - Review vendor contracts for security requirements, including breach notification, data handling, right-to-audit, and termination clauses - Track vendor assessment findings and verify remediation - Maintain the vendor risk register: tiering, assessment status, findings, and risk ratings - Monitor vendor security posture changes: breach notifications, merger/acquisition, service changes - Assess third-party AI services for security risk: data handling, model supply chain, prompt injection exposure - Coordinate with Legal, Procurement, and business owners to ensure security requirements are included in vendor relationships - Support incident response for supply-chain compromises: identifying affected vendors, assessing exposure, and coordinating vendor communication - Participate in Supply Chain Coordination Team (SCCT) activities
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +56,7 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 Â
 
 ### 5.1 Domain Expertise
 
-- SIEM expertise: Splunk, Elastic, Microsoft Sentinel, or equivalent - Detection rule authoring: Sigma, KQL, SPL, YARA, YARA-L - MITRE ATT&CK framework fluency: technique-level understanding and mapping - Log analysis: Windows Event Log, Sysmon, network traffic, cloud audit logs, endpoint telemetry - Understanding of adversary TTPs and how they manifest in logs - Scripting and automation: Python, PowerShell, or equivalent - Data engineering: understanding of log pipelines, data normalization, and detection architecture
+- Third-party risk management frameworks and methodologies - Vendor security assessment techniques: questionnaire design, evidence evaluation, control validation - Contract review for security and data protection requirements - Understanding of common vendor risks: data residency, subcontractor cascading, concentration risk, shared responsibility model misunderstandings - Cloud and SaaS security assessment - Supply chain risk: software supply chain (SBOM, dependency risk), hardware supply chain, managed service providers - Regulatory requirements for vendor oversight under applicable frameworks (NERC-CIP, CMMC, SOX, GDPR)
 
 ### 5.2 Technical Skills
 
@@ -94,7 +94,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.1 Education
 
-- 3-12+ years in cybersecurity, security operations, or detection engineering - Bachelor's degree in a relevant technical field or equivalent experience - Relevant certifications: GCIH, GCIA, GMON, GCDA, or equivalent
+- 3-12+ years in cybersecurity, vendor risk management, or IT audit - Bachelor's degree or equivalent experience - Relevant certifications: CISA, CISSP, CTPRP, or equivalent
 
 ### 7.2 Certifications
 
@@ -165,7 +165,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +182,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Corrected role body content so Vendor Risk Analyst responsibilities, KSAs, qualifications, and profile align to third-party and supply-chain risk rather than detection engineering. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
