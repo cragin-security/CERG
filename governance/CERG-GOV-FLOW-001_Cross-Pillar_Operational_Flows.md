@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -15,24 +15,27 @@
 
 ## Table of Contents
 
-1. [Operating Principles](#2-operating-principles)
-2. [Canonical Roles](#2-canonical-roles)
-3. [Authoritative Record Types](#3-authoritative-record-types)
-4. [Common Required Fields](#4-common-required-fields)
-5. [Default SLA Policy](#5-default-sla-policy)
-6. [Allowed Decision Classes](#6-allowed-decision-classes)
-7. [Shared State Models](#7-shared-state-models)
-8. [Flow F-01: Control Intent to Implementation](#8-flow-f-01--control-intent-to-implementation)
-9. [Flow F-02: Project Intake, Architecture Review, and Threat Modeling](#9-flow-f-02--project-intake-architecture-review-and-threat-modeling)
-10. [Flow F-03: Asset Registration and Coverage Validation](#10-flow-f-03--asset-registration-and-coverage-validation)
-11. [Flow F-04: Finding to Remediation, Exception, or Residual Risk](#11-flow-f-04--finding-to-remediation-exception-or-residual-risk)
-12. [Flow F-05: Change and Release Security Routing](#12-flow-f-05--change-and-release-security-routing)
-13. [Flow F-06: Incident to Recovery to Standards Feedback](#13-flow-f-06--incident-to-recovery-to-standards-feedback)
-14. [Flow F-07: Metrics, Oversight, and Improvement Routing](#14-flow-f-07--metrics-oversight-and-improvement-routing)
-15. [LLM Execution Directives](#15-llm-execution-directives)
-16. [Minimum Record Templates](#16-minimum-record-templates)
-17. [Recommended Implementation Sequence](#17-recommended-implementation-sequence)
-18. [Document Control](#18-document-control)
+1. [Flow Structure Conventions](#1-flow-structure-conventions)
+2. [Operating Principles](#2-operating-principles)
+3. [Canonical Roles](#3-canonical-roles)
+4. [Flow-to-Record Crosswalk](#4-flow-to-record-crosswalk)
+5. [CAT-002 Record Field Authority](#5-cat-002-record-field-authority)
+6. [Default SLA Policy](#6-default-sla-policy)
+7. [Allowed Decision Classes](#7-allowed-decision-classes)
+8. [Shared State Models](#8-shared-state-models)
+9. [Flow F-01: Control Intent to Implementation](#9-flow-f-01--control-intent-to-implementation)
+10. [Flow F-02: Project Intake, Architecture Review, and Threat Modeling](#10-flow-f-02--project-intake-architecture-review-and-threat-modeling)
+11. [Flow F-03: Asset Registration and Coverage Validation](#11-flow-f-03--asset-registration-and-coverage-validation)
+12. [Flow F-04: Finding to Remediation, Exception, or Residual Risk](#12-flow-f-04--finding-to-remediation-exception-or-residual-risk)
+13. [Flow F-05: Change and Release Security Routing](#13-flow-f-05--change-and-release-security-routing)
+14. [Flow F-06: Incident to Recovery to Standards Feedback](#14-flow-f-06--incident-to-recovery-to-standards-feedback)
+15. [Flow F-07: Metrics, Oversight, and Improvement Routing](#15-flow-f-07--metrics-oversight-and-improvement-routing)
+16. [Automation Integration Points](#16-automation-integration-points)
+17. [Evidence Quality Tiers](#17-evidence-quality-tiers)
+18. [LLM Execution Directives](#18-llm-execution-directives)
+19. [Flow-to-CAT-002 Record Crosswalk](#19-flow-to-cat-002-record-crosswalk)
+20. [Recommended Implementation Sequence](#20-recommended-implementation-sequence)
+21. [Document Control](#21-document-control)
 
 ---
 
@@ -54,58 +57,58 @@ Every flow in this document follows a consistent structure. When implementing a 
 | F-06 Incident → Recovery | Incident declared by standing IR team, material event, third-party incident with internal impact, active exploitation, regulatory notification support request | IR-owned response closed or stabilized + CERG support evidence delivered + lessons learned routed + corrective actions assigned |
 | F-07 Metrics & Oversight | Monthly/quarterly cycle, threshold breach, missed SLA, maturity assessment, board request | Metrics collected + thresholds evaluated + actions assigned for outliers + CISO review done + report published |
 
-### Minimum Process Records
+### Flow Record Crosswalk
 
-After each flow executes, these records must exist. If a record is missing, the flow is incomplete.
+After each flow executes, the CAT-002 canonical records below must exist or be explicitly marked not applicable. If a required record is missing, the flow is incomplete. [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) is authoritative for record names, aliases, owners, required fields, and evidence value; this table only shows flow handoff expectations.
 
-| Flow | Required Records | Minimum Fields Documented |
-|------|-----------------|--------------------------|
-| F-01 Control Intent | Control Change Record | Control ID, source reason, affected environments, implementation deadline, evidence plan, validation result |
-| F-02 Project Intake | Project Intake Record, Architecture Review Record, Threat Model Record | Project name, owners, go-live date, asset class, data classification, regulatory scope, review findings, disposition |
-| F-03 Asset Registration | Asset Record | Asset ID, type, owners, environment, classification, criticality, coverage status |
-| F-04 Finding → Remediation | Finding Record; Risk Record if promoted; Exception Record if used | Finding ID, source, severity, assets, owners, treatment, due date, validation result |
-| F-05 Change & Release | Change Record | Change ID, type, assets, SIA, implementation window, rollback plan, control continuity result |
-| F-06 Incident → Recovery | IR-owned Incident Record, CERG Improvement Record if program change is required | Incident ID, severity, timeline reference, CERG support actions, evidence package, lessons learned, corrective actions |
-| F-07 Metrics & Oversight | Reporting Metric Record | Metric name, definition, source, period, threshold, actual value, action assigned |
+| Flow | CAT-002 canonical records | Common local aliases used in this flow |
+|------|---------------------------|----------------------------------------|
+| F-01 Control Intent | Control Implementation Record; Evidence Index Entry; Reporting Metric Record | Control Change Record; control implementation row |
+| F-02 Project Intake | Project Security Review Record; Threat Model Record; Risk Register Entry if deferred risk remains | Project Intake Record; Architecture Review Record; security review ticket |
+| F-03 Asset Registration | Asset Inventory Record; Asset Coverage Record; Finding Record or Risk Register Entry if coverage gap remains | Asset Record; CMDB item; coverage row |
+| F-04 Finding → Remediation | Finding Record; Risk Register Entry if promoted; Security Exception Record or Risk Acceptance Record if used | Risk Record; Exception Record; acceptance request |
+| F-05 Change & Release | Security Change Review Record; Evidence Index Entry; Risk Register Entry or Security Exception Record if emergency bypass creates residual exposure | Change Record; SIA; release security review |
+| F-06 Incident → Recovery | IR-owned Incident Record; Lessons Learned Record; Program Improvement Record if CERG changes are required | IR ticket; CERG support log; Improvement Record |
+| F-07 Metrics & Oversight | Reporting Metric Record; Oversight Decision Record; Program Improvement Record for assigned actions | Metric row; dashboard item; improvement backlog item |
 
 ### SLA Exception Logic
 
-The severity-tiered SLAs in each flow are the default. The following exceptions are recognized:
+Flow-level SLA rules do not override procedure-specific clocks. For exposure management, [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) is authoritative. For risk acceptance and exception duration, [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) and [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) govern. Use the shortest applicable clock.
 
-| Exception | Applies To | Rule |
-|-----------|-----------|------|
-| **False Positive** | F-04 (Findings) | Close with rationale and evidence of false-positive determination. No SLA penalty. Document the determination method. |
-| **Compensating Control in Place** | F-04 (Findings) | Downgrade severity by one level if compensating control is documented, tested, and operating. Create Exception Record. Original SLA clock stops; compensating control review clock starts. |
-| **Vendor Patch Unavailable** | F-04 (Findings), F-01 (Control Intent) | Create Exception Record. Document vendor communication (ticket/case number). Set review date based on vendor's committed patch timeline. SLA clock pauses until vendor delivers or 90 days, whichever is shorter. |
-| **OT Maintenance Window** | F-04 (Findings), F-05 (Change) | Remediation SLA extends to next approved maintenance window. Document the window date. If the window is more than 90 days out, create Risk Record. |
-| **Business Outage Risk** | F-04 (Findings), F-05 (Change) | Create Risk Record. Business owner must acknowledge the risk of both the vulnerability AND the outage. CISO approves the deferral. Set a review date no more than 90 days out. |
-| **Emergency Remediation** | F-04 (Findings) | Execute remediation immediately. Create Change Record post-hoc per F-05 emergency change rules. Document rationale. SLA is measured from detection to execution, not to paperwork. |
-| **Reopened Finding** | F-04 (Findings) | SLA resets to the severity-tiered clock from the reopen date. Increment recurrence counter. Escalate per recurring finding rules. |
-| **Accepted Risk Expiration** | F-04 (Findings), RMF-001 | Auto-create Finding Record (severity: High) if acceptance expires without renewal. Original acceptance approver is notified. |
-| **KEV / Active Exploitation Override** | F-04 (Findings) | Override the existing severity. Treat as Critical regardless of CVSS score. Apply Critical SLA (48 hours). |
+| Exception | Applies To | Record outcome |
+|-----------|-----------|----------------|
+| **False Positive** | F-04 (Findings) | Close Finding Record with rationale and evidence of false-positive determination. |
+| **Compensating Control in Place** | F-04 (Findings) | Create Security Exception Record when a control is not met as written; create Risk Register Entry or Risk Acceptance Record if residual exposure remains. |
+| **Vendor Patch Unavailable** | F-04 (Findings), F-01 (Control Intent) | Create Third-Party Finding / Finding Record and vendor evidence trail; create Security Exception Record or Risk Acceptance Record only if continued operation creates accepted residual risk. |
+| **OT Maintenance Window** | F-04 (Findings), F-05 (Change) | Follow PRC-VM and OT/CIP routing; create Risk Register Entry if delay exceeds allowed window or requires business consequence acceptance. |
+| **Business Outage Risk** | F-04 (Findings), F-05 (Change) | Create Risk Register Entry. Business Owner or Executive Sponsor accepts residual business consequence per RMF-001 §9.7 if deferral is chosen. |
+| **Emergency Remediation** | F-04 (Findings) | Execute remediation immediately. Create Security Change Review Record post-hoc per F-05 emergency change rules. |
+| **Reopened Finding** | F-04 (Findings) | Reopen Finding Record, increment recurrence counter, and apply the owning procedure's clock from reopen/reclassification. |
+| **Accepted Risk Expiration** | F-04 (Findings), RMF-001 | Auto-create Finding Record if acceptance expires without renewal; original acceptance approver is notified. |
+| **KEV / Active Exploitation Override** | F-04 (Findings) | Reclassify per PRC-VM, including Material Risk — PPR where applicable; PRC-VM SLA governs. |
 
 ## 2. Operating Principles
 
 
-### Record Type Definitions
+### Record Authority and Conversion Summary
 
-These terms appear throughout the flows. Consistent usage prevents confusion during operations and audits.
+[`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) is authoritative for record names, aliases, owners, required fields, and evidence value. The table below summarizes how operational terms used in flows map to CAT-002 records; it does not redefine the records.
 
-| Term | Definition | Record Type | Converts To |
-|------|-----------|-------------|-------------|
-| **Finding** | An observed condition requiring disposition — discovered through scanning, testing, audit, or review | Finding Record | May promote to Risk Record if SLA exceeded, business decision required, or crown jewel affected |
-| **Risk** | A loss-event scenario with a named owner, treatment strategy, and acceptance decision | Risk Record | May create Exception Record if control deviation is involved |
-| **Exception** | An approved deviation from a control or requirement, with compensating controls, expiration, and named approver | Exception Record | Expired exceptions without renewal become Findings (severity: High) |
-| **Vulnerability** | A technical weakness in an asset — the raw input to a Finding | (fields within Finding Record) | Becomes a Finding when triaged; may be directly remediated without becoming a Risk |
-| **Control Gap** | A missing or ineffective control — a systemic condition, not a single finding | Finding Record or Risk Record | Usually becomes a Risk due to systemic impact |
-| **Incident** | A declared security event requiring active response | Incident Record | Lessons learned may create Findings, Risks, or Control Change Records |
+| Operational term | CAT-002 canonical record | Conversion / handoff rule |
+|------|--------------------------|---------------------------|
+| **Finding** | Finding Record | May promote to Risk Register Entry if SLA is exceeded, business decision is required, exploitation is active, or crown jewel / regulated scope is affected. |
+| **Risk** | Risk Register Entry | May require Security Exception Record if control deviation is involved; may require Risk Acceptance Record if residual risk is accepted. |
+| **Exception** | Security Exception Record | Expired exceptions without renewal become Findings; residual risk acceptance follows RMF-001 §9.7. |
+| **Vulnerability / exposure observation** | Exposure Backlog Item or Finding Record | Raw scanner output becomes a Finding Record only after PRC-VM triage/validation. |
+| **Control Gap** | Finding Record or Risk Register Entry | Usually becomes a Risk Register Entry when systemic impact or business consequence exists. |
+| **Incident** | IR-owned Incident Record | Lessons learned may create Findings, Risk Register Entries, Program Improvement Records, or Control Implementation Records. |
 
 **Conversion Rules:**
 
-- A Finding promotes to a Risk Record when: SLA is exceeded, the affected asset is Tier 0/Tier 1, exploitation is active, remediation requires a business decision, or compensating controls are needed.
-- A Risk that involves a control deviation creates an Exception Record.
-- An Exception that expires without renewal auto-creates a Finding (severity: High).
-- A recurring Finding in the same control family triggers a Control Change Record (F-01).
+- A Finding promotes to a Risk Register Entry when: SLA is exceeded, the affected asset is Tier 0/Tier 1, exploitation is active, remediation requires a business decision, or compensating controls are needed.
+- A Risk Register Entry that involves a control deviation creates or links to a Security Exception Record.
+- A Security Exception Record that expires without renewal auto-creates a Finding Record.
+- A recurring Finding in the same control family triggers a Control Implementation Record (flow-local alias: Control Change Record) under F-01.
 
 1. **One material event creates one primary record and one accountable owner.** CERG repeatedly emphasizes authoritative records and explicit ownership as the basis for mature execution.
 2. **Pre-production security work is Engineering-led unless explicitly escalated.** CERG positions Engineering as the embedded consulting and architecture-review function for projects before production.
@@ -148,45 +151,34 @@ Use the following canonical role names consistently across all records and flows
 
 ---
 
-## 4. Authoritative Record Types
+## 4. Flow-to-Record Crosswalk
 
-Every material workflow must resolve to one primary system-of-record object:
+Every material workflow must resolve to one primary system-of-record object. FLOW identifies the operational handoff; [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) defines the authoritative record name and alias mapping.
 
-- **Project Intake Record**
-- **Architecture Review Record**
-- **Threat Model Record**
-- **Asset Record**
-- **Finding Record**
-- **Risk Record**
-- **Exception Record**
-- **Change Record**
-- **Incident Record**
-- **Evidence Record**
-- **Improvement Record**
-- **Control Change Record**
-- **Reporting Metric Record**
+| Flow concept | CAT-002 canonical record | Common FLOW alias |
+|---|---|---|
+| Control intent implementation | Control Implementation Record | Control Change Record |
+| Project / architecture review | Project Security Review Record | Project Intake Record; Architecture Review Record |
+| Threat modeling | Threat Model Record | Threat model artifact |
+| Asset registration | Asset Inventory Record | Asset Record |
+| Security coverage validation | Asset Coverage Record | Coverage row |
+| Finding treatment | Finding Record | Finding ticket; exposure finding |
+| Risk treatment | Risk Register Entry | Risk Record |
+| Control deviation | Security Exception Record | Exception Record |
+| Residual-risk acceptance | Risk Acceptance Record | Acceptance request; risk memo |
+| Security-relevant change | Security Change Review Record | Change Record |
+| Incident response | Incident Record | IR ticket / incident case |
+| Evidence indexing | Evidence Index Entry | Evidence Record |
+| Program improvement | Program Improvement Record | Improvement Record |
+| Metrics and oversight | Reporting Metric Record; Oversight Decision Record | Metric row; oversight decision |
 
 ---
 
-## 5. Common Required Fields
+## 5. CAT-002 Record Field Authority
 
-Every authoritative record should contain the following minimum fields:
+FLOW does not define required record fields independently. Every authoritative record uses the minimum required fields in [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) §3 plus the record-specific fields implied by its source procedure or template. Flow implementers may add local tool fields, but they must preserve CAT-002 canonical record type, owner, status, decision, due/review date, evidence link, and closure rationale.
 
-- `record_id`
-- `source_event`
-- `current_state`
-- `accountable_role`
-- `supporting_roles`
-- `business_owner`
-- `technical_owner`
-- `in_scope_assets`
-- `data_classification`
-- `regulatory_scope`
-- `evidence_links`
-- `due_date`
-- `escalation_date`
-- `closure_criteria`
-- `feedback_destination`
+When a flow below lists a primary record, read it as a CAT-002 canonical record name. Parenthetical names such as `Change Record`, `Risk Record`, or `Control Change Record` are local aliases only.
 
 ---
 
@@ -316,7 +308,7 @@ Convert governance-originated control intent into implementable technical change
 - Board or CISO directive
 
 ### Primary Record
-**Control Change Record**
+**Control Implementation Record** (flow-local alias: Control Change Record)
 
 ### Required Inputs
 - Control ID
@@ -331,7 +323,7 @@ Convert governance-originated control intent into implementable technical change
 
 
 ### Workflow
-1. Governance creates the **Control Change Record**.
+1. Governance creates the **Control Implementation Record** (or local Control Change Record alias).
 2. Governance defines **control intent and conformance scope**.
 3. Engineering produces the **implementation design**.
 4. Risk defines **validation criteria before rollout**.
@@ -349,8 +341,8 @@ Convert governance-originated control intent into implementable technical change
 - Implementation design package
 - Validation plan
 - Control test or outcome evidence
-- Updated reporting metric record
-- Linked evidence record
+- Updated Reporting Metric Record
+- Linked Evidence Index Entry
 
 ### SLA
 - Governance publishes package: 5 business days
@@ -394,7 +386,7 @@ Ensure that new systems and major changes enter production with known scope, req
 - IT/OT convergence change
 
 ### Primary Record
-**Project Intake Record**
+**Project Security Review Record** (front-door alias: Project Intake Record)
 
 
 ### Required Inputs
@@ -524,7 +516,7 @@ Ensure every in-scope asset has ownership, classification, regulatory designatio
 - Asset decommission request
 
 ### Primary Record
-**Asset Record**
+**Asset Inventory Record** (local alias: Asset Record)
 
 
 ### Asset Classes and Registration Requirements
@@ -585,8 +577,8 @@ Assets are classified by lifecycle to determine registration depth. Ephemeral an
 - Crown-jewel minimum control profile verified for Tier 0/Tier 1 assets (per [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md))
 
 ### Evidence Required
-- Asset Record
-- Coverage validation result
+- Asset Inventory Record
+- Asset Coverage Record / coverage validation result
 - Governance obligation map
 
 ### Metrics Generated
@@ -787,7 +779,7 @@ Ensure that security-significant changes receive consistent cross-pillar handlin
 - New external dependency
 
 ### Primary Record
-**Change Record**
+**Security Change Review Record** (local alias: Change Record)
 
 
 ### Required Inputs
@@ -819,7 +811,7 @@ Not all changes carry the same security risk. The table below defines what each 
 - **Emergency:** Verify as soon as practical. Automated CSPM/CNAPP scanning is acceptable as control continuity evidence. Document any gaps as a finding.
 
 ### Workflow
-1. Engineering classifies the change per the table above and opens **Change Record**.
+1. Engineering classifies the change per the table above and opens the **Security Change Review Record** (or local Change Record alias).
 2. For Pre-Approved: deploy immediately; create Change Record post-hoc. Skip to step 6.
 3. For Standard: Engineering completes lightweight SIA. For Major/Emergency: Engineering completes full SIA.
 4. Risk reviews if change is risk-significant (Standard) or mandatory (Major/Emergency).
@@ -889,7 +881,7 @@ Define how CERG supports the standing Incident Response team during and after an
 ### Primary Record
 **IR-owned Incident Record** during active response.
 
-**CERG Improvement Record** or related CERG record when the incident produces a control, risk, standard, evidence, or metric change.
+**Lessons Learned Record** and/or **Program Improvement Record** when the incident produces a CERG control, risk, standard, evidence, or metric change.
 
 ### Required Inputs
 - Incident ID
@@ -922,8 +914,8 @@ Incident severity and response clocks are governed by the Incident Response Plan
 4. Engineering executes containment, eradication, recovery, access, network, configuration, or restoration changes approved through the IR process.
 5. Governance supplies regulatory mapping, evidence indexing, decision-log support, and reporting artifacts under Incident Commander and Legal direction. Governance does not own the notification-clock process.
 6. Evidence Librarian preserves CERG-produced evidence and links it to the IR-owned Incident Record or submitted evidence package.
-7. After active response is closed or stabilized, Governance opens the CERG lessons-learned and feedback decision record.
-8. Engineering, Risk, and Governance assign corrective actions, risk-register updates, standards/procedure changes, metrics updates, or program improvement records.
+7. After active response is closed or stabilized, Governance opens the CERG Lessons Learned Record and feedback decision record.
+8. Engineering, Risk, and Governance assign corrective actions, Risk Register Entry updates, standards/procedure changes, Reporting Metric Record updates, or Program Improvement Records.
 
 ### Mandatory Post-Incident CERG Outputs
 - CERG support actions and evidence package
@@ -1101,85 +1093,21 @@ These instructions tell an LLM how to execute the flows without ambiguity:
 
 ---
 
-## 19. Minimum Record Templates
+## 19. Flow-to-CAT-002 Record Crosswalk
 
-### 16.1 Finding Record
+FLOW does not maintain standalone record templates. Use [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) §3 for minimum required fields and §4 for canonical record names, owners, triggers, and evidence value. Use the source procedure or template named in CAT-002 for record-specific fields.
 
-Required fields:
-- Finding ID
-- Source
-- Severity
-- Exploitability
-- Affected assets
-- Business owner
-- Technical owner
-- Regulatory scope
-- Treatment class
-- Current state
-- Due date
-- Evidence links
+| Flow | Primary CAT-002 record | Source of detailed fields |
+|---|---|---|
+| F-01 Control Intent | Control Implementation Record | CAT-002 §4.1; CB-001; FLOW F-01 evidence plan |
+| F-02 Project Intake | Project Security Review Record; Threat Model Record | PRC-AR-001; PRC-TM-001; TMPL-AR-001 where used |
+| F-03 Asset Registration | Asset Inventory Record; Asset Coverage Record | STD-AM-001; FLOW F-03 coverage requirements |
+| F-04 Finding Treatment | Finding Record; Risk Register Entry; Security Exception Record; Risk Acceptance Record | PRC-VM-001; PRC-RM-001; TMPL-RM-002; TMPL-RM-004 |
+| F-05 Change & Release | Security Change Review Record | PRC-CHG-001 and local change system fields |
+| F-06 Incident Support | IR-owned Incident Record; Lessons Learned Record; Program Improvement Record | PLN-IR-001; PRC-IR-002; PRC-LL-001; CAT-002 incident boundary rules |
+| F-07 Metrics & Oversight | Reporting Metric Record; Oversight Decision Record; Program Improvement Record | MTR-001; IMPREG-001; CAT-002 §4.1 |
 
-### 16.2 Exception Record
-
-Required fields:
-- Exception ID
-- Control ID
-- Affected asset
-- Rationale
-- Compensating controls
-- Residual risk
-- Approver
-- Expiration date
-- Monitoring cadence
-- Linked risk ID
-- Evidence links
-
-### 16.3 Risk Record
-
-Required fields:
-- Risk ID
-- Risk statement
-- Inherent risk
-- Residual risk
-- Owner
-- Treatment strategy
-- Review cadence
-- Linked findings
-- Linked exceptions
-- Status
-
-### 16.4 Asset Record
-
-Required fields:
-- Asset ID
-- Asset type
-- Owner
-- Business owner
-- Technical owner
-- Environment
-- Classification
-- Regulatory scope
-- Criticality
-- Scan coverage
-- Logging coverage
-- Backup assignment
-- Access review population
-- Status
-
-### 16.5 Incident Record
-
-Required fields:
-- Incident ID
-- Severity
-- Incident commander
-- Affected assets
-- Current state
-- Notification obligations
-- Containment actions
-- Investigation summary
-- Recovery actions
-- Lessons-learned decision
-- Corrective-action owner
+If a local tool cannot use the CAT-002 canonical name directly, store the canonical record type as a tag, custom field, evidence-index value, or cross-reference. Local names are aliases, not separate record authority.
 
 ---
 
@@ -1210,7 +1138,7 @@ Implement:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -1227,6 +1155,7 @@ Implement:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.4 | 2026-06-18 | Governance Pillar Leader | Converted FLOW record sections into CAT-002 crosswalks, removed local record-template authority, updated primary-record names to CAT-002 canonical records, and clarified alias handling. |
 | 1.3 | 2026-06-18 | Governance Pillar Leader | Replaced F-04 competing severity SLA table with PRC-VM SLA authority, removed contradictory closure rules, and aligned residual-risk acceptance with RMF-001 §9.7. |
 | 1.2 | 2026-06-18 | Governance Pillar Leader | Rewrote F-06 to preserve Incident Commander / standing IR team authority for active incident operations while defining CERG support, evidence, and post-incident improvement routing. |
 | 1.1 | 2026-06-17 | Governance Pillar Leader | Added AI routing rules to F-02, including AI intake, sanctioned-tool register, system/model register, and escalation criteria for sensitive data, regulated scope, consequential decisions, and autonomous agency. |
