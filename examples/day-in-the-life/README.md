@@ -187,6 +187,19 @@ Risk adds context for one exception. A privileged service account could not be r
 
 Governance applies the evidence quality tier and identifies one improvement: export naming was inconsistent across applications. The audit response is completed, but the work does not stop there. Governance creates a program improvement item to standardize evidence naming and extraction metadata for all access reviews.
 
+### Evidence request package example
+
+| Request Element | CERG Handling | Evidence Included |
+|---|---|---|
+| Control and period | Governance maps the auditor's wording to the access review control and the prior-quarter review window. | Control mapping, request ticket, period definition |
+| Population completeness | Engineering proves which accounts and privileged groups were in scope at extraction time. | IdP export, application role export, break-glass account list |
+| Reviewer authority | Governance confirms the reviewer was the named system owner or delegated approver. | Reviewer attestation, delegation record if applicable |
+| Exceptions and removals | Risk explains open exceptions; Engineering proves completed removals. | Exception summary, removal tickets, closure timestamps |
+| Evidence quality | Governance checks source, timestamp, immutability, chain of custody, and naming discipline. | Evidence quality checklist, evidence index links |
+| Response package | Governance sends the package with an answer narrative instead of loose screenshots. | Final response memo, linked evidence bundle, improvement item if needed |
+
+The auditor receives a coherent evidence package, not a zip file of screenshots. The Business Owner sees whether the control actually ran. CERG gets a reusable improvement when evidence quality is weaker than the control itself.
+
 ### Operational outputs
 
 - Audit request mapped to control, system, period, and evidence requirements.
