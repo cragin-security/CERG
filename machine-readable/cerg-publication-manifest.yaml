@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 127 artifacts
+# Generated from document metadata | 128 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-AUD-001
@@ -1386,6 +1386,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Vendor Risk Analyst
+  release_date: 2026-06-20
+
+- document_id: CERG-TMPL-SCP-001
+  source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
   release_date: 2026-06-20
 
 - document_id: CERG-TMPL-TPRM-001
