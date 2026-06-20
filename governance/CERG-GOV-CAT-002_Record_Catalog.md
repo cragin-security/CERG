@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -74,7 +74,9 @@ Every CERG record should include these fields unless the source procedure explic
 | Open date | When the record was created |
 | Due date / review date | When action, review, or expiration is required |
 | Decision | Approved, rejected, accepted, deferred, remediated, or not applicable where applicable |
+| Decision date | Date the current decision was recorded where a decision is required |
 | Evidence link | Pointer to supporting evidence |
+| Last validated date | Date the record was last validated against operational reality, evidence, owner, and control/risk state |
 | Closure rationale | Why the record is closed or no longer active |
 | Last updated | Date of most recent material change |
 
@@ -99,6 +101,7 @@ The record names in this section are authoritative. Other CERG documents may use
 | Project Security Review Record | Project Intake Record, Architecture Review Record, security review ticket | Intake and architecture-review tools may split the workflow; the evidence package maps to this canonical record. |
 | Security Change Review Record | Change Record, security impact assessment, release security review | `Change Record` is acceptable shorthand where the change system is the source of truth. |
 | Asset Inventory Record | Asset Record, CMDB item, system inventory row | Local CMDB object names must preserve owner, classification, criticality, and coverage status. |
+| System Control Profile Record | SCP, system control profile, per-system control profile, SSP control implementation extract | Use for per-system or per-system-class control implementation, evidence, validation, and review state. It supports but does not replace regulated SSPs, POA&Ms, or CIP evidence packages. |
 | Incident Record | IR ticket, incident case, security incident record | Owned by the standing IR team; CERG support evidence links to, but does not replace, this record. |
 | Lessons Learned Record | Post-incident action, after-action item, PIR finding | Use Program Improvement Record when the lesson changes the CERG program. |
 
@@ -139,6 +142,7 @@ The record names in this section are authoritative. Other CERG documents may use
 | Threat Model Record | Risk / Engineering jointly | [PRC-TM-001](../procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Review tier requires threat modeling | Proves threats, misuse cases, mitigations, and residual risk |
 | Asset Inventory Record | Asset owner / Engineering | [STD-AM-001](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), FLOW F-03 | Asset enters, changes, or leaves scope | Proves asset existence, classification, owner, and lifecycle |
 | Asset Coverage Record | Engineering Pillar Leader | FLOW F-03 | Asset needs coverage for logging, scanning, backup, endpoint, identity, or monitoring | Proves required security coverage exists or is exceptioned |
+| System Control Profile Record | System Owner / Engineering Pillar Leader | [TMPL-SCP-001](../templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md), [CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md), [TRC-001](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | A system or system class needs a consolidated control implementation, evidence, last-validation, and next-review profile | Proves per-system control implementation, evidence linkage, residual condition, and review state; supports SSP, NERC-CIP, SOX, and audit assertions |
 | Configuration Baseline Record | Platform / Endpoint / Cloud Engineer | [STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baseline is created, changed, tested, or applied | Proves approved configuration and drift management |
 | Security Change Review Record | Engineering Pillar Leader | [PRC-CHG-001](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md), FLOW F-05 | Change may affect security posture | Proves security review, decision, and release condition |
 | Access Review Record | Identity Engineer / Governance | [STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md), [PRC-AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Scheduled recertification or privileged access review occurs | Proves entitlement review and corrective actions |
@@ -248,7 +252,7 @@ A record is not complete unless it passes these checks:
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -258,6 +262,7 @@ A record is not complete unless it passes these checks:
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.2 | 2026-06-20 | Governance Pillar Leader | Added System Control Profile Record, minimum decision/validation fields supporting Definition of Done, and SCP alias discipline. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added canonical record-name and alias discipline, common alias map, and aligned risk acceptance records to RMF-001 §9.7 and TMPL-RM-004. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Establishes the authoritative CERG record catalog, minimum required fields, and minimum viable evidence library. |
 
