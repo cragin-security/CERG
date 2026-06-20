@@ -235,7 +235,7 @@ The project arrives with a firm go-live date, so Engineering immediately routes 
 
 Risk runs a short threat model with the product team. The highest-priority scenario is credential theft leading to API abuse and data export. Engineering adds rate limiting, privileged workflow logging, and alerting for abnormal export volume. Governance confirms that the evidence package must include asset registration, logging validation, threat model decisions, and the final change approval.
 
-Two days before launch, Engineering proves that logs are flowing to the SIEM and that cloud assets have owners and classifications. Risk accepts one low residual risk around delayed DDoS exercise completion with a 30-day due date. Governance confirms the exception is time-bound and visible in reporting. The release proceeds with clear ownership rather than informal verbal approval.
+Two days before launch, Engineering proves that logs are flowing to the SIEM and that cloud assets have owners and classifications. Risk validates and recommends the disposition for one low residual risk around delayed DDoS exercise completion with a 30-day due date; the Business Owner accepts the consequence under the RMF authority path. Governance confirms the exception is time-bound and visible in reporting. The release proceeds with clear ownership rather than informal verbal approval.
 
 ### Operational outputs
 
