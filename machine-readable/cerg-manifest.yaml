@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-19 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-06-20 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -288,7 +288,7 @@
   title: Framework System Map
   document_type: governance_instrument
   domain: FRM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-002_Framework_System_Map.md
   source_file: CERG-GOV-FRM-002_Framework_System_Map.md
-  source_hash: 172605b2dab314db5ff92b5dc29e2d268f49d47041efe25fa8d6ee6393ae5996
+  source_hash: ec2927d0adc0d4e4d8790c69a018ee7612e0b7bcb716b4c259d21e1da2e8109a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-002_Framework_System_Map.md
   llm_include: true
   llm_priority: medium
@@ -1028,7 +1028,7 @@
   title: Architecture Review and Project Intake Procedure
   document_type: procedure
   domain: AR
-  version: 1.0
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -1037,7 +1037,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: 9f683b74bfb6871374d3f650afe452db35c551140b4866ceac3ab7d20d84dc84
+  source_hash: 47975d44ca15a8fa3030a9fbea0ffc01484a5a36fae2efbf05025780c2520a7d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -1228,7 +1228,7 @@
   title: Exposure Management Procedure
   document_type: procedure
   domain: VM
-  version: 2.01
+  version: 2.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -1237,7 +1237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: 142bd0bd121a1660a9b8a9a1ebb5ca2a4383151220df4b76a71edc6e67308423
+  source_hash: 85844f03d4e7771cfac68b78d48b03aff3fbd8f188106fcc30bf438f1f2bf4b5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -2168,7 +2168,7 @@
   title: Grid Control Systems Security Standard
   document_type: standard
   domain: OT
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -2177,7 +2177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   source_file: CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
-  source_hash: 91d4f035f193d256a79751a965eb7d9c605352228fb8410a9950eee499dc0020
+  source_hash: 13fae41687bbb55e4853cea5a72420aed3e075041097a2285b18cbf67bd237e8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2288,7 +2288,7 @@
   title: Architecture and Project Intake Form
   document_type: template
   domain: AR
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2297,7 +2297,7 @@
   parent_artifact: 'CERG-PRC-AR-001 — Architecture Review and Project Intake Procedure'
   source_path: templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
   source_file: CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
-  source_hash: 2764cbed887eec4a0221f146e20496ce5083ff043be5217e73657db810b99f0f
+  source_hash: 106d02e1dcb9fa7735537f12f1847bad71b2254e066d93dbd466c75bfa395d21
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
   llm_include: true
   llm_priority: medium
