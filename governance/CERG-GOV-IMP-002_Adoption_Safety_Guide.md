@@ -145,7 +145,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 **Why it fails:** CERG's operating philosophy is "yes, and here are the conditions that make this safe." When Governance becomes a gatekeeper instead of an enabler, teams route around it, and real risk goes unmanaged.
 
-**Fix:** Use the timeout-bypass principle (FLOW-001 §1, principle 9). Define decision rights clearly. Delegate routine approvals to Pillar Leaders. Reserve Governance escalation for material risk decisions.
+**Fix:** Use the timeout-bypass principle (FLOW-001 §2, principle 10). Define decision rights clearly. Delegate routine approvals to Pillar Leaders. Reserve Governance escalation for material risk decisions.
 
 ### Anti-Pattern 6: Risk as Vulnerability Scanning Only
 
