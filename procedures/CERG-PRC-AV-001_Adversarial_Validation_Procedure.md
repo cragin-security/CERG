@@ -45,6 +45,8 @@ The Cybersecurity Policy requires periodic adversarial testing. The exposure man
 
 This procedure makes it explicit. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
 
+In CERG, penetration testing is one engagement type within the broader adversarial validation capability. It does not replace red-team operations, purple-team detection validation, cloud attack simulation, OT-safe assessment, or other authorized testing where those activities are in scope.
+
 > **Adversarial Validation Is the Antidote to Drift**
 >
 > A control library that exists on paper but has never been tested is a hope. Adversarial validation tests the assumption that the control library implements actual defense. CERG runs it on a cadence; documents the rules; routes findings into exposure management or the risk register; and uses purple-team work to upgrade detection, not just to score the team.
