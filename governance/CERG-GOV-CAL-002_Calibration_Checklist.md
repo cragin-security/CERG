@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CALIBRATION CHECKLIST
 ### Consolidated Preliminary Default Register
 

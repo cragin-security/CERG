@@ -358,7 +358,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
-| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
+| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CERG Framework (narrative) | CISO | Approved |
 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
@@ -532,7 +532,7 @@ The `examples/` directory contains narrative walkthroughs and adoption profiles.
 
 | Example | Purpose | Format |
 |---|---|---|
-| `examples/day-in-the-life/README.md` | Ten narrative walkthroughs of how the three pillars produce outcomes together (intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout, CERG Lite exposure triage, control-intent implementation, and new-CISO onboarding) | Markdown stories with step tables and operational output lists |
+| `examples/day-in-the-life/README.md` | Narrative walkthroughs of how the three pillars produce outcomes together — intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout, CERG Lite exposure triage, control-intent implementation, new-CISO onboarding, and OT maintenance-window patch deferral | Markdown stories with step tables and operational output lists |
 | `examples/regulated-utility-profile/` | A filled-in sample of [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for a regulated utility sector organization | Adapted profile |
 
 Examples are illustrative, not normative. They may be updated outside the V1 review cycle and may reference planned V1.x documents with explicit `(Planned)` markers.

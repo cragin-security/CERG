@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## RISK ACCEPTANCE REQUEST FORM
 ### Business Owner Acceptance · Residual Risk · Per-RMF-001 Authority · Conditions · Expiration
 

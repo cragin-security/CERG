@@ -15,7 +15,7 @@ governance/         Policies, governance instruments, competency models, risk fr
 standards/          Technical security standards (15 docs)
 procedures/         Operational procedures (12 docs)
 plans/              Regulatory operational packages (7 docs)
-templates/          Fill‑in artifacts for routine work (10 docs)
+templates/          Fill‑in artifacts for routine work
 roles/              Workforce architecture:
   JF-001.md         Job Families Overview
   JF-002.md         NICE Workforce Framework Crosswalk

@@ -1,4 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
 ## SBOM Evidence Collection Checklist
 ### Audit-Ready Artifacts for Software Supply Chain
 
