@@ -1,14 +1,31 @@
 # CERG (surge) · Cybersecurity Operating Model
 
-**A spine, not shelfware.**
+**An operating model for teams that need security to actually run.**
 
-CERG gives security teams the policies, standards, procedures, roles, records, and evidence model needed to run a cybersecurity program. It is not a control framework, certification scheme, or compliance checklist. Compliance alignment is a byproduct of operating well.
+CERG helps security teams build capability, not just collect tools or chase compliance. It gives you the policy spine, roles, standards, procedures, templates, records, and evidence habits needed to turn scattered security work into a repeatable program.
+
+The goal is operating leverage: clearer decisions, fewer ad hoc meetings, less duplicated effort, better handoffs, and evidence created as work happens. A well-run security program should scale through clarity and repeatability, not by throwing more bodies at every new requirement.
+
+CERG is not a control framework, certification shortcut, or tooling project. Compliance alignment matters, but it is a byproduct of operating well.
+
+---
+
+## What CERG helps you build
 
 CERG is built around three accountable pillars:
 
-- **Cyber Engineering** builds security in early.
-- **Cyber Risk** understands exposure and drives treatment.
-- **Cyber Governance** sets clear rules, records decisions, and keeps evidence usable.
+- **Cyber Engineering**: build security in early through standards, architecture review, secure development, resilience, logging, identity, cloud, SaaS, AI, and OT guardrails.
+- **Cyber Risk**: understand exposure, track risk decisions, manage exceptions, and drive treatment.
+- **Cyber Governance**: set clear rules, record decisions, define ownership, and keep evidence usable.
+
+Use CERG to:
+
+- make security ownership explicit;
+- turn tribal knowledge into repeatable workflows;
+- give engineering teams clear guardrails instead of vague security asks;
+- reduce toil from recurring reviews, audits, exceptions, and reporting;
+- create reusable evidence as work happens;
+- build a security function that can grow without making every problem a staffing problem.
 
 ---
 
@@ -28,11 +45,11 @@ CERG is built around three accountable pillars:
 
 ## Adoption modes
 
-You do not adopt the full library in week one.
+You do not adopt the full library in week one. Start with the spine, prove the operating rhythm, then add depth where the organization actually needs it.
 
-- **CERG Lite**: minimum viable program for a small or early security function.
-- **CERG Standard**: core operating model for an established security team.
-- **CERG Regulated**: Standard plus overlays for CMMC, NERC-CIP, SOX, ISO 27001, privacy, OT, or other regulated scope.
+- **CERG Lite**: the minimum viable program for a small or early security function.
+- **CERG Standard**: the core operating model for an established security team.
+- **CERG Regulated**: Standard plus overlays for regulated, audited, privacy, OT, or critical infrastructure scope.
 
 The minimum viable CERG spine is eight documents: Policy, Framework, Operating Model, Document Catalog, Risk Management Framework, Risk Register Procedure, Risk Register Templates, and Exposure Management Procedure.
 
@@ -40,12 +57,14 @@ The minimum viable CERG spine is eight documents: Policy, Framework, Operating M
 
 ## What is in the repo
 
-- `governance/`: policy, operating model, catalogs, risk framework, RACI, metrics, maturity, workforce governance.
-- `standards/`: technical standards for access, asset, cloud/SaaS, logging, resilience, AI, OT, secure development, and related domains.
-- `procedures/`: operational workflows for risk, exposure, architecture review, TPRM, audit/evidence, change, threat modeling, and more.
-- `plans/`: regulated and operational packages such as CMMC/CUI, NERC-CIP, SOX, ISO 27001, privacy, BCDR, and IR interface.
-- `templates/`: practical forms and registers.
-- `roles/`: workforce architecture and job descriptions.
+CERG includes:
+
+- `governance/`: policy, operating model, risk framework, RACI, metrics, maturity, workforce governance, and program structure.
+- `standards/`: technical standards that define what good looks like across major security domains.
+- `procedures/`: repeatable workflows for risk, exposure, architecture review, TPRM, audit/evidence, change, threat modeling, and related work.
+- `plans/`: operational packages for regulated or specialized scopes.
+- `templates/`: practical forms, registers, and records teams can use directly.
+- `roles/`: workforce architecture, job families, job descriptions, competencies, and onboarding.
 - `machine-readable/`: indexes, manifests, schemas, flow models, and agent-friendly metadata.
 - `examples/`: adoption examples and day-in-the-life walkthroughs.
 
@@ -68,7 +87,9 @@ The GitHub repository is authoritative. The website is a convenience mirror and 
 
 ## When CERG is not a good fit
 
-Do not adopt CERG yet if there is no named security owner, no executive support for guardrails and evidence, unclear scope, or no willingness to track decisions and exceptions. Start lighter with NIST CSF or CIS Controls, then return when ownership and evidence discipline exist.
+Do not adopt CERG yet if there is no named security owner, no executive support for guardrails and evidence, unclear scope, or no willingness to track decisions and exceptions.
+
+Start lighter, establish ownership and evidence discipline, then return when the organization is ready to operate security as a real function.
 
 CERG does not determine legal obligations or certification readiness. Validate regulatory applicability with qualified counsel, compliance leadership, and assessors.
 
