@@ -146,7 +146,7 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 
 ### Schedule your first stakeholder survey at month 2
 
-After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey is how you measure whether the program is reducing drag and confusion for the business, which is the program's stated mission. Run annually thereafter. Survey results below 3.0 mean Likert, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). The survey is paired with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so friction is caught continuously, not only once a year.
+After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey is how you measure whether the program is reducing drag and confusion for the business, which is the program's stated mission. Run annually thereafter. Survey results below 3.0 on a Likert scale, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). The survey is paired with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so friction is caught continuously, not only once a year.
 
 ---
 

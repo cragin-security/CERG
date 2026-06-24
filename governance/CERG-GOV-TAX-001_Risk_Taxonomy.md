@@ -13,6 +13,9 @@
 | **Owner** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework or organizational change |
+| **Frameworks** | NIST CSF 2.0 (IDENTIFY); ISO/IEC 27001 A.5, A.8; NIST SP 800-53r5 RA-3, RA-5, RA-7 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All in-scope: IT, OT, Cloud |
 
 ---
 

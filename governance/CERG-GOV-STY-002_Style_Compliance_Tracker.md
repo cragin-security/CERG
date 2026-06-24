@@ -1,7 +1,4 @@
-# CERG Style Compliance Tracker
-
-**Purpose:** Track known STY-001 and governance compliance gaps across the CERG corpus.  
-**Owner:** Governance Pillar Leader (Document Control)  
+## CERG Style Compliance Tracker
 
 | | |
 |---|---|
@@ -19,6 +16,10 @@
 
 
 ---
+
+**Purpose:** Track known STY-001 and governance compliance gaps across the CERG corpus.
+**Owner:** Governance Pillar Leader (Document Control)
+
 
 ## Known Contradictions Resolved
 
