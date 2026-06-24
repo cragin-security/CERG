@@ -85,8 +85,8 @@ The following events trigger a lessons-learned artifact. Each source names the a
 | Source | Trigger Event | Accountable Role | SLA (from event close) |
 |---|---|---|---|
 | Post-incident review | Incident closed per PRC-IR-002 | Incident Commander (IR team) or Governance Pillar Leader | 14 calendar days |
-| Penetration test / red team | Engagement report delivered per PRC-AV-001 | Adversarial Testing Lead | 14 calendar days |
-| Purple team exercise | Exercise completed per LM-001 | Detection Engineer | 14 calendar days |
+| Adversarial validation engagement | Pen test, red-team, cloud, application, OT-safe, or comparable engagement report delivered per PRC-AV-001 | Adversarial Testing Lead | 14 calendar days |
+| Purple team exercise | Exercise completed per LM-001 or PRC-AV-001 | Detection Engineer | 14 calendar days |
 | Audit finding (internal) | Audit report issued per PRC-AUD-001 | Governance Pillar Leader | 21 calendar days |
 | Audit finding (external / regulator) | Final report received | Governance Pillar Leader | 21 calendar days |
 | DR / BC exercise | Exercise AAR completed per PLN-BC-001 | Governance Pillar Leader | 14 calendar days |
