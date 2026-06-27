@@ -54,7 +54,7 @@ If you are a one-person security function, use CERG as a planning reference and 
 
 1. **Read the [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. Nothing is authoritative until an Executive Sponsor signs this.
 2. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)** — the three-pillar model. You'll consolidate roles heavily; that's expected.
-3. **Read the [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, 5-person operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
+3. **Read the [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, small-team operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
 4. **Read the [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md).** Use the small-team consolidated checklist if one person holds multiple roles.
 5. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4 (MVC). Follow the Minimum Viable CERG sequence.
 6. **Fork the repo.** Do not cherry-pick individual files. The documents are interconnected.
@@ -143,6 +143,19 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 - **Not a substitute for judgment.** CERG provides structure. You provide decisions, owners, scope, and risk appetite.
 - **Not a one-time exercise.** A program runs on cadence. If you're not producing evidence from real work every month, you're not running CERG.
 - **Not shelfware.** If you fork the repo, rename the company, approve everything, and walk away, you have produced exactly nothing.
+
+## What good adoption should feel like
+
+CERG should create operating leverage. After the first cycle, the work should feel clearer, not heavier:
+
+- owners and decision rights are easier to name;
+- recurring reviews produce records instead of status theater;
+- evidence is easier to retrieve because it was created during the work;
+- engineering teams receive clearer guardrails;
+- fewer problems depend on the same hero person;
+- leaders can see whether the bottleneck is capability, scope, tooling, or staffing.
+
+If adoption mostly adds meetings, manual chasing, or ambiguity, stop adding documents and fix the workflow.
 
 ### Schedule your first stakeholder survey at month 2
 
