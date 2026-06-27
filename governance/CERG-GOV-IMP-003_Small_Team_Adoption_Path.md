@@ -31,7 +31,7 @@
 
 This guide is for teams of 8 people or fewer who want to run CERG as their operating model. It assumes you have read the [Adoption Safety Guide](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) and confirmed the prerequisites in §1.
 
-The full CERG corpus describes what a 60-person security team looks like at NIST CSF Adaptive maturity. That is the upper bound. This guide describes the lower bound — what a 5-person team can actually operate without burning out.
+The full CERG corpus includes full-scale examples for mature programs operating at NIST CSF Adaptive maturity. Those examples are an upper-bound reference, not a staffing prescription. This guide describes the lower bound — what a small team can actually operate without burning out.
 
 **The rule:** adopt fewer documents, run a lighter cadence, produce simpler evidence, and add complexity only when the team grows or the risk demands it.
 
@@ -47,7 +47,7 @@ These are the documents you actually need first. Everything else in the repo can
 |----------|-----|
 | Cybersecurity Policy (POL-001) | Board/CISO must approve. One page. |
 | CERG Framework (FRM-001) | Explains the three-pillar model every other document assumes. |
-| Operating Model (OM-001) | Defines your consolidated roles. Read §6.1, skip the 60-person examples. |
+| Operating Model (OM-001) | Defines your consolidated roles. Read §6.1, treat full-scale examples as illustrative. |
 | Document Catalog (CAT-001) | Inventory of what exists and what you have adopted. |
 | Risk Management Framework (RMF-001) | How you score, treat, and accept risk. |
 | Risk Register and Exception Process (PRC-RM-001) | Your operational risk workflow. |
@@ -95,7 +95,7 @@ The following are explicitly deferred for small teams. Document the deferral in 
 
 ## 3. Operating Rhythm for a 5-Person Team
 
-The full calendar (CAL-001) assumes a 60-person team. Scale it down.
+The full calendar (CAL-001) assumes a mature, staffed program. Scale it down.
 
 ### Weekly (1 hour)
 
@@ -159,7 +159,7 @@ The full calendar (CAL-001) assumes a 60-person team. Scale it down.
 
 ## 4. Role Consolidation Map
 
-A 5-person team covers all 27 canonical roles by consolidating them. The map below is one example — adapt it to your team's skills. Document your actual assignments in the Decision Log.
+A small team covers the canonical role roster by consolidating roles. The map below is one example — adapt it to your team's skills. Document your actual assignments in the Decision Log.
 
 | Person | Canonical Roles Consolidated | Primary Family |
 |--------|------------------------------|----------------|
@@ -544,7 +544,7 @@ Create this folder structure in your shared drive, document management system, o
 |---|---|---|---|
 | 1.02 | 2026-06-18 | Governance Pillar Leader | Added authority guardrail requiring independent Business Owner or Executive Sponsor acknowledgement for accepted residual risk in small-team role consolidations. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned the CERG Lite package to the eight-document MVC and separated adoption aids from immediate requirements. |
-| 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. CERG Lite package, reduced operating rhythm for 5-person teams, role consolidation map, first 10 records, first month criteria, spreadsheet schemas for 7 record types, minimum viable evidence library structure. |
+| 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. CERG Lite package, reduced operating rhythm for small teams, role consolidation map, first 10 records, first month criteria, spreadsheet schemas for 7 record types, minimum viable evidence library structure. |
 
 ### Review Triggers
 
