@@ -350,7 +350,7 @@ Movement between CERG and the adjacent teams (Security Awareness, Incident Respo
 ### 9.1 Span-of-Control Guidelines
 
 | Manager Grade | Minimum Span | Optimal Span | Maximum Span | Notes |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 | Manager (M1) | 3 | 5-7 | 8 | Below 3, the role may not justify full-time management. Above 8, 1:1 frequency and quality degrade. |
 | Senior Manager (M2) | 8 (total) | 12-16 (total) | 20 | Counts all reports, direct and indirect. A Senior Manager with 3 Managers each carrying 5 ICs is at 18 and well within range. |
 | Principal Manager (M3) | 15 (total) | 25-35 (total) | 40 | At this scale, the Principal Manager's direct reports should be primarily M2s and senior ICs. |
