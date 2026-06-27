@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.46 |
+| **Version** | 1.47 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -118,6 +118,7 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `BC` | Business continuity and disaster recovery |
 | `ISO` | ISO/IEC 27001 operational package |
 | `PRIV` | Privacy and data protection |
+| `PCI` | Payment Card Industry Data Security Standard (PCI DSS) |
 | `CAL` | Annual security and governance calendar |
 | `STY` | Document authoring and style guide |
 | `TRC` | Control-to-procedure traceability |
@@ -451,6 +452,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PLN-ISO-001`](../plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Approved |
 | [`CERG-PLN-PRIV-001`](../plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Approved |
 | [`CERG-PLN-CON-001`](../plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md) | Consulting Services Operating Plan | Governance Pillar Leader (Practice Enablement) | Approved |
+| [`CERG-PLN-PCI-001`](../plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md) | PCI DSS Operational Package | Governance Pillar Leader (PCI Program) | Approved |
 
 ### 5.6 Templates
 
@@ -603,9 +605,9 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.46 |
+| **Version** | 1.47 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-18 |
+| **Effective Date** | 2026-06-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
@@ -620,7 +622,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.46 | 2026-06-24 | Governance Pillar Leader | Registered domain code `ANTI` and `CERG-GOV-ANTI-001` Anti-Pattern Catalog in §5.2 as the cross-domain reference for adoption, workforce, capability, evidence, and compliance failure modes. |
+| 1.47 | 2026-06-27 | Governance Pillar Leader | Registered domain code `PCI` in §2.1 and `CERG-PLN-PCI-001` PCI DSS Operational Package in §5.5. Added to CB-001 §8 overlay matrix and §10.5 PCI DSS crosswalk. |
 | 1.45 | 2026-06-20 | Governance Pillar Leader | Registered `CERG-TMPL-SCP-001` System Control Profile Template in §5.6 as the structured per-system control implementation, evidence, validation, and review record. |
 | 1.44 | 2026-06-18 | Governance Pillar Leader | Registered domain code `GEN` (cross-cutting reference material) in §2.1. Registered `CERG-GOV-GEN-001` (CERG Glossary) in §5.2 as the canonical reference for CERG terms, record types, conversion rules, and role names. Glossary content extracted from FLOW-001 §2 (Operating Principles, Record Type Definitions) and from CB-001, RMF-001, OM-001, and roles/ cross-references. |
 | 1.43 | 2026-06-18 | Governance Pillar Leader | Registered `CERG-GOV-IMP-007` (Role Reader Paths) in §5.2 as the sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead roles. |

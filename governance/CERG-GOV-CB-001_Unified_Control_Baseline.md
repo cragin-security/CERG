@@ -507,6 +507,7 @@ The §8 overlays carry additional crosswalks. Subordinate operational packages o
 | CUI | NIST 800-171 r3; DFARS 252.204-7012; CMMC L2 | [`CERG-STD-CUI-001`](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) + [`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) |
 | BES | NERC-CIP v7 (CIP-002 through CIP-014; CIP-015 INSM where applicable) | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
 | SOX ITGC | SOX §404 ITGC (Access, Change, Operations) | [`CERG-PLN-SOX-001`](../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
+| **PCI DSS** | **PCI DSS v4.0.1; SAQ/ROC reporting; ASV program; TPSP oversight** | **`CERG-PLN-PCI-001` (this package)** |
 | OT Safety | IEC 62443; NIST 800-82r3 | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
 | AI | NIST AI RMF 100-1; ISO/IEC 42001; privacy, CMMC, SOX, and sector obligations where AI processes regulated data or supports regulated decisions | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) + [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) / [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) / [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) |
 
@@ -565,6 +566,65 @@ The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 now incl
 > **Baseline vs. Parameter Detail**
 >
 > §6 names the auditable control, owner, evidence, cadence, and implementation document. Subordinate standards and procedures carry the detailed parameter values, workflows, and environment-specific exceptions. If there is a conflict, the stricter requirement applies unless Governance approves a documented exception.
+
+### 10.5 PCI DSS v4.0.1 Crosswalk
+
+The PCI DSS overlay extends the CERG control baseline to cover cardholder data environments (CDE). Each row maps a CERG baseline control to the PCI DSS requirement(s) it satisfies. Where a PCI requirement has no corresponding CERG baseline control, the gap is noted and a PCI-specific control is defined in [`CERG-PLN-PCI-001`](../plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md).
+
+| Baseline Control | PCI DSS Requirement(s) |
+|-----------------|----------------------|
+| AC-2 Account Management | Req 7.2, 7.2.4, 8.1.2 |
+| AC-3 Access Enforcement | Req 7.1, 7.1.2, 8.3.1 |
+| AC-6 Least Privilege | Req 7.2.5, 7.2, 8.6 |
+| AC-7 Unsuccessful Logon Attempts | Req 8.3.4 |
+| AC-17 Remote Access | Req 8.3.1, 8.4 |
+| AC-19 Mobile / BYOD | Req 9.5, 9.5.1 |
+| AU-2 Event Logging | Req 10.2, 10.3 |
+| AU-6 Audit Review | Req 10.4.1.1, 10.4.2, 10.4.3 |
+| AU-9 Protection of Audit Information | Req 10.5, 10.5.1, 10.5.2 |
+| AU-11 Audit Record Retention | Req 10.7 |
+| AU-12 Audit Record Generation | Req 10.2.1–10.2.8 |
+| CM-2 Baseline Configuration | Req 2.1, 2.2 |
+| CM-3 Change Control | Req 6.5.1, 6.5.2 |
+| CM-6 Configuration Settings | Req 2.3, 11.5 |
+| CM-7 Least Functionality | Req 2.2.2, 2.2.3 |
+| CM-8 System Component Inventory | Req 12.5.1, 6.4.2 |
+| CP-9 System Backup | Req 10.5.1 |
+| CP-10 Information System Recovery | Req 12.10.1 |
+| IA-2 Identification and Authentication | Req 8.3.2, 8.3.7, 8.3.10.1 |
+| IA-3 Device Identification and Authentication | Req 8.6.1, 8.6.2 |
+| IA-5 Authenticator Management | Req 3.6.1, 3.7, 8.3.9 |
+| RA-3 Risk Assessment | Req 12.3.1 |
+| RA-5 Vulnerability Monitoring and Scanning | Req 5.2, 6.3.1, 11.3, 11.3.1.1 |
+| SI-2 Flaw Remediation | Req 6.3.3, 6.3.2 |
+| SI-4 System Monitoring | Req 10.4, 5.3.3, 5.4.1 |
+| SR-2 Supply Chain Risk Management Plan | Req 12.8, 12.8.2, 12.9 |
+| SR-3 Supply Chain Controls and Processes | Req 12.8.3, 12.8.4 |
+| SC-7 Boundary Protection | Req 1.2, 1.3, 1.4, 1.5 |
+| SC-8 Transmission Confidentiality and Integrity | Req 4.2.1, 4.2.1.1 |
+| SC-28 Protection of Information at Rest | Req 3.4, 3.5, 3.6.1.1 |
+| AT-2 Literacy Training and Awareness | Req 12.6, 12.6.2, 5.4.1 |
+| PE-2 Physical Access Authorizations | Req 9.2, 9.2.1, 9.3 |
+| PE-3 Physical Access Control | Req 9.1.1, 9.1.2, 9.4.1 |
+| PL-1 Policy and Procedures | Req 12.1, 12.1.2, 12.1.3 |
+| PM-1 Information Security Program Plan | Req 12.4, 12.5 |
+| CA-2 Control Assessment | Req 12.3 across PCI decision points |
+| CA-8 Penetration Testing | Req 11.4.7, 11.4.3, 11.4.2, 11.5.1.1 |
+| PM-14 Continuous Monitoring | Req 11.2, 11.2.2, 11.5.1 |
+
+**PCI-specific controls (not in §6 baseline):**
+
+| PCI Req | Gap | PCI Control | Documented In |
+|---------|-----|-------------|--------------|
+| 1.1.5 | NSC rule reviews every 6 months | PCI-NSC-001 — Network Security Control Rule Review | PLN-PCI-001 §4 |
+| 3.2.3 | SAD retention and disposal policy | PCI-SAD-001 — Sensitive Authentication Data Retention | PLN-PCI-001 §4 |
+| 3.3 | SAD encryption before authorization | PCI-SAD-002 — SAD Pre-Authorization Encryption | PLN-PCI-001 §4 |
+| 4.1 | CHD protection in end-user messaging | PCI-MSG-001 — CHD Messaging Protection | PLN-PCI-001 §4 |
+| 6.4.3 | Payment page script management | PCI-SCR-001 — Payment Page Script Inventory & Integrity | PLN-PCI-001 §4 |
+| 9.5 | POI device management | PCI-POI-001 — POI Device Inventory & Tamper Monitoring | PLN-PCI-001 §4 |
+| 12.9 | TPSP compliance evidence support | PCI-TPSP-001 — TPSP Compliance Evidence Request | PLN-PCI-001 §4 (extends PRC-TPRM-001) |
+
+The PCI DSS operational package [`CERG-PLN-PCI-001`](../plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md) carries the full control library, CDE system register template, evidence reuse mapping, SAQ/ROC deficiency workflow, ASV program interface, and QSAR operating cadence.
 
 ## 11. Governance, Change, and Versioning
 

@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: fb1511df86815e4acb09c095d8e8c410b89bb6bd2e54a4ff1c0d5344b2df5cfc
+  source_hash: add6ba1f8dcc2c1c9d28263fd42f2b22c81d2af044fdca5b3bc9662d41175b6b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -137,7 +137,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: 671fab2e2a2061d9eab5d116d260162efc1e8ce39fa7ae684baa6d22e9b8e645
+  source_hash: e4758c7b947c6825836ad107c32a5afbeab5533e1bbe8a17604d346e98a92848
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   llm_include: true
   llm_priority: medium
@@ -1004,6 +1004,26 @@
   normative_weight: supporting
   pillar: governance
   summary: ISO IEC 27001 Operational Package
+- document_id: CERG-PLN-PCI-001
+  title: PCI DSS Operational Package
+  document_type: plan
+  domain: PCI
+  version: ''
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: ''
+  source_path: plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md
+  source_file: CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md
+  source_hash: 57ee45724b625979eb0c2e2a0d9d1c81e529c349049d0820da56254d1ec023cf
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: PCI DSS Operational Package
 - document_id: CERG-PLN-PRIV-001
   title: Privacy and Data Protection Operational Package
   document_type: plan

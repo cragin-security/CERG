@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 130 artifacts
+# Generated from document metadata | 131 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-ANTI-001
@@ -543,6 +543,17 @@
 
 - document_id: CERG-PLN-ISO-001
   source_path: plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-27
+
+- document_id: CERG-PLN-PCI-001
+  source_path: plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md
   status: Approved
   classification: Public
   publication_profile: public
