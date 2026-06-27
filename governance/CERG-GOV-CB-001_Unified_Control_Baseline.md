@@ -532,296 +532,210 @@ For cloud-only (M365/Google): use app protection policies (MAM), included in man
 
 ### AU-1 Audit Logging Configuration — Tier: Core
 
-**Statement:** All systems send security, authentication, and administrative logs to a centralized log platform. No system operates without logging.
+**Statement:** Every system sends security, authentication, and administrative events to a centralized log platform. No system operates without logging.
 
 **For the IT Generalist:**
-1. Configure each server, network device, and cloud service to send logs to your SIEM or log collector.
-2. At minimum, send: user logins (success + failure), admin actions, system events (startup, shutdown, errors), firewall accepts/denies.
-3. Verify logs are arriving: search the SIEM for events from each system. If a system has no events in 24 hours, investigate.
-4. Document which systems are sending logs and which are not. Fix the gaps.
 
-*Windows event forwarding:*
+Your job: every server, network device, and cloud service sends its logs to the SIEM. If a system stops sending logs, you find out within 4 hours.
+
+*Step 1: Configure log sources:*
+
+**Windows servers (via Azure Monitor Agent or WEF):**
 ```powershell
-# Check if Windows Event Forwarding is configured
-wevtutil gl "ForwardedEvents" | Select-String "enabled"
+# Install Azure Monitor Agent on Windows
+# Azure Portal -> Monitor -> Data Collection Rules -> Create -> Add Windows Event Logs
+# Required event logs: Security, System, Application, PowerShell (Operational)
+```
 
-# Verify events are being collected
-Get-WinEvent -LogName "ForwardedEvents" -MaxEvents 10 |
-  Format-Table TimeCreated, Id, LevelDisplayName
+**Linux servers (via Syslog or Azure Monitor Agent):**
+```bash
+# Configure rsyslog to forward to SIEM
+sudo bash -c 'echo "*.* @siem.company.com:514" >> /etc/rsyslog.conf'
+sudo systemctl restart rsyslog
+```
+
+**Azure resources (enable diagnostic settings):**
+```azurecli
+az monitor diagnostic-settings create   --name "SendToSentinel"   --resource /subscriptions/.../resourceGroups/rg-prod/providers/Microsoft.Compute/virtualMachines/vm-prod   --workspace sentinel-workspace   --logs '[{"category":"SecurityEvent","enabled":true},{"category":"Syslog","enabled":true}]'
+```
+
+*Step 2: Verify logs are arriving:*
+```kusto
+// Sentinel: check all log sources reporting in the last 24h
+Heartbeat | where TimeGenerated > ago(24h)
+| summarize LastHeartbeat = max(TimeGenerated) by Computer
+| where LastHeartbeat < ago(4h)
+| project Computer, LastHeartbeat, Status = "STALE"
 ```
 
 **For the MSP:**
-- Log collection is standard for every managed client.
-- Per-client: document the log source inventory. Flag any server not sending logs for more than 48 hours.
-- Centralize logs across clients in a single SIEM tenant with per-client data isolation.
+- Log collection for every managed client. Minimum: Domain Controllers, Exchange, file servers, firewalls.
+- Weekly log source audit: any source silent for >48 hours gets a ticket.
+- Per-client: document the log source inventory in the client's documentation.
 
 **For the Security Engineer:**
 - Reference: NIST 800-53 AU-2 · PCI DSS Req 10.2 · ISO 27001 A.12.4.1
 - Evidence: SIEM source inventory, coverage gap report, sample log entries
-- Cadence: Monthly coverage review; continuous ingestion
+- Cadence: Monthly coverage review, continuous ingestion
 
 **Tool Mappings:**
-✅ Microsoft Sentinel — native Entra ID and M365 log integration
-✅ Splunk — mature log management, broadest parser library
-✅ Wazuh (self-hosted) — open-source, good for budget-constrained teams
-◐ Chronicle (Google) — strong at scale, weaker Windows event coverage
-❌ Logs stored locally on each server (no central collection) — audit finding in every framework
+✅ **Microsoft Sentinel** — native Entra ID + M365 + Azure log integration. KQL query language.
+✅ **Splunk** — broadest parser library. Universal Forwarder for Windows/Linux.
+◐ **Wazuh** — free and open-source. Good for budget-constrained teams. Syslog + agent-based.
+❌ **Logs stored only locally** — no central search, no alerting, audit finding.
 
 **Verification:**
-- SIEM shows log ingestion from every system in the asset inventory within the last 24 hours.
-- Any system silent for 48+ hours? Flagged and investigated.
-- Sample a log entry: does it include timestamp, user, action, source IP? (PCI Req 10.3 fields)
+1. SIEM shows log ingestion from every system in the asset inventory within the last 24h.
+2. Any system silent for >48 hours? Flagged?
+3. Sample a log entry: does it include timestamp, user, action, source IP?
 
 **Common Mistakes:**
-- Logging enabled but log level too low. Enable "success" and "failure" for audit events — many default configs log failures only.
-- Cloud resources not sending logs. Enable Azure Diagnostic Settings, AWS CloudTrail, GCP Audit Logs for every resource.
-- Log collection but no retention configured. Logs arrive at the SIEM but roll off after 7 days.
+- Log level too low. Enable "success" AND "failure" for audit events.
+- Cloud resources not sending logs. Enable Diagnostic Settings / CloudTrail / GCP Audit Logs.
+- Logs arrive at SIEM but roll off in 7 days. PCI requires 12 months.
 
 **If You Cannot Implement This:**
-No SIEM budget: Wazuh is free and open-source. For PCI DSS, a centralized log platform is required — no compensating control is accepted.
-
----
-
+No SIEM budget: Wazuh is free and open-source. For PCI DSS: centralized logging is required.
 ### AU-2 Audit Log Review — Tier: Core
 
-**Statement:** Logs are reviewed daily for security events. Anomalies are investigated and tracked to closure.
+**Statement:** Security logs are reviewed daily. Alerts are investigated and closed within SLA.
 
 **For the IT Generalist:**
-1. Configure automated alerts in your SIEM: failed logins, admin account creation, firewall denies, malware detection.
-2. Check the alert queue every morning. Investigate anything marked high or critical.
-3. Document each investigation: what happened, what you found, what you did about it, when you closed the ticket.
-4. If the same alert fires every day with no action, tune it — either fix the root cause or adjust the threshold.
+
+Your job: check the SIEM alert queue every morning. Investigate anything marked High or Critical. If the same alert fires every day, fix the root cause or tune the rule.
+
+*Daily review using Sentinel:*
+```kusto
+// Check for uninvestigated high/critical alerts in the last 24h
+SecurityIncident
+| where TimeGenerated > ago(24h)
+| where Severity in ("High", "Critical")
+| where Status == "New"
+| project TimeGenerated, Title, Severity, AssignedTo
+| order by Severity desc
+```
+
+*Weekly: check for log sources that went silent:*
+```kusto
+Heartbeat | where TimeGenerated > ago(7d)
+| summarize LastReport = max(TimeGenerated) by SourceComputerId
+| where LastReport < ago(2d)
+| project LastReport, SourceComputerId
+```
 
 **For the MSP:**
-- Daily log review is included in standard managed services.
-- Use a SIEM with managed detection rules — do not rely on manual review.
-- Triage SLA: critical alerts within 1 hour, high within 4 hours, medium by end of next business day.
+- Daily log review included in standard managed services.
+- Critical alerts: 1-hour SLA. High: 4-hour SLA. Medium: end of next business day.
+- If SIEM generates 100+ alerts/day, tune rules. Too much noise means real alerts get missed.
 
 **For the Security Engineer:**
-- Reference: NIST 800-53 AU-6 · PCI DSS Req 10.4.1.1 · ISO 27001 A.12.4.3
+- Reference: NIST 800-53 AU-6 · PCI DSS Req 10.4.1.1
 - Evidence: SIEM alert queue metrics, investigation tickets, daily review evidence
-- Cadence: Continuous (automated alerts), Daily (human review)
+- Cadence: Continuous (automated detection), Daily (human review)
 
 **Tool Mappings:**
 ✅ Microsoft Sentinel — built-in SOAR for automated investigation
 ✅ Splunk + SOAR — mature alert management
-✅ Wazuh — open-source alerting, active response
-❌ Manual log review only (no SIEM) — impractical for any environment over 10 users
+❌ No automated log review — impossible to triage alerts in any org over 10 users
 
 **Verification:**
-- Check the SIEM alert queue: are there any critical alerts older than 1 hour without an owner?
-- Run a report: alerts closed within SLA vs. overdue. Target >90% within SLA.
-- Are there any detection rules that have fired 100+ times with zero investigations? Tune or retire them.
+1. Open the SIEM alert queue. Any critical alerts older than 1 hour without an owner?
+2. SLA compliance: alerts closed within SLA >90%?
+3. Any detection rule firing 100+ times with zero investigations? Tune or retire.
 
 **Common Mistakes:**
-- Alert fatigue: too many low-severity rules firing without triage. Prune rules quarterly.
-- No documented investigation: alert was "reviewed" but no ticket or notes exist. An auditor will ask what you found.
-- Ignoring medium-severity alerts: they accumulate into blind spots.
-
-**If You Cannot Implement This:**
-For very small teams (<10 users): configure email alerts from your IdP and firewall. Review daily. Document in a shared spreadsheet with date, finding, action. This is not sustainable past 10 users.
-
----
-
+- Alert fatigue: too many low-severity rules. Prune quarterly.
+- No documented investigation. "Alert reviewed" with no ticket means nothing to an auditor.
+- Ignoring medium-severity alerts. They accumulate into blind spots.
 ### AU-3 Audit Log Protection — Tier: Core
 
-**Statement:** Audit logs are protected from modification or deletion. Administrative changes to logging are also logged.
+**Statement:** Audit logs are protected from modification or deletion. Admin changes to logging are also logged.
 
 **For the IT Generalist:**
-1. Configure your SIEM to prevent anyone from deleting or modifying log data.
-2. Restrict who can access the SIEM to the security team only.
-3. Enable immutable storage for logs: write-once, read-many (WORM).
-4. Log admin actions on the SIEM itself: who changed a detection rule, who modified a log source, who exported data.
 
-*Azure Sentinel immutable storage:*
+Your job: configure your SIEM to prevent anyone from deleting or modifying log data.
+
+*Step 1: Enable immutable storage:*
 ```azurecli
-# Enable immutable blob storage for the log analytics workspace
-az storage container immutability-policy create \
-  --container-name sentinel-logs \
-  --account-name logstorageaccount \
-  --policy-mode unlocked
+# Azure: enable immutable blob storage for log analytics
+az storage container immutability-policy create   --container-name sentinel-logs   --account-name logstorageaccount   --policy-mode unlocked  # Switch to "locked" after testing
+```
+
+*Step 2: Restrict SIEM admin access:*
+Only 2-3 named security admins can modify detection rules or delete log sources.
+Document who they are. Review quarterly.
+
+*Step 3: Log admin actions on the SIEM itself:*
+```kusto
+// Track changes to Sentinel detection rules
+AuditLogs | where OperationName has_any ("Update analytic rule", "Delete analytic rule")
+| project TimeGenerated, InitiatedBy.user.userPrincipalName, OperationName, TargetResources
 ```
 
 **For the MSP:**
 - Immutable storage for client logs is standard. No exceptions.
-- SIEM admin actions are logged and reviewed weekly.
-- Per-client: document who has SIEM admin access. Review quarterly.
+- SIEM admin access is restricted to 2 named engineers per client.
+- Weekly: review SIEM admin actions.
 
 **For the Security Engineer:**
 - Reference: NIST 800-53 AU-9 · PCI DSS Req 10.5
-- Evidence: Storage policy, admin-action audit logs, immutability configuration
+- Evidence: Immutability config, admin-action audit logs, restricted SIEM access
 - Cadence: Quarterly
 
 **Tool Mappings:**
-✅ Azure Immutable Blob Storage — WORM compliance, 1-year minimum retention
-✅ AWS S3 Object Lock — similar, configurable retention period
-✅ Splunk — tamper-resistant storage with FIPS 140-2
-❌ Logs stored in a network share with full access to everyone — security finding
+✅ Azure Immutable Blob Storage — WORM compliance
+✅ AWS S3 Object Lock — similar
+❌ Logs on a network share everyone can access — security finding
 
 **Verification:**
-- Can a non-admin user delete log data? Try it — it should fail.
-- Can an admin delete logs without the action being logged? Should not be possible.
-- Is immutability enabled for the log storage account? Verify the policy.
-
-**Common Mistakes:**
-- Logs protected but SIEM admin activities not logged. The guards need guarding.
-- Immutability configured but someone can disable it. Use a lock policy that requires 30-day notice to disable.
-- Log retention too short. PCI requires 12 months hot / 7 years cold.
-
-**If You Cannot Implement This:**
-At minimum, restrict write/delete access to the log store to 2 named security admins. Document who they are. Audit access quarterly.
-
----
-
+1. Can a non-admin user delete log data? Should not be possible.
+2. Can an admin delete logs without the action being logged? Should not be possible.
+3. Immutability enabled? Verify the policy is active.
 ### AU-4 Audit Record Retention — Tier: Core
 
-**Statement:** Audit records are retained for the required period: 12 months hot (immediately searchable), 7 years cold (archived but retrievable).
+**Statement:** Audit logs retained 12 months hot, 7 years cold. You can retrieve a log from 13 months ago within 24 hours.
 
 **For the IT Generalist:**
-1. Configure log retention in your SIEM: 12 months of hot data.
-2. Configure long-term archival: export logs to low-cost storage (Azure Archive, AWS Glacier, cold blob storage) after 12 months.
-3. Test retrieval annually: pull a sample log entry from cold storage. Confirm it is readable.
-4. Document the retention policy: what is kept, where, for how long.
-
-*Azure Sentinel retention:*
-```azurecli
-az monitor log-analytics workspace table update \
-  --workspace-name sentinel-workspace \
-  --resource-group rg-security \
-  --name SecurityEvent \
-  --retention-time 365
+**Sentinel:**
+```powershell
+Update-AzOperationalInsightsTable -WorkspaceName sentinel-workspace -ResourceGroupName rg-security -TableName SecurityEvent -RetentionInDays 365 -TotalRetentionInDays 2555
 ```
+**Splunk:** Settings -> Indexes -> max days = 365. Configure cold storage for 7 years.
+Test retrieval annually.
 
-**For the MSP:**
-- Standard retention per client: 12 months hot, 7 years cold.
-- Automated archival scripts to move old logs to cold storage.
-- Annual retrieval test: one client per quarter on a rotating schedule.
+**For the MSP:** 12 months hot, 7 years cold per client. Annual retrieval test.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 AU-11 · PCI DSS Req 10.7
-- Evidence: Retention policy, storage configuration, sample retrieval evidence
-- Cadence: Annual (retrieval test), Quarterly (retention review)
+**For the Security Engineer:** Ref NIST 800-53 AU-11 · PCI DSS Req 10.7. Evidence: Retention policy, storage config, retrieval test.
 
-**Tool Mappings:**
-✅ Azure Log Analytics + Archive — native archival to cold storage
-✅ Splunk — SmartStore + S3 archival
-✅ Wazhu — built-in log rotation and archival
-❌ Logs overwritten daily — regulatory violation
-
-**Verification:**
-- Run a query against cold storage: can you retrieve a log entry from 14 months ago?
-- Check retention settings: are they configured per data type?
-- Is there a documented retention policy? Does it meet regulatory requirements?
-
-**Common Mistakes:**
-- Same retention for all data types. Security events need longer retention than debug logs. Set per-table.
-- Cold storage but no retrieval test. Archived data you cannot read is not evidence.
-- Retaining everything forever. Data hoarding increases breach disclosure scope.
-
-**If You Cannot Implement This:**
-At minimum, keep 12 months of security logs on the SIEM hot tier. For archival, export compressed logs to object storage. PCI DSS requires 12 months hot / 7 years cold — no effective compensating control for CDE scope.
-
----
-
-### 6.3 Configuration Management (CM)
-
----
-
+**Verification:** SIEM retention >=365 days? Retrieve a 13-month-old log? Works?
 ### CM-1 Configuration Baseline (DISH) — Tier: Core
 
-**Statement:** Every system is configured to an approved security baseline (DISH) before production deployment and maintained against that baseline throughout its life.
+**Statement:** Every system configured to DISH baseline before production. Maintained against it.
 
 **For the IT Generalist:**
-1. Find the DISH baseline for your platform (Windows Server, Linux, network device, cloud account).
-2. Apply the baseline using the provided scripts or Group Policy / Ansible / cloud policy.
-3. Run a baseline compliance scan: verify the system meets the baseline.
-4. If the scan finds non-compliant settings, fix them. If you cannot fix them (business need), document an exception.
-5. Schedule periodic scans: daily for critical systems, weekly for standard.
-
-*Windows: Apply and verify DISH baseline:*
 ```powershell
-# Run a compliance check against the CIS benchmark
-Invoke-GPUpdate -Force
 secedit /configure /db secedit.sdb /cfg dish-windows-server.cfg /areas SECURITYPOLICY
-
-# Verify
 secedit /validate /db secedit.sdb
 ```
 
-**For the MSP:**
-- Apply DISH baseline to every new client onboarding. Document baseline version and any deviations.
-- Use Group Policy, Intune, or Ansible to apply baselines at scale.
-- Quarterly: scan a sample of client systems for baseline drift. Report results.
+**For the MSP:** Apply DISH during onboarding. Weekly compliance scan. Azure Policy for cloud.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 CM-2, CM-6 · PCI DSS Req 2.2 · ISO 27001 A.12.5.1
-- Evidence: DISH baseline catalog, compliance scan report, exception register
-- Cadence: Continuous (scan), Quarterly (baseline review)
+**For the Security Engineer:** Ref NIST 800-53 CM-2, CM-6 · PCI DSS Req 2.2. Evidence: Baseline catalog, scan reports.
 
-**Tool Mappings:**
-✅ DISH benchmark + CIS-CAT — comprehensive compliance scanning
-✅ Microsoft Defender for Cloud — CIS/Azure Security Benchmark assessments
-✅ AWS Security Hub — CIS benchmarks for AWS
-✅ Wazuh — open-source SCAP compliance scanning
-❌ Manual configuration without baseline — audit finding
+**Tool Mappings:** ✅ DISH + CIS-CAT · ✅ Defender for Cloud · ❌ Manual config without baseline
 
-**Verification:**
-- Can you produce a report showing every system's baseline compliance score? Target >90%
-- Are drifted systems flagged and remediated within 7 days?
-- Are all baseline exceptions documented with owner and target date?
-
-**Common Mistakes:**
-- Baseline applied once at deployment, never scanned again. Drift happens. Scan continuously.
-- Baseline applied but business-critical applications break. Have an exception process — do not turn off the baseline.
-- Cloud resources not covered. DISH must cover cloud configuration benchmarks too.
-
-**If You Cannot Implement This:**
-No scanning tool: Wazuh includes SCAP compliance scanning for free. Without at least quarterly scanning, no regulatory framework accepts this control as implemented.
-
----
-
+**Verification:** Every system's compliance score >90%? Below 90% flagged?
 ### CM-2 Change Control — Tier: Core
 
-**Statement:** All production changes are authorized, documented, tested, and reviewed before implementation.
+**Statement:** All production changes authorized, documented, tested. No change without a ticket.
 
-**For the IT Generalist:**
-1. Create a change request ticket for every production change. Include: what is changing, why, the rollback plan, the test results.
-2. For high-risk changes (firewall rules, authentication config, production code), get written approval from the system owner.
-3. Implement the change during the approved maintenance window.
-4. After implementation, verify the change had the intended effect and nothing is broken.
-5. Document the result: "Change implemented as planned. Services are operational."
+**For the IT Generalist:** 1) Create ticket for every production change. 2) High-risk changes need written approval. 3) Emergency changes: after-fact approval within 24h. 4) Weekly CAB.
 
-**For the MSP:**
-- Use a change management workflow in your PSA tool for every client.
-- Standard change vs. emergency change: define criteria. Emergency changes (security patch, outage fix) get after-the-fact approval within 24 hours.
-- Weekly CAB meeting: 30 minutes, review past week's changes and approve upcoming ones.
+**For the MSP:** Change management in PSA per client. If 30%+ are emergency, process is broken.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 CM-3 · PCI DSS Req 6.5.1 · SOX ITGC Change
-- Evidence: Change records, CAB minutes, security impact assessment
-- Cadence: Continuous
+**For the Security Engineer:** Ref NIST 800-53 CM-3 · PCI DSS Req 6.5.1. Evidence: Change records, CAB minutes.
 
-**Tool Mappings:**
-✅ ServiceNow — mature change management, CAB workflows
-✅ Jira Service Management — ITIL-compliant change workflows
-✅ Freshservice — good for mid-market, built-in CAB
-❌ Changes made through direct server access with no ticket — audit finding
-
-**Verification:**
-- Can you trace any production change in the last 30 days to an approved ticket?
-- Are there emergency changes without after-the-fact approval? Flag.
-- Percentage of changes with security impact assessment completed: target >90%.
-
-**Common Mistakes:**
-- Emergency change abuse. If 30%+ of changes are emergency changes, the process is broken. Tighter criteria.
-- "No impact" changes bypassing review. Every production change gets a ticket. No exceptions.
-- Test results documented but no rollback plan. Every change must have a "how to undo this."
-
-**If You Cannot Implement This:**
-For small teams (<10): use a change log spreadsheet. Date, requestor, description, approver, result. Any framework with SOX or PCI scope requires a documented change process.
-
----
-
+**Verification:** Every change in last 30d -> approved ticket? Emergency changes without after-fact approval?
 ### CM-3 Configuration Drift Detection — Tier: Core
 
 **Statement:** Configuration drift from the approved baseline is detected, flagged, and remediated.
