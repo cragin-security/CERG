@@ -354,7 +354,7 @@ In a small team, one person may hold several capabilities. In a large team, each
 | Risk Analyst | Threat/Adversarial Validation + Third-Party Edge Management |
 | Governance Lead | Policy/Standards + Compliance/Evidence + Metrics/Reporting |
 
-**Principle:** A 5-person CERG runs the same 11 capabilities as a 60-person CERG. The difference is headcount per capability, not the capabilities themselves. When headcount increases, roles split. When headcount decreases, roles consolidate. The capabilities remain.
+**Principle:** A small CERG runs the same 11 capabilities as a full-scale CERG. The difference is staffing density per capability, not the capabilities themselves. When headcount increases, roles split. When headcount decreases, roles consolidate. The capabilities remain.
 
 ### 6.1 Canonical Role Roster
 
