@@ -1,55 +1,103 @@
-# Sector Profile: Energy / Utilities
-## Practice Asset — Not a CERP Corpus Document
+# Sector Threat Profile: Energy & Utilities (OT/ICS)
+
+**Sector:** Electric Utilities, Oil & Gas, Water/Wastewater, Grid Operations
+**Threat intel source:** CISA ICS advisories, real incidents (2025-2026)
+**Last updated:** 2026-07
 
 ---
 
-## Default Tier
-Tier 3 (Compliance-to-Operations). Energy and utility organizations have regulatory obligations (NERC-CIP) that drive minimum Tier 3. Smaller municipal utilities may start at Tier 2 if they have no registered BES Cyber Systems.
+## Top Attack Scenarios
 
-## Default Overlays
-NERC-CIP (`CERG-PLN-CIP-001`). BES overlay. OT Safety. Privacy for customer billing data.
+### Scenario 1: ICS Protocol Exploitation via IT/OT Pivot (CISA-Advised)
 
-## Regulatory Routing
+**Attack chain:**
+```
+Phishing email to IT helpdesk → Credential theft → Pivot from IT to OT network →
+Exploitation of Schneider/GE/Yokogawa controller → Loss of view → Manual shutdown required
+```
 
-| Trigger | Package |
-|---|---|
-| NERC-CIP registered entity | `CERG-PLN-CIP-001` |
-| Operates OT/BES Cyber Systems | `CERG-STD-OT-001` + BES overlay |
-| Handles customer PII (billing, usage data) | `CERG-PLN-PRIV-001` |
-| State public utility commission oversight | Practice-owned state PUC guidance (not a CERG overlay; regulatory reporting varies by state) |
+**Real intel:** June 25, 2026 — 7 concurrent CISA ICS advisories (Schneider PowerLogic, Yokogawa FAST/TOOLS, Horner Cscape, EVoke EV Charging). Poland energy sector incident (Feb 2026) caused loss of view and control between facilities and distribution operators. Nation-state actors targeting OT at scale.
 
-## Key Adaptation Guidance
+**CB-001 controls activated:**
+- **SC-1** (Network Segmentation) — IT/OT separation per Purdue Model; jump host for OT access
+- **IA-1** (MFA) — MFA on all OT jump host access
+- **RA-2** (Vulnerability Scanning) — Passive-only scanning for OT; no active probes
+- **RA-3** (Remediation) — OT-specific SLA: Critical=30 days with vendor-coordinated patch window
 
-| Token | Guidance |
-|---|---|
-| `{{REGULATORS}}` | NERC-CIP is the primary; state PUC may add consumer protection requirements |
-| `{{IR_TEAM_NAME}}` | Energy sector IR is complicated by NERC-CIP CIP-008 reporting requirements — incident definition differs between cyber and grid operations |
-| `{{EXEC_BODY_NAME}}` | Usually "Risk Committee" or "NERC Compliance Committee" — different from typical Cyber Oversight Group |
+**Detection:**
+```kusto
+// Unusual OT protocol traffic on IT-monitored interfaces
+CommonSecurityLog | where Protocol in~ ("modbus", "dnp3", "iec104", "s7comm")
+| where DeviceVendor !in~ ("Schneider", "Siemens", "Rockwell")
+| project TimeGenerated, SourceIP, DestinationIP, Protocol
+```
 
-## Metric Priorities
+**Tabletop:**
+- Inject: "You receive a CISA advisory for a critical vulnerability in your distribution management system (Yokogaga FAST/TOOLS). There is no patch. Your grid operator says they cannot take the system offline."
+- Questions: How do you assess risk without a patch? What compensating controls apply? Who authorizes continued operation? How do you monitor for exploitation?
 
-| Metric | CERG Reference | Why It Matters for Energy |
-|---|---|---|
-| BES asset inventory completeness | MTR-001 AM-001 | CIP-002 requires accurate categorization; miscategorization is a reportable finding |
-| CIP-005 remote access review completion | MTR-001 AC-001 | Electronic access/perimeter review is a quarterly compliance activity |
-| CIP-007 vulnerability SLA compliance | MTR-001 VM-001 | BES Cyber System patching has calendar-based deadlines |
-| CIP-009 recovery test completion | MTR-001 CP-001 | 15-month test window; missed test is a compliance violation |
-| OT device visibility | MTR-001 AM-001 | Passive OT discovery coverage; regulators increasingly ask about unknown devices |
+### Scenario 2: EV Charging Infrastructure Attack (EV Charging System Exploit)
 
-## Key CERG Artifacts to Emphasize
+**Attack chain:**
+```
+Internet-exposed EV charging management system → Remote code execution (EVoke advisory) →
+Grid-side connection manipulation → Load balancing disruption
+```
 
-| Artifact | Why |
-|---|---|
-| PLN-CIP-001 | The primary compliance overlay; maps each CIP requirement to CERG controls |
-| STD-OT-001 | OT-specific security standard; includes BES vs. non-BES differentiation |
-| STD-NET-001 | ESP/EAP boundaries are the core security architecture for BES environments |
-| STD-CFG-001 (OT DISH variant) | BES Cyber System hardening baselines per CIP-010 |
-| PRC-VM-001 OT annex | Passive scanning method, extended patch SLAs, CIP-007 deviation procedures |
-| PRC-CHG-001 | CIP-010 baseline change management is a compliance requirement |
+**Real intel:** CISA advisory June 2026 for EVoke Charging Station Management System. EV infrastructure is increasingly targeted as grid-connected assets become more prevalent.
 
-## Common Engagement Mistakes
+**CB-001 controls:**
+- **SC-4** (DoS Protection) — Rate limiting, grid-edge device isolation
+- **CM-3** (Drift Detection) — Configuration monitoring on all EV management systems
+- **AC-8** (Session Lock) — Short session timeouts on EV management consoles
 
-- Treating all energy organizations as identical (a nuclear facility, a natural gas pipeline, and an electric co-op each have different regulatory regimes, not all NERC-CIP)
-- Assuming NERC-CIP maturity means cybersecurity maturity (CIP compliance does not equal security posture; many CIP-compliant organizations have no detection engineering program)
-- Over-segmenting the OT network to the point of operational impracticality (ESP/EAP with documented exceptions is better than a perfect design that operations bypasses)
-- Forgetting the IT side (energy orgs focus heavily on OT/CIP but often have SOX exposure and billing PII that need separate attention)
+### Scenario 3: Ransomware Affecting OT Visibility
+
+**Attack chain:**
+```
+Ransomware on IT domain → Domain controller compromise → OT historian exposed via trusted link →
+OT historian encrypted → Grid operators lose visibility → Manual operations required
+```
+
+**Real intel:** Colonial Pipeline demonstrated the IT-to-OT ransomware cascade was not isolated. 2026 OT security report shows 50% of OT environments have only partial visibility.
+
+---
+
+## Testing Procedures
+
+| Scenario | Procedure | Frequency |
+|----------|-----------|-----------|
+| 1 (ICS protocol exploit) | Purple team: simulate IT-to-OT pivot exploiting an unpatched controller | Annual |
+| 2 (EV charging) | External scan of EV management interfaces + exploit attempt against test system | Quarterly |
+| 3 (OT ransomware) | Tabletop: inject IT ransomware that spreads to OT historian | Annual |
+
+---
+
+## OT Vulnerability SLA Matrix
+
+| Severity | IT SLA | OT SLA | Exception Path |
+|----------|--------|--------|----------------|
+| Critical | 7 days | 30 days (with vendor coordination) | Engineering + OT lead approval |
+| High | 30 days | 90 days | Documented compensating controls |
+| Medium | 90 days | 120 days | Risk register entry |
+
+---
+
+## Regulatory Overlay
+
+| Regulation | Critical Controls | Evidence |
+|------------|------------------|----------|
+| NERC CIP | AC-1-7, IA-1, RA-2, AU-1-4, CM-1-4, CP-1-6, IR-1-3, PE-1-3 | CIP evidence package, 15-month audit cycle |
+| ISA/IEC 62443 | Segmentation, secure remote access, patch management | Zone/conduit model evidence |
+| DOE C2M2 | Maturity-based controls | Self-assessment scorecard |
+
+---
+
+## Tool Stack Preference
+
+| Category | Primary | Rationale |
+|----------|---------|-----------|
+| OT Scanning | Nozomi / Claroty (passive) | Active scanning can disrupt OT; passive only |
+| Network | Palo Alto OT firewall | Deep packet inspection of ICS protocols |
+| SIEM | Splunk | Broad OT log source compatibility |
+| Vulnerability | Qualys (OT module) | Agentless, passive OT scanning support |

@@ -76,7 +76,7 @@
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: 'Governance Pillar Leader (Control Baseline)'
+  approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
 - document_id: CERG-GOV-CEF-001
@@ -202,23 +202,23 @@
 
 - document_id: CERG-GOV-IMP-002
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
 - document_id: CERG-GOV-IMP-003
   source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
@@ -246,23 +246,23 @@
 
 - document_id: CERG-GOV-IMP-006
   source_path: governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
 - document_id: CERG-GOV-IMP-007
   source_path: governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
   release_date: 2026-06-27
 
@@ -1269,12 +1269,12 @@
 
 - document_id: CERG-TMPL-AI-002
   source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
@@ -1390,12 +1390,12 @@
 
 - document_id: CERG-TMPL-RM-004
   source_path: templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
   approved_public_release_by: Risk Register Owner
   release_date: 2026-06-27
 

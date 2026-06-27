@@ -2838,7 +2838,7 @@ At minimum, use a secure DNS resolver (Quad9, Cloudflare, or your cloud provider
 ---
 
 
-### SI-7 Security Function Verification — Tier: Core
+### SI-9 Security Function Verification — Tier: Core
 
 **Statement:** Critical security functions (antivirus, firewall, IDS/IPS) are verified to be operating at defined intervals.
 

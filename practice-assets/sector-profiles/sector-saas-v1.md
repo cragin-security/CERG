@@ -1,52 +1,70 @@
-# Sector Profile: Technology / SaaS
-## Practice Asset — Not a CERP Corpus Document
+# Sector Threat Profile: SaaS & Technology
+
+**Sector:** SaaS Platforms, Cloud Infrastructure, Developer Tools, Tech Startups
+**Threat intel source:** Miasma supply chain, Shai Hulud cloud exfil, CVEs (2026)
+**Last updated:** 2026-07
 
 ---
 
-## Default Tier
-Tier 2 (Structure) — most SaaS companies have some existing security function but fragmented processes.
+## Top Attack Scenarios
 
-## Default Overlays
-None mandatory at baseline. Voluntary: SOC 2 Type II, PCI DSS (if handling CHD), FedRAMP (if targeting US government).
+### Scenario 1: CI/CD Pipeline Compromise (Miasma / Shai Hulud Model)
 
-## Regulatory Routing
+**Attack chain:**
+```
+Compromised npm/GitHub Actions package → CI/CD pipeline injection → Production build infected →
+Customer data exfiltration via trojaned SaaS application
+```
 
-| Trigger | Package |
-|---|---|
-| Handles CHD | `CERG-PLN-PCI-001` |
-| Sells to US government | FedRAMP equivalent (practice-owned overlay) |
-| Public company | `CERG-PLN-SOX-001` |
-| EU customers with PII | `CERG-PLN-PRIV-001` |
+**Real intel:** Miasma malware (June 2026) compromised npm packages and GitHub Actions runners. Shai Hulud (June 2026) used CI/CD credentials to exfiltrate from Redshift to attacker storage. 76% of SaaS breaches originate from credential theft.
 
-## Key Adaptation Guidance
+**CB-001 controls activated:**
+- **SA-2** (Supply Chain) — CI/CD pipeline scanning, dependency pinning, SBOM generation
+- **AC-3** (Access Enforcement) — CI/CD credentials scoped per-environment, rotated every 90 days
+- **AU-2** (Log Review) — Pipeline execution audit logging
+- **IR-2** (Detection) — Unusual CI/CD deploy patterns (time, frequency, target)
 
-| Token | Guidance |
-|---|---|
-| `{{ORG_SECTOR}}` | "Technology / SaaS" |
-| `{{REGULATORS}}` | SOC 2 alone does not count as a regulator; list only frameworks with external audit or assessment obligations |
-| `{{SCALE_TIER}}` | Most SaaS security teams are `small` to `mid` regardless of total headcount; the security team-to-total-employee ratio is typically 1:50-1:100 |
+**Detection:**
+```kusto
+// Unusual CI/CD deployment pattern
+CICDAudit | where TimeGenerated > ago(7d)
+| summarize DeployCount = count() by Repo, Environment, HourOfDay
+| where DeployCount > 20 or HourOfDay < 6 or HourOfDay > 22
+```
 
-## Metric Priorities
+### Scenario 2: SaaS Tenant Compromise via OAuth Consent Phishing
 
-| Metric | CERG Reference | Why It Matters for SaaS |
-|---|---|---|
-| MTTI (Mean Time to Identify) | MTR-001 DT-001 | SOC 2 Type II looks for timely detection indicators |
-| Vulnerability SLA compliance | MTR-001 VM-001, VM-002 | Cloud attack surface changes daily; SLA compliance demonstrates control |
-| Access recertification completion rate | MTR-001 AC-001 | Customer data protection is the product |
-| Detection coverage (ATT&CK %) | MTR-001 DT-001 | Demonstrates proactive security posture to prospects |
+**Attack chain:**
+```
+Fake "Zoom connector" app → OAuth consent prompt → User grants email/calendar access →
+Attacker reads all email and calendars → Lateral phishing to contacts
+```
 
-## Key CERG Artifacts to Emphasize
+**Real intel:** OAuth consent attacks against SaaS platforms increased 300% in 2025-2026. Attackers register apps that look like legitimate integrations.
 
-| Artifact | Why |
-|---|---|
-| STD-IT-001 | Primary standard — cloud and SaaS environment is the entire infrastructure |
-| STD-AC-001 | Identity is the new perimeter; MFA, SSO, SCIM are table stakes |
-| PRC-TPRM-001 | SaaS clients have the most supply chain scrutiny from their own customers |
-| PRC-VM-001 | Continuous scanning in ephemeral cloud environments |
-| TMPL-SCP-001 | Per-system profiles help demonstrate security to enterprise prospects |
+**CB-001:**
+- **AC-11** (External System Use) — Block user consent for third-party apps
+- **IA-1** (MFA) — Admin consent required for all app grants
+- **AU-1** (Logging) — Audit all OAuth consent grants
 
-## Common Engagement Mistakes
+---
 
-- Over-investing in standards before the risk register is running (SaaS companies love frameworks; they need a running program first)
-- Deferring access management because "we use SSO" — SSO is not access management (JML, recertification, privilege review still apply)
-- Treating SOC 2 as a regulator rather than a output of a running program
+## SOC 2 Readiness Path
+
+| Trust Principle | Key CERG Controls | Evidence Required |
+|----------------|-------------------|-------------------|
+| Security | AC-1 through AC-7, IA-1, RA-2, SI-1, CM-1 | Access reviews, MFA, AV, config baseline |
+| Availability | CP-1, CP-2, CP-4, SC-4 | Backups, DR plan test, uptime metrics |
+| Confidentiality | AC-2, AC-4, AC-13, SC-3 | Encryption, access controls, sharing policy |
+| Processing Integrity | CM-2, CM-3, PRC-CHG-001 | Change management evidence |
+
+---
+
+## Tool Stack
+
+| Category | Primary | Why |
+|----------|---------|-----|
+| SIEM | Sentinel | Native SaaS log integration |
+| CSPM | Wiz | Agentless, API-native, developer-focused |
+| CI/CD Security | GitHub Advanced Security + Trivy | Pipeline-native |
+| GRC (SMB) | Vanta | Automated SOC 2 evidence, API-native |

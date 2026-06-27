@@ -1,56 +1,80 @@
-# Sector Profile: Government / Federal (Non-DoD)
-## Practice Asset — Not a CERP Corpus Document
+# Sector Threat Profile: Government & Defense (CMMC)
+
+**Sector:** Federal/State/Local Government, Defense Contractors (DIB), National Security
+**Threat intel source:** CMMC enforcement, CISA advisories, nation-state campaigns (2025-2026)
+**Last updated:** 2026-07
 
 ---
 
-## Default Tier
-Tier 3 (Compliance-to-Operations). Federal agencies and state governments have FISMA, FedRAMP, or state-specific compliance obligations.
+## Top Attack Scenarios
 
-## Default Overlays
-CUI (if handling CUI). NIST 800-53 as baseline (not an overlay — it is the default for federal).
-Privacy (if handling PII).
+### Scenario 1: CUI Exfiltration via Supply Chain (CMMC Scope)
 
-## Regulatory Routing
+**Attack chain:**
+```
+Third-party subcontractor compromise → Access to prime contractor's CUI repository →
+Bulk CUI exfiltration over 6 months → Undetected until GAO audit
+```
 
-| Trigger | Package |
-|---|---|
-| Federal agency subject to FISMA | NIST 800-53 is the baseline; CERG CB-001 covers this directly |
-| FedRAMP-authorized or pursuing authorization | Practice FedRAMP overlay adapter |
-| Handles CUI | `CERG-PLN-CUI-001` |
-| State government with PII | `CERG-PLN-PRIV-001` + state-specific laws (CA, NY, TX, etc.) |
-| International government (non-US) | Practice-specific engagement; no standard overlay applies |
+**Real intel:** GAO report (June 2026) highlights CMMC rollout risks as nation-state attacks target defense contractors. CMMC has moved from planning to enforcement — contractors are losing contracts for non-compliance. 2025 saw multiple DIB contractors compromised via subcontractor attack paths.
 
-## Key Adaptation Guidance
+**CB-001 controls activated:**
+- **SR-1** (Vendor Risk Assessment) — Tier all subcontractors handling CUI
+- **SA-2** (Supply Chain) — SBOMs for all software in CUI-scoped systems
+- **CM-4** (Inventory) — Complete CUI-scoped system inventory
+- **PL-2** (System Security Plan) — Current SSP for every CUI system
 
-| Token | Guidance |
-|---|---|
-| `{{ORG_SECTOR}}` | "Government / Federal" — differentiate: US Federal agency ≠ State government ≠ international government |
-| `{{REGULATORS}}` | Federal agencies report to OMB; state to state legislature; no single regulator |
-| `{{SCALE_TIER}}` | Government organizations often have large IT/Security teams by headcount but lower security maturity due to civil service constraints and procurement timelines |
-| `{{EXEC_BODY_NAME}}` | Federal: "CIOC" or "Information Security Council"; State: "IT Governance Board" or "CIO Steering Committee" |
+**Detection:**
+```kusto
+// Bulk file access outside business hours
+FileAuditLog | where SensitivityLabel == "CUI"
+| summarize FileCount = count(), TotalSizeMB = sum(FileSize)/1e6 by UserPrincipalName, bin(TimeGenerated, 1h)
+| where FileCount > 100 or TotalSizeMB > 500
+```
 
-## Metric Priorities
+**Tabletop:**
+- Inject: "Your DCMA CMMC assessment is scheduled in 6 weeks. During a pre-assessment walkthrough, you discover that a subcontractor with access to CUI has no current SSP and no evidence of annual security training."
+- Questions: What's your immediate action? Do you need to file a CUI incident report? Can you pass the assessment?
 
-| Metric | CERG Reference | Why It Matters for Gov |
-|---|---|---|
-| FISMA compliance rating (low/moderate/high) | CA-2, PM-14 | OMB reports FISMA metrics annually to Congress |
-| Plan of Action and Milestones (POA&M) closure rate | MTR-001 RM-001 | OMB tracks POA&M aging as a key FISMA metric |
-| Incident reporting to US-CERT | PRC-IR-002 | Statutory requirement; FISMA requires reporting within timeframes |
-| Authority to Operate (ATO) currency | CA-2 | Expired ATOs for federal systems are a compliance violation |
+### Scenario 2: Nation-State Targeting of Gov Email (CL-STA-1062 / Russian Campaigns)
 
-## Key CERG Artifacts to Emphasize
+**Attack chain:**
+```
+Spear phishing to procurement/scheduling staff → Credential harvesting → Mailbox access →
+Read sensitive correspondence → Establish persistent mailbox monitoring
+```
 
-| Artifact | Why |
-|---|---|
-| CB-001 (NIST 800-53 baseline) | Federal default — no overlay needed; the baseline IS the requirement |
-| STD-CUI-001 | CUI handling for any federal data that is not classified |
-| PRC-AUD-001 | Audit management for OIG, GAO, or state auditor reviews |
-| PRC-VM-001 | FISMA vulnerability scanning requirements; CDM integration |
-| PRC-IR-002 | US-CERT incident reporting; federal-specific notification requirements |
+**Real intel:** CL-STA-1062 (June 2026) targets SE Asian government systems. Russian Turla STOCKSTAY backdoor (2026) targets Ukraine government systems. Five Eyes warns of AI-accelerated government targeting.
 
-## Common Engagement Mistakes
+---
 
-- Treating federal security as unique (NIST 800-53 is the same framework CERG is built on; the adaptation is in reporting, not controls)
-- Assuming government procurement cycles don't affect engagement scope (evidence collection happens quarterly; tool procurement takes 12-18 months; plan accordingly)
-- Not accounting for CDM (Continuous Diagnostics and Mitigation) program requirements — federal clients have CDM sensors and dashboards that produce mandatory evidence
-- Confusing ATO (Authority to Operate) with an audit — ATO is the official authorization; it requires a risk acceptance decision at the Authorizing Official level, not just control compliance
+## Testing Procedures
+
+| Scenario | Procedure | Cadence |
+|----------|-----------|---------|
+| 1 (CUI exfil) | Quarterly CUI access review + bulk download alert test | Quarterly |
+| 2 (Gov spearphish) | Government-specific phishing simulation + incident response walkthrough | Monthly |
+| CMMC gap assessment | Annual SPRS score review + full mock assessment | Annual |
+
+---
+
+## CMMC Readiness: Fastest Path
+
+| Level | Requirements | CERG Controls | Timeline |
+|-------|-------------|---------------|----------|
+| L1 (Basic) | 17 practices | CB-001 AC-1, AC-2, IA-1, AU-1 | 2 weeks |
+| L2 (Intermediate) | 110 practices + assessment | 50 CB-001 controls | 3-6 months |
+| L3 (Advanced) | L2 + additional | 75+ CB-001 controls + internal assessor | 6-12 months |
+| L4+ | L3 + external assessment | All 99 controls + CMMC CSP | 12-18 months |
+
+---
+
+## Tool Stack Preference (FedRAMP Authorized)
+
+| Category | Primary | FedRAMP Status |
+|----------|---------|----------------|
+| SIEM | Splunk Gov / Sentinel (GCC High) | FedRAMP High |
+| EDR | CrowdStrike (IL5) / SentinelOne (FedRAMP) | FedRAMP Moderate |
+| GRC | ServiceNow GRC (FedRAMP) | FedRAMP Moderate |
+| Cloud | AWS GovCloud / Azure Government | FedRAMP High |
+| Identity | Entra ID (GCC High) | FedRAMP High |

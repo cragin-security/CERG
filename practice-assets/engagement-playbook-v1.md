@@ -30,7 +30,7 @@ INT/AKE ──> DISCOVERY ──> TIER SELECTION ──> DELIVERY ──> HANDOV
 **Consultant action:** 1-hour kickoff call + 2 hours prep
 
 ### Pre-Call Prep
-1. Review [`practice-assets/intake/cerg-intake-questionnaire-v1.md`](../intake/cerg-intake-questionnaire-v1.md)
+1. Review [`practice-assets/intake/cerg-intake-questionnaire-v1.md`](./intake/cerg-intake-questionnaire-v1.md)
 2. Preview the client's sector profile if known (see `sector-profiles/`)
 3. Check if the client has any existing documentation (policies, risk register, org chart)
 
@@ -83,7 +83,7 @@ If the engagement has an overlay requirement, add these documents:
 | Document inventory | CAT-001 catalog | 2-3 | Document gap analysis |
 
 ### Org Profile Validation
-Use [`practice-assets/checklists/org-profile-checklist-v1.md`](../checklists/org-profile-checklist-v1.md) to validate the organizational profile. This determines which CERG adoption path fits.
+Use [`practice-assets/checklists/org-profile-checklist-v1.md`](./checklists/org-profile-checklist-v1.md) to validate the organizational profile. This determines which CERG adoption path fits.
 
 ### Determine the Right CERG Adoption Path
 Use IMP-005 (Adoption Decision Tree) for the formal assessment. Quick reference:
@@ -102,7 +102,7 @@ Use IMP-005 (Adoption Decision Tree) for the formal assessment. Quick reference:
 **Consultant action:** 1-day scoping session + proposal submission
 
 ### Scope Templates
-Use the tier-specific scope templates from [`practice-assets/scope-templates/`](../scope-templates/):
+Use the tier-specific scope templates from [`practice-assets/scope-templates/`](./scope-templates/):
 
 | Template | Best for | Contains |
 |----------|---------|----------|
@@ -116,7 +116,7 @@ Use the tier-specific scope templates from [`practice-assets/scope-templates/`](
 - Tier 2-3 transition gate: Standards gap closed + evidence automation running + access reviews quarterly
 - Tier 3-4 transition gate: GRC tool loaded + continuous monitoring active + annual test program running
 
-Reference: [`tier1-guardrails-v1.md`](../scope-templates/tier1-guardrails-v1.md), [`tier2-to-3-gates-v1.md`](../scope-templates/tier2-to-3-gates-v1.md)
+Reference: [`tier1-guardrails-v1.md`](./scope-templates/tier1-guardrails-v1.md), [`tier2-to-3-gates-v1.md`](./scope-templates/tier2-to-3-gates-v1.md)
 
 ### Deliverable Confirmation
 For each engagement, the consultant and client confirm:
@@ -145,7 +145,7 @@ Deliver the 8-document MVC spine from CERG:
 7. TMPL-RM-001 Risk Register Templates
 8. PRC-VM-001 Exposure Management Procedure
 
-**Templates to use:** [`TMPL-SCP-001`](../../templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md) for system profiles, [`TMPL-AUD-001`](../../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) for evidence collection
+**Templates to use:** [`TMPL-SCP-001`](../templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md) for system profiles, [`TMPL-AUD-001`](../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) for evidence collection
 
 ### Week 3-4: Control Baseline
 Use CB-001 for the control baseline. Per control, the consultant:
@@ -186,9 +186,9 @@ For each regulatory package in `plans/`:
 **Consultant action:** 1-2 handover days
 
 ### Handover Package
-1. [`handover-memo-v1.md`](../templates/handover-memo-v1.md) — signed by client and consultant
-2. [`client-improvement-register-v1.md`](../templates/client-improvement-register-v1.md) — all open findings
-3. [`risk-register-bootstrap-v1.md`](../templates/risk-register-bootstrap-v1.md) — current risk state
+1. [`handover-memo-v1.md`](templates/handover-memo-v1.md) — signed by client and consultant
+2. [`client-improvement-register-v1.md`](templates/client-improvement-register-v1.md) — all open findings
+3. [`risk-register-bootstrap-v1.md`](templates/risk-register-bootstrap-v1.md) — current risk state
 4. All CERG documents in client format (markdown or GRC tool)
 5. Evidence repository (organized by control ID)
 
@@ -212,7 +212,7 @@ For each regulatory package in `plans/`:
 **Consultant action:** 1-hour debrief per consultant
 
 ### Debrief Protocol
-Use [`debrief-protocol-v1.md`](../trackers/debrief-protocol-v1.md) — the full debrief process.
+Use [`debrief-protocol-v1.md`](trackers/debrief-protocol-v1.md) — the full debrief process.
 
 ### Key Debrief Questions
 1. Was the scope accurate? Over-scoped? Under-scoped?
@@ -251,7 +251,7 @@ Use [`debrief-protocol-v1.md`](../trackers/debrief-protocol-v1.md) — the full 
 
 ## 9. Tools Integration Guide
 
-For the recommended tool stack, see the full opinionated tool matrix at [`tools/opinionated-tool-matrix-v1.md`](../tools/opinionated-tool-matrix-v1.md).
+For the recommended tool stack, see the full opinionated tool matrix at [`tools/opinionated-tool-matrix-v1.md`](tools/opinionated-tool-matrix-v1.md).
 
 ### Quick Tool Decisions During Discovery
 

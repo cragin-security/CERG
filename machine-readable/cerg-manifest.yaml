@@ -88,7 +88,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.46
+  version: 1.47
   status: Approved
   classification: Public
   publication_profile: public
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: add6ba1f8dcc2c1c9d28263fd42f2b22c81d2af044fdca5b3bc9662d41175b6b
+  source_hash: 303ecb8e2fb0a00c35018b398cf31f802214d1d97aaf7570d8bd8dae3ad9dc1d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -128,16 +128,16 @@
   title: Unified Control Baseline
   document_type: governance_instrument
   domain: CB
-  version: 2.0
+  version: ''
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: 'Governance Pillar Leader (Control Baseline)'
-  approval_authority: 'Governance Pillar Leader (Control Baseline)'
-  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: ''
   source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: e4758c7b947c6825836ad107c32a5afbeab5533e1bbe8a17604d346e98a92848
+  source_hash: 562169aea4c45b5d36e910535f3c7a671cc648339c921b1dfb390db298140438
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   llm_include: true
   llm_priority: medium
@@ -217,7 +217,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CMX-001_Compliance_Matrix.md
   source_file: CERG-GOV-CMX-001_Compliance_Matrix.md
-  source_hash: 4c53b1ac6b875d68ab28e67be18827d8257907d35732faec4a09b2da3148482b
+  source_hash: 67ad328eddfcc1f04f1c7e4da20800005c366ad26da1fe8347cdf87af88091c5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CMX-001_Compliance_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  source_hash: 2f9d785878b64d92cb6c7fe4c67095411faa0b2296abf150a6ecd933c2a758a5
+  source_hash: 2c439d25afd9144c5a20ff2f9b9f0f90cccfde7f917cc1ff1d376ea337ae9077
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   llm_include: true
   llm_priority: medium
@@ -369,7 +369,7 @@
   document_type: governance_instrument
   domain: IMP
   version: 1.4
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
@@ -377,9 +377,9 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 323b217830636ef1f45d3345e4da515df6cd1e0ce5b631c9385beba4e061c364
+  source_hash: b021b441944b51448803b74582a066845d032c0c50dd979ce16bba3a690b2f4a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -389,7 +389,7 @@
   document_type: governance_instrument
   domain: IMP
   version: 1.02
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
@@ -397,9 +397,9 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   source_file: CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  source_hash: bacdc3eb7180af6bd6c39dae518b6f3034d8fd6905ec32eac36e62aeb06b89ae
+  source_hash: d33c319de0d554a1f65b1d75b199ffd9745e872cd8d54cd7d34ae7804e153c22
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -449,7 +449,7 @@
   document_type: governance_instrument
   domain: IMP
   version: 1.0
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
@@ -457,9 +457,9 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
   source_file: CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
-  source_hash: 94df9a410059f87c1c5132267f1d3b54541160b7812de5ed8de619eee81fd2d9
+  source_hash: a87c8f258c46cfdeabe198270a810d350f63e371918c21a05deb881b38d2214f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -469,7 +469,7 @@
   document_type: governance_instrument
   domain: IMP
   version: 1.1
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: 'Governance Pillar Leader (Policy & Standards)'
@@ -477,9 +477,9 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
   source_file: CERG-GOV-IMP-007_Role_Reader_Paths.md
-  source_hash: 26aa8ca700fec254f3d041c310597d7143dc049da5d0323249fba8e71b9c6611
+  source_hash: 6606f9ebe91ddf4000a37a09e3a319bd50fb39648c190cb3e740cc998a1b1abb
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -2297,7 +2297,7 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
   source_file: CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
-  source_hash: 7fb17da4bc2bdeb2453e95c950349e762dbfda789fafc79efbb91b0f8f9cfed7
+  source_hash: 2f01faa70337f56cdf670471b630af9314d0ec61134aba10d4b98c0d8433b6f3
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md
   llm_include: true
   llm_priority: medium
@@ -2309,7 +2309,7 @@
   document_type: template
   domain: AI
   version: 1.0
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
@@ -2317,9 +2317,9 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
   source_file: CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
-  source_hash: 17fb4104edc7c35cbc43317b36cf371dc699476e7c70fb1a2b0cc3557af7c5f8
+  source_hash: 9dd9c805f419e7470ceba3d1ccfba77c8d17691588322a6d5c491e16c3d4cfbd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -2517,7 +2517,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   source_file: CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
-  source_hash: 0992b81718a36c2cc2e139e5408e7a100cd837e73af84c6ed95f037eabd638bd
+  source_hash: ca5f5bc49c714507b290c166c18a0356923c41f53e41caa31f9f02d82b7d4630
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   llm_include: true
   llm_priority: medium
@@ -2529,7 +2529,7 @@
   document_type: template
   domain: RM
   version: 1.2
-  status: Approved
+  status: Deprecated
   classification: Public
   publication_profile: public
   owner_role: Risk Register Owner
@@ -2537,9 +2537,9 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
   source_file: CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
-  source_hash: 8cbff35028cafe08b835b80104de7c685953d1d46f94d504d8f0bbbeb1262cd3
+  source_hash: 27d9c9faf3127c6612815fc15f108b72245405e86e25548430e6ac5d713359ac
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
-  llm_include: true
+  llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
