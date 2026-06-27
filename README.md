@@ -98,7 +98,6 @@ ls practice-assets/
 
 This repository tracks upstream CERG and layers on practice-specific content. The `machine-readable/` index, validation tooling, and corpus structure remain compatible. The practice assets in `practice-assets/` are not part of the upstream corpus — they are consulting delivery tooling.
 
-Upstream contributions (bug fixes, template improvements, crosswalk additions) are filed against `m0dernz/CERG` following the contribution workflow in `practice-assets/trackers/upstream-contribution-workflow-v1.md`.
 
 ---
 

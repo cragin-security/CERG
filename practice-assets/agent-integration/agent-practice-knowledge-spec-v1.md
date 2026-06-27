@@ -23,7 +23,7 @@ Mine debrief documents, case studies, and the client profile register to surface
 - `practice-assets/trackers/debrief-protocol-v1.md` — debrief structure
 - `practice-assets/trackers/client-profile-register-schema-v1.md` — register schema
 - `practice-assets/trackers/backlog-taxonomy-v1.md` — backlog categories
-- `practice-assets/trackers/upstream-contribution-workflow-v1.md` — contribution decision tree
+- `practice-assets/trackers/README.md (contributing section)` — contribution decision tree
 - All sector profiles — to compare against observed patterns
 - All overlay assessments — to check if findings validate or contradict the assessment
 
