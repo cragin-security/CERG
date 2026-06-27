@@ -1048,6 +1048,55 @@ PCI DSS Req 8.3.1 requires MFA for all non-console CDE access. No compensating c
 
 ---
 
+
+**Threat Intel Validation — Authentication Recovery Attacks:**
+Russian intelligence (June 2026) targeted Signal messaging users by stealing backup/recovery keys through fake support texts and phishing. This attack targets the authentication recovery flow — not the primary authentication method. Standard MFA controls do not protect recovery mechanisms.
+
+**Additional Guidance for Authentication Recovery Security:**
+
+*For the IT Generalist:*
+1. Secure the account recovery process: recovery (password reset, MFA reset) requires at least as much verification as the original authentication.
+2. Separate recovery contacts: do not use the same email/phone for recovery that is used for primary authentication.
+3. Require in-person or verified video verification for privileged account recovery.
+4. Log all recovery events: who requested recovery, what method was used, what was recovered, the IP address and device fingerprint.
+5. Alert on recovery events: any recovery of a privileged account triggers an immediate security notification.
+
+*Entra ID: Secure SSPR (Self-Service Password Reset):*
+```powershell
+# Require 2 verification methods for SSPR
+Set-MgPolicyAuthenticationMethodPolicy -SelfServicePasswordReset @{
+  registrationEnforcement = @{ 
+    requiredReconfirmRegistrationInDays = 180 
+  }
+  authenticationMethodsConfiguration = @{
+    methods = @(
+      @{ method = "microsoftAuthenticator"; enabled = $true },
+      @{ method = "emailOtp"; enabled = $true; requireVerification = $true }
+    )
+  }
+}
+```
+
+*Recovery event monitoring:*
+```kusto
+// Monitor for account recovery operations
+AuditLogs
+| where OperationName has_any ("Password reset", "MFA reset", "Device registration")
+| where Result == "success"
+| project TimeGenerated, InitiatedBy.user.userPrincipalName, 
+          TargetResources[0].displayName, 
+          OperationName,
+          IPAddress = tostring(InitiatedBy.ipAddress)
+| extend Severity = "Medium"
+```
+
+**Verification:**
+- Can an attacker call support and get a password reset without identity verification? (Test: try to reset a test account's password through the recovery flow.)
+- Are recovery events logged and monitored?
+- Are privileged account recovery flows different from standard user recovery?
+
+*Threat references:* Russian Signal recovery key theft (June 2026, CISA/FBI/Ukraine warning)
+
 ### IA-2 Password Policy — Tier: Core
 
 **Statement:** Passwords meet minimum complexity requirements. Passwordless authentication is used where supported.
@@ -1246,6 +1295,40 @@ curl -H "X-Requested-With: curl" \
 No scanner budget: Wiz offers a free tier for cloud scanning. Defect Dojo is open-source for vulnerability tracking. For PCI DSS, ASV-approved quarterly external scanning is required.
 
 ---
+
+**Threat Intel Validation — OT/ICS Vulnerability Pacing:**
+On June 25, 2026, CISA issued simultaneous advisories for 7 OT/ICS products: Schneider Electric PowerLogic, Yokogawa FAST/TOOLS, Horner Automation Cscape, EVoke EV Charging System, OHIF DICOM, pydicom/pynetdicom, and H.VIEW IP cameras. OT/ICS organizations cannot patch all of these within the standard 7-day Critical SLA. Many require vendor coordination, maintenance windows, and safety validation.
+
+**Additional Guidance for OT Vulnerability Management:**
+
+*For the OT IT Generalist:*
+1. Maintain a separate OT vulnerability SLA: Critical = 30 days (with documented exceptions), High = 90 days.
+2. For each OT vulnerability, assess: is the affected product in a zone accessible from the IT network? If not, the risk is reduced.
+3. If the vendor has not released a patch: document the vendor acknowledgment, request an ETA, and implement compensating controls (network segmentation, enhanced monitoring).
+4. Subscribe to CISA ICS advisories and the vendor's security advisory feed.
+5. Test patches in a non-production OT environment before production deployment.
+
+*OT vulnerability SLA matrix:*
+```csv
+Environment,Severity,SLA,Tool,Exception Path
+IT-Critical,Vuln,7 days,Standard scanner,CISO approval
+IT-High,Vuln,30 days,Standard scanner,Risk acceptance
+OT-Critical,Vuln,30 days,Passive scanner + vendor advisory,Engineering + OT lead approval
+OT-High,Vuln,90 days,Passive scanner,(documented compensating controls)
+```
+
+*CISA ICS advisory monitoring:*
+```bash
+# Fetch current CISA ICS advisories
+curl -s "https://www.cisa.gov/api/ICS-advisories" | jq '.advisories[].title'
+```
+
+**Verification:**
+- OT vulnerability SLA compliance: are OT-critical findings within 30 days? (Different from IT SLA.)
+- Vendor patch availability: for each open OT finding, does the vendor have a patch? If not, is there a documented vendor acknowledgment?
+- Compensating controls for unpatched OT: segmentation verified, enhanced monitoring configured?
+
+*Threat references:* CISA ICS advisories (June 25, 2026 — 7 concurrent advisories)
 
 ### RA-3 Vulnerability Remediation — Tier: Core
 
@@ -1875,6 +1958,55 @@ Create a 2-page document. Page 1: who to call, in order. Page 2: what to do firs
 For very small teams: use your SIEM's built-in detection rules (Sentinel has 200+ templates). Review alerts daily. Outsource to an MSSP/MDR if you cannot staff 24/7.
 
 ---
+
+
+**Threat Intel Validation — Cloud Data Exfiltration:**
+The Shai Hulud operation (June 2026) exploited CI/CD credentials to access Redshift databases and exfiltrate data to attacker-controlled storage. This attack chain: CI/CD credentials → database access → bulk export → external transfer. Standard perimeter-based data exfiltration detection does not detect internal data movement — the attack never crossed a perimeter firewall.
+
+**Additional Guidance for Cloud Data Exfiltration Detection:**
+
+*For the IT Generalist:*
+1. Monitor cloud data export volumes: any database query that returns >1GB of data in a single query is anomalous.
+2. Detect bulk data exports to unexpected locations: data should go to the application or reporting system, not to an external IP.
+3. Monitor for first-time data exports: a user or service account exporting data from a system they have never exported from before.
+4. Set alerts on cloud storage events: S3 bucket policy changes, storage account access key rotation, cross-region replication enablement.
+
+*Redshift/S3 exfiltration detection:*
+```kusto
+// Detect bulk data export from Redshift to external
+CloudTrail
+| where TimeGenerated > ago(7d)
+| where EventName in~ ("Unload", "CreateJob", "ExecuteSql")
+| where Resources has "redshift-cluster-prod"
+| extend DataVolume = toint(JsonData["dataScannedInBytes"])
+| where DataVolume > 1000000000  // >1GB
+| project TimeGenerated, UserIdentity, SourceIPAddress, DataVolume
+| extend Severity = "High"
+
+// Detect S3 bucket policy changes (potential data exfil setup)
+CloudTrail
+| where EventName in~ ("PutBucketPolicy", "PutBucketAcl", "PutBucketPublicAccessBlock")
+| where TimeGenerated > ago(24h)
+| project TimeGenerated, UserIdentity, Resources, EventName
+| extend Severity = "High"
+```
+
+*Azure: Detect data export operations:*
+```kusto
+AzureDiagnostics
+| where OperationName has_any ("EXPORT", "COPY INTO", "BULK INSERT")
+| where TimeGenerated > ago(24h)
+| project TimeGenerated, Identity, Resource, OperationName, 
+          RowCount_s
+| where RowCount_s > 100000
+```
+
+**Verification:**
+- Can you detect a 10GB database export in near real-time? (Test: export a test dataset and verify the alert fires.)
+- Are S3 bucket policies monitored for changes that could enable public access?
+- Does the security team investigate bulk data exports?
+
+*Threat references:* Shai Hulud CI/CD → Redshift exfiltration (June 2026, Fortinet)
 
 ### 6.13 Physical and Environmental Security (PE)
 
@@ -3146,6 +3278,37 @@ Subscribe to CISA KEV. Check it weekly. That alone covers the most exploited vul
 
 ---
 
+
+**Threat Intel Validation — AI-Accelerated Threats:**
+Five Eyes intelligence agencies (June 2026) formally warned that AI will accelerate cyberattack speed within months. AI-driven vulnerability discovery, automated phishing generation, and deepfake social engineering are not theoretical — they are being observed in active campaigns. Trust in automated AI vulnerability scanning has collapsed to 9% among security professionals due to hallucination and false-positive rates (InfoSecurity, June 2026).
+
+**Additional Guidance for AI-Specific Threat Monitoring:**
+
+*For the IT Generalist:*
+1. Do not rely solely on AI-based detection tools without human validation. AI scanning tools hallucinate findings.
+2. Monitor for AI-generated phishing: look for perfect grammar, personalized context, and unusual sender patterns that do not match the typical phishing profile.
+3. Be skeptical of automated vulnerability findings from AI-only scanners. Validate before acting.
+4. For AI models used in security tooling: understand the model's training data, false positive rate, and known limitations.
+
+*AI-generated phishing detection:*
+```kusto
+// Unusual email patterns that may indicate AI-generated phishing
+EmailEvents
+| where Timestamp > ago(7d)
+| where SenderDomain !in~ (CompanyDomains)  // External sender
+| extend GrammarScore = Email.Body has_any ("Dear valued", "Kindly", "Please find attached")
+| where GrammarScore == true
+| summarize EmailsPerSender = count() by SenderAddress, Subject
+| where EmailsPerSender == 1  // Single email, not a thread — phishing pattern
+```
+
+**Verification:**
+- Are AI/ML security tools validated periodically? Do you know their false positive rate?
+- Has the security team been briefed on AI-generated phishing characteristics?
+- Is there a formal evaluation process before deploying AI-based security tools?
+
+*Threat references:* Five Eyes AI warning (June 2026), InfoSecurity "Trust in AI vuln scanning collapses to 9%"
+
 ### SC-4 Denial-of-Service Protection — Tier: Core
 
 **Statement:** Systems are protected against denial-of-service attacks. Rate limiting and DDoS protection are in place.
@@ -3726,6 +3889,52 @@ At minimum, set secure cookie flags and session timeout. Most web frameworks hav
 
 ---
 
+**Threat Intel Validation — Session Token Theft:**
+A Chrome malware campaign (June 2026) with 10M+ installs exfiltrates session cookies to take over authenticated accounts without passwords. This bypasses MFA entirely — the attacker uses the victim's existing session. Standard session timeout controls cannot prevent this; detection and short-lived tokens are required.
+
+**Additional Guidance for Session Token Protection:**
+
+*For the IT Generalist:*
+1. Set session token lifetimes to the shortest practical duration: 1 hour for sensitive apps, 8 hours max for standard.
+2. Require re-authentication for sensitive actions even within an active session (step-up auth).
+3. Bind session tokens to the client IP address and user agent (where practical). Token theft from a different IP should be blocked.
+4. Monitor for impossible travel: a session used from New York and then from Moscow 10 minutes later is stolen.
+5. Implement token binding (Token Binding Protocol or similar) where the platform supports it.
+
+*Entra ID: Token protection policies:*
+```powershell
+# Configure token lifetime to 1 hour for sensitive apps
+New-MgPolicyTokenLifetimePolicy -Definition @('{"TokenLifetime":{"AccessTokenLifetime":"01:00:00"}}')
+
+# Enable token protection (Entra ID Conditional Access)
+# Requires sign-in frequency policy
+New-MgIdentityConditionalAccessPolicy -DisplayName "Token Protection Policy" -State "enabled" `
+  -Conditions @{ applications = @{ includeApplications = @("All") } } `
+  -GrantControls @{ builtInControls = @("mfa") } `
+  -SessionControls @{ signInFrequency = @{ value = 1; type = "reauthentication" } }
+```
+
+*Session theft detection:*
+```kusto
+// Impossible travel detection
+SigninLogs
+| where TimeGenerated > ago(1h)
+| summarize FirstLogin = min(TimeGenerated), LastLogin = max(TimeGenerated),
+            Locations = make_set(LocationDetails), IPs = make_set(IPAddress) by UserPrincipalName
+| where array_length(IPs) > 1
+| extend TravelTime = datetime_diff('minute', LastLogin, FirstLogin)
+| where TravelTime < 60 and array_length(Locations) > 1
+| project UserPrincipalName, IPs, Locations, TravelTime
+| extend Severity = "Critical"
+```
+
+**Verification:**
+- Token lifetime: how long before a session expires? (Target: 1 hour sensitive, 8 hours standard)
+- Impossible travel detection: configured and generating alerts?
+- Can a stolen cookie from a different IP be used to access the application? (Test by extracting your own session token and using it from a different network.)
+
+*Threat references:* Chrome session-stealing malware (June 2026, 10M+ installs)
+
 ### AT-2 Role-Based Security Training — Tier: Core
 
 **Statement:** Personnel receive security training specific to their role. Annual general awareness plus role-specific modules.
@@ -4021,6 +4230,58 @@ Start with your top 5 most critical software vendors. Request SBOMs. Scan with D
 
 ---
 
+
+
+**Threat Intel Validation — CI/CD Pipeline Attacks:**
+The Miasma malware campaign (June 2026) compromised npm packages and GitHub Actions runners to inject malicious code into the software supply chain. The Shai Hulud operation (June 2026) exploited CI/CD credentials to exfiltrate data from Redshift databases. Both attacks exploited gaps in pipeline security that standard vendor assessment does not cover.
+
+**Additional Guidance for Pipeline Security:**
+
+*For the IT Generalist:*
+1. Lock down your CI/CD pipeline: restrict which branches can trigger production deployments.
+2. Require code review before any production pipeline run. No direct commits to main.
+3. Scan dependencies for known vulnerabilities before every build — not just periodically.
+4. Pin dependency versions. Do not use version ranges (^1.2.3) that automatically pull new releases without review.
+5. Rotate CI/CD credentials (API keys, service principals, deployment tokens) every 90 days.
+
+*GitHub: Dependency review in pull requests:*
+```yaml
+# .github/workflows/dependency-review.yml
+name: Dependency Review
+on: [pull_request]
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+```
+
+*Dependency pinning (npm):*
+```json
+{
+  "dependencies": {
+    "express": "4.18.2",  // Pinned: no ^ or ~
+    "lodash": "4.17.21"   // Pinned: exact version only
+  }
+}
+```
+
+**Tool Mappings (pipeline-specific):**
+✅ GitHub Dependabot — automated dependency vulnerability alerts + auto-fix PRs
+✅ GitHub Secret Scanning — detects credentials in source code
+✅ Renovate — dependency update automation with review
+✅ Snyk — dependency scanning, license compliance
+❌ Unpinned dependencies with version ranges — automatic vulnerable dependency inclusion
+
+**Verification:**
+- Check the CI/CD pipeline: are there any direct push triggers to main/production?
+- Dependency scan: run against your primary application — any high/critical findings?
+- Secret scan: any credentials in the source code?
+
+*Threat references:* Miasma npm supply chain (June 2026), Shai Hulud CI/CD exfil (June 2026)
 
 ### AU-9 Non-Repudiation — Tier: Core
 
