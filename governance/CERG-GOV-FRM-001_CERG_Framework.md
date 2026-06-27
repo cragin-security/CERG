@@ -44,7 +44,7 @@
 
 Cybersecurity teams of all sizes have struggled with the same structural problem for two decades: fragmented tools, siloed teams, and a culture of "no" that slows the business without meaningfully reducing risk. The CERG framework, Cyber Engineering, Risk, and Governance, is a deliberate answer to that problem.
 
-CERG consolidates the core work of a mature cybersecurity function into three tightly coupled, clearly bounded pillars. Together they are pronounced **"Surge"**, because effective security is fast, powerful, and directional. Surge is not a support function. It is an operational force that enables the business to move confidently.
+CERG consolidates the core work of a mature cybersecurity function into three tightly coupled, clearly bounded pillars. It is not a support-function label or a document set; it is an operating model that helps the business move confidently while security work stays owned, evidenced, and repeatable.
 
 ### Why Three Pillars
 
@@ -58,7 +58,7 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 
 ### Design Principles
 
-- **Scale up or down:** applicable to a 5-person team or a 500-person organization
+- **Scale up or down:** applicable to small teams, mature enterprise functions, and regulated organizations
 - **Regulatory-ready:** designed to satisfy CMMC, NERC-CIP, NIST CSF 2.0, 800-53, 800-171, and SOX
 - **IT/OT aware:** principles apply equally to enterprise IT and operational technology environments
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
@@ -494,9 +494,9 @@ NERC-CIP creates a distinct compliance obligation for BES Cyber Systems that sit
 
 ### 10.1 Illustrative Team Structure
 
-The illustrative organization for this framework is a large enterprise with several thousand employees and a substantial contractor workforce. The total protected population — identities, devices, and access relationships — approaches 28,000. CERG for this organization is a 60-person team reporting to the CISO, operating alongside Security Awareness and Incident Response.
+The illustrative organization for this framework is a large regulated enterprise with substantial employee, contractor, cloud, SaaS, and operational-technology scope. CERG for this organization is a fully staffed function reporting to the CISO and operating alongside Security Awareness and Incident Response.
 
-This is an intentionally large example. The goal is to show what CERG looks like at full scale, with real operational velocity and complexity, so that teams of any size can see the complete model and trim to fit their environment. A 6-person CERG running this framework looks different in headcount, not in structure.
+This is an intentionally large example. The goal is to show what CERG looks like at full scale, with real operational velocity and complexity, so that teams of any size can see the complete model and trim to fit their environment. A small CERG running this framework looks different in headcount, not in structure.
 
 At this scale, the workload is substantial across all three pillars. Engineering carries approximately 125 active project engagements per year with roughly 40 running concurrently, spanning infrastructure, enterprise applications, cloud migrations, and third-party integrations. Engineers are aligned to specific business verticals and develop fluency in the systems they support, not just the security controls that apply to them.
 
@@ -526,11 +526,11 @@ A representative staffing structure for a CERG of this scale:
 |Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|and SOX ITGC compliance; external audit coordination; evidence collection and library management; compliance calendar|
 |Policy & Standards Manager (×3)|Governance|Policy and procedure documentation; version control and review cycles; cross-pillar QA reviews; training content support for Security Awareness|
 
-This distributes the 60-person team across approximately 14 Engineering staff, 15 Risk staff, and 13 Governance staff, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities: a cloud migration program will weight Engineering more heavily; a regulatory audit cycle will weight Governance.
+This representative structure distributes staff across Engineering, Risk, and Governance, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities: a cloud migration program will weight Engineering more heavily; a regulatory audit cycle will weight Governance.
 
 > **Scaling the Model**
 > 
-> Most organizations will run a smaller CERG than this example, and that is by design. A municipal utility with a 6-person cyber team might place 2 engineers, 2 risk analysts, and 2 governance analysts in CERG, with each person carrying the full scope of their pillar. A regional cooperative with a single cybersecurity hire might have that person operate across all three pillars with the CISO providing strategic direction. The framework is the same at every size. The roles compress; the responsibilities do not disappear, they concentrate. Understanding the full-scale model helps smaller teams identify what they are covering, what they are deferring, and where they need to prioritize as they grow.
+> Most organizations will run a smaller CERG than this example, and that is by design. A small regulated operator might assign one person to each pillar, with each person carrying multiple canonical roles. A single-security-owner organization might have that person operate across all three pillars with the Executive Sponsor providing independent risk-decision support. The framework is the same at every size. The roles compress; the responsibilities do not disappear, they concentrate. Understanding the full-scale model helps smaller teams identify what they are covering, what they are deferring, and where they need to prioritize as they grow.
 
 ### 10.2 The Left-Right Knowledge Model
 
