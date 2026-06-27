@@ -784,676 +784,211 @@ For non-critical systems: quarterly manual baseline comparison is acceptable for
 
 ### CM-4 System Component Inventory — Tier: Core
 
-**Statement:** Every hardware, software, cloud resource, network device, and data store is recorded in an authoritative inventory.
+**Statement:** Every hardware, software, cloud resource, and network device is recorded in an authoritative inventory.
 
 **For the IT Generalist:**
-1. Maintain a list of every IT asset: servers, workstations, network devices, cloud instances, SaaS applications, databases.
-2. Include for each: name, type, location (cloud/on-prem), owner, criticality (high/medium/low), software installed (with versions).
-3. Use a CMDB tool, not a spreadsheet. Device42, ServiceNow, or even AirTable is better than Excel.
-4. Reconcile the inventory monthly: compare against cloud provider resource lists, AD computer objects, and vulnerability scanner discovery data.
-
 *Azure resource inventory:*
 ```azurecli
 az resource list --query "[].{Name:name, Type:type, Location:location}" --output table
 ```
+Reconcile monthly: compare against cloud resource lists, AD computer objects, scanner discovery.
 
-**For the MSP:**
-- CMDB is standard per client. Device42 is the best value for MSPs.
-- Discovery: use network scanning + cloud API + agent-based discovery.
-- Quarterly: run a reconciliation report. New assets discovered? Flag for review. Assets not seen in 90 days? Verify decommission.
+**For the MSP:** CMDB per client. Device42 best for MSPs. Quarterly reconciliation.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 CM-8 · PCI DSS Req 12.5.1
-- Evidence: CMDB export, reconciliation log, asset discovery report
-- Cadence: Continuous (discovery), Monthly (reconciliation)
+**For the Security Engineer:** Ref NIST 800-53 CM-8 · PCI DSS Req 12.5.1. Evidence: CMDB export, reconciliation log.
 
-**Tool Mappings:**
-✅ Device42 — agentless discovery, cloud integration, dependency mapping
-✅ ServiceNow CMDB — mature, expensive, needs dedicated admin
-✅ AirTable — suitable for <500 assets, no discovery
-❌ Excel spreadsheet — not sustainable past 50 assets, no automated discovery
+**Tool Mappings:** ✅ Device42 — agentless discovery ✅ ServiceNow CMDB ❌ Excel spreadsheet
 
-**Verification:**
-- Can you reconcile the CMDB against your cloud provider's resource list? Any orphan resources?
-- Are there assets in the CMDB not seen in 90+ days? Investigate.
-- Rogue device detected on the network? If discovery found it, did it appear in the CMDB within 24 hours?
-
-**Common Mistakes:**
-- Spreadsheet instead of CMDB. Spreadsheets cannot do discovery, cannot alert on changes, and become stale within a week.
-- Cloud resources not in the same inventory as on-prem. One inventory, all environments.
-- No decommission process. Assets retired in production but still in the CMDB.
-
-**If You Cannot Implement This:**
-For <50 assets: a well-maintained spreadsheet reconciled monthly is acceptable for initial adoption. For any regulatory scope, a CMDB tool is expected.
-
----
-
-### 6.4 Contingency Planning and Recovery (CP)
-
----
-
+**Verification:** Can you reconcile CMDB vs cloud provider's resource list? Any orphan resources?
 ### CP-1 System Backup — Tier: Core
 
-**Statement:** System and data backups are performed on schedule, stored immutably, and tested for restorability annually.
+**Statement:** Daily automated backups. Immutable storage. Annual restore test.
 
 **For the IT Generalist:**
-1. Configure automated backups for all critical systems. Daily for databases, weekly for file servers.
-2. Store backups in a separate location from the production system (different region, different account).
-3. Enable immutability: backups cannot be modified or deleted before the retention period expires.
-4. Schedule a restore test at least once per year. Pick a random backup and restore it to a test environment. Confirm the data is usable.
-5. Document the restore test result: what was restored, how long it took, whether the data was complete and usable.
-
 *Azure Backup:*
 ```azurecli
 az backup protection check-vm --vm-id $(az vm show -g rg-prod -n vm-prod --query id -o tsv)
 ```
+Backups stored in separate region. Immutability enabled. Test restore annually.
 
-**For the MSP:**
-- Backup management is standard per client. Use a single backup console (Veeam, Rubrik, Cohesity).
-- Immutable backups are standard. No exceptions.
-- Restore test schedule: test one client per month on a rotating basis. Rotate through all clients annually.
-- Per-client billing: backup management is standard managed services. Restore testing is included.
+**For the MSP:** Veeam or cloud-native backup per client. Immutable storage standard. Annual restore test.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 CP-9 · PCI DSS Req 10.5.1
-- Evidence: Backup report, immutability evidence, restoration test results
-- Cadence: Continuous (backup), Annual (restore test)
+**For the Security Engineer:** Ref NIST 800-53 CP-9 · PCI DSS Req 10.5.1. Evidence: Backup report, immutability evidence, restore test.
 
-**Tool Mappings:**
-✅ Veeam — best-in-class for hybrid environments, immutable backups, SureBackup verification
-✅ Rubrik — cloud-native, instant recovery, ransomware detection
-◐ Azure Backup — native, adequate for Azure-only
-◐ AWS Backup — native, adequate for AWS-only
-❌ Tape-only with no immutability — regulatory finding, ransomware liability
+**Tool Mappings:** ✅ Veeam — hybrid, immutable ✅ Rubrik — cloud-native ❌ Tape without immutability
 
-**Verification:**
-- Run a backup report: any failed backups in the last 24 hours? 7 days?
-- Check immutability: can a backup be deleted before the retention period? It should not be possible.
-- Last restore test: when was it? Was it successful? Does the restored data pass integrity checks?
-
-**Common Mistakes:**
-- Backups stored in the same account/region as production. Ransomware that compromises the environment will delete backups too.
-- Immutability not configured. A backup that can be modified is not a backup — it is a copy that attackers can destroy.
-- Restore test not performed. A backup that has never been restored is a wish, not a control.
-
-**If You Cannot Implement This:**
-At minimum, keep 3-2-1 backups (3 copies, 2 media types, 1 offsite). Object storage with immutability is the cheapest compliant option.
-
----
-
+**Verification:** Any failed backups in last 24h? Can a backup be deleted before retention expires?
 ### CP-2 Recovery Planning and Testing — Tier: Core
 
-**Statement:** Recovery procedures are documented, tested at least annually, and updated based on test results.
+**Statement:** Recovery procedures documented and tested annually.
 
 **For the IT Generalist:**
-1. Write a one-page recovery plan for each critical system: step by step, what to do if the system fails.
-2. Include: who does what, how to restore from backup, how to verify the system is operational, who to notify.
-3. Schedule a tabletop exercise: get the team in a room (or video call) and walk through the plan step by step.
-4. After the test, update the plan with lessons learned. What did you miss? What took longer than expected?
-5. Run a technical recovery test annually: actually restore from backup.
+1. Write a one-page recovery plan per critical system: step-by-step restore instructions.
+2. Run an annual tabletop exercise with the team.
+3. Technical recovery test: actually restore from backup. Verify data is usable.
+4. Update plan with lessons learned.
 
-**For the MSP:**
-- One recovery plan per client per critical system. Template across clients where systems are identical.
-- Annual tabletop exercise with the client's leadership. 2 hours.
-- Technical recovery test annually. Test one system per quarter on a rotating schedule.
+**For the MSP:** One recovery plan per client per critical system. Annual tabletop. Technical test: one system per quarter on rotation.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 CP-2, CP-4 · ISO 27001 A.17.1.3
-- Evidence: Recovery plan, test results, lessons learned, register updates
-- Cadence: Annual (full test), Quarterly (tabletop)
+**For the Security Engineer:** Ref NIST 800-53 CP-2, CP-4 · ISO 27001 A.17.1.3. Evidence: Plan, test results, lessons learned.
 
-**Tool Mappings:**
-✅ Veeam SureBackup — automated recovery verification
-◐ Manual recovery procedure document — acceptable for initial adoption
-❌ No documented plan — regulatory finding
-
-**Verification:**
-- When was the last recovery test? Was it successful?
-- Are the recovery plan's RTO/RPO targets realistic based on test results?
-- Are lessons learned from the last test reflected in the updated plan?
-
-**Common Mistakes:**
-- Plan written but never tested. An untested plan is a fantasy. Test it.
-- Test passed but RTO was exceeded. The test "passed" because no one timed it. Measure RTO.
-- Lessons learned documented but not implemented. Track them in the improvement register.
-
-**If You Cannot Implement This:**
-At minimum: run a tabletop exercise annually. Walk through the scenario verbally. Document what you would do. This is not sufficient for BES (NERC-CIP requires technical testing) but is better than nothing for general IT.
-
----
-
-### 6.5 Identification and Authentication (IA)
-
----
-
+**Verification:** Last recovery test date? Successful? RTO/RPO realistic based on test results?
 ### IA-1 Multi-Factor Authentication — Tier: Core
 
-**Statement:** All interactive human access requires phishing-resistant MFA. Legacy authentication protocols are disabled.
+**Statement:** All interactive human access requires phishing-resistant MFA. Legacy auth disabled.
 
 **For the IT Generalist:**
-1. Enable MFA in your IdP for every user. No exceptions — not even for contractors, not even for service accounts (with documented exception).
-2. Configure MFA methods: authenticator app (preferred), security key (FIDO2), or SMS (last resort — SMS has known vulnerabilities).
-3. Block legacy authentication: disable POP3, IMAP4, Exchange ActiveSync basic auth. These protocols cannot enforce MFA.
-4. For break-glass scenarios: create 2 emergency access accounts with long passwords, MFA, and no daily-use assignment.
-
 *Entra ID: Enable MFA via Conditional Access:*
 ```powershell
-# Create a CA policy requiring MFA for all users
-New-MgIdentityConditionalAccessPolicy -DisplayName "Require MFA for All Users" `
-  -State "enabled" `
+New-MgIdentityConditionalAccessPolicy -DisplayName "Require MFA All Users" -State "enabled" `
   -Conditions @{ users = @{ includeUsers = @("All") } } `
   -GrantControls @{ builtInControls = @("mfa") }
 ```
-
-**For the MSP:**
-- MFA for every client user. Non-negotiable in the MSA.
-- Block legacy authentication at the tenant level.
-- Security keys (FIDO2) for privileged users, authenticator app for standard users.
-- Per-client: monitor MFA registration rate. Target 100%.
-
-**For the Security Engineer:**
-- Reference: NIST 800-53 IA-2 · PCI DSS Req 8.3.1 · ISO 27001 A.9.4.2
-- Evidence: IdP MFA policy, MFA registration report, legacy auth block evidence
-- Cadence: Quarterly
-
-**Tool Mappings:**
-✅ Microsoft Entra ID — Conditional Access MFA, FIDO2 support, passwordless
-✅ Okta — adaptive MFA, device trust, factor sequencing
-✅ Duo Security — simple MFA, broad application support
-❌ SMS-only MFA — NIST deprecating, known SS7 vulnerabilities
-❌ No MFA — direct PCI DSS violation, single-factor authentication is not acceptable
-
-**Verification:**
-- Try connecting with legacy auth (POP3/IMAP/SMTP basic auth). Should fail.
-- Check MFA registration: what percentage of users have MFA enrolled? Target 100%.
-- Test a break-glass account: can it authenticate without MFA? It should require a security key or be stored in a secure vault.
-
-**Common Mistakes:**
-- MFA enabled but legacy auth still allowed. Legacy auth bypasses MFA entirely.
-- Service accounts exempted without documentation. Every exception must have a ticket.
-- SMS as primary MFA method. SMS is vulnerable to SIM-swapping. Use authenticator app or security key.
-
-**If You Cannot Implement This:**
-PCI DSS Req 8.3.1 requires MFA for all non-console CDE access. No compensating control is accepted. For non-regulated environments, at minimum deploy an authenticator app-based MFA.
-
----
-
-
-**Threat Intel Validation — Authentication Recovery Attacks:**
-Russian intelligence (June 2026) targeted Signal messaging users by stealing backup/recovery keys through fake support texts and phishing. This attack targets the authentication recovery flow — not the primary authentication method. Standard MFA controls do not protect recovery mechanisms.
-
-**Additional Guidance for Authentication Recovery Security:**
-
-*For the IT Generalist:*
-1. Secure the account recovery process: recovery (password reset, MFA reset) requires at least as much verification as the original authentication.
-2. Separate recovery contacts: do not use the same email/phone for recovery that is used for primary authentication.
-3. Require in-person or verified video verification for privileged account recovery.
-4. Log all recovery events: who requested recovery, what method was used, what was recovered, the IP address and device fingerprint.
-5. Alert on recovery events: any recovery of a privileged account triggers an immediate security notification.
-
-*Entra ID: Secure SSPR (Self-Service Password Reset):*
+*Block legacy authentication (POP3, IMAP, ActiveSync basic auth):*
 ```powershell
-# Require 2 verification methods for SSPR
-Set-MgPolicyAuthenticationMethodPolicy -SelfServicePasswordReset @{
-  registrationEnforcement = @{ 
-    requiredReconfirmRegistrationInDays = 180 
-  }
-  authenticationMethodsConfiguration = @{
-    methods = @(
-      @{ method = "microsoftAuthenticator"; enabled = $true },
-      @{ method = "emailOtp"; enabled = $true; requireVerification = $true }
-    )
-  }
-}
+New-MgIdentityConditionalAccessPolicy -DisplayName "Block Legacy Auth" -State "enabled" `
+  -Conditions @{ clients = @{ includeClientTypes = @("ExchangeActiveSync", "Other") } } `
+  -GrantControls @{ builtInControls = @("block") }
 ```
 
-*Recovery event monitoring:*
-```kusto
-// Monitor for account recovery operations
-AuditLogs
-| where OperationName has_any ("Password reset", "MFA reset", "Device registration")
-| where Result == "success"
-| project TimeGenerated, InitiatedBy.user.userPrincipalName, 
-          TargetResources[0].displayName, 
-          OperationName,
-          IPAddress = tostring(InitiatedBy.ipAddress)
-| extend Severity = "Medium"
-```
+**For the MSP:** MFA for every client user. Non-negotiable. Block legacy auth at tenant level.
 
-**Verification:**
-- Can an attacker call support and get a password reset without identity verification? (Test: try to reset a test account's password through the recovery flow.)
-- Are recovery events logged and monitored?
-- Are privileged account recovery flows different from standard user recovery?
+**For the Security Engineer:** Ref NIST 800-53 IA-2 · PCI DSS Req 8.3.1. Evidence: MFA policy, registration report.
 
-*Threat references:* Russian Signal recovery key theft (June 2026, CISA/FBI/Ukraine warning)
+**Tool Mappings:** ✅ Entra ID CA — MFA, FIDO2 support ✅ Duo — simple, broad app support ❌ SMS-only — NIST deprecating
 
+**Verification:** Connect with legacy auth (POP3/IMAP). Should fail. MFA enrollment >99%?
 ### IA-2 Password Policy — Tier: Core
 
-**Statement:** Passwords meet minimum complexity requirements. Passwordless authentication is used where supported.
+**Statement:** Minimum 12-character passwords. No periodic password changes (NIST says stop this). Banned password list enabled.
 
 **For the IT Generalist:**
-1. Configure password policy in your IdP: minimum 12 characters, no complexity requirements (length > complexity), password history of 4.
-2. Do not set password expiration policies. NIST and Microsoft both recommend removing periodic password changes — they make passwords weaker (users choose Password!Spring2024!).
-3. Block common passwords (password123, CompanyName2024).
-4. Enable self-service password reset (SSPR) to reduce help-desk tickets.
-
-*Entra ID password protection:*
 ```powershell
-# Enable banned password list
 Set-MgPolicyAuthenticationMethodPolicy -BannedPasswordProtectionEnabled $true
 ```
+Do NOT set password expiration policies. NIST SP 800-63B explicitly recommends against them.
 
-**For the MSP:**
-- No password expiration policies for any client. Remove them.
-- SSPR is standard per client. Reduces helpdesk calls by 30%.
-- Per-client: monitor password reset frequency. An unusual spike may indicate a phishing attack.
+**For the MSP:** No password expiration for any client. SSPR reduces helpdesk tickets 30%.
 
-**For the Security Engineer:**
-- Reference: NIST SP 800-63B · PCI DSS Req 8.3.7
-- Evidence: Password policy configuration, banned password list, SSPR evidence
-- Cadence: Annual policy review
+**For the Security Engineer:** Ref NIST SP 800-63B · PCI DSS Req 8.3.7. Evidence: Password policy, banned password list.
 
-**Tool Mappings:**
-✅ Entra ID — password protection, banned password list, SSPR
-✅ Okta — password policy, banned passwords, authenticator enrollment
-❌ Forcing password changes every 90 days — contra-indicated by NIST, makes passwords weaker
+**Verification:** Try setting "Spring2024!" on a new account. Blocked? Password expiration policy exists? Remove it.
+### IA-3 Service Account Management — Tier: Core
 
-**Verification:**
-- Try setting a password like "Spring2024!" on a new account. Should be blocked.
-- Check password expiration policy: if there is one, remove it.
-- SSPR enrollment rate: target >80% of users.
-
-**Common Mistakes:**
-- Enforcing password expiration. Stop. NIST SP 800-63B explicitly recommends against periodic password changes. Use banned password lists instead.
-- Requiring complexity (uppercase, number, symbol). Length > complexity. A 16-character passphrase is stronger than "P@ssw0rd!".
-- Not blocking common passwords. Every breach analysis finds Password123 in the first 10 attempts.
-
-**If You Cannot Implement This:**
-For systems that do not support modern password policies: use a password manager to generate and store complex passwords. At minimum, ban the top 1000 common passwords.
-
----
-
-### IA-3 Service and Machine Account Management — Tier: Core
-
-**Statement:** Non-human identities (service accounts, API keys, application credentials) are managed with the same rigor as human accounts.
+**Statement:** Non-human identities are managed with the same rigor as human accounts. Secrets stored in a vault.
 
 **For the IT Generalist:**
-1. Create an inventory of all service accounts, API keys, and application credentials.
-2. Disable interactive logon for service accounts — they should not be used to log into a desktop.
-3. Store credentials in a secrets manager (Azure Key Vault, AWS Secrets Manager, HashiCorp Vault). Not in config files, not in source code.
-4. Rotate secrets on a schedule: every 90 days for high-risk, every 180 days for standard.
-5. Review service account permissions quarterly: remove any that are over-privileged.
-
-*Azure Key Vault: Store and retrieve a secret:*
+*Store a secret in Azure Key Vault:*
 ```azurecli
 az keyvault secret set --vault-name kv-prod --name "db-connection-string" --value "$connString"
-az keyvault secret show --vault-name kv-prod --name "db-connection-string" --query "value"
+```
+*Search source code for hardcoded secrets:*
+```bash
+grep -r "password\|secret\|connectionString" --include="*.config" --include="*.env" --include="*.py" --include="*.js"
 ```
 
-**For the MSP:**
-- Service account inventory is part of client onboarding.
-- Secrets manager per client. Azure Key Vault is included with many Azure subscriptions.
-- Quarterly: review service account permissions. Flag any with domain admin or equivalent privileges.
+**For the MSP:** Service account inventory per client. Secrets manager per client. Quarterly: review permissions.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 IA-3, IA-5 · PCI DSS Req 8.6
-- Evidence: Service account inventory, secrets manager access logs, key rotation records
-- Cadence: Continuous (secrets rotation), Quarterly (access review)
+**For the Security Engineer:** Ref NIST 800-53 IA-3, IA-5 · PCI DSS Req 8.6. Evidence: Secret inventory, rotation records.
 
-**Tool Mappings:**
-✅ HashiCorp Vault — enterprise secrets management, dynamic secrets, rotation automation
-✅ Azure Key Vault — native Azure integration, RBAC, rotation policies
-✅ AWS Secrets Manager — automatic rotation for RDS, Redshift
-❌ Secrets in config files or source code — direct security finding, instant attack surface
+**Tool Mappings:** ✅ HashiCorp Vault — enterprise secrets ✅ Azure Key Vault — native Azure ❌ Secrets in source code
 
-**Verification:**
-- Search the source code repository for hard-coded secrets: `grep -r "password\|secret\|connectionString" --include="*.config" --include="*.env"`
-- Can you list all service accounts with their last rotation date?
-- Are there any service accounts with interactive logon enabled?
-
-**Common Mistakes:**
-- Service account with Domain Admin privileges. Service accounts should have minimum permissions for their function.
-- API keys in GitHub repositories. Use secret scanning tools (GitHub secret scanning, GitLeaks).
-- No rotation schedule for long-lived keys. "The application breaks when we rotate" means the rotation process needs fixing, not skipping.
-
-**If You Cannot Implement This:**
-For small environments: use environment variables with a startup script that reads from a vault. Never store secrets in source code.
-
----
-
-### 6.6 Risk Assessment and Vulnerability Management (RA)
-
----
-
+**Verification:** Source code scanned for secrets? Any service accounts with interactive logon enabled?
 ### RA-1 Risk Assessment — Tier: Core
 
-**Statement:** Risks are identified, documented in a risk register, scored, assigned an owner, and treated.
+**Statement:** Risks are documented in a risk register, scored, assigned to an owner, and treated.
 
 **For the IT Generalist:**
-1. Create a risk register: a spreadsheet or tool that lists every security risk you know about.
-2. For each risk, document: what could go wrong, how likely it is (1-5), how bad it would be (1-5), who owns it, what you are doing about it.
-3. Score: Likelihood × Impact = Risk Score. High (12+) and Critical (15+) items need management attention.
-4. Review the register monthly. Update scores as things change. Close items that are resolved.
-5. If you find a new risk, add it to the register within one week of discovery.
+Create a risk register (spreadsheet or GRC tool). For each risk: description, likelihood (1-5), impact (1-5), score, owner, treatment, target date.
+Score = Likelihood x Impact. High (12+) needs management attention.
+Review monthly. Add new risks within a week of discovery.
 
-*Risk register template (minimum fields):*
-```csv
-ID,Description,Affected Assets,Owner,Likelihood,Impact,Score,Treatment,Target Date,Status
-RISK-001,No MFA on VPN,VPN Gateway,IT Manager,4,4,16,Implement MFA,2026-08-01,In Progress
-```
+**For the MSP:** Risk register per client. Monthly risk review with client. 30-min meeting.
 
-**For the MSP:**
-- Risk register is standard per client. Template across clients with client-specific systems.
-- Monthly risk review: 30-minute meeting with the client. Review open risks, close completed items, add new risks.
-- Risk register maintenance is included in standard managed services.
+**For the Security Engineer:** Ref NIST 800-53 RA-3 · ISO 27001 A.8.2. Evidence: Risk register, review minutes.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 RA-3 · ISO 27001 A.8.2
-- Evidence: Risk register, review meeting minutes, treatment records
-- Cadence: Continuous (entries), Monthly (review)
+**Tool Mappings:** ✅ Spreadsheet -> GRC tool (OneTrust, ServiceNow) ❌ No risk register — finding in every framework
 
-**Tool Mappings:**
-✅ Risk register spreadsheet → GRC tool (OneTrust, ServiceNow GRC, or simple tracker)
-◐ GRC tool — better for regulated environments but needs dedicated admin
-❌ No risk register — regulatory finding in every framework
-
-**Verification:**
-- Is there a risk register? Does it have at least 10 entries?
-- When was the last review? Within the last 30 days?
-- Are there any High/Critical items without a target closure date?
-
-**Common Mistakes:**
-- Risk register created but never reviewed. A static list is not a program.
-- All risks scored the same. If every risk is "Medium," you are not discriminating. Use the full scoring scale.
-- No treatment. If every item is "Accept," you are not running a security program — you are documenting neglect.
-
-**If You Cannot Implement This:**
-Start with a spreadsheet. 10 entries. One risk per week. You can migrate to a GRC tool later.
-
----
-
+**Verification:** Risk register exists with 10+ entries? Last review within 30 days? Any High/Critical items without target date?
 ### RA-2 Vulnerability Scanning — Tier: Core
 
-**Statement:** All in-scope systems are scanned for vulnerabilities on a defined schedule. Findings are tracked and remediated.
+**Statement:** All systems scanned for vulnerabilities on a defined schedule. Findings tracked to remediation.
 
 **For the IT Generalist:**
-1. Set up a vulnerability scanner (Wiz for cloud, Qualys/Tenable/Rapid7 for hybrid).
-2. Configure scans: weekly for internet-facing systems, monthly for internal systems.
-3. Review scan results. Prioritize: Critical and High findings get remediated first.
-4. Create tickets for each finding. Assign to the system owner with a target remediation date.
-5. Rescan after remediation to confirm the finding is closed.
-
-*Qualys quick scan:*
+*Set up scanning:* Wiz for cloud, Qualys/Tenable/Rapid7 for hybrid.
+*Schedule:* Weekly for internet-facing, monthly for internal.
+*Prioritize:* Critical <7 days, High <30 days, Medium <90 days.
 ```bash
-# Launch an authenticated scan against a target
-curl -H "X-Requested-With: curl" \
-  -u "username:password" \
-  -d "action=launch&target=192.168.1.0/24&scan_title=Weekly-Internal-Scan" \
-  "https://qualysapi.qualys.com/api/2.0/fo/scan/"
+# Qualys: launch authenticated scan
+curl -u "username:password" -d "action=launch&target=192.168.1.0/24" "https://qualysapi.qualys.com/api/2.0/fo/scan/"
 ```
 
-**For the MSP:**
-- Vulnerability scanning is standard per client.
-- Weekly internet-facing scans, monthly internal scans.
-- Prioritize: Critical < 7 days, High < 30 days, Medium < 90 days.
-- If a client cannot remediate within SLA, document the exception with compensating controls.
+**For the MSP:** Weekly internet-facing scans, monthly internal. Standard per client.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 RA-5 · PCI DSS Req 11.3 · ISO 27001 A.12.6.1
-- Evidence: Scan reports, SLA dashboard, exception register
-- Cadence: Continuous (discovery), Weekly (externally-facing), Monthly (internal)
+**For the Security Engineer:** Ref NIST 800-53 RA-5 · PCI DSS Req 11.3. Evidence: Scan reports, SLA dashboard.
 
-**Tool Mappings:**
-✅ Wiz — agentless cloud scanning, prioritization by internet exposure, exploit path analysis
-✅ Qualys — broadest coverage (cloud, on-prem, containers, web apps)
-✅ Tenable Nessus — industry standard, broad plugin library
-✅ Rapid7 InsightVM — strong prioritization by exploitability
-❌ Brinqa — vulnerability correlation platform, not a scanner. Do not replace scanning with correlation.
-❌ Kenna — similar to Brinqa, acquired by Cisco; integration overhead exceeds value for most teams
+**Tool Mappings:** ✅ Wiz — agentless cloud, exploit path analysis ✅ Qualys — broadest coverage ❌ Brinqa — correlation platform, not a scanner
 
-**Verification:**
-- When was the last scan? If more than 7 days ago for internet-facing systems, it is overdue.
-- What is the SLA compliance rate? Critical findings within 7-day SLA: target >90%.
-- Are there any findings older than 90 days without an approved exception?
-
-**Common Mistakes:**
-- Scanning without authentication. Unauthenticated scans miss 80% of vulnerabilities. Use domain credentials or agent-based scanning.
-- Findings not assigned to an owner. An unassigned finding is an ignored finding.
-- Not rescanning after remediation. Close the loop: fix → rescan → confirm → close ticket.
-
-**If You Cannot Implement This:**
-No scanner budget: Wiz offers a free tier for cloud scanning. Defect Dojo is open-source for vulnerability tracking. For PCI DSS, ASV-approved quarterly external scanning is required.
-
----
-
-**Threat Intel Validation — OT/ICS Vulnerability Pacing:**
-On June 25, 2026, CISA issued simultaneous advisories for 7 OT/ICS products: Schneider Electric PowerLogic, Yokogawa FAST/TOOLS, Horner Automation Cscape, EVoke EV Charging System, OHIF DICOM, pydicom/pynetdicom, and H.VIEW IP cameras. OT/ICS organizations cannot patch all of these within the standard 7-day Critical SLA. Many require vendor coordination, maintenance windows, and safety validation.
-
-**Additional Guidance for OT Vulnerability Management:**
-
-*For the OT IT Generalist:*
-1. Maintain a separate OT vulnerability SLA: Critical = 30 days (with documented exceptions), High = 90 days.
-2. For each OT vulnerability, assess: is the affected product in a zone accessible from the IT network? If not, the risk is reduced.
-3. If the vendor has not released a patch: document the vendor acknowledgment, request an ETA, and implement compensating controls (network segmentation, enhanced monitoring).
-4. Subscribe to CISA ICS advisories and the vendor's security advisory feed.
-5. Test patches in a non-production OT environment before production deployment.
-
-*OT vulnerability SLA matrix:*
-```csv
-Environment,Severity,SLA,Tool,Exception Path
-IT-Critical,Vuln,7 days,Standard scanner,CISO approval
-IT-High,Vuln,30 days,Standard scanner,Risk acceptance
-OT-Critical,Vuln,30 days,Passive scanner + vendor advisory,Engineering + OT lead approval
-OT-High,Vuln,90 days,Passive scanner,(documented compensating controls)
-```
-
-*CISA ICS advisory monitoring:*
-```bash
-# Fetch current CISA ICS advisories
-curl -s "https://www.cisa.gov/api/ICS-advisories" | jq '.advisories[].title'
-```
-
-**Verification:**
-- OT vulnerability SLA compliance: are OT-critical findings within 30 days? (Different from IT SLA.)
-- Vendor patch availability: for each open OT finding, does the vendor have a patch? If not, is there a documented vendor acknowledgment?
-- Compensating controls for unpatched OT: segmentation verified, enhanced monitoring configured?
-
-*Threat references:* CISA ICS advisories (June 25, 2026 — 7 concurrent advisories)
-
+**Verification:** Any internet-facing system not scanned in 7 days? SLA compliance >90%? Open findings >90 days?
 ### RA-3 Vulnerability Remediation — Tier: Core
 
-**Statement:** Vulnerabilities are remediated within defined SLAs. Deferred remediation requires a documented risk acceptance.
+**Statement:** Critical vulnerabilities patched within 7 days. High within 30 days. Deferred patches documented.
 
-**For the IT Generalist:**
-1. Patch critical vulnerabilities (CVSS 9+) within 7 days. High (CVSS 7-8.9) within 30 days.
-2. If you cannot patch within SLA, document: what is the finding, why can you not patch, what compensating control protects the system, who approved the deferral, what is the target patch date.
-3. Prioritize by risk: an internet-facing web server with a known exploit takes priority over an internal-only system with a theoretical vulnerability.
-4. Use the scanner's priority score, not just CVSS. Wiz, Qualys, and Tenable all provide context-aware scoring.
+**For the IT Generalist:** Critical (CVSS 9+): 7 days. High (CVSS 7-8.9): 30 days. If you cannot patch within SLA, document the exception with compensating control. Priorize by risk: internet-facing > internal.
 
-**For the MSP:**
-- Patch SLA per client: Critical 7 days, High 30 days.
-- Documented exception process for all deferred patches.
-- Monthly SLA report: findings open vs. closed within SLA. Target >90%.
+**For the MSP:** SLA per client: Critical 7d, High 30d. Monthly SLA report. Exception process for deferred patches.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 SI-2 · PCI DSS Req 6.3.3
-- Evidence: SLA dashboard, patch deployment evidence, exception register
-- Cadence: Continuous
+**For the Security Engineer:** Ref NIST 800-53 SI-2 · PCI DSS Req 6.3.3. Evidence: SLA dashboard, patch evidence, exception register.
 
-**Tool Mappings:**
-✅ Wiz — exploit path analysis answers "can an attacker reach this vulnerability"
-✅ Qualys — SLA tracking, exception management
-✅ Defect Dojo — open-source vulnerability management, SLA tracking
-❌ CVSS-only prioritization — does not account for exploitability or asset criticality
-
-**Verification:**
-- SLA report: percentage of Critical findings remediated within 7 days. Target >90%.
-- Any Critical findings older than 14 days without an approved exception? Escalate.
-- Is the exception register reviewed monthly by the CISO?
-
-**Common Mistakes:**
-- Patching by CVSS score only. An internet-facing system with CVSS 7 is riskier than an air-gapped system with CVSS 10.
-- No compensating controls for deferred patches. If you cannot patch, what is protecting the system until you can?
-- Exception with no expiration date. Every exception must have a target closure date.
-
-**If You Cannot Implement This:**
-For OT environments (cannot patch within SLA): use perimeter controls, network segmentation, and application allowlisting as compensating controls. Document every deferred patch with the compensating control.
-
----
-
-### 6.7 System and Information Integrity (SI)
-
----
-
+**Verification:** Critical findings remediated within 7 days >90%? Any Critical open >14 days without approved exception?
 ### SI-1 Malware Protection — Tier: Core
 
-**Statement:** Malware protection is deployed on all endpoints and servers. Signatures are updated automatically. Scans run on a defined schedule.
+**Statement:** EDR on every endpoint and server. Automatic updates. Behavioral detection (not just signatures).
 
 **For the IT Generalist:**
-1. Deploy EDR on every endpoint and server. Not just antivirus — EDR detects behavior, not just signatures.
-2. Configure automatic signature updates. The EDR should update within 24 hours of a new signature release.
-3. Schedule scans: real-time scanning (file access) for all systems, full weekly scan for servers.
-4. Configure alerting: malware detected → notify security team immediately.
-
-*Windows Defender check:*
 ```powershell
 Get-MpComputerStatus | Select-Object AMProductVersion, AMServiceEnabled, RealTimeProtectionEnabled
 ```
+EDR coverage must be >98% of endpoints.
 
-**For the MSP:**
-- EDR is standard per client. No client runs without endpoint protection.
-- Centralized management console: monitor all client endpoints from a single pane.
-- Weekly: review malware detection events. Monthly: report to client.
+**For the MSP:** EDR standard per client. SentinelOne primary recommendation. Weekly: review detection events.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 SI-4 · PCI DSS Req 5.2 · ISO 27001 A.12.2.1
-- Evidence: EDR coverage report, scan schedule, signature update evidence, malware detection log
-- Cadence: Continuous
+**For the Security Engineer:** Ref NIST 800-53 SI-4 · PCI DSS Req 5.2. Evidence: EDR coverage report, scan schedule.
 
-**Tool Mappings:**
-✅ SentinelOne — autonomous EDR, AI-powered detection, rollback capability
-✅ CrowdStrike Falcon — cloud-native, broad detection coverage, threat intelligence integration
-✅ Microsoft Defender for Endpoint — included with many M365 licenses, deep Entra ID integration
-◐ Sophos — adequate for mid-market, weaker on advanced threat detection
-❌ Legacy antivirus (McAfee, Symantec endpoint) — signature-only, no behavioral detection
+**Tool Mappings:** ✅ SentinelOne — AI-powered, rollback ✅ CrowdStrike — cloud-native ❌ Legacy AV (McAfee, Symantec)
 
-**Verification:**
-- EDR coverage: what percentage of endpoints are reporting? Target >98%.
-- Last signature update: all endpoints updated within the last 24 hours?
-- Any malware detections in the last 7 days? Investigate all of them.
-
-**Common Mistakes:**
-- EDR on endpoints but not on servers. Servers are common ransomware targets.
-- Real-time protection disabled for performance reasons. Use exclusions judiciously, not blanket exemptions.
-- No response to EDR alerts. An EDR alert that nobody investigates is a blind spot.
-
-**If You Cannot Implement This:**
-At minimum, Windows Defender (included with Windows) provides real-time protection. For PCI DSS, EDR is not explicitly required but is expected by most QSAs.
-
----
-
+**Verification:** EDR coverage >98%? All endpoints updated within 24h of signature release? Any detections in last 7d?
 ### SI-2 File Integrity Monitoring — Tier: Core
 
-**Statement:** Critical system files and configuration are monitored for unauthorized changes.
+**Statement:** Critical system files monitored for unauthorized changes.
 
 **For the IT Generalist:**
-1. Identify critical files and directories to monitor: system binaries, configuration files, web application files, database files.
-2. Configure FIM to alert on any modification to monitored files.
-3. Review FIM alerts daily. Investigate changes: was it an approved change (patch, configuration update) or unauthorized?
-4. For approved changes: document them in the change management system. For unauthorized changes: treat as a security incident.
+*Wazuh FIM config:* Monitor /etc, /usr/bin, /opt/app. Alert on any modification.
+Review FIM alerts daily. Approved changes (patches) are whitelisted.
 
-*Wazuh FIM configuration:*
-```xml
-<syscheck>
-  <directories check_all="yes">/etc,/usr/bin,/opt/app</directories>
-  <frequency>43200</frequency>
-  <alert_new_files>yes</alert_new_files>
-</syscheck>
-```
+**For the MSP:** FIM on critical systems per client. Daily alert review. Whitelist known-good change patterns.
 
-**For the MSP:**
-- FIM on critical systems per client. Start with domain controllers, web servers, database servers.
-- Daily FIM alert review. Approved changes are closed. Unauthorized changes are escalated.
-- Per-client: whitelist known-good change patterns (Windows Updates, application patches).
+**For the Security Engineer:** Ref NIST 800-53 SI-7 · PCI DSS Req 11.5. Evidence: FIM config, alert review log.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 SI-7 · PCI DSS Req 11.5
-- Evidence: FIM configuration, alert review log, change control evidence
-- Cadence: Continuous (monitoring), Daily (review)
+**Tool Mappings:** ✅ Wazuh — open-source FIM ✅ Defender for Cloud — Azure FIM ❌ No FIM on CHD — PCI finding
 
-**Tool Mappings:**
-✅ Wazuh — open-source FIM, configuration assessment, alerting
-✅ Microsoft Defender for Cloud — File Integrity Monitoring for Azure VMs
-◐ Tripwire — legacy FIM, functional but expensive per-agent
-❌ No FIM on CHD — direct PCI DSS finding
-
-**Verification:**
-- FIM alert queue: any open alerts older than 24 hours?
-- Last approved change: was the FIM change whitelisted or investigated?
-- Any unauthorized file changes detected in the last 30 days? Investigated and closed?
-
-**Common Mistakes:**
-- Too many files monitored. 10,000 alerts per day means none get reviewed. Start with critical system paths and expand gradually.
-- Alert tuning not maintained. New software installations create false positives if paths are not whitelisted.
-- No whitelisting of approved change sources. Windows Update patches will trigger FIM alerts every Patch Tuesday unless whitelisted.
-
-**If You Cannot Implement This:**
-For non-CDE systems: manual integrity checks quarterly are acceptable. For PCI DSS CDE: automated FIM is required.
-
----
-
+**Verification:** Any open FIM alerts >24h old? Unauthorized file changes in last 30d investigated?
 ### SI-3 Anti-Phishing Controls — Tier: Core
 
-**Statement:** Anti-phishing mechanisms are deployed to detect and block malicious email. Personnel are trained to report phishing.
+**Statement:** DMARC/SPF/DKIF configured. Anti-phishing tool deployed. Phishing simulations quarterly.
 
 **For the IT Generalist:**
-1. Configure DMARC, SPF, and DKIM for your email domain. This prevents attackers from spoofing your domain in phishing emails.
-2. Deploy an anti-phishing tool that scans email links and attachments.
-3. Enable suspicious forwarding detection: alert when someone creates an auto-forwarding rule to an external address.
-4. Run phishing simulations quarterly. Track who clicks and who reports.
-
 *DMARC DNS record:*
 ```dns
-_dmarc.example.com TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com; pct=100"
+_dmarc.example.com TXT "v=DMARC1; p=reject; rua=mailto:dmarc@example.com; pct=100"
 ```
+*M365: Enable anti-phishing:* Defender for Office 365 -> Anti-phishing -> Create policy.
 
-**For the MSP:**
-- DMARC/SPF/DKIM setup is part of client onboarding. Do not skip it.
-- Anti-phishing tool: Microsoft Defender for Office 365, Abnormal Security, or Proofpoint.
-- Monthly phishing simulation for clients with >50 users.
-- Users who click 3+ times in a year get additional training.
+**For the MSP:** DMARC setup during onboarding. Anti-phishing tool (Defender for Office 365, Proofpoint). Monthly simulations for >50 users.
 
-**For the Security Engineer:**
-- Reference: PCI DSS Req 5.4.1
-- Evidence: DMARC/DKIM/SPF configuration, phishing simulation results, training completion
-- Cadence: Quarterly (simulations), Annual (training)
+**For the Security Engineer:** Ref PCI DSS Req 5.4.1. Evidence: DMARC config, simulation results, training.
 
-**Tool Mappings:**
-✅ Microsoft Defender for Office 365 — safe links, safe attachments, anti-phishing policies
-✅ Proofpoint — email security, threat isolation, simulation
-✅ Abnormal Security — AI-based behavioral detection
-◐ KnowBe4 — phishing simulation only, not email security
-❌ No email security — phishing is the #1 initial access vector
-
-**Verification:**
-- DMARC check: email from your domain delivered to recipients who do not know you? DMARC=reject should block it.
-- Phishing simulation results: click rate target <5%, report rate target >20%.
-- Any auto-forwarding rules created in the last 30 days? Investigate.
-
-**Common Mistakes:**
-- DMARC set to p=none. "p=none" monitors only — it does not block spoofed email. Set p=quarantine or p=reject.
-- Phishing simulation without training. Simulations without context create resentment, not awareness.
-- Not monitoring auto-forwarding rules. Attackers who compromise a mailbox create a forwarding rule to exfiltrate data.
-
-**If You Cannot Implement This:**
-Start with DMARC/SPF/DKIM — these are free DNS records. For anti-phishing, Microsoft 365 Business Premium includes Defender for Office 365.
-
----
-
-### 6.8 Supply Chain and Third-Party Risk (SR)
-
----
-
+**Verification:** DMARC=p reject? Click rate target <5%. Report rate target >20%.
 ### SR-1 Vendor Risk Assessment — Tier: Core
 
 **Statement:** Every vendor with access to organizational data or systems is assessed for security risk before onboarding and annually thereafter.
@@ -1555,99 +1090,33 @@ For vendors that cannot produce SBOMs: document the exception and require contra
 
 ### SC-1 Network Segmentation — Tier: Core
 
-**Statement:** Networks are segmented into security zones. Traffic between zones is explicitly approved, documented, and logged.
+**Statement:** Networks segmented into security zones. Traffic between zones explicitly approved.
 
 **For the IT Generalist:**
-1. Identify your network zones: user LAN, server LAN, DMZ, OT network, guest Wi-Fi.
-2. Configure firewall rules that explicitly allow only required traffic between zones. Deny everything else.
-3. Document the segmentation: a network diagram showing each zone, the firewall between them, and the allowed traffic.
-4. Review firewall rules every 6 months. Remove rules that are no longer needed.
-
-*Windows Firewall: List all inbound rules:*
+*Windows: List firewall rules:*
 ```powershell
-Get-NetFirewallRule -Direction Inbound | Where-Object Enabled -eq $true |
-  Select-Object DisplayName, Action, Direction
+Get-NetFirewallRule -Direction Inbound | Where-Object Enabled -eq $true | Select-Object DisplayName, Action
 ```
+Minimum zones: corporate, guest, management, DMZ. Cloud segmentation via VPCs/security groups.
 
-**For the MSP:**
-- Segmentation is per-client. Minimum zones: corporate, guest, management, DMZ.
-- Firewall rule review every 6 months is included in managed services.
-- Cloud segmentation: use VPCs, security groups, and network ACLs. Same principles, different implementation.
+**For the MSP:** Segmentation per client. Minimum: corp, guest, management. Firewall rule review every 6 months.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 SC-7 · PCI DSS Req 1.2 · ISO 27001 A.13.1.3
-- Evidence: Network diagram, firewall rule review, cloud security group export, segmentation test results
-- Cadence: Quarterly (review), Every 6 months (rule review)
+**For the Security Engineer:** Ref NIST 800-53 SC-7 · PCI DSS Req 1.2. Evidence: Network diagram, firewall rule review.
 
-**Tool Mappings:**
-✅ Azure Firewall / AWS Network Firewall — cloud-native NGFW
-✅ pfSense / OPNsense — open-source, suitable for SMB
-✅ Cisco / Palo Alto — enterprise NGFW, threat prevention
-❌ Flat network with no segmentation — security finding, direct PCI DSS violation
+**Tool Mappings:** ✅ Azure Firewall / AWS NGFW ✅ pfSense/OPNsense for SMB ❌ Flat network — PCI violation
 
-**Verification:**
-- Can a host in the user LAN directly reach a host in the OT network? Should be blocked.
-- Internet-facing firewall rules: are they reviewed? Any rule with a source of "Any" and destination of "Any"?
-- Segmentation test: quarterly try to reach the CDE from a non-CDE system. Should fail.
-
-**Common Mistakes:**
-- Flat network "for simplicity." A flat network means one compromise is a full compromise. Segment.
-- Firewall rules that allow "Any-Any" for convenience. Every "Any-Any" rule needs documented business justification.
-- Cloud security groups too permissive. Default-deny for all new security groups. Add rules only as needed.
-
-**If You Cannot Implement This:**
-At minimum, segment the CDE (PCI) or CUI enclave (CMMC) from the corporate network. For non-regulated environments, separate user and server traffic.
-
----
-
+**Verification:** Can a user LAN host directly reach OT network? Blocked. Firewall rules reviewed? Any "Any-Any" rules?
 ### SC-2 Data in Transit Encryption — Tier: Core
 
-**Statement:** Sensitive data and administrative traffic are encrypted in transit using approved protocols.
+**Statement:** Sensitive data and admin traffic encrypted in transit. TLS 1.2+.
 
-**For the IT Generalist:**
-1. Enable HTTPS on every web server and application. Use TLS 1.2 or 1.3.
-2. Redirect HTTP to HTTPS. Do not allow unencrypted HTTP.
-3. Disable TLS 1.0 and 1.1. These are deprecated and insecure.
-4. Use approved cipher suites: TLS_AES_256_GCM_SHA384 (TLS 1.3) or ECDHE-RSA-AES256-GCM-SHA384 (TLS 1.2).
-5. Scan your certificates: check for expired, about-to-expire, or revoked certificates.
+**IT Generalist:** Enable HTTPS. Redirect HTTP to HTTPS. Disable TLS 1.0/1.1.
 
-*TLS certificate check:*
-```bash
-openssl s_client -connect example.com:443 -servername example.com < /dev/null 2>/dev/null |
-  openssl x509 -noout -dates -subject -issuer
-```
+**MSP:** TLS by default. Cert expiration 30-day alert.
 
-**For the MSP:**
-- SSL/TLS is standard per client. Enable by default for all services.
-- Certificate expiration monitoring: 30-day alert before expiration.
-- TLS scan: quarterly check all client domains for TLS version and certificate validity.
+**Ref:** NIST SC-8, PCI 4.2.1.
 
-**For the Security Engineer:**
-- Reference: NIST 800-53 SC-8 · PCI DSS Req 4.2.1
-- Evidence: TLS scanner report, certificate validation evidence, cipher suite configuration
-- Cadence: Continuous (certificate monitoring), Quarterly (full scan)
-
-**Tool Mappings:**
-✅ Qualys SSL Labs — free TLS scanner, certificate analysis
-✅ Azure Front Door / AWS CloudFront — TLS termination, certificate management
-✅ Let's Encrypt — free automated certificates, 90-day rotation
-❌ TLS 1.0 or 1.1 in use — PCI DSS violation, known vulnerabilities
-
-**Verification:**
-- Run an external TLS scan: any services still running TLS 1.0 or 1.1?
-- Certificate expiration: any certificates expiring within 30 days?
-- Cipher strength: any weak ciphers enabled (RC4, DES, 3DES)?
-
-**Common Mistakes:**
-- TLS termination at the load balancer but internal traffic is unencrypted. Encrypt from load balancer to application server too.
-- Self-signed certificates for internal services without proper CA management. Use a private CA or cert-manager.
-- Wildcard certificates for everything. Reduces security — a compromise of one affected system exposes all.
-
-**If You Cannot Implement This:**
-PCI DSS Req 4.2.1 requires strong cryptography for CHD over open/public networks. No compensating control is accepted for CDE scope.
-
----
-
+**Verification:** Any services on TLS 1.0/1.1? Certs expiring within 30d?
 ### SC-3 Data at Rest Encryption — Tier: Core
 
 **Statement:** Sensitive data at rest is encrypted using approved methods. Disk encryption alone is insufficient for regulated data — it must be combined with column-level or application-level encryption.
