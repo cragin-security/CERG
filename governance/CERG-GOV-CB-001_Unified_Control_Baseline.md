@@ -204,44 +204,60 @@ Each control entry follows this structure:
 
 ---
 
-### AC-1 Access Control Policy and Procedures — Tier: Core
+### AC-1 Access Control Policy — Tier: Core
 
-**Statement:** Access control requirements are documented, reviewed annually, and applied consistently.
+**Statement:** Access control rules are written down, approved, and told to everyone. If you cannot point to the document that says how access works, you do not have a policy.
 
 **For the IT Generalist:**
-1. Your organization should have a document that says who can access what. Find it in your shared drive or ask your manager.
-2. If it does not exist, create a one-page document listing: (a) how users get access, (b) how access is removed, (c) who approves access changes.
-3. Save it in a shared location everyone can find.
-4. Set a calendar reminder to review it every 12 months.
+
+Your job: produce one document everyone can find. Here is exactly what goes in it.
+
+*What your policy must say (copy these 8 headings):*
+1. Purpose — Why this exists (one paragraph)
+2. Scope — Which systems, people, and data this covers
+3. Account Creation — Who can request and approve new accounts
+4. Access Changes — How to request more/less access when roles change
+5. Access Removal — When and how accounts are disabled (immediately on termination)
+6. Access Reviews — How often we check who has access (at least quarterly)
+7. Exceptions — How to request one and who approves it
+8. Review Cycle — This document is reviewed every 12 months by [ROLE]
+
+*To create the policy:*
+1. Copy the 8 headings into a SharePoint or Confluence document.
+2. Fill in who approves access (e.g., "department manager") and who reviews annually (e.g., "CISO").
+3. Save where everyone can find it. Not email. Not your desktop.
+4. Set a calendar to review in 12 months. Update the date even if nothing changed.
+5. Email all staff: "Policy is at [LINK]. Please read it."
 
 **For the MSP:**
-- Maintain one master access control procedure document per client.
-- Review during quarterly business review.
-- Template across clients: only client name, systems list, and approver names change.
+- One master policy templated across clients. Only client name and approvers change.
+- Store in each client's SharePoint. Client must own it.
+- Review during QBR. Update the review date.
+- Do not skip because the client is small. A 5-person company still needs documented access rules.
 
 **For the Security Engineer:**
 - Reference: NIST 800-53 AC-1 · ISO 27001 A.9.1.1 · PCI DSS Req 7.1
-- Evidence: Policy document with annual review date
-- Cadence: Annual; update on org change
+- Evidence: Policy document with named approver and annual review date
+- Cadence: Annual
 
 **Tool Mappings:**
-✅ Confluence / SharePoint / Git — document lives where everyone can find it
-◐ Network drive — harder to version-control
-❌ Someone's email drafts — not acceptable for any regulatory framework
+✅ SharePoint — version history, approval workflow, findable
+✅ Confluence — same, preferred by engineers
+❌ Emailed Word doc — will drift, be lost, or both
 
 **Verification:**
-- Can you find the access control policy in under 2 minutes?
-- Does it have a review date within the last 12 months?
+1. Open the shared drive. Find the policy. Took less than 2 minutes? Good.
+2. Does it name who approves new accounts? Who removes them?
+3. Review date within 12 months? If not, schedule it today.
 
 **Common Mistakes:**
-- Policy exists but no one knows where it is. Store it in the one place everyone looks.
-- Policy reviewed but no changes noted. Document "no changes" as a valid review outcome.
+- 40-page policy nobody reads. One page per section, 8 pages max.
+- Policy exists but nobody told staff. Email the link.
+- "Too small for a policy." Every framework requires documented policies.
+- Policy written but approved by no one. Must have a named approver.
 
 **If You Cannot Implement This:**
-No regulatory authority accepts "no access control policy." This is a find-it-or-build-it control.
-
----
-
+No framework accepts "no access control policy." Use the 8 headings above as your draft.
 ### AC-2 Account Lifecycle Management — Tier: Core
 
 **Statement:** Every account has an approved request, named owner, defined access level, and current JML record.
