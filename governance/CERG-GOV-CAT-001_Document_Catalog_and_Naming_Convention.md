@@ -480,11 +480,26 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 
 ---
 
+### 5.7 Practice Assets
 
-### 5.7 Job Descriptions (Per-Role)
+| **ID** | **Title** | **Owner** | **Status** |
+|--------|-----------|-----------|------------|
+| [`CERG-PA-PLAY-001`](../practice-assets/engagement-playbook-v1.md) | Engagement Playbook | CERG Practice Lead | Approved |
+| [`CERG-PA-MSP-001`](../practice-assets/msp-runbook-pack-v1.md) | MSP Runbook Pack | CERG Practice Lead | Approved |
+| [`CERG-PA-BACK-001`](../practice-assets/backlog-v1.md) | Practice Backlog & Improvement Process | CERG Practice Lead | Approved |
+| [`CERG-PA-INTK-001`](../practice-assets/intake/cerg-intake-questionnaire-v1.md) | Client Intake Questionnaire | CERG Practice Lead | Approved |
+| [`CERG-PA-DET-001`](../practice-assets/detection/detection-engineering-framework-v1.md) | Detection Engineering Framework | CERG Practice Lead | Approved |
+| [`CERG-PA-DET-002`](../practice-assets/detection/cb-001-detection-mapping-v1.md) | CB-001 Detection to Control Mapping | CERG Practice Lead | Approved |
+| [`CERG-PA-RFP-001`](../practice-assets/rfp/rfp-response-kit-v1.md) | RFP Response Kit | CERG Practice Lead | Approved |
+| [`CERG-DELIV-ASMT-001`](../practice-assets/deliverables/assessment-report-template-v1.md) | Assessment Report Template | CERG Practice Lead | Approved |
+| [`CERG-DELIV-GAP-001`](../practice-assets/deliverables/gap-analysis-report-template-v1.md) | Gap Analysis Report Template | CERG Practice Lead | Approved |
+| [`CERG-DELIV-RMEDIT-001`](../practice-assets/deliverables/remediation-roadmap-template-v1.md) | Remediation Roadmap Template | CERG Practice Lead | Approved |
+
+### 5.8 Job Descriptions (Per-Role)
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
+
 | `CERG-GOV-JD-SECENG-001` | Cloud Security Engineer | Engineering Pillar Leader | Approved |
 | `CERG-GOV-JD-SECENG-002` | Identity Engineer | Engineering Pillar Leader | Approved |
 | `CERG-GOV-JD-SECENG-003` | OT Security Engineer | Engineering Pillar Leader | Approved |
@@ -516,9 +531,9 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 | `CERG-GOV-JD-RISKOPS-000` | Risk Operations Family Index | Risk Pillar Leader | Approved |
 | `CERG-GOV-JD-GOVCOMP-000` | Governance & Compliance Family Index | Governance Pillar Leader | Approved |
 | `CERG-GOV-JD-EXEC-000` | Executive Leadership Family Index | CISO | Approved |
-| `CERG-GOV-JD-ADJUNCT-000` | Incident Response Family Index | Governance Pillar Leader | Approved |
+| `CERG-GOV-JD-ADJUNCT-000` | Incident Response Family Index | Governance Pillar Leader | Approved 
 
-### 5.8 Machine-Readable Artifacts
+### 5.9 Machine-Readable Artifacts
 
 The `machine-readable/` directory contains YAML specifications generated from the CERG corpus for LLM and automation consumption. These are derived artifacts, not independently authored documents. See `machine-readable/README.md` for the complete inventory.
 
@@ -531,7 +546,7 @@ Key artifacts include:
 - `cerg-record-schemas.yaml` — Core operational record schemas
 - Companion schema files for runtime model, evidence, metrics, crown jewels, vulnerability priority, IR interface, vendor kill switch, identity, segmentation, AI intake, workforce capacity, and decision logging
 
-### 5.9 Examples
+### 5.10 Examples
 
 The `examples/` directory contains narrative walkthroughs and adoption profiles. These are not authoritative documents and do not appear in the V1 catalog. They show how V1 artifacts are used together during real work, and they are the recommended first stop for leaders and SMEs trying to understand how the program operates.
 
@@ -623,10 +638,11 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.47 | 2026-06-27 | Governance Pillar Leader | Registered domain code `PCI` in §2.1 and `CERG-PLN-PCI-001` PCI DSS Operational Package in §5.5. Added to CB-001 §8 overlay matrix and §10.5 PCI DSS crosswalk. |
+| 1.47 | 2026-06-30 | CERG Practice Lead | Added Section 5.7 Practice Assets catalog |
 | 1.45 | 2026-06-20 | Governance Pillar Leader | Registered `CERG-TMPL-SCP-001` System Control Profile Template in §5.6 as the structured per-system control implementation, evidence, validation, and review record. |
 | 1.44 | 2026-06-18 | Governance Pillar Leader | Registered domain code `GEN` (cross-cutting reference material) in §2.1. Registered `CERG-GOV-GEN-001` (CERG Glossary) in §5.2 as the canonical reference for CERG terms, record types, conversion rules, and role names. Glossary content extracted from FLOW-001 §2 (Operating Principles, Record Type Definitions) and from CB-001, RMF-001, OM-001, and roles/ cross-references. |
 | 1.43 | 2026-06-18 | Governance Pillar Leader | Registered `CERG-GOV-IMP-007` (Role Reader Paths) in §5.2 as the sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead roles. |
-| 1.42 | 2026-06-18 | Governance Pillar Leader | Added §5.9 Examples subsection. Authorizes the `examples/` directory in the catalog and clarifies that examples are illustrative, not normative. Cross-reference rule 1 in §6 continues to govern which artifacts may be referenced from examples, with `(Planned, V1.x)` markers required for any forward references. |
+| 1.42 | 2026-06-18 | Governance Pillar Leader | Added §5.10 Examples subsection. Authorizes the `examples/` directory in the catalog and clarifies that examples are illustrative, not normative. Cross-reference rule 1 in §6 continues to govern which artifacts may be referenced from examples, with `(Planned, V1.x)` markers required for any forward references. |
 | 1.41 | 2026-06-18 | Governance Pillar Leader | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. |
 | 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
 | 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
@@ -647,7 +663,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | 1.27 | 2026-05-22 | Cyber Governance | Registered domains `CAL`, `STY`, and `TRC`; added `CERG-GOV-CAL-001`, `CERG-GOV-STY-001`, and `CERG-GOV-TRC-001` to Section 5.2 as Draft; updated Section 7.5 to state that no F2-F4 governance instruments remain planned. |
 | 1.30 | 2026-05-27 | Cyber Governance | HR program build-out amendment. Registered domains `CMP`, `PERF`, `ONB`, `WFP`, `TRN`, `SUCC`, `CON`, and `EDG`. Added to Section 5.2: `CERG-GOV-CMP-001` (Competency Model and Behavioral Anchors), `CERG-GOV-PERF-001` (Performance Management and Promotion Framework), `CERG-GOV-ONB-001` (Onboarding and Integration Program), `CERG-GOV-WFP-001` (Workforce Planning and Capacity Model), `CERG-GOV-TRN-001` (Training, Development, and Certification Framework), `CERG-GOV-SUCC-001` (Succession Planning and Talent Review Framework), and `CERG-GOV-CON-001` (Contractor and Non-Employee Staff Integration Guide). Extended `CERG-GOV-IMP-001` to v1.1 with Employer Brand and Talent Attraction section. |
 | 1.32 | 2026-06-18 | Governance Pillar Leader | Registered CERG-TMPL-RM-004 (Risk Acceptance Request Form) in §5.6 as the distinct Business Owner + RMF-001 authority risk acceptance workflow, separate from the Security Exception Request Form (TMPL-RM-002). |
-| 1.31 | 2026-06-11 | Governance Pillar Leader | Workforce architecture and cross-pillar flows amendment. Registered domains `JF` and `FLOW`. Added JF-001 (Job Families Overview), JF-002 (NICE Crosswalk), and FLOW-001 (Cross-Pillar Operational Flows) to §5.2. Added §5.7 (Job Descriptions — 27 per-role documents across five job families) and §5.8 (Machine-Readable Artifacts). Rewrote JD-001 as family-level index. Modified RAC-001, JA-001, CMP-001, TRN-001, PERF-001, and OM-001 with NICE and Job Family cross-references. |
+| 1.31 | 2026-06-11 | Governance Pillar Leader | Workforce architecture and cross-pillar flows amendment. Registered domains `JF` and `FLOW`. Added JF-001 (Job Families Overview), JF-002 (NICE Crosswalk), and FLOW-001 (Cross-Pillar Operational Flows) to §5.2. Added §5.8 (Job Descriptions — 27 per-role documents across five job families) and §5.9 (Machine-Readable Artifacts). Rewrote JD-001 as family-level index. Modified RAC-001, JA-001, CMP-001, TRN-001, PERF-001, and OM-001 with NICE and Job Family cross-references. |
 | 1.29 | 2026-05-27 | Cyber Governance | Job architecture and human capital amendment. Registered domains `JA` and `JD`. Added to Section 5.2: `CERG-GOV-JA-001` (Job Architecture and Grade Framework) and `CERG-GOV-JD-001` (CERG Job Descriptions). The JA-001 establishes the two-track grade structure (SME: Specialist through Sr. Advisor; Management: Manager through Director), leveling dimensions, span-of-control guidelines, and compensation philosophy. The JD-001 provides full job descriptions for all 25 canonical CERG roles. |
 | 1.28 | 2026-05-26 | Cyber Governance | NIST CSF Adaptive gap closure amendment. Registered domains `LL`, `IMPREG`, and `CEF`. Added to Section 5.2: `CERG-GOV-IMPREG-001` (Program Improvement Register) and `CERG-GOV-CEF-001` (Control Effectiveness Framework). Added to Section 5.4: `CERG-PRC-LL-001` (Lessons Learned and Program Improvement Procedure). Added to Section 5.6: `CERG-TMPL-GOV-001` (Stakeholder Perception Survey). Noted extended artifacts: PRC-TI-001 v1.1, MTR-001 v1.3, PRC-AV-001 v1.2, RMF-001 v1.3, MAT-001 v1.1, OM-001 v1.22. |
 
