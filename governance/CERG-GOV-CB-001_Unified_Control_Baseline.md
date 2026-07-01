@@ -708,6 +708,8 @@ Test retrieval annually.
 **For the Security Engineer:** Ref NIST 800-53 AU-11 · PCI DSS Req 10.7. Evidence: Retention policy, storage config, retrieval test.
 
 **Verification:** SIEM retention >=365 days? Retrieve a 13-month-old log? Works?
+
+### 6.3 Configuration Management (CM)
 ### CM-1 Configuration Baseline (DISH) — Tier: Core
 
 **Statement:** Every system configured to DISH baseline before production. Maintained against it.
@@ -800,6 +802,8 @@ Reconcile monthly: compare against cloud resource lists, AD computer objects, sc
 **Tool Mappings:** ✅ Device42 — agentless discovery ✅ ServiceNow CMDB ❌ Excel spreadsheet
 
 **Verification:** Can you reconcile CMDB vs cloud provider's resource list? Any orphan resources?
+
+### 6.4 Contingency Planning and Recovery (CP)
 ### CP-1 System Backup — Tier: Core
 
 **Statement:** Daily automated backups. Immutable storage. Annual restore test.
@@ -833,6 +837,8 @@ Backups stored in separate region. Immutability enabled. Test restore annually.
 **For the Security Engineer:** Ref NIST 800-53 CP-2, CP-4 · ISO 27001 A.17.1.3. Evidence: Plan, test results, lessons learned.
 
 **Verification:** Last recovery test date? Successful? RTO/RPO realistic based on test results?
+
+### 6.5 Identification and Authentication (IA)
 ### IA-1 Multi-Factor Authentication — Tier: Core
 
 **Statement:** All interactive human access requires phishing-resistant MFA. Legacy auth disabled.
@@ -894,6 +900,8 @@ grep -r "password\|secret\|connectionString" --include="*.config" --include="*.e
 **Tool Mappings:** ✅ HashiCorp Vault — enterprise secrets ✅ Azure Key Vault — native Azure ❌ Secrets in source code
 
 **Verification:** Source code scanned for secrets? Any service accounts with interactive logon enabled?
+
+### 6.6 Risk Assessment and Vulnerability Management (RA)
 ### RA-1 Risk Assessment — Tier: Core
 
 **Statement:** Risks are documented in a risk register, scored, assigned to an owner, and treated.
@@ -941,6 +949,8 @@ curl -u "username:password" -d "action=launch&target=192.168.1.0/24" "https://qu
 **For the Security Engineer:** Ref NIST 800-53 SI-2 · PCI DSS Req 6.3.3. Evidence: SLA dashboard, patch evidence, exception register.
 
 **Verification:** Critical findings remediated within 7 days >90%? Any Critical open >14 days without approved exception?
+
+### 6.7 System and Information Integrity (SI)
 ### SI-1 Malware Protection — Tier: Core
 
 **Statement:** EDR on every endpoint and server. Automatic updates. Behavioral detection (not just signatures).
@@ -989,6 +999,8 @@ _dmarc.example.com TXT "v=DMARC1; p=reject; rua=mailto:dmarc@example.com; pct=10
 **For the Security Engineer:** Ref PCI DSS Req 5.4.1. Evidence: DMARC config, simulation results, training.
 
 **Verification:** DMARC=p reject? Click rate target <5%. Report rate target >20%.
+
+### 6.8 Supply Chain and Third-Party Risk (SR)
 ### SR-1 Vendor Risk Assessment — Tier: Core
 
 **Statement:** Every vendor with access to organizational data or systems is assessed for security risk before onboarding and annually thereafter.
@@ -2244,22 +2256,6 @@ MSP: Signed software only. WDAC/AppLocker enforces.
 Ref: NIST SI-7, PCI 6.4.3.
 
 Verification: Try installing unsigned binary. Blocked? In-house code signed?
-### SI-7 Input Validation
-
-Statement: All input to applications and APIs validated. WAF blocks injection attacks.
-
-IT Generalist:
-  Azure WAF with OWASP CRS: blocks SQLi, XSS, command injection.
-  WAF rule update: OWASP CRS 3.2.
-  Parameterized queries prevent SQL injection.
-
-MSP: WAF standard per client for internet-facing apps.
-
-Ref: NIST SI-10, OWASP Top 10.
-
-Tool: Azure WAF, Cloudflare WAF, ModSecurity.
-
-Verification: Run SQL injection test against web app. Blocked?
 ### SC-7 Session Management
 
 Statement: Sessions managed securely: Secure+HttpOnly cookies, 15-min timeout, server-side invalidation on logout.
