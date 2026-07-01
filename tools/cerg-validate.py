@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 CATALOG_FILE = "governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md"
-DOC_ID_PATTERN = r"CERG-(?:POL-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})"
+DOC_ID_PATTERN = r"CERG-(?:POL-\d{3}|PA-[A-Z]{2,8}-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV|DELIV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})"
 DOC_ID_RE = re.compile(rf"\b{DOC_ID_PATTERN}\b")
 MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 METADATA_ROW_RE = re.compile(r"\|\s*\*\*(Document ID|Status)\*\*\s*\|\s*([^|]+?)\s*\|", re.IGNORECASE)
