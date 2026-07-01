@@ -40,6 +40,14 @@ DISCOVERY ──> TRIAGE ──> IMPLEMENT ──> SHIP ──> CLOSE
 
 ## 2. Active Backlog
 
+### Recently Shipped
+
+| ID | Item | Source | Shipped |
+|----|------|--------|---------|
+| B-001 | CB-001 TOC anchors fixed: added 6 missing family section headers (6.3-6.8) | B-001 | 2026-06-30 |
+| B-002 | SI-7 duplicate removed | B-002 | 2026-06-30 |
+| B-007 | 20 standalone Sigma rule files created from detection framework | B-007 | 2026-06-30 |
+
 ### P0 — Critical (None currently)
 
 *No items at this priority.*
@@ -48,8 +56,8 @@ DISCOVERY ──> TRIAGE ──> IMPLEMENT ──> SHIP ──> CLOSE
 
 | ID | Item | Source | Filed | Assigned | Status |
 |----|------|--------|-------|----------|--------|
-| B-001 | CB-001 TOC anchors broken (6 anchor_missing warnings) | Validation output | 2026-06-30 | — | **OPEN** |
-| B-002 | CB-001 has duplicate SI-7 (Information Input Validation + Security Function Verification) | Section numbering | 2026-06-30 | — | **OPEN** |
+| B-001 | CB-001 TOC anchors broken (6 anchor_missing warnings) | Validation output | 2026-06-30 | — | **SHIPPED** |
+| B-002 | CB-001 has duplicate SI-7 (Information Input Validation + Security Function Verification) | Section numbering | 2026-06-30 | — | **SHIPPED** |
 
 ### P2 — Medium Priority (Next Sprint)
 
@@ -57,7 +65,7 @@ DISCOVERY ──> TRIAGE ──> IMPLEMENT ──> SHIP ──> CLOSE
 |----|------|--------|-------|-------|
 | B-003 | CB-001 controls without `— Tier: Core` suffix (~10 controls lost it during replacement) | Audit | 2026-07 | Cosmetic only — no functional impact |
 | B-004 | Add Vanta GRC reference to CB-001 compensating controls section | Tool alignment | 2026-07 | Small update to §7 |
-| B-005 | Check upstream CERG for changes (drift since fork) | Process | 2026-07 | Run `check-upstream-drift.py` |
+| B-005 | Check upstream CERG for changes (drift since fork) | Process | 2026-06-30 | Merged 6 upstream commits |
 
 ### P3 — Backlog
 
