@@ -1,4 +1,11 @@
 # Detection Engineering Framework v1.0
+| | |
+|---|---|
+| **Document ID** | CERG-PA-DET-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | CERG Practice Lead |
 
 **Author:** CERG Detection Engineering Team  
 **Version:** 1.0  

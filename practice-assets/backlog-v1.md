@@ -1,4 +1,11 @@
 # CERG Practice Backlog & Improvement Process v1
+| | |
+|---|---|
+| **Document ID** | CERG-PA-BACK-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | CERG Practice Lead |
 
 **Purpose:** Formalize how the practice captures, prioritises, and implements improvements to CERG.
 **Format:** This file is the practice backlog. Entries move through: Backlog → Triaged → In Progress → Shipped.
@@ -41,8 +48,8 @@ DISCOVERY ──> TRIAGE ──> IMPLEMENT ──> SHIP ──> CLOSE
 
 | ID | Item | Source | Filed | Assigned | Status |
 |----|------|--------|-------|----------|--------|
-| B-001 | CB-001 TOC anchors broken (6 anchor_missing warnings) | Validation output | 2026-07 | — | **OPEN** |
-| B-002 | CB-001 has duplicate SI-7 (Information Input Validation + Security Function Verification) | Section numbering | 2026-07 | — | **OPEN** |
+| B-001 | CB-001 TOC anchors broken (6 anchor_missing warnings) | Validation output | 2026-06-30 | — | **OPEN** |
+| B-002 | CB-001 has duplicate SI-7 (Information Input Validation + Security Function Verification) | Section numbering | 2026-06-30 | — | **OPEN** |
 
 ### P2 — Medium Priority (Next Sprint)
 

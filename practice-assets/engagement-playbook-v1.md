@@ -1,4 +1,11 @@
 # CERG Client Engagement Playbook v1
+| | |
+|---|---|
+| **Document ID** | CERG-PA-PLAY-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | CERG Practice Lead |
 
 **Purpose:** A single consultant-facing guide that walks through a CERG engagement from intake call to signed handover. Every section references existing practice assets — nothing new to create.
 

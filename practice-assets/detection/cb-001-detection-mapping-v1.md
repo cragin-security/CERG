@@ -1,4 +1,11 @@
 # CB-001 Control to Detection Rule Mapping
+| | |
+|---|---|
+| **Document ID** | CERG-PA-DET-002 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | CERG Practice Lead |
 
 **Purpose:** Maps existing detection rules from `practice-assets/detection/detection-engineering-framework-v1.md` to CB-001 controls. Every control that can be tested with a detection rule gets one. Output drives SIEM correlation rules and tabletop scenarios.
 

@@ -1,4 +1,11 @@
 # CERG Intake Questionnaire v1
+| | |
+|---|---|
+| **Document ID** | CERG-PA-INTK-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | CERG Practice Lead |
 ## Practice Asset — Not a CERG Corpus Document
 ## Purpose: Classify client → tier + sector + overlays in 15 questions
 
