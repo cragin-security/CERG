@@ -1,0 +1,33 @@
+title: Account Discovery - T1087
+id: aafc9cd5-34b5-4e08-bd83-3bd4c8821ac0
+status: experimental
+description: Detects use of net.exe/net1.exe for user and group enumeration based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1087/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1087
+  - attack.account_discovery
+  - attack.discovery
+  - attack.t1087.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith:
+      - '\net.exe'
+      - '\net1.exe'
+    CommandLine|contains:
+      - ' user '
+      - ' group '
+      - ' localgroup '
+      - ' accounts '
+  condition: selection
+falsepositives:
+  - 'Helpdesk scripts performing user lookups'
+  - 'Logon scripts enumerating groups'
+  - 'IT inventory tools'
+level: low

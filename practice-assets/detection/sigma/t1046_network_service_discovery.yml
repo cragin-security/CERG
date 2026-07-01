@@ -1,0 +1,30 @@
+title: Network Service Discovery - T1046
+id: 1fbe33d3-ebf8-48ed-b0b0-88496811841b
+status: experimental
+description: Detects rapid connections to multiple remote hosts indicative of port scanning for network service discovery based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1046/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1046
+  - attack.network_service_discovery
+  - attack.discovery
+logsource:
+  category: network_connection
+  product: windows
+detection:
+  selection:
+    DestinationPort|contains:
+      - '445'
+      - '3389'
+      - '5985'
+      - '5986'
+      - '22'
+  condition: selection
+falsepositives:
+  - 'Vulnerability scanners (Nessus, Qualys)'
+  - 'Network monitoring tools'
+  - 'Application load balancers'
+level: medium

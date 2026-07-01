@@ -1,0 +1,24 @@
+title: Exfiltration Over Alternative Protocol - T1048
+id: 3badd9bb-5d0c-41db-8c05-0ba1a48a2e22
+status: experimental
+description: Detects large outbound data transfers over alternative protocols (SMTP, FTP) indicating exfiltration based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1048/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1048
+  - attack.exfiltration_over_alternative_protocol
+  - attack.exfiltration
+logsource:
+  category: network_connection
+  product: windows
+detection:
+  selection:
+    DestinationPort: 25
+  condition: selection
+falsepositives:
+  - 'Email servers sending legitimate mail'
+  - 'Monitoring or log shipping tools'
+level: high
