@@ -55,7 +55,7 @@ The completed template answers the operating question that CERG requires before 
 
 ## 3. Fill-In Template
 
-### 6.1 Intake Summary
+### 3.1 Intake Summary
 
 | **Field** | **Value** |
 |---|---|
@@ -71,7 +71,7 @@ The completed template answers the operating question that CERG requires before 
 | Existing Vendor / New Vendor / Internal Build | `[Existing vendor / New vendor / Internal build]` |
 | Target Go-Live or Use Date | `[Date]` |
 
-### 6.2 Data Classification and Prompt Boundary
+### 3.2 Data Classification and Prompt Boundary
 
 | **Question** | **Response** | **Evidence / Notes** |
 |---|---|---|
@@ -83,7 +83,7 @@ The completed template answers the operating question that CERG requires before 
 | Is data egress monitored or restricted? | `[Yes / No]` | `[DLP, proxy, CASB, SSPM, or logging evidence]` |
 | Maximum classification approved for this request | `[Public / Internal / Confidential / Restricted / Not approved]` | `[Rationale]` |
 
-### 6.3 Provider, Model, and Supply Chain
+### 3.3 Provider, Model, and Supply Chain
 
 | **Question** | **Response** | **Evidence / Notes** |
 |---|---|---|
@@ -95,7 +95,7 @@ The completed template answers the operating question that CERG requires before 
 | Contractual protections reviewed? | `[Yes / No]` | `[DPA, security addendum, no-training term, retention term]` |
 | Material change to existing vendor risk profile? | `[Yes / No]` | `[Reassessment trigger and record]` |
 
-### 6.4 Agency, Access, and Human Oversight
+### 3.4 Agency, Access, and Human Oversight
 
 | **Question** | **Response** | **Evidence / Notes** |
 |---|---|---|
@@ -106,7 +106,7 @@ The completed template answers the operating question that CERG requires before 
 | Who reviews AI output before reliance? | `[Role / team]` | `[Review process]` |
 | Is AI used for employment, safety, control system, financial, legal, or other consequential decisions? | `[Yes / No]` | `[Human-in-the-loop control]` |
 
-### 6.5 Security Review Routing
+### 3.5 Security Review Routing
 
 | **Routing Question** | **Decision** | **Linked Record** |
 |---|---|---|
@@ -154,14 +154,6 @@ Completed templates are reviewed at the cadence defined by the disposition. Mate
 
 ---
 
-
-
----
-
-## Appendix A: Sanctioned AI Tools Register
-
-This register is used to track all AI tools that have been reviewed and approved for use within the organization. It was consolidated from the now-DEPRECATED CERG-TMPL-AI-002.
-
 ## 5. Document Control
 
 | Field | Value |
@@ -204,49 +196,3 @@ This register is used to track all AI tools that have been reviewed and approved
 | Threat Modeling Procedure | [`CERG-PRC-TM-001`](../procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Defines AI-specific abuse cases for built and embedded AI systems |
 | Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Assesses third-party AI services and AI-enabled vendor features |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Records material AI risks, shadow AI patterns, and exceptions |
-
-## 6. Sanctioned Tools Register
-
-### 7.1 Register Metadata
-
-| **Field** | **Value** |
-|---|---|
-| Register Owner | `[Governance Pillar Leader / delegated owner]` |
-| Maintainer | `[Policy & Standards Manager or assigned role]` |
-| Register Location | `[System of record / link]` |
-| Last Review Date | `[Date]` |
-| Next Review Date | `[Date]` |
-| Publication Location for Staff | `[Intranet / portal / policy site]` |
-
-### 7.2 Sanctioned AI Tools Register
-
-| **Tool / Feature** | **Provider** | **AI Use Category** | **Business Owner** | **Approved Users** | **Approved Use Cases** | **Prohibited Use Cases** | **Maximum Data Classification** | **Training / Retention Position** | **Required Controls** | **Linked Intake / Evidence** | **Review Cadence** | **Status** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `[Tool name]` | `[Provider]` | `[Consumed AI service / Embedded AI]` | `[Owner]` | `[Users / groups]` | `[Summarization, coding assistance, analysis, etc.]` | `[Employment decisions, Restricted data, autonomous action, etc.]` | `[Public / Internal / Confidential / Restricted / Not Approved]` | `[No provider training; retention period; enterprise controls]` | `[SSO, DLP, logging, admin controls, contractual terms]` | `[AI intake ID, TPRM ID, evidence links]` | `[Quarterly / Semiannual / Annual / On change]` | `[Approved / Approved with conditions / Pilot / Suspended / Retired]` |
-
-### 7.3 Conditional Approval Tracker
-
-Use this section for tools approved only after conditions are satisfied, pilots, or limited exceptions.
-
-| **Tool / Feature** | **Condition** | **Owner** | **Due Date** | **Current Status** | **Evidence** |
-|---|---|---|---|---|---|
-| `[Tool name]` | `[Condition]` | `[Owner]` | `[Date]` | `[Open / Complete / Overdue]` | `[Evidence link]` |
-
-### 7.4 Staff-Facing Use Statement
-
-For each sanctioned tool, publish a short user-facing statement in plain language.
-
-| **Tool / Feature** | **Staff-Facing Statement** |
-|---|---|
-| `[Tool name]` | `[Example: Approved for Internal data and lower for drafting, summarization, and coding assistance. Do not enter Confidential, Restricted, CUI, BES Cyber System Information, personal data, customer secrets, or production credentials. Human review is required before relying on output.]` |
-
-### 7.5 Reassessment Log
-
-| **Date** | **Tool / Feature** | **Trigger** | **Reviewer** | **Outcome** | **Linked Record** |
-|---|---|---|---|---|---|
-| `[Date]` | `[Tool name]` | `[Quarterly review / Provider term change / New AI feature / Incident / Regulation change]` | `[Reviewer]` | `[No change / Conditions added / Classification changed / Suspended / Retired]` | `[Record link]` |
-
----
-
-
-

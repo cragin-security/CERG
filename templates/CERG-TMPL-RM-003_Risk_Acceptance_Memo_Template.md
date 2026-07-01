@@ -109,30 +109,6 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 ---
 
-
-
----
-
-## Alternative: Risk Acceptance Request Form
-
-For situations requiring a simpler request form rather than a full memo, use the following form structure. This was consolidated from the now-DEPRECATED CERG-TMPL-RM-004.
-
-The form asks the same questions as the memo in a structured, fill-in-blank format:
-
-1. Requestor Name: ____________________
-2. Business Owner: ____________________
-3. System/Process: ____________________
-4. Control ID(s) Not Met: ____________________
-5. Finding Description: ____________________
-6. Business Justification: ____________________
-7. Compensating Controls: ____________________
-8. Residual Risk Level: Low / Medium / High / Critical
-9. Proposed Expiration: ____________________
-10. CISO Decision: Approved / Denied / Requires Changes
-11. Decision Date: ____________________
-
-*A completed copy of either the memo or form constitutes a valid risk acceptance record.*
-
 ## 5. Document Control
 
 | Field | Value |

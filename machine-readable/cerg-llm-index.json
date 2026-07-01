@@ -1,17 +1,17 @@
 {
-  "cerg_version": "1.47",
-  "generated": "2026-06-30",
+  "cerg_version": "1.46",
+  "generated": "2026-06-27",
   "source": "local markdown corpus",
-  "total_documents": 205,
-  "total_tokens_estimate": 1086237,
+  "total_documents": 148,
+  "total_tokens_estimate": 962380,
   "by_type": {
-    "readme": 15,
+    "readme": 14,
     "governance-instrument": 42,
-    "meta": 59,
+    "meta": 5,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
-    "plan": 9,
+    "plan": 7,
     "template": 17,
     "job-family": 2,
     "job-description": 33
@@ -40,7 +40,7 @@
     "PLN": {
       "type": "Plan / Package",
       "pillar": "governance",
-      "count": 9
+      "count": 7
     },
     "GL": {
       "type": "Guideline",
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 74
+      "count": 19
     }
   },
   "prefixes": {
@@ -124,11 +124,11 @@
       "path": "README.md",
       "lines": [
         1,
-        107
+        99
       ],
-      "lines_count": 106,
-      "chars": 6189,
-      "tokens": 1768,
+      "lines_count": 98,
+      "chars": 5190,
+      "tokens": 1483,
       "summary": "CERG repository root \u2014 project overview, adoption paths, architecture, reader guides."
     },
     {
@@ -143,8 +143,8 @@
       "owner": null,
       "path": "START-HERE.md",
       "lines": [
-        109,
-        291
+        101,
+        283
       ],
       "lines_count": 182,
       "chars": 12744,
@@ -163,8 +163,8 @@
       "owner": null,
       "path": "AGENTS.md",
       "lines": [
-        293,
-        561
+        285,
+        553
       ],
       "lines_count": 268,
       "chars": 11856,
@@ -183,8 +183,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md",
       "lines": [
-        563,
-        1056
+        555,
+        1048
       ],
       "lines_count": 493,
       "chars": 52553,
@@ -203,8 +203,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md",
       "lines": [
-        1058,
-        1454
+        1050,
+        1446
       ],
       "lines_count": 396,
       "chars": 24937,
@@ -223,8 +223,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md",
       "lines": [
-        1456,
-        1711
+        1448,
+        1703
       ],
       "lines_count": 255,
       "chars": 15357,
@@ -243,8 +243,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-CAL-002_Calibration_Checklist.md",
       "lines": [
-        1713,
-        2097
+        1705,
+        2089
       ],
       "lines_count": 384,
       "chars": 20749,
@@ -258,17 +258,17 @@
       "type": "governance-instrument",
       "pillar": "governance",
       "status": "Approved",
-      "version": "1.47",
+      "version": "1.46",
       "classification": "Public",
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
       "lines": [
-        2099,
-        2770
+        2091,
+        2759
       ],
-      "lines_count": 671,
-      "chars": 60137,
-      "tokens": 17182,
+      "lines_count": 668,
+      "chars": 59736,
+      "tokens": 17067,
       "summary": "CERG GOV document: Document Catalog and Naming Convention"
     },
     {
@@ -283,8 +283,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-CAT-002_Record_Catalog.md",
       "lines": [
-        2772,
-        3055
+        2761,
+        3044
       ],
       "lines_count": 283,
       "chars": 23887,
@@ -297,18 +297,18 @@
       "title": "Unified Control Baseline",
       "type": "governance-instrument",
       "pillar": "engineering",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
+      "status": "Approved",
+      "version": "2.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Control Baseline)",
       "path": "governance/CERG-GOV-CB-001_Unified_Control_Baseline.md",
       "lines": [
-        3057,
-        6043
+        3046,
+        3707
       ],
-      "lines_count": 2986,
-      "chars": 133381,
-      "tokens": 38109,
+      "lines_count": 661,
+      "chars": 83253,
+      "tokens": 23787,
       "summary": "CERG GOV document: Unified Control Baseline"
     },
     {
@@ -323,8 +323,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md",
       "lines": [
-        6045,
-        6347
+        3709,
+        4011
       ],
       "lines_count": 302,
       "chars": 23013,
@@ -343,8 +343,8 @@
       "owner": "Risk Pillar Leader / Governance Pillar Leader",
       "path": "governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md",
       "lines": [
-        6349,
-        6608
+        4013,
+        4272
       ],
       "lines_count": 259,
       "chars": 24603,
@@ -363,8 +363,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md",
       "lines": [
-        6610,
-        7133
+        4274,
+        4797
       ],
       "lines_count": 523,
       "chars": 51927,
@@ -383,12 +383,12 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-CMX-001_Compliance_Matrix.md",
       "lines": [
-        7135,
-        7565
+        4799,
+        5229
       ],
       "lines_count": 430,
-      "chars": 25109,
-      "tokens": 7174,
+      "chars": 25101,
+      "tokens": 7172,
       "summary": "CERG GOV document: Compliance Matrix"
     },
     {
@@ -403,8 +403,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md",
       "lines": [
-        7567,
-        7908
+        5231,
+        5572
       ],
       "lines_count": 341,
       "chars": 27647,
@@ -423,8 +423,8 @@
       "owner": "Vendor Risk Analyst / Governance Pillar Leader",
       "path": "governance/CERG-GOV-EDG-001_Edge_Register.md",
       "lines": [
-        7910,
-        8135
+        5574,
+        5799
       ],
       "lines_count": 225,
       "chars": 14162,
@@ -443,8 +443,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md",
       "lines": [
-        8137,
-        9328
+        5801,
+        6992
       ],
       "lines_count": 1191,
       "chars": 69512,
@@ -463,8 +463,8 @@
       "owner": "CISO",
       "path": "governance/CERG-GOV-FRM-001_CERG_Framework.md",
       "lines": [
-        9330,
-        9987
+        6994,
+        7651
       ],
       "lines_count": 657,
       "chars": 64154,
@@ -483,8 +483,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-FRM-002_Framework_System_Map.md",
       "lines": [
-        9989,
-        10277
+        7653,
+        7941
       ],
       "lines_count": 288,
       "chars": 18070,
@@ -503,8 +503,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-GEN-001_CERG_Glossary.md",
       "lines": [
-        10279,
-        10480
+        7943,
+        8144
       ],
       "lines_count": 201,
       "chars": 16611,
@@ -523,12 +523,12 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md",
       "lines": [
-        10482,
-        11094
+        8146,
+        8628
       ],
-      "lines_count": 612,
-      "chars": 44743,
-      "tokens": 12784,
+      "lines_count": 482,
+      "chars": 38634,
+      "tokens": 11038,
       "summary": "CERG GOV document: Implementation and Adaptation Guide"
     },
     {
@@ -537,18 +537,18 @@
       "title": "Adoption Safety Guide",
       "type": "governance-instrument",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.4",
       "classification": "Public",
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md",
       "lines": [
-        11096,
-        11605
+        8630,
+        9137
       ],
-      "lines_count": 509,
-      "chars": 35011,
-      "tokens": 10003,
+      "lines_count": 507,
+      "chars": 34810,
+      "tokens": 9946,
       "summary": "CERG GOV document: Adoption Safety Guide"
     },
     {
@@ -557,18 +557,18 @@
       "title": "Small Team Adoption Path",
       "type": "governance-instrument",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.02",
       "classification": "Public",
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md",
       "lines": [
-        11607,
-        12174
+        9139,
+        9704
       ],
-      "lines_count": 567,
-      "chars": 25540,
-      "tokens": 7297,
+      "lines_count": 565,
+      "chars": 25339,
+      "tokens": 7240,
       "summary": "CERG GOV document: Small Team Adoption Path"
     },
     {
@@ -583,8 +583,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-004_Implementation_Cards.md",
       "lines": [
-        12176,
-        12615
+        9706,
+        10145
       ],
       "lines_count": 439,
       "chars": 30893,
@@ -603,8 +603,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md",
       "lines": [
-        12617,
-        12949
+        10147,
+        10479
       ],
       "lines_count": 332,
       "chars": 17952,
@@ -617,18 +617,18 @@
       "title": "Role Based Implementation Checklists",
       "type": "governance-instrument",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.0",
       "classification": "Public",
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md",
       "lines": [
-        12951,
-        13253
+        10481,
+        10781
       ],
-      "lines_count": 302,
-      "chars": 13650,
-      "tokens": 3900,
+      "lines_count": 300,
+      "chars": 13449,
+      "tokens": 3843,
       "summary": "CERG GOV document: Role Based Implementation Checklists"
     },
     {
@@ -637,18 +637,18 @@
       "title": "Role Reader Paths",
       "type": "governance-instrument",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.1",
       "classification": "Public",
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-IMP-007_Role_Reader_Paths.md",
       "lines": [
-        13255,
-        13482
+        10783,
+        11008
       ],
-      "lines_count": 227,
-      "chars": 16332,
-      "tokens": 4666,
+      "lines_count": 225,
+      "chars": 16131,
+      "tokens": 4609,
       "summary": "CERG GOV document: Role Reader Paths"
     },
     {
@@ -663,8 +663,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md",
       "lines": [
-        13484,
-        13764
+        11010,
+        11290
       ],
       "lines_count": 280,
       "chars": 19742,
@@ -683,8 +683,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md",
       "lines": [
-        13766,
-        14245
+        11292,
+        11771
       ],
       "lines_count": 479,
       "chars": 41871,
@@ -703,8 +703,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md",
       "lines": [
-        14247,
-        14403
+        11773,
+        11929
       ],
       "lines_count": 156,
       "chars": 9772,
@@ -723,8 +723,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md",
       "lines": [
-        14405,
-        14748
+        11931,
+        12274
       ],
       "lines_count": 343,
       "chars": 25631,
@@ -743,8 +743,8 @@
       "owner": "Governance Pillar Leader (Reporting)",
       "path": "governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md",
       "lines": [
-        14750,
-        15265
+        12276,
+        12791
       ],
       "lines_count": 515,
       "chars": 44138,
@@ -763,8 +763,8 @@
       "owner": "Chief Information Security Officer",
       "path": "governance/CERG-GOV-OM-001_CERG_Operating_Model.md",
       "lines": [
-        15267,
-        15965
+        12793,
+        13491
       ],
       "lines_count": 698,
       "chars": 53672,
@@ -783,8 +783,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md",
       "lines": [
-        15967,
-        16428
+        13493,
+        13954
       ],
       "lines_count": 461,
       "chars": 34307,
@@ -803,8 +803,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md",
       "lines": [
-        16430,
-        16868
+        13956,
+        14394
       ],
       "lines_count": 438,
       "chars": 32613,
@@ -823,8 +823,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md",
       "lines": [
-        16870,
-        17241
+        14396,
+        14767
       ],
       "lines_count": 371,
       "chars": 30747,
@@ -843,8 +843,8 @@
       "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-RMF-001_Risk_Management_Framework.md",
       "lines": [
-        17243,
-        18115
+        14769,
+        15641
       ],
       "lines_count": 872,
       "chars": 73231,
@@ -863,8 +863,8 @@
       "owner": "Chief Information Security Officer",
       "path": "governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md",
       "lines": [
-        18117,
-        18322
+        15643,
+        15848
       ],
       "lines_count": 205,
       "chars": 16827,
@@ -883,8 +883,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md",
       "lines": [
-        18324,
-        18898
+        15850,
+        16424
       ],
       "lines_count": 574,
       "chars": 25771,
@@ -903,8 +903,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md",
       "lines": [
-        18900,
-        19084
+        16426,
+        16610
       ],
       "lines_count": 184,
       "chars": 9408,
@@ -923,8 +923,8 @@
       "owner": "CISO",
       "path": "governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md",
       "lines": [
-        19086,
-        19425
+        16612,
+        16951
       ],
       "lines_count": 339,
       "chars": 25310,
@@ -943,8 +943,8 @@
       "owner": "Risk Pillar Leader",
       "path": "governance/CERG-GOV-TAX-001_Risk_Taxonomy.md",
       "lines": [
-        19427,
-        19735
+        16953,
+        17261
       ],
       "lines_count": 308,
       "chars": 24065,
@@ -963,8 +963,8 @@
       "owner": "Governance Pillar Leader (Control Baseline)",
       "path": "governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md",
       "lines": [
-        19737,
-        19965
+        17263,
+        17491
       ],
       "lines_count": 228,
       "chars": 29612,
@@ -983,8 +983,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md",
       "lines": [
-        19967,
-        20494
+        17493,
+        18020
       ],
       "lines_count": 527,
       "chars": 32059,
@@ -1003,8 +1003,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md",
       "lines": [
-        20496,
-        20779
+        18022,
+        18305
       ],
       "lines_count": 283,
       "chars": 16925,
@@ -1023,8 +1023,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md",
       "lines": [
-        20781,
-        21282
+        18307,
+        18808
       ],
       "lines_count": 501,
       "chars": 31126,
@@ -1043,8 +1043,8 @@
       "owner": "Chief Information Security Officer",
       "path": "governance/CERG-POL-001_Cybersecurity_Policy.md",
       "lines": [
-        21284,
-        21785
+        18810,
+        19311
       ],
       "lines_count": 501,
       "chars": 43406,
@@ -1063,8 +1063,8 @@
       "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-AC-001_Access_Management_Standard.md",
       "lines": [
-        21787,
-        22178
+        19313,
+        19704
       ],
       "lines_count": 391,
       "chars": 41393,
@@ -1083,8 +1083,8 @@
       "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md",
       "lines": [
-        22180,
-        22420
+        19706,
+        19946
       ],
       "lines_count": 240,
       "chars": 23257,
@@ -1103,8 +1103,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md",
       "lines": [
-        22422,
-        22710
+        19948,
+        20236
       ],
       "lines_count": 288,
       "chars": 25074,
@@ -1123,8 +1123,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md",
       "lines": [
-        22712,
-        23071
+        20238,
+        20597
       ],
       "lines_count": 359,
       "chars": 22259,
@@ -1143,8 +1143,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md",
       "lines": [
-        23073,
-        23404
+        20599,
+        20930
       ],
       "lines_count": 331,
       "chars": 19800,
@@ -1163,8 +1163,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "standards/CERG-STD-CUI-001_CUI_Handling_Standard.md",
       "lines": [
-        23406,
-        23792
+        20932,
+        21318
       ],
       "lines_count": 386,
       "chars": 39250,
@@ -1183,8 +1183,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md",
       "lines": [
-        23794,
-        24034
+        21320,
+        21560
       ],
       "lines_count": 240,
       "chars": 20998,
@@ -1203,8 +1203,8 @@
       "owner": "Engineering Pillar Leader (Endpoint)",
       "path": "standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md",
       "lines": [
-        24036,
-        24274
+        21562,
+        21800
       ],
       "lines_count": 238,
       "chars": 21401,
@@ -1223,8 +1223,8 @@
       "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md",
       "lines": [
-        24276,
-        24637
+        21802,
+        22163
       ],
       "lines_count": 361,
       "chars": 42139,
@@ -1243,8 +1243,8 @@
       "owner": "Risk Pillar Leader (Detection Engineering)",
       "path": "standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md",
       "lines": [
-        24639,
-        24995
+        22165,
+        22521
       ],
       "lines_count": 356,
       "chars": 21164,
@@ -1263,8 +1263,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md",
       "lines": [
-        24997,
-        25221
+        22523,
+        22747
       ],
       "lines_count": 224,
       "chars": 20357,
@@ -1283,8 +1283,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md",
       "lines": [
-        25223,
-        25449
+        22749,
+        22975
       ],
       "lines_count": 226,
       "chars": 21176,
@@ -1303,8 +1303,8 @@
       "owner": "Governance Pillar Leader (OT/NERC-CIP)",
       "path": "standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md",
       "lines": [
-        25451,
-        25804
+        22977,
+        23330
       ],
       "lines_count": 353,
       "chars": 38586,
@@ -1323,8 +1323,8 @@
       "owner": "Engineering Pillar Leader (Resilience)",
       "path": "standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md",
       "lines": [
-        25806,
-        26133
+        23332,
+        23659
       ],
       "lines_count": 327,
       "chars": 18227,
@@ -1343,8 +1343,8 @@
       "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md",
       "lines": [
-        26135,
-        26430
+        23661,
+        23956
       ],
       "lines_count": 295,
       "chars": 25005,
@@ -1363,8 +1363,8 @@
       "owner": "Identity Engineer",
       "path": "procedures/CERG-PRC-AC-002_Access_Management_Runbook.md",
       "lines": [
-        26432,
-        26806
+        23958,
+        24332
       ],
       "lines_count": 374,
       "chars": 22086,
@@ -1383,8 +1383,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md",
       "lines": [
-        26808,
-        27606
+        24334,
+        25132
       ],
       "lines_count": 798,
       "chars": 54926,
@@ -1403,8 +1403,8 @@
       "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md",
       "lines": [
-        27608,
-        28046
+        25134,
+        25572
       ],
       "lines_count": 438,
       "chars": 26497,
@@ -1423,8 +1423,8 @@
       "owner": "Adversarial Testing Lead",
       "path": "procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md",
       "lines": [
-        28048,
-        28654
+        25574,
+        26180
       ],
       "lines_count": 606,
       "chars": 37051,
@@ -1443,8 +1443,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md",
       "lines": [
-        28656,
-        29079
+        26182,
+        26605
       ],
       "lines_count": 423,
       "chars": 26822,
@@ -1463,8 +1463,8 @@
       "owner": "Standing IR Team / Incident Commander",
       "path": "procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md",
       "lines": [
-        29081,
-        29797
+        26607,
+        27323
       ],
       "lines_count": 716,
       "chars": 47572,
@@ -1483,8 +1483,8 @@
       "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md",
       "lines": [
-        29799,
-        30228
+        27325,
+        27754
       ],
       "lines_count": 429,
       "chars": 27973,
@@ -1503,8 +1503,8 @@
       "owner": "Risk Register Owner",
       "path": "procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md",
       "lines": [
-        30230,
-        30839
+        27756,
+        28365
       ],
       "lines_count": 609,
       "chars": 45021,
@@ -1523,8 +1523,8 @@
       "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md",
       "lines": [
-        30841,
-        31517
+        28367,
+        29043
       ],
       "lines_count": 676,
       "chars": 40419,
@@ -1543,8 +1543,8 @@
       "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md",
       "lines": [
-        31519,
-        32084
+        29045,
+        29610
       ],
       "lines_count": 565,
       "chars": 36380,
@@ -1563,8 +1563,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md",
       "lines": [
-        32086,
-        32694
+        29612,
+        30220
       ],
       "lines_count": 608,
       "chars": 44366,
@@ -1583,8 +1583,8 @@
       "owner": "Exposure Management Lead",
       "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
       "lines": [
-        32696,
-        33189
+        30222,
+        30715
       ],
       "lines_count": 493,
       "chars": 30471,
@@ -1603,8 +1603,8 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md",
       "lines": [
-        33191,
-        33495
+        30717,
+        31021
       ],
       "lines_count": 304,
       "chars": 19403,
@@ -1623,33 +1623,13 @@
       "owner": "NERC-CIP Compliance Manager",
       "path": "plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md",
       "lines": [
-        33497,
-        34008
+        31023,
+        31534
       ],
       "lines_count": 511,
       "chars": 33503,
       "tokens": 9572,
       "summary": "CERG PLN document: NERC CIP Operational Package"
-    },
-    {
-      "id": "CERG-PLN-CON-001",
-      "prefix": "PLN",
-      "title": "Consulting Services Operating Plan",
-      "type": "plan",
-      "pillar": "governance",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md",
-      "lines": [
-        34010,
-        34465
-      ],
-      "lines_count": 455,
-      "chars": 28808,
-      "tokens": 8231,
-      "summary": "CERG PLN document: Consulting Services Operating Plan"
     },
     {
       "id": "CERG-PLN-CUI-001",
@@ -1663,8 +1643,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md",
       "lines": [
-        34467,
-        34927
+        31536,
+        31996
       ],
       "lines_count": 460,
       "chars": 26423,
@@ -1683,8 +1663,8 @@
       "owner": "Standing IR Team / Incident Commander",
       "path": "plans/CERG-PLN-IR-001_Incident_Response_Plan.md",
       "lines": [
-        34929,
-        35374
+        31998,
+        32443
       ],
       "lines_count": 445,
       "chars": 33369,
@@ -1703,33 +1683,13 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md",
       "lines": [
-        35376,
-        35706
+        32445,
+        32775
       ],
       "lines_count": 330,
       "chars": 17661,
       "tokens": 5046,
       "summary": "CERG PLN document: ISO IEC 27001 Operational Package"
-    },
-    {
-      "id": "CERG-PLN-PCI-001",
-      "prefix": "PLN",
-      "title": "PCI DSS Operational Package",
-      "type": "plan",
-      "pillar": "governance",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "plans/CERG-PLN-PCI-001_PCI_DSS_Operational_Package.md",
-      "lines": [
-        35708,
-        36085
-      ],
-      "lines_count": 377,
-      "chars": 29927,
-      "tokens": 8551,
-      "summary": "CERG PLN document: PCI DSS Operational Package"
     },
     {
       "id": "CERG-PLN-PRIV-001",
@@ -1743,8 +1703,8 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md",
       "lines": [
-        36087,
-        36407
+        32777,
+        33097
       ],
       "lines_count": 320,
       "chars": 18425,
@@ -1763,8 +1723,8 @@
       "owner": "Governance Pillar Leader (SOX Liaison)",
       "path": "plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md",
       "lines": [
-        36409,
-        36753
+        33099,
+        33443
       ],
       "lines_count": 344,
       "chars": 24325,
@@ -1783,12 +1743,12 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md",
       "lines": [
-        36755,
-        37007
+        33445,
+        33643
       ],
-      "lines_count": 252,
-      "chars": 14825,
-      "tokens": 4236,
+      "lines_count": 198,
+      "chars": 11916,
+      "tokens": 3405,
       "summary": "CERG TMPL document: AI Intake and Sanctioning Template"
     },
     {
@@ -1797,18 +1757,18 @@
       "title": "Sanctioned AI Tools Register Template",
       "type": "template",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.0",
       "classification": "Public",
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md",
       "lines": [
-        37009,
-        37172
+        33645,
+        33806
       ],
-      "lines_count": 163,
-      "chars": 10125,
-      "tokens": 2893,
+      "lines_count": 161,
+      "chars": 10023,
+      "tokens": 2864,
       "summary": "CERG TMPL document: Sanctioned AI Tools Register Template"
     },
     {
@@ -1823,8 +1783,8 @@
       "owner": "Application Security Engineer",
       "path": "templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md",
       "lines": [
-        37174,
-        37398
+        33808,
+        34032
       ],
       "lines_count": 224,
       "chars": 14202,
@@ -1843,8 +1803,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md",
       "lines": [
-        37400,
-        37585
+        34034,
+        34219
       ],
       "lines_count": 185,
       "chars": 9437,
@@ -1863,8 +1823,8 @@
       "owner": "Evidence Librarian",
       "path": "templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md",
       "lines": [
-        37587,
-        37726
+        34221,
+        34360
       ],
       "lines_count": 139,
       "chars": 5509,
@@ -1883,8 +1843,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md",
       "lines": [
-        37728,
-        37979
+        34362,
+        34613
       ],
       "lines_count": 251,
       "chars": 10898,
@@ -1903,8 +1863,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "templates/CERG-TMPL-CUI-002_POAM_Template.md",
       "lines": [
-        37981,
-        38162
+        34615,
+        34796
       ],
       "lines_count": 181,
       "chars": 8114,
@@ -1923,8 +1883,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md",
       "lines": [
-        38164,
-        38361
+        34798,
+        34995
       ],
       "lines_count": 197,
       "chars": 11286,
@@ -1943,8 +1903,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md",
       "lines": [
-        38363,
-        38500
+        34997,
+        35134
       ],
       "lines_count": 137,
       "chars": 6212,
@@ -1963,8 +1923,8 @@
       "owner": "Governance Pillar Leader (Risk Register)",
       "path": "templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md",
       "lines": [
-        38502,
-        38807
+        35136,
+        35441
       ],
       "lines_count": 305,
       "chars": 17225,
@@ -1983,8 +1943,8 @@
       "owner": "Risk Register Owner",
       "path": "templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md",
       "lines": [
-        38809,
-        38963
+        35443,
+        35597
       ],
       "lines_count": 154,
       "chars": 6710,
@@ -2003,12 +1963,12 @@
       "owner": "Risk Pillar Leader",
       "path": "templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md",
       "lines": [
-        38965,
-        39139
+        35599,
+        35749
       ],
-      "lines_count": 174,
-      "chars": 8070,
-      "tokens": 2306,
+      "lines_count": 150,
+      "chars": 7165,
+      "tokens": 2047,
       "summary": "CERG TMPL document: Risk Acceptance Memo Template"
     },
     {
@@ -2017,18 +1977,18 @@
       "title": "Risk Acceptance Request Form",
       "type": "template",
       "pillar": "governance",
-      "status": "Deprecated",
+      "status": "Approved",
       "version": "1.2",
       "classification": "Public",
       "owner": "Risk Register Owner",
       "path": "templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md",
       "lines": [
-        39141,
-        39343
+        35751,
+        35951
       ],
-      "lines_count": 202,
-      "chars": 10799,
-      "tokens": 3085,
+      "lines_count": 200,
+      "chars": 10701,
+      "tokens": 3057,
       "summary": "CERG TMPL document: Risk Acceptance Request Form"
     },
     {
@@ -2043,8 +2003,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md",
       "lines": [
-        39345,
-        39445
+        35953,
+        36053
       ],
       "lines_count": 100,
       "chars": 5031,
@@ -2063,8 +2023,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md",
       "lines": [
-        39447,
-        39540
+        36055,
+        36148
       ],
       "lines_count": 93,
       "chars": 4849,
@@ -2083,8 +2043,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md",
       "lines": [
-        39542,
-        39723
+        36150,
+        36331
       ],
       "lines_count": 181,
       "chars": 8757,
@@ -2103,8 +2063,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md",
       "lines": [
-        39725,
-        39879
+        36333,
+        36487
       ],
       "lines_count": 154,
       "chars": 7529,
@@ -2123,8 +2083,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-001_Job_Families_Overview.md",
       "lines": [
-        39881,
-        40149
+        36489,
+        36757
       ],
       "lines_count": 268,
       "chars": 18260,
@@ -2143,8 +2103,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md",
       "lines": [
-        40151,
-        40357
+        36759,
+        36965
       ],
       "lines_count": 206,
       "chars": 14886,
@@ -2163,8 +2123,8 @@
       "owner": null,
       "path": "roles/README.md",
       "lines": [
-        40359,
-        40406
+        36967,
+        37014
       ],
       "lines_count": 47,
       "chars": 1823,
@@ -2183,8 +2143,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md",
       "lines": [
-        40408,
-        40530
+        37016,
+        37138
       ],
       "lines_count": 122,
       "chars": 5889,
@@ -2203,8 +2163,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md",
       "lines": [
-        40532,
-        40751
+        37140,
+        37359
       ],
       "lines_count": 219,
       "chars": 16489,
@@ -2223,8 +2183,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md",
       "lines": [
-        40753,
-        40975
+        37361,
+        37583
       ],
       "lines_count": 222,
       "chars": 16456,
@@ -2243,8 +2203,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md",
       "lines": [
-        40977,
-        41098
+        37585,
+        37706
       ],
       "lines_count": 121,
       "chars": 5643,
@@ -2263,8 +2223,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md",
       "lines": [
-        41100,
-        41299
+        37708,
+        37907
       ],
       "lines_count": 199,
       "chars": 18070,
@@ -2283,8 +2243,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md",
       "lines": [
-        41301,
-        41500
+        37909,
+        38108
       ],
       "lines_count": 199,
       "chars": 16655,
@@ -2303,8 +2263,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md",
       "lines": [
-        41502,
-        41628
+        38110,
+        38236
       ],
       "lines_count": 126,
       "chars": 6834,
@@ -2323,8 +2283,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md",
       "lines": [
-        41630,
-        41832
+        38238,
+        38440
       ],
       "lines_count": 202,
       "chars": 21569,
@@ -2343,8 +2303,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md",
       "lines": [
-        41834,
-        42036
+        38442,
+        38644
       ],
       "lines_count": 202,
       "chars": 21240,
@@ -2363,8 +2323,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md",
       "lines": [
-        42038,
-        42240
+        38646,
+        38848
       ],
       "lines_count": 202,
       "chars": 21135,
@@ -2383,8 +2343,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md",
       "lines": [
-        42242,
-        42444
+        38850,
+        39052
       ],
       "lines_count": 202,
       "chars": 21325,
@@ -2403,8 +2363,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md",
       "lines": [
-        42446,
-        42648
+        39054,
+        39256
       ],
       "lines_count": 202,
       "chars": 21192,
@@ -2423,8 +2383,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md",
       "lines": [
-        42650,
-        42852
+        39258,
+        39460
       ],
       "lines_count": 202,
       "chars": 21215,
@@ -2443,8 +2403,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md",
       "lines": [
-        42854,
-        43056
+        39462,
+        39664
       ],
       "lines_count": 202,
       "chars": 21504,
@@ -2463,8 +2423,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md",
       "lines": [
-        43058,
-        43185
+        39666,
+        39793
       ],
       "lines_count": 127,
       "chars": 6913,
@@ -2483,8 +2443,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
       "lines": [
-        43187,
-        43389
+        39795,
+        39997
       ],
       "lines_count": 202,
       "chars": 21389,
@@ -2503,8 +2463,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md",
       "lines": [
-        43391,
-        43593
+        39999,
+        40201
       ],
       "lines_count": 202,
       "chars": 21460,
@@ -2523,8 +2483,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md",
       "lines": [
-        43595,
-        43797
+        40203,
+        40405
       ],
       "lines_count": 202,
       "chars": 21568,
@@ -2543,8 +2503,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md",
       "lines": [
-        43799,
-        44002
+        40407,
+        40610
       ],
       "lines_count": 203,
       "chars": 21476,
@@ -2563,8 +2523,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md",
       "lines": [
-        44004,
-        44206
+        40612,
+        40814
       ],
       "lines_count": 202,
       "chars": 21165,
@@ -2583,8 +2543,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md",
       "lines": [
-        44208,
-        44410
+        40816,
+        41018
       ],
       "lines_count": 202,
       "chars": 21275,
@@ -2603,8 +2563,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md",
       "lines": [
-        44412,
-        44615
+        41020,
+        41223
       ],
       "lines_count": 203,
       "chars": 21813,
@@ -2623,8 +2583,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md",
       "lines": [
-        44617,
-        44819
+        41225,
+        41427
       ],
       "lines_count": 202,
       "chars": 21884,
@@ -2643,8 +2603,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md",
       "lines": [
-        44821,
-        44947
+        41429,
+        41555
       ],
       "lines_count": 126,
       "chars": 6747,
@@ -2663,8 +2623,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md",
       "lines": [
-        44949,
-        45151
+        41557,
+        41759
       ],
       "lines_count": 202,
       "chars": 22599,
@@ -2683,8 +2643,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md",
       "lines": [
-        45153,
-        45355
+        41761,
+        41963
       ],
       "lines_count": 202,
       "chars": 22496,
@@ -2703,8 +2663,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md",
       "lines": [
-        45357,
-        45559
+        41965,
+        42167
       ],
       "lines_count": 202,
       "chars": 22661,
@@ -2723,8 +2683,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md",
       "lines": [
-        45561,
-        45763
+        42169,
+        42371
       ],
       "lines_count": 202,
       "chars": 22655,
@@ -2743,8 +2703,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md",
       "lines": [
-        45765,
-        45967
+        42373,
+        42575
       ],
       "lines_count": 202,
       "chars": 22557,
@@ -2763,8 +2723,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md",
       "lines": [
-        45969,
-        46171
+        42577,
+        42779
       ],
       "lines_count": 202,
       "chars": 22297,
@@ -2783,8 +2743,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md",
       "lines": [
-        46173,
-        46375
+        42781,
+        42983
       ],
       "lines_count": 202,
       "chars": 22901,
@@ -2803,8 +2763,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md",
       "lines": [
-        46377,
-        46579
+        42985,
+        43187
       ],
       "lines_count": 202,
       "chars": 22407,
@@ -2823,8 +2783,8 @@
       "owner": null,
       "path": "machine-readable/README.md",
       "lines": [
-        46581,
-        46649
+        43189,
+        43257
       ],
       "lines_count": 68,
       "chars": 6411,
@@ -2843,8 +2803,8 @@
       "owner": null,
       "path": "examples/README.md",
       "lines": [
-        46651,
-        46678
+        43259,
+        43286
       ],
       "lines_count": 27,
       "chars": 1182,
@@ -2863,8 +2823,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/README.md",
       "lines": [
-        46680,
-        47141
+        43288,
+        43749
       ],
       "lines_count": 461,
       "chars": 41614,
@@ -2883,8 +2843,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
       "lines": [
-        47143,
-        47278
+        43751,
+        43886
       ],
       "lines_count": 135,
       "chars": 14619,
@@ -2903,8 +2863,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        47280,
-        47381
+        43888,
+        43989
       ],
       "lines_count": 101,
       "chars": 14184,
@@ -2923,8 +2883,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
       "lines": [
-        47383,
-        47495
+        43991,
+        44103
       ],
       "lines_count": 112,
       "chars": 13135,
@@ -2943,8 +2903,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        47497,
-        47559
+        44105,
+        44167
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2963,8 +2923,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        47561,
-        47667
+        44169,
+        44275
       ],
       "lines_count": 106,
       "chars": 5500,
@@ -2983,8 +2943,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        47669,
-        47772
+        44277,
+        44380
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -3003,8 +2963,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        47774,
-        47812
+        44382,
+        44420
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -3023,8 +2983,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        47814,
-        47881
+        44422,
+        44489
       ],
       "lines_count": 67,
       "chars": 4390,
@@ -3043,8 +3003,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        47883,
-        47898
+        44491,
+        44506
       ],
       "lines_count": 15,
       "chars": 839,
@@ -3063,8 +3023,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        47900,
-        47978
+        44508,
+        44586
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -3083,1113 +3043,13 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        47980,
-        48014
+        44588,
+        44622
       ],
       "lines_count": 34,
       "chars": 1516,
       "tokens": 433,
       "summary": "CERG META document: agent-prompt"
-    },
-    {
-      "id": "agent-adaptation-spec-v1",
-      "prefix": "META",
-      "title": "agent-adaptation-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-adaptation-spec-v1.md",
-      "lines": [
-        48016,
-        48120
-      ],
-      "lines_count": 104,
-      "chars": 3816,
-      "tokens": 1090,
-      "summary": "CERG META document: agent-adaptation-spec-v1"
-    },
-    {
-      "id": "agent-assembly-spec-v1",
-      "prefix": "META",
-      "title": "agent-assembly-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-assembly-spec-v1.md",
-      "lines": [
-        48122,
-        48225
-      ],
-      "lines_count": 103,
-      "chars": 4936,
-      "tokens": 1410,
-      "summary": "CERG META document: agent-assembly-spec-v1"
-    },
-    {
-      "id": "agent-intake-spec-v1",
-      "prefix": "META",
-      "title": "agent-intake-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-intake-spec-v1.md",
-      "lines": [
-        48227,
-        48316
-      ],
-      "lines_count": 89,
-      "chars": 3848,
-      "tokens": 1099,
-      "summary": "CERG META document: agent-intake-spec-v1"
-    },
-    {
-      "id": "agent-pci-crosswalk-spec-v1",
-      "prefix": "META",
-      "title": "agent-pci-crosswalk-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-pci-crosswalk-spec-v1.md",
-      "lines": [
-        48318,
-        48401
-      ],
-      "lines_count": 83,
-      "chars": 3581,
-      "tokens": 1023,
-      "summary": "CERG META document: agent-pci-crosswalk-spec-v1"
-    },
-    {
-      "id": "agent-practice-knowledge-spec-v1",
-      "prefix": "META",
-      "title": "agent-practice-knowledge-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-practice-knowledge-spec-v1.md",
-      "lines": [
-        48403,
-        48539
-      ],
-      "lines_count": 136,
-      "chars": 5317,
-      "tokens": 1519,
-      "summary": "CERG META document: agent-practice-knowledge-spec-v1"
-    },
-    {
-      "id": "agent-sector-threat-spec-v1",
-      "prefix": "META",
-      "title": "agent-sector-threat-spec-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/agent-integration/agent-sector-threat-spec-v1.md",
-      "lines": [
-        48541,
-        48643
-      ],
-      "lines_count": 102,
-      "chars": 4294,
-      "tokens": 1227,
-      "summary": "CERG META document: agent-sector-threat-spec-v1"
-    },
-    {
-      "id": "data-handling-standards-v1",
-      "prefix": "META",
-      "title": "data-handling-standards-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/archive/data-handling-standards-v1.md",
-      "lines": [
-        48645,
-        48711
-      ],
-      "lines_count": 66,
-      "chars": 4267,
-      "tokens": 1219,
-      "summary": "CERG META document: data-handling-standards-v1"
-    },
-    {
-      "id": "marketing-storytelling-v1",
-      "prefix": "META",
-      "title": "marketing-storytelling-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/archive/marketing-storytelling-v1.md",
-      "lines": [
-        48713,
-        48828
-      ],
-      "lines_count": 115,
-      "chars": 7024,
-      "tokens": 2007,
-      "summary": "CERG META document: marketing-storytelling-v1"
-    },
-    {
-      "id": "upstream-contribution-workflow-v1",
-      "prefix": "META",
-      "title": "upstream-contribution-workflow-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/archive/upstream-contribution-workflow-v1.md",
-      "lines": [
-        48830,
-        48921
-      ],
-      "lines_count": 91,
-      "chars": 4951,
-      "tokens": 1415,
-      "summary": "CERG META document: upstream-contribution-workflow-v1"
-    },
-    {
-      "id": "vendor-neutrality-policy-v1",
-      "prefix": "META",
-      "title": "vendor-neutrality-policy-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/archive/vendor-neutrality-policy-v1.md",
-      "lines": [
-        48923,
-        48964
-      ],
-      "lines_count": 41,
-      "chars": 3002,
-      "tokens": 858,
-      "summary": "CERG META document: vendor-neutrality-policy-v1"
-    },
-    {
-      "id": "backlog-v1",
-      "prefix": "META",
-      "title": "backlog-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/backlog-v1.md",
-      "lines": [
-        48966,
-        49131
-      ],
-      "lines_count": 165,
-      "chars": 6855,
-      "tokens": 1959,
-      "summary": "CERG META document: backlog-v1"
-    },
-    {
-      "id": "org-profile-checklist-v1",
-      "prefix": "META",
-      "title": "org-profile-checklist-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/checklists/org-profile-checklist-v1.md",
-      "lines": [
-        49133,
-        49230
-      ],
-      "lines_count": 97,
-      "chars": 5530,
-      "tokens": 1580,
-      "summary": "CERG META document: org-profile-checklist-v1"
-    },
-    {
-      "id": "cb-001-detection-mapping-v1",
-      "prefix": "META",
-      "title": "cb-001-detection-mapping-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/detection/cb-001-detection-mapping-v1.md",
-      "lines": [
-        49232,
-        49451
-      ],
-      "lines_count": 219,
-      "chars": 9629,
-      "tokens": 2751,
-      "summary": "CERG META document: cb-001-detection-mapping-v1"
-    },
-    {
-      "id": "detection-engineering-framework-v1",
-      "prefix": "META",
-      "title": "detection-engineering-framework-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/detection/detection-engineering-framework-v1.md",
-      "lines": [
-        49453,
-        50751
-      ],
-      "lines_count": 1298,
-      "chars": 44870,
-      "tokens": 12820,
-      "summary": "CERG META document: detection-engineering-framework-v1"
-    },
-    {
-      "id": "engagement-playbook-v1",
-      "prefix": "META",
-      "title": "engagement-playbook-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/engagement-playbook-v1.md",
-      "lines": [
-        50753,
-        51051
-      ],
-      "lines_count": 298,
-      "chars": 13780,
-      "tokens": 3937,
-      "summary": "CERG META document: engagement-playbook-v1"
-    },
-    {
-      "id": "cerg-intake-questionnaire-v1",
-      "prefix": "META",
-      "title": "cerg-intake-questionnaire-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/intake/cerg-intake-questionnaire-v1.md",
-      "lines": [
-        51053,
-        51224
-      ],
-      "lines_count": 171,
-      "chars": 5771,
-      "tokens": 1649,
-      "summary": "CERG META document: cerg-intake-questionnaire-v1"
-    },
-    {
-      "id": "msp-runbook-pack-v1",
-      "prefix": "META",
-      "title": "msp-runbook-pack-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/msp-runbook-pack-v1.md",
-      "lines": [
-        51226,
-        51428
-      ],
-      "lines_count": 202,
-      "chars": 9597,
-      "tokens": 2742,
-      "summary": "CERG META document: msp-runbook-pack-v1"
-    },
-    {
-      "id": "engagement-scope-master",
-      "prefix": "META",
-      "title": "engagement-scope-master",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/engagement-scope-master.md",
-      "lines": [
-        51430,
-        51493
-      ],
-      "lines_count": 63,
-      "chars": 1687,
-      "tokens": 482,
-      "summary": "CERG META document: engagement-scope-master"
-    },
-    {
-      "id": "tier1-foundations-scope",
-      "prefix": "META",
-      "title": "tier1-foundations-scope",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier1-foundations-scope.md",
-      "lines": [
-        51495,
-        51536
-      ],
-      "lines_count": 41,
-      "chars": 1685,
-      "tokens": 481,
-      "summary": "CERG META document: tier1-foundations-scope"
-    },
-    {
-      "id": "tier1-guardrails-v1",
-      "prefix": "META",
-      "title": "tier1-guardrails-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier1-guardrails-v1.md",
-      "lines": [
-        51538,
-        51602
-      ],
-      "lines_count": 64,
-      "chars": 5437,
-      "tokens": 1553,
-      "summary": "CERG META document: tier1-guardrails-v1"
-    },
-    {
-      "id": "tier2-structure-scope",
-      "prefix": "META",
-      "title": "tier2-structure-scope",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier2-structure-scope.md",
-      "lines": [
-        51604,
-        51641
-      ],
-      "lines_count": 37,
-      "chars": 1362,
-      "tokens": 389,
-      "summary": "CERG META document: tier2-structure-scope"
-    },
-    {
-      "id": "tier2-to-3-gates-v1",
-      "prefix": "META",
-      "title": "tier2-to-3-gates-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier2-to-3-gates-v1.md",
-      "lines": [
-        51643,
-        51713
-      ],
-      "lines_count": 70,
-      "chars": 4686,
-      "tokens": 1339,
-      "summary": "CERG META document: tier2-to-3-gates-v1"
-    },
-    {
-      "id": "tier3-compliance-scope",
-      "prefix": "META",
-      "title": "tier3-compliance-scope",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier3-compliance-scope.md",
-      "lines": [
-        51715,
-        51752
-      ],
-      "lines_count": 37,
-      "chars": 1496,
-      "tokens": 427,
-      "summary": "CERG META document: tier3-compliance-scope"
-    },
-    {
-      "id": "tier4-strategic-scope",
-      "prefix": "META",
-      "title": "tier4-strategic-scope",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/scope-templates/tier4-strategic-scope.md",
-      "lines": [
-        51754,
-        51792
-      ],
-      "lines_count": 38,
-      "chars": 1654,
-      "tokens": 473,
-      "summary": "CERG META document: tier4-strategic-scope"
-    },
-    {
-      "id": "overlay-cloud-migration-v1",
-      "prefix": "META",
-      "title": "overlay-cloud-migration-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/overlay-cloud-migration-v1.md",
-      "lines": [
-        51794,
-        51886
-      ],
-      "lines_count": 92,
-      "chars": 5378,
-      "tokens": 1537,
-      "summary": "CERG META document: overlay-cloud-migration-v1"
-    },
-    {
-      "id": "overlay-fedramp-assessment-v1",
-      "prefix": "META",
-      "title": "overlay-fedramp-assessment-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/overlay-fedramp-assessment-v1.md",
-      "lines": [
-        51888,
-        51959
-      ],
-      "lines_count": 71,
-      "chars": 5283,
-      "tokens": 1509,
-      "summary": "CERG META document: overlay-fedramp-assessment-v1"
-    },
-    {
-      "id": "overlay-hipaa-hitrust-assessment-v1",
-      "prefix": "META",
-      "title": "overlay-hipaa-hitrust-assessment-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/overlay-hipaa-hitrust-assessment-v1.md",
-      "lines": [
-        51961,
-        52056
-      ],
-      "lines_count": 95,
-      "chars": 6958,
-      "tokens": 1988,
-      "summary": "CERG META document: overlay-hipaa-hitrust-assessment-v1"
-    },
-    {
-      "id": "overlay-iso-refinement-v1",
-      "prefix": "META",
-      "title": "overlay-iso-refinement-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/overlay-iso-refinement-v1.md",
-      "lines": [
-        52058,
-        52162
-      ],
-      "lines_count": 104,
-      "chars": 6079,
-      "tokens": 1737,
-      "summary": "CERG META document: overlay-iso-refinement-v1"
-    },
-    {
-      "id": "sector-cross-holding-v1",
-      "prefix": "META",
-      "title": "sector-cross-holding-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-cross-holding-v1.md",
-      "lines": [
-        52164,
-        52230
-      ],
-      "lines_count": 66,
-      "chars": 3777,
-      "tokens": 1079,
-      "summary": "CERG META document: sector-cross-holding-v1"
-    },
-    {
-      "id": "sector-dib-v1",
-      "prefix": "META",
-      "title": "sector-dib-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-dib-v1.md",
-      "lines": [
-        52232,
-        52288
-      ],
-      "lines_count": 56,
-      "chars": 3100,
-      "tokens": 886,
-      "summary": "CERG META document: sector-dib-v1"
-    },
-    {
-      "id": "sector-energy-utilities-v1",
-      "prefix": "META",
-      "title": "sector-energy-utilities-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-energy-utilities-v1.md",
-      "lines": [
-        52290,
-        52393
-      ],
-      "lines_count": 103,
-      "chars": 4590,
-      "tokens": 1311,
-      "summary": "CERG META document: sector-energy-utilities-v1"
-    },
-    {
-      "id": "sector-financial-v1",
-      "prefix": "META",
-      "title": "sector-financial-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-financial-v1.md",
-      "lines": [
-        52395,
-        52497
-      ],
-      "lines_count": 102,
-      "chars": 4266,
-      "tokens": 1219,
-      "summary": "CERG META document: sector-financial-v1"
-    },
-    {
-      "id": "sector-government-v1",
-      "prefix": "META",
-      "title": "sector-government-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-government-v1.md",
-      "lines": [
-        52499,
-        52579
-      ],
-      "lines_count": 80,
-      "chars": 3524,
-      "tokens": 1007,
-      "summary": "CERG META document: sector-government-v1"
-    },
-    {
-      "id": "sector-healthcare-v1",
-      "prefix": "META",
-      "title": "sector-healthcare-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-healthcare-v1.md",
-      "lines": [
-        52581,
-        52689
-      ],
-      "lines_count": 108,
-      "chars": 4642,
-      "tokens": 1326,
-      "summary": "CERG META document: sector-healthcare-v1"
-    },
-    {
-      "id": "sector-manufacturing-ot-v1",
-      "prefix": "META",
-      "title": "sector-manufacturing-ot-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-manufacturing-ot-v1.md",
-      "lines": [
-        52691,
-        52744
-      ],
-      "lines_count": 53,
-      "chars": 2833,
-      "tokens": 809,
-      "summary": "CERG META document: sector-manufacturing-ot-v1"
-    },
-    {
-      "id": "sector-saas-v1",
-      "prefix": "META",
-      "title": "sector-saas-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-saas-v1.md",
-      "lines": [
-        52746,
-        52816
-      ],
-      "lines_count": 70,
-      "chars": 2786,
-      "tokens": 796,
-      "summary": "CERG META document: sector-saas-v1"
-    },
-    {
-      "id": "sector-threat-model-catalog-v1",
-      "prefix": "META",
-      "title": "sector-threat-model-catalog-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/sector-profiles/sector-threat-model-catalog-v1.md",
-      "lines": [
-        52818,
-        53017
-      ],
-      "lines_count": 199,
-      "chars": 13602,
-      "tokens": 3886,
-      "summary": "CERG META document: sector-threat-model-catalog-v1"
-    },
-    {
-      "id": "client-improvement-register-v1",
-      "prefix": "META",
-      "title": "client-improvement-register-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/client-improvement-register-v1.md",
-      "lines": [
-        53019,
-        53068
-      ],
-      "lines_count": 49,
-      "chars": 2707,
-      "tokens": 773,
-      "summary": "CERG META document: client-improvement-register-v1"
-    },
-    {
-      "id": "engagement-letter-sow-v1",
-      "prefix": "META",
-      "title": "engagement-letter-sow-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/engagement-letter-sow-v1.md",
-      "lines": [
-        53070,
-        53158
-      ],
-      "lines_count": 88,
-      "chars": 3740,
-      "tokens": 1069,
-      "summary": "CERG META document: engagement-letter-sow-v1"
-    },
-    {
-      "id": "handover-memo-v1",
-      "prefix": "META",
-      "title": "handover-memo-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/handover-memo-v1.md",
-      "lines": [
-        53160,
-        53251
-      ],
-      "lines_count": 91,
-      "chars": 2991,
-      "tokens": 855,
-      "summary": "CERG META document: handover-memo-v1"
-    },
-    {
-      "id": "practice-case-study-v1",
-      "prefix": "META",
-      "title": "practice-case-study-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/practice-case-study-v1.md",
-      "lines": [
-        53253,
-        53345
-      ],
-      "lines_count": 92,
-      "chars": 3129,
-      "tokens": 894,
-      "summary": "CERG META document: practice-case-study-v1"
-    },
-    {
-      "id": "risk-register-bootstrap-v1",
-      "prefix": "META",
-      "title": "risk-register-bootstrap-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/risk-register-bootstrap-v1.md",
-      "lines": [
-        53347,
-        53559
-      ],
-      "lines_count": 212,
-      "chars": 8313,
-      "tokens": 2375,
-      "summary": "CERG META document: risk-register-bootstrap-v1"
-    },
-    {
-      "id": "signed-adoption-record-v1",
-      "prefix": "META",
-      "title": "signed-adoption-record-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/templates/signed-adoption-record-v1.md",
-      "lines": [
-        53561,
-        53644
-      ],
-      "lines_count": 83,
-      "chars": 2533,
-      "tokens": 724,
-      "summary": "CERG META document: signed-adoption-record-v1"
-    },
-    {
-      "id": "grc-rollout-v1",
-      "prefix": "META",
-      "title": "grc-rollout-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/tools/grc-rollout-v1.md",
-      "lines": [
-        53646,
-        53933
-      ],
-      "lines_count": 287,
-      "chars": 11842,
-      "tokens": 3383,
-      "summary": "CERG META document: grc-rollout-v1"
-    },
-    {
-      "id": "opinionated-tool-matrix-v1",
-      "prefix": "META",
-      "title": "opinionated-tool-matrix-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/tools/opinionated-tool-matrix-v1.md",
-      "lines": [
-        53935,
-        54181
-      ],
-      "lines_count": 246,
-      "chars": 11101,
-      "tokens": 3172,
-      "summary": "CERG META document: opinionated-tool-matrix-v1"
-    },
-    {
-      "id": "README-practice-assets-tools-servicenow-accelerator",
-      "prefix": "META",
-      "title": "README",
-      "type": "readme",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/tools/servicenow-accelerator/README.md",
-      "lines": [
-        54183,
-        54247
-      ],
-      "lines_count": 64,
-      "chars": 2653,
-      "tokens": 758,
-      "summary": "CERG META document: README"
-    },
-    {
-      "id": "asset-versioning-scheme-v1",
-      "prefix": "META",
-      "title": "asset-versioning-scheme-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/asset-versioning-scheme-v1.md",
-      "lines": [
-        54249,
-        54345
-      ],
-      "lines_count": 96,
-      "chars": 3330,
-      "tokens": 951,
-      "summary": "CERG META document: asset-versioning-scheme-v1"
-    },
-    {
-      "id": "backlog-taxonomy-v1",
-      "prefix": "META",
-      "title": "backlog-taxonomy-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/backlog-taxonomy-v1.md",
-      "lines": [
-        54347,
-        54444
-      ],
-      "lines_count": 97,
-      "chars": 4359,
-      "tokens": 1245,
-      "summary": "CERG META document: backlog-taxonomy-v1"
-    },
-    {
-      "id": "client-profile-register-schema-v1",
-      "prefix": "META",
-      "title": "client-profile-register-schema-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/client-profile-register-schema-v1.md",
-      "lines": [
-        54446,
-        54528
-      ],
-      "lines_count": 82,
-      "chars": 3123,
-      "tokens": 892,
-      "summary": "CERG META document: client-profile-register-schema-v1"
-    },
-    {
-      "id": "debrief-protocol-v1",
-      "prefix": "META",
-      "title": "debrief-protocol-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/debrief-protocol-v1.md",
-      "lines": [
-        54530,
-        54663
-      ],
-      "lines_count": 133,
-      "chars": 3986,
-      "tokens": 1139,
-      "summary": "CERG META document: debrief-protocol-v1"
-    },
-    {
-      "id": "engagement-status-schema-v1",
-      "prefix": "META",
-      "title": "engagement-status-schema-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/engagement-status-schema-v1.md",
-      "lines": [
-        54665,
-        54767
-      ],
-      "lines_count": 102,
-      "chars": 2947,
-      "tokens": 842,
-      "summary": "CERG META document: engagement-status-schema-v1"
-    },
-    {
-      "id": "ma-security-framework-v1",
-      "prefix": "META",
-      "title": "ma-security-framework-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/ma-security-framework-v1.md",
-      "lines": [
-        54769,
-        54880
-      ],
-      "lines_count": 111,
-      "chars": 5320,
-      "tokens": 1520,
-      "summary": "CERG META document: ma-security-framework-v1"
-    },
-    {
-      "id": "practitioner-competency-framework-v1",
-      "prefix": "META",
-      "title": "practitioner-competency-framework-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/practitioner-competency-framework-v1.md",
-      "lines": [
-        54882,
-        54977
-      ],
-      "lines_count": 95,
-      "chars": 4948,
-      "tokens": 1414,
-      "summary": "CERG META document: practitioner-competency-framework-v1"
-    },
-    {
-      "id": "practitioner-onboarding-guide-v1",
-      "prefix": "META",
-      "title": "practitioner-onboarding-guide-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/practitioner-onboarding-guide-v1.md",
-      "lines": [
-        54979,
-        55127
-      ],
-      "lines_count": 148,
-      "chars": 5210,
-      "tokens": 1489,
-      "summary": "CERG META document: practitioner-onboarding-guide-v1"
-    },
-    {
-      "id": "pricing-model-v1",
-      "prefix": "META",
-      "title": "pricing-model-v1",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "status": null,
-      "version": null,
-      "classification": null,
-      "owner": null,
-      "path": "practice-assets/trackers/pricing-model-v1.md",
-      "lines": [
-        55129,
-        55230
-      ],
-      "lines_count": 101,
-      "chars": 4186,
-      "tokens": 1196,
-      "summary": "CERG META document: pricing-model-v1"
     },
     {
       "id": "README-tools-policy-as-code",
@@ -4203,8 +3063,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        55232,
-        55305
+        44624,
+        44697
       ],
       "lines_count": 73,
       "chars": 4153,

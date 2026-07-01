@@ -1,106 +1,98 @@
-# CERG · Practice-Hardened Operating Model
+# CERG (surge) · Cybersecurity Operating Model
 
-**100 Core controls. Implementation guidance for IT generalists, MSPs, and engineers. Opinionated tool stack. Built for consulting delivery.**
+**An operating model for teams that need security to actually run.**
 
-This is a practice-hardened fork of the upstream [CERG cybersecurity operating model](https://github.com/m0dernz/CERG). It keeps the three-pillar spine (Engineering · Risk · Governance) but adds what you need to actually implement the controls: step-by-step instructions, copy-paste commands, tool recommendations, compensating controls, and threat-intel-validated guidance.
+CERG helps security teams build capability, not just collect tools or chase compliance. It gives you the policy spine, roles, standards, procedures, templates, records, and evidence habits needed to turn scattered security work into a repeatable program.
 
----
+The goal is operating leverage: clearer decisions, fewer ad hoc meetings, less duplicated effort, better handoffs, and evidence created as work happens. A well-run security program should scale through clarity and repeatability, not by throwing more bodies at every new requirement.
 
-## What is different about this fork
-
-| Dimension | Upstream CERG | This fork |
-|-----------|---------------|-----------|
-| **Controls** | ~45 baseline controls | **100 Core controls** with implementation guidance across 18 families |
-| **Implementation guidance** | Written for security engineers | **Three readers**: IT generalist (numbered steps + commands), MSP (template patterns), security engineer (standard references) |
-| **Tool opinions** | Tool-agnostic, no recommendations | **Primary + acceptable + avoid** per control. Wiz, SentinelOne, Entra ID, CyberArk, Veeam, Sentinel — named with rationales |
-| **Compensating controls** | Not addressed | Per-control compensating control catalog with regulatory acceptability notes |
-| **Threat intel validation** | Not referenced | Controls validated against live threat intelligence: Miasma supply chain, Chrome session theft, Shai Hulud cloud exfil, OT advisory pacing, Signal recovery attacks |
-| **Implementation tiers** | Not addressed | Core (100 controls, all orgs) · Enhanced (planned) · Advanced (planned) |
-| **Practice assets** | Not included | Intake questionnaire, 4-tier scope templates, org profile checklist, sector profiles, engagement trackers, debrief protocol, MSP runbook patterns |
-| **Client delivery model** | Not addressed | CON-001 defines Tier 1-4 engagement model with fixed-scope deliverables, role consolidation maps, risk register bootstrap, handover memos |
+CERG is not a control framework, certification shortcut, or tooling project. Compliance alignment matters, but it is a byproduct of operating well.
 
 ---
 
-## What is in the repo
+## What CERG helps you build
 
-```
-governance/          Policy, capability map, control baseline (100 Core controls), operating model
-standards/           Technical standards per domain
-procedures/          Repeatable workflows for risk, exposure, architecture, TPRM, audit
-plans/               Operational packages: PCI DSS, NERC-CIP, CMMC, SOX, consulting model
-templates/           System control profiles, risk register forms, AI intake forms
-roles/               Workforce architecture, job descriptions, competency models
-machine-readable/    LLM index, manifest, tool matrix, crosswalks
-practice-assets/     Consulting delivery assets:
-  ├── agent-integration/  6 LLM agent specifications (intake, adaptation, crosswalk, threat, assembly, practice knowledge)
-  ├── checklists/         Organization profile validation checklist
-  ├── detection/          Detection engineering framework (20 MITRE ATT&CK techniques with KQL + Sigma)
-  ├── intake/             Client intake questionnaire with tier/sector/overlay routing
-  ├── scripts/            Upstream drift check, render-and-diff, client repo provisioning
-  ├── scope-templates/   4 tier scope templates + guardrails + gate criteria
-  ├── sector-profiles/   8 sector profiles + overlay assessments (FedRAMP, HIPAA, ISO, cloud migration)
-  ├── templates/          Adoption record, risk register bootstrap, handover memo, improvement register, case study
-  └── trackers/           Engagement tracker, debrief protocol, client register, backlog, pricing, competency
-```
+CERG is built around three accountable pillars:
+
+- **Cyber Engineering**: build security in early through standards, architecture review, secure development, resilience, logging, identity, cloud, SaaS, AI, and OT guardrails.
+- **Cyber Risk**: understand exposure, track risk decisions, manage exceptions, and drive treatment.
+- **Cyber Governance**: set clear rules, record decisions, define ownership, and keep evidence usable.
+
+Use CERG to:
+
+- make security ownership explicit;
+- turn tribal knowledge into repeatable workflows;
+- give engineering teams clear guardrails instead of vague security asks;
+- reduce toil from recurring reviews, audits, exceptions, and reporting;
+- create reusable evidence as work happens;
+- build a security function that can grow without making every problem a staffing problem.
 
 ---
 
-## The control baseline (CB-001)
+## Start here
 
-The core of this fork is a completely rewritten control baseline. Every control includes:
-
-- **Statement** — one-sentence operational requirement
-- **For the IT Generalist** — numbered steps, OS-specific commands (PowerShell, bash, Azure CLI), expected output
-- **For the MSP** — how to template across clients, automation patterns, evidence collection
-- **For the Security Engineer** — standard reference (NIST, ISO, PCI), evidence cadence, integration notes
-- **Tool Mappings** — ✅ Primary recommendation, ◐ Acceptable alternatives, ❌ Tools to avoid
-- **Verification** — command to run, what "control failure" looks like
-- **Common Mistakes** — top 3-5 implementation errors observed in practice
-- **If You Cannot Implement This** — compensating control path with regulatory acceptability
-- **Threat Intel Validation** — real-world attack references that validate the control's relevance
-
-100 controls across: AC (13) · AU (9) · CM (8) · CP (6) · IA (8) · RA (5) · SI (8) · SC (7) · CA (2) · AT (3) · IR (5) · PE (3) · PL (3) · PM (6) · PS (4) · SA (2) · MA (3) · MP (2) · DG (1)
+| If you are... | Start with |
+|---|---|
+| New to CERG | [START-HERE.md](START-HERE.md) |
+| New to GitHub or Markdown | [BEGINNER-GUIDE.md](BEGINNER-GUIDE.md) |
+| Using an AI assistant or coding agent | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
+| A small team adopting the minimum spine | [CERG Lite adoption pack](adoption-packs/cerg-lite/README.md) |
+| Looking for operational examples | [Day in the Life examples](examples/day-in-the-life/README.md) |
+| Comparing adoption paths | [Adoption Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
+| Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---
 
 ## Adoption modes
 
-| Mode | Best for | Starting point |
-|------|----------|----------------|
-| **Tier 1: Foundations** | New security function, 1-15 FTEs, no operating model | MVC spine (8 docs) + risk register bootstrap |
-| **Tier 2: Structure** | Existing function, 5-30 FTEs, fragmented policies | MVC + standards gap analysis + architecture review |
-| **Tier 3: Compliance** | Regulated environment, recurring audit burden | Tier 2 + regulatory packages (PCI, SOX, CMMC, NERC-CIP) |
-| **Tier 4: Strategic Partner** | Enterprise, multi-regulator, strategic investment | Tier 3 + co-designed evolution roadmap |
+You do not adopt the full library in week one. Start with the spine, prove the operating rhythm, then add depth where the organization actually needs it.
 
-See `plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md` for the full engagement model.
+- **CERG Lite**: the minimum viable program for a small or early security function.
+- **CERG Standard**: the core operating model for an established security team.
+- **CERG Regulated**: Standard plus overlays for regulated, audited, privacy, OT, or critical infrastructure scope.
 
----
-
-## Quick start
-
-```bash
-# 1. Validate the corpus
-python3 tools/cerg-validate.py
-
-# 2. Review the 100 Core controls
-grep "^### [A-Z]*-[0-9]" governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
-
-# 3. Check upstream drift
-python3 practice-assets/scripts/check-upstream-drift.py --client-repo .
-
-# 4. Explore practice assets
-ls practice-assets/
-```
+The minimum viable CERG spine is eight documents: Policy, Framework, Operating Model, Document Catalog, Risk Management Framework, Risk Register Procedure, Risk Register Templates, and Exposure Management Procedure.
 
 ---
 
-## Relationship to upstream CERG
+## What is in the repo
 
-This repository tracks upstream CERG and layers on practice-specific content. The `machine-readable/` index, validation tooling, and corpus structure remain compatible. The practice assets in `practice-assets/` are not part of the upstream corpus — they are consulting delivery tooling.
+CERG includes:
 
+- `governance/`: policy, operating model, risk framework, RACI, metrics, maturity, workforce governance, and program structure.
+- `standards/`: technical standards that define what good looks like across major security domains.
+- `procedures/`: repeatable workflows for risk, exposure, architecture review, TPRM, audit/evidence, change, threat modeling, and related work.
+- `plans/`: operational packages for regulated or specialized scopes.
+- `templates/`: practical forms, registers, and records teams can use directly.
+- `roles/`: workforce architecture, job families, job descriptions, competencies, and onboarding.
+- `machine-readable/`: indexes, manifests, schemas, flow models, and agent-friendly metadata.
+- `examples/`: adoption examples and day-in-the-life walkthroughs.
+
+The authoritative inventory is the [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md).
 
 ---
+
+## LLM and automation use
+
+Use these entry points before loading the full corpus:
+
+- [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json): complete local corpus map.
+- [`machine-readable/cerg-document-tiers.yaml`](machine-readable/cerg-document-tiers.yaml): adoption tiers and recommended loading order.
+- [`llms.txt`](https://cerg.nexus/llms.txt): public LLM index.
+- [`llms-full.txt`](https://cerg.nexus/llms-full.txt): full public corpus mirror.
+
+The GitHub repository is authoritative. The website is a convenience mirror and may lag the repo.
+
+---
+
+## When CERG is not a good fit
+
+Do not adopt CERG yet if there is no named security owner, no executive support for guardrails and evidence, unclear scope, or no willingness to track decisions and exceptions.
+
+Start lighter, establish ownership and evidence discipline, then return when the organization is ready to operate security as a real function.
+
+CERG does not determine legal obligations or certification readiness. Validate regulatory applicability with qualified counsel, compliance leadership, and assessors.
 
 ## License
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Fork freely, adapt openly, attribute generously.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Fork freely - adapt openly - attribute generously :)

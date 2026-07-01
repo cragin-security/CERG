@@ -1,5 +1,3 @@
-> **DEPRECATED:** Consolidated into CERG-TMPL-AI-001. See that template for current content.
-
 ## SANCTIONED AI TOOLS REGISTER TEMPLATE
 ### Approved Tools · Data Classification Limits · Use Cases · Conditions · Review Cadence
 
@@ -9,7 +7,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-AI-002 |
 | **Version** | 1.0 |
-| **Status** | Deprecated |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Document** | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) - Artificial Intelligence Security Standard |
@@ -70,7 +68,7 @@ The register does not approve AI in general. Each entry defines the approved too
 
 ### 3.2 Sanctioned AI Tools Register
 
-| **Tool / Feature** | **Provider** | **AI Use Category** | **Business Owner** | **Deprecated Users** | **Deprecated Use Cases** | **Prohibited Use Cases** | **Maximum Data Classification** | **Training / Retention Position** | **Required Controls** | **Linked Intake / Evidence** | **Review Cadence** | **Status** |
+| **Tool / Feature** | **Provider** | **AI Use Category** | **Business Owner** | **Approved Users** | **Approved Use Cases** | **Prohibited Use Cases** | **Maximum Data Classification** | **Training / Retention Position** | **Required Controls** | **Linked Intake / Evidence** | **Review Cadence** | **Status** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `[Tool name]` | `[Provider]` | `[Consumed AI service / Embedded AI]` | `[Owner]` | `[Users / groups]` | `[Summarization, coding assistance, analysis, etc.]` | `[Employment decisions, Restricted data, autonomous action, etc.]` | `[Public / Internal / Confidential / Restricted / Not Approved]` | `[No provider training; retention period; enterprise controls]` | `[SSO, DLP, logging, admin controls, contractual terms]` | `[AI intake ID, TPRM ID, evidence links]` | `[Quarterly / Semiannual / Annual / On change]` | `[Approved / Approved with conditions / Pilot / Suspended / Retired]` |
 
@@ -126,7 +124,7 @@ A register entry must be reassessed when any of the following occur:
 |---|---|
 | **Document ID** | CERG-TMPL-AI-002 |
 | **Version** | 1.0 |
-| **Status** | Deprecated |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

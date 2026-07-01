@@ -1,5 +1,3 @@
-> **DEPRECATED:** Consolidated into CERG-TMPL-RM-003. See that template for current content.
-
 ## RISK ACCEPTANCE REQUEST FORM
 ### Business Owner Acceptance · Residual Risk · Per-RMF-001 Authority · Conditions · Expiration
 
@@ -9,7 +7,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
 | **Version** | 1.2 |
-| **Status** | Deprecated |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
 | **Parent Document** | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
@@ -154,7 +152,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
 | **Version** | 1.2 |
-| **Status** | Deprecated |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |

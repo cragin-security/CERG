@@ -1,5 +1,3 @@
-> **DEPRECATED:** This document has been consolidated into CERG-GOV-IMP-001 as an appendix. See [IMP-001](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) for current content.
-
 ## ROLE-BASED IMPLEMENTATION CHECKLISTS
 ### First 48 Hours · First 30 Days · First 90 Days
 
@@ -9,7 +7,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-IMP-006 |
 | **Version** | 1.0 |
-| **Status** | Deprecated |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
