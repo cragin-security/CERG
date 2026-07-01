@@ -1,0 +1,30 @@
+title: Account Manipulation - T1098
+id: b79da60a-3772-44eb-bca8-89e5c42d40bd
+status: experimental
+description: Detects password reset and account modification events performed by non-administrative accounts based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1098/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1098
+  - attack.account_manipulation
+  - attack.persistence
+  - attack.privilege-escalation
+logsource:
+  category: authentication
+  product: windows
+detection:
+  selection:
+    EventID: 4724
+  filter_admins:
+    SubjectUserName|endswith:
+      - '$'
+      - 'Administrator'
+      - 'ADM_'
+  condition: selection and not filter_admins
+falsepositives:
+  - 'Delegated password reset via helpdesk tools'
+  - 'Self-service password reset systems'
+level: high

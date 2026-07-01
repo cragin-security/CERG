@@ -1,0 +1,30 @@
+title: Valid Accounts - T1078
+id: edca82d6-a481-4762-8216-c707938ebb46
+status: experimental
+description: Detects anomalous remote logons from unusual IP addresses indicating use of valid accounts by adversaries based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1078/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1078
+  - attack.valid_accounts
+  - attack.initial-access
+logsource:
+  category: authentication
+  product: windows
+detection:
+  selection:
+    EventID: 4624
+    LogonType: '3'
+  filter_known:
+    AccountName|startswith:
+      - SYSTEM
+      - ANONYMOUS
+      - LOCAL
+  condition: selection and not filter_known
+falsepositives:
+  - 'Legitimate remote workers with dynamic IPs'
+  - 'VPN gateway IPs that rotate'
+level: medium

@@ -1,0 +1,18 @@
+category,subcategory,description,default_impact,default_likelihood
+Strategic,Market/Competitive,Market shifts or competitive pressure,3,2
+Strategic,Reputation/Brand,Brand damage from security incident,4,2
+Operational,Identity/Access,"Identity compromise, unauthorized access",4,3
+Operational,Endpoint Security,"Malware, ransomware, endpoint compromise",4,3
+Operational,Cloud Security,"Cloud misconfiguration, data exposure",4,3
+Operational,Network Security,"Network breach, lateral movement",4,2
+Operational,Data Protection,"Data loss, data exfiltration, privacy breach",5,2
+Operational,Third Party,"Vendor compromise, supply chain attack",4,3
+Operational,Physical Security,"Physical breach, theft, environmental",3,1
+Compliance,PCI DSS,"PCI DSS compliance failure, fines",4,2
+Compliance,CMMC,CMMC certification failure,4,2
+Compliance,SOX ITGC,SOX ITGC control failure,4,2
+Compliance,NERC CIP,"NERC CIP violation, fines",5,2
+Compliance,GDPR/Privacy,"Privacy regulation violation, fines",4,2
+Financial,Insurance,"Insurance coverage gap, premium increase",3,2
+Financial,Fraud,"Financial fraud, payment redirection",4,1
+Financial,Business Interruption,"Ransomware, extended downtime",5,2

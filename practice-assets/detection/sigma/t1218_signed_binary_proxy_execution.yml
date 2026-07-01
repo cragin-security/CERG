@@ -1,0 +1,28 @@
+title: Signed Binary Proxy Execution - T1218
+id: 6d66d38a-6a2b-4446-a738-74e1a68515bf
+status: experimental
+description: Detects mshta.exe executing an HTA from a remote URL as a signed binary proxy execution technique based on CERG Detection Engineering Framework
+references:
+  - https://attack.mitre.org/techniques/T1218/
+author: CERG Detection Engineering Team
+date: 2026-06-30
+modified: 2026-06-30
+tags:
+  - attack.t1218
+  - attack.signed_binary_proxy_execution
+  - attack.defense-evasion
+  - attack.t1218.005
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\mshta.exe'
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+  condition: selection
+falsepositives:
+  - 'Legitimate web-based HTA applications'
+  - 'Internal tools using HTA for UI'
+level: high

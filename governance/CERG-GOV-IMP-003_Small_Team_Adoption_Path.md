@@ -1,8 +1,10 @@
+> **DEPRECATED:** This document has been consolidated into CERG-GOV-IMP-001 as an appendix. See [IMP-001](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) for current content.
+
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-003 |
 | **Version** | 1.02 |
-| **Status** | Approved |
+| **Status** | Deprecated |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

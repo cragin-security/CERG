@@ -1,0 +1,78 @@
+# PCI DSS v4.0 → CERG CB-001 Crosswalk (Draft)
+# One row per PCI requirement → CERG control → evidence template
+
+## OVERLAY RECORD: CB-001 §8
+
+| Overlay | Applies To | Adds / Tightens | Source Standard |
+|---------|-----------|-----------------|-----------------|
+| PCI DSS | Any system component in the cardholder data environment (CDE) or connected to it | PCI DSS v4.0 requirements 1-12; CDE scope definition; quarterly ASV scans; annual penetration test; SAQ/ROC reporting; TPSP oversight | CERG-PLN-PCI-001 (this package) |
+
+## CROSSWALK: CB-001 §10 — PCI DSS Column
+
+| Baseline Control | PCI DSS Requirement(s) | Evidence Template |
+|-----------------|----------------------|-------------------|
+| AC-2 Account Management | Req 7.2 (access by need-to-know), Req 7.2.4 (review every 6 months), Req 8.1.2 (unique IDs) | JML log, quarterly recert report |
+| AC-3 Access Enforcement | Req 7.1 (default deny), Req 7.1.2 (least privilege), Req 8.3.1 (MFA for CDE access) | IdP/PAM policy export, MFA enforcement report |
+| AC-6 Least Privilege | Req 7.2.5 (privileged account review), Req 7.2 (need-to-know), Req 8.6 (application/system accounts) | PAM logs, role inventory, privilege review records |
+| AC-7 Unsuccessful Logon Attempts | Req 8.3.4 (lockout after ≤10 attempts) | IdP policy export, lockout audit log |
+| AC-17 Remote Access | Req 8.3.1 (MFA for non-console CDE access), Req 8.4 (replay-resistant auth) | Gateway logs, MFA policy |
+| AC-19 Mobile / BYOD | Req 9.5 (POI device management), Req 9.5.1 (POI device inventory) | POI device inventory, tamper-evident log |
+| AU-2 Event Logging | Req 10.2 (automated audit trails for all CDE components), Req 10.3 (log entries include user ID, event type, date/time, success/failure, origination, identity) | SIEM source inventory, log content validation |
+| AU-6 Audit Review | Req 10.4.1.1 (automated log review), Req 10.4.2 (daily review), Req 10.4.3 (review anomalies) | SIEM alert triage, daily review evidence, automated analysis reports |
+| AU-9 Protection of Audit Information | Req 10.5 (protect audit logs from alteration, retention), Req 10.5.1 (restrict viewing), Req 10.5.2 (protect from modification) | Storage policy, log integrity checks, admin action audit |
+| AU-11 Audit Record Retention | Req 10.7 (retain 12 months, most recent 3 months online) | Retention policy, sample retrieval evidence |
+| AU-12 Audit Record Generation | Req 10.2.1–10.2.8 (specific events: all user access to CHD, privileged actions, audit log access, invalid access attempts, changes to identification/auth, initialization/logical destruction of CHD, account creation/deletion/modification, escalation of privilege) | Log generation config, sample event test |
+| CM-2 Baseline Configuration | Req 2.1 (change vendor defaults), Req 2.2 (industry-accepted hardening) | DISH baseline catalog, hardening scan report |
+| CM-3 Change Control | Req 6.5.1 (change control for security-impacting changes), Req 6.5.2 (document reason, impact, approval tested) | CAB minutes, change records, security impact analysis |
+| CM-6 Configuration Settings | Req 2.3 (non-console admin access encrypted with strong crypto), Req 11.5 (change detection for CHD) | Drift report, file integrity monitoring output |
+| CM-7 Least Functionality | Req 2.2.2 (enable only necessary services, protocols, daemons), Req 2.2.3 (disable insecure protocols) | Port scan, services inventory, protocol inventory |
+| CM-8 System Component Inventory | Req 12.5.1 (hardware and software technology asset inventory), Req 6.4.2 (bespoke/custom software inventory) | CMDB export, software inventory, CDE component list |
+| CP-9 System Backup | Req 10.5.1 (backup and retention of audit logs) | Backup report, log retention verification |
+| CP-10 Information System Recovery | Req 12.10.1 (incident response plan includes business recovery and continuity procedures) | Restoration test evidence, IR plan |
+| IA-2 Identification and Authentication | Req 8.3.2 (MFA for all non-console CDE access), Req 8.3.7 (passwords minimum 12 characters), Req 8.3.10.1 (passphrase with both numeric and alpha if single factor) | IdP policy, MFA enforcement report, password policy |
+| IA-3 Device Identification and Authentication | Req 8.6.1 (application/system accounts disabled interactive login), Req 8.6.2 (password vault/credential management for app/system accounts) | Credential vault policy, service account inventory |
+| IA-5 Authenticator Management | Req 3.6.1 (cryptographic key management), Req 3.7 (key rotation), Req 8.3.9 (password history of 4) | Secrets manager export, key management policy, cert inventory |
+| RA-3 Risk Assessment | Req 12.3.1 (risk assessment for user-based and targeted risk analysis decisions) | Risk register, targeted risk analysis entries |
+| RA-5 Vulnerability Monitoring and Scanning | Req 5.2 (deploy and maintain anti-malware per risk analysis), Req 6.3.1 (identify security vulnerabilities per risk analysis), Req 11.3 (external/internal vulnerability scans quarterly and after significant changes), Req 11.3.1.1 (remediate high/critical vulnerabilities per risk ranking) | ASV scan reports, internal scan reports, SLA dashboard, anti-malware coverage | 
+| SI-2 Flaw Remediation | Req 6.3.3 (critical patch within 1 month), Req 6.3.2 (patch deployment per risk analysis) | SLA report, patch deployment evidence, exception register |
+| SI-4 System Monitoring | Req 10.4 (automated log review for all CDE components), Req 5.3.3 (anti-malware scans on portable media), Req 5.4.1 (anti-phishing detection mechanisms) | SIEM coverage report, anti-malware coverage, DMARC/SPF/DKIM evidence |
+| SR-2 Supply Chain Risk Management Plan | Req 12.8 (maintain TPSP list), Req 12.8.2 (written agreement with TPSP), Req 12.9 (TPSP supports compliance evidence) | TPSP register, written agreements, compliance evidence requests |
+| SR-3 Supply Chain Controls and Processes | Req 12.8.3 (TPSP due diligence), Req 12.8.4 (monitor TPSP compliance at least annually) | TPSP assessment reports, annual review evidence |
+| SC-7 Boundary Protection | Req 1.2 (define and document network boundaries for CDE), Req 1.3 (deny all traffic by default), Req 1.4 (restrict inbound/outbound to/from CDE), Req 1.5 (NSC configuration review every 6 months) | Network diagram, firewall rule set, NPM rules, segmentation test evidence |
+| SC-8 Transmission Confidentiality and Integrity | Req 4.2.1 (strong crypto for CHD over open/public networks), Req 4.2.1.1 (verify certs are valid/not revoked/not expired) | TLS scanner report, certificate validation evidence |
+| SC-28 Protection of Information at Rest | Req 3.4 (PAN rendered unreadable via truncation, hashing, tokenization, or crypto), Req 3.5 (keyed cryptographic hashes for PAN), Req 3.6.1.1 (disk encryption alone insufficient – must combine with truncation/hash/tokenization) | Encryption config, keyed hash implementation, data-at-rest validation |
+| AT-2 Literacy Training and Awareness | Req 12.6 (security awareness program for personnel), Req 12.6.2 (annual security awareness training), Req 5.4.1 (anti-phishing training) | Training completion records, phishing simulation results |
+| PE-2 Physical Access Authorizations | Req 9.2 (authorized physical access list), Req 9.2.1 (access for visitors authorized), Req 9.3 (visitor escorts) | Badge access roster, visitor log |
+| PE-3 Physical Access Control | Req 9.1.1 (video cameras or access controls), Req 9.1.2 (retain video/access logs 90 days), Req 9.4.1 (media securely stored) | Video/access control logs, media inventory |
+| PL-1 Policy and Procedures | Req 12.1 (information security policy), Req 12.1.2 (review policy annually), Req 12.1.3 (distribute policy to relevant personnel) | Document catalog, policy approval record, policy acknowledgment evidence |
+| PM-1 Information Security Program Plan | Req 12.4 (executive management oversight), Req 12.5 (assign security responsibilities) | Operating model, RACI, executive charter |
+| CA-2 Control Assessment | Req 12.3 (targeted risk analysis for PCI-specific decisions), SAQ/ROC evidence | Maturity scorecard, SAQ evidence package, ROC evidence binder |
+| CA-8 Penetration Testing | Req 11.4.7 (penetration testing methodology NIST SP 800-115), Req 11.4.3 (application penetration testing annually and after changes), Req 11.4.2 (network-layer penetration testing), Req 11.5.1.1 (deploy change detection on CHD; rescans include lower-risk vulnerabilities) | Pen test plan, test results, remediation evidence, retest |
+| PM-14 Continuous Monitoring | Req 11.2 (quarterly external ASV scan), Req 11.2.2 (internal vulnerability scan quarterly), Req 11.5.1 (change detection mechanism) | ASV scan report, quarterly internal scan, change detection config |
+| N/A (PCI-specific controls not in CERG baseline) | Req 1.1.5 (NSC and NPM rule reviews every 6 months) | N/A — new control needed: PCI-NSC-001 |
+| N/A | Req 3.2.3 (SAD retention and disposal policy) | N/A — new control needed: PCI-SAD-001 |
+| N/A | Req 3.3 (SAD not stored after authorization; encrypted before authorization) | N/A — new control needed: PCI-SAD-002 |
+| N/A | Req 4.1 (CHD via end-user messaging protected) | N/A — new control needed: PCI-MSG-001 |
+| N/A | Req 6.4.3 (manage payment page scripts), Req 6.4.3.1 (inventory scripts authorizing CHD) | N/A — new control needed: PCI-SCR-001 |
+| N/A | Req 9.5 (POI device management, tamper-evident, training), Req 9.5.1.2 (POI device inventory) | N/A — new control needed: PCI-POI-001 |
+| N/A | Req 12.9 (TPSP support for compliance evidence requests) | N/A — maps to CERG TPRM process but PCI-specific documentation needed: PCI-TPSP-001 |
+
+## GAP ANALYSIS
+
+PCI-specific controls not covered by existing CERG CB-001:
+
+| PCI Req | Gap | Proposed New Control | Suggested Location |
+|---------|-----|---------------------|-------------------|
+| 1.1.5 | NSC/NPM rule reviews every 6 months | PCI-NSC-001 — Network Security Control Rule Review | PLN-PCI-001 §4 |
+| 3.2.3 | SAD retention and disposal policy | PCI-SAD-001 — Sensitive Authentication Data Retention | PLN-PCI-001 §4 |
+| 3.3 | SAD encryption before authorization | PCI-SAD-002 — SAD Pre-Authorization Encryption | PLN-PCI-001 §4 |
+| 4.1 | CHD protection in end-user messaging | PCI-MSG-001 — CHD Messaging Protection | PLN-PCI-001 §4 |
+| 6.4.3 | Payment page script management | PCI-SCR-001 — Payment Page Script Inventory & Integrity | PLN-PCI-001 §4 |
+| 9.5 | POI device management | PCI-POI-001 — POI Device Inventory & Tamper Monitoring | PLN-PCI-001 §4 |
+| 12.9 | TPSP compliance evidence support | PCI-TPSP-001 — TPSP Compliance Evidence Request | PLN-PCI-001 §4 (extends PRC-TPRM-001) |
+
+## CB-001 §10.2 — Overlay-to-Regulator Mapping (PCI DSS row)
+
+| Overlay | Primary Regulator Lens | Operational Package |
+|---------|----------------------|-------------------|
+| PCI DSS | PCI DSS v4.0.1; SAQ/ROC reporting; ASV program | CERG-PLN-PCI-001 (this package) |
