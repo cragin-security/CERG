@@ -1,133 +1,133 @@
-1|# CERG Opinionated Tool Matrix
-2|
-3|## Practitioner-Grade Tool Recommendations for CERG Adoption
-4|
-5|| | |
-6||---|---|
-7|| **Document ID** | CERG-OPN-TOOLS-001 |
-8|| **Version** | 1.0.0 |
-9|| **Status** | Draft |
-10|| **Classification** | Public |
-11|| **Owner** | Consulting Practice Lead |
-12|| **Parent Policy** | CERG-POL-001 |
-13|| **Review Cycle** | Quarterly |
-14|| **Frameworks** | CERG 100-Core · CIS Controls v8 · NIST 800-53r5 |
-15|| **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
-16|| **Environments** | IT · Cloud · SaaS · OT (partial) |
-17|
-18|---
-19|
-20|## Purpose
-21|
-22|This document defines the opinionated tool stack for CERG adopters who work through an MSP, MSSP, or in-house IT generalist. Every recommendation here is based on three criteria:
-23|
-24|1. **Integration surface** — Does it talk to ServiceNow GRC and the rest of the stack without custom middleware?
-25|2. **MSP/MSSP multi-tenancy** — Can a single instance or deployment manage multiple client organizations cleanly?
-26|3. **IT generalist usability** — Can someone without a dedicated SOC engineer configure it using vendor documentation alone?
-27|
-28|Each category lists a **Primary** (the recommendation), **Acceptable** alternatives (decent but weaker on at least one criterion), and **Avoid** (popular tools that fail hard on the CERG criteria).
-29|
-30|---
-31|
-32|## Tool Categories
-33|
-34|### 1. GRC Platform — The Anchor
-35|
-36|The GRC platform is the spine of the CERG program. Every other tool reports into it. Controls are tracked here. Evidence lives here or is linked from here. Audits open here.
-37|
-38|| Tier | Product | Rationale |
-39||------|---------|-----------|
-40|| **Primary** | **ServiceNow GRC** | Full IT service management + GRC. Controls, evidence, risk register, audit management, compliance dashboards all in one platform. Multi-tenant via domain separation. The only platform that straddles IT operations AND GRC without a messy handoff. |
-41|| **Acceptable** | **Vanta** | Best-in-class for SMB compliance automation (SOC 2, ISO 27001, HIPAA). Agent-based evidence collection. Weak on operational risk and IT service management — you'll need separate tools for incident/change management. Good for startups and small practices. |
-42|| **Acceptable** | **Drata** | Similar to Vanta. Slightly better auditor UX, slightly weaker integrations. For SMB compliance-only use cases. |
-43|| **Avoid** | **Archer** | Legacy architecture, high customization cost, requires dedicated Archer developers. Multi-tenancy is an afterthought. |
-44|| **Avoid** | **OpenGRC / Eramba** | Free but abandonware risk. No MSP multi-tenancy. No API ecosystem. |
-45|| **Avoid** | **Spreadsheets** | You will lose audit credibility immediately. A spreadsheet is not a GRC platform and auditors know it. |
-46|
-47|**CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
-48|
-49|**Integration note:** ServiceNow GRC has native integrations with most SIEM and endpoint tools. Vanta's integrations are narrower — Wiz, AWS, Azure, GCP, GitHub, Jamf, Intune. Budget for middleware if you need Vanta-to-non-cloud-tool integration.
-50|
-51|---
-52|
-53|### 2. SIEM / Centralized Logging
-54|
-55|The SIEM is the operational brain. It ingests from endpoint, network, cloud, identity, and application sources. Detection rules fire here. Investigations start here.
-56|
-57|| Tier | Product | Rationale |
-58||------|---------|-----------|
-59|| **Primary: Enterprise** | **Elastic Security** | Full EDR + SIEM in one platform. Open detection engine. Sigma rule support. Agent-based collection. Multi-tenant via Elastic Cloud. The best balance of capability, cost, and MSP-friendliness at scale. |
-60|| **Primary: SMB/Lean** | **Wazuh** | Open-source XDR. Lightweight agent. File integrity monitoring. Good compliance mapping (PCI, HIPAA, GDPR). Free. Multi-tenancy via separate managers or virtual appliances per client. Best for MSPs running on thin margins. |
-61|| **Acceptable** | **Splunk** | Best analytics engine. Best app marketplace. Priced per GB ingested — becomes punitive at scale unless you have an ELA. Multi-tenancy requires Splunk Cloud or heavy engineering. |
-62|| **Acceptable** | **Microsoft Sentinel** | Native Azure integration. Good if clients are already M365 E5. Weak on non-Windows endpoints, OT, and network. Pricing is consumption-based — hard to predict. |
-63|| **Avoid** | **QRadar** | End-of-life migration to SaaS underway. Avoid until the dust settles. |
-64|| **Avoid** | **LogRhythm** | Aging architecture. MSP multi-tenancy is clunky. |
-65|| **Avoid** | **DIY ELK** | Building your own Elasticsearch cluster is a full-time job. Use Elastic Cloud or Wazuh. |
-66|
-67|**CERG recommendation:** Wazuh for SMB clients and lean MSP stacks. Elastic Security when the client has the budget and needs EDR + SIEM convergence.
-68|
-69|---
-70|
-71|### 3. Endpoint Protection / EDR
-72|
-73|Endpoint is the first line of defense and the richest source of detection telemetry. CERG requires EDR, not signature-only antivirus.
-74|
-75|| Tier | Product | Rationale |
-76||------|---------|-----------|
-77|| **Primary** | **SentinelOne Singularity** | Strong detection with minimal noise. Multi-tenant console with RBAC per client site. API that talks to ServiceNow. Good offline detection for OT/air-gapped. |
-78|| **Acceptable** | **CrowdStrike Falcon** | Best threat intel. Best IR capabilities. Multi-tenant via Falcon Complete for MSSPs. Pricier than SentinelOne. Overkill for SMB. |
-79|| **Acceptable** | **Microsoft Defender for Endpoint** | Included in M365 E5. Deep Windows integration. Weaker on Linux/Mac. Multi-tenant via Lighthouse. |
-80|| **Avoid** | **Symantec / Broadcom** | Aging detection engine. Multi-tenancy is an afterthought. Integration surface is shrinking. |
-81|| **Avoid** | **McAfee / Trellix** | Fragmented product line. MSP program is inconsistent. |
-82|| **Avoid** | **Bitdefender GravityZone** | Decent detection, weak API. Does not integrate cleanly with ServiceNow. |
-83|
-84|**CERG recommendation:** SentinelOne. Good enough detection, excellent MSP console, solid ServiceNow integration. CrowdStrike if the client has breach history or is a high-value target.
-85|
-86|---
-87|
-88|### 4. Vulnerability Management
-89|
-90|Vulnerability scanning is table stakes. CERG requires authenticated scanning, a remediation workflow, and evidence that findings were closed.
-91|
-92|| Tier | Product | Rationale |
-93||------|---------|-----------|
-94|| **Primary** | **Tenable (Nessus)** | Industry standard. Largest plugin library. Good API. Multi-tenant via Tenable.io. |
-95|| **Alternate Primary** | **Qualys** | Comparable to Tenable. Better cloud/container coverage. Weaker OT. |
-96|| **Acceptable** | **Wiz** | Cloud-first vulnerability + CSPM in one. Agentless. Best for cloud-native clients. Weak on on-prem/OT. |
-97|| **Acceptable** | **CrowdStrike Falcon Spotlight** | Bundled with Falcon. Good for existing CrowdStrike shops. Not a standalone choice. |
-98|| **Avoid** | **Rapid7 InsightVM / Nexpose** | Once competitive. Falling behind on cloud/container scanning. MSP program is weak. |
-99|
-100|**CERG recommendation:** Tenable for mixed on-prem/cloud environments. Wiz for cloud-native clients.
-101|
-102|---
-103|
-104|### 5. Cloud Security Posture Management (CSPM)
-105|
-106|Every CERG client has cloud footprint — even if it's just M365 and a SaaS stack. CSPM catches misconfigurations before they become incidents.
-107|
-108|| Tier | Product | Rationale |
-109||------|---------|-----------|
-110|| **Primary** | **Wiz** | Agentless, multi-cloud, broad coverage. Graph-based risk visualization. Multi-tenant. The best CSPM on the market. |
-111|| **Acceptable** | **CrowdStrike Falcon Cloud Security** | Good if you're already in the Falcon ecosystem. Less breadth than Wiz. |
-112|| **Acceptable** | **Microsoft Defender for Cloud** | Included with Azure. Good CSPM for Azure-only shops. Weak on AWS/GCP. |
-113|| **Avoid** | **Palo Alto Prisma Cloud** | Powerful but complex. Requires dedicated cloud security engineers. MSP-multi-tenancy is an afterthought. |
-114|| **Avoid** | **Lacework** | Agent-based. Slower to deploy. Narrower coverage. |
-115|
-116|**CERG recommendation:** Wiz for multi-cloud. Microsoft Defender for Cloud if Azure-only and budget-constrained.
-117|
-118|---
-119|
-120|### 6. Identity / IAM
-121|
-122|Identity is the new perimeter. CERG requires MFA everywhere, SSO where possible, and a clear source of truth for accounts and access.
-123|
-124|| Tier | Product | Rationale |
-125||------|---------|-----------|
-126|| **Primary: IAM Platform** | **Okta** | Best integration marketplace. Good API. Multi-tenant. The standard answer for MSP-delivered IAM. |
-127|| **Alternate Primary** | **Entra ID (Azure AD)** | Included with M365. Deep Windows integration. Multi-tenant via Lighthouse. Best for M365-centric clients. |
-128|| **Acceptable** | **JumpCloud** | Good for heterogeneous environments (Windows + Mac + Linux). Weaker enterprise features. |
-129|| **Avoid** | **OneLogin** | Acquired, in maintenance mode. Integration marketplace is shrinking. |
-130|| **Avoid** | **On-prem AD without Entra ID sync** | You're operating a legacy identity store without cloud integration. This is not a CERG-compliant architecture for any client with cloud workloads. 
+# CERG Opinionated Tool Matrix
+
+## Practitioner-Grade Tool Recommendations for CERG Adoption
+
+| | |
+|---|---|
+| **Document ID** | CERG-OPN-TOOLS-001 |
+| **Version** | 1.0.0 |
+| **Status** | Draft |
+| **Classification** | Public |
+| **Owner** | Consulting Practice Lead |
+| **Parent Policy** | CERG-POL-001 |
+| **Review Cycle** | Quarterly |
+| **Frameworks** | CERG 100-Core · CIS Controls v8 · NIST 800-53r5 |
+| **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
+| **Environments** | IT · Cloud · SaaS · OT (partial) |
+
+---
+
+## Purpose
+
+This document defines the opinionated tool stack for CERG adopters who work through an MSP, MSSP, or in-house IT generalist. Every recommendation here is based on three criteria:
+
+1. **Integration surface** — Does it talk to ServiceNow GRC and the rest of the stack without custom middleware?
+2. **MSP/MSSP multi-tenancy** — Can a single instance or deployment manage multiple client organizations cleanly?
+3. **IT generalist usability** — Can someone without a dedicated SOC engineer configure it using vendor documentation alone?
+
+Each category lists a **Primary** (the recommendation), **Acceptable** alternatives (decent but weaker on at least one criterion), and **Avoid** (popular tools that fail hard on the CERG criteria).
+
+---
+
+## Tool Categories
+
+### 1. GRC Platform — The Anchor
+
+The GRC platform is the spine of the CERG program. Every other tool reports into it. Controls are tracked here. Evidence lives here or is linked from here. Audits open here.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary** | **ServiceNow GRC** | Full IT service management + GRC. Controls, evidence, risk register, audit management, compliance dashboards all in one platform. Multi-tenant via domain separation. The only platform that straddles IT operations AND GRC without a messy handoff. |
+| **Acceptable** | **Vanta** | Best-in-class for SMB compliance automation (SOC 2, ISO 27001, HIPAA). Agent-based evidence collection. Weak on operational risk and IT service management — you'll need separate tools for incident/change management. Good for startups and small practices. |
+| **Acceptable** | **Drata** | Similar to Vanta. Slightly better auditor UX, slightly weaker integrations. For SMB compliance-only use cases. |
+| **Avoid** | **Archer** | Legacy architecture, high customization cost, requires dedicated Archer developers. Multi-tenancy is an afterthought. |
+| **Avoid** | **OpenGRC / Eramba** | Free but abandonware risk. No MSP multi-tenancy. No API ecosystem. |
+| **Avoid** | **Spreadsheets** | You will lose audit credibility immediately. A spreadsheet is not a GRC platform and auditors know it. |
+
+**CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
+
+**Integration note:** ServiceNow GRC has native integrations with most SIEM and endpoint tools. Vanta's integrations are narrower — Wiz, AWS, Azure, GCP, GitHub, Jamf, Intune. Budget for middleware if you need Vanta-to-non-cloud-tool integration.
+
+---
+
+### 2. SIEM / Centralized Logging
+
+The SIEM is the operational brain. It ingests from endpoint, network, cloud, identity, and application sources. Detection rules fire here. Investigations start here.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary: Enterprise** | **Elastic Security** | Full EDR + SIEM in one platform. Open detection engine. Sigma rule support. Agent-based collection. Multi-tenant via Elastic Cloud. The best balance of capability, cost, and MSP-friendliness at scale. |
+| **Primary: SMB/Lean** | **Wazuh** | Open-source XDR. Lightweight agent. File integrity monitoring. Good compliance mapping (PCI, HIPAA, GDPR). Free. Multi-tenancy via separate managers or virtual appliances per client. Best for MSPs running on thin margins. |
+| **Acceptable** | **Splunk** | Best analytics engine. Best app marketplace. Priced per GB ingested — becomes punitive at scale unless you have an ELA. Multi-tenancy requires Splunk Cloud or heavy engineering. |
+| **Acceptable** | **Microsoft Sentinel** | Native Azure integration. Good if clients are already M365 E5. Weak on non-Windows endpoints, OT, and network. Pricing is consumption-based — hard to predict. |
+| **Avoid** | **QRadar** | End-of-life migration to SaaS underway. Avoid until the dust settles. |
+| **Avoid** | **LogRhythm** | Aging architecture. MSP multi-tenancy is clunky. |
+| **Avoid** | **DIY ELK** | Building your own Elasticsearch cluster is a full-time job. Use Elastic Cloud or Wazuh. |
+
+**CERG recommendation:** Wazuh for SMB clients and lean MSP stacks. Elastic Security when the client has the budget and needs EDR + SIEM convergence.
+
+---
+
+### 3. Endpoint Protection / EDR
+
+Endpoint is the first line of defense and the richest source of detection telemetry. CERG requires EDR, not signature-only antivirus.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary** | **SentinelOne Singularity** | Strong detection with minimal noise. Multi-tenant console with RBAC per client site. API that talks to ServiceNow. Good offline detection for OT/air-gapped. |
+| **Acceptable** | **CrowdStrike Falcon** | Best threat intel. Best IR capabilities. Multi-tenant via Falcon Complete for MSSPs. Pricier than SentinelOne. Overkill for SMB. |
+| **Acceptable** | **Microsoft Defender for Endpoint** | Included in M365 E5. Deep Windows integration. Weaker on Linux/Mac. Multi-tenant via Lighthouse. |
+| **Avoid** | **Symantec / Broadcom** | Aging detection engine. Multi-tenancy is an afterthought. Integration surface is shrinking. |
+| **Avoid** | **McAfee / Trellix** | Fragmented product line. MSP program is inconsistent. |
+| **Avoid** | **Bitdefender GravityZone** | Decent detection, weak API. Does not integrate cleanly with ServiceNow. |
+
+**CERG recommendation:** SentinelOne. Good enough detection, excellent MSP console, solid ServiceNow integration. CrowdStrike if the client has breach history or is a high-value target.
+
+---
+
+### 4. Vulnerability Management
+
+Vulnerability scanning is table stakes. CERG requires authenticated scanning, a remediation workflow, and evidence that findings were closed.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary** | **Tenable (Nessus)** | Industry standard. Largest plugin library. Good API. Multi-tenant via Tenable.io. |
+| **Alternate Primary** | **Qualys** | Comparable to Tenable. Better cloud/container coverage. Weaker OT. |
+| **Acceptable** | **Wiz** | Cloud-first vulnerability + CSPM in one. Agentless. Best for cloud-native clients. Weak on on-prem/OT. |
+| **Acceptable** | **CrowdStrike Falcon Spotlight** | Bundled with Falcon. Good for existing CrowdStrike shops. Not a standalone choice. |
+| **Avoid** | **Rapid7 InsightVM / Nexpose** | Once competitive. Falling behind on cloud/container scanning. MSP program is weak. |
+
+**CERG recommendation:** Tenable for mixed on-prem/cloud environments. Wiz for cloud-native clients.
+
+---
+
+### 5. Cloud Security Posture Management (CSPM)
+
+Every CERG client has cloud footprint — even if it's just M365 and a SaaS stack. CSPM catches misconfigurations before they become incidents.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary** | **Wiz** | Agentless, multi-cloud, broad coverage. Graph-based risk visualization. Multi-tenant. The best CSPM on the market. |
+| **Acceptable** | **CrowdStrike Falcon Cloud Security** | Good if you're already in the Falcon ecosystem. Less breadth than Wiz. |
+| **Acceptable** | **Microsoft Defender for Cloud** | Included with Azure. Good CSPM for Azure-only shops. Weak on AWS/GCP. |
+| **Avoid** | **Palo Alto Prisma Cloud** | Powerful but complex. Requires dedicated cloud security engineers. MSP-multi-tenancy is an afterthought. |
+| **Avoid** | **Lacework** | Agent-based. Slower to deploy. Narrower coverage. |
+
+**CERG recommendation:** Wiz for multi-cloud. Microsoft Defender for Cloud if Azure-only and budget-constrained.
+
+---
+
+### 6. Identity / IAM
+
+Identity is the new perimeter. CERG requires MFA everywhere, SSO where possible, and a clear source of truth for accounts and access.
+
+| Tier | Product | Rationale |
+|------|---------|-----------|
+| **Primary: IAM Platform** | **Okta** | Best integration marketplace. Good API. Multi-tenant. The standard answer for MSP-delivered IAM. |
+| **Alternate Primary** | **Entra ID (Azure AD)** | Included with M365. Deep Windows integration. Multi-tenant via Lighthouse. Best for M365-centric clients. |
+| **Acceptable** | **JumpCloud** | Good for heterogeneous environments (Windows + Mac + Linux). Weaker enterprise features. |
+| **Avoid** | **OneLogin** | Acquired, in maintenance mode. Integration marketplace is shrinking. |
+|| **Avoid** | **On-prem AD without Entra ID sync** | You're operating a legacy identity store without cloud integration. This is not a CERG-compliant architecture for any client with cloud workloads. |
 
 ### 7. AppSec / Supply Chain
 
