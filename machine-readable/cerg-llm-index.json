@@ -3,7 +3,7 @@
   "generated": "2026-07-03",
   "source": "local markdown corpus",
   "total_documents": 149,
-  "total_tokens_estimate": 966262,
+  "total_tokens_estimate": 967855,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -3064,11 +3064,11 @@
       "path": "adoption-packs/ciso-cso-briefing/README.md",
       "lines": [
         44627,
-        44930
+        44982
       ],
-      "lines_count": 303,
-      "chars": 13093,
-      "tokens": 3741,
+      "lines_count": 355,
+      "chars": 18670,
+      "tokens": 5334,
       "summary": "CERG META document: README"
     },
     {
@@ -3083,8 +3083,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        44932,
-        45005
+        44984,
+        45057
       ],
       "lines_count": 73,
       "chars": 4153,
