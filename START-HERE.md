@@ -21,6 +21,7 @@ If you answered **yes** to all four, pick your path below.
 
 If you are still unsure where to begin, use these four helpers before diving into the full library:
 
+- [CISO / CSO Executive Briefing Pack](adoption-packs/ciso-cso-briefing/README.md) - slide-style executive introduction for leaders who need the hook, operating boundaries, anti-patterns, and “who does what” before reading the corpus.
 - [Framework System Map](governance/CERG-GOV-FRM-002_Framework_System_Map.md) - how the documents, pillars, records, evidence, and improvement loops fit together.
 - [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) - which path and overlays apply, plus what must be adopted together.
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
@@ -33,6 +34,7 @@ If you are still unsure where to begin, use these four helpers before diving int
 | If you need to... | Use |
 |---|---|
 | Pick the right adoption path in the first hour | This START-HERE page |
+| Brief a CISO / CSO before asking them to read the corpus | [CISO / CSO Executive Briefing Pack](adoption-packs/ciso-cso-briefing/README.md) |
 | Understand the narrative rollout model | [IMP-001 Implementation and Adaptation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
 | Avoid unsafe tailoring and authority collapse | [IMP-002 Adoption Safety Guide](governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) |
 | Run CERG with 2-8 people | [IMP-003 Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
