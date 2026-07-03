@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-27 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-07-03 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 489b1ac5b8061eac55b5de3798c19b88f62d9d929cf30887a43a756ca788b858
+  source_hash: b690ace79a296f537cdb05d7c946ff5f55d56957968af3a7517c20ec2445c8a1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -144,6 +144,26 @@
   normative_weight: supporting
   pillar: engineering
   summary: Unified Control Baseline
+- document_id: CERG-GOV-CB-002
+  title: 100-Core Control Baseline
+  document_type: governance_instrument
+  domain: CB
+  version: 1.0.0
+  status: Draft
+  classification: Public
+  publication_profile: public
+  owner_role: Consulting Practice Lead
+  approval_authority: Consulting Practice Lead
+  parent_artifact: CERG-POL-001
+  source_path: governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md
+  source_file: CERG-GOV-CB-002_100-Core_Control_Baseline.md
+  source_hash: eaf78f8bc5befc86fe56bf632c9bb3a89d3a7bcd4aa56df11c44221680250799
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md
+  llm_include: false
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: 100-Core Control Baseline
 - document_id: CERG-GOV-CEF-001
   title: Control Effectiveness Framework
   document_type: governance_instrument
