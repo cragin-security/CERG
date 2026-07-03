@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Identity Engineer |
@@ -351,7 +351,7 @@ For vendors, MSPs, and external operators with administrative or persistent acce
 | Complete access inventory | Accounts, groups, federation trusts, OAuth grants, API tokens, remote-access paths, PAM entries, and service principals. |
 | Disable path | Documented steps to disable access without vendor participation. |
 | Log preservation | SIEM query or evidence location for vendor activity before and after disablement. |
-| Test cadence | Annual tabletop or technical test for Tier 1 / privileged vendors; record result and gaps. |
+| Test cadence | Tier 1 vendors with persistent or administrative access: semi-annual tabletop or technical test. Tier 2 privileged or time-bound vendors: annual test. Lower tiers: risk-based review. Record result and gaps. |
 
 ---
 
@@ -415,7 +415,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / IAM tooling change |
-| **Change Log** | 1.2 - Added cyber-required IAM operating agreement, identity assurance package workflow, OAuth/session/token revocation steps, and vendor/MSP kill-switch requirements. 1.1 - Added privileged access review evidence checklist and PRC-AUD evidence linkage. 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. |
+| **Change Log** | 1.3 - Tightened vendor/MSP kill-switch testing cadence for Tier 1 persistent or administrative access to semi-annual. 1.2 - Added cyber-required IAM operating agreement, identity assurance package workflow, OAuth/session/token revocation steps, and vendor/MSP kill-switch requirements. 1.1 - Added privileged access review evidence checklist and PRC-AUD evidence linkage. 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. |

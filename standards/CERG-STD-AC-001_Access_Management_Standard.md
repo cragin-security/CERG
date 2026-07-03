@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-AC-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -104,6 +104,9 @@ Every environment or service that implements identity controls shall maintain an
 4. **Review evidence:** latest access review, privileged access review, NHI review, vendor access review, and unresolved exceptions.
 5. **Detection and response hooks:** identity log sources, detections enabled, session revocation path, emergency disable path, and identity incident contacts.
 6. **Operating boundary:** whether IAM is operated by CERG, IT, MSP, SaaS provider, or shared model, with named accountable owner and escalation path.
+7. **Accuracy check:** evidence that the package has been sampled against reality, not merely completed. At minimum, validate that the described identity architecture exists, named controls are configured, populations match authoritative exports, and evidence can be reperformed.
+
+A complete package that does not match the environment is not current; it is false assurance. Package accuracy is sampled as a control-effectiveness activity and reported through [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) identity metrics.
 
 ---
 
@@ -403,16 +406,17 @@ The following access types shall be treated as privileged and subject to the con
 | | |
 |---|---|
 | **Document ID** | CERG-STD-AC-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change |
-| **Change Log** | 1.22 - Added identity operating models, assurance package, expanded control-plane scope, OAuth / token / session requirements, and clarified non-CERG IAM ownership. 1.0 - Initial publication. Identity, authentication, authorization, lifecycle. |
+| **Change Log** | 1.23 - Added identity assurance package accuracy requirement. 1.22 - Added identity operating models, assurance package, expanded control-plane scope, OAuth / token / session requirements, and clarified non-CERG IAM ownership. 1.0 - Initial publication. Identity, authentication, authorization, lifecycle. |
 
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.23 | 2026-07-03 | CERG Governance | Added assurance package accuracy sampling so package completeness does not mask stale or false evidence. |
 | 1.22 | 2026-07-02 | CERG Governance | Added identity operating models, minimum assurance package, control-plane scope, OAuth / token / session requirements, and clarified CERG assurance role when IAM is operated by IT, MSP, or SaaS providers. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - identity, authentication, authorization, lifecycle |
 
