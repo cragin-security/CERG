@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CB-002 |
-| **Version** | 1.0.0 |
+| **Version** | 1.0 |
 | **Status** | Draft (RFC) |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
@@ -66,17 +66,21 @@ Control IDs correspond to NIST 800-53r5 identifiers where the NIST family covers
 
 ## 2. Control Format
 
-Every control entry follows this structure:
+Each CB-002 control entry uses a standard table format:
 
-| **Control ID** | NIST-aligned or CERG-native identifier |
-| **Action Statement** | What the control requires, in plain language an IT generalist can understand |
-| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process — one or more |
-| **Owning Pillar** | Engineering, Risk, or Governance |
-| **Named Evidence** | The specific artifact that proves the control is operating |
-| **Minimum Frequency** | How often evidence must be collected |
-| **Subordinate Standard** | Link to the relevant CERG standard with parameter detail |
-
----
+| Field | Description |
+|---|---|
+| **Control ID** | Local expanded-control identifier, e.g. `CB2-AC-001`. The `CB2-` prefix distinguishes CB-002 local IDs from NIST 800-53r5 identifiers and CB-001 anchors. |
+| **Primary CB-001 / NIST Anchor** | The main CB-001 or NIST control this entry expands or supports, e.g. `AC-2 Account Management`. |
+| **Related Anchors** | Other CB-001 or NIST controls relevant to this entry. |
+| **Relationship** | `Expands CB-001` (adds detail to an existing CB-001 control), `Supplements CB-001` (covers an area not explicit in CB-001), or `Overlay / Where Applicable` (applies only when specific conditions exist). |
+| **Action Statement** | What the control requires, in language an implementer can act on. |
+| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process — one or more values. |
+| **Owning Pillar** | Engineering, Risk, or Governance — one accountable pillar per control. |
+| **Named Evidence** | The specific artifact that proves the control is operating. |
+| **Minimum Frequency** | How often evidence must be collected, or the trigger condition. |
+| **Subordinate Standard** | Cross-reference to the CERG standard or procedure that provides parameter detail. Uses current approved artifact IDs. |
+| **Implementation Guidance** | Generic, vendor-neutral guidance on what must be true to satisfy the control (where applicable). This guidance is implementation-focused, not effectiveness-focused. |
 
 ## 3. Access Control
 
@@ -410,9 +414,9 @@ Every control entry follows this structure:
 
 ## 8. Contingency Planning (CP)
 
-### CP-001: Contingency Plan
+### CB2-CP-001: Contingency Plan
 
-| **Control ID** | CP-001 |
+| **Control ID** | CB2-CP-001 |
 | **Action Statement** | A written contingency plan exists for the in-scope environment. The plan identifies critical systems, recovery objectives (RTO/RPO), roles and responsibilities, and recovery procedures. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Engineering |
@@ -420,9 +424,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual review; update on major system change |
 | **Subordinate Standard** | [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 
-### CP-002: Backup Configuration
+### CB2-CP-002: Backup Configuration
 
-| **Control ID** | CP-002 |
+| **Control ID** | CB2-CP-002 |
 | **Action Statement** | All critical systems and data are backed up on a defined schedule. Backups are stored in at least two locations with at least one immutable or offline copy. Backup configuration is documented. |
 | **System Applicability** | Hardware, Software, Cloud, Data |
 | **Owning Pillar** | Engineering |
@@ -430,9 +434,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly review of configuration |
 | **Subordinate Standard** | [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 
-### CP-003: Backup Testing
+### CB2-CP-003: Backup Testing
 
-| **Control ID** | CP-003 |
+| **Control ID** | CB2-CP-003 |
 | **Action Statement** | Backups are tested regularly to confirm they can be restored. Test results are documented. Failed tests generate an incident and immediate remediation. |
 | **System Applicability** | Hardware, Software, Data |
 | **Owning Pillar** | Engineering |
@@ -440,9 +444,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Monthly (automated), Quarterly (manual full restore test) |
 | **Subordinate Standard** | [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 
-### CP-004: Alternate Storage Site
+### CB2-CP-004: Alternate Storage Site
 
-| **Control ID** | CP-004 |
+| **Control ID** | CB2-CP-004 |
 | **Action Statement** | Backup data is stored at a geographically separate location from the primary site. The alternate site is far enough to survive a regional disaster (minimum 50 miles for physical sites; different cloud region for cloud). |
 | **System Applicability** | Data |
 | **Owning Pillar** | Engineering |
@@ -450,9 +454,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual verification |
 | **Subordinate Standard** | [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 
-### CP-005: System Recovery Procedures
+### CB2-CP-005: System Recovery Procedures
 
-| **Control ID** | CP-005 |
+| **Control ID** | CB2-CP-005 |
 | **Action Statement** | Documented procedures exist for recovering each critical system from backup. Procedures are tested and updated annually. Recovery time and recovery point objectives are defined and measured. |
 | **System Applicability** | Process, Hardware, Software, Data |
 | **Owning Pillar** | Engineering |
@@ -464,9 +468,9 @@ Every control entry follows this structure:
 
 ## 9. Identification and Authentication (IA)
 
-### IA-001: Unique Identification
+### CB2-IA-001: Unique Identification
 
-| **Control ID** | IA-001 |
+| **Control ID** | CB2-IA-001 |
 | **Action Statement** | Every user and system component has a unique identifier. Shared accounts are prohibited for interactive login. Service accounts are uniquely named and documented. |
 | **System Applicability** | Software, Cloud |
 | **Owning Pillar** | Engineering |
@@ -474,9 +478,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly |
 | **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 
-### IA-002: Strong Authentication
+### CB2-IA-002: Strong Authentication
 
-| **Control ID** | IA-002 |
+| **Control ID** | CB2-IA-002 |
 | **Action Statement** | Authentication uses phishing-resistant methods where possible (FIDO2, certificate-based). Password-based authentication requires minimum 12 characters and is combined with MFA. Default passwords are changed on first use. |
 | **System Applicability** | Software, Cloud, Network |
 | **Owning Pillar** | Engineering |
@@ -484,9 +488,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Monthly verification |
 | **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 
-### IA-003: Identifier Management
+### CB2-IA-003: Identifier Management
 
-| **Control ID** | IA-003 |
+| **Control ID** | CB2-IA-003 |
 | **Action Statement** | User identifiers are managed throughout their lifecycle. Identifiers are never reused for 12 months after deactivation. Group accounts are prohibited. |
 | **System Applicability** | Software |
 | **Owning Pillar** | Engineering |
@@ -494,9 +498,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly |
 | **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 
-### IA-004: Authenticator Management
+### CB2-IA-004: Authenticator Management
 
-| **Control ID** | IA-004 |
+| **Control ID** | CB2-IA-004 |
 | **Action Statement** | Authenticators (passwords, tokens, certificates, keys) are managed through their lifecycle: issuance, storage, rotation, revocation, and disposal. Default authenticators are changed on first use. |
 | **System Applicability** | Software, Cloud |
 | **Owning Pillar** | Engineering |
@@ -504,9 +508,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly |
 | **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 
-### IA-005: Device Authentication
+### CB2-IA-005: Device Authentication
 
-| **Control ID** | IA-005 |
+| **Control ID** | CB2-IA-005 |
 | **Action Statement** | Devices connecting to the network or accessing resources are uniquely identified and authenticated. Certificate-based or domain authentication is preferred over pre-shared keys. |
 | **System Applicability** | Hardware, Network |
 | **Owning Pillar** | Engineering |
@@ -518,9 +522,9 @@ Every control entry follows this structure:
 
 ## 10. Incident Response (IR)
 
-### IR-001: Incident Response Plan
+### CB2-IR-001: Incident Response Plan
 
-| **Control ID** | IR-001 |
+| **Control ID** | CB2-IR-001 |
 | **Action Statement** | A written incident response plan exists. It defines incident types, severity classification, roles, communication procedures, and escalation paths. The plan is tested annually. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -528,9 +532,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual review and test |
 | **Subordinate Standard** | [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 
-### IR-002: Incident Detection and Reporting
+### CB2-IR-002: Incident Detection and Reporting
 
-| **Control ID** | IR-002 |
+| **Control ID** | CB2-IR-002 |
 | **Action Statement** | Incidents are detected through automated monitoring and reported through a defined channel. All personnel know how to report a security incident. Reports are acknowledged within 1 hour and triaged within 4 hours. |
 | **System Applicability** | Process, Software |
 | **Owning Pillar** | Risk |
@@ -538,9 +542,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Continuous |
 | **Subordinate Standard** | [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 
-### IR-003: Incident Containment
+### CB2-IR-003: Incident Containment
 
-| **Control ID** | IR-003 |
+| **Control ID** | CB2-IR-003 |
 | **Action Statement** | The IR team can contain an incident within defined timeframes. Containment procedures exist for common incident types (ransomware, account compromise, data exfiltration, denial of service). |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -548,9 +552,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual review; per-incident execution |
 | **Subordinate Standard** | [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 
-### IR-004: Post-Incident Review
+### CB2-IR-004: Post-Incident Review
 
-| **Control ID** | IR-004 |
+| **Control ID** | CB2-IR-004 |
 | **Action Statement** | Within 14 days of incident closure, a post-incident review is conducted. The review identifies root cause, timeline, response effectiveness, lessons learned, and control improvements. Findings are tracked to remediation. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -558,9 +562,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per incident |
 | **Subordinate Standard** | [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 
-### IR-005: Incident Evidence Preservation
+### CB2-IR-005: Incident Evidence Preservation
 
-| **Control ID** | IR-005 |
+| **Control ID** | CB2-IR-005 |
 | **Action Statement** | During incident response, evidence is preserved for forensic analysis and potential legal action. Chain of custody is maintained. Evidence retention follows legal and regulatory requirements. |
 | **System Applicability** | Process, Data |
 | **Owning Pillar** | Risk |
@@ -572,9 +576,9 @@ Every control entry follows this structure:
 
 ## 11. Maintenance (MA)
 
-### MA-001: Controlled Maintenance
+### CB2-MA-001: Controlled Maintenance
 
-| **Control ID** | MA-001 |
+| **Control ID** | CB2-MA-001 |
 | **Action Statement** | System maintenance is planned, scheduled, and performed by authorized personnel. Maintenance activities are logged. Remote maintenance sessions are authenticated, encrypted, and monitored. |
 | **System Applicability** | Hardware, Software |
 | **Owning Pillar** | Engineering |
@@ -582,9 +586,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per maintenance event |
 | **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
 
-### MA-002: Maintenance Tools
+### CB2-MA-002: Maintenance Tools
 
-| **Control ID** | MA-002 |
+| **Control ID** | CB2-MA-002 |
 | **Action Statement** | Maintenance tools (diagnostic utilities, remote access tools, patching tools) are approved, inventoried, and kept current. Unapproved tools are blocked. |
 | **System Applicability** | Software |
 | **Owning Pillar** | Engineering |
@@ -592,9 +596,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly |
 | **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
 
-### MA-003: Firmware and Hardware Updates
+### CB2-MA-003: Firmware and Hardware Updates
 
-| **Control ID** | MA-003 |
+| **Control ID** | CB2-MA-003 |
 | **Action Statement** | Network device firmware, server firmware (BIOS/UEFI), and hardware component firmware are updated when security vulnerabilities are announced. Critical firmware updates: 30 days. |
 | **System Applicability** | Hardware |
 | **Owning Pillar** | Engineering |
@@ -606,9 +610,9 @@ Every control entry follows this structure:
 
 ## 12. Media Protection (MP)
 
-### MP-001: Media Sanitization
+### CB2-MP-001: Media Sanitization
 
-| **Control ID** | MP-001 |
+| **Control ID** | CB2-MP-001 |
 | **Action Statement** | Digital media (hard drives, SSDs, USB drives, tapes) is sanitized before disposal or reuse. Sanitization method is appropriate to the data classification. NIST SP 800-88 methods are the standard. |
 | **System Applicability** | Hardware, Data |
 | **Owning Pillar** | Governance |
@@ -616,9 +620,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per disposal event |
 | **Subordinate Standard** | [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) |
 
-### MP-002: Media Transport
+### CB2-MP-002: Media Transport
 
-| **Control ID** | MP-002 |
+| **Control ID** | CB2-MP-002 |
 | **Action Statement** | Media containing sensitive data is protected during transport. Encryption is applied. Access is restricted to authorized couriers. Chain of custody is maintained. |
 | **System Applicability** | Data, Process |
 | **Owning Pillar** | Governance |
@@ -626,9 +630,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per transport event |
 | **Subordinate Standard** | [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) |
 
-### MP-003: Media Access
+### CB2-MP-003: Media Access
 
-| **Control ID** | MP-003 |
+| **Control ID** | CB2-MP-003 |
 | **Action Statement** | Access to media containing sensitive data is restricted to authorized personnel. Media is stored in physically secure locations. Access is logged. |
 | **System Applicability** | Data, Physical |
 | **Owning Pillar** | Governance |
@@ -640,9 +644,9 @@ Every control entry follows this structure:
 
 ## 13. Physical and Environmental (PE)
 
-### PE-001: Physical Access Control
+### CB2-PE-001: Physical Access Control
 
-| **Control ID** | PE-001 |
+| **Control ID** | CB2-PE-001 |
 | **Action Statement** | Physical access to facilities housing in-scope systems is controlled and monitored. Access is granted based on role and need. Visitor access is logged and escorted. |
 | **System Applicability** | Physical |
 | **Owning Pillar** | Governance |
@@ -650,9 +654,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly review |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PE-002: Environmental Controls
+### CB2-PE-002: Environmental Controls
 
-| **Control ID** | PE-002 |
+| **Control ID** | CB2-PE-002 |
 | **Action Statement** | Facilities housing in-scope systems have environmental controls: temperature, humidity, fire suppression, and power protection (UPS + generator). Controls are monitored and tested. |
 | **System Applicability** | Physical |
 | **Owning Pillar** | Governance |
@@ -660,9 +664,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PE-003: Monitoring Physical Access
+### CB2-PE-003: Monitoring Physical Access
 
-| **Control ID** | PE-003 |
+| **Control ID** | CB2-PE-003 |
 | **Action Statement** | Physical access to facilities is monitored. Access events are logged and reviewed. Unauthorized access attempts are investigated. |
 | **System Applicability** | Physical, Data |
 | **Owning Pillar** | Governance |
@@ -674,9 +678,9 @@ Every control entry follows this structure:
 
 ## 14. Planning (PL)
 
-### PL-001: System Security Plan
+### CB2-PL-001: System Security Plan
 
-| **Control ID** | PL-001 |
+| **Control ID** | CB2-PL-001 |
 | **Action Statement** | A System Security Plan (SSP) exists for the in-scope environment. The SSP describes system boundaries, security controls, implementation status, and interconnection with other systems. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Governance |
@@ -684,9 +688,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual review |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PL-002: Architecture Documentation
+### CB2-PL-002: Architecture Documentation
 
-| **Control ID** | PL-002 |
+| **Control ID** | CB2-PL-002 |
 | **Action Statement** | The in-scope system architecture is documented. Documentation includes: network topology, data flows, trust boundaries, external connections, and security tool placement. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Engineering |
@@ -694,9 +698,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Quarterly review; update on change |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PL-003: Rules of Behavior
+### CB2-PL-003: Rules of Behavior
 
-| **Control ID** | PL-003 |
+| **Control ID** | CB2-PL-003 |
 | **Action Statement** | Users of in-scope systems acknowledge rules of behavior before being granted access. Rules cover acceptable use, data handling, security responsibilities, and consequences of violation. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Governance |
@@ -708,9 +712,9 @@ Every control entry follows this structure:
 
 ## 15. Personnel Security (PS)
 
-### PS-001: Personnel Screening
+### CB2-PS-001: Personnel Screening
 
-| **Control ID** | PS-001 |
+| **Control ID** | CB2-PS-001 |
 | **Action Statement** | Personnel with access to in-scope systems undergo background screening before access is granted. Screening level is appropriate to the sensitivity of the data and systems accessed. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Governance |
@@ -718,9 +722,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Pre-hire; re-screening per policy (typically 3-5 years) |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PS-002: Personnel Termination
+### CB2-PS-002: Personnel Termination
 
-| **Control ID** | PS-002 |
+| **Control ID** | CB2-PS-002 |
 | **Action Statement** | Upon termination of employment, access to all systems is revoked within 24 hours. Physical access is revoked. Company equipment is recovered. Exit interview covers security obligations. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Governance |
@@ -728,9 +732,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per termination event |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PS-003: Personnel Transfer
+### CB2-PS-003: Personnel Transfer
 
-| **Control ID** | PS-003 |
+| **Control ID** | CB2-PS-003 |
 | **Action Statement** | When personnel change roles, access is reviewed and adjusted to match the new role within 5 business days. Old access is removed; new access is granted only as needed. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Governance |
@@ -742,9 +746,9 @@ Every control entry follows this structure:
 
 ## 16. Risk Assessment (RA)
 
-### RA-001: Risk Assessment
+### CB2-RA-001: Risk Assessment
 
-| **Control ID** | RA-001 |
+| **Control ID** | CB2-RA-001 |
 | **Action Statement** | A risk assessment of the in-scope environment is conducted at least annually. The assessment identifies threats, vulnerabilities, likelihood, impact, and resulting risk level. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -752,9 +756,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual |
 | **Subordinate Standard** | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 
-### RA-002: Vulnerability Scanning
+### CB2-RA-002: Vulnerability Scanning
 
-| **Control ID** | RA-002 |
+| **Control ID** | CB2-RA-002 |
 | **Action Statement** | In-scope systems are scanned for vulnerabilities at defined intervals. Results are triaged, prioritized, and remediated per defined SLAs. Exceptions are tracked in the risk register. |
 | **System Applicability** | Hardware, Software, Network, Cloud |
 | **Owning Pillar** | Risk |
@@ -762,9 +766,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Weekly (external), Monthly (internal) |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### RA-003: Risk Register
+### CB2-RA-003: Risk Register
 
-| **Control ID** | RA-003 |
+| **Control ID** | CB2-RA-003 |
 | **Action Statement** | A risk register tracks all identified risks: threat, vulnerability, likelihood, impact, inherent risk, treatment (accept/mitigate/transfer/avoid), residual risk, owner, and review date. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -772,9 +776,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Monthly review; continuous update |
 | **Subordinate Standard** | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 
-### RA-004: Risk Acceptance
+### CB2-RA-004: Risk Acceptance
 
-| **Control ID** | RA-004 |
+| **Control ID** | CB2-RA-004 |
 | **Action Statement** | When a risk cannot be mitigated or transferred, it is formally accepted by the appropriate authority. Risk acceptances have an expiration date (maximum 12 months), documented compensating controls, and an approving signature. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -782,9 +786,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per acceptance; review on expiration |
 | **Subordinate Standard** | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 
-### RA-005: Threat Intelligence Integration
+### CB2-RA-005: Threat Intelligence Integration
 
-| **Control ID** | RA-005 |
+| **Control ID** | CB2-RA-005 |
 | **Action Statement** | The risk assessment process incorporates current threat intelligence. Emerging threats relevant to the client's industry and technology stack are reviewed and risk-assessed at least quarterly. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -796,9 +800,9 @@ Every control entry follows this structure:
 
 ## 17. System and Services Acquisition (SA)
 
-### SA-001: Security Requirements in Procurement
+### CB2-SA-001: Security Requirements in Procurement
 
-| **Control ID** | SA-001 |
+| **Control ID** | CB2-SA-001 |
 | **Action Statement** | Security requirements are included in RFPs, contracts, and vendor selection criteria for all system and service acquisitions. Vendors are evaluated against CERG control requirements before purchase. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -806,9 +810,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per acquisition |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SA-002: Software Development Security
+### CB2-SA-002: Software Development Security
 
-| **Control ID** | SA-002 |
+| **Control ID** | CB2-SA-002 |
 | **Action Statement** | Custom-developed software follows secure development practices. Code is reviewed, tested for security flaws, and scanned for vulnerabilities before deployment. |
 | **System Applicability** | Software, Process |
 | **Owning Pillar** | Engineering |
@@ -816,9 +820,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Per release |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SA-003: Supply Chain Risk Management
+### CB2-SA-003: Supply Chain Risk Management
 
-| **Control ID** | SA-003 |
+| **Control ID** | CB2-SA-003 |
 | **Action Statement** | Third-party software and services are assessed for supply chain risk before acquisition. SBOMs are collected for critical software. Vendor security posture is reviewed annually. |
 | **System Applicability** | Process, Software |
 | **Owning Pillar** | Risk |
@@ -826,9 +830,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Pre-acquisition; annual vendor review |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SA-004: Development Environment Security
+### CB2-SA-004: Development Environment Security
 
-| **Control ID** | SA-004 |
+| **Control ID** | CB2-SA-004 |
 | **Action Statement** | Development and testing environments are separate from production. Production data is not used in development without sanitization. Development access does not grant production access. |
 | **System Applicability** | Software, Cloud |
 | **Owning Pillar** | Engineering |
@@ -836,9 +840,9 @@ Every control entry follows this structure:
 | **Minimum Frequency** | Annual review |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SA-005: Outsourced Development
+### CB2-SA-005: Outsourced Development
 
-| **Control ID** | SA-005 |
+| **Control ID** | CB2-SA-005 |
 | **Action Statement** | When software development is outsourced, the contract requires adherence to the client's security standards. Deliverables are scanned for vulnerabilities before acceptance. Source code and build artifacts are escrowed or delivered. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
@@ -850,91 +854,323 @@ Every control entry follows this structure:
 
 ## 18. System and Communications Protection (SC)
 
-### SC-001: Network Segmentation
-Network segmented to isolate critical systems, restrict lateral movement, separate trust zones. VLANs for servers, workstations, guest, DMZ. OT physically/logically isolated from IT. | Network | Engineering | Network diagram, firewall ruleset | Quarterly | —
+### CB2-SC-001: Network Segmentation
 
-### SC-002: Boundary Protection
-Firewalls restrict traffic to authorized ports/protocols. Default-deny inbound/outbound. Rules reviewed quarterly. | Network | Engineering | Firewall config export, review log | Quarterly | —
+| **Control ID** | CB2-SC-001 |
+| **Primary CB-001 / NIST Anchor** | SC-7 Boundary Protection |
+| **Related Anchors** | AC-4, CA-3 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Network segmented to isolate critical systems, restrict lateral movement, separate trust zones. VLANs for servers, workstations, guest, DMZ. OT physically/logically isolated from IT. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Network diagram, firewall ruleset |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SC-003: Encryption at Rest
-Sensitive data at rest encrypted. Keys managed separately. | Hardware, Software, Cloud, Data | Engineering | Encryption config, key management procedure | Quarterly | —
+### CB2-SC-002: Boundary Protection
 
-### SC-004: Encryption in Transit
-TLS 1.2+ required. Legacy protocols disabled. | Network, Cloud, Software | Engineering | TLS scan report | Quarterly | —
+| **Control ID** | CB2-SC-002 |
+| **Primary CB-001 / NIST Anchor** | SC-7 Boundary Protection |
+| **Related Anchors** | SC-5, AC-4 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Firewalls restrict traffic to authorized ports/protocols. Default-deny inbound/outbound. Rules reviewed quarterly. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Firewall config export, review log |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SC-005: VoIP Protection
-VoIP isolated on separate VLAN. Default credentials changed. | Network, Hardware | Engineering | VoIP config, credential log | Quarterly | —, VoIP PBX
+### CB2-SC-003: Encryption at Rest
 
-### SC-006: Wireless Security
-WPA2-Enterprise with 802.1X. No PSK for corporate. Guest isolated. | Network | Engineering | Wireless config | Quarterly | —, RADIUS/NPS
+| **Control ID** | CB2-SC-003 |
+| **Primary CB-001 / NIST Anchor** | SC-28 Protection of Information at Rest |
+| **Related Anchors** | SC-12, SC-13 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Sensitive data at rest encrypted. Keys managed separately. |
+| **System Applicability** | Hardware, Software, Cloud, Data |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Encryption config, key management procedure |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 
-### SC-007: Mobile Device Security
-MDM enforced: screen lock, encryption, min OS, remote wipe. | Hardware, Software | Engineering | MDM policy, compliance report | Monthly | —
+### CB2-SC-004: Encryption in Transit
 
-### SC-008: DNS Security
-DNS filtering blocks malicious domains. Internal DNS hardened. | Network | Engineering | DNS config, filtering policy | Quarterly | —
+| **Control ID** | CB2-SC-004 |
+| **Primary CB-001 / NIST Anchor** | SC-8 Transmission Confidentiality and Integrity |
+| **Related Anchors** | SC-12, SC-13, AC-17 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | TLS 1.2+ required. Legacy protocols disabled. |
+| **System Applicability** | Network, Cloud, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | TLS scan report |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 
----
+### CB2-SC-005: VoIP Protection
+
+| **Control ID** | CB2-SC-005 |
+| **Primary CB-001 / NIST Anchor** | SC-7 Boundary Protection |
+| **Related Anchors** | CM-7 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | VoIP isolated on separate VLAN. Default credentials changed. |
+| **System Applicability** | Network, Hardware |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | VoIP config, credential log |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
+
+### CB2-SC-006: Wireless Security
+
+| **Control ID** | CB2-SC-006 |
+| **Primary CB-001 / NIST Anchor** | AC-18 Wireless Access |
+| **Related Anchors** | SC-8, SC-7 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | WPA2-Enterprise with 802.1X. No PSK for corporate. Guest isolated. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Wireless config |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
+
+### CB2-SC-007: Mobile Device Security
+
+| **Control ID** | CB2-SC-007 |
+| **Primary CB-001 / NIST Anchor** | AC-19 Access Control for Mobile Devices |
+| **Related Anchors** | CM-8, AC-18 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | MDM enforced: screen lock, encryption, min OS, remote wipe. |
+| **System Applicability** | Hardware, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | MDM policy, compliance report |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
+
+### CB2-SC-008: DNS Security
+
+| **Control ID** | CB2-SC-008 |
+| **Primary CB-001 / NIST Anchor** | SC-7 Boundary Protection / SC-20 Secure Name/Address Resolution |
+| **Related Anchors** | SI-3, SC-5 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | DNS filtering blocks malicious domains. Internal DNS hardened. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | DNS config, filtering policy |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
 ## 19. System and Information Integrity (SI)
 
-### SI-001: Malware Protection
-Anti-malware deployed. Real-time protection. Auto-update. Coverage monitored. | Hardware, Software | Risk | EDR dashboard | Monthly | —
+### CB2-SI-001: Malware Protection
 
-### SI-002: Vulnerability Monitoring
-New vulns assessed within 24h. CISA KEV, vendor advisories monitored. | Hardware, Software, Cloud | Risk | Advisory review log | Weekly | —
+| **Control ID** | CB2-SI-001 |
+| **Primary CB-001 / NIST Anchor** | SI-3 Malicious Code Protection |
+| **Related Anchors** | SI-4, SI-7, CM-8 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Anti-malware deployed. Real-time protection. Auto-update. Coverage monitored. |
+| **System Applicability** | Hardware, Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | EDR dashboard |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
-### SI-003: File Integrity Monitoring
-Critical files monitored for unauthorized changes. Alerts generated. | Software | Risk | FIM config, alert log | Continuous | —
+### CB2-SI-002: Vulnerability Monitoring
 
-### SI-004: Detection Engineering
-Sigma rules deployed, ATT&CK mapped. Tested with Atomic Red Team. Gaps documented. | Software, Process | Risk | Rule inventory, test results | Monthly | —
+| **Control ID** | CB2-SI-002 |
+| **Primary CB-001 / NIST Anchor** | SI-2 Flaw Remediation / RA-5 Vulnerability Scanning |
+| **Related Anchors** | CA-7, CM-8 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | New vulns assessed within 24h. CISA KEV, vendor advisories monitored. |
+| **System Applicability** | Hardware, Software, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Advisory review log |
+| **Minimum Frequency** | Weekly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
-### SI-005: Email Security
-SPF/DKIM/DMARC enforced. Safe Links/Attachments. Phish investigated. | Software, Cloud | Risk | Email config, phish metrics | Monthly | —
+### CB2-SI-003: File Integrity Monitoring
 
-### SI-006: Web Filtering
-Web traffic filtered for malicious/phishing/inappropriate sites. | Network, Software | Risk | Filtering config | Monthly | —
+| **Control ID** | CB2-SI-003 |
+| **Primary CB-001 / NIST Anchor** | SI-7 Software, Firmware, and Information Integrity |
+| **Related Anchors** | SI-3, CM-3, CM-6 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Critical files monitored for unauthorized changes. Alerts generated. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | FIM config, alert log |
+| **Minimum Frequency** | Continuous |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
-### SI-007: Data Loss Prevention
-DLP for email, cloud, endpoints. Sensitive data exfiltration blocked. | Data, Cloud | Risk | DLP config, incident log | Quarterly | —
+### CB2-SI-004: Detection Engineering
 
-### SI-008: Application Security Testing
-Web apps tested for vulns. Critical remediated before production. | Software | Engineering | App test report | Per release | —
+| **Control ID** | CB2-SI-004 |
+| **Primary CB-001 / NIST Anchor** | SI-4 System Monitoring |
+| **Related Anchors** | AU-6, CA-7, IR-4 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Sigma rules deployed, ATT&CK mapped. Tested with Atomic Red Team. Gaps documented. |
+| **System Applicability** | Software, Process |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Rule inventory, test results |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
----
+### CB2-SI-005: Email Security
+
+| **Control ID** | CB2-SI-005 |
+| **Primary CB-001 / NIST Anchor** | SI-3 Malicious Code Protection / SC-7 Boundary Protection |
+| **Related Anchors** | SC-8 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | SPF/DKIM/DMARC enforced. Safe Links/Attachments. Phish investigated. |
+| **System Applicability** | Software, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Email config, phish metrics |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+
+### CB2-SI-006: Web Filtering
+
+| **Control ID** | CB2-SI-006 |
+| **Primary CB-001 / NIST Anchor** | SI-3 Malicious Code Protection / SC-7 Boundary Protection |
+| **Related Anchors** | SC-8 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | Web traffic filtered for malicious/phishing/inappropriate sites. |
+| **System Applicability** | Network, Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Filtering config |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+
+### CB2-SI-007: Data Loss Prevention
+
+| **Control ID** | CB2-SI-007 |
+| **Primary CB-001 / NIST Anchor** | SI-4 System Monitoring / AC-4 Information Flow Enforcement |
+| **Related Anchors** | SC-7, CM-7 |
+| **Relationship** | Overlay / Where Applicable |
+| **Action Statement** | DLP for email, cloud, endpoints. Sensitive data exfiltration blocked. |
+| **System Applicability** | Data, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | DLP config, incident log |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+
+### CB2-SI-008: Application Security Testing
+
+| **Control ID** | CB2-SI-008 |
+| **Primary CB-001 / NIST Anchor** | SI-2 Flaw Remediation / SA-11 Developer Testing |
+| **Related Anchors** | SA-8 |
+| **Relationship** | Supplements CB-001 |
+| **Action Statement** | Web apps tested for vulns. Critical remediated before production. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | App test report |
+| **Minimum Frequency** | Per release |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
 ## 20. Supply Chain Risk Management (SR)
 
-### SR-001: Software Bill of Materials
-SBOM collected for critical software. Components, versions, vulns tracked. | Software | Risk | SBOM inventory | Per acquisition | —
+### CB2-SR-001: Software Bill of Materials
 
-### SR-002: Vendor Risk Assessment
-Vendors assessed: posture, history, compliance, data handling. | Process | Risk | Vendor assessment, tier list | Annual (critical) | —
+| **Control ID** | CB2-SR-001 |
+| **Primary CB-001 / NIST Anchor** | SR-1 Supply Chain Policy / CM-8 System Component Inventory |
+| **Related Anchors** | SA-9, SA-4 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | SBOM collected for critical software. Components, versions, vulns tracked. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | SBOM inventory |
+| **Minimum Frequency** | Per acquisition |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
-### SR-003: Trusted Software Sources
-Software from trusted sources only. Integrity verified before install. | Software | Engineering | Approved source list | Per acquisition | —
+### CB2-SR-002: Vendor Risk Assessment
 
-### SR-004: Hardware Supply Chain
-Hardware from authorized resellers. Counterfeit/tampered rejected. | Hardware | Risk | Authorized reseller list | Per acquisition | Reseller agreements
+| **Control ID** | CB2-SR-002 |
+| **Primary CB-001 / NIST Anchor** | SR-3 Supply Chain Controls and Processes / SA-9 External System Services |
+| **Related Anchors** | SA-4, RA-3 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Vendors assessed: posture, history, compliance, data handling. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Vendor assessment, tier list |
+| **Minimum Frequency** | Annual (critical) |
+| **Subordinate Standard** | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 
----
+### CB2-SR-003: Trusted Software Sources
+
+| **Control ID** | CB2-SR-003 |
+| **Primary CB-001 / NIST Anchor** | SR-1 Supply Chain Policy |
+| **Related Anchors** | SA-4, CM-8 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Software from trusted sources only. Integrity verified before install. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Approved source list |
+| **Minimum Frequency** | Per acquisition |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
+
+### CB2-SR-004: Hardware Supply Chain
+
+| **Control ID** | CB2-SR-004 |
+| **Primary CB-001 / NIST Anchor** | SR-1 Supply Chain Policy |
+| **Related Anchors** | SA-4, CM-8 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Hardware from authorized resellers. Counterfeit/tampered rejected. |
+| **System Applicability** | Hardware |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Authorized reseller list |
+| **Minimum Frequency** | Per acquisition |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
 
 ## 21. Program Management (PM)
 
-### PM-001: Information Security Program Plan
-Documented plan: scope, org structure, roles, resources, metrics. | Process | Governance | Program plan document | Annual | —
+### CB2-PM-001: Information Security Program Plan
 
-### PM-002: Senior Security Officer
-Named individual accountable for program. Budget authority. | Process | Governance | Appointment/org chart | Annual | None (organizational)
+| **Control ID** | CB2-PM-001 |
+| **Primary CB-001 / NIST Anchor** | PM-1 Information Security Program Plan |
+| **Related Anchors** | PM-2, PM-5 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Documented plan: scope, org structure, roles, resources, metrics. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Program plan document |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
-### PM-003: Security Metrics Program
-Performance measured. Reported to leadership. Improves program. | Process | Governance | Metrics dashboard | Monthly/Quarterly | —
+### CB2-PM-002: Senior Security Officer
 
-### PM-004: Continuous Improvement
-Program reviewed and improved. Lessons learned feed updates. | Process | Governance | Review minutes, action items | Quarterly | —
+| **Control ID** | CB2-PM-002 |
+| **Primary CB-001 / NIST Anchor** | PM-2 Senior Agency Information Security Officer |
+| **Related Anchors** | PM-1 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Named individual accountable for program. Budget authority. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Appointment/org chart |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
----
+### CB2-PM-003: Security Metrics Program
+
+| **Control ID** | CB2-PM-003 |
+| **Primary CB-001 / NIST Anchor** | PM-4 Plan of Action and Milestones Process |
+| **Related Anchors** | PM-1, PM-6 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Performance measured. Reported to leadership. Improves program. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Metrics dashboard |
+| **Minimum Frequency** | Monthly/Quarterly |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+
+### CB2-PM-004: Continuous Improvement
+
+| **Control ID** | CB2-PM-004 |
+| **Primary CB-001 / NIST Anchor** | PM-6 Measures of Performance |
+| **Related Anchors** | PM-1, PM-4 |
+| **Relationship** | Expands CB-001 |
+| **Action Statement** | Program reviewed and improved. Lessons learned feed updates. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Review minutes, action items |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
 
 ## 22. Document Control
 
