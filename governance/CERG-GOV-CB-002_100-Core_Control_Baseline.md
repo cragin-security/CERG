@@ -1,438 +1,438 @@
-1|# 100-Core Control Baseline (Extended)
-2|
-3|## Practitioner-Ready Control Set with MSP Copy-Paste Instructions
-4|
-5|| | |
-6||---|---|
-7|| **Document ID** | CERG-GOV-CB-002 |
-8|| **Version** | 1.0.0 |
-9|| **Status** | Draft |
-10|| **Classification** | Public |
-11|| **Owner** | Consulting Practice Lead |
-12|| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
-13|| **Review Cycle** | Quarterly |
-14|| **Frameworks** | NIST 800-53r5 · NIST 800-171r3 · NIST CSF 2.0 · CIS Controls v8 · ISO/IEC 27001 A.5-A.8 |
-15|| **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 · HIPAA Security Rule |
-16|| **Environments** | All in-scope assets — IT, cloud, SaaS, OT (partial), CUI (where scoped) |
-17|
-18|---
-19|
-20|## Table of Contents
-21|
-22|1. [Relationship to Upstream CERG](#1-relationship-to-upstream-cerg)
-23|2. [Control Format](#2-control-format)
-24|3. [Access Control (AC)](#3-access-control-ac)
-25|4. [Awareness and Training (AT)](#4-awareness-and-training-at)
-26|5. [Audit and Accountability (AU)](#5-audit-and-accountability-au)
-27|6. [Assessment, Authorization, and Monitoring (CA)](#6-assessment-authorization-and-monitoring-ca)
-28|7. [Configuration Management (CM)](#7-configuration-management-cm)
-29|8. [Contingency Planning (CP)](#8-contingency-planning-cp)
-30|9. [Identification and Authentication (IA)](#9-identification-and-authentication-ia)
-31|10. [Incident Response (IR)](#10-incident-response-ir)
-32|11. [Maintenance (MA)](#11-maintenance-ma)
-33|12. [Media Protection (MP)](#12-media-protection-mp)
-34|13. [Physical and Environmental (PE)](#13-physical-and-environmental-pe)
-35|14. [Planning (PL)](#14-planning-pl)
-36|15. [Personnel Security (PS)](#15-personnel-security-ps)
-37|16. [Risk Assessment (RA)](#16-risk-assessment-ra)
-38|17. [System and Services Acquisition (SA)](#17-system-and-services-acquisition-sa)
-39|18. [System and Communications Protection (SC)](#18-system-and-communications-protection-sc)
-40|19. [System and Information Integrity (SI)](#19-system-and-information-integrity-si)
-41|20. [Supply Chain Risk Management (SR)](#20-supply-chain-risk-management-sr)
-42|21. [Program Management (PM)](#21-program-management-pm)
-43|22. [Document Control](#22-document-control)
-44|
-45|---
-46|
-47|## 1. Relationship to Upstream CERG
-48|
-49|The upstream CERG baseline ([CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md)) defines the framework architecture and a schematic control matrix. This document — part of the cragin-security fork — extends the upstream baseline into a **practitioner-ready control set**.
-50|
-51|Differences from upstream:
-52|
-53|| Dimension | Upstream (CB-001) | This Document (CB-002) |
-54||-----------|-------------------|------------------------|
-55|| Control count | ~18 schematic entries | 97 enumerated controls |
-56|| Audience | Program architects, auditors | MSPs, MSSPs, IT generalists |
-57|| Instructions | None | Copy-paste deployment per control |
-58|| Tool bindings | Framework-level | Tied to [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) |
-59|| Evidence | Named artifact | Named artifact + collection method + frequency |
-60|| Inheritance | Described in Section 5 of CB-001 | Per-control inheritance notes where applicable |
-61|
-62|Upstream CB-001 remains the authoritative architecture. This document is the implementation companion. Control IDs (e.g., AC-001) correspond to NIST 800-53r5 identifiers where applicable; CERG-native controls use domain-specific prefixes.
-63|
-64|---
-65|
-66|## 2. Control Format
-67|
-68|Every control entry follows this structure:
-69|
-70|| **Control ID** | NIST-aligned or CERG-native identifier |
-71|| **Action Statement** | What the control requires, in plain language an IT generalist can understand |
-72|| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process — one or more |
-73|| **Owning Pillar** | Engineering, Risk, or Governance |
-74|| **Named Evidence** | The specific artifact that proves the control is operating |
-75|| **Minimum Frequency** | How often evidence must be collected |
-76|| **Subordinate Standard** | Link to the relevant CERG standard with parameter detail |
-77|| **MSP Implementation Note** | Copy-paste instructions for MSPs/MSSPs (where applicable) |
-78|| **Tool Binding** | Which tool(s) from the [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) satisfy this control |
-79|
-80|---
-81|
-82|## 3. Access Control (AC)
-83|
-84|### AC-001: Account Lifecycle Management
-85|
-86|| **Control ID** | AC-001 |
-87|| **Action Statement** | Every user and service account has a documented request, named owner, defined access level, and Join-Move-Leave (JML) record. Accounts are disabled within 24 hours of termination. Dormant accounts (no login in 90 days) are disabled. |
-88|| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process |
-89|| **Owning Pillar** | Engineering |
-90|| **Named Evidence** | JML ticket log or HRIS integration report showing account lifecycle events |
-91|| **Minimum Frequency** | Continuous (automated) / Quarterly (manual review) |
-92|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-93|| **MSP Implementation Note** | Connect HRIS to IdP for automated provisioning/deprovisioning. For clients without HRIS integration, run this script quarterly: `Get-ADUser -Filter {LastLogonDate -lt (Get-Date).AddDays(-90)} | Disable-ADAccount`. Document all terminations in the ticket system within one business day. |
-94|| **Tool Binding** | Okta / Entra ID (IdP), HaloPSA (ticketing), NinjaOne (RMM verification) |
-95|
-96|### AC-002: MFA Enforcement
-97|
-98|| **Control ID** | AC-002 |
-99|| **Action Statement** | Multi-factor authentication is enforced for all user accounts accessing company systems. No exceptions for executives, IT staff, or administrators. Service accounts with non-interactive login must have documented compensating controls (network restriction, monitoring, credential rotation). |
-100|| **System Applicability** | Software, Cloud, Network |
-101|| **Owning Pillar** | Engineering |
-102|| **Named Evidence** | IdP MFA enrollment report showing 100% enrollment for active human users |
-103|| **Minimum Frequency** | Monthly |
-104|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-105|| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/msp-runbook-v1.md) AC-002 section for full deployment steps. Core commands: Okta > Security > Multifactor > Require for all. Entra ID > Conditional Access > Require MFA for all users. Test: attempt login without MFA — must be rejected. |
-106|| **Tool Binding** | Okta / Entra ID |
-107|
-108|### AC-003: Access Enforcement
-109|
-110|| **Control ID** | AC-003 |
-111|| **Action Statement** | All access to systems uses approved authentication and authorization controls. Local accounts, shared accounts, hard-coded credentials, and static passwords are prohibited where an IdP can enforce authentication. |
-112|| **System Applicability** | Hardware, Software, Network, Cloud, Data |
-113|| **Owning Pillar** | Engineering |
-114|| **Named Evidence** | IdP policy export showing authentication policies; PAM solution deployment report (if applicable) |
-115|| **Minimum Frequency** | Quarterly |
-116|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-117|| **MSP Implementation Note** | Enforce SAML/OIDC SSO for all SaaS apps. Block legacy authentication protocols in Entra ID. For on-prem systems: join to domain, enforce Kerberos, disable NTLM where possible. Audit local accounts monthly: `Get-LocalUser | Where-Object Enabled` on all servers. |
-118|| **Tool Binding** | Okta / Entra ID |
-119|
-120|### AC-004: Least Privilege
-121|
-122|| **Control ID** | AC-004 |
-123|| **Action Statement** | Users and services operate with the minimum access necessary. Administrative privileges are granted through just-in-time or privileged access management, not standing group membership. Default and over-privileged accounts are identified and restricted. |
-124|| **System Applicability** | Hardware, Software, Cloud, Data |
-125|| **Owning Pillar** | Engineering |
-126|| **Named Evidence** | Quarterly privilege audit report; PAM session log for administrative access |
-127|| **Minimum Frequency** | Quarterly |
-128|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-129|| **MSP Implementation Note** | Remove all users from Domain Admins. Create tiered admin groups (Workstation Admin, Server Admin, Domain Admin). Use PAM for elevation. For SMB without PAM budget: dedicated admin accounts (u-admin) separate from daily driver accounts, with 12-hour credential rotation. |
-130|| **Tool Binding** | Okta / Entra ID (PIM), CyberArk / Delinea (PAM for enterprise) |
-131|
-132|### AC-005: Remote Access
-133|
-134|| **Control ID** | AC-005 |
-135|| **Action Statement** | Remote access to internal systems requires MFA, encrypted transport, and device posture validation. Split-tunnel VPN configurations are prohibited unless documented with compensating controls. |
-136|| **System Applicability** | Network, Cloud, Software |
-137|| **Owning Pillar** | Engineering |
-138|| **Named Evidence** | VPN/firewall configuration export; remote access policy |
-139|| **Minimum Frequency** | Quarterly |
-140|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-141|| **MSP Implementation Note** | FortiGate: enable SSL-VPN with SAML to Okta/Entra ID for MFA. Require client certificate in addition to MFA for admin VPN. Disable split tunneling unless explicitly scoped and documented. Verify: `show vpn ssl settings` shows `require-certificate enable`. |
-142|| **Tool Binding** | Fortinet (firewall/VPN), Okta / Entra ID (auth) |
-143|
-144|### AC-006: Quarterly Access Review
-145|
-146|| **Control ID** | AC-006 |
-147|| **Action Statement** | Access to all systems is reviewed quarterly by the system or data owner. Access that is no longer required is revoked within 5 business days. The review is documented and signed. |
-148|| **System Applicability** | Software, Cloud, Data, Process |
-149|| **Owning Pillar** | Engineering |
-150|| **Named Evidence** | Signed access review report with reviewer name, date, systems reviewed, and actions taken |
-151|| **Minimum Frequency** | Quarterly |
-152|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-153|| **MSP Implementation Note** | Export all users with group memberships from Entra ID/Okta + all SaaS admin roles. Send to department heads with 5-day deadline. Revoke flagged access immediately. Document the review — even if no changes, the documentation IS the evidence. |
-154|| **Tool Binding** | Okta / Entra ID |
-155|
-156|### AC-007: Separation of Duties
-157|
-158|| **Control ID** | AC-007 |
-159|| **Action Statement** | No single individual can both request and approve access, or both develop and deploy code to production, or both initiate and approve payments. Conflicts are identified and mitigated through policy and tooling. |
-160|| **System Applicability** | Process, Software |
-161|| **Owning Pillar** | Governance |
-162|| **Named Evidence** | Separation of duties matrix; access policy defining incompatible roles |
-163|| **Minimum Frequency** | Annual |
-164|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-165|| **MSP Implementation Note** | For SMB clients where one person wears every hat: implement two-person approval in the ticketing system for production changes. The incompatible duties are: (1) request access / approve access, (2) write code / deploy to production, (3) configure firewall / approve firewall change. |
-166|| **Tool Binding** | HaloPSA (ticketing approval workflows), ServiceNow GRC |
-167|
-168|### AC-008: Session Lock
-169|
-170|| **Control ID** | AC-008 |
-171|| **Action Statement** | User sessions lock after 15 minutes of inactivity. Re-authentication requires the full credential, not just screen dismissal. Device-level screen lock is enforced via MDM or GPO. |
-172|| **System Applicability** | Hardware, Software |
-173|| **Owning Pillar** | Engineering |
-174|| **Named Evidence** | GPO/MDM policy export showing screen lock settings |
-175|| **Minimum Frequency** | Quarterly |
-176|| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-177|| **MSP Implementation Note** | Windows GPO: Computer Config > Policies > Windows Settings > Security Settings > Local Policies > Security Options > "Interactive logon: Machine inactivity limit" = 900 seconds. Verify: `gpresult /r` on a domain workstation. |
-178|| **Tool Binding** | Active Directory GPO, Intune, Jamf |
-179|
-180|---
-181|
-182|## 4. Awareness and Training (AT)
-183|
-184|### AT-001: Security Awareness Training
-185|
-186|| **Control ID** | AT-001 |
-187|| **Action Statement** | All personnel receive security awareness training within 30 days of hire and annually thereafter. Training covers phishing recognition, password hygiene, data handling, incident reporting, and the CERG program structure. |
-188|| **System Applicability** | Process |
-189|| **Owning Pillar** | Governance |
-190|| **Named Evidence** | Training completion report with user list, completion dates, and course content summary |
-191|| **Minimum Frequency** | Annual |
-192|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
-193|| **MSP Implementation Note** | Use a phishing simulation platform (KnowBe4, Proofpoint) with monthly simulated phishing. Track click rates. Anyone who clicks gets immediate remediation training. Annual full training via the same platform. |
-194|| **Tool Binding** | KnowBe4, Proofpoint SAT, or M365 Attack Simulation Training |
-195|
-196|### AT-002: Role-Based Training
-197|
-198|| **Control ID** | AT-002 |
-199|| **Action Statement** | Personnel in security-sensitive roles (developers, admins, executives, IR team) receive role-specific training on the threats, tools, and procedures relevant to their function. |
-200|| **System Applicability** | Process |
-201|| **Owning Pillar** | Governance |
-202|| **Named Evidence** | Role-specific training assignments and completion records |
-203|| **Minimum Frequency** | Annual |
-204|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
-205|| **MSP Implementation Note** | Developers: OWASP Top 10, secure coding. Admins: hardening, detection response. Executives: ransomware decision-making, breach notification obligations. Track in LMS or ticketing system. |
-206|| **Tool Binding** | KnowBe4, PluralSight, SANS |
-207|
-208|### AT-003: Insider Threat Awareness
-209|
-210|| **Control ID** | AT-003 |
-211|| **Action Statement** | Personnel are trained to recognize and report indicators of insider threat — unusual access patterns, data exfiltration warning signs, behavioral red flags. |
-212|| **System Applicability** | Process |
-213|| **Owning Pillar** | Governance |
-214|| **Named Evidence** | Training module completion records |
-215|| **Minimum Frequency** | Annual |
-216|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
-217|| **MSP Implementation Note** | Include insider threat module in annual training. Content: "If you see a coworker downloading large amounts of data before resigning, or accessing systems they don't normally use, report it. You will not get in trouble for a good-faith report." |
-218|| **Tool Binding** | KnowBe4, Proofpoint SAT |
-219|
-220|---
-221|
-222|## 5. Audit and Accountability (AU)
-223|
-224|### AU-001: Audit Log Collection
-225|
-226|| **Control ID** | AU-001 |
-227|| **Action Statement** | All systems generate audit logs for security-relevant events. Logs are forwarded to a centralized SIEM within 5 minutes of generation. Log sources include: endpoints, servers, network devices, firewalls, IdP, cloud platforms, and SaaS applications. |
-228|| **System Applicability** | Hardware, Software, Network, Cloud, Data |
-229|| **Owning Pillar** | Risk |
-230|| **Named Evidence** | SIEM dashboard showing log source count and ingestion status |
-231|| **Minimum Frequency** | Continuous |
-232|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-233|| **MSP Implementation Note** | Windows: enable Event Log Forwarding or deploy Wazuh agent. Network: syslog to SIEM. Cloud: CloudTrail (AWS), Activity Log (Azure), Cloud Audit Logs (GCP) → SIEM. SaaS: API connectors to SIEM. Minimum log sources per client: endpoints, firewalls, domain controllers, IdP, cloud admin activity, email gateway. |
-234|| **Tool Binding** | Elastic Security / Wazuh |
-235|
-236|### AU-002: Log Protection
-237|
-238|| **Control ID** | AU-002 |
-239|| **Action Statement** | Audit logs are protected from unauthorized modification, deletion, and access. Log integrity is verifiable. Log retention meets the longest applicable regulatory requirement (minimum 90 days online, 1 year offline). |
-240|| **System Applicability** | Data, Cloud |
-241|| **Owning Pillar** | Risk |
-242|| **Named Evidence** | SIEM configuration showing access controls and retention settings |
-243|| **Minimum Frequency** | Quarterly |
-244|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-245|| **MSP Implementation Note** | Wazuh: default retention is filesystem-based — ensure sufficient disk. Elastic: configure index lifecycle management (hot 30d → warm 60d → cold 365d → delete). Restrict SIEM access to named MSP security personnel only. |
-246|| **Tool Binding** | Elastic Security / Wazuh |
-247|
-248|### AU-003: Log Review
-249|
-250|| **Control ID** | AU-003 |
-251|| **Action Statement** | Security logs are reviewed regularly. Automated alerting is configured for high-severity events. Weekly manual review of SIEM dashboards for anomalies that escaped automated detection. |
-252|| **System Applicability** | Data, Process |
-253|| **Owning Pillar** | Risk |
-254|| **Named Evidence** | Weekly review log (screenshot or SIEM audit entry); alert configuration export |
-255|| **Minimum Frequency** | Weekly (manual review), Continuous (automated) |
-256|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-257|| **MSP Implementation Note** | Schedule 30-minute weekly review session per client. Check: top alerts, new log sources, detection coverage gaps, suppressed alerts that should be re-enabled. Document the session in the ticketing system. |
-258|| **Tool Binding** | Elastic Security / Wazuh |
-259|
-260|### AU-004: Time Synchronization
-261|
-262|| **Control ID** | AU-004 |
-263|| **Action Statement** | All systems use a common time source synchronized to a reliable NTP server. Log timestamps are consistent and usable for correlation and forensic analysis. |
-264|| **System Applicability** | Hardware, Software, Network, Cloud |
-265|| **Owning Pillar** | Engineering |
-266|| **Named Evidence** | NTP configuration export from domain controller or cloud platform |
-267|| **Minimum Frequency** | Quarterly |
-268|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-269|| **MSP Implementation Note** | Domain controllers sync to pool.ntp.org or time.windows.com. All domain-joined systems inherit. Linux: `timedatectl set-ntp true`. Network devices: `ntp server <dc-ip>`. Verify: `w32tm /query /status` on Windows, `timedatectl` on Linux. |
-270|| **Tool Binding** | Built-in OS NTP |
-271|
-272|### AU-005: Audit Record Retention
-273|
-274|| **Control ID** | AU-005 |
-275|| **Action Statement** | Audit records are retained according to a defined schedule. Online retention: minimum 90 days. Offline/archive retention: minimum 1 year. Retention schedule is documented and enforced by tooling. |
-276|| **System Applicability** | Data |
-277|| **Owning Pillar** | Risk |
-278|| **Named Evidence** | Retention policy document; SIEM configuration showing retention settings |
-279|| **Minimum Frequency** | Annual review of retention settings |
-280|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-281|| **MSP Implementation Note** | Higher retention for regulated clients: PCI requires 1 year online. HIPAA: 6 years (can be offline). CMMC: minimum 90 days, recommend 1 year. Scale storage accordingly. |
-282|| **Tool Binding** | Elastic Security / Wazuh (with appropriate storage) |
-283|
-284|### AU-006: Audit Generation
-285|
-286|| **Control ID** | AU-006 |
-287|| **Action Statement** | Information systems generate audit records for defined event types: account creation/modification/deletion, privilege use, logon/logoff, object access, policy changes, system events, and security tool alerts. |
-288|| **System Applicability** | Hardware, Software, Network, Cloud |
-289|| **Owning Pillar** | Risk |
-290|| **Named Evidence** | Audit policy configuration export (GPO, cloud platform, SaaS settings) |
-291|| **Minimum Frequency** | Continuous generation; quarterly configuration review |
-292|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-293|| **MSP Implementation Note** | Windows: Advanced Audit Policy via GPO. Enable: Account Logon, Account Management, Logon/Logoff, Object Access (at minimum file shares), Policy Change, Privilege Use, System. Cloud: enable all management-plane logging (CloudTrail, Activity Log, Audit Logs). |
-294|| **Tool Binding** | Active Directory GPO, Cloud native logging |
-295|
-296|### AU-007: Audit Reduction and Report Generation
-297|
-298|| **Control ID** | AU-007 |
-299|| **Action Statement** | The SIEM supports ad-hoc querying and scheduled report generation for audit events. The MSP can produce a human-readable report of security-relevant events for a given time period within 1 hour of request. |
-300|| **System Applicability** | Software |
-301|| **Owning Pillar** | Risk |
-302|| **Named Evidence** | Sample audit report generated from SIEM |
-303|| **Minimum Frequency** | Capability verification quarterly |
-304|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-305|| **MSP Implementation Note** | Elastic: create saved dashboards per client. Wazuh: use the reporting module. Both should support "give me all authentication failures for Client X in March 2026" in < 1 hour. |
-306|| **Tool Binding** | Elastic Security / Wazuh |
-307|
-308|---
-309|
-310|## 6. Assessment, Authorization, and Monitoring (CA)
-311|
-312|### CA-001: Continuous Monitoring
-313|
-314|| **Control ID** | CA-001 |
-315|| **Action Statement** | The security posture of in-scope systems is monitored continuously through automated tooling. Monitoring covers: endpoint protection status, vulnerability scan results, cloud configuration, backup status, and identity hygiene. Deviations from baseline generate alerts. |
-316|| **System Applicability** | Hardware, Software, Network, Cloud |
-317|| **Owning Pillar** | Governance |
-318|| **Named Evidence** | Consolidated monitoring dashboard; alert configuration |
-319|| **Minimum Frequency** | Continuous |
-320|| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-321|| **MSP Implementation Note** | Required dashboards per client: SentinelOne agent status, Tenable vulnerability summary, Wiz cloud findings, Veeam backup health, Entra ID/Okta MFA status. Review all five weekly. Any gap gets a ticket. |
-322|| **Tool Binding** | SentinelOne, Tenable, Wiz, Veeam, Okta/Entra ID → ServiceNow GRC |
-323|
-324|### CA-002: Security Assessment
-325|
-326|| **Control ID** | CA-002 |
-327|| **Action Statement** | A security assessment of in-scope systems is conducted at least annually. The assessment evaluates control effectiveness, identifies gaps, and produces a prioritized remediation plan. |
-328|| **System Applicability** | Process |
-329|| **Owning Pillar** | Governance |
-330|| **Named Evidence** | Annual assessment report with findings, severity, and remediation status |
-331|| **Minimum Frequency** | Annual |
-332|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
-333|| **MSP Implementation Note** | This is the CERG Assessment engagement (see [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)). For ongoing clients, repeat the assessment annually with reduced scope — verify existing controls, focus on changes since last assessment. |
-334|| **Tool Binding** | Tenable/Nessus (technical assessment), ServiceNow GRC (control assessment) |
-335|
-336|### CA-003: Authorization
-337|
-338|| **Control ID** | CA-003 |
-339|| **Action Statement** | Systems are formally authorized to operate by the appropriate authority before entering production. Authorization is based on a review of security controls, risk acceptance, and residual risk. |
-340|| **System Applicability** | Process |
-341|| **Owning Pillar** | Governance |
-342|| **Named Evidence** | Signed Authorization to Operate (ATO) document per system, or consolidated ATO for the environment |
-343|| **Minimum Frequency** | Per system deployment; annual reaffirmation |
-344|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
-345|| **MSP Implementation Note** | For SMB clients: a single ATO document covering the core IT environment, signed by the business owner. For CMMC clients: formal authorization package per CMMC assessment scope. |
-346|| **Tool Binding** | ServiceNow GRC (authorization workflow) |
-347|
-348|### CA-004: Interconnection Monitoring
-349|
-350|| **Control ID** | CA-004 |
-351|| **Action Statement** | Connections between the client's environment and external systems (MSP tools, cloud providers, SaaS platforms, partner networks) are documented and monitored. Changes to interconnections are reviewed and authorized. |
-352|| **System Applicability** | Network, Cloud |
-353|| **Owning Pillar** | Governance |
-354|| **Named Evidence** | Interconnection inventory; firewall ruleset review |
-355|| **Minimum Frequency** | Quarterly |
-356|| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
-357|| **MSP Implementation Note** | Document every site-to-site VPN, every API integration, every SaaS OAuth connection. Review quarterly: is this connection still needed? Is the partner still authorized? Are credentials rotated? |
-358|| **Tool Binding** | Fortinet (firewall rules), ServiceNow GRC (interconnection register) |
-359|
-360|### CA-005: Plan of Action and Milestones (POA&M)
-361|
-362|| **Control ID** | CA-005 |
-363|| **Action Statement** | All findings from assessments, audits, and continuous monitoring are tracked in a POA&M. Each entry has: finding description, severity, remediation owner, target date, and status. The POA&M is reviewed monthly. |
-364|| **System Applicability** | Process |
-365|| **Owning Pillar** | Governance |
-366|| **Named Evidence** | Current POA&M export with all open items |
-367|| **Minimum Frequency** | Monthly review; continuous update |
-368|| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
-369|| **MSP Implementation Note** | ServiceNow GRC: use the POA&M module. Vanta: use risk register with due dates. Track every finding from vuln scans, assessments, audits, and monitoring gaps. Nothing older than 90 days without a funded remediation plan. |
-370|| **Tool Binding** | ServiceNow GRC / Vanta |
-371|
-372|---
-373|
-374|## 7. Configuration Management (CM)
-375|
-376|### CM-001: Configuration Baseline
-377|
-378|| **Control ID** | CM-001 |
-379|| **Action Statement** | Every system type has a documented, approved configuration baseline. Baselines are based on CIS Benchmarks or equivalent hardening standards. Deviations require documented exception. |
-380|| **System Applicability** | Hardware, Software |
-381|| **Owning Pillar** | Engineering |
-382|| **Named Evidence** | Configuration baseline document per system type; exception log |
-383|| **Minimum Frequency** | Annual review; update on major version change |
-384|| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-385|| **MSP Implementation Note** | Start with CIS Benchmarks. Download the PDF for Windows Server, Ubuntu, and your firewall model. Apply the Level 1 profile (safe for production). Document which settings diverge and why. |
-386|| **Tool Binding** | CIS Benchmark PDFs + Wazuh SCA module for enforcement |
-387|
-388|### CM-002: Change Control
-389|
-390|| **Control ID** | CM-002 |
-391|| **Action Statement** | Changes to production systems follow a documented change management process. Changes are requested, reviewed, approved, tested where feasible, and documented. Emergency changes are permitted but require post-hoc review within 24 hours. |
-392|| **System Applicability** | Process, Hardware, Software, Network, Cloud |
-393|| **Owning Pillar** | Engineering |
-394|| **Named Evidence** | Change tickets for the review period; change management policy |
-395|| **Minimum Frequency** | Per-change documentation; quarterly process review |
-396|| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-397|| **MSP Implementation Note** | Use the ticketing system for all production changes. Minimum fields: what's changing, why, rollback plan, approver, test results. For SMB with a single IT person: self-approve is acceptable for routine changes; major changes (firewall, domain controller, backup config) require a second set of eyes. |
-398|| **Tool Binding** | HaloPSA / ConnectWise Manage |
-399|
-400|### CM-003: Configuration Drift Detection
-401|
-402|| **Control ID** | CM-003 |
-403|| **Action Statement** | Systems are monitored for configuration drift from their approved baseline. Drift findings are detected within the scan interval and remediated or excepted. |
-404|| **System Applicability** | Hardware, Software, Cloud |
-405|| **Owning Pillar** | Engineering |
-406|| **Named Evidence** | Configuration scan results showing baseline compliance; drift findings and remediation records |
-407|| **Minimum Frequency** | Weekly (critical), Monthly (all) |
-408|| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-409|| **MSP Implementation Note** | Wazuh SCA module: load CIS policies, schedule weekly scans. Wiz: continuous CSPM for cloud. Tenable: monthly compliance scans against CIS benchmarks. Any finding > Medium opens a ticket. |
-410|| **Tool Binding** | Wazuh (SCA), Tenable/Nessus (compliance scans), Wiz (CSPM) |
-411|
-412|### CM-004: Least Functionality
-413|
-414|| **Control ID** | CM-004 |
-415|| **Action Statement** | Systems are configured to provide only the functions and services necessary for their purpose. Unnecessary software, services, ports, and protocols are removed or disabled. |
-416|| **System Applicability** | Hardware, Software |
-417|| **Owning Pillar** | Engineering |
-418|| **Named Evidence** | Server build checklist; port scan results showing only required services |
-419|| **Minimum Frequency** | Per-build; quarterly verification |
-420|| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-421|| **MSP Implementation Note** | Server build checklist: remove all roles/features not required. Disable SMBv1, LLMNR, NetBIOS, WPAD. Uninstall unnecessary software (browser toolbars, outdated Java, trial software). Verify with `nmap -sV <target>` — every open port must have a documented purpose. |
-422|| **Tool Binding** | CIS Benchmark checklists, Nmap |
-423|
-424|### CM-005: Software Whitelisting
-425|
-426|| **Control ID** | CM-005 |
-427|| **Action Statement** | Only authorized software executes on endpoints and servers. Unapproved software is blocked by default. Whitelisting is based on publisher certificate, file hash, or path — not user discretion. |
-428|| **System Applicability** | Hardware |
-429|| **Owning Pillar** | Engineering |
-430|| **Named Evidence** | Application control policy export; blocked execution events |
-431|| **Minimum Frequency** | Continuous enforcement; quarterly policy review |
-432|| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-433|| **MSP Implementation Note** | Windows: AppLocker in audit-only mode for 30 days to build the baseline, then enforce. SentinelOne: Application Control module. For simple SMB deployments: Software Restriction Policies via GPO (path-based) is better than nothing. |
-434|| **Tool Binding** | Windows AppLocker, SentinelOne Application Control |
-435|
+# 100-Core Control Baseline (Extended)
+
+## Practitioner-Ready Control Set with MSP Copy-Paste Instructions
+
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-CB-002 |
+| **Version** | 1.0.0 |
+| **Status** | Draft |
+| **Classification** | Public |
+| **Owner** | Consulting Practice Lead |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **Review Cycle** | Quarterly |
+| **Frameworks** | NIST 800-53r5 · NIST 800-171r3 · NIST CSF 2.0 · CIS Controls v8 · ISO/IEC 27001 A.5-A.8 |
+| **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 · HIPAA Security Rule |
+| **Environments** | All in-scope assets — IT, cloud, SaaS, OT (partial), CUI (where scoped) |
+
+---
+
+## Table of Contents
+
+1. [Relationship to Upstream CERG](#1-relationship-to-upstream-cerg)
+2. [Control Format](#2-control-format)
+3. [Access Control](#3-access-control)
+4. [Awareness and Training](#4-awareness-and-training)
+5. [Audit and Accountability](#5-audit-and-accountability)
+6. [Assessment, Authorization, and Monitoring](#6-assessment-authorization-and-monitoring)
+7. [Configuration Management](#7-configuration-management)
+8. [Contingency Planning (CP)](#8-contingency-planning-cp)
+9. [Identification and Authentication (IA)](#9-identification-and-authentication-ia)
+10. [Incident Response (IR)](#10-incident-response-ir)
+11. [Maintenance (MA)](#11-maintenance-ma)
+12. [Media Protection (MP)](#12-media-protection-mp)
+13. [Physical and Environmental (PE)](#13-physical-and-environmental-pe)
+14. [Planning (PL)](#14-planning-pl)
+15. [Personnel Security (PS)](#15-personnel-security-ps)
+16. [Risk Assessment (RA)](#16-risk-assessment-ra)
+17. [System and Services Acquisition (SA)](#17-system-and-services-acquisition-sa)
+18. [System and Communications Protection (SC)](#18-system-and-communications-protection-sc)
+19. [System and Information Integrity (SI)](#19-system-and-information-integrity-si)
+20. [Supply Chain Risk Management (SR)](#20-supply-chain-risk-management-sr)
+21. [Program Management (PM)](#21-program-management-pm)
+22. [Document Control](#22-document-control)
+
+---
+
+## 1. Relationship to Upstream CERG
+
+The upstream CERG baseline ([CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md)) defines the framework architecture and a schematic control matrix. This document — part of the cragin-security fork — extends the upstream baseline into a **practitioner-ready control set**.
+
+Differences from upstream:
+
+| Dimension | Upstream (CB-001) | This Document (CB-002) |
+|-----------|-------------------|------------------------|
+| Control count | ~18 schematic entries | 97 enumerated controls |
+| Audience | Program architects, auditors | MSPs, MSSPs, IT generalists |
+| Instructions | None | Copy-paste deployment per control |
+| Tool bindings | Framework-level | Tied to [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) |
+| Evidence | Named artifact | Named artifact + collection method + frequency |
+| Inheritance | Described in Section 5 of CB-001 | Per-control inheritance notes where applicable |
+
+Upstream CB-001 remains the authoritative architecture. This document is the implementation companion. Control IDs (e.g., AC-001) correspond to NIST 800-53r5 identifiers where applicable; CERG-native controls use domain-specific prefixes.
+
+---
+
+## 2. Control Format
+
+Every control entry follows this structure:
+
+| **Control ID** | NIST-aligned or CERG-native identifier |
+| **Action Statement** | What the control requires, in plain language an IT generalist can understand |
+| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process — one or more |
+| **Owning Pillar** | Engineering, Risk, or Governance |
+| **Named Evidence** | The specific artifact that proves the control is operating |
+| **Minimum Frequency** | How often evidence must be collected |
+| **Subordinate Standard** | Link to the relevant CERG standard with parameter detail |
+| **MSP Implementation Note** | Copy-paste instructions for MSPs/MSSPs (where applicable) |
+| **Tool Binding** | Which tool(s) from the [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) satisfy this control |
+
+---
+
+## 3. Access Control
+
+### AC-001: Account Lifecycle Management
+
+| **Control ID** | AC-001 |
+| **Action Statement** | Every user and service account has a documented request, named owner, defined access level, and Join-Move-Leave (JML) record. Accounts are disabled within 24 hours of termination. Dormant accounts (no login in 90 days) are disabled. |
+| **System Applicability** | Hardware, Software, Network, Cloud, Data, Process |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | JML ticket log or HRIS integration report showing account lifecycle events |
+| **Minimum Frequency** | Continuous (automated) / Quarterly (manual review) |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | Connect HRIS to IdP for automated provisioning/deprovisioning. For clients without HRIS integration, run this script quarterly: `Get-ADUser -Filter {LastLogonDate -lt (Get-Date).AddDays(-90)} | Disable-ADAccount`. Document all terminations in the ticket system within one business day. |
+| **Tool Binding** | Okta / Entra ID (IdP), HaloPSA (ticketing), NinjaOne (RMM verification) |
+
+### AC-002: MFA Enforcement
+
+| **Control ID** | AC-002 |
+| **Action Statement** | Multi-factor authentication is enforced for all user accounts accessing company systems. No exceptions for executives, IT staff, or administrators. Service accounts with non-interactive login must have documented compensating controls (network restriction, monitoring, credential rotation). |
+| **System Applicability** | Software, Cloud, Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | IdP MFA enrollment report showing 100% enrollment for active human users |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/msp-runbook-v1.md) AC-002 section for full deployment steps. Core commands: Okta > Security > Multifactor > Require for all. Entra ID > Conditional Access > Require MFA for all users. Test: attempt login without MFA — must be rejected. |
+| **Tool Binding** | Okta / Entra ID |
+
+### AC-003: Access Enforcement
+
+| **Control ID** | AC-003 |
+| **Action Statement** | All access to systems uses approved authentication and authorization controls. Local accounts, shared accounts, hard-coded credentials, and static passwords are prohibited where an IdP can enforce authentication. |
+| **System Applicability** | Hardware, Software, Network, Cloud, Data |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | IdP policy export showing authentication policies; PAM solution deployment report (if applicable) |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | Enforce SAML/OIDC SSO for all SaaS apps. Block legacy authentication protocols in Entra ID. For on-prem systems: join to domain, enforce Kerberos, disable NTLM where possible. Audit local accounts monthly: `Get-LocalUser | Where-Object Enabled` on all servers. |
+| **Tool Binding** | Okta / Entra ID |
+
+### AC-004: Least Privilege
+
+| **Control ID** | AC-004 |
+| **Action Statement** | Users and services operate with the minimum access necessary. Administrative privileges are granted through just-in-time or privileged access management, not standing group membership. Default and over-privileged accounts are identified and restricted. |
+| **System Applicability** | Hardware, Software, Cloud, Data |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Quarterly privilege audit report; PAM session log for administrative access |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | Remove all users from Domain Admins. Create tiered admin groups (Workstation Admin, Server Admin, Domain Admin). Use PAM for elevation. For SMB without PAM budget: dedicated admin accounts (u-admin) separate from daily driver accounts, with 12-hour credential rotation. |
+| **Tool Binding** | Okta / Entra ID (PIM), CyberArk / Delinea (PAM for enterprise) |
+
+### AC-005: Remote Access
+
+| **Control ID** | AC-005 |
+| **Action Statement** | Remote access to internal systems requires MFA, encrypted transport, and device posture validation. Split-tunnel VPN configurations are prohibited unless documented with compensating controls. |
+| **System Applicability** | Network, Cloud, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | VPN/firewall configuration export; remote access policy |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | FortiGate: enable SSL-VPN with SAML to Okta/Entra ID for MFA. Require client certificate in addition to MFA for admin VPN. Disable split tunneling unless explicitly scoped and documented. Verify: `show vpn ssl settings` shows `require-certificate enable`. |
+| **Tool Binding** | Fortinet (firewall/VPN), Okta / Entra ID (auth) |
+
+### AC-006: Quarterly Access Review
+
+| **Control ID** | AC-006 |
+| **Action Statement** | Access to all systems is reviewed quarterly by the system or data owner. Access that is no longer required is revoked within 5 business days. The review is documented and signed. |
+| **System Applicability** | Software, Cloud, Data, Process |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Signed access review report with reviewer name, date, systems reviewed, and actions taken |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | Export all users with group memberships from Entra ID/Okta + all SaaS admin roles. Send to department heads with 5-day deadline. Revoke flagged access immediately. Document the review — even if no changes, the documentation IS the evidence. |
+| **Tool Binding** | Okta / Entra ID |
+
+### AC-007: Separation of Duties
+
+| **Control ID** | AC-007 |
+| **Action Statement** | No single individual can both request and approve access, or both develop and deploy code to production, or both initiate and approve payments. Conflicts are identified and mitigated through policy and tooling. |
+| **System Applicability** | Process, Software |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Separation of duties matrix; access policy defining incompatible roles |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | For SMB clients where one person wears every hat: implement two-person approval in the ticketing system for production changes. The incompatible duties are: (1) request access / approve access, (2) write code / deploy to production, (3) configure firewall / approve firewall change. |
+| **Tool Binding** | HaloPSA (ticketing approval workflows), ServiceNow GRC |
+
+### AC-008: Session Lock
+
+| **Control ID** | AC-008 |
+| **Action Statement** | User sessions lock after 15 minutes of inactivity. Re-authentication requires the full credential, not just screen dismissal. Device-level screen lock is enforced via MDM or GPO. |
+| **System Applicability** | Hardware, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | GPO/MDM policy export showing screen lock settings |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| **MSP Implementation Note** | Windows GPO: Computer Config > Policies > Windows Settings > Security Settings > Local Policies > Security Options > "Interactive logon: Machine inactivity limit" = 900 seconds. Verify: `gpresult /r` on a domain workstation. |
+| **Tool Binding** | Active Directory GPO, Intune, Jamf |
+
+---
+
+## 4. Awareness and Training
+
+### AT-001: Security Awareness Training
+
+| **Control ID** | AT-001 |
+| **Action Statement** | All personnel receive security awareness training within 30 days of hire and annually thereafter. Training covers phishing recognition, password hygiene, data handling, incident reporting, and the CERG program structure. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Training completion report with user list, completion dates, and course content summary |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
+| **MSP Implementation Note** | Use a phishing simulation platform (KnowBe4, Proofpoint) with monthly simulated phishing. Track click rates. Anyone who clicks gets immediate remediation training. Annual full training via the same platform. |
+| **Tool Binding** | KnowBe4, Proofpoint SAT, or M365 Attack Simulation Training |
+
+### AT-002: Role-Based Training
+
+| **Control ID** | AT-002 |
+| **Action Statement** | Personnel in security-sensitive roles (developers, admins, executives, IR team) receive role-specific training on the threats, tools, and procedures relevant to their function. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Role-specific training assignments and completion records |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
+| **MSP Implementation Note** | Developers: OWASP Top 10, secure coding. Admins: hardening, detection response. Executives: ransomware decision-making, breach notification obligations. Track in LMS or ticketing system. |
+| **Tool Binding** | KnowBe4, PluralSight, SANS |
+
+### AT-003: Insider Threat Awareness
+
+| **Control ID** | AT-003 |
+| **Action Statement** | Personnel are trained to recognize and report indicators of insider threat — unusual access patterns, data exfiltration warning signs, behavioral red flags. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Training module completion records |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7 |
+| **MSP Implementation Note** | Include insider threat module in annual training. Content: "If you see a coworker downloading large amounts of data before resigning, or accessing systems they don't normally use, report it. You will not get in trouble for a good-faith report." |
+| **Tool Binding** | KnowBe4, Proofpoint SAT |
+
+---
+
+## 5. Audit and Accountability
+
+### AU-001: Audit Log Collection
+
+| **Control ID** | AU-001 |
+| **Action Statement** | All systems generate audit logs for security-relevant events. Logs are forwarded to a centralized SIEM within 5 minutes of generation. Log sources include: endpoints, servers, network devices, firewalls, IdP, cloud platforms, and SaaS applications. |
+| **System Applicability** | Hardware, Software, Network, Cloud, Data |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | SIEM dashboard showing log source count and ingestion status |
+| **Minimum Frequency** | Continuous |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Windows: enable Event Log Forwarding or deploy Wazuh agent. Network: syslog to SIEM. Cloud: CloudTrail (AWS), Activity Log (Azure), Cloud Audit Logs (GCP) → SIEM. SaaS: API connectors to SIEM. Minimum log sources per client: endpoints, firewalls, domain controllers, IdP, cloud admin activity, email gateway. |
+| **Tool Binding** | Elastic Security / Wazuh |
+
+### AU-002: Log Protection
+
+| **Control ID** | AU-002 |
+| **Action Statement** | Audit logs are protected from unauthorized modification, deletion, and access. Log integrity is verifiable. Log retention meets the longest applicable regulatory requirement (minimum 90 days online, 1 year offline). |
+| **System Applicability** | Data, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | SIEM configuration showing access controls and retention settings |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Wazuh: default retention is filesystem-based — ensure sufficient disk. Elastic: configure index lifecycle management (hot 30d → warm 60d → cold 365d → delete). Restrict SIEM access to named MSP security personnel only. |
+| **Tool Binding** | Elastic Security / Wazuh |
+
+### AU-003: Log Review
+
+| **Control ID** | AU-003 |
+| **Action Statement** | Security logs are reviewed regularly. Automated alerting is configured for high-severity events. Weekly manual review of SIEM dashboards for anomalies that escaped automated detection. |
+| **System Applicability** | Data, Process |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Weekly review log (screenshot or SIEM audit entry); alert configuration export |
+| **Minimum Frequency** | Weekly (manual review), Continuous (automated) |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Schedule 30-minute weekly review session per client. Check: top alerts, new log sources, detection coverage gaps, suppressed alerts that should be re-enabled. Document the session in the ticketing system. |
+| **Tool Binding** | Elastic Security / Wazuh |
+
+### AU-004: Time Synchronization
+
+| **Control ID** | AU-004 |
+| **Action Statement** | All systems use a common time source synchronized to a reliable NTP server. Log timestamps are consistent and usable for correlation and forensic analysis. |
+| **System Applicability** | Hardware, Software, Network, Cloud |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | NTP configuration export from domain controller or cloud platform |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Domain controllers sync to pool.ntp.org or time.windows.com. All domain-joined systems inherit. Linux: `timedatectl set-ntp true`. Network devices: `ntp server <dc-ip>`. Verify: `w32tm /query /status` on Windows, `timedatectl` on Linux. |
+| **Tool Binding** | Built-in OS NTP |
+
+### AU-005: Audit Record Retention
+
+| **Control ID** | AU-005 |
+| **Action Statement** | Audit records are retained according to a defined schedule. Online retention: minimum 90 days. Offline/archive retention: minimum 1 year. Retention schedule is documented and enforced by tooling. |
+| **System Applicability** | Data |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Retention policy document; SIEM configuration showing retention settings |
+| **Minimum Frequency** | Annual review of retention settings |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Higher retention for regulated clients: PCI requires 1 year online. HIPAA: 6 years (can be offline). CMMC: minimum 90 days, recommend 1 year. Scale storage accordingly. |
+| **Tool Binding** | Elastic Security / Wazuh (with appropriate storage) |
+
+### AU-006: Audit Generation
+
+| **Control ID** | AU-006 |
+| **Action Statement** | Information systems generate audit records for defined event types: account creation/modification/deletion, privilege use, logon/logoff, object access, policy changes, system events, and security tool alerts. |
+| **System Applicability** | Hardware, Software, Network, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Audit policy configuration export (GPO, cloud platform, SaaS settings) |
+| **Minimum Frequency** | Continuous generation; quarterly configuration review |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Windows: Advanced Audit Policy via GPO. Enable: Account Logon, Account Management, Logon/Logoff, Object Access (at minimum file shares), Policy Change, Privilege Use, System. Cloud: enable all management-plane logging (CloudTrail, Activity Log, Audit Logs). |
+| **Tool Binding** | Active Directory GPO, Cloud native logging |
+
+### AU-007: Audit Reduction and Report Generation
+
+| **Control ID** | AU-007 |
+| **Action Statement** | The SIEM supports ad-hoc querying and scheduled report generation for audit events. The MSP can produce a human-readable report of security-relevant events for a given time period within 1 hour of request. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Sample audit report generated from SIEM |
+| **Minimum Frequency** | Capability verification quarterly |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Elastic: create saved dashboards per client. Wazuh: use the reporting module. Both should support "give me all authentication failures for Client X in March 2026" in < 1 hour. |
+| **Tool Binding** | Elastic Security / Wazuh |
+
+---
+
+## 6. Assessment, Authorization, and Monitoring
+
+### CA-001: Continuous Monitoring
+
+| **Control ID** | CA-001 |
+| **Action Statement** | The security posture of in-scope systems is monitored continuously through automated tooling. Monitoring covers: endpoint protection status, vulnerability scan results, cloud configuration, backup status, and identity hygiene. Deviations from baseline generate alerts. |
+| **System Applicability** | Hardware, Software, Network, Cloud |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Consolidated monitoring dashboard; alert configuration |
+| **Minimum Frequency** | Continuous |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Required dashboards per client: SentinelOne agent status, Tenable vulnerability summary, Wiz cloud findings, Veeam backup health, Entra ID/Okta MFA status. Review all five weekly. Any gap gets a ticket. |
+| **Tool Binding** | SentinelOne, Tenable, Wiz, Veeam, Okta/Entra ID → ServiceNow GRC |
+
+### CA-002: Security Assessment
+
+| **Control ID** | CA-002 |
+| **Action Statement** | A security assessment of in-scope systems is conducted at least annually. The assessment evaluates control effectiveness, identifies gaps, and produces a prioritized remediation plan. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Annual assessment report with findings, severity, and remediation status |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **MSP Implementation Note** | This is the CERG Assessment engagement (see [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)). For ongoing clients, repeat the assessment annually with reduced scope — verify existing controls, focus on changes since last assessment. |
+| **Tool Binding** | Tenable/Nessus (technical assessment), ServiceNow GRC (control assessment) |
+
+### CA-003: Authorization
+
+| **Control ID** | CA-003 |
+| **Action Statement** | Systems are formally authorized to operate by the appropriate authority before entering production. Authorization is based on a review of security controls, risk acceptance, and residual risk. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Signed Authorization to Operate (ATO) document per system, or consolidated ATO for the environment |
+| **Minimum Frequency** | Per system deployment; annual reaffirmation |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **MSP Implementation Note** | For SMB clients: a single ATO document covering the core IT environment, signed by the business owner. For CMMC clients: formal authorization package per CMMC assessment scope. |
+| **Tool Binding** | ServiceNow GRC (authorization workflow) |
+
+### CA-004: Interconnection Monitoring
+
+| **Control ID** | CA-004 |
+| **Action Statement** | Connections between the client's environment and external systems (MSP tools, cloud providers, SaaS platforms, partner networks) are documented and monitored. Changes to interconnections are reviewed and authorized. |
+| **System Applicability** | Network, Cloud |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Interconnection inventory; firewall ruleset review |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
+| **MSP Implementation Note** | Document every site-to-site VPN, every API integration, every SaaS OAuth connection. Review quarterly: is this connection still needed? Is the partner still authorized? Are credentials rotated? |
+| **Tool Binding** | Fortinet (firewall rules), ServiceNow GRC (interconnection register) |
+
+### CA-005: Plan of Action and Milestones (POA&M)
+
+| **Control ID** | CA-005 |
+| **Action Statement** | All findings from assessments, audits, and continuous monitoring are tracked in a POA&M. Each entry has: finding description, severity, remediation owner, target date, and status. The POA&M is reviewed monthly. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Current POA&M export with all open items |
+| **Minimum Frequency** | Monthly review; continuous update |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **MSP Implementation Note** | ServiceNow GRC: use the POA&M module. Vanta: use risk register with due dates. Track every finding from vuln scans, assessments, audits, and monitoring gaps. Nothing older than 90 days without a funded remediation plan. |
+| **Tool Binding** | ServiceNow GRC / Vanta |
+
+---
+
+## 7. Configuration Management
+
+### CM-001: Configuration Baseline
+
+| **Control ID** | CM-001 |
+| **Action Statement** | Every system type has a documented, approved configuration baseline. Baselines are based on CIS Benchmarks or equivalent hardening standards. Deviations require documented exception. |
+| **System Applicability** | Hardware, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Configuration baseline document per system type; exception log |
+| **Minimum Frequency** | Annual review; update on major version change |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Start with CIS Benchmarks. Download the PDF for Windows Server, Ubuntu, and your firewall model. Apply the Level 1 profile (safe for production). Document which settings diverge and why. |
+| **Tool Binding** | CIS Benchmark PDFs + Wazuh SCA module for enforcement |
+
+### CM-002: Change Control
+
+| **Control ID** | CM-002 |
+| **Action Statement** | Changes to production systems follow a documented change management process. Changes are requested, reviewed, approved, tested where feasible, and documented. Emergency changes are permitted but require post-hoc review within 24 hours. |
+| **System Applicability** | Process, Hardware, Software, Network, Cloud |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Change tickets for the review period; change management policy |
+| **Minimum Frequency** | Per-change documentation; quarterly process review |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Use the ticketing system for all production changes. Minimum fields: what's changing, why, rollback plan, approver, test results. For SMB with a single IT person: self-approve is acceptable for routine changes; major changes (firewall, domain controller, backup config) require a second set of eyes. |
+| **Tool Binding** | HaloPSA / ConnectWise Manage |
+
+### CM-003: Configuration Drift Detection
+
+| **Control ID** | CM-003 |
+| **Action Statement** | Systems are monitored for configuration drift from their approved baseline. Drift findings are detected within the scan interval and remediated or excepted. |
+| **System Applicability** | Hardware, Software, Cloud |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Configuration scan results showing baseline compliance; drift findings and remediation records |
+| **Minimum Frequency** | Weekly (critical), Monthly (all) |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Wazuh SCA module: load CIS policies, schedule weekly scans. Wiz: continuous CSPM for cloud. Tenable: monthly compliance scans against CIS benchmarks. Any finding > Medium opens a ticket. |
+| **Tool Binding** | Wazuh (SCA), Tenable/Nessus (compliance scans), Wiz (CSPM) |
+
+### CM-004: Least Functionality
+
+| **Control ID** | CM-004 |
+| **Action Statement** | Systems are configured to provide only the functions and services necessary for their purpose. Unnecessary software, services, ports, and protocols are removed or disabled. |
+| **System Applicability** | Hardware, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Server build checklist; port scan results showing only required services |
+| **Minimum Frequency** | Per-build; quarterly verification |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Server build checklist: remove all roles/features not required. Disable SMBv1, LLMNR, NetBIOS, WPAD. Uninstall unnecessary software (browser toolbars, outdated Java, trial software). Verify with `nmap -sV <target>` — every open port must have a documented purpose. |
+| **Tool Binding** | CIS Benchmark checklists, Nmap |
+
+### CM-005: Software Whitelisting
+
+| **Control ID** | CM-005 |
+| **Action Statement** | Only authorized software executes on endpoints and servers. Unapproved software is blocked by default. Whitelisting is based on publisher certificate, file hash, or path — not user discretion. |
+| **System Applicability** | Hardware |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Application control policy export; blocked execution events |
+| **Minimum Frequency** | Continuous enforcement; quarterly policy review |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Windows: AppLocker in audit-only mode for 30 days to build the baseline, then enforce. SentinelOne: Application Control module. For simple SMB deployments: Software Restriction Policies via GPO (path-based) is better than nothing. |
+| **Tool Binding** | Windows AppLocker, SentinelOne Application Control |
+
 ### CM-006: Software Inventory
 
 | **Control ID** | CM-006 |
