@@ -34,6 +34,7 @@ Use CERG to:
 | If you are... | Start with |
 |---|---|
 | New to CERG | [START-HERE.md](START-HERE.md) |
+| A CISO / CSO evaluating CERG | [CISO / CSO Executive Briefing Pack](adoption-packs/ciso-cso-briefing/README.md) |
 | New to GitHub or Markdown | [BEGINNER-GUIDE.md](BEGINNER-GUIDE.md) |
 | Using an AI assistant or coding agent | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
 | A small team adopting the minimum spine | [CERG Lite adoption pack](adoption-packs/cerg-lite/README.md) |
