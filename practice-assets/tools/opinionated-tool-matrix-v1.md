@@ -301,6 +301,6 @@ Every tool in this diagram has a documented API and a supported integration path
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](CERG-GOV-CB-002_100-Core_Control_Baseline.md) (in development)
+- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) (in development)
 - [GRC Rollout Guide](grc-rollout-v1.md)
-- [MSP Runbook](msp-runbook-v1.md) (in development)
+- [MSP Runbook](../msp-runbook-v1.md)

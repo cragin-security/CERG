@@ -35,7 +35,7 @@ Both paths assume you've read the [Opinionated Tool Matrix](opinionated-tool-mat
 - ServiceNow instance with GRC: Advanced plugin (com.snc.governance_advanced)
 - Admin or snc_grc_admin role
 - Access to import sets and transform maps
-- CERG 100-Core Control Baseline (see [CERG-GOV-CB-002](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md))
+- CERG 100-Core Control Baseline (see [CERG-GOV-CB-002](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md))
 
 ### 1.2 Control Import
 
@@ -170,7 +170,7 @@ Vanta's agent automatically collects evidence from:
 - HRIS (BambooHR, Rippling, Gusto) — personnel controls
 - Code repositories (GitHub, GitLab) — SDLC controls
 
-For evidence Vanta can't auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](msp-runbook-v1.md).
+For evidence Vanta can't auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](../msp-runbook-v1.md).
 
 ### 2.4 MSP Multi-Client with Vanta
 
@@ -212,5 +212,5 @@ Limitations: Vanta's partner reporting is not as robust as ServiceNow's domain s
 ### Related Documents
 
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md)
-- [MSP Runbook](msp-runbook-v1.md)
-- [CERG 100-Core Control Baseline](CERG-GOV-CB-002_100-Core_Control_Baseline.md)
+- [MSP Runbook](../msp-runbook-v1.md)
+- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md)
