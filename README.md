@@ -1,31 +1,59 @@
-# CERG (surge) · Cybersecurity Operating Model
+# CERG · Cybersecurity Operating Model
 
-**An operating model for teams that need security to actually run.**
+## cragin-security fork — practice-hardened, opinionated, MSP/MSSP-ready
 
-CERG helps security teams build capability, not just collect tools or chase compliance. It gives you the policy spine, roles, standards, procedures, templates, records, and evidence habits needed to turn scattered security work into a repeatable program.
+**This is the [cragin-security](https://github.com/cragin-security) fork of the upstream [m0dernz/CERG](https://github.com/m0dernz/CERG) project.** We contribute upstream, but this fork carries our opinionated spin: specific tools, ~100 controls with copy-paste instructions, and practitioner materials built for MSPs, MSSPs, and IT generalists delivering security to small and mid-sized clients.
 
-The goal is operating leverage: clearer decisions, fewer ad hoc meetings, less duplicated effort, better handoffs, and evidence created as work happens. A well-run security program should scale through clarity and repeatability, not by throwing more bodies at every new requirement.
+**Upstream CERG** is a cybersecurity operating model — not a control framework or compliance checklist. It gives security teams the policy spine, roles, standards, procedures, and evidence habits needed to run a real program. Read the [upstream README](https://github.com/m0dernz/CERG) for the canonical description.
 
-CERG is not a control framework, certification shortcut, or tooling project. Compliance alignment matters, but it is a byproduct of operating well.
+**This fork** extends upstream with:
+
+| Dimension | Upstream (m0dernz) | This Fork (cragin-security) |
+|-----------|-------------------|---------------------------|
+| Controls | ~18 schematic entries | **97 enumerated controls** with MSP copy-paste instructions |
+| Tools | Framework-level | **Opinionated tool matrix** — 12 categories, Primary/Acceptable/Avoid with integration map |
+| Audience | Program architects, auditors | **MSPs, MSSPs, IT generalists** — entry-level IT staff can follow the runbook |
+| GRC anchor | Architecture reference | **ServiceNow GRC + Vanta rollout guide** with control import and evidence automation |
+| Controls document | [CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | [CB-002](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — 97 controls, 19 families |
+| Delivery | CERG Lite / Standard / Regulated adoption paths | **Full engagement playbook** with pricing, SOW essentials, and delivery phases |
+| Consulting | Implicit | **Explicit** — engagement playbook, MSP runbook, pricing reference, anti-patterns |
 
 ---
 
-## What CERG helps you build
+## What's different in this fork
 
-CERG is built around three accountable pillars:
+### Practice Assets (`practice-assets/`)
 
-- **Cyber Engineering**: build security in early through standards, architecture review, secure development, resilience, logging, identity, cloud, SaaS, AI, and OT guardrails.
-- **Cyber Risk**: understand exposure, track risk decisions, manage exceptions, and drive treatment.
-- **Cyber Governance**: set clear rules, record decisions, define ownership, and keep evidence usable.
+Practical, opinionated materials for delivering CERG as a consulting service:
 
-Use CERG to:
+| Document | What it does |
+|----------|--------------|
+| [Opinionated Tool Matrix](practice-assets/tools/opinionated-tool-matrix-v1.md) | 12 security tool categories — every recommendation scored on integration surface, MSP multi-tenancy, and IT generalist usability. Integration map shows how the stack wires together. |
+| [GRC Rollout Guide](practice-assets/tools/grc-rollout-v1.md) | Step-by-step ServiceNow GRC control import, evidence automation, MSP multi-tenancy. Vanta fallback for SMB. |
+| [MSP/MSSP Runbook](practice-assets/msp-runbook-v1.md) | 5-phase delivery playbook: intake → deployment (copy-paste commands for SentinelOne, Wazuh, Tenable, Wiz, Veeam) → per-control implementation → evidence collection cadence → client reporting. Common pitfalls. |
+| [Engagement Playbook](practice-assets/engagement-playbook-v1.md) | Full consulting lifecycle: Discover → Assess → Plan → Deploy → Operate → Handoff. Pricing for SMB ($5k-25k) through enterprise ($25k-100k). Anti-patterns and SOW essentials. |
 
-- make security ownership explicit;
-- turn tribal knowledge into repeatable workflows;
-- give engineering teams clear guardrails instead of vague security asks;
-- reduce toil from recurring reviews, audits, exceptions, and reporting;
-- create reusable evidence as work happens;
-- build a security function that can grow without making every problem a staffing problem.
+### 100-Core Control Baseline
+
+The [100-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) extends upstream's schematic control matrix into 97 fully enumerated controls across all 19 NIST 800-53r5 families. Every control has:
+
+- An action statement an IT generalist can understand
+- Named evidence with collection method and frequency
+- Per-control MSP implementation notes
+- Tool bindings tied to the opinionated tool matrix
+
+This is the control set you hand to an MSP technician on day one — not a framework reference they have to translate.
+
+### Recommends specific tools, not categories
+
+Instead of "deploy a SIEM" or "use a GRC platform," this fork says:
+
+- **Primary:** Wazuh (SMB), Elastic Security (enterprise) — not "choose a SIEM"
+- **Primary:** SentinelOne for endpoint — not "deploy EDR"
+- **Primary:** ServiceNow GRC or Vanta — not "select a GRC platform"
+- **Avoid:** spreadsheets, DIY ELK, Symantec, Archer — with reasons why
+
+Every recommendation is backed by integration surface, MSP multi-tenancy, and IT generalist usability criteria.
 
 ---
 
@@ -33,40 +61,45 @@ Use CERG to:
 
 | If you are... | Start with |
 |---|---|
-| New to CERG | [START-HERE.md](START-HERE.md) |
-| New to GitHub or Markdown | [BEGINNER-GUIDE.md](BEGINNER-GUIDE.md) |
-| Using an AI assistant or coding agent | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
-| A small team adopting the minimum spine | [CERG Lite adoption pack](adoption-packs/cerg-lite/README.md) |
-| Looking for operational examples | [Day in the Life examples](examples/day-in-the-life/README.md) |
-| Comparing adoption paths | [Adoption Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
-| Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| An MSP/MSSP delivering CERG to clients | [MSP/MSSP Runbook](practice-assets/msp-runbook-v1.md) |
+| Picking tools for a CERG deployment | [Opinionated Tool Matrix](practice-assets/tools/opinionated-tool-matrix-v1.md) |
+| Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/grc-rollout-v1.md) |
+| Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/engagement-playbook-v1.md) |
+| Looking for the full control set | [100-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) |
+| New to CERG (upstream) | [START-HERE.md](START-HERE.md) |
+| Using an AI assistant | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
+| Contributing upstream | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---
 
-## Adoption modes
+## Relationship to upstream
 
-You do not adopt the full library in week one. Start with the spine, prove the operating rhythm, then add depth where the organization actually needs it.
+This fork is **upstream-friendly**. We:
 
-- **CERG Lite**: the minimum viable program for a small or early security function.
-- **CERG Standard**: the core operating model for an established security team.
-- **CERG Regulated**: Standard plus overlays for regulated, audited, privacy, OT, or critical infrastructure scope.
+- Contribute validator fixes, bug patches, and non-opinionated improvements back to [m0dernz/CERG](https://github.com/m0dernz/CERG)
+- Keep the core architecture compatible — CB-002 is an extension of CB-001, not a replacement
+- Mark all practice-assets as `OPN` domain code so they don't collide with upstream's `GOV`, `STD`, `PRC` namespace
+- Maintain a clear boundary: `governance/CERG-GOV-CB-002` is the fork's control extension; everything in `practice-assets/` is consulting delivery material
 
-The minimum viable CERG spine is eight documents: Policy, Framework, Operating Model, Document Catalog, Risk Management Framework, Risk Register Procedure, Risk Register Templates, and Exposure Management Procedure.
+Upstream sets the architecture. This fork shows practitioners how to wire it into a functioning program with specific tools, clear instructions, and a business model.
 
 ---
 
 ## What is in the repo
 
-CERG includes:
+Everything upstream carries, plus:
 
-- `governance/`: policy, operating model, risk framework, RACI, metrics, maturity, workforce governance, and program structure.
-- `standards/`: technical standards that define what good looks like across major security domains.
-- `procedures/`: repeatable workflows for risk, exposure, architecture review, TPRM, audit/evidence, change, threat modeling, and related work.
-- `plans/`: operational packages for regulated or specialized scopes.
-- `templates/`: practical forms, registers, and records teams can use directly.
-- `roles/`: workforce architecture, job families, job descriptions, competencies, and onboarding.
-- `machine-readable/`: indexes, manifests, schemas, flow models, and agent-friendly metadata.
-- `examples/`: adoption examples and day-in-the-life walkthroughs.
+| Directory | Content |
+|-----------|---------|
+| `governance/` | Policy, operating model, risk framework, RACI, metrics, maturity, workforce governance — plus the fork's [100-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) |
+| `standards/` | Technical security standards (15 docs) |
+| `procedures/` | Repeatable workflows for risk, exposure, architecture review, TPRM, audit, change, threat modeling |
+| `plans/` | Operational packages for regulated or specialized scopes |
+| `templates/` | Forms, registers, and records |
+| `roles/` | Workforce architecture — job families, JDs, competencies, onboarding |
+| `practice-assets/` | **Fork-only**: tool matrix, GRC rollout, MSP runbook, engagement playbook |
+| `machine-readable/` | Indexes, manifests, schemas, LLM metadata |
+| `examples/` | Adoption examples and day-in-the-life walkthroughs |
 
 The authoritative inventory is the [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md).
 
@@ -74,25 +107,32 @@ The authoritative inventory is the [Document Catalog](governance/CERG-GOV-CAT-00
 
 ## LLM and automation use
 
-Use these entry points before loading the full corpus:
-
-- [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json): complete local corpus map.
-- [`machine-readable/cerg-document-tiers.yaml`](machine-readable/cerg-document-tiers.yaml): adoption tiers and recommended loading order.
-- [`llms.txt`](https://cerg.nexus/llms.txt): public LLM index.
-- [`llms-full.txt`](https://cerg.nexus/llms-full.txt): full public corpus mirror.
-
-The GitHub repository is authoritative. The website is a convenience mirror and may lag the repo.
+- [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json): complete local corpus map (153 documents)
+- [`machine-readable/cerg-document-tiers.yaml`](machine-readable/cerg-document-tiers.yaml): adoption tiers and loading order
+- [`AGENTS.md`](AGENTS.md): guidance for AI coding agents working in this repo
 
 ---
 
-## When CERG is not a good fit
+## When this fork is right for you
 
-Do not adopt CERG yet if there is no named security owner, no executive support for guardrails and evidence, unclear scope, or no willingness to track decisions and exceptions.
+Use `cragin-security/CERG` when you:
 
-Start lighter, establish ownership and evidence discipline, then return when the organization is ready to operate security as a real function.
+- Are an MSP, MSSP, or IT generalist delivering security to small/mid-sized clients
+- Want specific tool recommendations, not categories to evaluate
+- Need copy-paste deployment instructions your entry-level techs can follow
+- Want a consulting practice wrapper around the CERG operating model
+- Need ~100 controls with per-control evidence and MSP implementation notes
 
-CERG does not determine legal obligations or certification readiness. Validate regulatory applicability with qualified counsel, compliance leadership, and assessors.
+Stick with upstream `m0dernz/CERG` when you:
+
+- Want the canonical framework architecture without opinionated tool choices
+- Are building your own tool strategy and just need the program structure
+- Prefer the lighter, schematic control set for organizational calibration
+
+---
 
 ## License
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Fork freely - adapt openly - attribute generously :)
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Fork freely — adapt openly — attribute generously.
+
+Upstream: [m0dernz/CERG](https://github.com/m0dernz/CERG) · Fork: [cragin-security/CERG](https://github.com/cragin-security/CERG)
