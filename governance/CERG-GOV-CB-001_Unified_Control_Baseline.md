@@ -48,6 +48,11 @@ It applies to every in-scope asset and every CERG-owned control. Where a subordi
 
 ---
 
+
+> **Expanded Control Baseline**
+>
+> For adopters needing expanded per-control implementation detail — including named evidence, minimum frequency, and subordinate standard cross-references — see the [Expanded Control Baseline](CERG-GOV-CB-002_Expanded_Control_Baseline.md) (CB-002). CB-002 is supplemental and does not change the mandatory baseline defined in CB-001.
+
 ## 2. Design Principles
 
 The baseline is built on five non-negotiable principles. Anything that violates them is not in the baseline.
