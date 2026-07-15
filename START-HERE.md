@@ -17,9 +17,38 @@ CERG requires organizational commitment. Answer honestly:
 
 If you answered **no** to any of these, start with NIST CSF or CIS Controls. Come back to CERG when you're ready.
 
-If you answered **yes** to all four, pick your path below.
+If you answered **yes** to all four, do not start by reading the whole repository. Pick one entry point, read only the documents needed for that decision, and let the operating cadence pull in the rest.
 
-If you are still unsure where to begin, use these four helpers before diving into the full library:
+---
+
+## First rule: do not boil the ocean
+
+CERG is intentionally complete, but first adoption is intentionally narrow. Your first hour should answer one question: **what problem are we trying to operate better?**
+
+Use these rules:
+
+- **Read for a job, not for completeness.** Open the documents tied to your role, snag, regulator, or environment.
+- **Adopt the spine before the library.** The Minimum Viable CERG set is enough to start producing decisions, risks, exposure records, and evidence.
+- **Defer what you do not operate.** Do not read OT, CUI, SOX, AI, or workforce-depth documents unless that scope exists now.
+- **Prefer one worked example over ten abstractions.** Read a Day in the Life story that matches your problem before reading every standard.
+- **Stop reading when you can name the owner, record, decision path, and next action.** CERG is an operating model, not a reading challenge.
+
+### Pick your entry point
+
+| If your immediate question is... | Start with | Stop when you can... |
+|---|---|---|
+| “What is CERG and should I care?” | [CISO / CSO Executive Briefing Pack](adoption-packs/ciso-cso-briefing/README.md) | Explain the operating problem CERG solves in five minutes. |
+| “We are a small team and need the minimum viable program.” | [CERG Lite adoption pack](adoption-packs/cerg-lite/README.md) and [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Name the eight-document spine and first 10 records. |
+| “I own vulnerabilities or exposure.” | [Exposure Management Procedure](procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) and [critical vulnerability story](examples/day-in-the-life/README.md#story-2-critical-vulnerability) | Move an observation from scanner output to treatment or accepted risk. |
+| “Security reviews happen too late.” | [Architecture Review Procedure](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) and [new SaaS story](examples/day-in-the-life/README.md#story-1-new-saas-application) | Route a project through intake, review, disposition, and handoff. |
+| “We bought tools but cannot prove controls work.” | [Control Effectiveness Framework](governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md), [Adversarial Validation Procedure](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), and [Metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3.6a | Distinguish implementation evidence from operating effectiveness evidence. |
+| “Audit evidence is chaos.” | [Evidence Quality Standard](governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md), [Audit and Evidence Procedure](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), and [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) | Identify the record, owner, period, and evidence quality bar. |
+| “We have CUI, NERC-CIP, SOX, ISO, privacy, OT, or AI scope.” | The relevant overlay in [Path 3: CERG Regulated](#path-3-cerg-regulated-nerc-cip-cmmc-sox-ot-environments) | Name which conditional documents apply and which can be deferred. |
+| “I am designing roles or hiring.” | [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) and [Workforce Planning](governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Map responsibilities to roles without hiding accountabilities. |
+| “I am a business owner or system sponsor.” | [Business Owner / System Sponsor Reader Path](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md#6-business-owner--system-sponsor-reader-path) | Understand what decisions and evidence the business owner must provide. |
+| “I am using an AI or coding agent.” | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) and [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json) | Load only the documents needed for the task. |
+
+If you are still unsure where to begin, use these helpers before diving into the full library:
 
 - [CISO / CSO Executive Briefing Pack](adoption-packs/ciso-cso-briefing/README.md) - slide-style executive introduction for leaders who need the hook, operating boundaries, anti-patterns, and “who does what” before reading the corpus.
 - [Framework System Map](governance/CERG-GOV-FRM-002_Framework_System_Map.md) - how the documents, pillars, records, evidence, and improvement loops fit together.
