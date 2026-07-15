@@ -2,11 +2,32 @@
 
 **An operating model for teams that need security to actually run.**
 
-CERG helps security teams build capability, not just collect tools or chase compliance. It gives you the policy spine, roles, standards, procedures, templates, records, and evidence habits needed to turn scattered security work into a repeatable program.
+CERG helps security teams replace paper GRC with technical assurance. Cyber Engineering builds guardrails with the business. Cyber Risk tests whether those guardrails hold under real conditions. Cyber Governance records decisions, evidence, and accountability so risk can be managed and defended.
 
-The goal is operating leverage: clearer decisions, fewer ad hoc meetings, less duplicated effort, better handoffs, and evidence created as work happens. A well-run security program should scale through clarity and repeatability, not by throwing more bodies at every new requirement.
+Old GRC asks, "Is the control documented?" CERG asks sharper questions:
 
-CERG is not a control framework, certification shortcut, or tooling project. Compliance alignment matters, but it is a byproduct of operating well.
+- What security objective is this control supposed to achieve?
+- How is it enforced in the environment?
+- What evidence proves it operated for the right scope and period?
+- Has anyone tried to bypass it through testing, adversarial validation, or incident analysis?
+- What changed when the evidence showed weakness?
+
+The goal is operating leverage: clearer decisions, fewer ad hoc meetings, less duplicated effort, better handoffs, and evidence created as work happens. A well-run security program should scale through clarity, technical guardrails, and validation, not by throwing more bodies or paperwork at every new requirement.
+
+CERG is not a control framework, certification shortcut, or tooling project. Compliance alignment matters, but it is exhaust from operating well, not the engine.
+
+---
+
+## The CERG assurance loop
+
+CERG turns security work into a repeatable loop:
+
+1. **Build the guardrail** — standards, architecture patterns, configuration baselines, and secure implementation support.
+2. **Test the guardrail** — exposure validation, threat modeling, penetration testing, red-team, purple-team, control testing, and incident lessons learned.
+3. **Record the decision** — owner, evidence, exception, acceptance, treatment, or escalation.
+4. **Improve the system** — update the control, architecture, procedure, metric, or staffing model when validation shows weakness.
+
+That loop is the difference between a program that can prove security works and a program that can only prove paperwork exists.
 
 ---
 
