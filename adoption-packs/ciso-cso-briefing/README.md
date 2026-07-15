@@ -64,7 +64,7 @@ The slides below are written in Markdown so they can be copied into PowerPoint, 
 
 ## Slide 1 — CERG in One Sentence
 
-**CERG is a cybersecurity operating model that turns scattered security work into accountable capabilities with owners, evidence, decision rights, and improvement loops.**
+**CERG is a cybersecurity operating model that replaces paper GRC with technical assurance: guardrails are built, tested, evidenced, and improved.**
 
 It is not a tool stack.  
 It is not a control framework.  
@@ -72,7 +72,7 @@ It is not “security program in a box.”
 
 It answers the executive question:
 
-> “Who owns this, how do we know it is working, and what happens when it is not?”
+> “Who owns this, how do we know it works, and what changes when it does not?”
 
 **Speaker note:** keep this slide short. The hook is not completeness; the hook is executive relief from recurring ambiguity.
 
@@ -91,7 +91,7 @@ Most cyber programs do not fail because nobody cares. They fail because security
 | “Why did security review happen so late?” | Intake trigger, pre-production path, service commitment. |
 | “Are we audit-ready?” | Evidence factory, not pre-audit archaeology. |
 
-**CERG organizes the operating chain.**
+**CERG organizes the operating chain and forces the evidence back to reality.**
 
 ---
 
@@ -115,11 +115,12 @@ This slide prevents the most common executive misunderstanding.
 
 | CERG **does** | CERG usually **does not** |
 |---|---|
-| Define control outcomes and evidence expectations. | Run every technical platform. |
+| Define control outcomes, enforcement expectations, and evidence requirements. | Run every technical platform. |
 | Establish decision rights and escalation paths. | Own all IT operations. |
 | Integrate Engineering, Risk, and Governance work. | Command active incidents. |
-| Create reusable audit and compliance evidence. | Own enterprise security awareness operations. |
-| Validate whether capabilities operate. | Automatically own IAM, EDR, SIEM, backup, network, cloud, or SaaS administration. |
+| Turn penetration testing, purple-team work, incidents, and control tests into risk decisions and improvements. | Treat annual testing as a standalone report-writing exercise. |
+| Create reusable audit and compliance evidence from real work. | Own enterprise security awareness operations. |
+| Validate whether capabilities operate under realistic conditions. | Automatically own IAM, EDR, SIEM, backup, network, cloud, or SaaS administration. |
 | Surface unfunded or unclear accountability as risk. | Make resource constraints disappear. |
 
 **Executive translation:** CERG does not grab every security-adjacent function. It makes the security obligations around those functions explicit.
