@@ -932,7 +932,7 @@ Every control entry follows this structure:
 ### SA-001: Security Requirements in Procurement
 
 | **Control ID** | SA-001 |
-| **Action Statement** | Security requirements are included in RFPs, contracts, and vendor selection criteria for all system and service acquisitions. Vendors are evaluated against CERG control requirements before purchase. |
+| **Action Statement** | Security requirements are included in RFPs, contracts, and vendor selection criteria for all system and service acquisitions (software, hardware, and services). Vendors are evaluated against CERG control requirements before purchase. Hardware is sourced only from authorized resellers. Software is sourced from trusted, integrity-verified channels only. |
 | **System Applicability** | Process |
 | **Owning Pillar** | Risk |
 | **Named Evidence** | Security requirements in RFP/contract; vendor evaluation checklist |
@@ -944,7 +944,7 @@ Every control entry follows this structure:
 ### SA-002: Software Development Security
 
 | **Control ID** | SA-002 |
-| **Action Statement** | Custom-developed software follows secure development practices. Code is reviewed, tested for security flaws, and scanned for vulnerabilities before deployment. |
+| **Action Statement** | Custom-developed software and public-facing web applications follow secure development practices. Code is reviewed, tested for security flaws (SAST/DAST), and scanned for vulnerabilities before production deployment. Critical-severity findings block release. |
 | **System Applicability** | Software, Process |
 | **Owning Pillar** | Engineering |
 | **Named Evidence** | Secure coding policy; code review records; SAST/SCA scan results |
@@ -995,88 +995,205 @@ Every control entry follows this structure:
 ## 18. System and Communications Protection (SC)
 
 ### SC-001: Network Segmentation
-Network segmented to isolate critical systems, restrict lateral movement, separate trust zones. VLANs for servers, workstations, guest, DMZ. OT physically/logically isolated from IT. | Network | Engineering | Network diagram, firewall ruleset | Quarterly | Fortinet, VLANs
 
-### SC-002: Boundary Protection
-Firewalls restrict traffic to authorized ports/protocols. Default-deny inbound/outbound. Rules reviewed quarterly. | Network | Engineering | Firewall config export, review log | Quarterly | Fortinet
+| **Control ID** | SC-001 |
+| **Action Statement** | The network is segmented into trust zones (servers, workstations, guest, DMZ, OT, CUI enclave). Inter-zone traffic is restricted to explicitly authorized ports and protocols. Boundary protection (firewalls, ACLs) enforces segmentation. Lateral movement between zones requires a firewall rule change. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Network diagram showing trust zones; firewall ruleset export |
+| **Minimum Frequency** | Quarterly review |
+| **Subordinate Standard** | [CERG-STD-NET-001](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) |
+| **MSP Implementation Note** | Minimum zones: Guest (internet only), Workstation (corporate LAN), Server (restricted access), DMZ (internet-facing), Management (admin access). OT clients: physically separate network or firewall-enforced with one-way data diode where possible. Fortinet: create zones, apply policies between each zone pair. Test: can a workstation ping a server in a different zone? If yes, segmentation is broken. |
+| **Tool Binding** | Fortinet (zone-based firewall), VLANs, 802.1Q |
+
 
 ### SC-003: Encryption at Rest
-Sensitive data at rest encrypted. Keys managed separately. | Hardware, Software, Cloud, Data | Engineering | Encryption config, key management procedure | Quarterly | BitLocker, Cloud encryption
+
+| **Control ID** | SC-003 |
+| **Action Statement** | Sensitive data at rest is encrypted. Encryption keys are managed separately from the encrypted data. Key rotation follows a defined schedule. |
+| **System Applicability** | Hardware, Software, Cloud, Data |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Encryption configuration export; key management procedure document |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| **MSP Implementation Note** | Windows: BitLocker on all workstations and servers. Cloud: enable default encryption (AWS EBS, Azure SSE, GCP CSEK). Database: TDE if available. Key management: use platform key management (Entra ID, AWS KMS, Azure Key Vault). Do not store encryption keys on the same server as the encrypted data. |
+| **Tool Binding** | BitLocker, AWS KMS, Azure Key Vault, Veeam (backup encryption) |
 
 ### SC-004: Encryption in Transit
-TLS 1.2+ required. Legacy protocols disabled. | Network, Cloud, Software | Engineering | TLS scan report | Quarterly | Qualys SSL Labs, Nmap
 
-### SC-005: VoIP Protection
-VoIP isolated on separate VLAN. Default credentials changed. | Network, Hardware | Engineering | VoIP config, credential log | Quarterly | Fortinet, VoIP PBX
+| **Control ID** | SC-004 |
+| **Action Statement** | Data in transit is encrypted using TLS 1.2 or higher. SSL 3.0, TLS 1.0, and TLS 1.1 are disabled. Internal network traffic between sensitive systems is encrypted where traversing untrusted segments. |
+| **System Applicability** | Network, Cloud, Software |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | TLS configuration scan report; cipher suite configuration |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| **MSP Implementation Note** | FortiGate: disable SSLv3, TLS 1.0, TLS 1.1 in SSL/SSH inspection profile. Web servers: configure TLS 1.2+ in IIS/Apache/Nginx. Test with nmap --script ssl-enum-ciphers -p 443 <target>. Flag any server supporting TLS < 1.2. |
+| **Tool Binding** | Fortinet (SSL inspection), Nmap (scan), Qualys SSL Labs (external) |
+
 
 ### SC-006: Wireless Security
-WPA2-Enterprise with 802.1X. No PSK for corporate. Guest isolated. | Network | Engineering | Wireless config | Quarterly | Fortinet, RADIUS/NPS
 
-### SC-007: Mobile Device Security
-MDM enforced: screen lock, encryption, min OS, remote wipe. | Hardware, Software | Engineering | MDM policy, compliance report | Monthly | Microsoft Intune, Jamf
+| **Control ID** | SC-006 |
+| **Action Statement** | Corporate wireless networks use WPA2-Enterprise or WPA3-Enterprise with 802.1X authentication. Pre-shared keys are not used for corporate access. Guest wireless is on a separate SSID with internet-only access and client isolation enabled. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | Wireless configuration export; RADIUS authentication logs |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-NET-001](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) |
+| **MSP Implementation Note** | FortiGate wireless controller: configure SSID for corporate (WPA2-Enterprise + RADIUS to NPS/Entra ID), guest (open portal with captive portal, client isolation). For clients without RADIUS infrastructure: WPA3-SAE is acceptable as an interim measure. |
+| **Tool Binding** | Fortinet (wireless controller), NPS/RADIUS, Entra ID (802.1X auth) |
+
 
 ### SC-008: DNS Security
-DNS filtering blocks malicious domains. Internal DNS hardened. | Network | Engineering | DNS config, filtering policy | Quarterly | Fortinet, Cisco Umbrella
+
+| **Control ID** | SC-008 |
+| **Action Statement** | DNS traffic is filtered to block access to known malicious domains, C2 infrastructure, phishing sites, and malware distribution sites. Internal DNS servers are hardened against cache poisoning and zone transfer attacks. |
+| **System Applicability** | Network |
+| **Owning Pillar** | Engineering |
+| **Named Evidence** | DNS filtering configuration; DNS resolver security settings |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-NET-001](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) |
+| **MSP Implementation Note** | FortiGate: enable DNS filter with malicious-domain categories blocked. Forward all DNS to FortiGuard or Cisco Umbrella for threat intelligence. Internal domain controllers: disable recursion for external queries, enable DNSSEC. Test: nslookup malicious.test-domain.com — must return blocked response. |
+| **Tool Binding** | Fortinet (DNS filter), Cisco Umbrella, Active Directory DNS |
 
 ---
 
 ## 19. System and Information Integrity (SI)
 
-### SI-001: Malware Protection
-Anti-malware deployed. Real-time protection. Auto-update. Coverage monitored. | Hardware, Software | Risk | EDR dashboard | Monthly | SentinelOne
 
-### SI-002: Vulnerability Monitoring
-New vulns assessed within 24h. CISA KEV, vendor advisories monitored. | Hardware, Software, Cloud | Risk | Advisory review log | Weekly | Tenable, CISA KEV
 
 ### SI-003: File Integrity Monitoring
-Critical files monitored for unauthorized changes. Alerts generated. | Software | Risk | FIM config, alert log | Continuous | Wazuh, SentinelOne
+
+| **Control ID** | SI-003 |
+| **Action Statement** | Critical system files, configuration files, and binary directories are monitored for unauthorized changes. FIM alerts are generated within 5 minutes of a change. Baseline snapshots are taken after every approved change. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | FIM configuration export; unauthorized change alert log |
+| **Minimum Frequency** | Continuous |
+| **Subordinate Standard** | [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **MSP Implementation Note** | Wazuh: enable FIM module, add directories to monitor: /etc, /usr/bin, /usr/local/bin, C:\Windows\System32\drivers\etc, C:\Program Files install dirs. Exclude temp and cache. SentinelOne: enable integrity monitoring via policy. Alert on any change that is not traceable to an approved patch or change ticket. |
+| **Tool Binding** | Wazuh (FIM module), SentinelOne (integrity monitoring) |
 
 ### SI-004: Detection Engineering
-Sigma rules deployed, ATT&CK mapped. Tested with Atomic Red Team. Gaps documented. | Software, Process | Risk | Rule inventory, test results | Monthly | Sigma, ART, Elastic/Wazuh
+
+| **Control ID** | SI-004 |
+| **Action Statement** | Detection rules are written in Sigma format and deployed to the SIEM. Rules are mapped to MITRE ATT&CK techniques. Each rule is tested quarterly with Atomic Red Team. Detection coverage gaps are documented and prioritized for remediation. |
+| **System Applicability** | Software, Process |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Sigma rule inventory; Atomic Red Team test results showing detection status per technique |
+| **Minimum Frequency** | Monthly (rule review), Quarterly (testing) |
+| **Subordinate Standard** | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **MSP Implementation Note** | Deploy Sigma rules via Wazuh/Elastic. Use the Sigma CLI to convert. Map rules to ATT&CK. Run Atomic Red Team tests quarterly: Invoke-AtomicTest All -GetPrereqs, then Invoke-AtomicTest All. Every test that does not generate an alert is a detection gap — document it in POA&M. |
+| **Tool Binding** | Sigma (rule format), Atomic Red Team (testing), Elastic Security / Wazuh (deployment) |
 
 ### SI-005: Email Security
-SPF/DKIM/DMARC enforced. Safe Links/Attachments. Phish investigated. | Software, Cloud | Risk | Email config, phish metrics | Monthly | M365 Defender, Proofpoint
+
+| **Control ID** | SI-005 |
+| **Action Statement** | Email is protected against phishing, spoofing, and malware delivery. SPF, DKIM, and DMARC are enforced on the sending domain. Inbound email is filtered for malicious links and attachments. Reported phishing is investigated within 4 hours. |
+| **System Applicability** | Software, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Email security configuration export; phishing investigation log; DMARC report |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-MSG-001](../standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) |
+| **MSP Implementation Note** | M365: enable Safe Links, Safe Attachments, Anti-Phish in Defender for Office 365. Configure SPF (TXT record listing all sending IPs), DKIM (signing enabled in Exchange admin), DMARC (policy p=quarantine or p=reject). Test: Resolve-DnsName client.com TXT to verify SPF. |
+| **Tool Binding** | M365 Defender, Proofpoint, DMARC analysis tools |
 
 ### SI-006: Web Filtering
-Web traffic filtered for malicious/phishing/inappropriate sites. | Network, Software | Risk | Filtering config | Monthly | Fortinet, SentinelOne
+
+| **Control ID** | SI-006 |
+| **Action Statement** | Outbound web traffic is filtered to block malicious, phishing, and inappropriate categories. HTTPS inspection is enabled where legally permissible. Filtering bypass is restricted to authorized personnel with documented exceptions. |
+| **System Applicability** | Network, Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Web filter configuration export; bypass request log |
+| **Minimum Frequency** | Monthly |
+| **Subordinate Standard** | [CERG-STD-NET-001](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) |
+| **MSP Implementation Note** | FortiGate: enable web filter with categories: block Malicious, Phishing, Newly Registered Domains, Cryptominers. Block or warn on Adult, P2P, Social Media (per client policy). Enable HTTPS inspection (CA certificate deployed via GPO). Test: browse to test-malicious.site — must be blocked. |
+| **Tool Binding** | Fortinet (web filter), SentinelOne (web control), DNS filter |
 
 ### SI-007: Data Loss Prevention
-DLP for email, cloud, endpoints. Sensitive data exfiltration blocked. | Data, Cloud | Risk | DLP config, incident log | Quarterly | Microsoft Purview, SentinelOne
 
-### SI-008: Application Security Testing
-Web apps tested for vulns. Critical remediated before production. | Software | Engineering | App test report | Per release | OWASP ZAP, Burp Suite
+| **Control ID** | SI-007 |
+| **Action Statement** | Sensitive data is protected from exfiltration via email, cloud upload, USB transfer, and clipboard. DLP policies identify and block unauthorized transmission of PII, PHI, financial data, and intellectual property. |
+| **System Applicability** | Data, Cloud |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | DLP policy configuration; DLP incident log |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-STD-DG-001](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) |
+| **MSP Implementation Note** | M365: enable DLP in Purview. Define policies for: PII (SSN, credit card, bank account), PHI (HIPAA identifiers), financial data. SentinelOne: enable USB device control to block unauthorized removable media. For SMB clients: start with email DLP and USB blocking. |
+| **Tool Binding** | Microsoft Purview (M365 DLP), SentinelOne (USB control) |
+
 
 ---
 
 ## 20. Supply Chain Risk Management (SR)
 
 ### SR-001: Software Bill of Materials
-SBOM collected for critical software. Components, versions, vulns tracked. | Software | Risk | SBOM inventory | Per acquisition | Trivy
+
+| **Control ID** | SR-001 |
+| **Action Statement** | SBOMs are collected for all critical software acquisitions (commercial and open-source). SBOMs are stored centrally, scanned for known vulnerabilities, and reviewed quarterly for newly disclosed CVEs affecting the software supply chain. |
+| **System Applicability** | Software |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | SBOM inventory; vulnerability scan results against SBOM components |
+| **Minimum Frequency** | Per acquisition; quarterly review |
+| **Subordinate Standard** | [CERG-STD-SDL-001](../standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) |
+| **MSP Implementation Note** | Use Trivy to generate SBOMs: trivy image --format cyclonedx --output sbom.json <image>. For commercial software: request SPDX or CycloneDX SBOM from vendor. Store SBOMs in client documentation (Hudu). Quarterly: trivy sbom sbom.json to re-scan for new CVEs. Flag any Critical/High CVE with no fix available. |
+| **Tool Binding** | Trivy (SBOM generation and scanning) |
 
 ### SR-002: Vendor Risk Assessment
-Vendors assessed: posture, history, compliance, data handling. | Process | Risk | Vendor assessment, tier list | Annual (critical) | ServiceNow GRC
 
-### SR-003: Trusted Software Sources
-Software from trusted sources only. Integrity verified before install. | Software | Engineering | Approved source list | Per acquisition | SentinelOne
+| **Control ID** | SR-002 |
+| **Action Statement** | Third-party vendors with access to client systems or data are assessed for security posture annually (or pre-engagement for new vendors). Assessment covers: compliance certifications, breach history, data handling practices, subcontractor relationships, and right-to-audit provisions. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Risk |
+| **Named Evidence** | Vendor assessment form; tiered vendor list (Critical/High/Medium/Low); annual review records |
+| **Minimum Frequency** | Pre-engagement (all vendors); Annual (Critical/High) |
+| **Subordinate Standard** | [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| **MSP Implementation Note** | Tier vendors by data access: Critical (production data, admin access), High (PII/PHI read, network access), Medium (non-sensitive data), Low (no data access). Annual review for Critical/High: verify SOC 2 Type II is current, check for breaches in last 12 months, review subcontractor changes. Use ServiceNow GRC vendor module or a simple spreadsheet for SMB. |
+| **Tool Binding** | ServiceNow GRC (vendor risk module), Vanta (automated vendor assessment) |
 
-### SR-004: Hardware Supply Chain
-Hardware from authorized resellers. Counterfeit/tampered rejected. | Hardware | Risk | Authorized reseller list | Per acquisition | Reseller agreements
+
 
 ---
 
 ## 21. Program Management (PM)
 
 ### PM-001: Information Security Program Plan
-Documented plan: scope, org structure, roles, resources, metrics. | Process | Governance | Program plan document | Annual | ServiceNow GRC
 
-### PM-002: Senior Security Officer
-Named individual accountable for program. Budget authority. | Process | Governance | Appointment/org chart | Annual | None (organizational)
+| **Control ID** | PM-001 |
+| **Action Statement** | A written information security program plan defines the scope of the program, organizational structure, roles and responsibilities, resource requirements, and success metrics. The plan is reviewed and updated annually. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Signed information security program plan document |
+| **Minimum Frequency** | Annual |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **MSP Implementation Note** | SMB clients: a single 5-10 page plan covering: environment description, control implementation approach, staffing model (MSP + client), compliance obligations, metrics, and review cadence. Store in client documentation (Hudu/ServiceNow). |
+| **Tool Binding** | ServiceNow GRC (document management), Hudu |
+
 
 ### PM-003: Security Metrics Program
-Performance measured. Reported to leadership. Improves program. | Process | Governance | Metrics dashboard | Monthly/Quarterly | ServiceNow GRC, Elastic/Wazuh
+
+| **Control ID** | PM-003 |
+| **Action Statement** | Security program performance is measured through defined metrics and reported to leadership monthly. Metrics cover: vulnerability remediation SLA adherence, MFA coverage, backup success rate, incident response time, and risk register aging. Metrics drive program improvement decisions. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Metrics dashboard or report; trend data showing improvement over time |
+| **Minimum Frequency** | Monthly (operational), Quarterly (trend) |
+| **Subordinate Standard** | [CERG-GOV-MTR-001](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **MSP Implementation Note** | Minimum metrics per client: (1) vuln SLA adherence %, (2) MFA coverage %, (3) backup success rate %, (4) critical patch deployment time, (5) open risk acceptances aged > 90 days. ServiceNow GRC: use Performance Analytics. Vanta: built-in compliance metrics. For SMB: a monthly one-page PDF summary to the client's leadership. |
+| **Tool Binding** | ServiceNow GRC (Performance Analytics), Vanta (compliance dashboard), Elastic/Wazuh (operational metrics) |
 
 ### PM-004: Continuous Improvement
-Program reviewed and improved. Lessons learned feed updates. | Process | Governance | Review minutes, action items | Quarterly | ServiceNow GRC, HaloPSA
+
+| **Control ID** | PM-004 |
+| **Action Statement** | The security program is reviewed quarterly for improvement opportunities. Lessons learned from incidents, audits, assessments, and operational metrics feed program updates. Improvement actions are tracked in the POA&M. |
+| **System Applicability** | Process |
+| **Owning Pillar** | Governance |
+| **Named Evidence** | Quarterly program review minutes; POA&M entries for improvement actions |
+| **Minimum Frequency** | Quarterly |
+| **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
+| **MSP Implementation Note** | Quarterly program review agenda: (1) what changed (scope, regulations, threats), (2) metric trends (green/amber/red), (3) open findings from last audit/assessment, (4) improvement priorities for next quarter. Document in POA&M. This is the mechanism that prevents CERG from becoming shelfware. |
+| **Tool Binding** | ServiceNow GRC (POA&M), HaloPSA (meeting notes) |
 
 ---
 
@@ -1101,16 +1218,17 @@ Program reviewed and improved. Lessons learned feed updates. | Process | Governa
 | PS — Personnel Security | 3 |
 | RA — Risk Assessment | 5 |
 | SA — System and Services Acquisition | 5 |
-| SC — System and Communications Protection | 8 |
-| SI — System and Information Integrity | 8 |
-| SR — Supply Chain Risk Management | 4 |
-| PM — Program Management | 4 |
-| **Total** | **97** |
+| SC — System and Communications Protection | 5 |
+| SI — System and Information Integrity | 5 |
+| SR — Supply Chain Risk Management | 2 |
+| PM — Program Management | 3 |
+| **Total** | **87** |
 
 ### Revision History
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
+| 1.1.0 | 2026-07-20 | cragin-security | Culled 9 overlapping shuttle-hand controls, expanded 15 keepers to full 9-field format with MSP notes, tool bindings, and subordinate standards. Total: 87 controls across 19 families. |
 | 1.0.0 | 2026-07-03 | cragin-security | Initial release: 97 controls across 19 families |
 
 ### Review Triggers
