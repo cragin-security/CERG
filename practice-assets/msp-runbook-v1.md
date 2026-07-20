@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients. It assumes you've read the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) and set up your [GRC platform](tools/grc-rollout-v1.md).
+This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients. It assumes you've read the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md), reviewed the [Engagement Playbook](../practice-assets/engagement-playbook-v1.md) for scoping and pricing context, and set up your [GRC platform](tools/grc-rollout-v1.md).
 
 Every section here is written for an **IT generalist** — someone who can follow instructions and run commands, but isn't a dedicated security engineer. If a step requires specialized expertise, it's called out explicitly.
 
@@ -29,7 +29,7 @@ Every section here is written for an **IT generalist** — someone who can follo
 
 ### 1.1 Initial Client Assessment
 
-Before deploying a single tool, you need to understand what the client has. Run the CERG Intake Questionnaire (30 questions, 60 minutes with the client's IT lead). The questionnaire covers:
+Before deploying a single tool, you need to understand what the client has. Run the CERG Intake Questionnaire (30 questions, 60 minutes with the client's IT lead — see [Engagement Playbook Phase 1](../practice-assets/engagement-playbook-v1.md#phase-1-discover-free-60-minutes)). The questionnaire covers:
 
 - Current tool inventory (what's already in place)
 - Regulatory obligations (CMMC, HIPAA, PCI, SOX, none)
@@ -54,7 +54,7 @@ Based on the assessment, select the tool stack using the [Opinionated Tool Matri
 ### 1.3 Scope Document
 
 Write a one-page scope document that names:
-- The client's CERG tier (Foundations, Structure, Compliance, Strategic — see [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md))
+- The client's CERG tier (Foundations, Structure, Compliance, Strategic — see [Engagement Playbook](../practice-assets/engagement-playbook-v1.md#phase-3-plan-billable-1-week-after-assessment) pricing and [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md#5-the-306090-day-rollout))
 - Tool stack selected
 - Excluded scope (OT, physical security, etc.)
 - Evidence collection cadence
@@ -223,6 +223,8 @@ This section covers the controls that MSPs most commonly struggle with. Each ent
 
 ### AC-002: MFA Everywhere
 
+**Control reference:** [CB-002 AC-002](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-002-mfa-enforcement) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+
 **What it means:** Every user account that accesses company systems must use multi-factor authentication. No exceptions for executives, IT staff, or service accounts with interactive login.
 
 **Implementation steps:**
@@ -249,6 +251,8 @@ Get-MgUser -All | Where-Object { $_.UserType -eq "Member" } |
 
 ### AC-006: Quarterly Access Review
 
+**Control reference:** [CB-002 AC-006](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-006-quarterly-access-review) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+
 **What it means:** Every quarter, someone reviews who has access to what and revokes what's no longer needed. This is the control that catches the ex-employee whose account was never disabled, the contractor whose project ended, and the admin who changed roles.
 
 **Implementation steps:**
@@ -273,6 +277,8 @@ Get-ADUser -Filter {Enabled -eq $false} -Properties MemberOf |
 
 ### CM-008: Baseline Configuration Drift
 
+**Control reference:** [CB-002 CM-008](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#cm-008-automated-patching) · [Configuration Baseline Standard (STD-CFG-001)](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)
+
 **What it means:** Systems are configured to a known-good baseline. When they drift, you detect it and fix it. This prevents the server that was hardened six months ago from accumulating insecure defaults as administrators make one-off changes.
 
 **Implementation steps:**
@@ -290,3 +296,23 @@ Get-ADUser -Filter {Enabled -eq $false} -Properties MemberOf |
    - Weekly scan for critical systems (domain controllers, firewalls, internet-facing)
    - Monthly scan for all others
 4. **Response:** Any drift finding > Medium severity gets a ticket within 24 hours
+
+---
+
+## Document Control
+
+### Revision History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0.0 | 2026-07-03 | cragin-security | Initial release: 5-phase delivery playbook, tool deployment commands, per-control implementation |
+
+### Related Documents
+
+- [100-Core Control Baseline](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [Engagement Playbook](../practice-assets/engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
+- [GRC Rollout Guide](tools/grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [Access Management Standard](../standards/CERG-STD-AC-001_Access_Management_Standard.md) — authoritative parameter detail for AC family controls
+- [Configuration Baseline Standard](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — DISH baseline, hardening benchmarks, drift detection parameters
+- [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) — adoption paths, MVC sequence, role-based checklists
