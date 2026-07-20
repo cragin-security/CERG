@@ -46,6 +46,8 @@ The GRC platform is the spine of the CERG program. Every other tool reports into
 
 **CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
 
+**CERG standards:** The GRC platform tracks all controls and evidence from the [100-Core Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md). Implementation guidance is in the [GRC Rollout Guide](grc-rollout-v1.md) and [Engagement Playbook](../engagement-playbook-v1.md).
+
 **Integration note:** ServiceNow GRC has native integrations with most SIEM and endpoint tools. Vanta's integrations are narrower — Wiz, AWS, Azure, GCP, GitHub, Jamf, Intune. Budget for middleware if you need Vanta-to-non-cloud-tool integration.
 
 ---
@@ -66,6 +68,8 @@ The SIEM is the operational brain. It ingests from endpoint, network, cloud, ide
 
 **CERG recommendation:** Wazuh for SMB clients and lean MSP stacks. Elastic Security when the client has the budget and needs EDR + SIEM convergence.
 
+**CERG standard:** [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — defines detection coverage requirements, log source minimums, retention periods, and evidence parameters for SI-family controls.
+
 ---
 
 ### 3. Endpoint Protection / EDR
@@ -83,6 +87,8 @@ Endpoint is the first line of defense and the richest source of detection teleme
 
 **CERG recommendation:** SentinelOne. Good enough detection, excellent MSP console, solid ServiceNow integration. CrowdStrike if the client has breach history or is a high-value target.
 
+**CERG standards:** [Endpoint and Mobile Security Standard](../../standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) — endpoint hardening, EDR coverage requirements, mobile device management. [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection rule requirements fed by endpoint telemetry.
+
 ---
 
 ### 4. Vulnerability Management
@@ -98,6 +104,8 @@ Vulnerability scanning is table stakes. CERG requires authenticated scanning, a 
 | **Avoid** | **Rapid7 InsightVM / Nexpose** | Once competitive. Falling behind on cloud/container scanning. MSP program is weak. |
 
 **CERG recommendation:** Tenable for mixed on-prem/cloud environments. Wiz for cloud-native clients.
+
+**CERG standards:** [Asset Management and Inventory Standard](../../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) — asset inventory requirements that feed vulnerability scoping. [100-Core Baseline RA-005](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — vulnerability scanning and remediation parameters.
 
 ---
 
@@ -115,6 +123,8 @@ Every CERG client has cloud footprint — even if it's just M365 and a SaaS stac
 
 **CERG recommendation:** Wiz for multi-cloud. Microsoft Defender for Cloud if Azure-only and budget-constrained.
 
+**CERG standards:** [Configuration Baseline Standard](../../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — cloud configuration baselines and drift detection. [IT, Cloud, and SaaS Security Standard](../../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) — cloud security posture requirements.
+
 ---
 
 ### 6. Identity / IAM
@@ -128,6 +138,8 @@ Identity is the new perimeter. CERG requires MFA everywhere, SSO where possible,
 | **Acceptable** | **JumpCloud** | Good for heterogeneous environments (Windows + Mac + Linux). Weaker enterprise features. |
 | **Avoid** | **OneLogin** | Acquired, in maintenance mode. Integration marketplace is shrinking. |
 || **Avoid** | **On-prem AD without Entra ID sync** | You're operating a legacy identity store without cloud integration. This is not a CERG-compliant architecture for any client with cloud workloads. |
+
+**CERG standard:** [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — MFA enforcement, SSO integration, account lifecycle management, access review cadence, and IA/AC family control parameters.
 
 ### 7. AppSec / Supply Chain
 
@@ -144,6 +156,8 @@ Software supply chain security is mandatory under CMMC L2 and increasingly requi
 
 **CERG recommendation:** Trivy for dependency/container/supply-chain scanning. Semgrep for SAST. Both are free, CLI-first, and work in CI/CD without vendor lock-in.
 
+**CERG standards:** [Secure Software Development Standard](../../standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) — SDLC security requirements, CI/CD pipeline gates, SAST/SCA integration. [100-Core Baseline SR family](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — supply chain risk management controls.
+
 ---
 
 ### 8. Detection Engineering
@@ -159,6 +173,8 @@ CERG's detection strategy is threat-intel-validated. Rules are written in Sigma 
 | **Avoid** | **Custom/proprietary detection languages** | Splunk SPL, Elastic EQL, KQL. Write rules in Sigma, let the converter handle translation. Proprietary rules are non-portable. |
 
 **CERG recommendation:** Sigma for rules. Atomic Red Team for testing. Chainsaw for validation.
+
+**CERG standard:** [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage tiers, Sigma rule requirements, testing cadence, and evidence parameters.
 
 ---
 
@@ -177,6 +193,8 @@ Ransomware recovery starts with backups that work. CERG requires immutable, test
 
 **CERG recommendation:** Veeam for mixed environments. Rubrik for cloud-native. Never snapshots alone.
 
+**CERG standard:** [Cyber Resilience and Backup Standard](../../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) — immutable backup requirements, recovery testing cadence, RTO/RPO parameters, and evidence collection for CP-family controls.
+
 ---
 
 ### 10. Network Security
@@ -193,6 +211,8 @@ Firewalls, segmentation, and network monitoring. CERG requires network segmentat
 
 **CERG recommendation:** Fortinet. Best MSP program, best value, broadest feature set.
 
+**CERG standard:** [Network Security and Segmentation Standard](../../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) — segmentation requirements, firewall rule management, network monitoring, and SC-family control parameters.
+
 ---
 
 ### 11. AI Security
@@ -207,6 +227,8 @@ AI systems introduce new risks: model poisoning, prompt injection, data leakage,
 | **Avoid** | **Manual AI inventory via surveys** | Shadow AI moves too fast. You need automated discovery. |
 
 **CERG recommendation:** Wiz AI-SPM for cloud AI discovery. Lasso for browser-based shadow AI detection. Both should be part of the CSPM deployment.
+
+**CERG standard:** [Artificial Intelligence Security Standard](../../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) — AI system risk assessment, model security controls, data provenance requirements, and AI-specific evidence collection.
 
 ---
 
@@ -227,6 +249,8 @@ Beyond the security tools, MSPs need operational tooling to deliver CERG at scal
 | **Avoid** | **Spreadsheets and shared drives** | You cannot run a multi-client CERG practice on spreadsheets. You need a documentation platform, a ticketing system, and an RMM. |
 
 **CERG recommendation:** NinjaOne + HaloPSA + Hudu. Modern, API-first, multi-tenant. ServiceNow GRC ties them together at the governance layer.
+
+**CERG practice assets:** [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, and delivery lifecycle. [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation. [GRC Rollout Guide](grc-rollout-v1.md) — wiring controls and evidence into the governance layer.
 
 ---
 
@@ -291,7 +315,7 @@ Every tool in this diagram has a documented API and a supported integration path
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2026-07-03 | cragin-security | Initial release: 12 categories, integration map, decision guide |
+| 1.0.0 | 2026-07-03 | cragin-security | Initial release: 12 categories, integration map, decision guide. Cross-references to upstream CERG standards added per category. |
 
 ### Review Triggers
 
@@ -301,6 +325,15 @@ Every tool in this diagram has a documented API and a supported integration path
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) (in development)
-- [GRC Rollout Guide](grc-rollout-v1.md)
-- [MSP Runbook](../msp-runbook-v1.md)
+- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation
+- [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — MFA, SSO, account lifecycle, access review parameters
+- [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage, log retention, SIEM requirements
+- [Configuration Baseline Standard](../../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — DISH baseline, hardening benchmarks, drift detection
+- [Network Security and Segmentation Standard](../../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) — segmentation, firewall management, network monitoring
+- [Cyber Resilience and Backup Standard](../../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) — immutable backup, recovery testing, RTO/RPO
+- [Endpoint and Mobile Security Standard](../../standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) — endpoint hardening, EDR coverage, MDM
+- [Secure Software Development Standard](../../standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) — SDLC security, CI/CD gates, SAST/SCA
+- [Artificial Intelligence Security Standard](../../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) — AI risk assessment, model security, data provenance
