@@ -211,6 +211,7 @@ Limitations: Vanta's partner reporting is not as robust as ServiceNow's domain s
 
 ### Related Documents
 
+- [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [MSP Runbook](../msp-runbook-v1.md) — copy-paste deployment instructions for every tool in the stack
 - [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
