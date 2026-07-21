@@ -550,6 +550,7 @@ The `practice-assets/` directory contains consulting delivery materials maintain
 | [`CERG-OPN-TOOLS-001`](../practice-assets/tools/opinionated-tool-matrix-v1.md) | Opinionated Tool Matrix — Practitioner-Grade Recommendations | Consulting Practice Lead | Draft |
 | [`CERG-OPN-TOOLS-002`](../practice-assets/tools/grc-rollout-v1.md) | GRC Rollout Guide — ServiceNow GRC + Vanta | Consulting Practice Lead | Draft |
 | [`CERG-OPN-TOOLS-003`](../practice-assets/tools/evidence-automation-mapping-v1.md) | Evidence Automation Mapping — Control-to-Tool Evidence Pipelines | Consulting Practice Lead | Draft |
+| [`CERG-OPN-TOOLS-004`](../practice-assets/tools/threat-intel-validation-v1.md) | Threat-Intel-Validated Control Baseline — CISA KEV + Ransomware TTP Mapping | Consulting Practice Lead | Draft |
 | [`CERG-OPN-MSP-001`](../practice-assets/msp-runbook-v1.md) | MSP/MSSP Runbook — Practitioner Playbook | Consulting Practice Lead | Draft |
 | [`CERG-OPN-DLV-001`](../practice-assets/engagement-playbook-v1.md) | Engagement Playbook — Scoping, Pricing, Delivery | Consulting Practice Lead | Draft |
 
