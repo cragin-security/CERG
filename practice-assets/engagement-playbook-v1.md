@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-OPN-DLV-001 |
-| **Version** | 1.0.0 |
+| **Version** | 1.1.0 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
@@ -119,14 +119,80 @@ Two delivery models:
 
 ### Phase 6: Handoff (Optional)
 
-**Goal:** Transition the program to in-house staff or a different provider.
+**Goal:** Transition the program to in-house staff or a different provider with zero operational disruption. A clean handoff is the difference between a referral and a cautionary tale.
+
+**When to trigger handoff:** The client hires internal security staff, switches MSPs, brings the program in-house after the deployment phase, or the contract term ends without renewal.
 
 **Deliverables:**
-1. **Handover Memo** — program status, tool inventory, current evidence, open issues
-2. **Runbook Package** — all deployment scripts, configs, and documentation
-3. **Vendor Transfer** — tool license transfers, admin account handoff, API key rotation
 
-**Pricing:** $5,000-15,000 depending on program complexity. Never hold the client hostage — a clean handoff earns referrals.
+1. **Handover Memo** — A 5-10 page document covering:
+   - Program status summary (controls implemented, evidence collected, open findings)
+   - Tool inventory with license expiry dates, admin accounts, and renewal contacts
+   - Current evidence package (last evidence cycle export from GRC platform)
+   - Open POA&M items with remediation owners and target dates
+   - Risk register export (open risk acceptances, exceptions, pending reviews)
+   - Recurring calendar (evidence collection cadence, review schedules, compliance deadlines)
+   - Known gaps and compensating controls not yet remediated
+
+2. **Runbook Package** — A zip or Git repo containing:
+   - All deployment scripts (PowerShell, Bash, Terraform) with comments
+   - Configuration exports from every tool (firewall rules, SIEM configs, EDR policies, backup jobs)
+   - Dashboard definitions and saved SIEM queries for the client's environment
+   - Custom detection rules (Sigma files) and any environment-specific modifications
+   - GRC platform control mappings and evidence templates
+   - Architecture diagrams (network topology, data flows, trust boundaries)
+
+3. **Vendor Transfer Checklist** — Technical transfer steps:
+   - Tool license transfers from MSP account to client or new provider
+   - Admin account handoff with credential rotation (all shared credentials changed)
+   - API key and webhook rotation (old keys revoked, new keys tested)
+   - DNS/CNAME/redirect changes if MSP-hosted services are moving
+   - Email security SPF/DKIM/DMARC record updates if MSP's email gateway is being removed
+   - SIEM log source reconfiguration (forwarding destination changes)
+   - RMM agent uninstallation or transfer to new provider
+
+4. **Knowledge Transfer Sessions** — Paid transition support:
+   - 2-4 hours of recorded walkthrough sessions covering tool operations, incident response procedures, evidence collection workflows, and monthly review cadence
+   - One week of standby support post-handoff for questions and issues
+
+5. **Transition Acceptance Form** — Signed by the client confirming:
+   - All deliverables received and reviewed
+   - Tool access verified (new admins can log in, old MSP access revoked)
+   - Evidence package accepted as current
+   - Handoff completion date and final invoice acknowledgment
+
+**Pricing:**
+
+| Component | SMB (<50) | Mid-Market (50-500) | Enterprise (500+) |
+|-----------|-----------|---------------------|-------------------|
+| Handover Memo + Runbook Package | $3,000 | $5,000 | $8,000 |
+| Vendor Transfer (per tool) | $500 | $1,000 | $2,000 |
+| Knowledge Transfer (2-4 hrs) | $2,000 | $4,000 | $6,000 |
+| Standby Support (1 week) | $2,000 | $3,000 | $5,000 |
+| **Typical Total** | **$5,000-7,000** | **$8,000-12,000** | **$12,000-15,000** |
+
+**Duration:** 1-3 weeks depending on tool count and complexity. Typically 2 weeks for a standard 5-tool stack.
+
+**Checklist:** Before declaring handoff complete, verify all of the following:
+
+| # | Item | Owner |
+|---|------|-------|
+| 1 | Handover Memo delivered and acknowledged | Consulting Lead |
+| 2 | Runbook Package delivered (verify client can open/run it) | Consulting Lead |
+| 3 | All tool licenses transferred to client/provider | Consulting Lead |
+| 4 | MSP admin accounts removed from all client tools | Engineering |
+| 5 | API keys rotated and new keys tested | Engineering |
+| 6 | SIEM log sources re-pointed to new destination | Engineering |
+| 7 | DNS changes propagated (if applicable) | Engineering |
+| 8 | Knowledge transfer sessions completed | Consulting Lead |
+| 9 | Client confirms they can perform evidence collection independently | Consulting Lead |
+| 10 | Risk register and POA&M handed off with current status | Consulting Lead |
+| 11 | Contract close-out processed (final invoice, NDA expiry, data retention) | Operations |
+| 12 | Client sign-off on Transition Acceptance Form | Operations |
+
+**Anti-pattern:** Delaying handoff because the client isn't "ready." If the contract is ending, deliver the package, get sign-off, and exit cleanly. Holding their data hostage damages your reputation and creates legal exposure. A clean handoff earns referrals. A messy one earns bad reviews.
+
+**Pricing:** Never hold the client hostage — a clean handoff earns referrals. Price it to cover actual effort (the table above), not to discourage transition.
 
 ---
 
@@ -192,6 +258,7 @@ Every Statement of Work for a CERG engagement must include:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
+| 1.1.0 | 2026-07-20 | cragin-security | Expanded Phase 6 Handoff: 5 deliverables, pricing table, 12-item exit checklist, knowledge transfer, vendor transfer steps, transition acceptance form. |
 | 1.0.0 | 2026-07-03 | cragin-security | Initial release: 6-phase engagement lifecycle, pricing, anti-patterns, SOW essentials |
 
 ### Related Documents
