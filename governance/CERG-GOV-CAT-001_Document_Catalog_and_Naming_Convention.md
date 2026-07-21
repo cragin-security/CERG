@@ -358,6 +358,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
 | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
+| [`CERG-GOV-CB-002`](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) | 100-Core Control Baseline (Extended) — cragin-security fork | Consulting Practice Lead | Draft |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
 | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CERG Framework (narrative) | CISO | Approved |
 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |
@@ -399,6 +400,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) | Crown Jewel Register and Loss Scenario Library | Risk Pillar Leader / Governance Pillar Leader | Approved |
 | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) | CERG Service-Level Commitments | CISO | Approved |
 | [`CERG-GOV-CAL-002`](CERG-GOV-CAL-002_Calibration_Checklist.md) | Calibration Checklist | Governance Pillar Leader | Approved |
+| [`CERG-GOV-ADR-001`](CERG-GOV-ADR-001_Architecture_Decision_Records.md) | Architecture Decision Records — cragin-security fork | Consulting Practice Lead | Draft |
 
 ### 5.3 Standards
 
@@ -538,6 +540,18 @@ The `examples/` directory contains narrative walkthroughs and adoption profiles.
 | `examples/regulated-utility-profile/` | A filled-in sample of [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for a regulated utility sector organization | Adapted profile |
 
 Examples are illustrative, not normative. They may be updated outside the V1 review cycle and may reference planned V1.x documents with explicit `(Planned)` markers.
+
+### 5.10 Practice Assets (cragin-security fork)
+
+The `practice-assets/` directory contains consulting delivery materials maintained by the cragin-security fork. These are practice assets, not framework governance documents, and carry the `OPN` domain code. They are listed here for cross-reference compliance per Section 6 Rule 1.
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-OPN-TOOLS-001`](../practice-assets/tools/opinionated-tool-matrix-v1.md) | Opinionated Tool Matrix — Practitioner-Grade Recommendations | Consulting Practice Lead | Draft |
+| [`CERG-OPN-TOOLS-002`](../practice-assets/tools/grc-rollout-v1.md) | GRC Rollout Guide — ServiceNow GRC + Vanta | Consulting Practice Lead | Draft |
+| [`CERG-OPN-TOOLS-003`](../practice-assets/tools/evidence-automation-mapping-v1.md) | Evidence Automation Mapping — Control-to-Tool Evidence Pipelines | Consulting Practice Lead | Draft |
+| [`CERG-OPN-MSP-001`](../practice-assets/msp-runbook-v1.md) | MSP/MSSP Runbook — Practitioner Playbook | Consulting Practice Lead | Draft |
+| [`CERG-OPN-DLV-001`](../practice-assets/engagement-playbook-v1.md) | Engagement Playbook — Scoping, Pricing, Delivery | Consulting Practice Lead | Draft |
 
 ## 6. Cross-Reference Rules
 
