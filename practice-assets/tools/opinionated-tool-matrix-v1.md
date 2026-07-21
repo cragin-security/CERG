@@ -325,7 +325,8 @@ Every tool in this diagram has a documented API and a supported integration path
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping covers
+- [Policy-as-Code Examples](../../tools/policy-as-code/README.md) — OPA/Rego DISH baseline policies, GitHub Actions gates for architecture review and admission control
 - [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
 - [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation

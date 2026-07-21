@@ -277,6 +277,7 @@ Controls are scored against each threat based on:
 
 - [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping validates
 - [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — how to collect evidence for the controls above
+- [Policy-as-Code Examples](../../tools/policy-as-code/README.md) — OPA/Rego enforcement of DISH baseline, GitHub Actions gates for architecture review
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria for defense implementation
 - [MSP Runbook](../msp-runbook-v1.md) — deployment instructions for the controls that stop ransomware
 - [Architecture Decision Records](../../governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) — rationale for opinionated tool choices
