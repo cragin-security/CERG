@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -177,7 +177,7 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 |---|---|---|---|---|---|
 | Exposure scanning and SLA tracking | C | **R/A** Exposure Management Lead | I | I | I |
 | Vulnerability remediation | **R** | C | I | **A** | I |
-| Adversarial validation (pen test, red team) | C | **R/A** Adversarial Testing Lead | I | I | I |
+| Adversarial validation (pen test, red team, purple team, cloud/app/OT-safe testing where in scope) | C | **R** Adversarial Testing Lead / **A** Risk Pillar Leader | I | I | I |
 | Threat intelligence collection and dissemination | C | **R/A** Threat Intelligence Analyst | C | I | I |
 | Risk register entry and curation | I | C | **R/A** Risk Register Owner | I | I |
 | Risk treatment decision | C | C | C | **A** | I (review High+) |
@@ -329,7 +329,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -346,6 +346,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.3 | 2026-07-24 | Governance Pillar Leader | Clarified adversarial validation RACI: Adversarial Testing Lead is responsible for execution while Risk Pillar Leader is accountable for the program; broadened the process label beyond pen test and red team to include purple-team, cloud, application, and OT-safe testing where in scope. |
 | 1.2 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization carried by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Clarified that CAT-001 owns artifact inventory, lifecycle status, and document-type approval authority while RAC-001 owns role and process accountability. |
 | 1.0 | 2026-05-21 | Cyber Governance | Initial release. Consolidates the per-process RACI that CERG-GOV-OM-001 §9 deferred. Establishes RACI definitions and rules, a canonical role reference, a master RACI for document ownership, a master RACI for standing processes across engagement, risk, governance, and operations, normalized descriptions for all 27 canonical roles, and a scaling map showing role consolidation onto a five-person team. |
