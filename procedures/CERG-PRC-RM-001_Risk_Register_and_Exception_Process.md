@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.04 |
+| **Version** | 1.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -71,15 +71,17 @@ The organization accepts residual risk only where (a) the cost or operational im
 
 The durations below are scope-specific treatment horizons. They do not extend risk-acceptance authority or duration beyond the canonical limits in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7; when more than one rule applies, the shortest applicable duration wins.
 
-| **Tier / Scope** | **Maximum Acceptable Residual Risk Score** | **Maximum Acceptable Treatment Horizon** | **Notes** |
+| **Tier / Scope** | **Maximum Acceptable Residual Risk Score (RMF Band)** | **Maximum Acceptable Treatment Horizon** | **Notes** |
 |---|---|---|---|
-| BES Cyber Systems (NERC-CIP) | 6 (Medium-Low) | 90 days | Aligned to CIP mitigation plan timelines |
-| CUI Environments (CMMC) | 6 (Medium-Low) | 90 days | Aligned to POA&M timelines; Critical not acceptable |
+| BES Cyber Systems (NERC-CIP) | 6 (Medium) | 90 days | Aligned to CIP mitigation plan timelines |
+| CUI Environments (CMMC) | 6 (Medium) | 90 days | Aligned to POA&M timelines; Critical not acceptable |
 | SOX-Relevant Systems | 8 (Medium) | 180 days | ITGC compensating controls required |
 | Production Tier 1 (Customer-Facing) | 8 (Medium) | 180 days | Critical not acceptable without CISO + Executive Sponsor |
-| Production Tier 2 (Internal Business) | 10 (Medium-High) | 365 days | |
-| Production Tier 3+ / Non-Production | 12 (High-Low) | 365 days | |
-| SaaS / Third-Party | 10 (Medium-High) | Contract cycle | Driven by vendor tier per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| Production Tier 2 (Internal Business) | 10 (Medium) | 365 days | |
+| Production Tier 3+ / Non-Production | 12 (High) | 365 days | |
+| SaaS / Third-Party | 10 (Medium) | Contract cycle | Driven by vendor tier per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+
+Parenthetical labels in this table use the canonical RMF-001 §9.5 severity bands only: Informational, Low, Medium, High, and Critical. CERG does not use local sub-band qualifiers for residual-risk acceptance.
 
 #### Tolerance by Business Unit
 
@@ -549,7 +551,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.04 |
+| **Version** | 1.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -566,6 +568,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.05 | 2026-07-24 | Governance Pillar Leader | Aligned quantitative tolerance labels to the canonical RMF-001 severity bands and removed noncanonical residual-risk sub-band wording. |
 | 1.04 | 2026-06-18 | Governance Pillar Leader | Added funding/capacity decision brief routing and clarified that funding deferral does not itself accept residual risk. |
 | 1.03 | 2026-06-18 | Governance Pillar Leader | Made RMF-001 the explicit source of truth for scoring and acceptance authority, removed competing local calibration thresholds, clarified Business Owner consequence acceptance, and constrained TMPL-RM-003 to a supporting memo role. |
 | 1.02 | 2026-06-18 | Governance Pillar Leader | Added §7.1 Exception vs. Risk Acceptance routing table distinguishing Security Exception (→TMPL-RM-002, Governance-tracked) from Risk Acceptance (→TMPL-RM-004, Business Owner + RMF-001 authority). Renumbered subsequent subsections. Updated §7.6 template references. |
@@ -606,4 +609,4 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 ---
 
-_CERG-PRC-RM-001 · Version 1.01 · Public_
+_CERG-PRC-RM-001 · Version 1.05 · Public_

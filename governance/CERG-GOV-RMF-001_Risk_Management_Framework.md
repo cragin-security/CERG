@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.33 |
+| **Version** | 1.34 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -790,7 +790,7 @@ Single-risk ALE = (Exposure Frequency × Loss Event Value). For this calibration
 |---|---|---|---|---|
 | Ransomware encrypts Tier 1 billing system | 0.2 (1 in 5 years) | $350K (within retention) + $480K (4 days downtime at $120K/day) = $830K | $166K | Medium |
 | CUI data breach via compromised vendor | 0.1 (1 in 10 years) | $2.1M (notification + legal + regulatory fines) | $210K | Medium |
-| OT BES Cyber System compromise (loss of view) | 0.05 (1 in 20 years) | $5M (NERC fine + restoration + reliability coordinator penalties) | $250K | Medium-High |
+| OT BES Cyber System compromise (loss of view) | 0.05 (1 in 20 years) | $5M (NERC fine + restoration + reliability coordinator penalties) | $250K | Medium |
 | SOX ITGC control failure → material weakness | 0.15 (1 in 7 years) | $1.5M (audit + remediation + reporting delay costs) | $225K | Medium |
 | Cloud misconfiguration → data exposure | 0.3 (1 in 3 years) | $200K (within retention) | $60K | Low |
 
@@ -850,7 +850,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.33 |
+| **Version** | 1.34 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -865,6 +865,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.34 | 2026-07-24 | Governance Pillar Leader | Removed noncanonical sub-band wording from the worked calibration example so all risk labels align to the RMF §9.5 severity bands. |
 | 1.33 | 2026-06-18 | Governance Pillar Leader | Clarified that RMF §9.5 and §9.7 remain canonical for scoring and acceptance authority, separated exception and risk-acceptance template routing, added PRC-VM exposure-SLA precedence, and constrained the calibration example so it cannot override Business Owner / Executive Sponsor acceptance. |
 | 1.32 | 2026-06-18 | Governance Pillar Leader | Added §12.6 Worked Calibration Example for mid-market utility ($1.2B revenue, NERC-CIP+SOX scope) with ALE bands as % of revenue, single-risk ALE as function of insurance retention and downtime cost, calibrated 5x5 band mapping, regulatory overlay adjustments, and cascading changes. |
 | 1.31 | 2026-06-14 | Governance Pillar Leader | Clarified canonical risk-acceptance authority, default acceptance durations, and the shortest-applicable-duration rule. |
