@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 2.0 |
+| **Version** | 2.0.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
@@ -142,7 +142,7 @@ Section 6 entries below are organized by family and reference the subordinate st
 | AC-3 Access Enforcement          | Make sure your system uses approved authentication and authorization controls for all access, and that local, shared, hard-coded, or static credentials cannot bypass them.                                     | Hardware, Software, Network, Cloud, Data          | Engineering | IdP/PAM policy export             | Annual                 | STD-AC-001              |
 | AC-6 Least Privilege             | Grant users, administrators, services, and vendors only the access needed for their role; make privileged access time-bound, just-in-time where supported, and recorded.                                        | Hardware, Software, Network, Cloud, Data, Process | Engineering | PAM session logs, role inventory  | Quarterly              | STD-AC-001              |
 | AC-7 Unsuccessful Logon Attempts | Configure failed-login thresholds, lockouts, and identity-attack alerts according to STD-AC-001 and verify they are operating.                                                                                  | Hardware, Software, Network, Cloud                | Engineering | IdP policy export, detection rule | Annual                 | STD-AC-001 / STD-LM-001 |
-| AC-17 Remote Access              | Make sure remote access to your system uses approved gateways, MFA, and session logging; do not create direct or undocumented remote access paths. Access outside of the US will need documented exceptions.    | Network, Cloud                                    | Engineering | Gateway logs, MFA policy export   | Continuous             | STD-AC-001              |
+| AC-17 Remote Access              | Make sure remote access to your system uses approved gateways, MFA, and session logging; do not create direct or undocumented remote access paths.                                                   | Network, Cloud                                    | Engineering | Gateway logs, MFA policy export   | Continuous             | STD-AC-001              |
 | AC-19 Mobile / BYOD              | Allow mobile or BYOD access only when the device is enrolled, compliant, and approved by conditional-access policy.                                                                                             | Hardware                                          | Engineering | MDM compliance report             | Quarterly              | STD-AC-001              |
 
 ### 6.2 Audit and Accountability (AU)
@@ -616,9 +616,9 @@ When a control in §6 or an overlay in §8 changes, Governance issues a "ripple 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 2.0 |
+| **Version** | 2.0.1 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-17 |
+| **Effective Date** | 2026-09-01 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Approved By** | CISO |
@@ -633,6 +633,7 @@ When a control in §6 or an overlay in §8 changes, Governance issues a "ripple 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 2.0.1 | 2026-09-01 | Governance Pillar Leader | Removed the unsupported geographic exception condition from AC-17; deviations are governed through the risk and exception process. |
 | 2.0 | 2026-06-17 | Cyber Governance | Added the AI overlay to the overlay matrix and regulator mapping, linking AI control evidence to STD-AI-001 and the AI intake, sanctioned-tools, and system/model register templates. |
 | 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and normalized section numbering to align with the current corpus structure. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), control status decision tree (§7), overlay matrix (§8), control-to-evidence mapping (§9), regulatory crosswalks (§10), governance/change/versioning rules (§11), and document control (§12). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
