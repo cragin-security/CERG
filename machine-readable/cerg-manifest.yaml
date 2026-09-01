@@ -668,7 +668,7 @@
   title: Risk Management Framework
   document_type: governance_instrument
   domain: RMF
-  version: 1.34
+  version: 1.35
   status: Approved
   classification: Public
   publication_profile: public
@@ -677,7 +677,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 8300847bd59bc5ea9d4baf617ed6ace096e3ee7e6a9b553c20cd998a7f4320b2
+  source_hash: fbf795ea784ace712b0a5786bf9d7d8cb248dc34b91418fc46c729ae990a0a05
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
