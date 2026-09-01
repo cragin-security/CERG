@@ -1,6 +1,17 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 129 artifacts
+# Generated from document metadata | 131 artifacts
 # Separates lifecycle approval from public-release eligibility
+
+- document_id: CERG-GOV-ADR-001
+  source_path: governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
+  status: Draft
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: Consulting Practice Lead
+  release_date: 2026-09-01
 
 - document_id: CERG-GOV-ANTI-001
   source_path: governance/CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md
@@ -77,6 +88,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: 'Governance Pillar Leader (Control Baseline)'
+  release_date: 2026-09-01
+
+- document_id: CERG-GOV-CB-002
+  source_path: governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md
+  status: Draft
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: Consulting Practice Lead
   release_date: 2026-09-01
 
 - document_id: CERG-GOV-CEF-001
