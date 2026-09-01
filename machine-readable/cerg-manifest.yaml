@@ -2428,7 +2428,7 @@
   title: Risk Register Templates and Reporting
   document_type: template
   domain: RM
-  version: 1.23
+  version: 1.24
   status: Approved
   classification: Public
   publication_profile: public
@@ -2437,7 +2437,7 @@
   parent_artifact: ''
   source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: 20febb56405a7c99ede8a428b0d17cd8e6c50f95bb74d14204ee33c71175b605
+  source_hash: b31a050d94e43cb905f6cdad384bcba6e461d14c5f6c934357fbd03b6e343303
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high

@@ -6,12 +6,12 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Risk Register) |
 | **Parent Procedure** | [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
-| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-MTR-001](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-MTR-001](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [CERG-STD-AM-001](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [CERG-STD-DG-001](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) |
 | **Review Cycle** | Annual / On register tooling change |
 | **Frameworks** | [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · ISO 31000 |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · SOX ITGC |
@@ -74,6 +74,9 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Linked Control(s) | List of [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) IDs | Yes | At least one. |
 | Control Evidence Link | URI / artifact reference | Yes | Evidence that the linked control state or compensating control is implemented and independently verifiable. |
 | Affected Asset(s) | Asset inventory ID(s) | Yes | From the authoritative asset inventory. |
+| Asset Criticality | Enum: Critical · High · Moderate · Low | Yes | Highest applicable criticality tier across affected assets, from [`CERG-STD-AM-001`](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §7.1. |
+| Data Classification | Enum: Public · Internal · Confidential · Restricted · No data processed | Yes | Highest classification in scope, from [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §3. CUI is Restricted data; regulatory scope is recorded separately. |
+| System / Asset Owner(s) | Named role(s) / inventory reference | Yes | Accountable owner(s) of affected assets from the authoritative inventory. This is distinct from the Residual Risk Owner / Business Owner. |
 | Operating Unit | Enum (OU list) | Yes | Drives CISO slice-and-dice. |
 | Regulatory Scope | Multi-select: CUI · BES · SOX · None | Yes | Drives overlay scoring. |
 | Inherent Likelihood | 1–5 | Yes | Before controls. |
@@ -121,6 +124,9 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Risk Statement | Because phishing-resistant MFA (IA-2) is not enforced on all legacy interactive logons, affecting the on-prem AD-joined Tier 2 application estate (≈ 180 systems), there is a possibility that credential phishing of a privileged user leads to lateral movement, resulting in operational outage and recovery cost. |
 | Source | Self-Identified |
 | Linked Control(s) | IA-2 |
+| Asset Criticality | High |
+| Data Classification | Confidential |
+| System / Asset Owner(s) | Generation Operations IT Director |
 | Operating Unit | Generation Operations IT |
 | Regulatory Scope | SOX |
 | Inherent Likelihood / Impact | 4 / 4 → 16 |
@@ -140,6 +146,9 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Risk Statement | While exception EX-2026-0017 is in force permitting an unmanaged legacy SCADA HMI to remain in service through 2027, affecting a single substation, there is a possibility that an unpatched RCE is exploited via the local engineering jump server, resulting in localized loss-of-view and breach of CIP-007 R2. |
 | Source | Architecture Review |
 | Linked Control(s) | CM-2 / CM-6 / SI-2 |
+| Asset Criticality | Critical |
+| Data Classification | Restricted |
+| System / Asset Owner(s) | Substation Operations Technology Manager |
 | Regulatory Scope | BES |
 | Inherent Likelihood / Impact | 3 / 5 → 15 |
 | Control Effectiveness | Adequate (compensating: isolated jump, monitored, no internet egress) |
@@ -156,6 +165,9 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Risk Statement | If the M365 inherited tenancy isolation control is misconfigured on the customer side (conditional access policy gap), affecting all M365-resident CUI workspaces, there is a possibility that unauthorized cross-tenant access leads to CUI exposure, resulting in [CMMC L2](https://dodcio.defense.gov/CMMC/) finding and DC3 notification. |
 | Source | Architecture Review |
 | Linked Control(s) | AC-3 / IA-2 / 800-171 3.1.1 |
+| Asset Criticality | Critical |
+| Data Classification | Restricted |
+| System / Asset Owner(s) | CUI Collaboration Service Owner |
 | Regulatory Scope | CUI |
 | Residual Likelihood / Impact | 2 / 5 → 10 (High) |
 | Treatment | Mitigate |
@@ -177,6 +189,9 @@ Requested Effective    :
 Requested Expiration   :   (per RMF §9.7 default durations; shortest applicable regulatory or procedural duration wins)
 
 Affected Asset(s)      :   (inventory ID + name)
+Asset Criticality      :   Critical / High / Moderate / Low
+Data Classification    :   Public / Internal / Confidential / Restricted / No data processed
+System / Asset Owner(s):   (named role(s) / inventory reference)
 Operating Unit         :
 Regulatory Scope       :   CUI / BES / SOX / None
 
@@ -261,6 +276,8 @@ The CISO will not consume the operational view. The CISO will consume views that
 
 ### 7.1 The Five Standing CISO Views
 
+Every view supports filtering and drill-down by Asset Criticality, Data Classification, and System / Asset Owner, as well as by Operating Unit, regulatory scope, and residual-risk band.
+
 | **View** | **Purpose** | **Data Shape** |
 |---|---|---|
 | OU Scorecard | Compare operating units against each other on residual risk volume and trend. | One row per OU. Columns: Critical / High / Medium / Low counts; Δ vs. prior month; Open SLA breaches; Open Exceptions; Trend arrow. |
@@ -298,8 +315,8 @@ Additional guardrails baked into the views:
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on tooling change |
-| **Change Log** | 1.23 - Added explicit Definition of Done fields for residual risk owner, control evidence, decision date, last validated date, next review date, and closure/validation evidence. 1.22 - Aligned scoring bands, approval authorities, and expiration guidance to RMF §9.7 / PRC-RM-001 §8. 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
+| **Change Log** | 1.24 - Added required asset criticality, data classification, and system / asset owner fields to the risk-register schema and exception template; made them available as CISO reporting dimensions. 1.23 - Added explicit Definition of Done fields for residual risk owner, control evidence, decision date, last validated date, next review date, and closure/validation evidence. 1.22 - Aligned scoring bands, approval authorities, and expiration guidance to RMF §9.7 / PRC-RM-001 §8. 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 
