@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
@@ -374,7 +374,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into exposure management:
+Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into exposure management. This section does not create a separate remediation SLA model; PRC-VM-001 governs exposure treatment timelines, while this procedure governs adversarial validation rating, routing, retest, and escalation discipline:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -600,7 +600,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. |

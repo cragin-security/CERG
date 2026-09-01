@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.33 |
+| **Version** | 1.35 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -29,7 +29,7 @@
 9. [Risk Register and Risk Treatment](#9-risk-register-and-risk-treatment)
 10. [IT/OT Risk Management Considerations](#10-itot-risk-management-considerations)
 11. [Regulatory Alignment Quick Reference](#11-regulatory-alignment-quick-reference)
-12. [Risk Appetite Calibration](#12-risk-appetite-calibration)
+12. [Cybersecurity Risk Tolerance Calibration](#12-cybersecurity-risk-tolerance-calibration)
 13. [Document Control and Review](#13-document-control-and-review)
 
 ---
@@ -139,7 +139,7 @@ The following RACI sub-matrices resolve pillar ownership ambiguity for specific 
 
 | [CSF](https://www.nist.gov/cyberframework) Function | CERG-RMF Phase(s) | What CERG Does |
 |---|---|---|
-| **GOVERN** | Categorize, Authorize | Sets risk strategy, risk appetite, and accountability structures. Maintains policy hierarchy that governs all risk decisions. |
+| **GOVERN** | Categorize, Authorize | Defines, benchmarks, and maintains the cybersecurity risk-tolerance model, including thresholds, evidence, decision rights, and accountability structures. Applies relevant enterprise constraints and routes approval or escalation under the organization's governance charter. |
 | **IDENTIFY** | Categorize, Assess | Maintains asset inventories and system categorization. Conducts risk assessments, threat modeling, and vendor risk reviews. |
 | **PROTECT** | Select, Implement | Engineering designs and deploys protective controls per selected baselines. Governance sets the standard; Risk validates effectiveness. |
 | **DETECT** | Monitor, Assess | Risk operates vulnerability scanning, threat intelligence, and anomaly detection. Feeds findings to IR and Governance continuously. |
@@ -302,7 +302,7 @@ Authorization is a formal risk acceptance decision made by an accountable leader
 |---|---|---|
 | **Authority to Operate (ATO)** | New systems entering production after pre-production assessment. Full ATO requires all High and Critical findings resolved or risk-accepted. | CISO (with Risk and Engineering concurrence) |
 | **Interim Authority to Operate (IATO)** | Systems with residual High findings that have documented compensating controls and an approved remediation timeline (maximum 90 days). OT systems with constrained patch windows may require IATO. | CISO; must include documented compensating controls and target full ATO date |
-| **Denial of Authorization (DATO)** | Systems where residual risk exceeds the organization's risk appetite and compensating controls are insufficient. System must be isolated or decommissioned. | CISO (mandatory notification to CEO and Board for business-critical systems) |
+| **Denial of Authorization (DATO)** | Systems where residual cyber risk exceeds the approved cybersecurity tolerance and compensating controls are insufficient. System must be isolated or decommissioned. | CISO (mandatory notification to CEO and Board for business-critical systems) |
 | **Ongoing Authorization** | Systems with continuous monitoring in place that demonstrate consistent control effectiveness. Replaces periodic point-in-time reauthorization for mature, stable systems. | CISO with quarterly Risk and Governance attestation |
 
 ### 7.3 Authorization Package Contents
@@ -463,9 +463,9 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 | Treatment | Definition | When Appropriate | CERG Process |
 |---|---|---|---|
 | **Remediate** | Eliminate the risk by removing the vulnerability, threat source, or exposure. | When technically feasible within a reasonable timeframe and at proportionate cost. | Engineering leads technical remediation. Risk verifies closure via rescan or retest. Governance closes the risk register item. |
-| **Mitigate** | Reduce the likelihood or impact of the risk to an acceptable level through compensating controls. | When full remediation is not immediately feasible (common in OT); when residual risk after mitigation falls within risk appetite. | Engineering implements compensating controls. Risk validates control effectiveness. Governance documents and tracks to eventual remediation. |
+| **Mitigate** | Reduce the likelihood or impact of the risk to an acceptable level through compensating controls. | When full remediation is not immediately feasible (common in OT); when residual risk after mitigation falls within approved cybersecurity tolerance. | Engineering implements compensating controls. Risk validates control effectiveness. Governance documents and tracks to eventual remediation. |
 | **Transfer** | Shift the financial impact of the risk through insurance or contractual liability provisions. | For risks where cyber insurance coverage is appropriate and available. | Governance coordinates with Legal/Finance for contract and insurance language. Risk quantifies the risk for insurance submission. |
-| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within risk appetite. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined in §9.7. Risk provides a written risk finding. Governance records the acceptance in the risk register. The business owner accepts the residual risk — security does not accept business risk. |
+| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within approved cybersecurity tolerance. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined in §9.7. Risk provides a written risk finding. Governance records the acceptance in the risk register. The business owner accepts the residual risk — security does not accept business risk. |
 
 ### 9.7 Risk Acceptance Authority (Canonical)
 
@@ -507,9 +507,9 @@ These are not the same thing. Collapsing them into one process creates confusion
 
 Use separate artifacts for the two paths. A policy or control exception uses the [Security Exception Request Form](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) and stays in the exception register with a linked risk entry when residual exposure exists. A residual-risk acceptance uses the [Risk Acceptance Request Form](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) and follows the authority table in §9.7. [`CERG-TMPL-RM-003`](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) may be used only as a lightweight supporting memo or attachment to `TMPL-RM-004`; it does not create a separate acceptance path.
 
-### 9.8 Risk Appetite and Tolerance
+### 9.8 Cybersecurity Risk Tolerance
 
-CERG's risk appetite is expressed in two complementary ways: a qualitative posture statement that informs every treatment decision, and a quantitative loss-exposure tolerance that anchors acceptance decisions at the Critical and High bands. The CISO maintains both; the Board reviews appetite annually.
+CERG's cybersecurity risk tolerance is expressed in two complementary ways: a qualitative posture statement that informs every treatment decision, and a quantitative loss-exposure tolerance that anchors acceptance decisions at the Critical and High bands. CERG calibrates this cybersecurity-specific model; it does not define enterprise financial, market, legal, or operational risk appetite. Governance runs the calibration process, Risk supplies exposure, loss-scenario, threat, and peer-benchmark analysis, and Engineering supplies control-feasibility and treatment-capacity input. The CISO approves the resulting cybersecurity tolerance posture and records it in the Decision Log.
 
 **Qualitative posture.** CERG operates under a "Yes, And…" orientation: the default response to a business request is "yes, and here are the conditions that make this safe." Reflexive refusal is not an acceptable risk management strategy. At the same time, three categories receive a deliberately low appetite:
 
@@ -521,7 +521,7 @@ CERG's risk appetite is expressed in two complementary ways: a qualitative postu
 | Operational disruption to enterprise IT services | Medium. Treatment chosen on a cost / business value basis. |
 | Loss of low-sensitivity, broadly available data | Higher. Acceptance is appropriate where treatment cost exceeds loss magnitude. |
 
-**Quantitative tolerance (preliminary calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. The bands below are preliminary values calibrated for a mid-market organization ($500M-2B revenue, moderate regulatory exposure). The CISO updates these in coordination with the CFO at the next CERG/Finance joint review — see §9.8.1 for the calibration workbook.
+**Quantitative tolerance (preliminary calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. The bands below are preliminary values calibrated for a mid-market organization ($500M-2B revenue, moderate regulatory exposure). Governance refreshes the scenarios with Risk and Engineering input; the CISO approves calibrated values. Finance, Operations, or other business leaders are consulted only where their inputs are material to the cybersecurity scenario. See §9.8.1 for the calibration workbook.
 
 | Posture Indicator | Value (Preliminary) | Recommended Range by Org Size | Action |
 |---|---|---|---|
@@ -533,11 +533,11 @@ CERG's risk appetite is expressed in two complementary ways: a qualitative postu
 > **Calibration is the work.** Values above are preliminary defaults for a mid-market organization; they are not approved appetites until Finance signs the calibration. The pattern — qualitative posture per category plus quantitative ALE bands — is the part that does not change. See §9.8.1 for the full calibration workbook with revenue-gated scaling.
 
 
-#### 9.8.1 Risk Appetite Calibration Workbook
+#### 9.8.1 Cybersecurity Risk Tolerance Calibration Workbook
 
-The risk appetite values in §9.8 are preliminary defaults calibrated to a mid-market organization ($500M-2B revenue). Calibrate them to your organization using the prompts below. Document the calibrated values in your Decision Log (IMP-002 §4).
+The values in §9.8 are preliminary defaults calibrated to a mid-market organization ($500M-2B revenue). CERG uses the prompts below to develop cybersecurity tolerance scenarios and a recommendation. Record only CISO-approved calibrated values in the Decision Log (IMP-002 §4).
 
-**How to read the preliminary values:** The bands are derived from a simple ratio of revenue × risk factor. A small organization ($100M revenue) would set tolerance at ~5% of revenue for single-risk ALE bands; a large enterprise ($5B+) at ~2%. The mid-market defaults below use the midpoint of this range. The Risk pillar lead recalculates these annually when revenue is updated.
+**How to read the preliminary values:** The bands are derived from a simple ratio of revenue × risk factor. A small organization ($100M revenue) would set tolerance at ~5% of revenue for single-risk ALE bands; a large enterprise ($5B+) at ~2%. The mid-market defaults below use the midpoint of this range. The Risk pillar lead refreshes the calculation annually when revenue is updated; this provides an input to CERG calibration and does not independently change tolerance.
 
 **Financial Calibration Inputs:**
 - Annual revenue: $_________
@@ -676,13 +676,13 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 
 ---
 
-## 12. Risk Appetite Calibration
+## 12. Cybersecurity Risk Tolerance Calibration
 
-Risk appetite is not a once-and-done statement. An Adaptive organization formally recalibrates its risk appetite based on business changes, incident experience, threat landscape shifts, and regulatory changes. This section defines when, how, and with what inputs the CISO and leadership recalibrate the organization's risk appetite.
+Cybersecurity risk tolerance is not a once-and-done statement. An Adaptive organization formally recalibrates it based on business changes, incident experience, threat landscape shifts, and regulatory changes. This section defines how CERG performs that work. Enterprise financial, market, legal, and operational risk appetite remains outside this process; established enterprise constraints are inputs to it.
 
 ### 12.1 Calibration Cadence
 
-Risk appetite is reviewed:
+Cybersecurity risk tolerance is reviewed:
 
 - **Annually**, aligned with the annual planning cycle and the CISO Risk and Posture Review (per GOV-CAL-001)
 - **When triggered** by any of the following events:
@@ -695,7 +695,18 @@ Risk appetite is reviewed:
 
 ### 12.2 Inputs to the Review
 
-The annual risk appetite review is prepared by the Governance Pillar Leader with inputs from all pillars. The review package contains:
+The Governance Pillar Leader owns the calibration method, cadence, and Decision Log. The substantive analysis, benchmarking, and recommendation remain within CERG:
+
+| Activity | Accountable | Responsible | Consulted | Approval / Escalation |
+|---|---|---|---|---|
+| Calibration method, cadence, and decision record | Governance Pillar Leader | Governance | Risk, Engineering | CISO approves calibration decisions |
+| Exposure, loss-scenario, threat, and peer-benchmark analysis | Risk Pillar Leader | Risk | Governance, Engineering | Input to tolerance recommendation |
+| Control feasibility and treatment-capacity analysis | Engineering Pillar Leader | Engineering | Risk, Governance | Input to tolerance recommendation |
+| Draft cybersecurity tolerance posture and thresholds | Governance Pillar Leader | Governance, with Risk and Engineering inputs | Business or asset owners where a scenario requires their input | CISO approval |
+| Metric, control, exception, and reporting changes | Governance Pillar Leader | Relevant pillar | Risk, Engineering | CISO approves material changes |
+| Enterprise-risk alignment | CISO | Governance provides the decision record | Relevant executives, Finance, Operations | Board engagement only where the charter requires it |
+
+The review package contains:
 
 1. **Incident history (trailing 12 months):** frequency by severity, root cause clusters, control failures identified (per CEF-001), and incident trends
 2. **Threat landscape assessment:** from the most recent quarterly assessment (PRC-TI-001 Section 9.1), including top threat actors, TTP changes, and exploited vulnerabilities
@@ -709,33 +720,34 @@ The annual risk appetite review is prepared by the Governance Pillar Leader with
 
 The review produces one of two outputs:
 
-**Option A: No change.** Current risk appetite remains appropriate. The decision is documented with the specific rationale and the data that supported it. "No change" is a deliberate conclusion, not a default.
+**Option A: No change.** Current cybersecurity risk tolerance remains appropriate. The decision is documented with the specific rationale and the data that supported it. "No change" is a deliberate conclusion, not a default.
 
-**Option B: Risk appetite adjustment.** A revised risk appetite statement is produced, plus cascading changes:
+**Option B: Cybersecurity tolerance adjustment.** A revised cybersecurity tolerance statement is produced, plus cascading changes:
 
 | Cascade | Action | Owned By |
 |---|---|---|
 | Metric thresholds | Tighten or relax relevant thresholds in MTR-001 per the Threshold Calibration procedure (MTR-001 Section 10) | Governance Pillar Leader |
 | Control baseline priorities | Controls protecting against newly elevated risks get increased review frequency and potentially tighter effectiveness thresholds | Pillar leader of affected controls |
-| Exception authority | The severity band at which a pillar leader can approve vs. requires CISO vs. requires board is adjusted if the risk appetite change warrants it | CISO |
+| Exception authority | The severity band at which a pillar leader can approve vs. requires CISO vs. requires board is adjusted if the cybersecurity tolerance change warrants it | CISO |
 | Investment signals | If appetite tightens in an area, tooling, staffing, or capability gaps are identified and routed to budget planning | CISO |
-| Improvement register | Each cascading change is recorded in IMPREG-001 (Type: Metric or threshold change, Control amendment, Staffing or budget) with the risk appetite review as the source | Governance Pillar Leader |
+| Improvement register | Each cascading change is recorded in IMPREG-001 (Type: Metric or threshold change, Control amendment, Staffing or budget) with the cybersecurity tolerance review as the source | Governance Pillar Leader |
 
 ### 12.4 Approval
 
-- The CISO approves the risk appetite statement and all cascading changes.
-- If the change materially affects enterprise risk posture, the board or Cyber Oversight Group is informed or approves per the organization's governance charter.
-- The approved risk appetite statement is published and becomes the authoritative reference for all subsequent risk decisions until the next calibration.
+- The CISO approves the CERG cybersecurity tolerance statement and material changes needed to implement it.
+- Governance records the approved statement and operationalizes it through metrics, control priorities, exception authority, and reporting.
+- Executive leadership or the board is engaged only when a proposed cybersecurity tolerance conflicts with an established enterprise constraint, creates a material cross-enterprise consequence, or requires approval under the organization's governance charter.
+- The approved cybersecurity tolerance statement is the authoritative reference for subsequent CERG risk decisions until the next calibration.
 
 ### 12.5 Cascade Tracking
 
-Cascading changes from a risk appetite adjustment are tracked in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. A control priority change is verified when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
+Cascading changes from a cybersecurity tolerance adjustment are tracked in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. A control priority change is verified when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
 
 ### 12.6 Worked Calibration Example: Mid-Market Utility
 
 > **Purpose**
 >
-> This worked example shows how a fictitious organization — Contoso Energy Solutions ($1.2B revenue, NERC-CIP Low + SOX scope) — calibrates risk appetite bands from business inputs. First-time adopters can use this as a template for their own calibration.
+> This worked example shows how a fictitious organization — Contoso Energy Solutions ($1.2B revenue, NERC-CIP Low + SOX scope) — calibrates cybersecurity tolerance bands from business inputs. First-time adopters can use this as a template for their own calibration.
 
 #### 12.6.1 Business Profile
 
@@ -790,11 +802,11 @@ Single-risk ALE = (Exposure Frequency × Loss Event Value). For this calibration
 |---|---|---|---|---|
 | Ransomware encrypts Tier 1 billing system | 0.2 (1 in 5 years) | $350K (within retention) + $480K (4 days downtime at $120K/day) = $830K | $166K | Medium |
 | CUI data breach via compromised vendor | 0.1 (1 in 10 years) | $2.1M (notification + legal + regulatory fines) | $210K | Medium |
-| OT BES Cyber System compromise (loss of view) | 0.05 (1 in 20 years) | $5M (NERC fine + restoration + reliability coordinator penalties) | $250K | Medium-High |
+| OT BES Cyber System compromise (loss of view) | 0.05 (1 in 20 years) | $5M (NERC fine + restoration + reliability coordinator penalties) | $250K | Medium |
 | SOX ITGC control failure → material weakness | 0.15 (1 in 7 years) | $1.5M (audit + remediation + reporting delay costs) | $225K | Medium |
 | Cloud misconfiguration → data exposure | 0.3 (1 in 3 years) | $200K (within retention) | $60K | Low |
 
-**Step 3 — Example calibrated risk appetite bands for the 5×5 matrix**
+**Step 3 — Example calibrated cybersecurity tolerance bands for the 5×5 matrix**
 
 Mapping the ALE bands to the existing 5×5 scoring framework for this example organization. These dollar bands are illustrative calibration output, not a replacement for the canonical severity bands in §9.5 or the acceptance authority in §9.7:
 
@@ -816,7 +828,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 #### 12.6.4 Calibration Output
 
-**Risk Appetite Statement (adopted):**
+**Cybersecurity Tolerance Statement (adopted):**
 
 > Contoso Energy Solutions accepts residual cybersecurity risk where:
 > a) The estimated annualized loss exposure (ALE) per risk is below $1.2M (0.10% of revenue), AND
@@ -841,7 +853,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 3. Run the ALE band calculation using your revenue as the denominator.
 4. Map single-risk ALEs for your top 5–10 risk scenarios to validate the bands produce actionable prioritization.
 5. Add regulatory overlay adjustments for each regulator in your scope.
-6. Document the risk appetite statement and cascade changes in the improvement register.
+6. Document the cybersecurity tolerance statement and cascade changes in the improvement register.
 
 ---
 
@@ -850,9 +862,9 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.33 |
+| **Version** | 1.35 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-14 |
+| **Effective Date** | 2026-09-01 |
 | **Classification** | Public |
 | **Document Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
@@ -865,6 +877,8 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.35 | 2026-09-01 | Governance Pillar Leader | Clarified that CERG owns cybersecurity tolerance calibration and recommendation work, while enterprise appetite is an external constraint; defined pillar accountabilities and approval boundaries. |
+| 1.34 | 2026-07-24 | Governance Pillar Leader | Removed noncanonical sub-band wording from the worked calibration example so all risk labels align to the RMF §9.5 severity bands. |
 | 1.33 | 2026-06-18 | Governance Pillar Leader | Clarified that RMF §9.5 and §9.7 remain canonical for scoring and acceptance authority, separated exception and risk-acceptance template routing, added PRC-VM exposure-SLA precedence, and constrained the calibration example so it cannot override Business Owner / Executive Sponsor acceptance. |
 | 1.32 | 2026-06-18 | Governance Pillar Leader | Added §12.6 Worked Calibration Example for mid-market utility ($1.2B revenue, NERC-CIP+SOX scope) with ALE bands as % of revenue, single-risk ALE as function of insurance retention and downtime cost, calibrated 5x5 band mapping, regulatory overlay adjustments, and cascading changes. |
 | 1.31 | 2026-06-14 | Governance Pillar Leader | Clarified canonical risk-acceptance authority, default acceptance durations, and the shortest-applicable-duration rule. |

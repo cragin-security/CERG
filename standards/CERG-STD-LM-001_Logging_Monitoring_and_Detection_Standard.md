@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-LM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader (Detection Engineering) |
@@ -167,6 +167,8 @@ Onboarding follows a fixed checklist. The output is a SIEM Onboarding Record per
 | Detection coverage report generated | Per [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) metric DT-001. |
 | Operations handoff | Triage runbook (Section 8) in place; on-call rotation aware. |
 
+Each SIEM Onboarding Record assigns every onboarded source a stable **Source ID**. The ID is tool-neutral and is used by the source-health record and detection inventory to identify the same source.
+
 ### 5.2 Source Health Monitoring
 
 Each onboarded source is itself monitored. CERG alerts on:
@@ -177,6 +179,8 @@ Each onboarded source is itself monitored. CERG alerts on:
 - Connector error or authentication failure.
 
 These alerts are treated as high-priority operational items, not as detections in their own right.
+
+A source reported unhealthy under this section affects every production detection that lists it as a required dependency. The detection inventory derives the detection's operating condition as `Degraded (data-blind)` until the required source is healthy again or a healthy alternate source is explicitly recorded as the dependency. A degraded detection remains deployed, but it is not treated as operating for coverage reporting.
 
 ---
 
@@ -217,7 +221,7 @@ CUI overlay (see Section 10) adds CUI-specific detections (export, share, label 
 
 ### 6.4 Coverage Reporting
 
-- Coverage is computed as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, and operating. Reported as DT-001 in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+- Coverage is computed as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, `In Production`, and in the derived `Operating` condition. A `Degraded (data-blind)` detection does not count toward coverage. Reported as DT-001 in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 - **CERG coverage target: 70% of in-scope ATT&CK sub-matrix techniques with at least one operating detection.** Below 70% is reported red on the CISO dashboard and treated as an incident-readiness gap until closed.
 - The detection inventory is exported monthly and reviewed quarterly against the in-scope sub-matrix.
 
@@ -241,13 +245,16 @@ Each production detection has:
 
 - ID and name
 - ATT&CK technique(s) and tactic(s)
-- Data sources used
+- Required source ID(s), referencing the Source IDs in the SIEM Onboarding Record
+- Optional enrichment source ID(s), where used
 - Logic summary (no proprietary leakage outside detection eng)
 - Severity / triage queue routing
 - Expected fire rate (per env)
 - False-positive notes and tuning history
 - Last purple-test validation date and result
 - Owner
+
+**Dependency and derived operating condition.** A detection is `Operating` only when it is `In Production` and every required source dependency is healthy under Section 5.2. When a required source becomes unhealthy, the detection inventory automatically derives `Degraded (data-blind)` and records the source ID and time of degradation. The Detection Engineer restores `Operating` only after source health is restored or after confirming and recording a healthy alternate source dependency. This derived condition does not change the detection lifecycle state.
 
 ### 7.2 Validation
 
@@ -353,8 +360,8 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 | | |
 |---|---|
 | **Document ID** | CERG-STD-LM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / SIEM platform change / ATT&CK matrix update |
-| **Change Log** | 1.23 - Added CI/CD identity abuse and code-signing anomaly use cases to the identity detection pack. 1.22 - Expanded identity detection use cases for OAuth consent, MFA factor manipulation, NHI anomalies, session-token theft, federation tampering, and external identity misuse. 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
+| **Change Log** | 1.24 - Bound Source IDs and source-health state to required detection dependencies; degraded data-blind detections no longer count toward DT-001 coverage. 1.23 - Added CI/CD identity abuse and code-signing anomaly use cases to the identity detection pack. 1.22 - Expanded identity detection use cases for OAuth consent, MFA factor manipulation, NHI anomalies, session-token theft, federation tampering, and external identity misuse. 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
 

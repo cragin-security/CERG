@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -52,7 +52,7 @@ Most cybersecurity work, outside of Security Awareness and Incident Response, fa
 
 - **Building and deploying secure technology** alongside the business
 - **Assessing exposure and managing risk** continuously
-- **Setting standards, ensuring compliance, and tracking conformance**
+- **Setting standards, assuring conformance, and tracking improvement**
 
 The CERG model names these activities explicitly, Engineering, Risk, and Governance, and assigns clear ownership, accountabilities, and interaction patterns so that work flows between them without dropping and without creating new silos.
 
@@ -107,7 +107,7 @@ Continuous assessment and management of the organization's exposure through expo
 
 **Set the rules. Track the work. Enable the business to move with confidence.**
 
-The rule-makers, compliance managers, and quality assurance function, responsible for policies, standards, implementation guidance, regulatory compliance, and control evidence.
+The second-line authority for policies, standards, control assurance, evidence quality, decisions, and program improvement.
 
 ---
 
@@ -122,8 +122,8 @@ CERG pillars are not sequential. They operate simultaneously and continuously, w
 |Pre-production vulnerability scan|Risk|Engineering remediates findings pre-launch|
 |Risk acceptance (if vuln unresolvable)|Engineering + Risk|Governance provides risk treatment plan template; CISO/leadership signs off on High/Critical|
 |Production deployment|Engineering|Governance and Risk assume post-production monitoring|
-|Ongoing compliance monitoring|Governance|Risk tracks patch status and emerging CVEs; Engineering supports remediation|
-|Audit and evidence collection|Governance|Engineering and Risk produce artifacts from their daily work|
+|Ongoing standards conformance assurance|Governance|Risk validates exposure and control weakness; Engineering and accountable owners remediate gaps|
+|Evidence assurance and audit readiness|Governance|First-line owners, Engineering, and Risk produce artifacts from their daily work|
 |Adversarial validation: pen test / red team / purple team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
 |Regulatory exam or audit|Governance|All pillars provide evidence; Engineering and Risk support responses|
 
@@ -281,7 +281,7 @@ Risk serves both a pre-production function (finding issues before systems go liv
 |---|---|
 |Pre-production, Low/Medium severity|Engineering remediates with project team before go-live. Tracked to closure by Risk.|
 |Pre-production, High/Critical severity|Engineering and Risk jointly assess. If unremediated, a risk treatment plan is required with VP+ sign-off before go-live.|
-|Post-production, Low/Medium severity|Tracked in vulnerability register. Assigned to appropriate owner (IT/OT ops) with SLA. Governance monitors SLA compliance.|
+|Post-production, Low/Medium severity|Tracked in vulnerability register. Assigned to the appropriate owner (IT/OT operations) with an SLA. Governance assures conformance to the treatment process and escalates overdue items.|
 |Post-production, High/Critical severity|Escalated immediately. CISO notified. Risk treatment plan required. Engineering may be re-engaged for architectural remediation. NERC-CIP and CMMC deviation processes invoked as applicable.|
 |Vendor/Third-party finding|Risk documents and includes in vendor risk register. Governance tracks contractual remediation commitments. Engineering consulted if architectural change is needed.|
 
@@ -289,7 +289,7 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 > **Scenario: NERC-CIP Vulnerability in a BES Cyber System**
 > 
-> During monthly vulnerability scanning, the Risk team identifies that a critical relay management workstation, classified as a BES Cyber System under NERC-CIP CIP-002, is running an operating system version with a known critical vulnerability (CVSS 9.1). The asset cannot be patched within the standard 35-day window due to vendor testing requirements. Risk notifies Governance of a potential CIP-007-6 deviation. Governance initiates the deviation documentation process. Risk produces a threat analysis showing no current exploitation activity targeting this specific system type. Engineering is engaged to add network monitoring on the affected segment as a compensating control. The CISO and VP of Operations sign the deviation. Risk tracks the patch to closure within the extended timeline and provides attestation documentation to Governance for the compliance record.
+> During monthly vulnerability scanning, the Risk team identifies that a critical relay management workstation, classified as a BES Cyber System under NERC-CIP CIP-002, is running an operating system version with a known critical vulnerability (CVSS 9.1). The asset cannot be patched within the standard 35-day window due to vendor testing requirements. Risk identifies a potential CIP-007-6 deviation and validates the residual exposure. The system owner documents the deviation and treatment plan; Engineering adds network monitoring as a compensating control. Governance assures that the exception path, evidence, approval, and escalation requirements are met. The CISO and VP of Operations sign the deviation. Risk tracks the patch to closure within the extended timeline and validates the compensating-control evidence.
 
 ### 5.5 NIST Framework Alignment: Risk
 
@@ -310,19 +310,20 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 ### 6.1 Mission
 
-The Cyber Governance team is the rule-making, compliance management, and quality assurance function of the CERG model. Governance defines what good looks like, through policies, standards, and implementation guidance, and then ensures the organization actually gets there through compliance tracking, audit support, and control evidence management.
+Cyber Governance is CERG's second-line authority. Governance defines the cybersecurity rules, standards, control outcomes, evidence expectations, and decision paths that let the business operate safely. It assesses conformance, challenges weak or missing evidence, directs accountable owners to correct deficiencies, and improves the system when assurance shows that a guardrail is not working.
 
 Governance operates from a **"yes, and..."** philosophy. The goal is never to block the business but to ensure that when the business accepts risk, that risk is documented, owned, and managed. Governance provides the framework within which Engineering and Risk do their best work.
 
 ### 6.2 Core Functions
 
-- **Policy and Standard Development**: creating, maintaining, and retiring cybersecurity policies, standards, and procedures aligned to NIST 800-53, 800-171, CSF, and applicable regulations
-- **Implementation Guidance**: translating policy requirements into practical, actionable guidance for IT and OT teams; bridging the gap between regulatory language and operational reality
-- **Compliance Management**: tracking the organization's compliance posture against NERC-CIP, CMMC, SOX, and other applicable requirements; managing the compliance calendar
-- **Control Evidence Management**: setting standards for what constitutes acceptable evidence; collecting, organizing, and maintaining the control evidence library; coordinating audit responses
-- **Risk Treatment Tracking**: maintaining the organization's risk register; tracking open risk treatment plans to completion; escalating overdue or deteriorating items to the CISO
-- **Quality Assurance**: periodic review of Engineering deliverables and Risk outputs to ensure conformance with organizational standards; not an adversarial audit but a collaborative QA function
-- **Regulatory Liaison**: serving as the primary point of contact for regulators and external auditors; managing examination logistics; coordinating response to findings and enforcement actions
+- **Policy, Standards, and Control Intent**: creating, maintaining, and retiring the cybersecurity rules and control outcomes that define what good looks like
+- **Guardrail and Implementation Guidance**: translating required outcomes into practical patterns and guidance that Engineering and first-line teams can implement across IT and OT
+- **Standards Conformance and Control Assurance**: assessing whether controls operate to the required standard, challenging gaps, and directing accountable owners to correct deficiencies
+- **Evidence Architecture and Quality**: defining what acceptable evidence looks like; assuring that evidence is attributable, current, retrievable, and fit for decisions or external scrutiny
+- **Decision, Exception, and Treatment Governance**: maintaining the risk-register process, exception paths, decision records, and escalation of overdue or deteriorating treatment
+- **Deficiency, Corrective-Action, and Program Improvement Oversight**: tracking recurring weaknesses through remediation and improving standards, procedures, controls, metrics, or capability when assurance identifies a systemic gap
+
+Applicable regulatory obligations are mapped into CERG standards, controls, and overlays. Regulatory alignment is evidence that the operating model works; it is not a separate workstream or a substitute for control assurance.
 
 ### 6.3 The "Yes, And..." Standard
 
@@ -338,19 +339,20 @@ Governance reserves the right to say no, particularly for significant NERC-CIP d
 
 ### 6.4 Evidence Standards
 
-Governance sets the evidence standard, what constitutes acceptable proof that a control is operating effectively. Each pillar collects evidence appropriate to its work:
+Governance sets the evidence standard: acceptable proof that a control is designed, implemented, operating, and validated for its required scope. Evidence is created as work happens, by the people who perform or validate that work:
 
-- **Engineering produces:** architecture review documentation, pre-production checklists, risk acceptance packages, handoff documentation, configuration baselines
-- **Risk produces:** vulnerability scan reports, penetration test findings, threat intelligence reports, vendor risk assessments, patch tracking records
-- **Governance produces:** policy documents, compliance matrices, audit reports, risk register entries, regulatory correspondence, exception approvals
+- **First-line system and business owners produce:** operational records, owner attestations, implementation decisions, and remediation evidence for systems they operate
+- **Engineering produces:** architecture review documentation, pre-production checklists, configuration baselines, guardrail implementation records, and technical handoff evidence
+- **Risk produces:** vulnerability scan reports, penetration test findings, threat intelligence assessments, vendor risk assessments, and exposure-validation records
+- **Governance produces:** policies, standards, control and evidence criteria, decision records, exception approvals, assurance results, and improvement records
 
-Governance maintains the evidence library and ensures that evidence is organized, dated, attributed, and retained per regulatory requirements, NERC-CIP requires evidence retention for specified periods; CMMC requires evidence available for assessment.
+Governance assures the evidence library rather than performing every collection activity. It tests whether evidence is organized, dated, attributable, retrievable, and retained for the required period; accountable owners correct evidence gaps or control deficiencies.
 
 ### 6.5 Illustrative Example: Electrical Utility
 
 > **Scenario: CMMC Level 2 Assessment Preparation**
 > 
-> The utility has a contract with the Department of Energy that requires CMMC Level 2 compliance. Governance leads the preparation effort. They map all 110 NIST 800-171 practices to the organization's existing controls, identifying 14 gaps. Governance works with Engineering to remediate 9 of the gaps through technical implementation. Three gaps are addressed through policy and procedure updates that Governance drafts. Two gaps require Risk to perform additional scanning and document compensating controls. Governance manages the evidence package, pulling architecture review records from Engineering, vulnerability reports from Risk, and policy documents from its own library. When the C3PAO assessment team arrives, Governance coordinates the logistics, manages the information requests, and tracks findings to closure post-assessment.
+> The utility has a contract with the Department of Energy that requires CMMC Level 2 compliance. Governance maps the 110 NIST 800-171 practices to the organization's existing standards, controls, and evidence criteria, identifying 14 gaps. Accountable system owners and Engineering remediate 9 gaps through technical implementation; Governance updates three policy and procedure requirements; Risk performs additional scanning and validates compensating controls for two gaps. Governance assures the evidence package by testing the records produced through normal work: architecture reviews from Engineering, vulnerability reports from Risk, owner attestations, and policy records. When the C3PAO assessment team arrives, the organization can answer from that operating evidence and Governance tracks resulting deficiencies to closure.
 
 ### 6.6 NIST Framework Alignment: Governance
 
@@ -358,11 +360,11 @@ Governance maintains the evidence library and ensures that evidence is organized
 |---|---|---|
 |NIST CSF 2.0|GOVERN (all functions), IDENTIFY (Improvement), RESPOND (Improvements)|Primary owner of the GOVERN function across all six sub-functions|
 |NIST 800-53|PL (Planning), PM (Program Mgmt), CA (Assessment), PS (Personnel Security)|Owns PL and PM control families; coordinates CA; sets PS standards|
-|NIST 800-171|3.12 Security Assessment, all documentation requirements|Manages 800-171 assessment readiness and documentation compliance|
-|NIST RMF|Step 1 (Categorize), Step 2 (Select - policy), Step 5 (Authorize), Step 6 (Monitor - compliance)|Leads categorization; co-leads authorization; owns compliance monitoring|
-|NERC-CIP|CIP-003 (Security Mgmt Controls), CIP-004 (Personnel Training), CIP-014 (Physical Security Policy)|Primary owner of CIP-003; coordinates CIP-004 with Awareness team; maintains all deviation records|
-|CMMC|All documentation and evidence requirements across all domains|Manages assessment readiness, evidence collection, and C3PAO coordination|
-|SOX ITGC|IT General Controls documentation, change management evidence|Maintains ITGC control library; coordinates with external auditors|
+|NIST 800-171|3.12 Security Assessment, all documentation requirements|Ensures the standards, control, and evidence model supports assessment readiness|
+|NIST RMF|Step 1 (Categorize), Step 2 (Select - policy), Step 5 (Authorize), Step 6 (Monitor - assurance)|Leads categorization; co-leads authorization; owns standards conformance assurance|
+|NERC-CIP|CIP-003 (Security Mgmt Controls), CIP-004 (Personnel Training), CIP-014 (Physical Security Policy)|Maintains CIP policy mapping and assurance criteria; accountable owners operate controls and provide evidence|
+|CMMC|All documentation and evidence requirements across all domains|Maps requirements to normal controls and evidence; assures assessment readiness from operating records|
+|SOX ITGC|IT General Controls documentation, change management evidence|Maintains control and evidence criteria; assures readiness from operational records|
 
 ---
 
@@ -378,7 +380,7 @@ At the Adaptive tier, an organization does not just respond to the threat enviro
 |---|---|
 |**Partial (Tier 1)**|Ad hoc processes. Risk decisions made reactively. Limited awareness of threats. No consistent policy or evidence collection.|
 |**Informed (Tier 2)**|Policies exist but are not consistently applied. Risk management happens in silos. Some awareness of threat environment. Inconsistent evidence.|
-|**Repeatable (Tier 3)**|Defined, documented, and practiced processes. Risk management is consistent. Compliance calendar exists. Evidence is collected systematically. Teams understand their roles.|
+|**Repeatable (Tier 3)**|Defined, documented, and practiced processes. Risk management is consistent. An assurance calendar exists. Evidence is created systematically through normal work. Teams understand their roles.|
 |**Adaptive (Tier 4)**|Cybersecurity is integrated into organizational decision-making. Threat intelligence actively shapes priorities. Lessons learned drive continuous improvement. Risk appetite is clearly defined and applied. The business views security as a value driver, not a cost center.|
 
 ### 7.2 How CERG Produces Adaptive Behavior
@@ -401,7 +403,7 @@ The NIST CSF 2.0 Core consists of six functions. CERG provides primary or strong
 
 |CSF Function|Primary Owner|CERG Coverage|
 |---|---|---|
-|**GOVERN**|Governance|Governance owns the risk strategy, policy, roles, and accountability structures. Risk contributes risk appetite data. Engineering ensures operational compliance.|
+|**GOVERN**|Governance|Governance owns cybersecurity tolerance, policy, standards, and accountability structures. Risk contributes exposure and validation data. Engineering enables first-line teams to implement the required guardrails.|
 |**IDENTIFY**|Risk + Engineering|Risk owns asset, risk, and improvement identification. Engineering contributes asset documentation through project handoffs.|
 |**PROTECT**|Engineering|Engineering designs and implements protective controls. Governance sets the standard. Risk validates effectiveness through vuln management.|
 |**DETECT**|Risk + IR (adjacent)|Risk owns vuln and threat detection. Incident Response owns event detection and SOC. Risk feeds intelligence to IR.|
@@ -423,7 +425,7 @@ NERC-CIP is the primary regulatory framework for bulk electric system (BES) cybe
 |**CIP-004:** Personnel & Training|Governance sets training requirements and coordinates with the Security Awareness team for delivery. Engineering and Risk fulfill their own training obligations.|
 |**CIP-005:** Electronic Security Perimeters|Engineering designs and implements ESPs and EAPs. Governance maintains ESP documentation. Risk validates perimeter integrity through scanning.|
 |**CIP-006:** Physical Security|Governance maintains physical security policy. Engineering reviews physical security requirements for new OT deployments.|
-|**CIP-007:** Systems Security Management|Risk owns patch management tracking and vulnerability assessment. Engineering implements port/service controls during deployment. Governance tracks compliance.|
+|**CIP-007:** Systems Security Management|Risk owns patch management tracking and vulnerability assessment. Engineering implements port/service controls during deployment. Governance assures standards conformance and evidence quality.|
 |**CIP-010:** Configuration Management & Vuln Assessments|Engineering produces and maintains configuration baselines. Risk performs CIP-010 annual vulnerability assessments. Governance retains assessment records.|
 |**CIP-011:** Information Protection|Governance defines BES Cyber System Information (BCSI) handling requirements. Engineering implements technical protections. Risk validates through scanning.|
 |**CIP-013:** Supply Chain Risk Management|Risk leads vendor risk assessment. Governance maintains the supply chain risk management plan. Engineering applies controls to vendor-supplied systems.|
@@ -431,7 +433,7 @@ NERC-CIP is the primary regulatory framework for bulk electric system (BES) cybe
 
 ### 8.2 CMMC: Cybersecurity Maturity Model Certification
 
-[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 requires implementation and assessment of all 110 practices in [NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final). For organizations handling Controlled Unclassified Information (CUI) on behalf of the federal government, CMMC certification is a contract requirement. CERG provides the operational backbone for CMMC compliance.
+[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 requires implementation and assessment of all 110 practices in [NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final). For organizations handling Controlled Unclassified Information (CUI) on behalf of the federal government, CMMC certification is a contract requirement. CERG provides the operating controls, evidence, and assurance from which CMMC compliance is demonstrated.
 
 - **Engineering** implements the technical controls across the 14 CMMC domains, access control, configuration management, system and communications protection, and others, during project delivery
 - **Risk** performs the periodic assessments required by CMMC practice CA.2.157 and manages the Plan of Action & Milestones (POA&M) for open findings
@@ -445,7 +447,7 @@ For organizations subject to [SOX](https://www.govinfo.gov/app/details/PLAW-107p
 
 > **The Regulatory Advantage of CERG**
 > 
-> Organizations with multiple regulatory obligations, a utility managing NERC-CIP, CMMC, and SOX simultaneously, typically struggle with duplicated effort and conflicting timelines. CERG centralizes the regulatory function in Governance while ensuring that Engineering and Risk produce compliance evidence as a byproduct of their daily work, not as a separate compliance exercise. One team, one evidence library, one compliance posture.
+> Organizations with multiple regulatory obligations, a utility managing NERC-CIP, CMMC, and SOX simultaneously, typically struggle with duplicated effort and conflicting timelines. CERG uses one governance model, one control set, and one evidence library, while Engineering and Risk produce operating evidence as a byproduct of daily work. Regulatory alignment is demonstrated from that evidence, not through a parallel compliance exercise.
 
 ---
 
@@ -475,18 +477,20 @@ The push to modernize OT infrastructure is real. Utilities are evaluating advanc
 The Risk team's approach to OT environments differs from IT in several important ways:
 
 - **Scanning must be OT-safe:** active network scanning of OT environments can disrupt control processes. Risk uses passive monitoring, vendor-provided scan tools, and approved active scanning windows coordinated with OT operations.
-- **Patch windows are constrained:** OT systems often cannot be patched on standard IT timelines due to vendor testing requirements, operational windows, and redundancy limitations. Risk tracks OT patch compliance separately and initiates NERC-CIP deviation processes when SLAs cannot be met.
+- **Patch windows are constrained:** OT systems often cannot be patched on standard IT timelines due to vendor testing requirements, operational windows, and redundancy limitations. Risk tracks OT patch exposure and validates the residual risk when a standard cannot be met; Governance assures the exception path and evidence requirements.
 - **Availability is the primary objective:** in OT environments, availability often outranks confidentiality in the risk calculus. Risk team members must understand this trade-off and communicate findings in terms of operational impact, not just CVSS scores.
 - **Threat intelligence must include ICS-specific sources:** Risk maintains subscriptions to ICS-CERT advisories, E-ISAC threat intelligence, and vendor-specific security bulletins for all OT platforms in use.
 
 ### 9.4 Governance in OT Environments
 
-NERC-CIP creates a distinct compliance obligation for BES Cyber Systems that sits alongside, and sometimes in tension with, broader IT governance. Governance manages this by:
+NERC-CIP obligations are implemented through the same CERG assurance loop, with OT-specific control parameters and safety constraints. Governance maintains the IT and OT policy structure, required control outcomes, evidence criteria, and exception paths. It does not operate OT systems or perform remediation for their owners.
 
-- Maintaining separate but linked policy structures for IT and OT, common principles, tailored implementation requirements
-- Tracking CIP-002 categorized assets separately in the risk and compliance registers with their specific regulatory requirements
-- Managing NERC-CIP deviation and mitigation plan processes as a distinct workflow with defined escalation paths to the CISO and, where required, regulatory notification
-- Coordinating with the reliability operations team to ensure that security controls and compliance actions do not inadvertently introduce reliability risk
+- **BES system and control owners** maintain CIP-002 asset records, operate required controls, and provide implementation and remediation evidence.
+- **Engineering** designs and implements OT guardrails within reliability and maintenance constraints.
+- **Risk** assesses exposure, validates compensating controls, and evaluates the cybersecurity and reliability tradeoff.
+- **Governance** assures conformance to the applicable standards, records decisions and exceptions, directs corrective action for deficiencies, and escalates through the CISO where required.
+
+Governance coordinates with reliability operations so security requirements and corrective actions do not introduce unacceptable reliability risk.
 
 ---
 
@@ -502,7 +506,7 @@ At this scale, the workload is substantial across all three pillars. Engineering
 
 Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a production function producing actionable intelligence distributed to Engineering, Incident Response, and leadership.
 
-Governance operates as a domain-expert function. Subject matter experts carry deep technical knowledge — network security, identity and access management, cloud security, OT/ICS security, cryptography — and translate expertise into implementation guidance that engineering and operations teams use. The compliance portfolio may span multiple regulatory frameworks simultaneously. The evidence library is a living system, not a pre-audit scramble. The policy and standards catalog is actively maintained, version-controlled, and tied to regulatory citation.
+Governance operates as a domain-expert function. Subject matter experts carry deep technical knowledge in network security, identity and access management, cloud security, OT/ICS security, and cryptography, then translate expertise into implementation guidance that engineering and operations teams use. The regulated scope may span multiple frameworks simultaneously, but the rules and evidence remain one operating model. The evidence library is a living system, not a pre-audit scramble. The policy and standards catalog is actively maintained, version-controlled, and tied to applicable obligations.
 
 A representative staffing structure for a CERG of this scale:
 
@@ -519,14 +523,14 @@ A representative staffing structure for a CERG of this scale:
 |Senior Risk Analyst - Vendor & Third-Party Risk (×2)|Risk|Vendor security assessment program; contractor access risk; contract redline support; supply chain risk reporting|
 |Risk Analyst - Adversarial Testing (×3)|Risk|Internal pen test execution; external red team coordination; purple-team support; OT adversarial testing; findings documentation and tracking|
 |Risk Analyst (×5)|Risk|Day-to-day vuln tracking and owner follow-up; vendor assessment support; threat feed monitoring; finding remediation documentation|
-|Governance Pillar Leader|Governance|Policy and standard ownership; NERC-CIP compliance program leadership; regulatory and audit liaison; risk register governance; Governance team development|
-|NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System compliance; CIP deviation and mitigation management; NERC-CIP evidence library; regulatory exam coordination; reliability-security interface|
+|Governance Pillar Leader|Governance|Policy, standards, and control-assurance ownership; regulated-overlay assurance; risk-register governance; Governance team development|
+|NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System standards conformance; CIP exception and mitigation assurance; NERC-CIP evidence quality; reliability-security interface|
 |Senior Governance Analyst - Technical Domains (×4)|Governance|Domain SME coverage across network security, IAM, cloud, and cryptography; implementation guidance production; standard development; Engineering QA reviews|
-|CMMC / Federal Compliance Manager (×3)|Governance|CMMC SSP and POA&M management; 800-171 control tracking; C3PAO coordination; federal contract compliance calendar|
-|Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|and SOX ITGC compliance; external audit coordination; evidence collection and library management; compliance calendar|
+|CMMC / Federal Compliance Manager (×3)|Governance|CMMC evidence readiness; 800-171 control and evidence mapping; SSP and POA&M assurance; federal contract overlay calendar|
+|Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|SOX ITGC control and evidence mapping; assurance readiness; evidence-library quality; regulated-overlay calendar|
 |Policy & Standards Manager (×3)|Governance|Policy and procedure documentation; version control and review cycles; cross-pillar QA reviews; training content support for Security Awareness|
 
-This representative structure distributes staff across Engineering, Risk, and Governance, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities: a cloud migration program will weight Engineering more heavily; a regulatory audit cycle will weight Governance.
+This representative structure distributes staff across Engineering, Risk, and Governance, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities: a cloud migration program will weight Engineering more heavily; a regulated-scope assurance cycle will weight Governance.
 
 > **Scaling the Model**
 > 
@@ -549,7 +553,7 @@ In practice, this means that a new Cyber Engineer can learn the organization's s
 |---|---|
 |CERG → Security Awareness|Governance provides policy and procedure content for awareness training. Risk provides threat intelligence for targeted awareness campaigns (e.g., spear-phishing scenarios relevant to ICS/OT). Engineering feeds real-world examples from project work into training scenarios.|
 |CERG → Incident Response|Risk provides threat intelligence and vulnerability context during incidents. Engineering provides architecture and configuration documentation to support containment and recovery. Governance provides playbooks and manages post-incident documentation.|
-|Security Awareness → CERG|Awareness provides metrics on training completion and phishing simulation results - inputs for Governance's compliance tracking and risk register.|
+|Security Awareness → CERG|Awareness provides metrics on training completion and phishing simulation results - inputs for Governance's assurance tracking and risk register.|
 |Incident Response → CERG|IR provides post-incident findings and lessons learned - inputs for Risk (threat landscape updates), Engineering (architectural improvements), and Governance (policy and playbook updates).|
 
 ---
@@ -571,7 +575,7 @@ With the structure in place, the focus shifts to operating CERG as a team and bu
 - Establish a regular CERG operating cadence, weekly pillar syncs, monthly cross-pillar review, quarterly CISO briefing
 - Engineering begins processing the project intake queue and building the first round of handoff documentation
 - Risk begins producing regular vulnerability reports with prioritized findings and tracking remediation to SLA
-- Governance completes the first compliance self-assessment against NERC-CIP and CMMC; begins building the evidence library
+- Governance completes the first standards-conformance assessment against NERC-CIP and CMMC overlays; begins assuring the evidence library
 - All pillars begin practicing the "yes, and..." model on real business requests
 
 ### 11.3 Phase 3: Mature (Months 10–18)
@@ -593,7 +597,7 @@ An organization operating at Adaptive maturity will demonstrate these observable
 - When a significant vulnerability or threat emerges, the organization has a clear, practiced process for assessing impact, communicating status, and executing response, within hours, not days
 - External auditors and regulators find organized, complete, and timely evidence, because evidence collection is a byproduct of daily work, not a pre-audit scramble
 - New team members become productive faster because the CERG knowledge base, policies, standards, architecture documents, risk reports, is current, accessible, and well-organized
-- The CISO can credibly report the organization's risk posture to the board using data from the risk register and compliance program, not gut feel
+- The CISO can credibly report the organization's risk posture to the board using data from the risk register, control assurance, and operating evidence, not gut feel
 
 ---
 
@@ -619,7 +623,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -633,6 +637,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.23 | 2026-09-01 | Cyber Governance | Clarified Cyber Governance as CERG's second-line authority: it sets standards and assurance expectations, while first-line owners, Engineering, and Risk produce operating evidence and remediate or validate control gaps. Reframed regulatory alignment as an output of the normal CERG assurance loop. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |
 | 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and pillar descriptions. |
 | 1.22 | 2026-06-24 | CISO + Cyber Governance | Added capability taxonomy, capability reference set, maturity grading, and evidence-factory linkage. |
