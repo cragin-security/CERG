@@ -7,12 +7,12 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.34 |
+| **Version** | 1.35 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [CERG-PRC-LL-001](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [CERG-PRC-LL-001](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | All - board reporting |
@@ -105,6 +105,10 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 | PH-003 | End-of-Support Count | Assets running software past vendor end-of-support date | Asset inventory | Monthly | 0 / 1–10 / > 10 | COG Brief |
 
 ### 3.2b Detection Metrics (Owner: Cyber Risk)
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| DT-001 | ATT&CK Detection Coverage | In-scope ATT&CK techniques with at least one authored, tested, `In Production` detection in the derived `Operating` condition ÷ all in-scope ATT&CK techniques | Detection registry + SIEM source-health record | Nightly | ≥ 70% / n/a / < 70% | CISO Dashboard, COG Brief |
 
 ### 3.3 Engineering / Configuration Metrics (Owner: Cyber Engineering)
 
@@ -241,7 +245,7 @@ The data source map tells the reporting team where each metric's underlying data
 |---|---|---|---|---|
 | RM-001 – RM-006 | Risk register tool | Risk Register Owner | Nightly extract → metrics platform | Stale ETL: hold the day's CISO Dashboard, raise an Amber data-quality flag. |
 | EM-001 – EM-010 | Exposure pipeline (scanner, CSPM, SSPM, SCA, KEV, reachability context) | Exposure Management Lead | Hourly API / pipeline export → metrics platform | Source outage: fall back to last-known-good snapshot with timestamp banner. |
-| DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Missing source: detection coverage shown as Red. |
+| DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Required source unhealthy: dependent detections are excluded from coverage and DT-001 is shown as Red. |
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
 | ID-001 – ID-010 | IdP / IGA / PAM / NHI registry / secrets manager / evidence library / TPRM | Identity Engineer + IAM Operator + Evidence Librarian | Nightly export for operational metrics; monthly evidence-library reconciliation | Source change: re-baseline before publishing; missing package evidence reports Red until reconciled. |
 | TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
@@ -514,8 +518,8 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.34 |
+| **Version** | 1.35 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. |
 
