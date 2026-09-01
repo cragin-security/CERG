@@ -288,7 +288,7 @@
   title: CERG Framework
   document_type: governance_instrument
   domain: FRM
-  version: 1.22
+  version: 1.23
   status: Approved
   classification: Public
   publication_profile: public
@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
   source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: 88c4c0a7fef20b8cac9f79f3a94e8c1fa27b7ba2476d15cb4dd95e3fee6fdaf8
+  source_hash: 16230327ed0573dc9363203e9d7a8250ffb1024f9e53f289054fac4d2c5620ec
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
   llm_include: true
   llm_priority: high
