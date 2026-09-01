@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · NIST 800-53r5 |
+| **Frameworks** | CERG Extended Baseline · NIST 800-53r5 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | All practice delivery environments |
 
@@ -21,7 +21,7 @@
 
 This playbook defines how a consulting practice delivers the CERG cybersecurity operating model to clients. It covers the full engagement lifecycle — from initial conversation to final handoff — with pricing guidance, deliverable templates, and anti-patterns.
 
-It assumes you're working from the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md), the [100-Core Control Baseline](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md), and the [GRC Rollout Guide](tools/grc-rollout-v1.md), and have read the [MSP Runbook](msp-runbook-v1.md). If you're an MSP/MSSP delivering CERG as a managed service, the runbook is your day-to-day. This playbook is your business wrapper.
+It assumes you're working from the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md), the [Extended Control Baseline](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md), and the [GRC Rollout Guide](tools/grc-rollout-v1.md), and have read the [MSP Runbook](msp-runbook-v1.md). If you're an MSP/MSSP delivering CERG as a managed service, the runbook is your day-to-day. This playbook is your business wrapper.
 
 ---
 
@@ -52,7 +52,7 @@ Discover → Assess → Plan → Deploy → Operate → Handoff
 
 **Deliverables:**
 1. **Current State Inventory** — tool-by-tool inventory with version, config status, and coverage gaps
-2. **Gap Analysis Report** — [CERG 100-Core controls](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) mapped to current state, each scored as Implemented / Partially Implemented / Not Implemented
+2. **Gap Analysis Report** — [CERG Extended Baseline controls](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) mapped to current state, each scored as Implemented / Partially Implemented / Not Implemented
 3. **Risk Register Bootstrap** — top 10 risks by impact, each with a recommended treatment
 4. **Tool Stack Recommendation** — specific products and licenses, priced, per the [Tool Matrix](tools/opinionated-tool-matrix-v1.md)
 
@@ -215,7 +215,7 @@ All prices assume US-based consulting. Adjust for geography, competition, and cl
 
 ### Anti-Pattern: The Audit Rescue
 
-Client calls three weeks before their CMMC assessment. They need [110 controls](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) evidenced and they have nothing. Tempting revenue — but this engagement always fails. You cannot retroactively create 12 months of evidence.
+Client calls three weeks before their CMMC assessment. They need 110 controls evidenced and they have nothing. Tempting revenue — but this engagement always fails. You cannot retroactively create 12 months of evidence.
 
 **Instead:** Offer expedited assessment + a tactical plan for what can be done in 3 weeks (usually: deploy MFA, tighten access, document what exists). Be clear this is triage, not compliance. The full program starts after the audit.
 
@@ -243,7 +243,7 @@ Month 6 and the client is still "evaluating" whether CERG is right for them. The
 
 Every Statement of Work for a CERG engagement must include:
 
-1. **Scope** — exact systems, locations, and controls in scope. Use the [CERG Implementation Tiers](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md#5-the-306090-day-rollout) (Foundations, Structure, Compliance, Strategic) and the [100-Core Control Baseline](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) for control scoping
+1. **Scope** — exact systems, locations, and controls in scope. Use the [CERG Implementation Tiers](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md#5-the-306090-day-rollout) (Foundations, Structure, Compliance, Strategic) and the [Extended Control Baseline](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) for control scoping
 2. **Deliverables** — named artifacts (Gap Analysis Report, Remediation Roadmap, Tool Deployment, Evidence Pipeline)
 3. **Client Responsibilities** — tool license costs, staff availability for interviews, admin access to systems, approval turnaround on exceptions
 4. **Exclusions** — what you are NOT doing (physical security, OT systems, code review, penetration testing unless scoped separately)
@@ -263,7 +263,7 @@ Every Statement of Work for a CERG engagement must include:
 
 ### Related Documents
 
-- [100-Core Control Baseline](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this playbook scopes, prices, and delivers
+- [Extended Control Baseline](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the control set this playbook scopes, prices, and delivers
 - [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [MSP Runbook](msp-runbook-v1.md) — copy-paste deployment instructions for every tool in the stack
 - [GRC Rollout Guide](tools/grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework

@@ -43,7 +43,7 @@ This fork extends the architecture into something an MSP technician can follow:
 
 ### 87-Core Control Baseline
 
-The [100-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) (now 87 controls after culling overlap) extends upstream's schematic control matrix into full enumerated controls across all 19 NIST 800-53r5 families. Every control has:
+The [Extended Control Baseline](governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) (now 87 controls after culling overlap) extends upstream's schematic control matrix into full enumerated controls across all 19 NIST 800-53r5 families. Every control has:
 
 - A declarative action statement an IT generalist can implement
 - Named evidence with collection method and minimum frequency
@@ -88,7 +88,7 @@ The [ADR log](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) capt
 | Setting up automated compliance evidence | [Evidence Automation Mapping](practice-assets/tools/evidence-automation-mapping-v1.md) |
 | Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/grc-rollout-v1.md) |
 | Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/engagement-playbook-v1.md) |
-| Looking for the full control set | [100-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) |
+| Looking for the full control set | [Extended Control Baseline](governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) |
 | Understanding why specific choices were made | [Architecture Decision Records](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
 | New to CERG (upstream) | [START-HERE.md](START-HERE.md) |
 | Using an AI assistant | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
@@ -120,7 +120,7 @@ Everything upstream carries, plus:
 
 | Directory | Content |
 |-----------|---------|
-| `governance/` | Policy, operating model, risk framework, RACI, metrics, maturity — plus the fork's [87-Core Control Baseline](governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) and [ADR log](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
+| `governance/` | Policy, operating model, risk framework, RACI, metrics, maturity — plus the fork's [87-Core Control Baseline](governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) and [ADR log](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
 | `standards/` | Technical security standards (15 docs) |
 | `procedures/` | Repeatable workflows for risk, exposure, architecture review, TPRM, audit, change, threat modeling |
 | `plans/` | Operational packages for regulated or specialized scopes |

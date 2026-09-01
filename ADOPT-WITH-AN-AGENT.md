@@ -25,7 +25,11 @@ Before helping with adoption, load these files:
 4. [machine-readable/cerg-document-tiers.yaml](machine-readable/cerg-document-tiers.yaml)
 5. [machine-readable/cerg-llm-index.json](machine-readable/cerg-llm-index.json)
 
-Load additional documents only when the task requires them.
+**For cragin-security/CERG fork adopters**, additionally load:
+
+6. [Extended Control Baseline](governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the practitioner-ready control set
+7. [Opinionated Tool Matrix](practice-assets/tools/opinionated-tool-matrix-v1.md) — primary/acceptable/avoid tool recommendations
+8. [MSP Runbook](practice-assets/msp-runbook-v1.md) — if this deployment uses the opinionated MSP stack
 
 ## 3. First prompt for CERG Lite
 

@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · CIS Controls v8 · NIST 800-53r5 |
+| **Frameworks** | CERG Extended Baseline · CIS Controls v8 · NIST 800-53r5 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | IT · Cloud · SaaS · OT (partial) |
 
@@ -46,7 +46,7 @@ The GRC platform is the spine of the CERG program. Every other tool reports into
 
 **CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
 
-**CERG standards:** The GRC platform tracks all controls and evidence from the [100-Core Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md). Implementation guidance is in the [GRC Rollout Guide](grc-rollout-v1.md) and [Engagement Playbook](../engagement-playbook-v1.md).
+**CERG standards:** The GRC platform tracks all controls and evidence from the [Extended Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md). Implementation guidance is in the [GRC Rollout Guide](grc-rollout-v1.md) and [Engagement Playbook](../engagement-playbook-v1.md).
 
 **Integration note:** ServiceNow GRC has native integrations with most SIEM and endpoint tools. Vanta's integrations are narrower — Wiz, AWS, Azure, GCP, GitHub, Jamf, Intune. Budget for middleware if you need Vanta-to-non-cloud-tool integration.
 
@@ -105,7 +105,7 @@ Vulnerability scanning is table stakes. CERG requires authenticated scanning, a 
 
 **CERG recommendation:** Tenable for mixed on-prem/cloud environments. Wiz for cloud-native clients.
 
-**CERG standards:** [Asset Management and Inventory Standard](../../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) — asset inventory requirements that feed vulnerability scoping. [100-Core Baseline RA-005](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — vulnerability scanning and remediation parameters.
+**CERG standards:** [Asset Management and Inventory Standard](../../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) — asset inventory requirements that feed vulnerability scoping. [Extended Baseline RA-005](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — vulnerability scanning and remediation parameters.
 
 ---
 
@@ -156,7 +156,7 @@ Software supply chain security is mandatory under CMMC L2 and increasingly requi
 
 **CERG recommendation:** Trivy for dependency/container/supply-chain scanning. Semgrep for SAST. Both are free, CLI-first, and work in CI/CD without vendor lock-in.
 
-**CERG standards:** [Secure Software Development Standard](../../standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) — SDLC security requirements, CI/CD pipeline gates, SAST/SCA integration. [100-Core Baseline SR family](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — supply chain risk management controls.
+**CERG standards:** [Secure Software Development Standard](../../standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) — SDLC security requirements, CI/CD pipeline gates, SAST/SCA integration. [Extended Baseline SR family](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — supply chain risk management controls.
 
 ---
 
@@ -321,11 +321,11 @@ Every tool in this diagram has a documented API and a supported integration path
 
 - Quarterly review against vendor market changes
 - Re-review if a primary vendor is acquired, has a major breach, or sunsets a key product line
-- Re-review on CERG 100-Core baseline version changes
+- Re-review on CERG Extended Baseline baseline version changes
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping covers
+- [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the control set this mapping covers
 - [Policy-as-Code Examples](../../tools/policy-as-code/README.md) — OPA/Rego DISH baseline policies, GitHub Actions gates for architecture review and admission control
 - [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
 - [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework

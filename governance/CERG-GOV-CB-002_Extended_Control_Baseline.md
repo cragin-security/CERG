@@ -1,4 +1,4 @@
-# 100-Core Control Baseline (Extended)
+# Extended Control Baseline
 
 ## Practitioner-Ready Control Set with MSP Copy-Paste Instructions
 
@@ -52,7 +52,7 @@ Differences from upstream:
 
 | Dimension | Upstream (CB-001) | This Document (CB-002) |
 |-----------|-------------------|------------------------|
-| Control count | ~18 schematic entries | 97 enumerated controls |
+| Control count | ~18 schematic entries | 87 enumerated controls |
 | Audience | Program architects, auditors | MSPs, MSSPs, IT generalists |
 | Instructions | None | Copy-paste deployment per control |
 | Tool bindings | Framework-level | Tied to [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) |
@@ -1228,7 +1228,7 @@ Every control entry follows this structure:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.1.0 | 2026-07-20 | cragin-security | Culled 9 overlapping shuttle-hand controls, expanded 15 keepers to full 9-field format with MSP notes, tool bindings, and subordinate standards. Total: 87 controls across 19 families. |
+| 1.1.0 | 2026-07-20 | cragin-security | Culled 9 overlapping shorthand controls, expanded 15 keepers to full 9-field format with MSP notes, tool bindings, and subordinate standards. Total: 87 controls across 19 families. |
 | 1.0.0 | 2026-07-03 | cragin-security | Initial release: 97 controls across 19 families |
 
 ### Review Triggers

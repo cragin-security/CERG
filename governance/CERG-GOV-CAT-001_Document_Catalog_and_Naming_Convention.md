@@ -358,7 +358,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
 | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
-| [`CERG-GOV-CB-002`](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) | 100-Core Control Baseline (Extended) — cragin-security fork | Consulting Practice Lead | Draft |
+| [`CERG-GOV-CB-002`](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) | Extended Control Baseline (Extended) — cragin-security fork | Consulting Practice Lead | Draft |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
 | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CERG Framework (narrative) | CISO | Approved |
 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |

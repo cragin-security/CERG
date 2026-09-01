@@ -58,6 +58,20 @@ The pre-commit hooks run against the full corpus, so every commit triggers a rep
 - **No em dashes** in prose (STY-001 §9.2). Use hyphens or restructure.
 - **No bare unfilled values** in Approved documents. Use "preliminary default requiring organizational calibration" with a stated basis, per RMF-001 §12.
 
+## Fork-specific contributions (cragin-security/CERG)
+
+This fork of CERG (cragin-security/CERG) adds **practice assets** under `practice-assets/` that are not part of the upstream framework. These include:
+
+- Opinionated tool recommendations, pricing guidance, and engagement playbooks
+- MSP delivery-specific runbooks and SOW templates
+- Threat-intel validation mappings and evidence automation pipelines
+
+**Practice-asset improvements** stay in the fork — they do not go upstream. Use the fork's issue tracker at [cragin-security/CERG/issues](https://github.com/cragin-security/CERG/issues) for practice-asset proposals.
+
+**Framework improvements** (changes to `governance/`, `standards/`, `procedures/`, `plans/`, `templates/`) are welcome upstream. Open PRs to the [upstream repository](https://github.com/m0dernz/CERG) for those.
+
+All OPN-domain content lives under `practice-assets/` and uses the `OPN` prefix in its document ID. See [ADR-001](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) for the domain boundary rationale.
+
 ## Code of conduct
 
 Be respectful, assume good faith, and keep discussions focused on making the framework better. Disagreements about approach are healthy; personal criticism is not.

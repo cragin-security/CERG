@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · NIST 800-53r5 · CIS Controls v8 |
+| **Frameworks** | CERG Extended Baseline · NIST 800-53r5 · CIS Controls v8 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | IT · Cloud · SaaS |
 
@@ -219,11 +219,11 @@ curl -s -H "X-ApiKeys: accessKey=XXX;secretKey=YYY" \
 
 ## Phase 3: Per-Control Implementation
 
-This section covers the controls that MSPs most commonly struggle with. Each entry includes the control, what the client needs, and the exact steps to implement it. For the full 100-control baseline, see [CERG-GOV-CB-002](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md).
+This section covers the controls that MSPs most commonly struggle with. Each entry includes the control, what the client needs, and the exact steps to implement it. For the full control baseline, see [CERG-GOV-CB-002](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md).
 
 ### AC-002: MFA Everywhere
 
-**Control reference:** [CB-002 AC-002](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-002-mfa-enforcement) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+**Control reference:** [CB-002 AC-002](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#ac-002-mfa-enforcement) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
 
 **What it means:** Every user account that accesses company systems must use multi-factor authentication. No exceptions for executives, IT staff, or service accounts with interactive login.
 
@@ -251,7 +251,7 @@ Get-MgUser -All | Where-Object { $_.UserType -eq "Member" } |
 
 ### AC-005: Remote Access Hardening
 
-**Control reference:** [CB-002 AC-005](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-005-remote-access) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+**Control reference:** [CB-002 AC-005](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#ac-005-remote-access) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
 
 **What it means:** Remote access is the #1 initial access vector in ransomware. Every remote connection requires MFA, encrypted transport, and device posture validation. Split-tunnel VPN is prohibited unless documented with compensating controls.
 
@@ -276,7 +276,7 @@ $scanResult.vulnerabilities | Where-Object { $_.plugin_name -like "*RDP*" -and $
 
 ### AC-006: Quarterly Access Review
 
-**Control reference:** [CB-002 AC-006](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-006-quarterly-access-review) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+**Control reference:** [CB-002 AC-006](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#ac-006-quarterly-access-review) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
 
 **What it means:** Every quarter, someone reviews who has access to what and revokes what's no longer needed. This is the control that catches the ex-employee whose account was never disabled, the contractor whose project ended, and the admin who changed roles.
 
@@ -302,7 +302,7 @@ Get-ADUser -Filter {Enabled -eq $false} -Properties MemberOf |
 
 ### AC-004: Least Privilege and PAM
 
-**Control reference:** [CB-002 AC-004](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ac-004-least-privilege) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+**Control reference:** [CB-002 AC-004](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#ac-004-least-privilege) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
 
 **What it means:** Users and services operate with minimum access. Administrative privileges use just-in-time (PIM/PAM), not standing group membership. Stolen admin credentials are the primary way ransomware spreads laterally.
 
@@ -329,7 +329,7 @@ Get-LapsADPassword -Identity "DC01" -AsPlainText | Select-Object Password
 
 ### IA-002: Strong Authentication
 
-**Control reference:** [CB-002 IA-002](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#ia-002-strong-authentication) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
+**Control reference:** [CB-002 IA-002](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#ia-002-strong-authentication) · [Access Management Standard (STD-AC-001)](../standards/CERG-STD-AC-001_Access_Management_Standard.md)
 
 **What it means:** Passwords alone are not enough. Authentication requires MFA combined with strong password policies. Phishing-resistant methods (FIDO2, certificates) are preferred for privileged accounts.
 
@@ -355,7 +355,7 @@ Get-MgUser -All -Property Id, UserPrincipalName, StrongAuthenticationRequirement
 
 ### CM-005: Software Whitelisting and Application Control
 
-**Control reference:** [CB-002 CM-005](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#cm-005-software-whitelisting) · [Configuration Baseline Standard (STD-CFG-001)](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)
+**Control reference:** [CB-002 CM-005](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#cm-005-software-whitelisting) · [Configuration Baseline Standard (STD-CFG-001)](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)
 
 **What it means:** Only authorized software runs on endpoints. Ransomware, Mimikatz, remote access tools, and other attacker tooling are blocked by default. Whitelisting is based on publisher certificate, file hash, or path.
 
@@ -382,14 +382,15 @@ Get-WinEvent -FilterHashtable @{LogName="Applications and Services Logs/Microsof
 
 ### SI-004: Detection Engineering
 
-**Control reference:** [CB-002 SI-004](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#si-004-detection-engineering) · [Logging Monitoring and Detection Standard (STD-LM-001)](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md)
+**Control reference:** [CB-002 SI-004](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#si-004-detection-engineering) · [Logging Monitoring and Detection Standard (STD-LM-001)](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md)
 
 **What it means:** Detection rules exist for the TTPs attackers actually use. Rules are written in Sigma format, mapped to MITRE ATT&CK, and tested quarterly with Atomic Red Team. The controls that stop ransomware are only effective if they alert when bypassed.
 
 **Implementation steps:**
 
-1. **Deploy the CERG Sigma rule set** (shipped with the detection engineering framework):
-   - Navigate to the CERG rules directory: `sigma-rules/`
+1. **Deploy Sigma rules from authoritative sources:**
+   - Clone the SigmaHQ repository: `git clone https://github.com/SigmaHQ/sigma.git`
+   - Navigate to the rules directory: `cd sigma/rules`
    - Convert Sigma rules to SIEM format: `sigmac -t elastic -o /output/rules.json rule.yml`
    - Load into SIEM: Elastic `_bulk` API or Wazuh ruleset import
 2. **Map rules to ATT&CK** — each rule should reference the technique it detects
@@ -417,16 +418,17 @@ Invoke-AtomicTest All
 ```
 
 ```powershell
-# Quick check: how many of your Sigma rules map to ATT&CK?
-# Run this against your SIEM rule set
-$rules = Get-ChildItem -Path ".\sigma-rules" -Recurse -Filter "*.yml"
+# Quick check: how many Sigma rules from SigmaHQ map to ATT&CK?
+# Clone and check the official repository
+git clone https://github.com/SigmaHQ/sigma.git /tmp/sigma-rules
+$rules = Get-ChildItem -Path "/tmp/sigma-rules/rules" -Recurse -Filter "*.yml"
 $withTechnique = $rules | Select-String -Pattern "attack.mitre.org"
 Write-Host "$($withTechnique.Count) / $($rules.Count) rules mapped to ATT&CK"
 ```
 
 ### CM-008: Automated Patching
 
-**Control reference:** [CB-002 CM-008](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#cm-008-automated-patching) · [Configuration Baseline Standard (STD-CFG-001)](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)
+**Control reference:** [CB-002 CM-008](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#cm-008-automated-patching) · [Configuration Baseline Standard (STD-CFG-001)](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)
 
 **What it means:** Operating system and application patches are deployed within defined SLAs. Critical security patches: 7 days. High-severity: 14 days. Medium: 30 days. Automated patching is the single highest-ROI control — it blocks 6 of the 10 most common ransomware TTPs.
 
@@ -453,7 +455,7 @@ $kev.vulnerabilities | Where-Object {
 
 ### SI-005: Email Security
 
-**Control reference:** [CB-002 SI-005](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#si-005-email-security) · [Email and Messaging Security Standard (STD-MSG-001)](../standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md)
+**Control reference:** [CB-002 SI-005](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#si-005-email-security) · [Email and Messaging Security Standard (STD-MSG-001)](../standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md)
 
 **What it means:** Email is the initial access vector for ransomware. SPF, DKIM, and DMARC prevent domain spoofing. Safe Links and Safe Attachments block malicious URLs and attachments. Phishing investigations happen within 4 hours.
 
@@ -479,7 +481,7 @@ Resolve-DnsName _dmarc.client.com TXT | Select-Object Strings
 
 ### SI-006: Web Filtering
 
-**Control reference:** [CB-002 SI-006](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#si-006-web-filtering) · [Network Security and Segmentation Standard (STD-NET-001)](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md)
+**Control reference:** [CB-002 SI-006](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#si-006-web-filtering) · [Network Security and Segmentation Standard (STD-NET-001)](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md)
 
 **What it means:** Outbound web traffic is filtered to block malicious, phishing, and inappropriate categories. HTTPS inspection enabled where legally permissible. DNS filtering blocks C2 and malware distribution domains.
 
@@ -504,7 +506,7 @@ curl -s -o /dev/null -w "%{http_code}" -x proxy.client.com:3128 http://malicious
 
 ### SI-007: Data Loss Prevention
 
-**Control reference:** [CB-002 SI-007](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#si-007-data-loss-prevention) · [Data Governance and Classification Standard (STD-DG-001)](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md)
+**Control reference:** [CB-002 SI-007](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#si-007-data-loss-prevention) · [Data Governance and Classification Standard (STD-DG-001)](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md)
 
 **What it means:** Sensitive data is protected from exfiltration. DLP policies block unauthorized transmission of PII, PHI, financial data, and intellectual property via email, cloud upload, USB transfer, and clipboard.
 
@@ -523,7 +525,7 @@ curl -s -o /dev/null -w "%{http_code}" -x proxy.client.com:3128 http://malicious
 
 ### SC-001: Network Segmentation
 
-**Control reference:** [CB-002 SC-001](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md#sc-001-network-segmentation) · [Network Security and Segmentation Standard (STD-NET-001)](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md)
+**Control reference:** [CB-002 SC-001](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md#sc-001-network-segmentation) · [Network Security and Segmentation Standard (STD-NET-001)](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md)
 
 **What it means:** The network is divided into trust zones — servers, workstations, guest, DMZ, OT, management. Lateral movement between zones requires a firewall rule. This is how you stop ransomware from spreading from a compromised workstation to file servers.
 
@@ -566,7 +568,7 @@ diagnose firewall policy list | grep -A5 "srcintf.*zone-name"
 
 ### Related Documents
 
-- [100-Core Control Baseline](../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [Extended Control Baseline](../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
 - [Engagement Playbook](../practice-assets/engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
 - [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [GRC Rollout Guide](tools/grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework

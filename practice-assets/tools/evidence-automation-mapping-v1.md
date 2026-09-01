@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · NIST 800-53r5 · CIS Controls v8 |
+| **Frameworks** | CERG Extended Baseline · NIST 800-53r5 · CIS Controls v8 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | All CERG in-scope environments |
 
@@ -19,7 +19,7 @@
 
 ## Purpose
 
-Every control in the [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) requires evidence. This document maps each control to the tool that can automatically collect that evidence, what the evidence artifact looks like, and how it feeds into the GRC platform.
+Every control in the [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) requires evidence. This document maps each control to the tool that can automatically collect that evidence, what the evidence artifact looks like, and how it feeds into the GRC platform.
 
 Three evidence methods:
 
@@ -260,13 +260,13 @@ For MSP onboarding a new client, configure these evidence pipelines in order:
 
 ### Review Triggers
 
-- CB-002 100-Core Control Baseline updates (new/modified controls, tool binding changes)
+- CB-002 Extended Control Baseline updates (new/modified controls, tool binding changes)
 - Tool stack changes (vendor acquisition, EOL, new integration capabilities)
 - Regulatory evidence requirement changes (CMMC, SOX, PCI)
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping covers
+- [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the control set this mapping covers
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation

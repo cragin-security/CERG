@@ -49,6 +49,7 @@ A separate `OPN` domain code was created for practice assets. The OPN prefix (sh
 - `CERG-OPN-TOOLS-001` — Opinionated Tool Matrix
 - `CERG-OPN-TOOLS-002` — GRC Rollout Guide
 - `CERG-OPN-TOOLS-003` — Evidence Automation Mapping
+- `CERG-OPN-TOOLS-004` — Threat-Intel-Validated Control Baseline (CISA KEV + Ransomware TTP Mapping)
 - `CERG-OPN-MSP-001` — MSP/MSSP Runbook
 - `CERG-OPN-DLV-001` — Engagement Playbook
 
@@ -273,7 +274,7 @@ This choice is reflected in:
 ### Related Documents
 
 - [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md)
-- [100-Core Control Baseline](CERG-GOV-CB-002_100-Core_Control_Baseline.md)
+- [Extended Control Baseline](CERG-GOV-CB-002_Extended_Control_Baseline.md)
 - [Evidence Automation Mapping](../practice-assets/tools/evidence-automation-mapping-v1.md)
 - [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)
 - [MSP Runbook](../practice-assets/msp-runbook-v1.md)

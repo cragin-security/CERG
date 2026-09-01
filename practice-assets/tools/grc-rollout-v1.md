@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · NIST 800-53r5 · CIS Controls v8 |
+| **Frameworks** | CERG Extended Baseline · NIST 800-53r5 · CIS Controls v8 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | IT · Cloud · SaaS |
 
@@ -24,7 +24,7 @@ This guide provides copy-paste instructions for deploying a GRC platform as the 
 1. **Enterprise / MSP path:** ServiceNow GRC with CERG control import, evidence automation, and audit reporting
 2. **SMB path:** Vanta with CERG control mapping for compliance-only use cases
 
-Both paths assume you've read the [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md), understand the [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) structure, and have reviewed the [Engagement Playbook](../engagement-playbook-v1.md) for delivery context.
+Both paths assume you've read the [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md), understand the [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) structure, and have reviewed the [Engagement Playbook](../engagement-playbook-v1.md) for delivery context.
 
 ---
 
@@ -35,7 +35,7 @@ Both paths assume you've read the [Opinionated Tool Matrix](opinionated-tool-mat
 - ServiceNow instance with GRC: Advanced plugin (com.snc.governance_advanced)
 - Admin or snc_grc_admin role
 - Access to import sets and transform maps
-- CERG 100-Core Control Baseline (see [CERG-GOV-CB-002](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md))
+- CERG Extended Control Baseline (see [CERG-GOV-CB-002](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md))
 
 ### 1.2 Control Import
 
@@ -46,9 +46,9 @@ ServiceNow GRC uses the **Policy and Compliance** module. Controls live in the `
 Navigate to **Policy and Compliance > Administration > Control Objectives** and create a new framework:
 
 ```
-Name: CERG 100-Core
+Name: CERG Extended Baseline
 Version: 1.0
-Description: CERG 100-Core Control Baseline — practice-hardened fork
+Description: CERG Extended Control Baseline — practice-hardened fork
 Source: cragin-security/CERG
 ```
 
@@ -74,7 +74,7 @@ The expected JSON format for each control:
   "name": "Account Lifecycle Management",
   "description": "Every account has an approved request, named owner, defined access level, and documented JML record.",
   "category": "Access Control",
-  "framework": "CERG 100-Core",
+  "framework": "CERG Extended Baseline",
   "frequency": "Continuous",
   "evidence_type": "JML log, quarterly recert report",
   "owning_pillar": "Engineering",
@@ -130,7 +130,7 @@ curl -s -u "$SN_USER:$SN_PASS"   -H "Content-Type: application/json"   "https://
   }'
 ```
 
-Each domain inherits the CERG 100-Core framework definition from global but maintains its own control statuses, evidence, and audit artifacts.
+Each domain inherits the CERG Extended Baseline framework definition from global but maintains its own control statuses, evidence, and audit artifacts.
 
 ---
 
@@ -215,7 +215,7 @@ Limitations: Vanta's partner reporting is not as robust as ServiceNow's domain s
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [MSP Runbook](../msp-runbook-v1.md) — copy-paste deployment instructions for every tool in the stack
 - [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
 - [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage requirements and evidence parameters for SI controls
 - [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — authoritative parameter detail for AC, IA family controls
 - [Configuration Baseline Standard](../../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — DISH baseline, hardening benchmarks, drift detection parameters

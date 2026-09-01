@@ -1,6 +1,6 @@
 # Threat-Intel-Validated Control Baseline
 
-## Mapping CERG 100-Core Controls to Current CISA KEV and Ransomware TTPs
+## Mapping CERG Extended Baseline Controls to Current CISA KEV and Ransomware TTPs
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Monthly (threat intel refresh) |
-| **Frameworks** | CERG 100-Core · MITRE ATT&CK v15 · NIST 800-53r5 |
+| **Frameworks** | CERG Extended Baseline · MITRE ATT&CK v15 · NIST 800-53r5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All in-scope environments |
 
@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This document maps every control in the [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) to the threats it stops — using current CISA Known Exploited Vulnerabilities (KEV) data and observed ransomware TTPs.
+This document maps every control in the [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) to the threats it stops — using current CISA Known Exploited Vulnerabilities (KEV) data and observed ransomware TTPs.
 
 For MSPs, this answers the question a client asks in every sales meeting: *"Which of these controls actually stops the attacks we're seeing right now?"*
 
@@ -275,7 +275,7 @@ Controls are scored against each threat based on:
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping validates
+- [CERG Extended Control Baseline](../../governance/CERG-GOV-CB-002_Extended_Control_Baseline.md) — the control set this mapping validates
 - [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — how to collect evidence for the controls above
 - [Policy-as-Code Examples](../../tools/policy-as-code/README.md) — OPA/Rego enforcement of DISH baseline, GitHub Actions gates for architecture review
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria for defense implementation
