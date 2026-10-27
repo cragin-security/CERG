@@ -1,11 +1,11 @@
-# 100-Core Control Baseline (Extended)
+# Practitioner Control Baseline (Extended)
 
 ## Practitioner-Ready Control Set with MSP Copy-Paste Instructions
 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CB-002 |
-| **Version** | 1.0.0 |
+| **Version** | 1.1.1 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
@@ -1222,13 +1222,14 @@ Every control entry follows this structure:
 | SI — System and Information Integrity | 5 |
 | SR — Supply Chain Risk Management | 2 |
 | PM — Program Management | 3 |
-| **Total** | **87** |
+| **Total** | **86** |
 
 ### Revision History
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.1.0 | 2026-07-20 | cragin-security | Culled 9 overlapping shuttle-hand controls, expanded 15 keepers to full 9-field format with MSP notes, tool bindings, and subordinate standards. Total: 87 controls across 19 families. |
+| 1.1.1 | 2026-10-27 | cragin-security | Corrected the control-count total to 86 after recount (19 family rows sum to 86; 86 control headings, no duplicates). Renamed the baseline from "100-Core Control Baseline" to "Practitioner Control Baseline" so the title stops asserting a count the document does not carry. Propagated the corrected count to README, ADR-001, the evidence automation mapping, and the threat-intel validation asset. |
+| 1.1.0 | 2026-07-20 | cragin-security | Culled 11 overlapping shuttle-hand controls, expanded 15 keepers to full 9-field format with MSP notes, tool bindings, and subordinate standards. Total: 86 controls across 19 families. |
 | 1.0.0 | 2026-07-03 | cragin-security | Initial release: 97 controls across 19 families |
 
 ### Review Triggers
