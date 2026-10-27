@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-ADR-001 |
-| **Version** | 1.0.0 |
+| **Version** | 1.1.0 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
@@ -49,6 +49,7 @@ A separate `OPN` domain code was created for practice assets. The OPN prefix (sh
 - `CERG-OPN-TOOLS-001` — Opinionated Tool Matrix
 - `CERG-OPN-TOOLS-002` — GRC Rollout Guide
 - `CERG-OPN-TOOLS-003` — Evidence Automation Mapping
+- `CERG-OPN-TOOLS-004` — Threat Intel Validation
 - `CERG-OPN-MSP-001` — MSP/MSSP Runbook
 - `CERG-OPN-DLV-001` — Engagement Playbook
 
@@ -56,7 +57,7 @@ OPN documents:
 - Live in `practice-assets/` directory, not in governance/standards/procedures
 - Use the `OPN` prefix in their document ID
 - Are registered in CAT-001 §5.10 (Practice Assets) as a separate section
-- Carry **Draft** status until the practice stabilizes
+- Carry **Draft** status until the practice stabilizes; the promotion criteria for the set are stated in the [practice assets operating guide](../practice-assets/README.md)
 - Will never be pushed to the upstream m0dernz/CERG repository
 
 Non-OPN changes (bug fixes, doc improvements, framework enhancements to upstream documents) follow the standard fork-to-upstream contribution workflow.
@@ -261,6 +262,7 @@ This choice is reflected in:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
+| 1.1.0 | 2026-10-27 | cragin-security | Recorded the missing `CERG-OPN-TOOLS-004` in the practice-asset inventory and pointed the OPN "until the practice stabilizes" clause at defined promotion criteria. Corrected the CB-002 control count to 86. |
 | 1.0.0 | 2026-07-20 | cragin-security | Initial release: ADR-001 through ADR-005 covering OPN boundary, tool stack, CB-002 structure, evidence automation, and MSP delivery model. |
 
 ### Review Triggers
@@ -277,5 +279,7 @@ This choice is reflected in:
 - [Evidence Automation Mapping](../practice-assets/tools/evidence-automation-mapping-v1.md)
 - [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)
 - [MSP Runbook](../practice-assets/msp-runbook-v1.md)
+- [Threat Intel Validation](../practice-assets/tools/threat-intel-validation-v1.md)
+- [Practice Assets Operating Guide](../practice-assets/README.md)
 - [GRC Rollout Guide](../practice-assets/tools/grc-rollout-v1.md)
 - [Upstream CERG issuesv1 analysis](https://raw.githubusercontent.com/m0dernz/CERG/refs/heads/feat/issues-fix-pack-v2/issuesv1.md)
