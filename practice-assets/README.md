@@ -75,6 +75,18 @@ Before releasing a practice-asset update:
 5. Record material practice decisions in the ADR log, including alternatives and consequences.
 6. Reconcile the fork with upstream CERG before carrying forward an upstream document change. Keep fork-specific choices in `practice-assets/` or another clearly marked fork-only location.
 
+## Lifecycle Status
+
+Every artifact in this directory carries `Draft` lifecycle status by deliberate decision, recorded in [ADR-001](../governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md). `Draft` here means pre-release, not unmaintained: the practice layer has no versioned release commitment, so a control statement, tool binding, or price may still change without notice to earlier adopters.
+
+The set moves to `Approved` together, not artifact by artifact, when all of the following hold:
+
+1. A release review re-measures every numeric claim in the set against the artifact that owns it — control counts, evidence-automation coverage, and time-bound threat claims — rather than trusting narrative text.
+2. Each artifact's Document Control section records the review date and approving role, and its catalog row matches.
+3. Each artifact states a refresh cadence that matches how fast its content decays: tool bindings and threat intelligence fastest, the control baseline and ADR log slowest.
+
+Until the set is approved, cite these assets as `Draft` in proposals and statements of work, and do not present them as approved framework content or as evidence of compliance.
+
 ## Suggested Client Record Set
 
 Each client engagement should maintain records separate from this repository:
