@@ -1,6 +1,6 @@
 # Threat-Intel-Validated Control Baseline
 
-## Mapping CERG 100-Core Controls to Current CISA KEV and Ransomware TTPs
+## Mapping CERG Practitioner Baseline Controls to Current CISA KEV and Ransomware TTPs
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Monthly (threat intel refresh) |
-| **Frameworks** | CERG 100-Core · MITRE ATT&CK v15 · NIST 800-53r5 |
+| **Frameworks** | CERG Practitioner Baseline · MITRE ATT&CK v15 · NIST 800-53r5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All in-scope environments |
 
@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This document maps every control in the [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) to the threats it stops — using current CISA Known Exploited Vulnerabilities (KEV) data and observed ransomware TTPs.
+This document maps every control in the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) to the threats it stops — using current CISA Known Exploited Vulnerabilities (KEV) data and observed ransomware TTPs.
 
 For MSPs, this answers the question a client asks in every sales meeting: *"Which of these controls actually stops the attacks we're seeing right now?"*
 
@@ -214,7 +214,7 @@ Shows how many threats each control addresses. Priority for evidence collection 
 | 14 | SI-005 Email Security | 1 (T1190) | Email category | Blocks phishing as initial access vector |
 | 15 | AC-006 Quarterly Access Review | 1 (T1078) | Cross-cutting | Reduces standing privilege |
 
-**Full 87-control coverage:** All controls in CB-002 contribute to at least one defense layer. The controls listed above are the 15 that directly address the current ransomware threat landscape. The remaining 72 controls cover regulatory compliance, operational resilience, physical security, and program management — essential for a complete program but not high-signal for ransomware-specific defense.
+**Coverage scope:** The 15 controls listed above directly address the current ransomware threat landscape. The remaining 71 of CB-002's 86 controls cover regulatory compliance, operational resilience, physical security, and program management — essential for a complete program but not high-signal for ransomware-specific defense. This table ranks the ransomware-relevant subset; it does not enumerate the other 71 control by control.
 
 ---
 
@@ -275,7 +275,7 @@ Controls are scored against each threat based on:
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping validates
+- [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the control set this mapping validates
 - [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — how to collect evidence for the controls above
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria for defense implementation
 - [MSP Runbook](../msp-runbook-v1.md) — deployment instructions for the controls that stop ransomware
