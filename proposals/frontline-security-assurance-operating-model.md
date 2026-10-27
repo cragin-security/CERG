@@ -139,7 +139,7 @@ Each request in the frontline contract should use this structure.
 | **Platform owner** | Team accountable for the enabling tool, service, connector, or reference architecture. | Target |
 | **Data owner / authoritative source** | Owner and source for each required data element. | Target |
 
-Use **“minimum assurance evidence”** rather than “required fields” where possible.
+Use **“minimum assurance evidence”** rather than “required fields” where possible. The purpose is assurance of the control outcome, not creation of a reporting exercise.
 
 ### Mapping to the second-line boundary RFC §5
 
@@ -156,9 +156,11 @@ The boundary RFC lists the fields a first-line service interface must capture. T
 | Production-change and acceptance authority | Operational constraints |
 | CERG assurance cadence, method, sampling population | Quality checks and Independent observability and re-test rights |
 | Provider access, data ownership, exit, and kill-switch | Operational constraints |
+| Applicable assurance-method authority and capability basis | Independent observability and re-test rights, with the method owner named |
+| Independent assessor and review route | Exception path and Independent observability and re-test rights |
+| Evidence period, scope, and current-control-state check | Minimum assurance evidence and Quality checks |
 
-Three fields here have no counterpart in the RFC list — minimum assurance evidence, quality checks, and the indicative regulatory cross-reference. They are assurance-specific additions, not alternatives to the RFC's fields.
- The purpose is assurance of the control outcome, not creation of a reporting exercise.
+The RFC revision added capability basis, independent assessor, and evidence-period fields, and all three now have counterparts here. Only the indicative regulatory cross-reference has no counterpart in the RFC's list — it is an assurance-specific addition rather than an alternative to the RFC's fields.
 
 ---
 
