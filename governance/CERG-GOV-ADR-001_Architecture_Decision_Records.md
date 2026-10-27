@@ -23,7 +23,7 @@ This document records the architectural decisions made in the cragin-security fo
 
 ADRs exist to prevent two failure modes:
 
-1. **Amnesia** — Six months from now, nobody remembers why ServiceNow was chosen over Archer, or why CB-002 has 87 controls instead of 97
+1. **Amnesia** — Six months from now, nobody remembers why ServiceNow was chosen over Archer, or why CB-002 has 86 controls instead of 97
 2. **Drift** — Without documented rationale, future changes can accidentally reverse a deliberate trade-off
 
 The ADR format follows the well-known [ADR template](https://adr.github.io/) (context → decision → consequences).
@@ -155,7 +155,7 @@ Create CB-002 as an extended practitioner baseline with the 9-field control form
 | MSP Implementation Note | Copy-paste instructions for IT generalists |
 | Tool Binding | Which tool(s) from the tool matrix satisfy this control |
 
-**Control count:** After initial 97-control release, culled 10 overlapping shorthand controls and expanded 15 to full format. Final: **87 controls** across all 19 NIST families.
+**Control count:** After initial 97-control release, culled 11 overlapping shorthand controls and expanded 15 to full format. Final: **86 controls** across all 19 NIST families.
 
 **Culling criteria:** A control is culled if it:
 1. Exactly duplicates another control's requirement (e.g., SI-002 "Vulnerability Monitoring" = RA-002 "Vulnerability Scanning")
@@ -165,12 +165,12 @@ Create CB-002 as an extended practitioner baseline with the 9-field control form
 ### Consequences
 
 **Positive:**
-- 87 controls, each earning its place. No filler for a round number.
+- 86 controls, each earning its place. No filler for a round number.
 - Every control has an MSP implementation note with copy-paste commands or API references
 - Full cross-walk to NIST 800-53r5, CMMC L2, SOX ITGC, PCI DSS v4
 
 **Negative:**
-- 87 controls means the document is large (~90KB, ~1250 lines). Needs a good TOC and search.
+- 86 controls means the document is large (~90KB, ~1250 lines). Needs a good TOC and search.
 - Some pure-manual controls (physical security, personnel screening) feel thin in an MSP context but must remain for framework completeness
 - Quarterly review required to keep MSP implementation notes current with tool UI/API changes
 
@@ -186,10 +186,10 @@ CB-002 defines "Named Evidence" and "Tool Binding" per control, but doesn't deta
 
 ### Decision
 
-Create a separate evidence automation mapping (CERG-OPN-TOOLS-003) that covers all 87 controls with:
+Create a separate evidence automation mapping (CERG-OPN-TOOLS-003) that covers all 86 controls with:
 
 - Per-tool automation tables: which tool, which controls it auto-evidenced, specific API endpoints, GRC integration path, collection frequency
-- Manual evidence table: 31 controls that require human collection, with procedures and schedules
+- Manual evidence table: 35 controls that require human collection (33 with no tool pipeline), with procedures and schedules
 - Quick-reference by priority: deployment order for new client onboarding
 - Maturity model: Basic → Intermediate → Advanced → Adaptive
 
@@ -273,7 +273,7 @@ This choice is reflected in:
 ### Related Documents
 
 - [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md)
-- [100-Core Control Baseline](CERG-GOV-CB-002_100-Core_Control_Baseline.md)
+- [Practitioner Control Baseline](CERG-GOV-CB-002_Practitioner_Control_Baseline.md)
 - [Evidence Automation Mapping](../practice-assets/tools/evidence-automation-mapping-v1.md)
 - [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)
 - [MSP Runbook](../practice-assets/msp-runbook-v1.md)
