@@ -8,6 +8,24 @@ This file is loaded automatically by AI agents (Claude Code, Copilot, Codex CLI,
 
 CERG is an open‑source cybersecurity operating model — not a control framework or compliance checklist. It gives security teams the policies, standards, procedures, workforce architecture, and evidence model to run a real program. Three pillars: Engineering, Risk, and Governance.
 
+## Framework Invariants
+
+Preserve these boundaries when interpreting or changing the framework:
+
+- CERG is a **second-line cybersecurity operating model**. First-line system, service, business, IT, and OT owners implement and operate applicable controls. CERG defines guardrails, evaluates exposure, assures evidence and conformance, and drives correction; it does not absorb first-line accountability.
+- **Engineering** supplies secure design, practical guardrails, and implementation support. **Risk** maintains exposure visibility and validates whether controls hold under relevant conditions. **Governance** owns control intent, evidence criteria, decision routing, conformance assurance, and program improvement. The pillars work together, but not every low-risk workflow requires all three.
+- The standing **Incident Response team** is adjacent to CERG and owns incident command, the IR plan, exercises, notification clocks, and the operational incident record. CERG supplies context and support when called, then routes lessons into its own improvement mechanisms.
+- Treat **implementation, operating evidence, and effectiveness** as linked properties of one control, not separate control catalogs. CB-001 names the concise common control spine; subordinate standards and procedures own detailed requirements. CEF-001 and adversarial validation assess effectiveness; exposure management consumes those assurance signals for classification and treatment.
+- Use one authoritative record and one accountable owner for each material event. Evidence must be created during execution, linked to that record, and be current, attributable, retrievable, and relevant to the scope.
+- Small teams consolidate canonical roles onto fewer people; they do not delete responsibilities or collapse the required independent view for consequential risk acceptance.
+
+### Guardrails for Framework Changes
+
+- Do not turn CERG into a context-free control checklist, vendor/tool catalog, universal lifecycle, or mandatory GRC-tool schema. Preserve outcome-based, tool-neutral guidance and let adopters implement local records and tooling.
+- Before proposing a new top-level artifact, control, role, record type, or metric, identify the concrete gap and check whether an existing standard, procedure, catalog, flow, or template already owns it. Prefer improving the existing owner over duplicating an inventory.
+- Do not create a second source of truth for role names, RACI, control detail, risk acceptance, document lifecycle, or record definitions. Extend the authoritative source and update dependent artifacts in the same change.
+- Regulatory overlays add or tighten requirements; they do not silently relax the organizational baseline. When multiple rules apply, use the most stringent applicable requirement or shortest applicable clock.
+
 ## Directory Layout
 
 ```
@@ -85,6 +103,25 @@ Contains Revision History (a table), Review Triggers, Related Documents.
 - Document counts
 
 **Load this first** — it gives you the complete local corpus map. If context is tight, load only the top-level counts and the `documents[].id/path/summary` fields you need.
+
+## Source Authority and Task Routing
+
+The Markdown corpus is authoritative. Machine-readable artifacts are derived: regenerate them from source; do not manually edit them to override source content.
+
+| Question or change | Read first | Authority to preserve |
+|---|---|---|
+| What CERG is, pillar boundaries, first-/second-line assurance, or IR boundary | `FRM-001`, `OM-001` | `OM-001` for operating boundaries |
+| Document existence, ID, status, lifecycle, approval path, or naming | `CAT-001`, `STY-001` | `CAT-001` |
+| Canonical role name or operating RACI | `OM-001` §6.1, `RAC-001` | `OM-001` names roles; `RAC-001` assigns work |
+| Canonical record name, required fields, or record conversion | `GEN-001`, `CAT-002`, `FLOW-001` | `CAT-002` for records; `FLOW-001` for routing |
+| Control objective, applicability, inheritance, or overlay | `CB-001`, then the cited subordinate standard | `CB-001` for the common baseline; the subordinate standard for parameter detail |
+| Risk scoring, tolerance, acceptance authority, or duration | `RMF-001`, then `PRC-RM-001` | `RMF-001` §9.7 is the canonical acceptance authority |
+| Exposure classification, treatment clock, or compensating-control evidence | `PRC-VM-001` | `PRC-VM-001` for exposure workflow and SLA; RMF-001 still governs acceptance authority |
+| Evidence quality or whether a control works | `AUD-001`, `CEF-001`, `PRC-AV-001` | CEF-001 owns effectiveness method; PRC-AV-001 owns adversarial testing |
+| Recurring issue, lesson, or program-level change | `PRC-LL-001`, `IMPREG-001` | Specific risks stay in the risk register; systemic improvements are tracked and verified in `IMPREG-001` |
+| Adoption scope or deferral | `START-HERE.md`, `IMP-005`, `cerg-document-tiers.yaml` | Adopt the MVC spine first; do not claim certification or compliance |
+
+When a proposed change crosses one of these authority boundaries, identify and update the source artifact and all affected consumers. Do not fix a local symptom by creating competing terminology, authority, or workflow.
 
 ## Validation
 

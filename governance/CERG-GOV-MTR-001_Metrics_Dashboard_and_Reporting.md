@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.35 |
+| **Version** | 1.36 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
@@ -109,6 +109,8 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
 | DT-001 | ATT&CK Detection Coverage | In-scope ATT&CK techniques with at least one authored, tested, `In Production` detection in the derived `Operating` condition ÷ all in-scope ATT&CK techniques | Detection registry + SIEM source-health record | Nightly | ≥ 70% / n/a / < 70% | CISO Dashboard, COG Brief |
+| DT-002 | Purple Validation Pass Rate | Production detections due for quarterly purple-team validation with a `Pass` result ÷ all production detections due for quarterly purple-team validation. `Pass-with-Latency`, `Pass-with-Tuning-Needed`, `Fail`, and `Fail-Suppressed` do not count as `Pass`. | Adversarial Validation Record + detection registry | Quarterly | ≥ 90% / ≥ 75% and < 90% / < 75% | COG Brief |
+| DT-003 | Mandatory Log Source Onboarding | Onboarded mandatory source requirements across in-scope environments ÷ all mandatory Section 3 source requirements applicable to those environments. An approved exception remains an unmet requirement and is identified in the report. | SIEM Onboarding Record + SIEM source inventory | Monthly | ≥ 98% / ≥ 90% and < 98% / < 90% | CISO Dashboard |
 
 ### 3.3 Engineering / Configuration Metrics (Owner: Cyber Engineering)
 
@@ -245,7 +247,8 @@ The data source map tells the reporting team where each metric's underlying data
 |---|---|---|---|---|
 | RM-001 – RM-006 | Risk register tool | Risk Register Owner | Nightly extract → metrics platform | Stale ETL: hold the day's CISO Dashboard, raise an Amber data-quality flag. |
 | EM-001 – EM-010 | Exposure pipeline (scanner, CSPM, SSPM, SCA, KEV, reachability context) | Exposure Management Lead | Hourly API / pipeline export → metrics platform | Source outage: fall back to last-known-good snapshot with timestamp banner. |
-| DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Required source unhealthy: dependent detections are excluded from coverage and DT-001 is shown as Red. |
+| DT-001, DT-003 | Detection registry + SIEM source inventory | Cyber Risk - Detection | Nightly source inventory + detection registry export | Required source unhealthy: dependent detections are excluded from coverage and DT-001 is shown as Red. |
+| DT-002 | Adversarial Validation Record | Adversarial Testing Lead | Quarterly validation-results export → metrics platform | Missing validation result for a detection due in the quarter counts as not passed; source outage raises an Amber data-quality flag. |
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
 | ID-001 – ID-010 | IdP / IGA / PAM / NHI registry / secrets manager / evidence library / TPRM | Identity Engineer + IAM Operator + Evidence Librarian | Nightly export for operational metrics; monthly evidence-library reconciliation | Source change: re-baseline before publishing; missing package evidence reports Red until reconciled. |
 | TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
@@ -452,7 +455,7 @@ The guardrails baked into the metric definitions and reporting views above:
 |---|---|---|---|
 | RM-001 through RM-006 (Risk) | Risk Register Owner | Risk posture review: weekly for High/Critical; monthly for full register | CISO, Risk Pillar Leader |
 | EM-001 through EM-010 (Exposure Management) | Exposure Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
-| DT-001 through DT-003 (Detection) | Detection Engineer | Monthly | Risk Pillar Leader, CISO |
+| DT-001 through DT-003 (Detection) | Detection Engineer | Monthly for DT-001 and DT-003; quarterly for DT-002 | Risk Pillar Leader, CISO |
 | CM-001 through CM-005 (Engineering) | Engineering Pillar Leader | Daily for CM-001, CM-004; monthly for others; quarterly for CM-003, CM-005 | CISO, Engineering Pillar Leader |
 | ID-001 through ID-010 (Identity) | Identity Engineer + IAM Operator | Daily for ID-001; weekly for ID-003 and ID-006; monthly for ID-002, ID-004, ID-005, ID-007, ID-008; quarterly for ID-009 and ID-010 | CISO, Identity Engineer, IAM Operator |
 | TP-001 through TP-004 (Third-Party) | Vendor Risk Analyst | Monthly; quarterly for TP-004 | Risk Pillar Leader, CISO |
@@ -518,8 +521,8 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.35 |
+| **Version** | 1.36 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. · 1.36 - Restored DT-002 purple-validation and DT-003 mandatory-log-source-onboarding definitions with explicit scoped denominators. |
 

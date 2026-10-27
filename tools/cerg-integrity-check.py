@@ -84,16 +84,20 @@ def find_cross_refs(content):
 
 
 def load_catalog():
-    """Parse CAT-001 to get the authoritative catalog entries."""
+    """Parse CAT-001 §5 entries and §7 reserved identifiers separately."""
     cat_path = os.path.join(BASE, 'governance', 'CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md')
     if not os.path.exists(cat_path):
-        return {}
-    
+        return {}, set()
+
     with open(cat_path) as f:
         cat_content = f.read()
-    
+
+    section_five = re.search(r'^## 5\. .*?(?=^## 6\. )', cat_content, re.MULTILINE | re.DOTALL)
+    if not section_five:
+        return {}, set()
+
     catalog = {}
-    for line in cat_content.split('\n'):
+    for line in section_five.group(0).split('\n'):
         if not line.startswith('|'):
             continue
         m_id = DOC_ID_RE.search(line)
@@ -108,14 +112,17 @@ def load_catalog():
             'owner': cells[2].strip(),
             'status': re.sub(r'\s*\(.*?\)\s*$', '', cells[3]).strip()
         }
-    return catalog
+
+    section_seven = re.search(r'^## 7\. .*?(?=^## 8\. )', cat_content, re.MULTILINE | re.DOTALL)
+    reserved_ids = set(DOC_ID_RE.findall(section_seven.group(0))) if section_seven else set()
+    return catalog, reserved_ids
 
 
 # ── Checks ───────────────────────────────────────────────
 
 def check_all():
     files = find_md_files()
-    catalog = load_catalog()
+    catalog, reserved_ids = load_catalog()
     
     issues = defaultdict(list)  # severity -> list of messages
     known_files = {}
@@ -207,8 +214,8 @@ def check_all():
         # P2: Cross-reference to non-catalog IDs
         refs = find_cross_refs(content)
         for ref in refs:
-            if ref != doc_id and ref not in catalog:
-                issues['P2'].append(f"[unknown_id_reference] {relpath} ({doc_id}): references {ref} which is not in the catalog")
+            if ref != doc_id and ref not in catalog and ref not in reserved_ids:
+                issues['P2'].append(f"[unknown_id_reference] {relpath} ({doc_id}): references {ref} which is not in the catalog or reserved-ID register")
     
     # P0: Check catalog entries that have no corresponding file
     for cat_id, cat_data in catalog.items():

@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | NERC-CIP Compliance Manager |
@@ -27,10 +27,10 @@
 3. [CIP Version Strategy](#3-cip-version-strategy)
 4. [BES Cyber System Categorization Procedure](#4-bes-cyber-system-categorization-procedure)
 5. [ESP / EAP Topology Documentation](#5-esp--eap-topology-documentation)
-6. [NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)](#6-nerc-cip-evidence-library-procedure-cerg-gov-cip-001)
+6. [NERC-CIP Evidence Library Procedure](#6-nerc-cip-evidence-library-procedure)
 7. [OT Exposure Management Procedure (`CERG-PRC-VM-001`)](#7-ot-exposure-management-procedure-cerg-prc-vm-001)
 8. [BES Cyber System Access Management Overlay](#8-bes-cyber-system-access-management-overlay)
-9. [CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)](#9-cip-deviation-and-mitigation-plan-template-cerg-tmpl-cip-001)
+9. [CIP Deviation and Mitigation Plan Template](#9-cip-deviation-and-mitigation-plan-template)
 10. [IT/OT Convergence Security Architecture Guideline](#10-itot-convergence-security-architecture-guideline)
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
@@ -103,9 +103,9 @@ CIP-005 requires Electronic Security Perimeters (ESPs) and Electronic Access Poi
 
 ---
 
-## 6. NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)
+## 6. NERC-CIP Evidence Library Procedure
 
-The Evidence Library is the single, authoritative repository of CIP compliance evidence, what the auditor opens first.
+The Evidence Library is the single, authoritative repository of CIP compliance evidence, what the auditor opens first. This embedded procedure is the V1 authority; `CERG-GOV-CIP-001` remains reserved and is not planned as a standalone artifact.
 
 ### 6.1 Library Structure
 
@@ -190,9 +190,9 @@ CIP-004 R4 / R5 obligations are operationalized as an embedded BES overlay on [`
 
 ---
 
-## 9. CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)
+## 9. CIP Deviation and Mitigation Plan Template
 
-When a CIP requirement cannot be met as written (or cannot be met for a defined window), CERG documents a deviation and mitigation plan. This is in addition to the risk register entry in [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+When a CIP requirement cannot be met as written (or cannot be met for a defined window), CERG documents a deviation and mitigation plan. This embedded template is the V1 authority; `CERG-TMPL-CIP-001` remains reserved and is not planned as a standalone artifact. This is in addition to the risk register entry in [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ```
 CIP DEVIATION AND MITIGATION PLAN - DEV-CIP-YYYY-NNNN
@@ -241,7 +241,7 @@ G. RECORD
 
 ## 10. IT/OT Convergence Security Architecture Guideline
 
-This embedded convergence guideline informs architecture decisions where IT systems touch OT systems. It is the V1 authoritative location for the planned standalone `CERG-GL-OT-001` guideline until that reserved artifact is promoted in a future catalog amendment. It is referenced by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
+This embedded convergence guideline informs architecture decisions where IT systems touch OT systems. It is the V1 authority; `CERG-GL-OT-001` remains reserved and is not planned as a standalone artifact. It is referenced by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
 
 ### 10.1 Foundational Patterns
 
@@ -504,8 +504,8 @@ When CIP-015 becomes applicable, Governance:
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on CIP version or filing change |
-| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. 1.22 - Expanded CIP-015 §13 from preliminary section to full INSM Implementation Annex with sensor placement, data collection, alerting rules, evidence package, gap analysis, and integration map. |
+| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. 1.22 - Expanded CIP-015 §13 from preliminary section to full INSM Implementation Annex with sensor placement, data collection, alerting rules, evidence package, gap analysis, and integration map. 1.23 - Clarified that the embedded Evidence Library Procedure, CIP Deviation and Mitigation Plan Template, and IT/OT Convergence Guideline are the V1 authorities; their reserved identifiers do not represent planned standalone artifacts. |
 

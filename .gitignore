@@ -12,7 +12,8 @@ desktop.ini
 *.swp
 *~
 
-# Python caches (in case any scripts run from this dir)
+# Local Python environment and caches
+.venv/
 __pycache__/
 *.pyc
 

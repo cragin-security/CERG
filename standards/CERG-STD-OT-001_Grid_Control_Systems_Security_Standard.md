@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
@@ -316,16 +316,17 @@ Every OT deferral must state why non-patch treatment options (segmentation, path
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / CIP Standard Revision |
-| **Change Log** | 1.22 - Added OT/BES patch deferral and exposure-treatment routing aligned to PRC-VM §7.4. 1.0 - Initial publication. BES and non-BES OT environments. |
+| **Change Log** | 1.23 - Clarified that the NERC-CIP Evidence Library Procedure is embedded and authoritative in PLN-CIP-001; its reserved identifier is not a planned standalone artifact. 1.22 - Added OT/BES patch deferral and exposure-treatment routing aligned to PRC-VM §7.4. 1.0 - Initial publication. BES and non-BES OT environments. |
 
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.23 | 2026-09-25 | Governance Pillar Leader | Clarified the authoritative embedded location of the NERC-CIP Evidence Library Procedure and removed the implication that its reserved identifier is a planned standalone artifact. |
 | 1.22 | 2026-06-18 | Governance Pillar Leader | Added explicit OT/BES deferral routes for non-BES maintenance windows, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 1.0 DRAFT | 2025 | CERG Governance | Initial release - BES and non-BES OT environments |
 
@@ -350,4 +351,4 @@ References below use the canonical IDs in [`CERG-GOV-CAT-001`](../governance/CER
 | Cybersecurity Policy | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of all CERG artifacts referenced here |
 | Unified Control Baseline | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlay matrix, evidence mapping (BES overlay) |
-| NERC-CIP Operational Package | [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Exposure Management Procedure, BES access overlay, deviation template, CIP-013 plan, CIP-009 recovery package, and CIP-015 tracking |
+| NERC-CIP Operational Package | [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the authoritative embedded NERC-CIP Evidence Library Procedure, OT Exposure Management Procedure, BES access overlay, deviation template, CIP-013 plan, CIP-009 recovery package, and CIP-015 tracking |

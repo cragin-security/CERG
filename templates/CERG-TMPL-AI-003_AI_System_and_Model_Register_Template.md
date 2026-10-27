@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-AI-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Application Security Engineer |
@@ -183,7 +183,7 @@ A register entry must be reviewed when any of the following occur:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-AI-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -191,7 +191,7 @@ A register entry must be reviewed when any of the following occur:
 | **Approved By** | CISO |
 | **Parent Document** | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) - Artificial Intelligence Security Standard |
 | **Review Cycle** | Quarterly; and on material change to model, data source, agency, integration, or deployment |
-| **Next Scheduled Review** | 2026-09-17 |
+| **Next Scheduled Review** | 2026-12-17 |
 | **Frameworks** | NIST AI RMF 100-1 · NIST 800-53r5 CM / RA / SA / SI · OWASP Top 10 for LLM Applications · ISO/IEC 42001 |
 | **Regulations** | Cross-cutting; CMMC L2 / 800-171r3, SOX ITGC, privacy, and contractual obligations where applicable |
 | **Environments** | Built AI systems, embedded AI systems, AI agents, model-serving platforms, RAG systems, and AI-enabled integrations in CERG-managed environments |
@@ -200,6 +200,7 @@ A register entry must be reviewed when any of the following occur:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-09-25 | Application Security Engineer | Quarterly review completed. Confirmed parent and supporting-document alignment, ownership, model and data-source boundaries, agency controls, monitoring, and evidence linkages; no substantive template changes required. |
 | 1.0 | 2026-06-17 | Cyber Engineering | Initial release. Establishes the AI system and model register template for built and embedded AI systems, including model provenance, data sources, agency boundary, integrations, monitoring, and lifecycle review. |
 
 ### Review Triggers

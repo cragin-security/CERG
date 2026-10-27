@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.46 |
+| **Version** | 1.48 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -439,7 +439,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-CHG-001`](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Approved |
 | [`CERG-PRC-LL-001`](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Lessons Learned and Program Improvement Procedure | Governance Pillar Leader | Approved |
 
-> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved for a planned standalone Access Review Runbook that has not been authored; the work was folded into the parent standard [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) §9. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot is reserved for future use.
+> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved before the access-review work was incorporated into [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) §5. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot remains reserved; no standalone artifact is planned.
 
 ### 5.5 Plans / Operational Packages
 
@@ -578,37 +578,39 @@ An artifact moves from this section to Section 5 when it is authored and reaches
 
 ### 7.1 Status of the V1.x Build
 
-The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), the Group E standalone templates, and the F2-F4 governance instruments (`CAL`, `STY`, `TRC`) are authored and registered in Section 5. The artifacts below remain planned.
+The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), the Group E standalone templates, and the F2-F4 governance instruments (`CAL`, `STY`, `TRC`) are authored and registered in Section 5. No standalone artifacts are currently planned; Section 7.6 records reserved identifiers whose V1 content remains authoritative in an existing artifact.
 
 ### 7.2 Planned Procedures
 
-
-| [`CERG-PRC-AC-001`]() | Access Review Runbook (reserved) | Identity Engineer | Planned, V1.x |
-
-No in-scope Group C procedures remain planned in V1.x. Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope and are not reserved here.
+No standalone procedures are planned. Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope and are not reserved here.
 
 ### 7.3 Planned Plans and Operational Packages
 
-No Group D operational packages remain planned. Business Continuity and Disaster Recovery, ISO/IEC 27001, and Privacy and Data Protection packages are authored and registered in Section 5.5.
+No Group D operational packages are planned. Business Continuity and Disaster Recovery, ISO/IEC 27001, and Privacy and Data Protection packages are authored and registered in Section 5.5.
 
 ### 7.4 Planned Templates
 
-No Group E standalone templates remain planned. The System Security Plan, POA&M, security exception request, architecture and project intake form, vendor security questionnaire, risk acceptance memo, control evidence worksheet, and Board / CISO reporting deck templates are authored and registered in Section 5.6.
+No Group E standalone templates are planned. The System Security Plan, POA&M, security exception request, architecture and project intake form, vendor security questionnaire, risk acceptance memo, control evidence worksheet, and Board / CISO reporting deck templates are authored and registered in Section 5.6.
 
 The incident report and post-incident review template remains embedded in the incident response plan and playbook set unless promoted by a future amendment.
 
 ### 7.5 Planned Governance Instruments
 
+No standalone governance instruments are planned. The Annual Security and Governance Calendar, Document Authoring and Style Guide, and Control-to-Procedure Traceability Matrix are authored and registered in Section 5.2.
 
-| [`CERG-GOV-CIP-001`]() | NERC-CIP Governance Instrument (reserved) | OT Security Engineer | Planned, V1.x |
-| [`CERG-GL-OT-001`]() | OT Security Guideline (reserved) | OT Security Engineer | Planned, V1.x |
-| [`CERG-TMPL-CIP-001`]() | NERC-CIP Template (reserved) | NERC-CIP Compliance Manager | Planned, V1.x |
+### 7.6 Reserved Identifiers and Embedded V1 Content
 
-No F2-F4 governance instruments remain planned. The Annual Security and Governance Calendar, Document Authoring and Style Guide, and Control-to-Procedure Traceability Matrix are authored and registered in Section 5.2.
+| **Reserved ID** | **Former Standalone Concept** | **Authoritative V1 Location** | **Disposition** |
+|---|---|---|---|
+| `CERG-PRC-AC-001` | Access Review Runbook | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) §5 | Reserved; no standalone artifact planned. |
+| `CERG-GOV-CIP-001` | NERC-CIP Evidence Library Procedure | [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) §6 | Reserved; no standalone artifact planned. |
+| `CERG-GL-OT-001` | IT/OT Convergence Security Architecture Guideline | [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) §10 | Reserved; no standalone artifact planned. |
+| `CERG-TMPL-CIP-001` | CIP Deviation and Mitigation Plan Template | [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) §9 | Reserved; no standalone artifact planned. |
 
 > **The Roadmap Is a Commitment, Not a Wishlist**
 >
-> An ID in this section is a reserved identifier with a named owner. It is not a vague intention. When an artifact is listed here, a citing document is permitted to forward-reference it, which means readers will encounter the reference before the artifact exists. That is only safe if this section is honest: every entry has a real owner and a real target, and an entry that is no longer intended is removed by amendment, not left to mislead.
+> A reserved ID prevents accidental reuse; it does not authorize a forward reference or imply that a standalone artifact will be produced. A planned artifact has a named owner and target in Sections 7.2–7.5 and may be forward-referenced only under the rules in Section 6. If an embedded item is later extracted, this catalog must be amended to register the new source in Section 5 and update its consumers.
+
 
 ---
 
@@ -617,7 +619,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.46 |
+| **Version** | 1.48 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -625,7 +627,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
-| **Next Scheduled Review** | 2026-09-17 |
+| **Next Scheduled Review** | 2026-12-17 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
@@ -634,6 +636,8 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.48 | 2026-09-25 | Governance Pillar Leader | Reclassified `PRC-AC-001`, `GOV-CIP-001`, `GL-OT-001`, and `TMPL-CIP-001` as reserved identifiers with authoritative embedded V1 content. Removed the misleading standalone-artifact roadmap entries and clarified the forward-reference boundary. |
+| 1.47 | 2026-09-25 | Governance Pillar Leader | Quarterly review completed. Confirmed catalog source authority, lifecycle-status alignment, inventory structure, reserved-ID treatment, and roadmap separation; no catalog-structure amendment required. |
 | 1.46 | 2026-06-24 | Governance Pillar Leader | Registered domain code `ANTI` and `CERG-GOV-ANTI-001` Anti-Pattern Catalog in §5.2 as the cross-domain reference for adoption, workforce, capability, evidence, and compliance failure modes. |
 | 1.45 | 2026-06-20 | Governance Pillar Leader | Registered `CERG-TMPL-SCP-001` System Control Profile Template in §5.6 as the structured per-system control implementation, evidence, validation, and review record. |
 | 1.44 | 2026-06-18 | Governance Pillar Leader | Registered domain code `GEN` (cross-cutting reference material) in §2.1. Registered `CERG-GOV-GEN-001` (CERG Glossary) in §5.2 as the canonical reference for CERG terms, record types, conversion rules, and role names. Glossary content extracted from FLOW-001 §2 (Operating Principles, Record Type Definitions) and from CB-001, RMF-001, OM-001, and roles/ cross-references. |
