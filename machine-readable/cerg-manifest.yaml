@@ -8,7 +8,7 @@
   title: Architecture Decision Records
   document_type: governance_instrument
   domain: ADR
-  version: 1.0.0
+  version: 1.1.0
   status: Draft
   classification: Public
   publication_profile: public
@@ -17,7 +17,7 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   source_file: CERG-GOV-ADR-001_Architecture_Decision_Records.md
-  source_hash: f190e60b44e9113b0b2c66cf5e8b5c1d8bbd7b0eb0d9813633ac53bbd4b2972f
+  source_hash: ed319826e7d6ad29a6991a77ea9ee835152b69296bfcf0b3aa6ee733f2b6f72d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   llm_include: false
   llm_priority: medium
