@@ -284,8 +284,11 @@ These may appear in the broader governance program, but their accountable owners
 5. **Establish the control feasibility review** and exception workflow before enforcing strict SLAs.
 6. **Measure data quality and unresolved risk**, not report volume.
 7. **Expand by tier and maturity**, using lessons from the pilot and approved implementation patterns.
-8. **Adopt graduated data-quality targets.** Year 1: CMDB owner and support-group populated for 80% of Tier 1 assets; minimum-assurance-evidence fields populated for 90% of submissions. Year 2: 95% Tier 1 CMDB completeness; automated reconciliation across sources; submission completeness above 95%. Missed targets trigger a data-quality improvement plan, not a compliance violation.
+8. **Adopt graduated data-quality expectations, stated as capability rather than percentage.** Sequence the work: Tier 1 asset ownership and support-group completeness in the authoritative inventory first, then minimum-assurance-evidence completeness on submissions, then automated reconciliation across sources. Progress is judged on whether the next capability is actually in place, not on a percentage threshold. A shortfall triggers a data-quality improvement plan with a named owner, not a compliance violation.
 9. **Publish an annual data-quality maturity review.** Each service domain reports its top three data-quality gaps, root cause (tooling, process, or staffing), and the funded improvement plan. This prevents the operating model from becoming a reporting burden on top of poor-quality source data.
+
+Nothing in this model is measured against a percentage target. Numbers appear only where they define a commitment: a notification clock, a remediation deadline, or a reconciliation tolerance that changes the response. A percentage target that can be met without improving the outcome becomes a ceiling.
+
 ---
 
 ## Proposal Status
