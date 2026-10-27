@@ -383,7 +383,7 @@ Low (CVSS 0.1-3.9) | Next planned maintenance cycle | Tracked; no formal accepta
 | **Req'd fields** | Named frontline owner who attests to completeness and accuracy of submission; source system and extraction date/time; record counts for each report; known limitations (e.g., "3 field sites not reachable this cycle"); reconciliation results from Row 2; material changes since prior period; corrective actions for data quality gaps |
 | **Rec'd fields** | Data retention policy reference; attestation method (manual sign-off, automated dashboard attest, audit log); completeness checklist (all rows submitted, all fields populated) |
 | **Delivery** | P |
-| **Validation** | On-time submission rate >= 95%; record count variance from prior period explainable; no crown-jewel asset unaccounted for across all reports; gaps from prior month have corrective action owners and deadlines |
+| **Validation** | On-time submission performance reported with the cause of any late submission; record count variance from the prior period explained and reconciled; no crown-jewel asset unaccounted for across all reports; gaps from prior month have corrective action owners and deadlines |
 | **Effort** | L |
 | **Sources** | All source systems (CMDB, vulnerability, endpoint, firewall, etc.), ticketing system, attestation log |
 
@@ -405,7 +405,7 @@ Low (CVSS 0.1-3.9) | Next planned maintenance cycle | Tracked; no formal accepta
 | **Req'd fields** | Device type (USB drive, external HDD, laptop, tablet); serial number or identifier; assigned user or custodian; encryption status (enabled, none, unknown); data classification permitted; last scan date (malware scan); last inventory verification date; exceptions (policy waivers with expiry); loss or theft reporting status |
 | **Rec'd fields** | Manufacturer; model; capacity; firmware version; purchase date; decommission date; associated crown-jewel data at rest flag; removable-media policy version |
 | **Delivery** | P |
-| **Validation** | All removable media inventoried; zero unencrypted devices with crown-jewel data; exception count trending down; loss/theft incidents reported per policy; inventory coverage >= 95% of issued devices |
+| **Validation** | All removable media inventoried; zero unencrypted devices with crown-jewel data; exception count trending down; loss/theft incidents reported per policy; removable-media inventory reconciled to issued-device records |
 | **Effort** | L |
 | **Sources** | Endpoint management (Tanium, SCCM, JAMF, Intune), DLP tool, manual inventory for OT air-gapped media, IT procurement records |
 
