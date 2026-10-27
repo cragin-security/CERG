@@ -2,12 +2,12 @@
   "cerg_version": "1.49",
   "generated": "2026-10-27",
   "source": "local markdown corpus",
-  "total_documents": 160,
-  "total_tokens_estimate": 1071308,
+  "total_documents": 161,
+  "total_tokens_estimate": 1074364,
   "by_type": {
     "readme": 16,
     "governance-instrument": 44,
-    "meta": 13,
+    "meta": 14,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 29
+      "count": 30
     }
   },
   "prefixes": {
@@ -3252,6 +3252,26 @@
       "summary": "CERG META document: threat-intel-validation-v1"
     },
     {
+      "id": "cerg-consumption-register",
+      "prefix": "META",
+      "title": "cerg-consumption-register",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "proposals/cerg-consumption-register.md",
+      "lines": [
+        49000,
+        49149
+      ],
+      "lines_count": 149,
+      "chars": 10697,
+      "tokens": 3056,
+      "summary": "CERG META document: cerg-consumption-register"
+    },
+    {
       "id": "frontline-security-assurance-operating-model",
       "prefix": "META",
       "title": "frontline-security-assurance-operating-model",
@@ -3263,8 +3283,8 @@
       "owner": null,
       "path": "proposals/frontline-security-assurance-operating-model.md",
       "lines": [
-        49000,
-        49355
+        49151,
+        49506
       ],
       "lines_count": 355,
       "chars": 25629,
@@ -3283,8 +3303,8 @@
       "owner": null,
       "path": "proposals/frontline-security-data-and-assurance-contract.md",
       "lines": [
-        49357,
-        49918
+        49508,
+        50069
       ],
       "lines_count": 561,
       "chars": 37778,
@@ -3303,8 +3323,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        49920,
-        49993
+        50071,
+        50144
       ],
       "lines_count": 73,
       "chars": 4153,
