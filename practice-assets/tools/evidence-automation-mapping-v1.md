@@ -11,7 +11,7 @@
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
-| **Frameworks** | CERG 100-Core · NIST 800-53r5 · CIS Controls v8 |
+| **Frameworks** | CERG Practitioner Baseline · NIST 800-53r5 · CIS Controls v8 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | All CERG in-scope environments |
 
@@ -19,7 +19,7 @@
 
 ## Purpose
 
-Every control in the [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) requires evidence. This document maps each control to the tool that can automatically collect that evidence, what the evidence artifact looks like, and how it feeds into the GRC platform.
+Every control in the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) requires evidence. This document maps each control to the tool that can automatically collect that evidence, what the evidence artifact looks like, and how it feeds into the GRC platform.
 
 Three evidence methods:
 
@@ -235,7 +235,7 @@ For MSP onboarding a new client, configure these evidence pipelines in order:
 | 9 | **Trivy / Semgrep** | SA-002, SR-001 |
 | — | **ServiceNow GRC / Vanta** | CA-005, PM-003, PM-004, RA-003, RA-004, CA-003, SR-002 |
 
-**Manual-only controls (no tool pipeline):** 31 controls requiring human collection (AT-001 through AC-007 in the manual table above). Schedule these in your PSA with quarterly reminders.
+**Manual-only controls (no tool pipeline):** 33 controls requiring human collection, listed in the manual table above. Schedule these in your PSA with quarterly reminders.
 
 ---
 
@@ -243,10 +243,10 @@ For MSP onboarding a new client, configure these evidence pipelines in order:
 
 | Level | Description | Controls Achieved | Recommended For |
 |-------|-------------|-------------------|-----------------|
-| **Basic** | Manual collection only. MSP generates reports on request. | ~31 manual controls | SMB clients < 25 employees |
-| **Intermediate** | All tool-generated evidence collected via API. Manual controls scheduled. | ~87 controls, ~56 auto-evidenced | Mid-market 50-500 employees, CMMC L2 prep |
-| **Advanced** | Real-time evidence pipeline into GRC. Continuous monitoring dashboards. Exception alerts on evidence lapse. | 87 controls, continuous evidence refresh | Enterprise, SOX/CMMC L2 mature |
-| **Adaptive** | Evidence feeds automated compliance scoring. Control effectiveness measured programmatically. | 87 controls + effectiveness metrics | Multi-client MSP with ServiceNow GRC |
+| **Basic** | Manual collection only. MSP generates reports on request. | ~33 manual controls | SMB clients < 25 employees |
+| **Intermediate** | All tool-generated evidence collected via API. Manual controls scheduled. | 86 controls, 53 with a tool pipeline | Mid-market 50-500 employees, CMMC L2 prep |
+| **Advanced** | Real-time evidence pipeline into GRC. Continuous monitoring dashboards. Exception alerts on evidence lapse. | 86 controls, continuous evidence refresh | Enterprise, SOX/CMMC L2 mature |
+| **Adaptive** | Evidence feeds automated compliance scoring. Control effectiveness measured programmatically. | 86 controls + effectiveness metrics | Multi-client MSP with ServiceNow GRC |
 
 ---
 
@@ -256,17 +256,17 @@ For MSP onboarding a new client, configure these evidence pipelines in order:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2026-07-20 | cragin-security | Initial release: 87 controls mapped to evidence tools, collection methods, GRC integration, and manual evidence procedures. |
+| 1.0.0 | 2026-07-20 | cragin-security | Initial release: 86 controls mapped to evidence tools, collection methods, GRC integration, and manual evidence procedures. |
 
 ### Review Triggers
 
-- CB-002 100-Core Control Baseline updates (new/modified controls, tool binding changes)
+- CB-002 Practitioner Control Baseline updates (new/modified controls, tool binding changes)
 - Tool stack changes (vendor acquisition, EOL, new integration capabilities)
 - Regulatory evidence requirement changes (CMMC, SOX, PCI)
 
 ### Related Documents
 
-- [CERG 100-Core Control Baseline](../../governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md) — the control set this mapping covers
+- [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the control set this mapping covers
 - [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
 - [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation
