@@ -2,12 +2,12 @@
   "cerg_version": "1.49",
   "generated": "2026-10-27",
   "source": "local markdown corpus",
-  "total_documents": 158,
-  "total_tokens_estimate": 1053191,
+  "total_documents": 160,
+  "total_tokens_estimate": 1069791,
   "by_type": {
     "readme": 16,
     "governance-instrument": 44,
-    "meta": 11,
+    "meta": 13,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 27
+      "count": 29
     }
   },
   "prefixes": {
@@ -3252,6 +3252,46 @@
       "summary": "CERG META document: threat-intel-validation-v1"
     },
     {
+      "id": "frontline-security-assurance-operating-model",
+      "prefix": "META",
+      "title": "frontline-security-assurance-operating-model",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "proposals/frontline-security-assurance-operating-model.md",
+      "lines": [
+        49000,
+        49300
+      ],
+      "lines_count": 300,
+      "chars": 20404,
+      "tokens": 5830,
+      "summary": "CERG META document: frontline-security-assurance-operating-model"
+    },
+    {
+      "id": "frontline-security-data-and-assurance-contract",
+      "prefix": "META",
+      "title": "frontline-security-data-and-assurance-contract",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "proposals/frontline-security-data-and-assurance-contract.md",
+      "lines": [
+        49302,
+        49863
+      ],
+      "lines_count": 561,
+      "chars": 37696,
+      "tokens": 10770,
+      "summary": "CERG META document: frontline-security-data-and-assurance-contract"
+    },
+    {
       "id": "README-tools-policy-as-code",
       "prefix": "META",
       "title": "README",
@@ -3263,8 +3303,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        49000,
-        49073
+        49865,
+        49938
       ],
       "lines_count": 73,
       "chars": 4153,
