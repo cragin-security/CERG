@@ -17,7 +17,7 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   source_file: CERG-GOV-ADR-001_Architecture_Decision_Records.md
-  source_hash: 97439f52732000eee4072f7248a14a6af938af882d52b32c7139735dd21e1629
+  source_hash: f190e60b44e9113b0b2c66cf5e8b5c1d8bbd7b0eb0d9813633ac53bbd4b2972f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   llm_include: false
   llm_priority: medium
@@ -108,7 +108,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.48
+  version: 1.49
   status: Approved
   classification: Public
   publication_profile: public
@@ -117,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 7946d786654098a0b2a0c31db2b46912b2522ec28918967c988cf92584d0dd8b
+  source_hash: d1130f7973ef9a7622c1bce6e61787c995692604a833e57042a0c6ffffcf00b8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -165,25 +165,25 @@
   pillar: engineering
   summary: Unified Control Baseline
 - document_id: CERG-GOV-CB-002
-  title: 100-Core Control Baseline
+  title: Practitioner Control Baseline
   document_type: governance_instrument
   domain: CB
-  version: 1.0.0
+  version: 1.1.1
   status: Draft
   classification: Public
   publication_profile: public
   owner_role: Consulting Practice Lead
   approval_authority: Consulting Practice Lead
   parent_artifact: CERG-POL-001
-  source_path: governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md
-  source_file: CERG-GOV-CB-002_100-Core_Control_Baseline.md
-  source_hash: 88614bef4908efe2a443613a60964b37c65dcc3e8a468a26f94f28964beda7cc
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-002_100-Core_Control_Baseline.md
+  source_path: governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
+  source_file: CERG-GOV-CB-002_Practitioner_Control_Baseline.md
+  source_hash: f0a405c53df0a7c897c1d3999f2b69dcf5635e2b5818a85d84b0d8e36ca38aff
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
   llm_include: false
   llm_priority: medium
   normative_weight: supporting
   pillar: engineering
-  summary: 100-Core Control Baseline
+  summary: Practitioner Control Baseline
 - document_id: CERG-GOV-CEF-001
   title: Control Effectiveness Framework
   document_type: governance_instrument
