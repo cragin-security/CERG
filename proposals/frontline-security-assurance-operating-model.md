@@ -90,9 +90,10 @@ formal regulatory interpretation.
 
 | Group | Primary responsibilities |
 |---|---|
+| **Internal first-line service owner** | Accountable for the operated security service — scope, funding, performance, remediation execution, and operational records. Remains accountable when a contracted provider performs the work: the owner is accountable, the provider is responsible. |
 | **Operational/grid teams** | Own system availability and safe operation; approve maintenance windows and operational changes; identify safety, reliability, and vendor constraints. |
-| **Frontline security/control operators** | Execute controls; maintain operational records; remediate within assigned authority; provide complete, timely evidence; escalate material gaps. |
-| **Cybersecurity tooling and architecture** | Provide approved reference architectures, supported implementation patterns, integrations, platform capacity, tool health, and engineering support. |
+| **First-line security/control operators** | Execute controls and operate security services — internal staff, a managed security service provider, or a hybrid of both; maintain operational records; remediate within assigned authority; provide complete, timely evidence; escalate material gaps. |
+| **Cybersecurity tooling and architecture** | Provide approved reference architectures, supported implementation patterns, integrations, and platform capacity. Define the telemetry each control requires and validate whether it is complete. Does not administer production security tooling or restore failed connectors — that is the operator's work. |
 | **Second-line cybersecurity** | Define outcomes and minimum assurance evidence; validate completeness and effectiveness; perform independent challenge; aggregate trends; facilitate risk decisions; escalate unresolved issues. |
 | **Compliance/legal** | Maintain approved regulatory interpretation, evidence expectations, reporting obligations, and retention requirements. |
 | **Accountable business/risk owner** | Decides whether to fund remediation, accept time-bound residual risk, or select among feasible risk-treatment options. |
@@ -100,6 +101,10 @@ formal regulatory interpretation.
 ### Decision rule
 
 Second line may identify that a control outcome is not met and may challenge the sufficiency of compensating controls. The accountable business/risk owner makes the residual-risk decision. Architecture and operations jointly determine whether a proposed technical pattern is safe and supportable.
+
+A contracted provider changes who performs the work, not who is accountable. Where a managed security service provider or outsourced operator runs a service, the internal first-line service owner remains accountable for scope, performance, and treatment, and second line still validates independently. The assurance question is never whether the provider delivered its contract; it is whether the control outcome holds.
+
+Because a provider's scale exceeds what most adopting organisations can build internally, the interface in Section 3 is written to double as a statement-of-work exhibit: every field can be marked as a provider obligation or a client obligation, and ambiguity is settled at contract rather than after an incident.
 
 ### Dispute escalation path
 
@@ -125,6 +130,7 @@ Each request in the frontline contract should use this structure.
 | **Minimum assurance evidence** | Smallest set of fields and evidence second line requires to assess the outcome. | Foundational |
 | **Control owner** | Team accountable for performing the control. | Foundational |
 | **Exception path** | Required compensating controls, risk owner, approval, expiry, and review cadence. | Foundational |
+| **Independent observability and re-test rights** | Access second line needs to test the outcome rather than accept a report: raw telemetry read access, the right to sample or replay, and the population to be sampled. | Established |
 | **Cadence and event triggers** | Continuous feed, periodic review, and conditions requiring immediate escalation. | Established |
 | **Quality checks** | Completeness, freshness, reconciliation, and validation requirements. | Established |
 | **Indicative regulatory cross-reference** | A compliance-reviewed mapping; not a substitute for the approved regulatory interpretation. | Established |
@@ -133,7 +139,26 @@ Each request in the frontline contract should use this structure.
 | **Platform owner** | Team accountable for the enabling tool, service, connector, or reference architecture. | Target |
 | **Data owner / authoritative source** | Owner and source for each required data element. | Target |
 
-Use **“minimum assurance evidence”** rather than “required fields” where possible. The purpose is assurance of the control outcome, not creation of a reporting exercise.
+Use **“minimum assurance evidence”** rather than “required fields” where possible.
+
+### Mapping to the second-line boundary RFC §5
+
+The boundary RFC lists the fields a first-line service interface must capture. The table above is the request-level form of the same instrument. Correspondence:
+
+| Boundary RFC §5 field | Field in this template |
+|---|---|
+| Internal first-line service owner | Control owner |
+| Operating party and service model | Control owner (internal, contracted, or hybrid) |
+| In-scope assets, environments, exclusions | Applicability |
+| Operational activities and boundaries | Control objective and Operational constraints |
+| Service targets and escalation path | Cadence and event triggers |
+| Required operational records and evidence location | Minimum assurance evidence and Quality checks |
+| Production-change and acceptance authority | Operational constraints |
+| CERG assurance cadence, method, sampling population | Quality checks and Independent observability and re-test rights |
+| Provider access, data ownership, exit, and kill-switch | Operational constraints |
+
+Three fields here have no counterpart in the RFC list — minimum assurance evidence, quality checks, and the indicative regulatory cross-reference. They are assurance-specific additions, not alternatives to the RFC's fields.
+ The purpose is assurance of the control outcome, not creation of a reporting exercise.
 
 ---
 
@@ -288,6 +313,31 @@ These may appear in the broader governance program, but their accountable owners
 9. **Publish an annual data-quality maturity review.** Each service domain reports its top three data-quality gaps, root cause (tooling, process, or staffing), and the funded improvement plan. This prevents the operating model from becoming a reporting burden on top of poor-quality source data.
 
 Nothing in this model is measured against a percentage target. Numbers appear only where they define a commitment: a notification clock, a remediation deadline, or a reconciliation tolerance that changes the response. A percentage target that can be met without improving the outcome becomes a ceiling.
+
+---
+
+## 11. Relationship to the second-line boundary RFC
+
+This model does not allocate the line of defence. That allocation belongs to the upstream discussion
+draft `proposals/second-line-service-boundary-rfc.md` on branch `proposal/second-line-service-boundaries`,
+which establishes that the line follows the purpose of the activity rather than where a practitioner
+reports, and that an MSSP, an internal IT department, a separate cyber division, or an operating division
+can all provide first-line operation.
+
+This document takes that allocation as given and answers the next question: what the interface between
+the lines must contain for the assurance side to hold a first-line operator accountable, internal or
+contracted. Where the two disagree, the boundary RFC governs who owns the work; this document governs
+what the interface must capture.
+
+It does not reproduce the RFC's RACI or its document-change plan, and it deliberately introduces no new
+CERG role, record type, or control. The one role named here that the framework does not already carry is
+the internal first-line service owner, because without a named accountable party a contracted operator has
+no counterpart to hold it to account.
+
+Second line remains technically relevant only while it can produce its own technical result rather than
+read someone else's. The observability and re-test field in Section 3 is what preserves that: sampled
+closed alerts, replayed detection content, verified source health, and confirmed closure. A monthly
+provider report is operating evidence; it never establishes effectiveness.
 
 ---
 
