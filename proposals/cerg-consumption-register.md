@@ -51,7 +51,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 | 3 | Detection registry: what is deployed, where | E | On change + nightly | Coverage vs requirement | `MTR-001` §4 DT-001 |
 | 4 | Alert dispositions, closed-case sample | T | Quarterly | Operating evidence of triage | `service_interface.assurance_rights[]` — sampling |
 | 5 | Escalation timeliness against agreed clocks | E | Monthly | Service performance | `PRC-TPRM-001` §9 |
-| 6 | Tuning backlog and change records | E | Per change | Retest trigger after validation | *unspecified* |
+| 6 | Tuning backlog and change records | E | Per change | Retest trigger after validation | `STD-LM-001` §8.3 — every tuning change records detection ID, reason, suppressed condition, expiry |
 
 ### Exposure and vulnerability operations
 
@@ -59,8 +59,8 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 |---|---|---|---|---|---|
 | 7 | Observation output with source provenance | E | Per cycle | Exposure classification | `PRC-VM-001` §4.1 |
 | 8 | Coverage statement: what was in scope, what was excluded, why | A | Per cycle | Non-blindness claim | *partially — §4.1 lists sources, not exclusions* |
-| 9 | Scanner/tool configuration as deployed | E | On change | Implementation evidence | *unspecified* |
-| 10 | Remediation completion with verification artifact | T | Per closure | Closure, not ticket closure | *unspecified* |
+| 9 | Scanner/tool configuration as deployed | E | On change | Implementation evidence | Not a record — `assurance_rights[]` re-test of the deployed state |
+| 10 | Remediation completion with verification artifact | T | Per closure | Closure, not ticket closure | `PRC-VM-001` *Closure Verified* — applied and independently verified |
 | 11 | Independent re-scan or query rights | T | On demand | Effectiveness, not report acceptance | `service_interface.assurance_rights[]` — re-test |
 
 ### Identity operations
@@ -78,7 +78,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 | 15 | Backup job history and failure logs | E | Nightly | Backup coverage | `MTR-001` §4 CM-001–005 |
 | 16 | Scheduled restore-test results | E | Per test | Recovery capability | `STD-RES-001` |
 | 17 | Adversarial restore execution window and outcome | T | Per exercise | Recoverability under attack, not schedule | `service_interface.assurance_rights[]` — re-test, with the AVR |
-| 18 | Immutability and retention configuration | E | On change | Ransomware-recovery precondition | *unspecified* |
+| 18 | Immutability and retention configuration | E | On change | Ransomware-recovery precondition | `STD-RES-001` §4 Backup Protection and Immutability |
 
 ### Incident response and forensics
 
@@ -102,7 +102,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 |---|---|---|---|---|---|
 | 25 | Reference designs and supported patterns | E | On change | Feasibility and compensating-control viability | `OM-001` §8; `PRC-AR-001` |
 | 26 | Integration and data-flow facts for review gates | E | Per project | Architecture risk determination | `FLOW-001` F-02 |
-| 27 | Platform limits and integration capacity | A | Per request | Whether a control is achievable | *unspecified* |
+| 27 | Platform limits and integration capacity | A | Per request | Whether a control is achievable | `PRC-AR-001` *Known limitations* — conditions forcing review instead of reuse |
 
 ### System, service, and business owners
 
