@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-004 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Application Security Engineer owns application security: the tools, rulesets, and practices that find and fix vulnerabilities before code reaches production. They govern SAST, DAST, SCA, and container scanning, set secure development gates, lead threat modeling for applications, and ensure the security of in-house and embedded AI systems. They are accountable for the Secure Software Development and Artificial Intelligence Security standards.
+The Application Security Engineer defines how applications are built securely and independently verifies that they were. They set secure-development requirements and gate criteria, author candidate SAST, DAST, SCA, and container-scanning content, contribute application-security context to threat modeling, review in-house application architectures, and assess the security of in-house and embedded AI systems. First-line pipeline owners and operators deploy, tune, and run the scanning tools, gates, and release process. They are accountable for the Secure Software Development and Application Security Standard and the Artificial Intelligence Security Standard.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The Application Security Engineer owns application security: the tools, rulesets
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Govern application security testing tooling: SAST, DAST, SCA, container scanning, and API security testing - Define and enforce secure development gates in CI/CD pipelines - Lead threat modeling for in-house applications per the Threat Modeling Procedure - Review application architectures for security adequacy during the architecture review process - Own the security assessment of in-house AI systems, including prompt injection, data leakage, excessive agency, and model supply chain risks - Maintain the Secure Software Development and Application Security Standard and the Artificial Intelligence Security Standard - Triage and prioritize application security findings, working with development teams on remediation - Develop and deliver secure coding guidance and training materials for development teams - Support incident response for application-level compromises: injection attacks, authentication bypass, data exfiltration via application vulnerabilities
+- Define application security testing requirements and candidate content for SAST, DAST, SCA, container scanning, and API security testing; first-line pipeline owners and operators deploy, tune, and run the tools - Define secure development gate criteria for CI/CD pipelines; the first-line pipeline operator configures and enforces the gates - Contribute application-security context to threat modeling and lead architecture review for in-house applications per the Threat Modeling Procedure - Review application architectures for security adequacy during the architecture review process - Independently test application security controls within approved scope and validate first-line remediation evidence against the stated criteria - Classify and challenge application security findings and remediation dispositions; first-line teams triage and remediate - Own the security assessment of in-house AI systems, including prompt injection, data leakage, excessive agency, and model supply chain risks - Maintain the Secure Software Development and Application Security Standard and the Artificial Intelligence Security Standard - Develop and deliver secure coding guidance and training materials for development teams - Support incident response for application-level compromises: injection attacks, authentication bypass, data exfiltration via application vulnerabilities - Do not operate the pipeline, scanner, release gate, or production deployment, and do not accept residual application risk
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +127,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Application Security Engineer is successful when security is a natural, frictionless part of the software development lifecycle. Key indicators: SAST/DAST/SCA tools are integrated into CI/CD pipelines with low false-positive rates; findings from security reviews are fixed before deployment, not tracked as technical debt; developers seek security input early in the design phase; the mean time to remediate a critical application vulnerability is measured in hours, not days. The engineer makes it easier to build securely than to cut corners.
+An Application Security Engineer is successful when the requirements and test content they produce change what first-line teams build, and when their independent testing finds what the pipeline missed. Key indicators: secure-development requirements are implementable as written and adopted without a standing exception list; gate criteria catch the defect classes the standard names; independent testing produces findings the operator could not have produced; a remediation disposition changes when it is challenged with evidence; developers seek security input before the design is fixed. Success is not measured by tool coverage, false-positive rate, or remediation velocity, which describe the first-line teams that operate the pipeline and own the fix.
 
 ## 11. Career Path
 
@@ -165,7 +165,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-004 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -183,6 +183,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
+| 1.1 | 2026-10-28 | Governance Pillar Leader | Reconciled role summary, core responsibilities, and success profile with the second-line operating boundary ratified in #258 and implemented in #259: CERG supplies requirements, candidate content, review, and independent validation; first-line owners and operators deploy, operate, and remediate. |
 
 ### Review Triggers
 
