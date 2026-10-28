@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 161,
-  "total_tokens_estimate": 1074097,
+  "total_tokens_estimate": 1075263,
   "by_type": {
     "readme": 16,
     "governance-instrument": 44,
@@ -3264,11 +3264,11 @@
       "path": "proposals/cerg-consumption-register.md",
       "lines": [
         48935,
-        49084
+        49092
       ],
-      "lines_count": 149,
-      "chars": 10697,
-      "tokens": 3056,
+      "lines_count": 157,
+      "chars": 11781,
+      "tokens": 3366,
       "summary": "CERG META document: cerg-consumption-register"
     },
     {
@@ -3283,12 +3283,12 @@
       "owner": null,
       "path": "proposals/frontline-security-assurance-operating-model.md",
       "lines": [
-        49086,
-        49441
+        49094,
+        49480
       ],
-      "lines_count": 355,
-      "chars": 25629,
-      "tokens": 7323,
+      "lines_count": 386,
+      "chars": 27904,
+      "tokens": 7973,
       "summary": "CERG META document: frontline-security-assurance-operating-model"
     },
     {
@@ -3303,12 +3303,12 @@
       "owner": null,
       "path": "proposals/frontline-security-data-and-assurance-contract.md",
       "lines": [
-        49443,
-        50004
+        49482,
+        50051
       ],
-      "lines_count": 561,
-      "chars": 37778,
-      "tokens": 10794,
+      "lines_count": 569,
+      "chars": 38499,
+      "tokens": 11000,
       "summary": "CERG META document: frontline-security-data-and-assurance-contract"
     },
     {
@@ -3323,8 +3323,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        50006,
-        50079
+        50053,
+        50126
       ],
       "lines_count": 73,
       "chars": 4153,
