@@ -1788,7 +1788,7 @@
   title: Cloud Security Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1797,7 +1797,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
-  source_hash: 8e6342194acb007c625e81b2eefac5bd54aced1388fc584b0fb7b8dc728beddf
+  source_hash: 7c03cca4b26d937739f99ec470660b68525e1f2dadc58e695e5ec9a4be50d317
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1828,7 +1828,7 @@
   title: OT Security Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1837,7 +1837,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
-  source_hash: 57e03ee6e0bbd32594a2d3ebcddf7748b13b17bea91116d81b513afc4b584f05
+  source_hash: 5da9b9ee38d46fa61ca372d2f1c7c74e6586151dc97c87aa54bf198a7dbf0327
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
   llm_include: true
   llm_priority: low

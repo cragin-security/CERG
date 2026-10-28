@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1005332,
+  "total_tokens_estimate": 1005939,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -2618,17 +2618,17 @@
       "type": "job-description",
       "pillar": "workforce",
       "status": "Approved",
-      "version": "1.0",
+      "version": "1.1",
       "classification": "Public",
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md",
       "lines": [
         42038,
-        42240
+        42241
       ],
-      "lines_count": 202,
-      "chars": 22599,
-      "tokens": 6457,
+      "lines_count": 203,
+      "chars": 23582,
+      "tokens": 6738,
       "summary": "CERG JD document: Cloud Security Engineer"
     },
     {
@@ -2643,8 +2643,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md",
       "lines": [
-        42242,
-        42444
+        42243,
+        42445
       ],
       "lines_count": 202,
       "chars": 22496,
@@ -2658,17 +2658,17 @@
       "type": "job-description",
       "pillar": "workforce",
       "status": "Approved",
-      "version": "1.0",
+      "version": "1.1",
       "classification": "Public",
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md",
       "lines": [
-        42446,
-        42648
+        42447,
+        42650
       ],
-      "lines_count": 202,
-      "chars": 22661,
-      "tokens": 6475,
+      "lines_count": 203,
+      "chars": 23805,
+      "tokens": 6801,
       "summary": "CERG JD document: OT Security Engineer"
     },
     {
@@ -2683,8 +2683,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md",
       "lines": [
-        42650,
-        42852
+        42652,
+        42854
       ],
       "lines_count": 202,
       "chars": 22655,
@@ -2703,8 +2703,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md",
       "lines": [
-        42854,
-        43056
+        42856,
+        43058
       ],
       "lines_count": 202,
       "chars": 22557,
@@ -2723,8 +2723,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md",
       "lines": [
-        43058,
-        43260
+        43060,
+        43262
       ],
       "lines_count": 202,
       "chars": 22297,
@@ -2743,8 +2743,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md",
       "lines": [
-        43262,
-        43464
+        43264,
+        43466
       ],
       "lines_count": 202,
       "chars": 22901,
@@ -2763,8 +2763,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md",
       "lines": [
-        43466,
-        43668
+        43468,
+        43670
       ],
       "lines_count": 202,
       "chars": 22407,
@@ -2783,8 +2783,8 @@
       "owner": null,
       "path": "machine-readable/README.md",
       "lines": [
-        43670,
-        43738
+        43672,
+        43740
       ],
       "lines_count": 68,
       "chars": 6411,
@@ -2803,8 +2803,8 @@
       "owner": null,
       "path": "examples/README.md",
       "lines": [
-        43740,
-        43767
+        43742,
+        43769
       ],
       "lines_count": 27,
       "chars": 1182,
@@ -2823,8 +2823,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/README.md",
       "lines": [
-        43769,
-        44231
+        43771,
+        44233
       ],
       "lines_count": 462,
       "chars": 41829,
@@ -2843,8 +2843,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
       "lines": [
-        44233,
-        44368
+        44235,
+        44370
       ],
       "lines_count": 135,
       "chars": 14619,
@@ -2863,8 +2863,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-12-bounded-defense-claim.md",
       "lines": [
-        44370,
-        44452
+        44372,
+        44454
       ],
       "lines_count": 82,
       "chars": 5309,
@@ -2883,8 +2883,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        44454,
-        44555
+        44456,
+        44557
       ],
       "lines_count": 101,
       "chars": 14184,
@@ -2903,8 +2903,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
       "lines": [
-        44557,
-        44669
+        44559,
+        44671
       ],
       "lines_count": 112,
       "chars": 13135,
@@ -2923,8 +2923,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        44671,
-        44733
+        44673,
+        44735
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2943,8 +2943,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        44735,
-        44841
+        44737,
+        44843
       ],
       "lines_count": 106,
       "chars": 5500,
@@ -2963,8 +2963,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        44843,
-        44946
+        44845,
+        44948
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -2983,8 +2983,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        44948,
-        44986
+        44950,
+        44988
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -3003,8 +3003,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        44988,
-        45055
+        44990,
+        45057
       ],
       "lines_count": 67,
       "chars": 4390,
@@ -3023,8 +3023,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        45057,
-        45072
+        45059,
+        45074
       ],
       "lines_count": 15,
       "chars": 839,
@@ -3043,8 +3043,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        45074,
-        45152
+        45076,
+        45154
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -3063,8 +3063,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        45154,
-        45188
+        45156,
+        45190
       ],
       "lines_count": 34,
       "chars": 1516,
@@ -3083,8 +3083,8 @@
       "owner": null,
       "path": "adoption-packs/ciso-cso-briefing/README.md",
       "lines": [
-        45190,
-        45601
+        45192,
+        45603
       ],
       "lines_count": 411,
       "chars": 24317,
@@ -3103,8 +3103,8 @@
       "owner": null,
       "path": "proposals/second-line-service-boundary-rfc.md",
       "lines": [
-        45603,
-        45786
+        45605,
+        45788
       ],
       "lines_count": 183,
       "chars": 20013,
@@ -3123,8 +3123,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        45788,
-        45861
+        45790,
+        45863
       ],
       "lines_count": 73,
       "chars": 4153,
