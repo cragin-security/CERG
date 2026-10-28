@@ -9,9 +9,17 @@
 | **Owner** | cragin-security |
 | **Date** | 2026-10-27 |
 | **Classification** | Public |
+| **Source state** | Depends on `experiment/second-line-model-implementation` at `7a74768` — not present in this fork's `main` |
 | **Companion documents** | [Frontline Security Assurance Operating Model](frontline-security-assurance-operating-model.md) · [Data-and-Assurance Contract](frontline-security-data-and-assurance-contract.md) |
 
 > **Purpose.** Most boundary arguments are really disagreements about inputs. This register lists what CERG consumes, from which role or service, in what form, at what cadence, and which claim it supports. If both sides agree on the inputs, the "who operates" question usually answers itself.
+
+> **Source state.** Written against the second-line experiment rather than against this
+> repository's corpus. The conditions, the state-authorship rule, the owner/operator split,
+> the `PRC-VM-001` §4.1 re-owning and the `TMPL-SCP-001` service interface block live on
+> `experiment/second-line-model-implementation` at `7a74768` and are **not** in this fork's `main`. A reader here will therefore find a
+> proposal describing a model the local corpus does not yet implement. That is expected and
+> is why this document is non-normative. Re-verify cross-references if the experiment merges.
 
 ## How to read this
 
@@ -41,7 +49,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 | 1 | Raw telemetry access, not dashboards | R | Continuous | Detection effectiveness (condition 2 capability) | `MTR-001` §4 DT-003; `STD-LM-001` |
 | 2 | Source inventory and health, including failed connectors | E | Daily | Coverage claims; red/amber source state | `MTR-001` §4 DT-001/003 |
 | 3 | Detection registry: what is deployed, where | E | On change + nightly | Coverage vs requirement | `MTR-001` §4 DT-001 |
-| 4 | Alert dispositions, closed-case sample | T | Quarterly | Operating evidence of triage | *unspecified* |
+| 4 | Alert dispositions, closed-case sample | T | Quarterly | Operating evidence of triage | `service_interface.assurance_rights[]` — sampling |
 | 5 | Escalation timeliness against agreed clocks | E | Monthly | Service performance | `PRC-TPRM-001` §9 |
 | 6 | Tuning backlog and change records | E | Per change | Retest trigger after validation | *unspecified* |
 
@@ -53,7 +61,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 | 8 | Coverage statement: what was in scope, what was excluded, why | A | Per cycle | Non-blindness claim | *partially — §4.1 lists sources, not exclusions* |
 | 9 | Scanner/tool configuration as deployed | E | On change | Implementation evidence | *unspecified* |
 | 10 | Remediation completion with verification artifact | T | Per closure | Closure, not ticket closure | *unspecified* |
-| 11 | Independent re-scan or query rights | T | On demand | Effectiveness, not report acceptance | *unspecified* |
+| 11 | Independent re-scan or query rights | T | On demand | Effectiveness, not report acceptance | `service_interface.assurance_rights[]` — re-test |
 
 ### Identity operations
 
@@ -69,7 +77,7 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 |---|---|---|---|---|---|
 | 15 | Backup job history and failure logs | E | Nightly | Backup coverage | `MTR-001` §4 CM-001–005 |
 | 16 | Scheduled restore-test results | E | Per test | Recovery capability | `STD-RES-001` |
-| 17 | Adversarial restore execution window and outcome | T | Per exercise | Recoverability under attack, not schedule | *unspecified* |
+| 17 | Adversarial restore execution window and outcome | T | Per exercise | Recoverability under attack, not schedule | `service_interface.assurance_rights[]` — re-test, with the AVR |
 | 18 | Immutability and retention configuration | E | On change | Ransomware-recovery precondition | *unspecified* |
 
 ### Incident response and forensics
@@ -124,12 +132,12 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 | "Architecture risk is controlled" | 25, 26, 27 | Design facts at review time (capability) |
 | "Residual risk is owned" | 28, 29, 30 | A named decision-maker (independence) |
 
-## Where the corpus needs work — the four focus areas
+## Where the corpus needs work — status as at the experiment merge
 
-1. **`PRC-VM-001` §4.1** — split the Owner column into *operating party* and *consuming role*. All twelve rows name Risk, nine as sole owner. This is the single highest-value edit in the set, because it is the table adopters read to decide who runs the scanner.
-2. **`MTR-001` §4** — split **Owning Role** into *system-of-record custodian* and *metric owner*. The failure-mode column is already excellent; it just needs to say who is responsible for the failure.
-3. **`OM-001` §8** — add the operational service interfaces that are missing: SOC or provider, exposure operations, identity operations, resilience operations. The section covers seventeen organizational interfaces and none of these.
-4. **Service interface fields** — the RFC §5 fields are the only place the interface exists. `PRC-TPRM-001` §9 covers provider clauses; an internal operator has no equivalent record.
+1. **`PRC-VM-001` §4.1** — *addressed upstream.* PR #225 re-owned the seven operational source rows to first line, keeping validation, classification and SLA measurement with Risk. The split this register asked for is now expressed as row ownership rather than a split column; either form resolves the ambiguity, and the row-ownership form is stronger because it cannot be read as a consumption table.
+2. **`MTR-001` §4** — *open.* Split **Owning Role** into *system-of-record custodian* and *metric owner*. The failure-mode column is already right; it just does not say who owns the failure.
+3. **`OM-001` §8** — *open.* Add the operational service interfaces: SOC or provider, exposure operations, identity operations, resilience operations. Seventeen organizational interfaces, none of these.
+4. **Service interface fields** — *partly addressed upstream.* The `TMPL-SCP-001` `service_interface:` block and schema now carry the interface once per service. What remains open is the contract side: `PRC-TPRM-001` §9 still describes only technology providers, and the assurance-rights clauses do not exist yet.
 
 ## What to ask each stakeholder
 
