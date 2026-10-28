@@ -62,9 +62,19 @@ def parse_metadata(filepath):
             meta[key] = value
         break
 
-    m_review = re.search(r'\|\s*\*\*Next Scheduled Review\*\*\s*\|\s*(.+?)\s*\|', content)
-    if m_review:
-        meta['next_review_date'] = m_review.group(1).strip()
+    # A document can contain a fill-in example before its lifecycle-control table.
+    # Use the last actual ISO date so a placeholder such as YYYY-MM-DD does not
+    # mask the authoritative review date later in the document.
+    review_values = re.findall(
+        r'\|\s*\*\*Next Scheduled Review\*\*\s*\|\s*(.+?)\s*\|',
+        content,
+    )
+    for review_value in reversed(review_values):
+        review_value = review_value.strip()
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', review_value):
+            meta['next_review_date'] = review_value
+            break
+
 
     return meta, content
 

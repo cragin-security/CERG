@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-STY-002 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -12,154 +12,82 @@
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
----
-
-**Purpose:** Track known STY-001 and governance compliance gaps across the CERG corpus.
-**Owner:** Governance Pillar Leader (Document Control)
-
-
-## Known Contradictions Resolved
-
-The following contradictions existed in the corpus at the time of the June 2026 review. Each has been resolved as documented below.
-
-| Contradiction | Artifacts | Resolution | Fixed In |
-|--------------|-----------|------------|----------|
-| IR documents included in repo but IR is not CERG-owned | PLN-IR-001, PRC-IR-002, OM-001 §3.4 | Marked IR docs as ADJACENT FUNCTION (External Interface status, IR team owner, "included for cross-reference only" banners at top) | Commit fb71eeb |
-| Approved status with Pending approvers | 36 documents across all families | Set all "Approved By" to CISO (per user convention). Pending is now only possible in Draft documents. | Commit 20606a3 |
-| Per-role documents owned by Governance per CAT-001 §4.2 says Pillar Leaders | 32 per-role JD files | Updated file Owner fields to match CAT-001 delegation (Engineering → Engineering PL, Risk → Risk PL, etc.). | Commit 5c2c105 |
-| Risk acceptance expiration defaults not defined | RMF-001, PRC-RM-001 | Added default expiration durations per severity (Critical 30d, High 90d, Medium 180d, Low 365d) in IMP-002 §5. | Commit 3d9305c |
-| FLOW-001 timeout-bypass may conflict with RMF-001 approval authority | FLOW-001 §2 principle 10, RMF-001 §9.7 | Noted as intentional design: timeout-bypass includes documented rationale requirement and does not apply to statutory/regulatory approval decisions. | Noted in errors.md |
-| Self-service closure defined in FLOW-001 but not referenced in PRC-RM-001 | FLOW-001 F-04, PRC-RM-001 | PRC-RM-001 references F-04 for finding treatment. Update on next PRC-RM-001 review cycle. | Deferred to next PRC-RM-001 review |
-
----
-**Generated:** 2026-06-11  
-**Status:** Approved tracker — items are resolved by amending the affected document on its next scheduled review
 
 ---
 
-## Known Compliance Gaps
+## 1. Purpose and Scope
 
-### Missing Document Control Sections (STY-001 §7.5)
+This tracker records the current style and document-governance exceptions against [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md). It is a review record, not a second document catalog. [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) remains the authoritative inventory, and the Markdown corpus remains authoritative over generated artifacts.
 
-The following Approved documents lack a Document Control section, which STY-001 requires for every artifact:
+The snapshot below covers cataloged CERG artifacts only. Repository guides, examples, issue templates, and other uncataloged supporting Markdown are not counted as governed artifacts.
 
-| Document ID | Document | Status | Scheduled Fix |
-|-------------|----------|--------|---------------|
-| CERG-GOV-OM-001 | CERG Operating Model | Approved | Next annual review (2027) |
-| CERG-PLN-IR-001 | Incident Response Plan | Approved | Next annual review (2027) |
-| CERG-PRC-RM-001 | Risk Register and Exception Process | Approved | Next semi-annual review |
-| CERG-PRC-VM-001 | Exposure Management Procedure | Approved | Next semi-annual review |
-| CERG-GOV-TAX-001 | Risk Taxonomy | Approved | Next annual review (2027) |
+## 2. Current Corpus Snapshot
 
-**Remediation:** On the document's next scheduled review, append a Document Control section following the STY-001 §7.5 format (see §7.5 template below). Add a revision history entry noting the addition.
+**Review date:** 2026-10-27
 
-### Metadata Table Format Inconsistencies (STY-001 §3)
+| Measure | Current count | Basis |
+|---|---:|---|
+| Cataloged CERG artifacts | 129 | CAT-001 §5 as parsed by `tools/cerg-integrity-check.py` |
+| Indexed source Markdown documents | 149 | `machine-readable/cerg-llm-index.json` and integrity-check file inventory |
+| Cataloged artifacts with a lifecycle-control section | 128 (99%) | Review of cataloged source for Document Control, Procedure Control, or Plan Control sections |
+| Cataloged artifacts with the current STY-001 metadata field set | 127 (98%) | Review of Document ID, version, status, classification, owner, parent, review cycle, frameworks, regulations, and environments |
 
-| Issue | Affected Documents | Impact |
-|-------|-------------------|--------|
-| 2-column metadata format instead of standard 3-column | POL-001 | Minor — functionally equivalent; differs visually from other docs |
-| Minimal 4-field metadata table | CMX-001, TAX-001, FRM-001 | Minor — missing fields compared to the 11-field STY-001 standard |
-| Inline bold-text metadata (no table) | RMF-001 | Minor — unique format in the corpus |
+Counts are deliberately derived during each review rather than copied into CAT-001. A catalog add, retirement, rename, or material metadata change triggers this tracker for reassessment.
 
-**Remediation:** Convert to standard 3-column, 11-field format on next review. See cerg-framework skill reference for the safe conversion pattern.
+## 3. Open Compliance Items
 
-### Document Control Section Numbering
+### 3.1 Operating Model Document Control
 
-STY-001 §7.5 states "Document Control is always the last section" but does not specify a section number. As a result, Document Control appears as §8 in some documents, §9 in others, §10 in STY-001 itself, and §13 in RMF-001. This is not a compliance gap (STY-001 does not mandate a specific number) but contributes to visual inconsistency.
+| Item | Affected artifact | Current state | Required action |
+|---|---|---|---|
+| Lifecycle-control section and complete metadata | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | The cataloged Operating Model lacks a recognized Document Control, Procedure Control, or Plan Control section and lacks explicit Regulations and Environments metadata fields. | Add a Document Control section and complete the metadata set at the next Operating Model review. Preserve OM-001 as the authoritative source for canonical role names and operating boundaries. |
 
-### 4-Part Document IDs
+### 3.2 Risk Register Template Parent Reference
 
-Per-role job description documents use 4-part IDs (e.g., `CERG-GOV-JD-SECENG-001`) where the standard naming convention (§2) specifies 3-part IDs (`CERG-TYPE-DOMAIN-NNN`). The DOC_ID_PATTERN in cerg-validate.py was extended on 2026-06-11 to accept these IDs. Future documents should use flat domain codes per the convention; the 4-part format is accepted for the workforce architecture family.
+| Item | Affected artifact | Current state | Required action |
+|---|---|---|---|
+| Parent artifact field | [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | The template has complete ownership and lifecycle metadata but lacks an explicit Parent Policy, Parent Document, or Parent Plan field. | Add the governing parent reference at the next template review without creating a competing source of truth for risk acceptance or record definitions. |
+
+### 3.3 Review-Date Detection Coverage
+
+The integrity checker validates dated `Next Scheduled Review` fields. This review identified that a fill-in example in a document can precede the actual lifecycle date and mask an overdue date. The checker is updated with this review to select the authoritative dated value rather than the first fill-in value it encounters.
+
+## 4. Resolved or Confirmed Items
+
+| Item | Current determination |
+|---|---|
+| Formerly reported missing Document Control sections | The current source review finds lifecycle-control sections for every cataloged artifact except OM-001. Earlier entries for PRC-VM-001 and PRC-RM-001 are no longer open. |
+| Metadata-format exceptions | The current STY-001 field set is complete for 127 of 129 cataloged artifacts. The two remaining field-set gaps are tracked in Section 3. |
+| Four-part workforce IDs | Four-part workforce IDs remain an approved compatibility form for the job-description family and are supported by the validator. |
+| Incident Response ownership boundary | The Incident Response documents retain External Interface status and remain adjacent to CERG rather than CERG-owned operational incident-command artifacts. |
+| Catalog count management | CAT-001 intentionally does not carry a hard-coded artifact total. The catalog parser and generated LLM index provide the review-time counts in Section 2. |
+
+## 5. Review Method
+
+Each quarterly review performs the following checks:
+
+1. Run `python3 tools/cerg-validate.py` and require zero errors.
+2. Run `python3 tools/cerg-integrity-check.py`; investigate P0 and P1 findings before closing the review and record any accepted P2 items.
+3. Reconcile the CAT-001 parser count, LLM-index document count, and governed-source lifecycle-control review.
+4. Confirm that each open tracker item names its authoritative source and does not create duplicate role, record, control, or risk-acceptance authority.
+5. Update this tracker only when the recorded counts, exceptions, or review method change.
 
 ---
 
-## STY-001 §7.5 Template — Document Control Section
-
-For reference when remediating the missing sections above:
-
-```
-## N. Document Control
+## 6. Document Control
 
 | Field | Value |
 |---|---|
-| **Document ID** | <CERG-TYPE-DOMAIN-NNN> |
-| **Version** | X.X |
-| **Status** | [Draft / For Review / Approved / Retired] |
-| **Effective Date** | YYYY-MM-DD |
-| **Classification** | [Public / Internal / Restricted] |
-| **Owner** | [Role Name] |
-| **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Review Cycle** | [Annual / Semi-Annual / Quarterly] |
-| **Next Scheduled Review** | YYYY-MM-DD |
-| **Frameworks** | [Applicable frameworks] |
-| **Regulations** | [Applicable regulations] |
-| **Environments** | [Applicable environments] |
-
-### Revision History
-
-| **Version** | **Date** | **Author** | **Change Summary** |
-|---|---|---|---|
-| X.X | YYYY-MM-DD | [Author] | [Summary] |
-
-### Review Triggers
-
-- [Trigger 1]
-- [Trigger 2]
-
-[Owner] owns this document. [Owner] is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
-
-### Related Documents
-
-| **Document** | **ID** | **Relationship** |
-|---|---|---|
-| [Document Name] | [`<CERG-TYPE-DOMAIN-NNN>`](../filename.md) | [Relationship] |
-```
-
----
-
-
-
----
-
-## Known Contradictions Resolved
-
-The following contradictions existed in the corpus at the time of the June 2026 review. Each has been resolved as documented below.
-
-| Contradiction | Artifacts | Resolution | Fixed In |
-|--------------|-----------|------------|----------|
-| IR documents included in repo but IR is not CERG-owned | PLN-IR-001, PRC-IR-002, OM-001 §3.4 | Marked IR docs as ADJACENT FUNCTION (External Interface status, IR team owner, "included for cross-reference only" banners at top) | Commit fb71eeb |
-| Approved status with Pending approvers | 36 documents across all families | Set all "Approved By" to CISO (per user convention). Pending is now only possible in Draft documents. | Commit 20606a3 |
-| Per-role documents owned by Governance per CAT-001 §4.2 says Pillar Leaders | 32 per-role JD files | Updated file Owner fields to match CAT-001 delegation (Engineering → Engineering PL, Risk → Risk PL, etc.). | Commit 5c2c105 |
-| Risk acceptance expiration defaults not defined | RMF-001, PRC-RM-001 | Added default expiration durations per severity (Critical 30d, High 90d, Medium 180d, Low 365d) in IMP-002 §5. | Commit 3d9305c |
-| FLOW-001 timeout-bypass may conflict with RMF-001 approval authority | FLOW-001 §2 principle 10, RMF-001 §9.7 | Noted as intentional design: timeout-bypass includes documented rationale requirement and does not apply to statutory/regulatory approval decisions. | Noted in errors.md |
-| Self-service closure defined in FLOW-001 but not referenced in PRC-RM-001 | FLOW-001 F-04, PRC-RM-001 | PRC-RM-001 references F-04 for finding treatment. Update on next PRC-RM-001 review cycle. | Deferred to next PRC-RM-001 review |
-
-## Compliance by the Numbers
-
-| Metric | Count |
-|--------|-------|
-| Total CERG documents | 72 governed markdown files |
-| Documents with Document Control section | 67 (93%) |
-| Documents missing Document Control section | 5 (7%) — tracked above |
-| Documents using non-standard metadata format | 5 (7%) — tracked above |
-| Documents created 2026-06-11 needing style review | 34 (all in roles/) |
-
----
-
-## Document Control
-
-| | |
-|---|---|
 | **Document ID** | CERG-GOV-STY-002 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
+| **Effective Date** | 2026-10-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly |
-| **Next Scheduled Review** | 2026-09-17 |
+| **Next Scheduled Review** | 2027-01-27 |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
@@ -168,17 +96,20 @@ The following contradictions existed in the corpus at the time of the June 2026 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.02 | 2026-10-27 | Governance Pillar Leader | Quarterly review completed. Rebuilt the tracker from the current corpus: recorded 129 cataloged artifacts, 149 indexed source documents, 128 lifecycle-control sections, and two remaining metadata or lifecycle exceptions. Removed stale duplicate history and corrected review-date detection coverage. |
 | 1.01 | 2026-06-17 | Governance Pillar Leader | Added Document Control section. |
 
 ### Review Triggers
 
 - Quarterly review cycle
-- New document added to corpus
-- Style guide (STY-001) updated
+- Any artifact added to, retired from, or renamed in the CERG library
+- Material change to CAT-001, STY-001, validator behavior, or metadata conventions
 
 ### Related Documents
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Document Authoring and Style Guide | [CERG-GOV-STY-001](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Parent style guide |
-| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Catalog reference |
+| Document Authoring and Style Guide | [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Governs the style and lifecycle conventions tracked here |
+| Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory and lifecycle status source |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Open lifecycle-control and metadata exception |
+| Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Open parent-reference metadata exception |

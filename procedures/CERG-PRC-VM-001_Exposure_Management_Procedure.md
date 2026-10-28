@@ -6,13 +6,13 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.02 |
+| **Version** | 2.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
 | **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-| **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
+| **Review Cycle** | Semi-Annual / Upon Significant Change / Major Tooling Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · NIST 800-40r4 · NIST RMF |
 | **Regulations** | NERC-CIP CIP-007 R2 · CMMC RA.L2 · SOX ITGC |
 | **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT |
@@ -446,14 +446,14 @@ Immediate escalation to CISO:
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.02 |
+| **Version** | 2.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
 | **Approved By** | CISO |
 | **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Semi-Annual |
-| **Next Scheduled Review** | 2026-12-17 |
+| **Next Scheduled Review** | 2027-04-27 |
 | **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 |
 | **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC |
 | **Environments** | All in-scope environments |
@@ -463,6 +463,7 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
+| 2.03 | 2026-10-27 | Governance Pillar Leader | Semi-annual review completed. Confirmed the six-step exposure workflow, treatment routing, regulatory overlays, adversarial-validation handoff, and metrics references remain current. Aligned the front-matter review cycle to the authoritative semi-annual Procedure Control cadence. |
 | 2.02 | 2026-06-18 | Governance Pillar Leader | Added OT/BES patch deferral routing for non-BES OT, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 2.01 | 2026-06-14 | Governance Pillar Leader | Aligned CISO risk-acceptance role language to the canonical RMF authority table. |
 | 2.0 | 2026-06 | CERG Risk | Major revision: shift from exposure management to exposure management. Introduced 6-step state model (Observed→Verified), classification taxonomy (Non-issue/Hygiene Debt/Confirmed Flaw/Confirmed Exposure/Material Risk), separation of patch hygiene from exposure management, new exposure-focused metrics. |
@@ -470,7 +471,7 @@ Immediate escalation to CISO:
 
 ### Review Triggers
 
-Annual review or upon: material tooling change, regulatory SLA change, internal audit finding, CISO direction, or significant change to asset tiering.
+Semi-annual review or upon: material tooling change, regulatory SLA change, internal audit finding, CISO direction, or significant change to asset tiering.
 
 ### Related Documents
 
@@ -494,4 +495,4 @@ Annual review or upon: material tooling change, regulatory SLA change, internal 
 
 ---
 
-_CERG-PRC-VM-001 · Version 2.02 · PUBLIC_
+_CERG-PRC-VM-001 · Version 2.03 · PUBLIC_

@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.49 |
+| **Version** | 1.50 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -619,7 +619,7 @@ No standalone governance instruments are planned. The Annual Security and Govern
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.49 |
+| **Version** | 1.50 |
 | **Status** | Approved |
 | **Effective Date** | 2026-10-27 |
 | **Classification** | Public |
@@ -627,7 +627,7 @@ No standalone governance instruments are planned. The Annual Security and Govern
 | **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
-| **Next Scheduled Review** | 2026-12-17 |
+| **Next Scheduled Review** | 2027-01-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
@@ -636,7 +636,8 @@ No standalone governance instruments are planned. The Annual Security and Govern
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.49 | 2026-10-27 | Consulting Practice Lead | Renamed `CERG-GOV-CB-002` to Practitioner Control Baseline and corrected its control count to 86. Updated the §5.2 catalog row link and title; no lifecycle-status change. |
+| 1.50 | 2026-10-27 | Consulting Practice Lead | Renamed `CERG-GOV-CB-002` to Practitioner Control Baseline and corrected its control count to 86. Updated the §5.2 catalog row link and title; no lifecycle-status change. |
+| 1.49 | 2026-10-27 | Governance Pillar Leader | Quarterly review completed. Reconciled the authoritative §5 inventory against the catalog parser and current source corpus: 129 cataloged artifacts, no missing catalog file, status, or inventory-structure drift. Advanced the scheduled review date; no catalog-structure amendment required. |
 | 1.48 | 2026-09-25 | Governance Pillar Leader | Reclassified `PRC-AC-001`, `GOV-CIP-001`, `GL-OT-001`, and `TMPL-CIP-001` as reserved identifiers with authoritative embedded V1 content. Removed the misleading standalone-artifact roadmap entries and clarified the forward-reference boundary. |
 | 1.47 | 2026-09-25 | Governance Pillar Leader | Quarterly review completed. Confirmed catalog source authority, lifecycle-status alignment, inventory structure, reserved-ID treatment, and roadmap separation; no catalog-structure amendment required. |
 | 1.46 | 2026-06-24 | Governance Pillar Leader | Registered domain code `ANTI` and `CERG-GOV-ANTI-001` Anti-Pattern Catalog in §5.2 as the cross-domain reference for adoption, workforce, capability, evidence, and compliance failure modes. |

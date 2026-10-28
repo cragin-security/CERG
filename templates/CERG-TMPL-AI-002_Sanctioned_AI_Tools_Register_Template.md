@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-AI-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -123,7 +123,7 @@ A register entry must be reassessed when any of the following occur:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-AI-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -131,7 +131,7 @@ A register entry must be reassessed when any of the following occur:
 | **Approved By** | CISO |
 | **Parent Document** | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) - Artificial Intelligence Security Standard |
 | **Review Cycle** | Quarterly; and on material change to AI provider terms, data classification, or approved use |
-| **Next Scheduled Review** | 2026-12-17 |
+| **Next Scheduled Review** | 2027-01-27 |
 | **Frameworks** | NIST AI RMF 100-1 · NIST 800-53r5 PM / SA / AC · ISO/IEC 42001 |
 | **Regulations** | Cross-cutting; CMMC L2 / 800-171r3, SOX ITGC, privacy, and contractual obligations where applicable |
 | **Environments** | All in-scope CERG environments where AI tools or AI-enabled vendor features are sanctioned for use |
@@ -140,6 +140,7 @@ A register entry must be reassessed when any of the following occur:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-10-27 | Governance Pillar Leader | Quarterly review completed. Reconfirmed intake, sanctioned-use, data-classification, provider-change, evidence-linkage, and staff-publication boundaries; no substantive template changes required. |
 | 1.1 | 2026-09-25 | Governance Pillar Leader | Quarterly review completed. Confirmed parent and supporting-document alignment, ownership, classification boundaries, provider-change triggers, and evidence linkages; no substantive template changes required. |
 | 1.0 | 2026-06-17 | Cyber Governance | Initial release. Establishes the sanctioned AI tools register template for recording approved tools, maximum data classifications, use-case limits, conditions, evidence, and review cadence. |
 

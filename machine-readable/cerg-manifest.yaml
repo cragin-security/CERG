@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-10-27 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-10-28 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -108,7 +108,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.49
+  version: 1.50
   status: Approved
   classification: Public
   publication_profile: public
@@ -117,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: d1130f7973ef9a7622c1bce6e61787c995692604a833e57042a0c6ffffcf00b8
+  source_hash: ea041fd41be42fe90c6be91c9512c1f91eef3e01bbc2760e0d57a585b2f25ffe
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -768,7 +768,7 @@
   title: Style Compliance Tracker
   document_type: governance_instrument
   domain: STY
-  version: 1.01
+  version: 1.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -777,7 +777,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   source_file: CERG-GOV-STY-002_Style_Compliance_Tracker.md
-  source_hash: 93bd36e4647c68aa325d55554935232acd5fbcb420de3317cef11ec8bb6cadaa
+  source_hash: 1f24c532015b5e2de07f4408c802715187cd444ba9cbb44f53d4eb1b46d0040b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   llm_include: true
   llm_priority: medium
@@ -1288,7 +1288,7 @@
   title: Exposure Management Procedure
   document_type: procedure
   domain: VM
-  version: 2.02
+  version: 2.03
   status: Approved
   classification: Public
   publication_profile: public
@@ -1297,7 +1297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: 57c23c0269bf9b2dd47a47ae06776c0fc623ae6ee61c6ee575690549eba13613
+  source_hash: dd195fe63a1ad283c176ec9c0cfb3d08f9aecbfd681078664479110ecfa89040
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -2308,7 +2308,7 @@
   title: Sanctioned AI Tools Register Template
   document_type: template
   domain: AI
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -2317,7 +2317,7 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
   source_file: CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
-  source_hash: 1b1e0439f9e0adbf1981cfa94abd926b146941952bc147744a4170a7cb3e2fce
+  source_hash: 630d96f940cef8717e8af27418ed488437445ff54d442040345b4fa0a59b9cca
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
   llm_include: true
   llm_priority: medium
@@ -2328,7 +2328,7 @@
   title: AI System and Model Register Template
   document_type: template
   domain: AI
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -2337,7 +2337,7 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
   source_file: CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
-  source_hash: ade724aff61344447c877aabc6624ae60fc31f632324797c2964fd52bb823bcd
+  source_hash: 9735f5b02b9b2297ae176c735e5886d4a09647d7fe83599d9ea2adf8180f8288
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
   llm_include: true
   llm_priority: medium
