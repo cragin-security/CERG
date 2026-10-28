@@ -1848,7 +1848,7 @@
   title: Application Security Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1857,7 +1857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
-  source_hash: 416ad8051dfe702f3aca809730f9653545f3a521e38a1905a42beb1c30861fd8
+  source_hash: 6c39e96ce1d0803bdd5321eec5c1636eeba5239b03fa83665f8212bfb3e16c07
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1908,7 +1908,7 @@
   title: Engineering Pillar Leader
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1917,7 +1917,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   source_file: CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
-  source_hash: 42ae30c85ccf1594b7d4dba67670be3cd35690718ed35f83df2c72075c366e6d
+  source_hash: da5868a9d812133a372f75d76271efd76722d0cef99238034f8717c541b006de
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   llm_include: true
   llm_priority: low
