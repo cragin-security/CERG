@@ -10,11 +10,19 @@
 | **Date** | 2026-10-27 |
 | **Classification** | Public |
 | **Scope** | Per-engagement instrument; request rows are tailored to the client's registered scope |
+| **Source state** | Depends on `experiment/second-line-model-implementation` at `7a74768` — not present in this fork's `main` |
 | **Companion documents** | [Frontline Security Assurance Operating Model](frontline-security-assurance-operating-model.md) · [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) · [PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
 
 > **Proposal status.** This document carries no CERG document identifier and is not registered
 > in the document catalog. It is a candidate contribution to the framework, not normative
 > content. Cite it as a draft in proposals and statements of work until it is accepted.
+
+> **Source state.** Written against the second-line experiment rather than against this
+> repository's corpus. The conditions, the state-authorship rule, the owner/operator split,
+> the `PRC-VM-001` §4.1 re-owning and the `TMPL-SCP-001` service interface block live on
+> `experiment/second-line-model-implementation` at `7a74768` and are **not** in this fork's `main`. A reader here will therefore find a
+> proposal describing a model the local corpus does not yet implement. That is expected and
+> is why this document is non-normative. Re-verify cross-references if the experiment merges.
 
 ## Purpose
 
