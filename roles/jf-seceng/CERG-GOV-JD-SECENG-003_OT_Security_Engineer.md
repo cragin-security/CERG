@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The OT Security Engineer owns operational technology security engineering for industrial control systems, grid control systems, and the IT/OT boundary. They design and govern the electronic security perimeter (ESP), the BES Cyber System baselines, and the secure architecture of SCADA, DCS, EMS, and other OT environments. They are the bridge between cybersecurity and operations: they must understand both the security controls and why a particular scanning technique could trip a protection relay.
+The OT Security Engineer owns the assurance side of operational technology security for industrial control systems, grid control systems, and the IT/OT boundary: reference architecture, BES Cyber System baselines, OT-safe assessment requirements, and independent validation. They define the electronic security perimeter (ESP) controls and the secure architecture of SCADA, DCS, EMS, and other OT environments. OT operations and the named OT service operator run plant systems, execute discovery, and enforce boundary controls. They are the bridge between cybersecurity and operations: they must understand both the security controls and why a particular scanning technique could trip a protection relay.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The OT Security Engineer owns operational technology security engineering for in
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design and maintain the OT security reference architecture, including the ESP, IT/OT boundary controls, and OT network segmentation - Develop and maintain BES Cyber System security baselines aligned to NERC-CIP requirements - Conduct OT-safe asset discovery and ensure OT assets are accurately represented in the asset inventory - Govern transient cyber asset control: laptops, media, and devices connecting to OT environments - Partner with OT operations and engineering teams to embed security controls without disrupting operational reliability - Support NERC-CIP compliance activities: CIP-005 (electronic security perimeter), CIP-007 (systems security management), CIP-010 (configuration management and vulnerability assessments) - Review OT projects through the architecture review process, providing OT-specific threat and control analysis - Contribute to the Grid Control Systems Security Standard and maintain its technical requirements - Support OT incident response: containment within the ESP, forensics without disrupting operations, evidence preservation for regulatory reporting
+- Design and maintain the OT security reference architecture, including the ESP, IT/OT boundary controls, and OT network segmentation - Develop and maintain BES Cyber System security baselines aligned to NERC-CIP requirements - Author OT-safe asset discovery requirements and rules of engagement, and validate that OT assets are accurately represented in the asset inventory; executing discovery on OT networks is first-line work under the named OT service owner - Define transient cyber asset control requirements for laptops, media, and devices connecting to OT environments, and validate that the controls are enforced - Partner with OT operations and engineering teams to embed security controls without disrupting operational reliability - Support NERC-CIP compliance activities: CIP-005 (electronic security perimeter), CIP-007 (systems security management), CIP-010 (configuration management and vulnerability assessments) - Review OT projects through the architecture review process, providing OT-specific threat and control analysis - Contribute to the Grid Control Systems Security Standard and maintain its technical requirements - Provide OT technical analysis to the Incident Response team: containment options that respect operational constraints, forensic technique that does not disrupt operations, and the evidence regulatory reporting requires. Incident command and containment execution remain with the Incident Response team and OT operations.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +127,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An OT Security Engineer is successful when operational technology environments are secured without disrupting production. Key indicators: the Purdue model is implemented and enforced; OT asset inventory is complete and current; vulnerabilities in the OT environment are discovered before they cause incidents; engineering and operations teams understand and respect the security controls in their environment. The engineer bridges the gap between IT security practices and OT reliability requirements, earning trust from both sides.
+An OT Security Engineer is successful when the controls they specify are the ones the plant runs, without disrupting production. Key indicators: the Purdue model is defined in the reference architecture and every deviation from it is known and named; OT asset inventory completeness is validated rather than assumed; OT exposure is found before it causes incidents, through discovery the engineer specified and independently checked; engineering and operations teams understand and respect the security controls in their environment. The engineer bridges the gap between IT security practices and OT reliability requirements, earning trust from both sides.
 
 ## 11. Career Path
 
@@ -165,7 +165,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +182,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Per-activity boundary per #252 and OM-001 §3.4: OT asset discovery execution, transient asset enforcement and incident containment moved to OT operations and first-line service owners. CERG retains OT reference architecture, BES Cyber System baselines, discovery requirements and rules of engagement, architecture review, and validation. No records, metrics, or shared competency blocks changed. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
