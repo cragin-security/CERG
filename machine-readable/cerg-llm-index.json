@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 161,
-  "total_tokens_estimate": 1075263,
+  "total_tokens_estimate": 1075347,
   "by_type": {
     "readme": 16,
     "governance-instrument": 44,
@@ -3267,8 +3267,8 @@
         49092
       ],
       "lines_count": 157,
-      "chars": 11781,
-      "tokens": 3366,
+      "chars": 12075,
+      "tokens": 3450,
       "summary": "CERG META document: cerg-consumption-register"
     },
     {
