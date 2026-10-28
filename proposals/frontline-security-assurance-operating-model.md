@@ -10,6 +10,7 @@
 | **Date** | 2026-10-27 |
 | **Classification** | Public |
 | **Scope** | NERC CIP and BES operations, plus general IT/OT environments where a second line depends on first-line execution |
+| **Source state** | Depends on `experiment/second-line-model-implementation` at `7a74768` — not present in this fork's `main` |
 | **Companion documents** | [OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) · [STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
 
 > **Proposal status.** This document carries no CERG document identifier and is not registered
@@ -33,6 +34,13 @@
 
 ---
 
+
+> **Source state.** Written against the second-line experiment rather than against this
+> repository's corpus. The conditions, the state-authorship rule, the owner/operator split,
+> the `PRC-VM-001` §4.1 re-owning and the `TMPL-SCP-001` service interface block live on
+> `experiment/second-line-model-implementation` at `7a74768` and are **not** in this fork's `main`. A reader here will therefore find a
+> proposal describing a model the local corpus does not yet implement. That is expected and
+> is why this document is non-normative. Re-verify cross-references if the experiment merges.
 
 ## Purpose
 
@@ -141,12 +149,35 @@ Each request in the frontline contract should use this structure.
 
 Use **“minimum assurance evidence”** rather than “required fields” where possible. The purpose is assurance of the control outcome, not creation of a reporting exercise.
 
-### Mapping to the second-line boundary RFC §5
+### Mapping to the implemented service interface
 
-The boundary RFC lists the fields a first-line service interface must capture. The table above is the request-level form of the same instrument. Correspondence:
+The request-level template above is the working instrument. The `TMPL-SCP-001` `service_interface:`
+block is where those facts now land once per service. Correspondence, against the block as it exists
+on the experiment branch:
 
-| Boundary RFC §5 field | Field in this template |
+| RFC §5 field | `service_interface:` field |
 |---|---|
+| Internal first-line service owner | `first_line_service_owner` |
+| Operating party and service model | `service_model`, `first_line_operator` |
+| In-scope assets, environments, exclusions | protected-system SCP scope, linked via `security_service_references[]` |
+| Operational activities and boundaries | `operational_boundaries` |
+| CERG assurance cadence, method, sampling population | `assurance_rights[]`, `assurance_method_authority` |
+| Applicable assurance-method authority and capability basis | `assurance_method_authority` |
+| Independent assessor and review route | `independent_assessor` |
+| Evidence period, scope, and current-control-state check | `evidence_currency_rule` |
+| Production-change and acceptance authority | `operational_boundaries` |
+| Provider access, data ownership, exit, and kill-switch | `provider_contract_reference` → `PRC-TPRM-001` §8 and §9 |
+
+Three of this template's fields have no home in the block and remain request-level only: **service
+targets and escalation path**, **operating records and their location**, and **quality checks**.
+That is deliberate — the block records standing terms, not per-cycle expectations, and collapsing
+the two is how a service profile becomes an operations runbook.
+
+One block field has no RFC §5 counterpart: `tool_or_tenant_owner`. It exists because provider
+operation separates tenant or licence ownership from service accountability, and the earlier field
+list had nowhere to record that distinction.
+
+---|---|
 | Internal first-line service owner | Control owner |
 | Operating party and service model | Control owner (internal, contracted, or hybrid) |
 | In-scope assets, environments, exclusions | Applicability |
