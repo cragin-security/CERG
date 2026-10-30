@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-000 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -34,7 +34,7 @@ Security Engineering (JF-SECENG) — Design and build secure systems, platforms,
 | **Entry Grade** | S1 |
 | **Terminal Grade** | S4 |
 | **Career Track** | SME (Individual Contributor) |
-| **Number of Roles** | 6 |
+| **Number of Roles** | 8 |
 
 This family groups roles that share a core competency profile and career progression path. Members of this family progress through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. See [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) for the complete level definitions and progression gates.
 
@@ -44,12 +44,14 @@ This family groups roles that share a core competency profile and career progres
 
 | Role | Document | Description |
 |------|----------|-------------|
-| **Cloud Security Engineer** | [`CERG-GOV-JD-SECENG-001`](CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Owns cloud platform security architecture, IaC security, CSPM operations, and SaaS security. |
+| **Cloud Security Engineer** | [`CERG-GOV-JD-SECENG-001`](CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Owns cloud platform security architecture, IaC security, CSPM requirements, and SaaS security requirements. |
 | **Identity Engineer** | [`CERG-GOV-JD-SECENG-002`](CERG-GOV-JD-SECENG-002_Identity_Engineer.md) | Owns identity fabric: IAM architecture, PAM, federation, directory services, and access governance. |
 | **OT Security Engineer** | [`CERG-GOV-JD-SECENG-003`](CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md) | Owns OT/ICS security architecture, network segmentation, secure remote access, and grid control system defense. |
 | **Application Security Engineer** | [`CERG-GOV-JD-SECENG-004`](CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md) | Owns secure SDLC, SAST/DAST integration, application threat modeling, and developer security enablement. |
-| **Endpoint Engineer** | [`CERG-GOV-JD-SECENG-005`](CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Owns endpoint security architecture, secure configuration baselines, EDR/XDR operations, and mobile device security. |
+| **Endpoint Engineer** | [`CERG-GOV-JD-SECENG-005`](CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Owns endpoint security architecture, secure configuration baselines, EDR/XDR requirements, and mobile device security requirements. |
 | **Cryptography Engineer** | [`CERG-GOV-JD-SECENG-006`](CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md) | Owns cryptography architecture, PKI, key management, encryption standards, and cryptographic agility. |
+| **Engineering Pillar Leader** | [`CERG-GOV-JD-SECENG-007`](CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md) | Accountable for Engineering's technical requirements, reference patterns, and review service; not accountable for first-line operation, the go-live decision, or residual-risk acceptance. |
+| **Pre-production Reviewer** | [`CERG-GOV-JD-SECENG-008`](CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md) | Owns the pre-production review checklist and states the pre-production technical disposition; the business or service owner decides go-live. |
 
 ---
 
@@ -89,7 +91,7 @@ Certifications relevant to the Security Engineering family are detailed in [TRN-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-000 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -107,6 +109,7 @@ Certifications relevant to the Security Engineering family are detailed in [TRN-
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Family-level index for Security Engineering (JF-SECENG). |
+| 1.1 | 2026-10-30 | Engineering Pillar Leader | Navigation repair: added `SECENG-007` and `SECENG-008` to the role table and corrected the role count from six to eight; removed operational claims from the Cloud and Endpoint descriptions. |
 
 ### Review Triggers
 
