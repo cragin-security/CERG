@@ -18,7 +18,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "machine-readable" / "cerg-llm-index.json"
-EXCLUDED_DIRS = {".git", ".github", ".pytest_cache", "__pycache__", "node_modules", "rendered"}
+# practice-assets/ holds fork-only worked demonstrations, not framework corpus documents.
+# Excluding them keeps the index a map of the corpus and stops every practice addition
+# from shifting the absolute line ranges of every document after it (see upstream #267).
+EXCLUDED_DIRS = {".git", ".github", ".pytest_cache", "__pycache__", "node_modules", "rendered", "practice-assets"}
 DOC_ID_RE = re.compile(r"CERG-(?:POL-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})")
 META_ROW_RE = re.compile(r"^\|\s*\*\*(?P<key>[^*]+)\*\*\s*\|\s*(?P<value>.*?)\s*\|\s*$")
 
