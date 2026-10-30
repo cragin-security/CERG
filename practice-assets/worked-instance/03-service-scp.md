@@ -31,7 +31,7 @@ service_interface:
     source health of every onboarded feed. Harborline retains payment authorization,
     remediation execution and acceptance of residual risk. Harborline does not triage,
     does not deploy detection content, and does not administer the platform.
-  assurance_method_authority: "CERG-PRC-AV-001 §9 and §10; CERG-STD-LM-001 §7 (detection validation)"
+  assurance_method_authority: "CERG-PRC-AV-001 §6 and §10; CERG-STD-LM-001 §7 (detection validation)"
   assurance_rights:
     - "read/query — direct query of the tenant, not report-on-request"
     - "sampling — Harborline selects the sample; Atlas supplies the population"
