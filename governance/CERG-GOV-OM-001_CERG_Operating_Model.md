@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.30 |
+| **Version** | 1.31 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -429,16 +429,9 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 
 ### 6.2 Cyber Engineering: Typical Roles
 
-| **Role** | **Focus** |
-|---|---|
-| Engineering Pillar Leader | Pillar accountability; project intake; reference-architecture authority. |
-| Cloud Security Engineer | Cloud platforms, landing zones, IaC, CSPM gating. |
-| Identity Engineer | IdP, MFA, SSO, PAM, secrets management, federation. |
-| OT Security Engineer | IT/OT convergence, ESP/EAP design, BES Cyber System baselines (see [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)). |
-| Application / Application Security Engineer | SAST/DAST integration, SDLC controls, threat modeling. |
-| Endpoint / Endpoint Engineer | Endpoint controls, EDR engineering, OS baselines. |
-| Cryptography Engineer | Key management, CA, TLS posture, FIPS compliance. |
-| Pre-production Reviewer (often a rotated function) | Owns the pre-production checklist; signs off on go-live readiness. |
+The canonical Engineering roster, including canonical names, aliases, and the one-line focus statement for each role, is **§6.1 above**. This section deliberately carries no second copy. It previously restated the roster under partly different role names, and that duplicate drifted from §6.1 during the second-line recast: three rows were unreachable by canonical name, and the Pre-production Reviewer row kept a go-live sign-off claim that §6.1, `RAC-001` §7.2, and `PRC-AR-001` §2 all deny. A role's authority is stated once, in §6.1.
+
+For family-level role descriptions and the per-role job descriptions, see [`CERG-GOV-JD-SECENG-000`](../roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md).
 
 ### 6.3 Cyber Risk: Typical Roles
 
@@ -659,7 +652,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.30 |
+| **Version** | 1.31 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -675,6 +668,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.31 | 2026-10-30 | Engineering Pillar Leader | Replaced the §6.2 duplicate Engineering roster with a stable pointer to the canonical §6.1 roster. The duplicate carried a go-live sign-off claim that §6.1, `RAC-001` §7.2, and `PRC-AR-001` §2 deny, and three of its rows used non-canonical role names that the #259 recast could not reach. |
 | 1.30 | 2026-10-28 | Governance Pillar Leader | Reconciled Engineering decision rights with the second-line operating boundary: §3.1 distinguishes requirements and candidate content from platform operation; §4.2 gives go/no-go to the business or service owner with CERG review and CISO escalation; the pre-production roster entry states a technical disposition rather than a go-live sign-off. |
 | 1.29 | 2026-10-28 | Governance Pillar Leader | Trace correction: §5.2 identifies CSPM, SSPM, and identity-threat monitoring as first-line-operated sources whose coverage/provenance or outcomes CERG independently validates; §6.3 aligns Detection Engineer work with the per-activity boundary and role recast. |
 | 1.28 | 2026-10-28 | Governance Pillar Leader | Clarified state authorship in §2.4: live CERG changes suspend the affected effectiveness claim until independent verification; break-glass approval does not restore it. Clarified that ongoing service obligations make CERG the service operator for the hybrid rule. |
