@@ -1,7 +1,7 @@
 # 4 · Rules of Engagement and Adversarial Validation Record — `AV-2026-011`
 
 **Record type:** Adversarial Validation Record (CAT-002) · **Owner:** Adversarial Testing Lead
-**Procedure:** `CERG-PRC-AV-001` (v1.5) · **Engagement type:** §2 type 1 (purple team) with §6.4 evidence sampling
+**Procedure:** `CERG-PRC-AV-001` (v1.6) · **Engagement type:** §2 Purple-Team Detection Validation, using the §6.2 validation workflow and the §6.3 outcome-to-baseline mapping
 
 ## Rules of Engagement — signed before any activity
 
