@@ -63,7 +63,7 @@ The GRC platform is the spine of the CERG program. Every other tool reports into
 | **Acceptable** | **Vanta** | Best-in-class for SMB compliance automation (SOC 2, ISO 27001, HIPAA). Agent-based evidence collection. Weak on operational risk and IT service management — you'll need separate tools for incident/change management. Good for startups and small practices. |
 | **Acceptable** | **Drata** | Similar to Vanta. Slightly better auditor UX, slightly weaker integrations. For SMB compliance-only use cases. |
 | **Avoid** | **Archer** | Legacy architecture, high customization cost, requires dedicated Archer developers. Multi-tenancy is an afterthought. |
-| **Avoid** | **OpenGRC / Eramba** | Free but abandonware risk. No MSP multi-tenancy. No API ecosystem. |
+| **Avoid** | **OpenGRC / Eramba** | Neither is abandonware, and both are active: say no on licensing and coverage instead. OpenGRC ships under the Elastic Licence 2.0, Eramba's free edition is open code rather than open source, and neither is designed for MSP multi-tenancy. Hosting either for clients needs a commercial agreement. Eramba Community is a fair answer for a single in-house team — see the Open Source Counterpart table above. |
 | **Avoid** | **Spreadsheets** | You will lose audit credibility immediately. A spreadsheet is not a GRC platform and auditors know it. |
 
 **CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
