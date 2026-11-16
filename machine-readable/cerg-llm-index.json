@@ -1,12 +1,12 @@
 {
   "cerg_version": "1.50",
-  "generated": "2026-11-08",
+  "generated": "2026-11-16",
   "source": "local markdown corpus",
-  "total_documents": 165,
+  "total_documents": 166,
   "by_type": {
     "readme": 16,
     "governance-instrument": 45,
-    "meta": 17,
+    "meta": 18,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -64,7 +64,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 33
+      "count": 34
     }
   },
   "prefixes": {
@@ -249,9 +249,9 @@
       "classification": "Public",
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
-      "lines_count": 690,
-      "chars": 63426,
-      "tokens": 18122,
+      "lines_count": 691,
+      "chars": 63622,
+      "tokens": 18178,
       "summary": "CERG GOV document: Document Catalog and Naming Convention"
     },
     {
@@ -2597,13 +2597,13 @@
       "type": "meta",
       "pillar": "cross-cutting",
       "status": "Approved",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "classification": "Public",
       "owner": "Consulting Practice Lead",
       "path": "practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md",
-      "lines_count": 340,
-      "chars": 25004,
-      "tokens": 7144,
+      "lines_count": 364,
+      "chars": 27216,
+      "tokens": 7776,
       "summary": "CERG META document: opinionated-tool-matrix-v1"
     },
     {
@@ -2653,6 +2653,22 @@
       "chars": 21972,
       "tokens": 6278,
       "summary": "CERG META document: threat-intel-validation-v1"
+    },
+    {
+      "id": "CERG-OPN-TOOLS-005",
+      "prefix": "META",
+      "title": "Open Source Tool Stack",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": "Approved",
+      "version": "1.0.0",
+      "classification": "Public",
+      "owner": "Consulting Practice Lead",
+      "path": "practice-assets/tools/CERG-OPN-TOOLS-005_Open_Source_Tool_Stack.md",
+      "lines_count": 370,
+      "chars": 33543,
+      "tokens": 9584,
+      "summary": "CERG META document: Open Source Tool Stack"
     },
     {
       "id": "cerg-consumption-register",

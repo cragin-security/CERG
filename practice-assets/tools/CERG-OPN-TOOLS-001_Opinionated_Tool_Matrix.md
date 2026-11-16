@@ -5,12 +5,13 @@
 | | |
 |---|---|
 | **Document ID** | CERG-OPN-TOOLS-001 |
-| **Version** | 1.0.0 |
+| **Version** | 1.1.0 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |
 | **Review Cycle** | Quarterly |
+| **Companion** | [CERG-OPN-TOOLS-005](CERG-OPN-TOOLS-005_Open_Source_Tool_Stack.md) — open-source stack, licence gate, in-house builds |
 | **Frameworks** | CERG Practitioner Baseline · CIS Controls v8 · NIST 800-53r5 |
 | **Regulations** | CMMC L2 · SOX ITGC · PCI DSS v4 |
 | **Environments** | IT · Cloud · SaaS · OT (partial) |
@@ -26,6 +27,27 @@ This document defines the opinionated tool stack for CERG adopters who work thro
 3. **IT generalist usability** — Can someone without a dedicated SOC engineer configure it using vendor documentation alone?
 
 Each category lists a **Primary** (the recommendation), **Acceptable** alternatives (decent but weaker on at least one criterion), and **Avoid** (popular tools that fail hard on the CERG criteria).
+
+---
+
+## Open Source Counterpart
+
+The three criteria above judge integration, partner programmes and vendor documentation. No open-source project can pass them, which is why they cannot decide an open-source question. [CERG-OPN-TOOLS-005](CERG-OPN-TOOLS-005_Open_Source_Tool_Stack.md) applies a licence gate instead and names a build for each category. Where a delivery model blocks the open option, the recommendation in this document stands.
+
+| Category | Open-source answer | Verdict |
+|---|---|---|
+| 1. GRC Platform | Eramba Community · OpenGRC | No open equivalent survives a multi-tenant audit. Keep the commercial anchor. |
+| 2. SIEM / Logging | Wazuh · OpenSearch | The strongest open category. Start here. |
+| 3. Endpoint / EDR | Wazuh agent · Velociraptor · osquery | Visibility and response, not prevention. Never call it EDR. |
+| 4. Vulnerability Management | Greenbone Community · Nuclei | Viable for a lean estate, with a slower feed. |
+| 5. CSPM | Prowler | Matches the commercial row on capability. |
+| 6. Identity / IAM | Keycloak · Authentik · OpenBao | Viable. One realm per client is the isolation model. |
+| 7. AppSec / Supply Chain | Trivy · Semgrep OSS · DefectDojo | Already the primary rows in this document. |
+| 8. Detection Engineering | Sigma · pySigma · Atomic Red Team | Already the recommended rule format here. |
+| 9. Backup & Resilience | restic · Kopia · Velero | Satisfies immutability. Restore testing stays yours. |
+| 10. Network Security | OPNsense · Suricata · Zeek | Covers the control plane end to end. |
+| 11. AI Security | garak · promptfoo | Model testing yes; shadow-AI discovery no. |
+| 12. MSP Operations | Zammad · GLPI | In-house service desk only. No open PSA or RMM exists. |
 
 ---
 
@@ -315,6 +337,7 @@ Every tool in this diagram has a documented API and a supported integration path
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
+| 1.1.0 | 2026-11-16 | cragin-security | Added the Open Source Counterpart table with a per-category pointer to CERG-OPN-TOOLS-005. No category verdict in this document changed. |
 | 1.0.0 | 2026-07-03 | cragin-security | Initial release: 12 categories, integration map, decision guide. Cross-references to upstream CERG standards added per category. |
 
 ### Review Triggers
@@ -326,6 +349,7 @@ Every tool in this diagram has a documented API and a supported integration path
 ### Related Documents
 
 - [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
+- [Open Source Tool Stack](CERG-OPN-TOOLS-005_Open_Source_Tool_Stack.md) — licence gate, open-source stack by category, multi-tenant delivery, three reference builds
 - [Evidence Automation Mapping](CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
 - [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — tool deployment commands and per-control implementation
